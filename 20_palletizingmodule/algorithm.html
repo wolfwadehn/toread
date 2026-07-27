@@ -1,0 +1,1016 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Palletizing Algorithm — Technical Reference</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="algorithm.html">Palletizing Algorithm — Technical Reference</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Palletizing Algorithm — Technical Reference</h1>
+<h2 id="table-of-contents">Table of Contents</h2>
+<ol>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#top-level-entry-point">Top-Level Entry Point</a></li>
+<li><a href="#generator-hierarchy">Generator Hierarchy</a>
+<ul>
+<li><a href="#tcpalletizinggeneratorwithfixedstartcornerandpositioningdirection">TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection</a></li>
+<li><a href="#tcpalletizinggeneratorforsinglerun">TcPalletizingGeneratorForSingleRun</a></li>
+<li><a href="#tcpalletizinggeneratorformultipleruns">TcPalletizingGeneratorForMultipleRuns</a></li>
+<li><a href="#tcpalletizinggeneratorwithpalletchange">TcPalletizingGeneratorWithPalletChange</a></li>
+</ul>
+</li>
+<li><a href="#state-management">State Management</a></li>
+<li><a href="#task-pre-processing">Task Pre-Processing</a></li>
+<li><a href="#position-finding">Position Finding</a>
+<ul>
+<li><a href="#layout-finder">Layout Finder</a></li>
+<li><a href="#section-finder">Section Finder</a></li>
+<li><a href="#bounding-box-finder">Bounding Box Finder</a></li>
+<li><a href="#unloading-area-sub-unit-finder">Unloading Area Sub-Unit Finder</a></li>
+<li><a href="#valid-start-corner-computer">Valid Start Corner Computer</a></li>
+</ul>
+</li>
+<li><a href="#start-point-candidates">Start Point Candidates</a>
+<ul>
+<li><a href="#bounding-box-based-strategy">Bounding Box-Based Strategy</a></li>
+<li><a href="#contour-based-strategy-no-fit-polygon">Contour-Based Strategy (No-Fit Polygon)</a></li>
+<li><a href="#pile-based-strategy">Pile-Based Strategy</a></li>
+</ul>
+</li>
+<li><a href="#existing-stack-finder">Existing Stack Finder</a></li>
+<li><a href="#cluster-based-stack-selection">Cluster-Based Stack Selection</a></li>
+<li><a href="#section-organizer">Section Organizer</a></li>
+<li><a href="#offset-computation">Offset Computation</a></li>
+<li><a href="#bounding-box-coordinate-system">Bounding Box Coordinate System</a></li>
+<li><a href="#rotation-symmetry">Rotation Symmetry</a></li>
+<li><a href="#movable-entities">Movable Entities</a></li>
+<li><a href="#constraint-checkers">Constraint Checkers</a></li>
+<li><a href="#evaluation-and-strategy-selection">Evaluation and Strategy Selection</a></li>
+<li><a href="#data-flow-diagram">Data Flow Diagram</a></li>
+</ol>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>The palletizing algorithm computes optimal placement operations for sheet parts unloaded by TRUMPF automation units (SortMaster, SheetMaster, etc.). Given a set of palletizing tasks — each describing which parts must be placed, how they may be rotated, and where they may land — the algorithm produces a sequence of palletizing operations that minimises wasted space, avoids collisions, and respects machine constraints.</p>
+<p>The algorithm runs up to eight strategies in parallel (varying start corner and positioning direction), evaluates their results with a multi-criteria score, and returns the best.</p>
+<p><strong>Source root:</strong> <code>source/libraries/palletizing/algorithm/</code></p>
+<hr />
+<h2 id="top-level-entry-point">Top-Level Entry Point</h2>
+<p><strong>File:</strong> <code>include/palletizing/algorithm/TcPalletizingGenerator.h</code> / <code>source/TcPalletizingGenerator.cpp</code></p>
+<p><code>TcPalletizingGenerator</code> is the single public class exposed by this library. Its constructor receives the full palletizing job; calling <code>generate()</code> returns a <code>TsPalletizingResult</code>.</p>
+<h3 id="strategy-enumeration">Strategy Enumeration</h3>
+<p><code>TnCreatePalletizingGeneratorsWithFixedStartCornerAndPositioningDirection</code> (in <code>source/generator/</code>) enumerates which (start corner, positioning direction) pairs to try:</p>
+<table>
+<thead>
+<tr>
+<th>Scenario</th>
+<th>Generators created</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>No constraints on either</td>
+<td>All 4 corners × 2 directions = <strong>8 generators</strong></td>
+</tr>
+<tr>
+<td>Fixed corner, free direction</td>
+<td>1 corner × 2 directions = <strong>2 generators</strong></td>
+</tr>
+<tr>
+<td>Free corner, fixed direction</td>
+<td>4 corners × 1 direction = <strong>4 generators</strong></td>
+</tr>
+<tr>
+<td>Both fixed</td>
+<td><strong>1 generator</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Each generator is launched via <code>std::async</code> so all strategies run concurrently. Results are collected and scored; the highest-scoring result wins.</p>
+<hr />
+<h2 id="generator-hierarchy">Generator Hierarchy</h2>
+<pre><code>TcPalletizingGenerator
+ └─ (up to 8, parallel) TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection
+       ├─ TcPalletizingGeneratorForSingleRun          (no repetitions)
+       ├─ TcPalletizingGeneratorForMultipleRuns       (repetitions &gt; 1)
+       └─ TcPalletizingGeneratorWithPalletChange      (layout instance wrapping)
+</code></pre>
+<h3 id="tcpalletizinggeneratorwithfixedstartcornerandpositioningdirection">TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection</h3>
+<p><strong>File:</strong> <code>source/generator/TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection.*</code></p>
+<p>Selects which concrete generator to use based on the job:</p>
+<ul>
+<li>Repetition count = 1 → <code>TcPalletizingGeneratorForSingleRun</code></li>
+<li>Repetition count &gt; 1 → <code>TcPalletizingGeneratorForMultipleRuns</code></li>
+<li>Pallet change required → wraps the above in <code>TcPalletizingGeneratorWithPalletChange</code></li>
+</ul>
+<hr />
+<h3 id="tcpalletizinggeneratorforsinglerun">TcPalletizingGeneratorForSingleRun</h3>
+<p><strong>File:</strong> <code>source/generator/TcPalletizingGeneratorForSingleRun.*</code></p>
+<p>The core placement loop. Processes all palletizing tasks in stacking order.</p>
+<h4 id="algorithm">Algorithm</h4>
+<pre><code>for each palletizingTask (in stacking order):
+    for each subTask in task:
+        attempt = tryPalletizeOnExistingStack(subTask)
+        if not attempt:
+            attempt = tryPalletizeOnNewPosition(subTask)
+        if not attempt:
+            attempt = tryPalletizeWithAdjustedStackingMode(subTask)
+        if not attempt:
+            recordTaskNotPalletized(subTask)
+</code></pre>
+<p><strong>Three placement strategies per sub-task:</strong></p>
+<ol>
+<li><p><strong>Existing stack addition</strong> — <code>TcExistingStackFinder</code> scans all stacks already on the layout and checks whether the sub-task's parts fit on top of one of them.</p>
+</li>
+<li><p><strong>New position on layout</strong> — <code>TcNewPositionOnLayoutFinder</code> searches for a free floor position using one of the three start-point-candidate strategies.</p>
+</li>
+<li><p><strong>Adjusted stacking mode</strong> — If the chosen stacking mode causes a collision, the algorithm tries alternative stacking modes (e.g. flipping from <code>OptionalStackFirst</code> to regular stacking) and retries steps 1–2.</p>
+</li>
+</ol>
+<p><strong>Stack growth modes:</strong></p>
+<ul>
+<li><em>Stack Growth Sequentially</em> — packs all parts of a sub-task onto the first compatible stack before moving on.</li>
+<li><em>Stack Growth Evenly</em> — distributes parts across multiple stacks to keep heights balanced. Uses cluster analysis (see <a href="#cluster-based-stack-selection">Cluster-Based Stack Selection</a>) to determine the minimum number of stacks required.</li>
+</ul>
+<hr />
+<h3 id="tcpalletizinggeneratorformultipleruns">TcPalletizingGeneratorForMultipleRuns</h3>
+<p><strong>File:</strong> <code>source/generator/TcPalletizingGeneratorForMultipleRuns.*</code></p>
+<p>Handles jobs where the same set of parts must be palletized multiple times (repetitions).</p>
+<h4 id="algorithm-1">Algorithm</h4>
+<ol>
+<li><strong>First run</strong> — delegates to <code>TcPalletizingGeneratorForSingleRun</code>. Records the base stack height for every created stack.</li>
+<li><strong>Subsequent runs</strong> — for each repetition <code>r</code>:
+<ul>
+<li>Target height = base_height + r × height_increment</li>
+<li>For each operation from run 1:
+<ul>
+<li>Translate the part's position into stack coordinates using the stack-shift offset.</li>
+<li>If the position has changed relative to run 1 (alternating layout), record the new position.</li>
+<li>Check for collisions at the new height. If a collision occurs, try to switch the stacking mode (optional → required, or vice versa). If unavoidable, mark the operation with an issue flag.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>Key methods:</strong></p>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>determinePalletizingOperationTargetHeightForCurrentRepetition</code></td>
+<td>height = base + (rep × increment)</td>
+</tr>
+<tr>
+<td><code>hasPartPositionInStackCoordinatesChanged</code></td>
+<td>detects alternating-position layouts</td>
+</tr>
+<tr>
+<td><code>tryAdjustStackingModeIfCollisionOccurs</code></td>
+<td>converts optional stacking modes to avoid collision</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="tcpalletizinggeneratorwithpalletchange">TcPalletizingGeneratorWithPalletChange</h3>
+<p><strong>File:</strong> <code>source/generator/TcPalletizingGeneratorWithPalletChange.*</code></p>
+<p>Wraps the single-run (or multi-run) generator and handles jobs that span multiple layout instances (pallets).</p>
+<h4 id="algorithm-2">Algorithm</h4>
+<pre><code>currentLayoutInstance = 0
+remaining = allTasks
+
+loop:
+    result = innerGenerator.run(remaining, currentLayoutInstance)
+    notPlaced = result.tasksNotPalletized
+    if notPlaced is empty: break
+    currentLayoutInstance++
+    if no more layout instances: break
+    remaining = notPlaced
+    innerGenerator.resetStateForNewPallet(currentLayoutInstance)
+</code></pre>
+<p>Each pallet change creates a fresh <code>TcPalletizingGeneratorState</code> for the new layout instance; stacks, operations, and issues are accumulated across all instances.</p>
+<hr />
+<h2 id="state-management">State Management</h2>
+<p><strong>File:</strong> <code>source/generator/TcPalletizingGeneratorState.*</code></p>
+<p><code>TcPalletizingGeneratorState</code> is the mutable heart of the algorithm. It is shared by all generator layers and updated as placements are made.</p>
+<h3 id="tracked-data">Tracked Data</h3>
+<table>
+<thead>
+<tr>
+<th>Category</th>
+<th>Contents</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Stacks</strong></td>
+<td>Sections with their stacks, stack IDs, positioned-stack indices</td>
+</tr>
+<tr>
+<td><strong>Operations</strong></td>
+<td>Palletizing operations with task index, stack-shift offsets, metadata</td>
+</tr>
+<tr>
+<td><strong>Issues — tasks</strong></td>
+<td>Sub-tasks not palletized, with issue type (no position, collision, weight, etc.)</td>
+</tr>
+<tr>
+<td><strong>Issues — operations</strong></td>
+<td>Operations where the unloading device collides with the stack</td>
+</tr>
+<tr>
+<td><strong>Weight</strong></td>
+<td>Per-section loading weight accumulator</td>
+</tr>
+<tr>
+<td><strong>Sorting groups</strong></td>
+<td>Task ordering / grouping state</td>
+</tr>
+</tbody>
+</table>
+<h3 id="rollback">Rollback</h3>
+<p>Before attempting a speculative placement, the algorithm saves a snapshot of the state. If placement fails, the state is fully restored. This enables backtracking within a sub-task's strategy loop without side effects.</p>
+<hr />
+<h2 id="task-pre-processing">Task Pre-Processing</h2>
+<p><strong>Files:</strong> <code>source/TnPalletizingTasksOrganization.*</code>, <code>source/TnPalletizingSubTask.*</code>, <code>source/TcPalletizingSubTask.*</code></p>
+<p>Before the main loop runs, tasks are pre-processed:</p>
+<ol>
+<li><p><strong>Stacking order split</strong> (<code>TnPalletizingTasksOrganization</code>) — tasks are partitioned into groups that must be stacked together vs. those that may be stacked successively.</p>
+</li>
+<li><p><strong>Sub-task creation</strong> (<code>TcPalletizingSubTask</code>) — each task is decomposed into sub-tasks, where each sub-task contains:</p>
+<ul>
+<li>The parts to be placed on a pallet (the &quot;to palletize&quot; set).</li>
+<li>The parts that remain gripped by the unloading device during placement (the &quot;attached&quot; set).</li>
+</ul>
+</li>
+<li><p><strong>Cluster formation</strong> — geometrically equivalent sub-tasks are grouped into clusters (see <a href="#cluster-based-stack-selection">Cluster-Based Stack Selection</a>).</p>
+</li>
+<li><p><strong>Rotation symmetry computation</strong> (<code>TnAnglesOfRotationSymmetry</code>) — determines which rotation angles produce geometrically equivalent placements, enabling the algorithm to accept rotated alternatives without introducing extra stack positions.</p>
+</li>
+<li><p><strong>Stack height limits</strong> (<code>TnStackHeightComputation</code>) — computes the maximum allowable stack height per section, respecting <code>maxPartsPerStack</code>, part outer curves, and available vertical clearance.</p>
+</li>
+</ol>
+<hr />
+<h2 id="position-finding">Position Finding</h2>
+<h3 id="layout-finder">Layout Finder</h3>
+<p><strong>File:</strong> <code>source/newPositionFinder/TcNewPositionOnLayoutFinder.*</code></p>
+<p>Top-level position-finding coordinator. Iterates over sections (in the order determined by <code>TcSectionOrganizer</code>) and delegates to the section finder or sub-unit finder.</p>
+<pre><code>for each section (filtered and sorted):
+    pos = sectionFinder.find(section, subTask)
+    if pos: return pos
+
+    pos = subUnitFinder.find(section, subTask)  // cross-section
+    if pos: return pos
+
+return nullopt
+</code></pre>
+<p>After a successful placement, the finder updates all start-point-candidate finders so subsequent searches reflect the new stack.</p>
+<hr />
+<h3 id="section-finder">Section Finder</h3>
+<p><strong>File:</strong> <code>source/newPositionFinder/TcNewPositionOnSectionFinder.*</code></p>
+<p>Checks preconditions for a section (loading weight limit, container type compatibility, part type allowed) and then delegates to <code>TcNewPositionInBoundingBoxFinder</code>.</p>
+<hr />
+<h3 id="bounding-box-finder">Bounding Box Finder</h3>
+<p><strong>File:</strong> <code>source/newPositionFinder/TcNewPositionInBoundingBoxFinder.*</code></p>
+<p>Iterates the list of start-point candidates returned by the active <code>TiStartPointCandidatesFinder</code> and validates each via <code>TcValidStartCornerPointFromStartPointCandidateComputer</code>.</p>
+<pre><code>candidates = startPointFinder.getStartPointCandidates()
+for each candidate in candidates:
+    result = validStartCornerComputer.compute(candidate)
+    if result.isValid:
+        return result.position
+return nullopt
+</code></pre>
+<hr />
+<h3 id="unloading-area-sub-unit-finder">Unloading Area Sub-Unit Finder</h3>
+<p><strong>File:</strong> <code>source/newPositionFinder/TcNewPositionOnUnloadingAreaSubUnitFinder.*</code></p>
+<p>Handles the special case where a part is large enough to span multiple sections of the same unloading area sub-unit (e.g. a long sheet that bridges two cart zones). Checks that the part's centre of gravity does not tilt over section boundaries and computes per-section positions for each element of the parts layout.</p>
+<hr />
+<h3 id="valid-start-corner-computer">Valid Start Corner Computer</h3>
+<p><strong>File:</strong> <code>source/newPositionFinder/TcValidStartCornerPointFromStartPointCandidateComputer.*</code></p>
+<p>For a given start-point candidate, performs all final validation checks before accepting the position:</p>
+<ol>
+<li>Compute position offset (<code>TcOffsetComputer</code>).</li>
+<li>Validate placement is inside the bounding box.</li>
+<li>Compute movable-entity positions (cart, unloading device arm).</li>
+<li>Check reachability of the Y position given movable-entity constraints.</li>
+<li>Perform collision check with interference items and containers.</li>
+<li>Validate part centre of gravity is within safe bounds.</li>
+</ol>
+<p>Returns <code>nullopt</code> if any check fails.</p>
+<hr />
+<h2 id="start-point-candidates">Start Point Candidates</h2>
+<p>The <code>TiStartPointCandidatesFinder</code> interface abstracts three independent strategies. The factory (<code>TnStartPointCandidatesFinderFactoryCreation</code>) selects the strategy at construction time based on job configuration.</p>
+<table>
+<thead>
+<tr>
+<th>Strategy</th>
+<th>When used</th>
+<th>Key characteristic</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Bounding box-based</td>
+<td>Default</td>
+<td>Grid-aligned, staircase boundary</td>
+</tr>
+<tr>
+<td>Contour-based (NFP)</td>
+<td>When container collision enabled</td>
+<td>Polygon-aware, TOPOS sorting</td>
+</tr>
+<tr>
+<td>Pile-based</td>
+<td>When stack collision allowed</td>
+<td>Allows overlapping, resets when exhausted</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h3 id="bounding-box-based-strategy">Bounding Box-Based Strategy</h3>
+<p><strong>Files:</strong> <code>source/startPointCandidatesFinder/boundingBoxBased/</code></p>
+<p>Places stacks in a rectangular grid. Maintains a <em>staircase polygon</em> — a monotone rectilinear boundary of already-placed stacks — and only offers candidates on or adjacent to that boundary.</p>
+<h4 id="staircase-polygon">Staircase Polygon</h4>
+<p>When a stack is placed at position P, new start-point candidates are generated at P + (stack_width, 0) and P + (0, stack_height) (adjusted for positioning direction). Candidates that fall inside the staircase (already blocked) are removed.</p>
+<h4 id="offset-computation-tcboundingboxbasedoffsetcomputer">Offset Computation (<code>TcBoundingBoxBasedOffsetComputer</code>)</h4>
+<p>Computes the offset from the candidate point to the actual part reference corner:</p>
+<ul>
+<li>Maintains minimum clearance between stacks (<code>minDistanceBetweenStacks</code>).</li>
+<li>Maintains minimum clearance between stacks and the unloading device.</li>
+<li>Handles the special case where the unloading device is positioned between stacks.</li>
+</ul>
+<h4 id="state-update">State Update</h4>
+<p>After each successful placement, <code>updateState()</code> is called. It adds the new bounding box to the internal set of occupied boxes and computes which candidate points to add or remove from the staircase.</p>
+<hr />
+<h3 id="contour-based-strategy-no-fit-polygon">Contour-Based Strategy (No-Fit Polygon)</h3>
+<p><strong>Files:</strong> <code>source/startPointCandidatesFinder/contourBased/</code></p>
+<p>Based on the TOPOS algorithm (see <code>doc/startPointCandidatesFinder/contourBased/topos_a_new_constructive_algorithm_for_nesting_problems.pdf</code>). Uses <em>no-fit polygons</em> (NFPs) to compute the exact set of positions where a new part would not collide with any existing stack.</p>
+<h4 id="no-fit-polygon">No-Fit Polygon</h4>
+<p>An NFP for part A relative to obstacle B is the Minkowski difference of A and B: the set of reference-point positions where A would touch B. Any position inside the NFP is a collision; valid positions lie outside all NFPs and inside the <em>inner-fit polygon</em> (IFP), which is the region where A fits inside the container.</p>
+<p><strong>Computation:</strong></p>
+<ul>
+<li>NFPs are computed via <code>TcNoFitPolygonHolder</code> (with caching and mutex-protected lazy initialisation).</li>
+<li>The NFP for a stack is the union of the NFPs of all unique parts in that stack.</li>
+<li>Container interference regions (fixed obstacles inside the pallet area) contribute additional forbidden zones (<code>TnContainerInterferenceRegionsWithTranslation</code>).</li>
+</ul>
+<p><strong>Valid region:</strong></p>
+<pre><code>validRegion = IFP \ union(all NFPs)
+</code></pre>
+<p>Candidate points are extracted as the vertices of the boundary of <code>validRegion</code>.</p>
+<h4 id="sorting-tccontourbasedstartpointcandidatessorter">Sorting (<code>TcContourBasedStartPointCandidatesSorter</code>)</h4>
+<p>Candidates are sorted using the TOPOS priority order:</p>
+<ol>
+<li><strong>Minimise area</strong> of the bounding union of existing stacks ∪ new part.</li>
+<li><strong>Minimise perimeter</strong> of the same union (tiebreaker for equal area).</li>
+<li><strong>Maximise overlap area</strong> (pack tightly against existing stacks).</li>
+<li><strong>Fallback</strong> to the start-corner / positioning-direction preference.</li>
+</ol>
+<h4 id="caches">Caches</h4>
+<ul>
+<li><code>TcNoFitPolygonHolder</code> — caches NFPs keyed by (part geometry, obstacle geometry, distances).</li>
+<li><code>TcDiscretizedPolygonHolder</code> — caches discretized polygon outlines for rotated parts and unloading device components (used for fast point-in-polygon tests).</li>
+</ul>
+<hr />
+<h3 id="pile-based-strategy">Pile-Based Strategy</h3>
+<p><strong>Files:</strong> <code>source/startPointCandidatesFinder/pileBased/</code></p>
+<p>Wraps <code>TcBoundingBoxBasedStartPointCandidatesFinder</code> but permits stack overlap (piling). When all candidates are exhausted, the finder resets to the base corner of the section, allowing new stacks to be placed on top of existing ones.</p>
+<p>Used for jobs where the positioning type explicitly allows stacks to occupy the same floor footprint.</p>
+<hr />
+<h2 id="existing-stack-finder">Existing Stack Finder</h2>
+<p><strong>Files:</strong> <code>source/existingStackFinder/</code></p>
+<p>Before searching for a new floor position, the algorithm checks whether the sub-task's parts can be added on top of an already-placed stack. <code>TcExistingStackFinder</code> iterates all occupied sections and stacks and applies <code>TcNewPartOnStackValidator</code>.</p>
+<h3 id="validation-tcnewpartonstackvalidator">Validation (<code>TcNewPartOnStackValidator</code>)</h3>
+<p>A candidate stack passes validation only if all of the following hold:</p>
+<table>
+<thead>
+<tr>
+<th>Check</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Part geometry</td>
+<td>Last part on stack is geometrically equivalent to the new part (accounting for rotation symmetry)</td>
+</tr>
+<tr>
+<td>Stack count</td>
+<td>Current stack count &lt; configured maximum</td>
+</tr>
+<tr>
+<td>Stack height</td>
+<td>New stack height ≤ configured maximum</td>
+</tr>
+<tr>
+<td>Loading weight</td>
+<td>Section/layout weight after addition ≤ limit</td>
+</tr>
+<tr>
+<td>Collision</td>
+<td>No collision of the unloading device with the stack at its new height</td>
+</tr>
+<tr>
+<td>Mobility</td>
+<td>The unloading device can reach the stack position</td>
+</tr>
+<tr>
+<td>Stacking order</td>
+<td>Stacking mode is compatible with the order requirement</td>
+</tr>
+<tr>
+<td>Container type</td>
+<td>Section container type permits this part type</td>
+</tr>
+<tr>
+<td>Interference</td>
+<td>No interference items block the position</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Part geometry check (<code>TnPartGeometryOnStackCheck</code>):</strong><br />
+Compares the outgoing part (last on stack) with the incoming part. Accepts equal geometries. If the part has rotation symmetry at a specific angle, an incoming part rotated by that angle is also accepted.</p>
+<hr />
+<h2 id="cluster-based-stack-selection">Cluster-Based Stack Selection</h2>
+<p><strong>Files:</strong> <code>source/cluster/</code></p>
+<p>Used by the <em>Stack Growth Evenly</em> mode to avoid concentrating all parts on a single stack.</p>
+<h3 id="cluster-formation-tcpalletizingsubtaskcluster">Cluster Formation (<code>TcPalletizingSubTaskCluster</code>)</h3>
+<p>Sub-tasks are grouped into a cluster when they share identical part geometry (so they can legally stack on each other). Each cluster tracks:</p>
+<ul>
+<li>The set of member sub-tasks.</li>
+<li>The minimum number of stacks required for even growth (= ceil(total_parts / maxPartsPerStack)).</li>
+</ul>
+<h3 id="stack-selection-tcstackselectorbycluster">Stack Selection (<code>TcStackSelectorByCluster</code>)</h3>
+<p>When selecting which existing stack to grow, <code>TcStackSelectorByCluster</code>:</p>
+<ol>
+<li>Determines the cluster for the current sub-task.</li>
+<li>Queries the cluster for the minimum required stacks.</li>
+<li>From the available stacks for this cluster, picks the one that keeps growth most even (lowest current height / fewest parts).</li>
+</ol>
+<p>This prevents degenerate cases where all repetitions pile onto one stack.</p>
+<hr />
+<h2 id="section-organizer">Section Organizer</h2>
+<p><strong>Files:</strong> <code>source/sectionOrganizer/</code></p>
+<p>Sections are not searched in arbitrary order. <code>TcSectionOrganizer</code> filters and sorts them before position finding.</p>
+<h3 id="filtering-tcsectionvalidator">Filtering (<code>TcSectionValidator</code>)</h3>
+<p>A section is excluded if:</p>
+<ul>
+<li>Inside/outside machine constraint doesn't match (e.g. part must go outside, section is inside).</li>
+<li>The section belongs to an exclusive sorting group that already contains parts of a different group.</li>
+<li>The stacking mode requires a sorting group and the section has none.</li>
+</ul>
+<h3 id="sorting-tcsectioncomparator">Sorting (<code>TcSectionComparator</code>)</h3>
+<p>Sections are ordered by a lexicographic key:</p>
+<ol>
+<li><strong>Sorting group membership</strong> — preferred group first, then group-compatible, then ungrouped.</li>
+<li><strong>Inside/outside machine</strong> — respects job preference.</li>
+<li><strong>Across-section optimisation</strong> — sections where cross-section palletizing is possible are preferred when that is beneficial.</li>
+<li><strong>Layout order</strong> — fall back to the physical layout position of the section.</li>
+</ol>
+<h3 id="sorting-group-state-tcsortinggroupswithstate">Sorting Group State (<code>TcSortingGroupsWithState</code>)</h3>
+<p>Tracks which parts (and which sorting groups) have been placed in each section. Updated after every successful palletizing operation so that subsequent section validation has accurate occupancy data.</p>
+<hr />
+<h2 id="offset-computation">Offset Computation</h2>
+<p><strong>Files:</strong> <code>source/offset/</code></p>
+<p>The <em>offset</em> is the vector from a start-point candidate to the actual position where the part reference corner lands after applying all clearance constraints.</p>
+<h3 id="tcoffsetcomputer"><code>TcOffsetComputer</code></h3>
+<p>Computes the offset in two steps:</p>
+<ol>
+<li><strong>Complement-corner direction</strong> — pushes the part toward the complement corner (opposite to the start corner) to maximise use of the section.</li>
+<li><strong>Clearance enforcement</strong> — adjusts the offset so that:
+<ul>
+<li>Minimum distance between adjacent stacks is maintained.</li>
+<li>Minimum distance between stack and unloading device is maintained.</li>
+<li>Movable unloading-area unit limits (cart travel range) are not exceeded.</li>
+</ul>
+</li>
+</ol>
+<h3 id="partial-outside-palletizing-tnoffsettopalletizepartiallyoutsideofboundingbox">Partial Outside Palletizing (<code>TnOffsetToPalletizePartiallyOutsideOfBoundingBox</code>)</h3>
+<p>Some jobs allow parts to overhang the bounding box edge. This utility computes how much overhang is permissible and adjusts the offset accordingly so the part centre of gravity remains supported.</p>
+<h3 id="start-point-candidate-boundary-validation-tnstartpointcandidate">Start Point Candidate Boundary Validation (<code>TnStartPointCandidate</code>)</h3>
+<p>Checks whether a candidate point is on the valid boundary of the staircase polygon (bounding-box strategy) or the NFP complement (contour strategy), and discards points that have drifted off the boundary after an offset is applied.</p>
+<hr />
+<h2 id="bounding-box-coordinate-system">Bounding Box Coordinate System</h2>
+<p><strong>Files:</strong> <code>source/bbToPalletizeIn/</code></p>
+<p>All position computations work in a <em>bounding-box-local</em> coordinate system with origin at the start corner and axes aligned with the positioning direction. This decouples the algorithm from the physical machine coordinate system.</p>
+<h3 id="components">Components</h3>
+<table>
+<thead>
+<tr>
+<th>File</th>
+<th>Responsibility</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TnBoundingBoxToPalletizeInDetermination</code></td>
+<td>Computes the actual bounding box (the region within the section that may be used)</td>
+</tr>
+<tr>
+<td><code>TnBoundingBoxToPalletizeInCoordinates</code></td>
+<td>Transforms points between machine coordinates and bounding-box-local coordinates</td>
+</tr>
+<tr>
+<td><code>TnBoundingBoxToPalletizeInDataDetermination</code></td>
+<td>Aggregates bounding box, offsets, and reference data into <code>TsBoundingBoxToPalletizeInData</code></td>
+</tr>
+<tr>
+<td><code>TsBoundingBoxToPalletizeInData</code></td>
+<td>Data structure passed through position-finding pipeline</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="rotation-symmetry">Rotation Symmetry</h2>
+<p><strong>Files:</strong> <code>source/rotationSymmetry/</code></p>
+<p>Irregular parts may be rotationally symmetric (e.g. a square is symmetric at 90°). If a part is symmetric at angle θ, placing it at rotation φ is geometrically equivalent to placing it at φ + θ. The algorithm exploits this to accept more stack combinations.</p>
+<h3 id="computation-tnanglesofrotationsymmetry">Computation (<code>TnAnglesOfRotationSymmetry</code>)</h3>
+<p>Runs in parallel threads. For each part in the job:</p>
+<ol>
+<li>Collect all rotation angles already used for that part across all stacks and tasks.</li>
+<li>For each pair of angles, compute the difference.</li>
+<li>Check if the part geometry is invariant under that difference (i.e. the rotated outline matches the original).</li>
+<li>If yes, record the angle as a symmetry angle.</li>
+<li>Also considers unloading devices that can rotate by 90°: adds 90° steps if the device permits.</li>
+</ol>
+<p>Results are stored in <code>TcPartsToAnglesRelation</code> (part → set of symmetry angles) and used by <code>TnPartGeometryOnStackCheck</code> during existing-stack validation.</p>
+<hr />
+<h2 id="movable-entities">Movable Entities</h2>
+<p><strong>Files:</strong> <code>source/movableEntities/</code></p>
+<p>Some unloading devices and carts can move during a palletizing operation. The algorithm must verify that the device can reach the target position.</p>
+<h3 id="tcreachablepositionywithmovableentitiescomputer"><code>TcReachablePositionYWithMovableEntitiesComputer</code></h3>
+<p>Given the current cart / arm configuration and the target placement position, computes whether the Y coordinate is reachable. Considers:</p>
+<ul>
+<li>Cart travel limits along the X axis.</li>
+<li>Arm extension limits along the Y axis.</li>
+<li>Interaction between cart position and arm extension (the reachable Y is a function of X).</li>
+</ul>
+<h3 id="tnboundingboxtopalletizeinposition"><code>TnBoundingBoxToPalletizeInPosition</code></h3>
+<p>Converts a position from bounding-box-local coordinates back to machine coordinates, then queries <code>TcReachablePositionYWithMovableEntitiesComputer</code> to verify reachability.</p>
+<h3 id="tsmovableentitiespositions-tsmovableentitiespositionscomputationdata"><code>TsMovableEntitiesPositions</code> / <code>TsMovableEntitiesPositionsComputationData</code></h3>
+<p>Thin data holders representing the computed positions of all movable entities (cart, arm, vacuum gripper) for a given candidate placement.</p>
+<hr />
+<h2 id="constraint-checkers">Constraint Checkers</h2>
+<h3 id="collision-checker-tccollisionwithinterferenceitemschecker">Collision Checker (<code>TcCollisionWithInterferenceItemsChecker</code>)</h3>
+<p>Implements <code>TiCollisionWithInterferenceItemsChecker</code>. Checks:</p>
+<ul>
+<li>Whether the unloading device (in its computed position for a candidate placement) intersects any fixed interference items or existing stacks.</li>
+<li>Whether the parts layout (in the candidate position) intersects container walls or other interference regions.</li>
+</ul>
+<p>Accepts a map from stack ID → current height so collision checks use the actual stack heights, not the defaults.</p>
+<h3 id="loading-weight-checker-tcunloadingarealoadingweightchecker">Loading Weight Checker (<code>TcUnloadingAreaLoadingWeightChecker</code>)</h3>
+<p>Implements <code>TiUnloadingAreaLoadingWeightChecker</code>. Validates that adding the new part's weight to a section, layout, or unloading area unit does not exceed the configured limit.</p>
+<hr />
+<h2 id="evaluation-and-strategy-selection">Evaluation and Strategy Selection</h2>
+<p><strong>File:</strong> <code>source/TnPalletizingEvaluation.*</code></p>
+<p>After all parallel strategies complete, results are ranked by a lexicographic score (lower = better):</p>
+<table>
+<thead>
+<tr>
+<th>Priority</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1 (most important)</td>
+<td>Number of sub-tasks not palletized</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Number of operations with issues (e.g. unavoidable unloading-device collision)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Number of pallet changes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Number of stacks on the last unloading area</td>
+</tr>
+<tr>
+<td>5 (least important)</td>
+<td>Total area of sections containing stacks</td>
+</tr>
+</tbody>
+</table>
+<p>The first strategy that achieves a strictly better score wins. In case of a tie across all criteria, the strategy with the lowest index (i.e. the first enumerated) is returned.</p>
+<hr />
+<h2 id="data-flow-diagram">Data Flow Diagram</h2>
+<pre><code>Input: palletizing job (tasks, parts, layout, device config)
+│
+├─ TnPalletizingTasksOrganization
+│    Split by stacking order → sub-tasks → clusters
+│
+├─ TnAnglesOfRotationSymmetry  (parallel)
+│    Part → rotation symmetry angles
+│
+├─ TnStackHeightComputation
+│    Per-section max stack height
+│
+└─ TcPalletizingGenerator
+     │
+     ├─ (parallel, up to 8) TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection
+     │    │
+     │    ├─ TcPalletizingGeneratorForSingleRun          ← main loop
+     │    │    ├─ for each sub-task:
+     │    │    │    ├─ TcExistingStackFinder              check existing stacks
+     │    │    │    │    └─ TcNewPartOnStackValidator     geometry + weight + collision
+     │    │    │    │
+     │    │    │    └─ TcNewPositionOnLayoutFinder        find floor position
+     │    │    │         ├─ TcSectionOrganizer            filter + sort sections
+     │    │    │         ├─ TcNewPositionOnSectionFinder
+     │    │    │         │    └─ TcNewPositionInBoundingBoxFinder
+     │    │    │         │         └─ TiStartPointCandidatesFinder (one of three)
+     │    │    │         │              ├─ BoundingBoxBased   staircase polygon
+     │    │    │         │              ├─ ContourBased       no-fit polygons (TOPOS)
+     │    │    │         │              └─ PileBased          overlap-allowed
+     │    │    │         └─ TcValidStartCornerPointFromStartPointCandidateComputer
+     │    │    │               ├─ TcOffsetComputer
+     │    │    │               ├─ TcReachablePositionY...Computer
+     │    │    │               └─ TcCollisionWithInterferenceItemsChecker
+     │    │    │
+     │    │    └─ TcPalletizingGeneratorState            accumulate result
+     │    │
+     │    ├─ TcPalletizingGeneratorForMultipleRuns       repetition loop
+     │    │    ├─ run 1 via SingleRun
+     │    │    └─ runs 2..n: height increment + collision adjust
+     │    │
+     │    └─ TcPalletizingGeneratorWithPalletChange      pallet change loop
+     │         └─ inner generator + advance layout instance
+     │
+     └─ TnPalletizingEvaluation
+          5-criterion lexicographic score → best result
+</code></pre>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#table-of-contents">Table of Contents</a>
+  </li>
+  <li level="1">
+   <a href="#overview">Overview</a>
+  </li>
+  <li level="1">
+   <a href="#top-level-entry-point">Top-Level Entry Point</a>
+  </li>
+  <li level="2">
+   <a href="#strategy-enumeration">Strategy Enumeration</a>
+  </li>
+  <li level="1">
+   <a href="#generator-hierarchy">Generator Hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#tcpalletizinggeneratorwithfixedstartcornerandpositioningdirection">TcPalletizingGeneratorWithFixedStartCornerAndPositioningDirection</a>
+  </li>
+  <li level="2">
+   <a href="#tcpalletizinggeneratorforsinglerun">TcPalletizingGeneratorForSingleRun</a>
+  </li>
+  <li level="3">
+   <a href="#algorithm">Algorithm</a>
+  </li>
+  <li level="2">
+   <a href="#tcpalletizinggeneratorformultipleruns">TcPalletizingGeneratorForMultipleRuns</a>
+  </li>
+  <li level="3">
+   <a href="#algorithm-1">Algorithm</a>
+  </li>
+  <li level="2">
+   <a href="#tcpalletizinggeneratorwithpalletchange">TcPalletizingGeneratorWithPalletChange</a>
+  </li>
+  <li level="3">
+   <a href="#algorithm-2">Algorithm</a>
+  </li>
+  <li level="1">
+   <a href="#state-management">State Management</a>
+  </li>
+  <li level="2">
+   <a href="#tracked-data">Tracked Data</a>
+  </li>
+  <li level="2">
+   <a href="#rollback">Rollback</a>
+  </li>
+  <li level="1">
+   <a href="#task-pre-processing">Task Pre-Processing</a>
+  </li>
+  <li level="1">
+   <a href="#position-finding">Position Finding</a>
+  </li>
+  <li level="2">
+   <a href="#layout-finder">Layout Finder</a>
+  </li>
+  <li level="2">
+   <a href="#section-finder">Section Finder</a>
+  </li>
+  <li level="2">
+   <a href="#bounding-box-finder">Bounding Box Finder</a>
+  </li>
+  <li level="2">
+   <a href="#unloading-area-sub-unit-finder">Unloading Area Sub-Unit Finder</a>
+  </li>
+  <li level="2">
+   <a href="#valid-start-corner-computer">Valid Start Corner Computer</a>
+  </li>
+  <li level="1">
+   <a href="#start-point-candidates">Start Point Candidates</a>
+  </li>
+  <li level="2">
+   <a href="#bounding-box-based-strategy">Bounding Box-Based Strategy</a>
+  </li>
+  <li level="3">
+   <a href="#staircase-polygon">Staircase Polygon</a>
+  </li>
+  <li level="3">
+   <a href="#offset-computation-tcboundingboxbasedoffsetcomputer">Offset Computation ()</a>
+  </li>
+  <li level="3">
+   <a href="#state-update">State Update</a>
+  </li>
+  <li level="2">
+   <a href="#contour-based-strategy-no-fit-polygon">Contour-Based Strategy (No-Fit Polygon)</a>
+  </li>
+  <li level="3">
+   <a href="#no-fit-polygon">No-Fit Polygon</a>
+  </li>
+  <li level="3">
+   <a href="#sorting-tccontourbasedstartpointcandidatessorter">Sorting ()</a>
+  </li>
+  <li level="3">
+   <a href="#caches">Caches</a>
+  </li>
+  <li level="2">
+   <a href="#pile-based-strategy">Pile-Based Strategy</a>
+  </li>
+  <li level="1">
+   <a href="#existing-stack-finder">Existing Stack Finder</a>
+  </li>
+  <li level="2">
+   <a href="#validation-tcnewpartonstackvalidator">Validation ()</a>
+  </li>
+  <li level="1">
+   <a href="#cluster-based-stack-selection">Cluster-Based Stack Selection</a>
+  </li>
+  <li level="2">
+   <a href="#cluster-formation-tcpalletizingsubtaskcluster">Cluster Formation ()</a>
+  </li>
+  <li level="2">
+   <a href="#stack-selection-tcstackselectorbycluster">Stack Selection ()</a>
+  </li>
+  <li level="1">
+   <a href="#section-organizer">Section Organizer</a>
+  </li>
+  <li level="2">
+   <a href="#filtering-tcsectionvalidator">Filtering ()</a>
+  </li>
+  <li level="2">
+   <a href="#sorting-tcsectioncomparator">Sorting ()</a>
+  </li>
+  <li level="2">
+   <a href="#sorting-group-state-tcsortinggroupswithstate">Sorting Group State ()</a>
+  </li>
+  <li level="1">
+   <a href="#offset-computation">Offset Computation</a>
+  </li>
+  <li level="2">
+   <a href="#tcoffsetcomputer"></a>
+  </li>
+  <li level="2">
+   <a href="#partial-outside-palletizing-tnoffsettopalletizepartiallyoutsideofboundingbox">Partial Outside Palletizing ()</a>
+  </li>
+  <li level="2">
+   <a href="#start-point-candidate-boundary-validation-tnstartpointcandidate">Start Point Candidate Boundary Validation ()</a>
+  </li>
+  <li level="1">
+   <a href="#bounding-box-coordinate-system">Bounding Box Coordinate System</a>
+  </li>
+  <li level="2">
+   <a href="#components">Components</a>
+  </li>
+  <li level="1">
+   <a href="#rotation-symmetry">Rotation Symmetry</a>
+  </li>
+  <li level="2">
+   <a href="#computation-tnanglesofrotationsymmetry">Computation ()</a>
+  </li>
+  <li level="1">
+   <a href="#movable-entities">Movable Entities</a>
+  </li>
+  <li level="2">
+   <a href="#tcreachablepositionywithmovableentitiescomputer"></a>
+  </li>
+  <li level="2">
+   <a href="#tnboundingboxtopalletizeinposition"></a>
+  </li>
+  <li level="2">
+   <a href="#tsmovableentitiespositions-tsmovableentitiespositionscomputationdata"> / </a>
+  </li>
+  <li level="1">
+   <a href="#constraint-checkers">Constraint Checkers</a>
+  </li>
+  <li level="2">
+   <a href="#collision-checker-tccollisionwithinterferenceitemschecker">Collision Checker ()</a>
+  </li>
+  <li level="2">
+   <a href="#loading-weight-checker-tcunloadingarealoadingweightchecker">Loading Weight Checker ()</a>
+  </li>
+  <li level="1">
+   <a href="#evaluation-and-strategy-selection">Evaluation and Strategy Selection</a>
+  </li>
+  <li level="1">
+   <a href="#data-flow-diagram">Data Flow Diagram</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Palletizing.exe</a></span>
+ <span class="next"><a href="swagger-analysis.html">Analysis of `swagger.json`</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

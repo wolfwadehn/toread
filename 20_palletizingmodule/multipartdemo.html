@@ -1,0 +1,757 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>LST Palletizing-Data Reader — Algorithm Documentation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a class="active" href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>LST Palletizing-Data Reader — Algorithm Documentation</h1>
+<p><strong>Entry point:</strong> <code>TnPalletizingData::readFromLst(path)</code> → <code>TcSheet</code><br />
+<strong>Core class:</strong> <code>TcReadFromLst</code> (<code>source/libraries/lstdata/fromlst/algorithm/source/</code>)</p>
+<hr />
+<h2 id="functional-view">1 Functional view</h2>
+<h3 id="what-the-algorithm-does">What the algorithm does</h3>
+<p><code>readFromLst</code> parses one TRUMPF LST file and returns a fully populated <code>TcSheet</code> — a description of every cut part on a metal sheet together with where, when, and how the robot arm must pick each part off the laser table and deposit it on the pallet.</p>
+<p>The returned <code>TcSheet</code> contains a flat list of <code>TcStackItem</code> objects, one per cut part. Each item carries:</p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>getRemovalNumber()</code></td>
+<td>Which simultaneous lift this part belongs to (all parts with the same number are gripped at once)</td>
+</tr>
+<tr>
+<td><code>getPalletizingSequenceNumber()</code></td>
+<td>Which pass of the sheet this part belongs to (multi-cycle sheets only)</td>
+</tr>
+<tr>
+<td><code>getPartCenterOfGravityInSheetCoordinates()</code></td>
+<td>Where the part sits on the raw metal sheet</td>
+</tr>
+<tr>
+<td><code>getPartRotationAngle()</code></td>
+<td>The part's rotation on the sheet (degrees → radians)</td>
+</tr>
+<tr>
+<td><code>getPartType()</code></td>
+<td><code>finishedPart</code>, <code>wastePart</code>, <code>scrapSkeleton</code>, etc.</td>
+</tr>
+<tr>
+<td><code>getStackingOperation()</code></td>
+<td>Where the part must go (pallet target position, stack column, stacking mode)</td>
+</tr>
+<tr>
+<td><code>getUnloadingDevicePositionAndRotationRelativeToPart()</code></td>
+<td>How the suction arm must be positioned relative to this part</td>
+</tr>
+</tbody>
+</table>
+<h3 id="lst-file-structure-relevant-tables">LST file structure (relevant tables)</h3>
+<p>The LST is a structured text file. The algorithm reads seven named tables:</p>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Contains</th>
+<th>TRUMPF concept</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>EINRICHTEPLAN_INFO</code></td>
+<td>Machine name, sheet name, layout ID, repetition count</td>
+<td>Setup plan header</td>
+</tr>
+<tr>
+<td><code>SHEET_TECH</code></td>
+<td>Sheet thickness, material density</td>
+<td>Material properties</td>
+</tr>
+<tr>
+<td><code>PROGRAMM</code></td>
+<td>Part geometry (geo blobs), one row per part type</td>
+<td>Cutting program</td>
+</tr>
+<tr>
+<td><code>PARTS_IN_PROGRAM</code></td>
+<td>One row per distinct part type on this sheet; palletizing thickness</td>
+<td>Part catalogue</td>
+</tr>
+<tr>
+<td><code>PARTS_PALLET_DATA</code></td>
+<td><strong>PAPA records</strong> — one row per removal operation; stacking mode, stack ID, device type, destination coordinates</td>
+<td>Palletizing operations</td>
+</tr>
+<tr>
+<td><code>PARTS_IN_PROGRAM_POS</code></td>
+<td><strong>PAUD records</strong> — one row per individual part instance; sheet coordinates, removal number, PAPA/PAUD name links</td>
+<td>Part positions</td>
+</tr>
+<tr>
+<td><code>PARTS_UNLOAD_DATA</code></td>
+<td>Suction-arm lift offsets and angles, one row per PAUD record</td>
+<td>Unloading mechanics</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-papa-paud-hierarchy">The PAPA / PAUD hierarchy</h3>
+<p>Every cut part is identified by a <strong>PAUD name</strong> (Part Unload Data). Each PAUD belongs to exactly one <strong>PAPA</strong> (Part Palletizing). A PAPA describes one removal operation — the arm lifts all PAUDs of the same PAPA simultaneously.</p>
+<pre><code>PAPA_0001  ←── removal group 1 (2-part lift)
+  ├── PAUD_0001
+  └── PAUD_0002
+
+PAPA_0002  ←── removal group 2 (2-part lift)
+  ├── PAUD_0003
+  └── PAUD_0004
+
+PAPA_0003  ←── removal group 3 (4-part lift)
+  ├── PAUD_0005
+  ├── PAUD_0006
+  ├── PAUD_0007
+  └── PAUD_0008
+</code></pre>
+<h3 id="coordinate-derivation-by-device-type">Coordinate derivation by device type</h3>
+<p>The LST does not store the part's target position on the pallet directly. Instead it stores the <strong>unloading device's target position</strong> (where the suction arm moves to) plus the <strong>arm's offset relative to the part's centre of gravity</strong>. The algorithm inverts this relationship per device type:</p>
+<table>
+<thead>
+<tr>
+<th>Device</th>
+<th>How <code>partCOGInDestination</code> is derived</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>SortMaster</strong></td>
+<td><code>partCOG = deviceTarget − liftOffset</code>; if device has a rotation angle, rotate the result around the device target point</td>
+</tr>
+<tr>
+<td><strong>SortMasterCompact</strong></td>
+<td>Same subtraction, but the Y-axis of the lift offset is negated first (coordinate-system flip)</td>
+</tr>
+<tr>
+<td><strong>SortMasterSpeed</strong></td>
+<td><code>partCOG</code> is stored directly in fields 350/360 of PARTS_PALLET_DATA; no inversion needed</td>
+</tr>
+</tbody>
+</table>
+<h3 id="build-order-dependency-graph">Build order (dependency graph)</h3>
+<pre><code>SHEET_TECH            →  m_sheetThickness
+PROGRAMM              →  m_mapPartTypeIndexToRegion   (geo blobs → region outlines)
+PARTS_IN_PROGRAM      →  m_mapPartTypeIndexToPart     (part catalogue)
+PARTS_UNLOAD_DATA     →  m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart
+PARTS_IN_PROGRAM_POS  ─┐
+PARTS_PALLET_DATA      ┘→  m_mapPapaPaudNameToStackingOperation
+                             (destination COG derived here, PAPA↔PAUD map used)
+PARTS_IN_PROGRAM_POS  →  m_stackItems   (assembles all maps into TcStackItem list)
+EINRICHTEPLAN_INFO    →  m_machineSPtr, sheetName, layoutId, repetitionCount
+</code></pre>
+<hr />
+<h2 id="line-by-line">2 Line-by-line</h2>
+<h3 id="entry-wrappers-tnpalletizingdata.cpp">2.1 Entry wrappers (<code>TnPalletizingData.cpp</code>)</h3>
+<pre><code class="language-cpp">TcSheet readFromLst( const std::filesystem::path&amp; t_lstFile )
+{
+  TcReadFromLst lstReader;          // Create a fresh stateful reader
+  return lstReader.read( t_lstFile ); // Parse and return the completed sheet
+}
+</code></pre>
+<p><code>readRelevantDataAndFileFromLst</code> is identical but also returns the raw parsed <code>TiFile</code> handle (needed by write-back operations in the conversion pipeline).</p>
+<hr />
+<h3 id="tcreadfromlstread-orchestration-lines-517538">2.2 <code>TcReadFromLst::read</code> — orchestration (lines 517–538)</h3>
+<pre><code class="language-cpp">517: TcSheet TcReadFromLst::read( const std::filesystem::path&amp; t_lstFile )
+518: {
+519:   CHECKANDREPORT(
+520:     std::filesystem::exists( t_lstFile ), ... );
+</code></pre>
+<p>Guard: the file must exist before trying to open it. <code>CHECKANDREPORT</code> throws an exception with a descriptive message if the condition is false.</p>
+<pre><code class="language-cpp">522:   std::ifstream file( t_lstFile.c_str() );
+523:   CHECKANDREPORT( file.good(), ... );
+</code></pre>
+<p>Open as a byte stream. <code>file.good()</code> fails if the path exists but access is denied or the file is locked.</p>
+<pre><code class="language-cpp">524:   TnLst::TcReader lstReader( file );
+525:   CHECKANDREPORT( lstReader.tryRead(), ... );
+526:   m_fileSPtr = lstReader.getFile();
+527:   TnLst::TcFileAccessor fileAccessor( *m_fileSPtr );
+</code></pre>
+<p><code>TcReader</code> (from the <code>lstFormats</code> library) parses the structured LST format into an in-memory <code>TiFile</code> tree. <code>TcFileAccessor</code> wraps that tree and provides <code>tryGetTable(name)</code> lookups. <code>m_fileSPtr</code> keeps the file alive for the caller of <code>readRelevantDataAndFileFromLst</code>.</p>
+<pre><code class="language-cpp">529:   readPartGeometries( fileAccessor );  // Step 1: geo outlines
+530:   readSheetThickness( fileAccessor );  // Step 2: material thickness
+531:   readParts( fileAccessor );           // Step 3: part catalogue
+532:   readUnloadingDevicePositionsAndRotationsRelativeToPart( fileAccessor ); // Step 4: lift data
+533:   readStackingOperations( fileAccessor ); // Step 5: PAPA → stacking ops + destination COG
+534:   readStackItems( fileAccessor );         // Step 6: PAUD → assemble TcStackItem list
+535:   readMachine( fileAccessor );            // Step 7: machine identity
+536:   auto r_sheet = readSheet( fileAccessor ); // Step 8: assemble TcSheet
+537:   return r_sheet;
+538: }
+</code></pre>
+<p>Steps 1–7 fill the class's private maps. Step 8 bundles them into the final value object.</p>
+<hr />
+<h3 id="readpartgeometries-step-1-lines-557578">2.3 <code>readPartGeometries</code> — step 1 (lines 557–578)</h3>
+<p>Populates <code>m_mapPartTypeIndexToRegion</code> (partTypeIndex → geometric outline).</p>
+<pre><code class="language-cpp">559:   const std::string tableName = &quot;PROGRAMM&quot;;
+560:   const int fieldIdProgramPartTypeIndex = 70;
+</code></pre>
+<p><code>PROGRAMM</code> has one row per distinct part type in the cutting program.</p>
+<pre><code class="language-cpp">563:   for( const auto&amp; dataSet : tablePtr-&gt;getDataSets() )
+564:   {
+565:     const auto&amp; attachment = dataSet.getDataSet().getAttachment();
+566:     if( attachment )
+</code></pre>
+<p>Each row may carry an <strong>attachment</strong> — an inline blob containing the part's geometric outline in TRUMPF's GEO format. Rows without an attachment are cut-program steps with no geometry (e.g., tool-path headers).</p>
+<pre><code class="language-cpp">568:       auto partTypeIndex = dataSet.getIntById( fieldIdProgramPartTypeIndex );
+569:       if( partTypeIndex &gt; 0 )
+</code></pre>
+<p><code>partTypeIndex</code> of 0 means &quot;not a real part type&quot; — skip.</p>
+<pre><code class="language-cpp">571:         TnPersistency::TcGeoReader geoReader;
+572:         geoReader.readFromString( attachment-&gt;getContent() );
+573:         m_mapPartTypeIndexToRegion[ partTypeIndex ] = geoReader.getLargestRegionOfFirstPart();
+</code></pre>
+<p><code>TcGeoReader</code> deserialises the blob. <code>getLargestRegionOfFirstPart()</code> returns the outline of the part's largest closed region (the outer contour, not holes or micro-geometry). Stored by <code>partTypeIndex</code> for lookup in step 3.</p>
+<hr />
+<h3 id="readsheetthickness-getsheetthickness-step-2-lines-4961-805808">2.4 <code>readSheetThickness</code> / <code>getSheetThickness</code> — step 2 (lines 49–61, 805–808)</h3>
+<pre><code class="language-cpp">51:   const std::string tableName = &quot;SHEET_TECH&quot;;
+52:   const long fieldIdThickness = 40;
+</code></pre>
+<p><code>SHEET_TECH</code> has exactly one row describing the raw material.</p>
+<pre><code class="language-cpp">57:   double r_thickness = std::numeric_limits&lt;double&gt;::quiet_NaN();
+58:   const auto thicknessFound = data.tryGetMillimeterById( fieldIdThickness, r_thickness );
+</code></pre>
+<p><code>tryGetMillimeterById</code> reads field 40 and converts to mm. Starting with <code>NaN</code> means an unchecked &quot;success&quot; path would propagate a detectable bad value rather than silently using 0.</p>
+<p>Result stored in <code>m_sheetThickness</code> for use in steps 3 and 5.</p>
+<hr />
+<h3 id="readparts-step-3-lines-581602">2.5 <code>readParts</code> — step 3 (lines 581–602)</h3>
+<p>Populates <code>m_mapPartTypeIndexToPart</code> (partTypeIndex → <code>TcPart</code>).</p>
+<pre><code class="language-cpp">583:   const std::string tableName = &quot;PARTS_IN_PROGRAM&quot;;
+584:   const long fieldIdPartName = 30;
+585:   const long fieldIdPipPartTypeIndex = 240;
+</code></pre>
+<p><code>PARTS_IN_PROGRAM</code> has one row per distinct part type actually used on this sheet (a subset of <code>PROGRAMM</code>).</p>
+<pre><code class="language-cpp">593:     auto palletizingThickness = getPalletizingThickness( dataSet );
+</code></pre>
+<p><code>getPalletizingThickness</code> (lines 985–997): tries field 230 first. If absent, falls back to <code>m_sheetThickness</code>. Some machines write an explicit palletizing thickness (e.g., for coated stock where the effective gripping thickness differs from the material thickness).</p>
+<pre><code class="language-cpp">594:     auto regionIter = m_mapPartTypeIndexToRegion.find( partTypeIndex );
+595:     if( regionIter != m_mapPartTypeIndexToRegion.end() )
+596:     {
+597:       m_mapPartTypeIndexToPart[ partTypeIndex ] =
+598:         std::make_shared&lt;TcPart&gt;( partName, palletizingThickness, regionIter-&gt;second );
+599:     }
+</code></pre>
+<p>Only creates a <code>TcPart</code> if the geometry was found in step 1. Parts without geometry are silently skipped (uncommon in practice, protects against malformed LST files).</p>
+<hr />
+<h3 id="readunloadingdevicepositionsandrotationsrelativetopart-step-4-lines-769802">2.6 <code>readUnloadingDevicePositionsAndRotationsRelativeToPart</code> — step 4 (lines 769–802)</h3>
+<p>Populates <code>m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart</code> (paudName → list of <code>TsUnloadingDeviceComponentPositionAndRotationRelativeToPart</code>).</p>
+<pre><code class="language-cpp">772:   const std::string tableName = &quot;PARTS_UNLOAD_DATA&quot;;
+773:   const long fieldIdName = 30;
+774:   const long fieldIdUnloadingDeviceId = 70;
+</code></pre>
+<p><code>PARTS_UNLOAD_DATA</code> has one row per PAUD record. Field 30 is the PAUD name. Field 70 identifies the device type as an integer (decoded by <code>TnUnloadingDevice::getFromId</code>).</p>
+<pre><code class="language-cpp">783:     auto unloadingDevicePositionAndRotationRelativeToPart =
+784:       getUnloadingDevicePositionAndRotationRelativeToPart( dataSet, unloadingDevice );
+</code></pre>
+<p>Dispatches to a device-specific function:</p>
+<p><strong>SortMaster</strong> (<code>getSortMasterPositionAndRotationRelativeToPart</code>, lines 370–385):</p>
+<ul>
+<li>Field 40/50: lift offset X/Y relative to part COG (in mm)</li>
+<li>Field 60: angle difference between device and part rotation (degrees → radians)</li>
+<li>Returns a single <code>TsUnloadingDeviceComponentPositionAndRotationRelativeToPart</code> with <code>m_unloadingDeviceComponent = nullopt</code> (no named shuttle — it is a single-arm device)</li>
+</ul>
+<p><strong>SortMasterCompact</strong> (<code>getSortMasterCompactPositionAndRotationRelativeToPart</code>, lines 388–403):</p>
+<ul>
+<li>Same field 40/50 for the offset, but <strong>negates Y</strong> before storing</li>
+<li>Angle difference is always 0.0 (this device does not rotate)</li>
+<li>Returns a single component, <code>m_unloadingDeviceComponent = nullopt</code></li>
+</ul>
+<p><strong>SortMasterSpeed</strong> (<code>getSortMasterSpeedSuctionShuttlePositionsRelativeToPart</code>, lines 335–367):</p>
+<ul>
+<li>Field 640: transport-and-palletizing-mode flag; if not 2 (= palletizing), returns empty vector (this console is not used for palletizing)</li>
+<li>Field 480: console's X offset relative to part COG (shared by all three shuttles of this console)</li>
+<li>Fields 500, 520, 540: Y offset for shuttle 1, 2, 3 respectively</li>
+<li>Field 470: console number (1 or 2); combined with shuttle number → <code>TeUnloadingDeviceComponent</code> enum (identifies which of the 6 possible shuttles on the SMS this is)</li>
+<li>Returns up to 3 <code>TsUnloadingDeviceComponentPositionAndRotationRelativeToPart</code> entries, one per shuttle</li>
+</ul>
+<pre><code class="language-cpp">786:     if(
+787:       TeUnloadingDevice::sortMasterSpeed == unloadingDevice
+788:       &amp;&amp; m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart.contains( paudName ) )
+789:     {
+790:       // Append — SortMasterSpeed has two consoles, each writing its own PARTS_UNLOAD_DATA row
+791:       m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart[ paudName ].insert(
+792:         ..., begin, end );
+</code></pre>
+<p>The SortMasterSpeed machine can write <strong>two</strong> <code>PARTS_UNLOAD_DATA</code> rows per PAUD (one per console). The second row's shuttles are appended to the first, giving the complete list of all active suction points for that part.</p>
+<hr />
+<h3 id="readstackingoperations-step-5-lines-605674">2.7 <code>readStackingOperations</code> — step 5 (lines 605–674)</h3>
+<p>Populates <code>m_mapPapaPaudNameToStackingOperation</code> ((papaName, paudName) → <code>TcStackingOperation</code>).</p>
+<h4 id="build-the-papa-paud-name-map-readmappapanametopaudnames-lines-434463">2.7.1 Build the PAPA → PAUD name map (<code>readMapPapaNameToPaudNames</code>, lines 434–463)</h4>
+<pre><code class="language-cpp">437:   const std::string tableName = &quot;PARTS_IN_PROGRAM_POS&quot;;
+439:   const long fieldIdPaudName = 210;
+440:   const long fieldIdPapaName = 220;
+</code></pre>
+<p>Reads every PAUD row and groups them by their PAPA name. Result stored in <code>m_mapPapaNameToPaudNames</code>:</p>
+<pre><code>&quot;PAPA_0001&quot; → { &quot;PAUD_0001&quot;, &quot;PAUD_0002&quot; }
+&quot;PAPA_0002&quot; → { &quot;PAUD_0003&quot;, &quot;PAUD_0004&quot; }
+</code></pre>
+<p>This is needed so that when processing a PAPA row in <code>PARTS_PALLET_DATA</code>, the code knows which PAUDs belong to it.</p>
+<h4 id="process-each-papa-record">2.7.2 Process each PAPA record</h4>
+<pre><code class="language-cpp">609:   const std::string tableName = &quot;PARTS_PALLET_DATA&quot;;
+611:   const long fieldIdStackingMode = 60;
+612:   const long fieldIdName = 120;         // PAPA name
+613:   const long fieldIdUnloadingDeviceId = 130;
+614:   const long fieldIdStackId = 140;
+615:   const long fielIdStackShiftOffsetX = 210;
+616:   const long fielIdStackShiftOffsetY = 220;
+</code></pre>
+<pre><code class="language-cpp">622:     if( isDataSetOfUnloadingOperation( dataSet ) )
+</code></pre>
+<p><code>isDataSetOfUnloadingOperation</code> (lines 246–261): returns true if field 310 (SMS section ID) or field 80 (SortMaster unit ID) is &gt; 0. Rows with ID 0 are non-palletizing entries (e.g., scrap-removal commands stored in the same table) — they are skipped.</p>
+<pre><code class="language-cpp">624:     checkIfPalletizingThicknessIsEqualToSheetThicknessIfExists( dataSet );
+</code></pre>
+<p>Field 90 optionally holds the palletizing thickness for this PAPA. If present, it must match <code>m_sheetThickness</code> — mixed-thickness sheets are not yet supported; the algorithm throws rather than produce silently wrong results.</p>
+<pre><code class="language-cpp">625:     auto papaName = dataSet.getStringById( fieldIdName );
+626:     auto stackingMode = TnStackingMode::getFromInt( dataSet.getIntById( fieldIdStackingMode ) );
+627:     auto unloadingDevice = TnUnloadingDevice::getFromId( dataSet.getIntById( fieldIdUnloadingDeviceId ) );
+628:     auto destinationRegionId = getDestinationRegionId( dataSet, unloadingDevice );
+629:     auto stackId = static_cast&lt;TyStackId&gt;( dataSet.getIntById( fieldIdStackId ) );
+</code></pre>
+<ul>
+<li><strong>stackingMode</strong>: integer from field 60 decoded to <code>TeStackingMode</code> (deposit, drop, dropSoftly, etc.)</li>
+<li><strong>unloadingDevice</strong>: integer from field 130 decoded to <code>TeUnloadingDevice</code> (sortMaster, sortMasterCompact, sortMasterSpeed)</li>
+<li><strong>destinationRegionId</strong>: for SortMaster → field 80 (unloading area unit ID); for SMS/SMC → field 310 (section ID within the area). Different devices address the pallet location at different granularity.</li>
+<li><strong>stackId</strong>: the vertical stack column; parts stacked on top of each other across multiple removal operations share the same <code>stackId</code></li>
+</ul>
+<pre><code class="language-cpp">631:     auto structsPartCenterOfGravityAndRotationAngleRelativeToPaudName =
+632:       getPartCenterOfGravityAndRotationAngleInDestinationRegion( dataSet, unloadingDevice );
+</code></pre>
+<p>Derives the part's target position on the pallet for each PAUD in this PAPA. Device-specific:</p>
+<ul>
+<li><p><strong>SortMaster</strong> (<code>determinePartCenterOfGravityAndRotationAngleInDestinationRegionFromUnloadingDevicePositionAndRotation</code>, lines 883–929):</p>
+<ul>
+<li>Reads device target position from fields 30/40 and device rotation angle from field 50</li>
+<li>For each PAUD under this PAPA, fetches the lift offset vector (from <code>m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart</code>)</li>
+<li>Computes <code>partCOG = deviceTarget − liftOffset</code></li>
+<li>If <code>deviceRotation ≠ 0</code>: rotates <code>partCOG</code> around the device target point by the device rotation angle. This accounts for PAPA operations where the arm rotates while depositing — the part ends up at an angle on the pallet.</li>
+<li><code>partRotationAngleInDestination = deviceRotation − angleDiffDevicePart</code></li>
+</ul>
+</li>
+<li><p><strong>SortMasterCompact</strong> (<code>determinePartCenterOfGravityInDestinationRegionFromSortMasterCompactPosition</code>, lines 932–953):</p>
+<ul>
+<li>Uses field 30 as negative X and field 200 (suctionFrameOffsetY) as Y for the device target, then subtracts the (Y-negated) lift offset</li>
+<li>Rotation is always 0.0</li>
+</ul>
+</li>
+<li><p><strong>SortMasterSpeed</strong> (<code>determinePartCenterOfGravityInDestinationRegionForSortMasterSpeed</code>, lines 956–982):</p>
+<ul>
+<li>Part COG read directly from fields 350/360 — no inversion from device position</li>
+<li>All PAUDs in the PAPA share the same destination COG and rotation 0.0</li>
+</ul>
+</li>
+</ul>
+<pre><code class="language-cpp">634:     for( const auto&amp; structPartCenterOfGravity... : structsPartCOGAndRotation )
+635:     {
+636:       const auto&amp; pairPapaPaudName = std::make_pair( papaName, paudName );
+640:       const auto&amp; existingStackingOperationSPtr =
+641:         findStackingOperationInMapWithGivenPapaNamePartCenterOfGravityAndRotationAngle( ... );
+</code></pre>
+<p><code>findStackingOperationInMapWithGivenPapaNamePartCenterOfGravityAndRotationAngle</code> (lines 482–514): checks if an identical <code>TcStackingOperation</code> (same PAPA, same destination COG within 0.01 mm, same angle) already exists in the map. This handles <strong>layered stacking</strong>: when removal group 4 lands parts on the same stack columns as removal group 2, the two groups produce identical <code>TcStackingOperation</code> objects — the algorithm shares the pointer rather than creating a duplicate, so <code>getStackId()</code> returns the same physical column ID for both.</p>
+<pre><code class="language-cpp">648:       if( existingStackingOperationSPtr )
+649:         m_mapPapaPaudNameToStackingOperation[ pairPapaPaudName ] = existingStackingOperationSPtr;
+650:       else
+651:       {
+652:         // First time this (papaName, destination) combination is seen — create new operation
+653:         auto stackingOperationSPtr = std::make_shared&lt;TcStackingOperation&gt;(
+654:           stackingMode, destinationRegionId, stackId,
+655:           partCOGInDestination, partRotationAngleInDestination,
+656:           destinationRegionType,
+657:           TnGeometry::TyPoint2D( stackShiftOffsetX, stackShiftOffsetY ) );
+658:         m_mapPapaPaudNameToStackingOperation[ pairPapaPaudName ] = stackingOperationSPtr;
+659:       }
+</code></pre>
+<p><code>stackShiftOffset</code> (fields 210/220): a mechanical offset applied when stacking multiple layers in the same column — some machines shift each new layer slightly to improve stack stability. Stored as-is; not used in the COG calculation.</p>
+<hr />
+<h3 id="readstackitems-step-6-lines-677748">2.8 <code>readStackItems</code> — step 6 (lines 677–748)</h3>
+<p>Assembles the final <code>m_stackItems</code> list from the maps built in steps 1–5. One <code>TcStackItem</code> per PAUD record.</p>
+<pre><code class="language-cpp">679:   const std::string tableName = &quot;PARTS_IN_PROGRAM_POS&quot;;
+681:   const long fieldIdAngleInDegrees = 100;
+682:   const long fieldIdCenterOfGravityX = 150;
+683:   const long fieldIdCenterOfGravityY = 160;
+684:   const long fieldIdRemovalNumber = 190;
+685:   const long fieldIdPaudName = 210;
+686:   const long fieldIdPapaName = 220;
+687:   const long fieldIdPartClassification = 240;
+688:   const long fieldIdUnloadingSequence = 300;
+689:   const long fieldIdPartTypeIndex = 320;
+</code></pre>
+<p><code>PARTS_IN_PROGRAM_POS</code> has one row per individual part instance (= PAUD record).</p>
+<pre><code class="language-cpp">695:     auto papaName = dataSet.getStringById( fieldIdPapaName );
+696:     auto paudName = dataSet.getStringById( fieldIdPaudName );
+697:     if( !papaName.empty() &amp;&amp; !paudName.empty() )
+</code></pre>
+<p>Rows without a PAPA/PAUD name are non-palletizing positions (e.g., scrap chute entries) — skipped.</p>
+<pre><code class="language-cpp">699:     const double partRotationAngle =
+700:       TnMath::TnAngle::degreesToRadians( dataSet.getDoubleById( fieldIdAngleInDegrees ) );
+</code></pre>
+<p>Field 100: the part's rotation angle on the raw sheet in degrees, converted to radians.</p>
+<pre><code class="language-cpp">701:     const std::size_t removalNumber = dataSet.getIntById( fieldIdRemovalNumber );
+</code></pre>
+<p>Field 190: the removal group index. All parts in the same PAPA share the same <code>removalNumber</code>. This is what <code>getRemovalNumber()</code> returns — the test TC 08 verifies this maps correctly to 1–5 for the five L76 removal groups.</p>
+<pre><code class="language-cpp">703:     std::size_t palletizingSequence = 1;
+704:     int intUnloadingSequence = 0;
+705:     if( dataSet.tryGetIntById( fieldIdUnloadingSequence, intUnloadingSequence ) )
+706:     {
+707:       palletizingSequence = intUnloadingSequence;
+708:     }
+</code></pre>
+<p>Field 300: which pass of the sheet this part belongs to (1-based). Defaults to 1 if absent — older LST files from machines that do not support multi-cycle programs do not write this field.</p>
+<pre><code class="language-cpp">711:     const TnMath::TcVector2D partCenterOfGravityInSheetCoordinates(
+712:       dataSet.getDoubleById( fieldIdCenterOfGravityX ),
+713:       dataSet.getDoubleById( fieldIdCenterOfGravityY ) );
+</code></pre>
+<p>Fields 150/160: part COG in sheet coordinates (mm). These are in the machine's sheet frame — the origin is at a sheet corner or reference mark depending on the machine type.</p>
+<pre><code class="language-cpp">714:     auto partType = dataSet.getIntById( fieldIdPartClassification );
+715:     auto partTypeIndex = dataSet.getIntById( fieldIdPartTypeIndex );
+</code></pre>
+<p>Field 240: integer part type (0–6) decoded by <code>getPartType()</code> to <code>TePartType</code>.<br />
+Field 320: links back to the geometry/part catalogue entries from steps 1–3.</p>
+<pre><code class="language-cpp">718:     std::pair pairPapaNamePaudName = std::make_pair( papaName, paudName );
+719:     auto stackingOperationIter = m_mapPapaPaudNameToStackingOperation.find( pairPapaNamePaudName );
+720:     CHECKANDREPORT( ... != end, &quot;Stacking operation entry related to PAPA/PAUD entry must exist.&quot; );
+</code></pre>
+<p>Every PAUD <strong>must</strong> have a matching entry from step 5. Missing stacking operations indicate a malformed LST — the algorithm throws rather than silently producing a StackItem without a destination.</p>
+<pre><code class="language-cpp">725:     auto unloadingDevicePositionAndRotationIter =
+726:       m_mapPaudNameToUnloadingDevicePositionAndRotationRelativeToPart.find( paudName );
+727:     bool allDataFound = ( partIter != m_mapPartTypeIndexToPart.end() )
+728:       &amp;&amp; ( stackingOperationIter != ... )
+729:       &amp;&amp; ( unloadingDevicePositionAndRotationIter != ... );
+730:     if( allDataFound )
+</code></pre>
+<p>All three cross-references must resolve. If any is missing (e.g., a PAUD with no geometry because step 1 found no attachment for its part type), the item is silently skipped. This is a soft skip — deliberate, so that partial LST files with non-geometric entries (tool paths, nesting artefacts) do not crash the reader.</p>
+<pre><code class="language-cpp">732:     auto stackItemSPtr = std::make_shared&lt;TcStackItem&gt;(
+733:       partRotationAngle,
+734:       partIter-&gt;second,            // TcPart (geometry + palletizing thickness)
+735:       stackingOperationIter-&gt;second, // TcStackingOperation (destination)
+736:       unloadingDevicePositionAndRotationIter-&gt;second, // lift offsets
+737:       getPartType( partType ),
+738:       removalNumber,
+739:       palettizingSequenceNumber,
+740:       partCenterOfGravityInSheetCoordinates );
+741:
+742:     m_stackItems.push_back( stackItemSPtr );
+</code></pre>
+<p><code>m_stackItems</code> is a <code>std::vector</code> — items are appended in the order they appear in <code>PARTS_IN_PROGRAM_POS</code>, which is the palletizing sequence order within each pass.</p>
+<hr />
+<h3 id="readmachine-step-7-lines-751766">2.9 <code>readMachine</code> — step 7 (lines 751–766)</h3>
+<pre><code class="language-cpp">754:   const long fieldIdMaschineName = 10;
+755:   const long fieldIdMaschineViewerName = 280;
+</code></pre>
+<p>Both names come from <code>EINRICHTEPLAN_INFO</code>. Field 10 is the machine code (e.g., <code>&quot;L76&quot;</code>); field 280 is the human-readable viewer name (e.g., <code>&quot;TruLaser 5030 (L76)&quot;</code>). If the table is missing or empty, <code>m_machineSPtr</code> remains <code>nullptr</code> — the caller must check <code>getMachineSPtr()</code> before dereferencing.</p>
+<hr />
+<h3 id="readsheet-step-8-lines-547554">2.10 <code>readSheet</code> — step 8 (lines 547–554)</h3>
+<pre><code class="language-cpp">549:   auto density = getMaterialDensityInKgPerCubicMm( t_fileAccessor );
+</code></pre>
+<p><code>getMaterialDensityInKgPerCubicMm</code> (lines 64–81): field 260 of <code>SHEET_TECH</code>, unit kg/m³ divided by 10⁹ to convert to kg/mm³.</p>
+<pre><code class="language-cpp">550:   auto repetitionCount = getSheetRepetitionCount( t_fileAccessor );
+</code></pre>
+<p>Field 100 of <code>EINRICHTEPLAN_INFO</code>. If absent or ≤ 0, defaults to 1. Repetition count &gt; 1 means the same sheet program is run multiple times — used by the downstream palletizing algorithm to compute total part counts.</p>
+<pre><code class="language-cpp">551:   auto layoutId = getPalletizingSectionLayoutId( t_fileAccessor );
+</code></pre>
+<p>Field 340 of <code>EINRICHTEPLAN_INFO</code>. Identifies which unloading area layout this sheet is configured for. If absent (older machines), defaults to layout 1.</p>
+<pre><code class="language-cpp">552:   auto sheetName = getSheetName( t_fileAccessor );
+</code></pre>
+<p>Field 110 of <code>EINRICHTEPLAN_INFO</code> — the original LST filename as stored in the setup plan header.</p>
+<pre><code class="language-cpp">553:   return TcSheet( m_sheetThickness, density, repetitionCount, m_stackItems, m_machineSPtr, layoutId, sheetName );
+</code></pre>
+<p>All accumulated data bundled into a single immutable value object. <code>TcSheet</code> does not own the reader maps — it takes <code>m_stackItems</code> by copy and the <code>TyMachineSPtr</code> shared pointer.</p>
+<hr />
+<h2 id="key-invariants">3 Key invariants</h2>
+<table>
+<thead>
+<tr>
+<th>Invariant</th>
+<th>Where enforced</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Every PAUD in <code>PARTS_IN_PROGRAM_POS</code> must have a matching <code>PARTS_PALLET_DATA</code> entry</td>
+<td><code>CHECKANDREPORT</code> in <code>readStackItems</code> L720</td>
+</tr>
+<tr>
+<td>PAPA thickness (if present) must equal sheet thickness</td>
+<td><code>checkIfPalletizingThicknessIsEqualToSheetThicknessIfExists</code> L1000</td>
+</tr>
+<tr>
+<td>Destination section/unit ID must be &gt; 0 for a palletizing record</td>
+<td><code>isDataSetOfUnloadingOperation</code> L246</td>
+</tr>
+<tr>
+<td>Parts sharing the same (PAPA, destination COG, angle) reuse one <code>TcStackingOperation</code> object</td>
+<td><code>findStackingOperationInMapWithGivenPapaNamePartCenterOfGravityAndRotationAngle</code> L482</td>
+</tr>
+<tr>
+<td>Sheet repetition count is always ≥ 1</td>
+<td><code>std::max(1, …)</code> in <code>getSheetRepetitionCount</code> L97</td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#functional-view">1 Functional view</a>
+  </li>
+  <li level="2">
+   <a href="#what-the-algorithm-does">What the algorithm does</a>
+  </li>
+  <li level="2">
+   <a href="#lst-file-structure-relevant-tables">LST file structure (relevant tables)</a>
+  </li>
+  <li level="2">
+   <a href="#the-papa-paud-hierarchy">The PAPA / PAUD hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#coordinate-derivation-by-device-type">Coordinate derivation by device type</a>
+  </li>
+  <li level="2">
+   <a href="#build-order-dependency-graph">Build order (dependency graph)</a>
+  </li>
+  <li level="1">
+   <a href="#line-by-line">2 Line-by-line</a>
+  </li>
+  <li level="2">
+   <a href="#entry-wrappers-tnpalletizingdata.cpp">2.1 Entry wrappers ()</a>
+  </li>
+  <li level="2">
+   <a href="#tcreadfromlstread-orchestration-lines-517538">2.2  — orchestration (lines 517–538)</a>
+  </li>
+  <li level="2">
+   <a href="#readpartgeometries-step-1-lines-557578">2.3  — step 1 (lines 557–578)</a>
+  </li>
+  <li level="2">
+   <a href="#readsheetthickness-getsheetthickness-step-2-lines-4961-805808">2.4  /  — step 2 (lines 49–61, 805–808)</a>
+  </li>
+  <li level="2">
+   <a href="#readparts-step-3-lines-581602">2.5  — step 3 (lines 581–602)</a>
+  </li>
+  <li level="2">
+   <a href="#readunloadingdevicepositionsandrotationsrelativetopart-step-4-lines-769802">2.6  — step 4 (lines 769–802)</a>
+  </li>
+  <li level="2">
+   <a href="#readstackingoperations-step-5-lines-605674">2.7  — step 5 (lines 605–674)</a>
+  </li>
+  <li level="3">
+   <a href="#build-the-papa-paud-name-map-readmappapanametopaudnames-lines-434463">2.7.1 Build the PAPA → PAUD name map (, lines 434–463)</a>
+  </li>
+  <li level="3">
+   <a href="#process-each-papa-record">2.7.2 Process each PAPA record</a>
+  </li>
+  <li level="2">
+   <a href="#readstackitems-step-6-lines-677748">2.8  — step 6 (lines 677–748)</a>
+  </li>
+  <li level="2">
+   <a href="#readmachine-step-7-lines-751766">2.9  — step 7 (lines 751–766)</a>
+  </li>
+  <li level="2">
+   <a href="#readsheet-step-8-lines-547554">2.10  — step 8 (lines 547–554)</a>
+  </li>
+  <li level="1">
+   <a href="#key-invariants">3 Key invariants</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></span>
+ <span class="next"><a href="test.html">L76 Test Cases — Palletizing2</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

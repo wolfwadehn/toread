@@ -1,0 +1,552 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Traceability Matrix — Source to Spec</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../00-overview/index.html">Overview</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../00-overview/01-purpose-and-scope.html">Purpose and Scope</a></li>
+    <li><button class="tree blank"></button><a href="../00-overview/02-glossary.html">Glossary</a></li>
+    <li><button class="tree blank"></button><a href="../00-overview/03-source-material-and-references.html">Source Material and References</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/05-carrier-assignment-rules.html">Carrier Assignment Rules</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/06-agv-and-transport-safety.html">AGV and Transport Safety</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/10-sorting-time-estimation.html">Sorting Time Estimation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-import-lst/index.html">Import LST</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-import-lst/01-lst-file-format-primer.html">LST File Format Primer</a></li>
+    <li><button class="tree blank"></button><a href="../07-import-lst/02-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-import-lst/03-relevant-lst-sections-reference.html">Relevant LST Sections — Field Reference</a></li>
+    <li><button class="tree blank"></button><a href="../07-import-lst/04-validation-and-error-handling.html">Import Validation and Error Handling</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../08-export-lst/index.html">Export LST</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../08-export-lst/01-export-workflow-and-data-mapping.html">Export Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/03-nc-program-and-part-end-sequencing.html">NC Program and Part-End Sequencing</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/04-export-validation-and-round-trip.html">Export Validation and Round-Trip Guarantees</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/03-digital-twin-visualization.html">Digital Twin Visualization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Requirements and Traceability</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="01-functional-requirements-summary.html">Functional Requirements Summary</a></li>
+    <li><button class="tree blank"></button><a href="02-open-questions-and-assumptions.html">Open Questions and Assumptions</a></li>
+    <li><button class="tree blank"></button><a class="active" href="03-traceability-matrix.html">Traceability Matrix — Source to Spec</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Requirements and Traceability</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="03-traceability-matrix.html">Traceability Matrix — Source to Spec</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Traceability Matrix — Source to Spec</h1>
+<h2 id="metacam-deposit-editor-metacammiscdepositeditor.htm">MetaCAM Deposit Editor (<code>metacam/misc/depositeditor/*.htm</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Source file</th>
+<th>Spec chapter(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>intro.htm</code></td>
+<td><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">05-stack-and-pile-management/07-schedule-and-sheet-count.md</a></td>
+</tr>
+<tr>
+<td><code>autoarrange.htm</code></td>
+<td><a href="../05-stack-and-pile-management/03-auto-arrange.html">05-stack-and-pile-management/03-auto-arrange.md</a></td>
+</tr>
+<tr>
+<td><code>depositsettings.htm</code></td>
+<td><a href="../05-stack-and-pile-management/06-deposit-settings.html">05-stack-and-pile-management/06-deposit-settings.md</a>, <a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">04-pallet-definition/04-pallet-zones-margins-and-orientation.md</a></td>
+</tr>
+<tr>
+<td><code>equalize.htm</code></td>
+<td><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">05-stack-and-pile-management/04-equalize-and-lower-pile-height.md</a></td>
+</tr>
+<tr>
+<td><code>lowerpile.htm</code></td>
+<td><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">05-stack-and-pile-management/04-equalize-and-lower-pile-height.md</a></td>
+</tr>
+<tr>
+<td><code>pick.htm</code></td>
+<td><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">05-stack-and-pile-management/05-manual-pick-split-and-merge.md</a></td>
+</tr>
+<tr>
+<td><code>zoomextents.htm</code></td>
+<td><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">09-user-interface/01-palletizing-ribbon-and-commands.md</a> (View group)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="palletizing-concept-paper-20260205_palletizing_req.docx">Palletizing concept paper (<code>20260205_Palletizing_req.docx</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Source section</th>
+<th>Spec chapter(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Automation types (K08/AK08, K11/AK09, L26/SortMaster Speed, SheetMaster, SortMaster Box Linear)</td>
+<td><a href="../01-automation-types/">01-automation-types</a></td>
+</tr>
+<tr>
+<td>Material flow systems (KB40/CS05/robots)</td>
+<td><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">01-automation-types/05-material-flow-kb40-cs05-robots.md</a></td>
+</tr>
+<tr>
+<td>Palletizing formats table</td>
+<td><a href="../04-pallet-definition/02-standard-pallet-formats.html">04-pallet-definition/02-standard-pallet-formats.md</a></td>
+</tr>
+<tr>
+<td>Displaying stack data (current UI screenshots)</td>
+<td><a href="../09-user-interface/">09-user-interface</a>, <a href="../05-stack-and-pile-management/02-stack-status-visualization.html">05-stack-and-pile-management/02-stack-status-visualization.md</a></td>
+</tr>
+<tr>
+<td>Auto arranging the parts into piles (from MetaCAM)</td>
+<td><a href="../05-stack-and-pile-management/03-auto-arrange.html">05-stack-and-pile-management/03-auto-arrange.md</a></td>
+</tr>
+<tr>
+<td>Concepts for arranging patterns (open question to Fabian/Joachim)</td>
+<td><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.md</a>, <a href="02-open-questions-and-assumptions.html">11-requirements-and-traceability/02-open-questions-and-assumptions.md</a></td>
+</tr>
+<tr>
+<td>Concept of backward planning</td>
+<td><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">06-process-and-collision-constraints/01-backward-planning-concept.md</a></td>
+</tr>
+<tr>
+<td>Backward planning of process limitations (①–④)</td>
+<td><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">06-process-and-collision-constraints/01</a>, <a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">02</a>, <a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">03</a></td>
+</tr>
+<tr>
+<td>Collision hazard of repositioned parts on the machine</td>
+<td><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.md</a></td>
+</tr>
+</tbody>
+</table>
+<h2 id="sample-job-artifacts-20260619_palletizing">Sample job artifacts (<code>20260619_Palletizing/</code>)</h2>
+<table>
+<thead>
+<tr>
+<th>Source file</th>
+<th>Spec chapter(s)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sample.LST</code></td>
+<td><a href="../07-import-lst/">07-import-lst</a>, <a href="../08-export-lst/">08-export-lst</a></td>
+</tr>
+<tr>
+<td><code>sample.fxjob</code>, <code>hex.fx</code>, <code>circ.fx</code>, <code>rec.fx</code></td>
+<td><a href="../07-import-lst/01-lst-file-format-primer.html">07-import-lst/01-lst-file-format-primer.md</a> (provenance of the sample), <a href="02-open-questions-and-assumptions.html">11-requirements-and-traceability/02-open-questions-and-assumptions.md</a> (assumption A5)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="customer-use-cases-archivepalletizing_use_cases.md">Customer Use Cases (<code>archive/Palletizing_Use_Cases.md</code>)</h2>
+<p>32 use cases extracted from a customer requirements document. Six were
+already fully covered by existing [V1]/[Target] content when this table was
+built (UC-7, UC-10, UC-16, UC-18 need no dedicated new FR; UC-13, UC-27 got a
+small extension alongside their existing coverage).</p>
+<table>
+<thead>
+<tr>
+<th>Use case</th>
+<th>Spec chapter(s)</th>
+<th>FR</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>UC-1 One palletizing application for all automation solutions</td>
+<td><a href="../00-overview/01-purpose-and-scope.html">00-overview/01-purpose-and-scope.md</a></td>
+<td>FR-18</td>
+</tr>
+<tr>
+<td>UC-2 Automatic part rotation during palletizing</td>
+<td><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">06-process-and-collision-constraints/08-part-rotation-for-optimization.md</a></td>
+<td>FR-31</td>
+</tr>
+<tr>
+<td>UC-3 Multiple palletizing solutions based on available technology</td>
+<td><a href="../02-select-automation/04-impact-of-automation-change.html">02-select-automation/04-impact-of-automation-change.md</a></td>
+<td>FR-19</td>
+</tr>
+<tr>
+<td>UC-4 Mini-nest/frame part palletizing</td>
+<td><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">05-stack-and-pile-management/08-mini-nest-and-frame-handling.md</a></td>
+<td>FR-21</td>
+</tr>
+<tr>
+<td>UC-5 Sorting and palletizing by criteria</td>
+<td><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.md</a></td>
+<td>FR-15</td>
+</tr>
+<tr>
+<td>UC-6 Oversized part palletizing</td>
+<td><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">04-pallet-definition/04-pallet-zones-margins-and-orientation.md</a></td>
+<td>FR-24</td>
+</tr>
+<tr>
+<td>UC-7 Adjust stack configuration</td>
+<td><a href="../05-stack-and-pile-management/06-deposit-settings.html">05-stack-and-pile-management/06-deposit-settings.md</a>, <a href="../09-user-interface/02-stack-data-dialog.html">09-user-interface/02-stack-data-dialog.md</a></td>
+<td>FR-05, FR-06</td>
+</tr>
+<tr>
+<td>UC-8 Add-to-pallet across jobs</td>
+<td><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.md</a></td>
+<td>FR-25</td>
+</tr>
+<tr>
+<td>UC-9 Automatic variant stacking (cake/pyramid stacking)</td>
+<td><a href="../05-stack-and-pile-management/09-variant-stacking.html">05-stack-and-pile-management/09-variant-stacking.md</a></td>
+<td>FR-22</td>
+</tr>
+<tr>
+<td>UC-10 Preserve existing functionality</td>
+<td>Whole spec — the Deposit Editor is the [V1] baseline throughout</td>
+<td>FR-01–FR-09</td>
+</tr>
+<tr>
+<td>UC-11 Priority-based stack building</td>
+<td><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">06-process-and-collision-constraints/06-priority-and-sequencing-strategy.md</a></td>
+<td>FR-29</td>
+</tr>
+<tr>
+<td>UC-12 Sort sequence by process safety and productivity</td>
+<td><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">06-process-and-collision-constraints/06-priority-and-sequencing-strategy.md</a></td>
+<td>FR-29</td>
+</tr>
+<tr>
+<td>UC-13 Collision-free stack formation</td>
+<td><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.md</a>, <a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">04-collision-hazard-of-repositioned-parts.md</a></td>
+<td>FR-14, FR-32</td>
+</tr>
+<tr>
+<td>UC-14 Adjustable drop/placement height</td>
+<td><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">06-process-and-collision-constraints/07-placement-quality-and-drop-height.md</a></td>
+<td>FR-30</td>
+</tr>
+<tr>
+<td>UC-15 Optimized palletizing for multi-part picking</td>
+<td><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">06-process-and-collision-constraints/06-priority-and-sequencing-strategy.md</a></td>
+<td>FR-29</td>
+</tr>
+<tr>
+<td>UC-16 Backward planning interface</td>
+<td><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">06-process-and-collision-constraints/01-backward-planning-concept.md</a>, <a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">09-user-interface/01-palletizing-ribbon-and-commands.md</a></td>
+<td>FR-12–FR-14</td>
+</tr>
+<tr>
+<td>UC-17 Define stack distances based on downstream process</td>
+<td><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.md</a></td>
+<td>FR-33</td>
+</tr>
+<tr>
+<td>UC-18 Respect downstream process limitations</td>
+<td><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">06-process-and-collision-constraints/01</a>, <a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">02</a>, <a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">03</a></td>
+<td>FR-12, FR-13, FR-14</td>
+</tr>
+<tr>
+<td>UC-19 3D palletizing simulation</td>
+<td><a href="../09-user-interface/04-3d-palletizing-simulation.html">09-user-interface/04-3d-palletizing-simulation.md</a></td>
+<td>FR-35</td>
+</tr>
+<tr>
+<td>UC-20 Simulate and adjust picking sequence</td>
+<td><a href="../09-user-interface/04-3d-palletizing-simulation.html">09-user-interface/04-3d-palletizing-simulation.md</a></td>
+<td>FR-35</td>
+</tr>
+<tr>
+<td>UC-21 Utilize partially filled carriers</td>
+<td><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.md</a></td>
+<td>FR-25</td>
+</tr>
+<tr>
+<td>UC-22 Digital twin of sorting and palletizing area</td>
+<td><a href="../10-shopfloor-and-operator-interface/03-digital-twin-visualization.html">10-shopfloor-and-operator-interface/03-digital-twin-visualization.md</a></td>
+<td>FR-38</td>
+</tr>
+<tr>
+<td>UC-23 Machine-side palletizing UI</td>
+<td><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.md</a></td>
+<td>FR-36</td>
+</tr>
+<tr>
+<td>UC-24 User interaction notifications</td>
+<td><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.md</a></td>
+<td>FR-37</td>
+</tr>
+<tr>
+<td>UC-25 Sorting time estimation</td>
+<td><a href="../05-stack-and-pile-management/10-sorting-time-estimation.html">05-stack-and-pile-management/10-sorting-time-estimation.md</a></td>
+<td>FR-23</td>
+</tr>
+<tr>
+<td>UC-26 Shopfloor palletizing adjustments</td>
+<td><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.md</a></td>
+<td>FR-36</td>
+</tr>
+<tr>
+<td>UC-27 Flexible unloading layout management</td>
+<td><a href="../04-pallet-definition/01-pallet-data-model.html">04-pallet-definition/01</a>, <a href="../04-pallet-definition/02-standard-pallet-formats.html">02</a>, <a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">03</a></td>
+<td>FR-03, FR-16, FR-28</td>
+</tr>
+<tr>
+<td>UC-28 Global carrier assignment rules</td>
+<td><a href="../04-pallet-definition/05-carrier-assignment-rules.html">04-pallet-definition/05-carrier-assignment-rules.md</a></td>
+<td>FR-26</td>
+</tr>
+<tr>
+<td>UC-29 Split palletizing by downstream automation</td>
+<td><a href="../02-select-automation/05-rule-based-output-recommendation.html">02-select-automation/05-rule-based-output-recommendation.md</a></td>
+<td>FR-20</td>
+</tr>
+<tr>
+<td>UC-30 AGV-compatible palletizing</td>
+<td><a href="../04-pallet-definition/06-agv-and-transport-safety.html">04-pallet-definition/06-agv-and-transport-safety.md</a></td>
+<td>FR-27</td>
+</tr>
+<tr>
+<td>UC-31 Conveyor-based palletizing</td>
+<td><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">01-automation-types/05-material-flow-kb40-cs05-robots.md</a></td>
+<td>FR-34</td>
+</tr>
+<tr>
+<td>UC-32 Rule-based output strategy</td>
+<td><a href="../02-select-automation/05-rule-based-output-recommendation.html">02-select-automation/05-rule-based-output-recommendation.md</a></td>
+<td>FR-20</td>
+</tr>
+</tbody>
+</table>
+<h2 id="user-requested-topics-direct-index">User-requested topics — direct index</h2>
+<table>
+<thead>
+<tr>
+<th>Requested topic</th>
+<th>Primary chapter</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Import LST</td>
+<td><a href="../07-import-lst/">07-import-lst</a></td>
+</tr>
+<tr>
+<td>Export LST</td>
+<td><a href="../08-export-lst/">08-export-lst</a></td>
+</tr>
+<tr>
+<td>Select automation</td>
+<td><a href="../02-select-automation/">02-select-automation</a></td>
+</tr>
+<tr>
+<td>Gripper definition</td>
+<td><a href="../03-gripper-definition/">03-gripper-definition</a></td>
+</tr>
+<tr>
+<td>Pallets definition</td>
+<td><a href="../04-pallet-definition/">04-pallet-definition</a></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#metacam-deposit-editor-metacammiscdepositeditor.htm">MetaCAM Deposit Editor ()</a>
+  </li>
+  <li level="1">
+   <a href="#palletizing-concept-paper-20260205_palletizing_req.docx">Palletizing concept paper ()</a>
+  </li>
+  <li level="1">
+   <a href="#sample-job-artifacts-20260619_palletizing">Sample job artifacts ()</a>
+  </li>
+  <li level="1">
+   <a href="#customer-use-cases-archivepalletizing_use_cases.md">Customer Use Cases ()</a>
+  </li>
+  <li level="1">
+   <a href="#user-requested-topics-direct-index">User-requested topics — direct index</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="02-open-questions-and-assumptions.html">Open Questions and Assumptions</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

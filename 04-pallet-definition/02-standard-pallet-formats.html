@@ -1,0 +1,290 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Standard Pallet Formats</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Pallet Definition</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a class="active" href="02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../20_palletizingmodule/index.html">Palletizing.exe</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="../20_palletizingmodule/demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Pallet Definition</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="02-standard-pallet-formats.html">Standard Pallet Formats</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Standard Pallet Formats</h1>
+<h2 id="rationale">Rationale</h2>
+<p>The concept paper flags pallet-format diversity as a significant issue:
+<em>&quot;One significant issue with palletizing is a very diverse format landscape:
+Europallets, US pallets etc. and multiples.&quot;</em> The module must ship a library
+of standard formats so the programmer is not forced to enter dimensions by
+hand for common cases, and so <code>Format</code> in the
+<a href="01-pallet-data-model.html">Pallet Data Model</a> can be validated/looked up.</p>
+<h2 id="standard-formats-table-from-the-concept-paper">Standard formats table (from the concept paper)</h2>
+<table>
+<thead>
+<tr>
+<th>Pallet Type</th>
+<th>Size (mm)</th>
+<th>Main Regions</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Euro (EPAL)</td>
+<td>1200 × 800</td>
+<td>Europe</td>
+</tr>
+<tr>
+<td>ISO / UK</td>
+<td>1200 × 1000</td>
+<td>Global / UK</td>
+</tr>
+<tr>
+<td>GMA (US)</td>
+<td>1219 × 1016</td>
+<td>US / Canada</td>
+</tr>
+<tr>
+<td>Australia</td>
+<td>1165 × 1165</td>
+<td>Australia</td>
+</tr>
+<tr>
+<td>Asia (JIS)</td>
+<td>1100 × 1100</td>
+<td>Japan, Korea</td>
+</tr>
+<tr>
+<td>Container</td>
+<td>1140 × 1140</td>
+<td>Air &amp; container cargo</td>
+</tr>
+</tbody>
+</table>
+<h2 id="requirements">Requirements</h2>
+<ol>
+<li>Ship this table as seed data (<code>Format</code> enum values with default <code>SizeX</code>,
+<code>SizeY</code>).</li>
+<li>Support <strong>multiples</strong> of a standard format (e.g. two Euro pallets end to
+end) as a first-class case in multi-pallet layout — see
+<a href="03-custom-pallets-and-multi-pallet-layout.html">03-custom-pallets-and-multi-pallet-layout.md</a> —
+rather than requiring the programmer to define a new custom size for every
+combination.</li>
+<li>Allow a <code>Custom</code> format that behaves identically but with free-entry
+<code>SizeX</code>/<code>SizeY</code>, for site-specific carriers not in the table.</li>
+<li>Region metadata (<code>Main Regions</code>) is informational only (helps the
+programmer pick the right default for their factory's locale) and carries
+no behavioral constraint.</li>
+</ol>
+<h2 id="rule-driven-automatic-layout-selection-target">Rule-driven automatic layout selection <strong>[Target]</strong></h2>
+<p>The requirements above cover the programmer manually picking a <code>Format</code>.
+Separately, the module should be able to <strong>automatically select</strong> an
+unloading layout/format based on customer or order requirements (e.g. a
+given customer's orders always ship on a specific pallet format), rather
+than requiring the programmer to choose it every time. This is a rule
+lookup (order/customer attribute → <code>Format</code> or saved layout) layered on top
+of manual selection, not a replacement for it — the programmer can always
+override the automatically selected layout.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#rationale">Rationale</a>
+  </li>
+  <li level="1">
+   <a href="#standard-formats-table-from-the-concept-paper">Standard formats table (from the concept paper)</a>
+  </li>
+  <li level="1">
+   <a href="#requirements">Requirements</a>
+  </li>
+  <li level="1">
+   <a href="#rule-driven-automatic-layout-selection-target">Rule-driven automatic layout selection [Target]</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="01-pallet-data-model.html">Pallet Data Model</a></span>
+ <span class="next"><a href="03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

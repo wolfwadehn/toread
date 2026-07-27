@@ -1,0 +1,343 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Palletizing.exe</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a class="active" href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Palletizing.exe</h1>
+<p>This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.</p>
+<h2 id="project-overview">Project Overview</h2>
+<p>Palletizing is a C++20 library and application for computing optimal palletizing operations for TRUMPF automation units (SortMaster, SortMaster Speed, SortMaster Compact, SheetMaster). It handles sheet material unloading and placement algorithms.</p>
+<h2 id="build-commands">Build Commands</h2>
+<p><strong>Windows (Visual Studio 2026):</strong></p>
+<pre><code class="language-bat">buildinfrastructure\localbuildscripts\build_vs.bat
+</code></pre>
+<p><strong>Windows (Clang / GCC):</strong></p>
+<pre><code class="language-bat">buildinfrastructure\localbuildscripts\build_clang.bat
+buildinfrastructure\localbuildscripts\build_gcc.bat
+</code></pre>
+<p>Each script creates a build directory (e.g., <code>build/vs</code>), runs CMake, builds in Release, and installs artifacts to <code>install/</code>.</p>
+<p><strong>Run tests</strong> (must run INSTALL first — <code>TnApplicationMain</code> integration tests need <code>data/</code> at <code>build/vs/Release/data/</code>):</p>
+<pre><code class="language-bat">cmake --build build\vs --config Release --target INSTALL
+ctest.exe --test-dir build\vs -C Release --progress --parallel 10
+</code></pre>
+<p><strong>Run a single test binary</strong> (after building, executables land in <code>${PROJECT_BINARY_DIR}</code>):</p>
+<pre><code class="language-bat">.\build\vs\&lt;LibraryName&gt;Tests.exe --gtest_filter=&lt;TestSuite&gt;.&lt;TestName&gt;
+</code></pre>
+<p>In-source builds are forbidden — CMake will error if you try.</p>
+<h2 id="architecture">Architecture</h2>
+<p>The codebase follows a strict layered architecture. Dependencies only flow downward:</p>
+<table>
+<thead>
+<tr>
+<th>Layer</th>
+<th>Libraries</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Application</td>
+<td><code>applicationcontrol</code>, <code>palletizing</code> (app)</td>
+</tr>
+<tr>
+<td>Domain / Algorithm</td>
+<td><code>palletizing</code> (lib), <code>unloadingarea</code>, <code>unloadingdevice</code>, <code>kernel</code>, <code>mathematics</code>, <code>validitycheck</code></td>
+</tr>
+<tr>
+<td>Conversion / Persistence</td>
+<td><code>conversion</code>, <code>persistency</code>, <code>simulation</code>, <code>lstdata</code>, <code>reporting</code></td>
+</tr>
+<tr>
+<td>Infrastructure</td>
+<td><code>config</code>, <code>jsonutility</code>, <code>infrastructure</code></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Execution flow:</strong></p>
+<ol>
+<li>Parse CLI options (<code>cxxopts</code>) → load <code>data/config/default.json</code></li>
+<li>Read input: LST format or JSON palletize-job</li>
+<li>Convert to kernel model (<code>conversion</code>)</li>
+<li>Run palletizing algorithm (<code>palletizing</code>)</li>
+<li>Validate results (<code>validitycheck</code>: weight, procedure, completeness)</li>
+<li>Generate simulation model (<code>simulation</code>)</li>
+<li>Serialize output as JSON (<code>persistency</code>)</li>
+</ol>
+<p><strong>Key domain concepts:</strong></p>
+<ul>
+<li><code>kernel</code> — core model types: parts, materials, layouts, palletizing tasks</li>
+<li><code>palletizing</code> — stacking-mode handling and the main placement algorithm</li>
+<li><code>mathematics</code> — geometry algorithms, coordinate transformations, intersection detection</li>
+<li><code>unloadingdevice</code> / <code>unloadingarea</code> — models for the physical unloading hardware and its sections</li>
+<li><code>lstdata</code> — TRUMPF-internal LST file format reading/writing</li>
+</ul>
+<h2 id="naming-conventions">Naming Conventions</h2>
+<table>
+<thead>
+<tr>
+<th>Prefix</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tc</code></td>
+<td>Class</td>
+</tr>
+<tr>
+<td><code>Te</code></td>
+<td>Enum</td>
+</tr>
+<tr>
+<td><code>Ts</code></td>
+<td>Struct</td>
+</tr>
+<tr>
+<td><code>Tn</code></td>
+<td>Namespace / utility functions</td>
+</tr>
+<tr>
+<td><code>TnPalletizing::</code></td>
+<td>Top-level namespace for all project code</td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-style">Code Style</h2>
+<p>Formatting is enforced via <code>.clang-format</code> (LLVM-based, C++17 style). Static analysis rules are in <code>.clang-tidy</code>. Run clang-format before committing — the CI pipeline treats warnings as errors (<code>/WX</code> on MSVC, <code>-Werror</code> on GCC/Clang).</p>
+<p>Compiler settings (in <code>cmake/CompileOptions.cmake</code>):</p>
+<ul>
+<li>C++20 required</li>
+<li><code>/permissive-</code> (MSVC strict C++ conformance)</li>
+<li>Hidden symbol visibility by default; explicit export headers generated per library</li>
+</ul>
+<h2 id="adding-a-new-library">Adding a New Library</h2>
+<p>Use <code>source/libraries/libtemplate/</code> as a reference — it contains a checklist and the standard directory layout (<code>include/</code>, <code>source/</code>, <code>test/</code>). CMake targets follow the <code>Trumpf.Palletizing.&lt;LibraryName&gt;</code> naming convention and export headers are generated automatically.</p>
+<h2 id="testing">Testing</h2>
+<p>Each library has a <code>test/</code> subdirectory using Google Test. Test data lives in <code>test/testdata/</code>. Tests have a 20-second timeout. The CI runs all three toolchains (MSVC, GCC 15, Clang 21) in parallel.</p>
+<h2 id="runtime-data">Runtime Data</h2>
+<p>The <code>data/</code> directory must be co-located with the executable at runtime:</p>
+<ul>
+<li><code>data/config/default.json</code> — default application configuration</li>
+<li><code>data/unloadingarea/</code> and <code>data/unloadingdevice/</code> — example device configurations</li>
+<li><code>data/swagger/</code> — Swagger API spec for the JSON models</li>
+</ul>
+<p>CMake copies <code>data/</code> to the build output directory automatically.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#project-overview">Project Overview</a>
+  </li>
+  <li level="1">
+   <a href="#build-commands">Build Commands</a>
+  </li>
+  <li level="1">
+   <a href="#architecture">Architecture</a>
+  </li>
+  <li level="1">
+   <a href="#naming-conventions">Naming Conventions</a>
+  </li>
+  <li level="1">
+   <a href="#code-style">Code Style</a>
+  </li>
+  <li level="1">
+   <a href="#adding-a-new-library">Adding a New Library</a>
+  </li>
+  <li level="1">
+   <a href="#testing">Testing</a>
+  </li>
+  <li level="1">
+   <a href="#runtime-data">Runtime Data</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></span>
+ <span class="next"><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

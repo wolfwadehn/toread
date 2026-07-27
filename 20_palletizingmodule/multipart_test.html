@@ -1,0 +1,479 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a class="active" href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</h1>
+<p><strong>Test:</strong> <code>TnPalletizingData::readFromLst_L76_part_multipartremoval</code><br />
+<strong>Source:</strong> <code>source/libraries/lstdata/fromlst/algorithm/test/TnPalletizingDataTest.cpp:426–602</code><br />
+<strong>Input:</strong> <code>testdata/lstdatafromlstalgorithm/l76_multipartremoval.lst</code></p>
+<hr />
+<h2 id="physical-scenario">Physical scenario</h2>
+<p>The LST file encodes a TruLaser 5030 (L76) sheet with 12 cut parts. The arm does not remove them one at a time — it grabs groups simultaneously. There are 5 removal operations, each lifting 2 or 4 parts at once:</p>
+<table>
+<thead>
+<tr>
+<th>Removal</th>
+<th>Parts lifted</th>
+<th>Stack they land on</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>items 1, 2</td>
+<td>Stack 1 (layer 1)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>items 3, 4</td>
+<td>Stack 3 (layer 1)</td>
+</tr>
+<tr>
+<td>3</td>
+<td>items 5, 6, 7, 8</td>
+<td>Stack 5 (layer 1)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>items 9, 10</td>
+<td>Stack 3 (layer 2, on top of removal 2)</td>
+</tr>
+<tr>
+<td>5</td>
+<td>items 11, 12</td>
+<td>Stack 1 (layer 2, on top of removal 1)</td>
+</tr>
+</tbody>
+</table>
+<p>Stacks 1 and 3 are filled in two passes — the machine interleaves removals to maintain physical access to the sheet. Stack 5 (the 4-part group in the hard-to-reach inner row) is completed in one pass.</p>
+<hr />
+<h2 id="line-by-line">Line-by-line</h2>
+<h3 id="arrange">Arrange</h3>
+<pre><code class="language-cpp">426: TEST( TnPalletizingData, readFromLst_L76_part_multipartremoval )
+427: {
+</code></pre>
+<p>Google Test macro registering the test in the <code>TnPalletizingData</code> suite. The name directly identifies the machine type and scenario.</p>
+<pre><code class="language-cpp">429:   const std::string lstFilename = &quot;testdata/lstdatafromlstalgorithm/l76_multipartremoval.lst&quot;;
+</code></pre>
+<p>Path to the input LST file, relative to the test's working directory (<code>build/vs/Release/</code>). LST is TRUMPF's binary-adjacent text format encoding the full laser cutting program — part geometry, machine data, and palletizing instructions (PAPA/PAUD records).</p>
+<h3 id="act">Act</h3>
+<pre><code class="language-cpp">432:   const auto sheet = TnLstData::TnFromLst::TnPalletizingData::readFromLst( lstFilename );
+</code></pre>
+<p>The single act: parses the entire LST and returns a <code>TcSheet</code> object. Internally this reads PAPA records (one per removal operation) and PAUD records (one per individual part within a removal), converts the raw LST coordinates into the model's coordinate system, and builds the <code>TcStackItem</code> list. The resulting <code>sheet</code> is the entire parsed state.</p>
+<h3 id="assert-count">Assert — count</h3>
+<pre><code class="language-cpp">435:   const std::size_t expectedNumberOfStackItems = 12;
+437:   const auto&amp; stackItems = sheet.getStackItems();
+438:   ASSERT_EQ( stackItems.size(), expectedNumberOfStackItems );
+</code></pre>
+<p><code>getStackItems()</code> returns <code>std::vector&lt;TyStackItemSPtr&gt;</code> — one entry per cut part, not per removal. With 5 removal operations totalling 2+2+4+2+2 = 12 parts, the vector must have exactly 12 entries. <code>ASSERT_EQ</code> (not <code>EXPECT_EQ</code>) stops the test immediately on mismatch; the lines below would dereference vector entries by index and would segfault if the count were wrong.</p>
+<h3 id="dereference-all-12-items">Dereference all 12 items</h3>
+<pre><code class="language-cpp">440:   const auto&amp; stackItem1  = *stackItems.at( 0 );
+441:   const auto&amp; stackItem2  = *stackItems.at( 1 );
+       ...
+451:   const auto&amp; stackItem12 = *stackItems.at( 11 );
+</code></pre>
+<p><code>stackItems</code> holds <code>shared_ptr&lt;TcStackItem&gt;</code>, so each <code>*stackItems.at(n)</code> dereferences to a <code>TcStackItem const&amp;</code>. Using <code>at()</code> rather than <code>operator[]</code> adds a bounds check. All 12 references are bound upfront so the remaining assertions can read naturally as <code>stackItem5.getRemovalNumber()</code> rather than verbose repeated vector access.</p>
+<h3 id="removal-numbers">Removal numbers</h3>
+<pre><code class="language-cpp">453:   ASSERT_EQ( 1, stackItem1.getRemovalNumber() );  // group 1: 2 parts
+454:   ASSERT_EQ( 1, stackItem2.getRemovalNumber() );
+455:   ASSERT_EQ( 2, stackItem3.getRemovalNumber() );  // group 2: 2 parts
+456:   ASSERT_EQ( 2, stackItem4.getRemovalNumber() );
+457:   ASSERT_EQ( 3, stackItem5.getRemovalNumber() );  // group 3: 4 parts
+458:   ASSERT_EQ( 3, stackItem6.getRemovalNumber() );
+459:   ASSERT_EQ( 3, stackItem7.getRemovalNumber() );
+460:   ASSERT_EQ( 3, stackItem8.getRemovalNumber() );
+461:   ASSERT_EQ( 4, stackItem9.getRemovalNumber() );  // group 4: 2 parts
+462:   ASSERT_EQ( 4, stackItem10.getRemovalNumber() );
+463:   ASSERT_EQ( 5, stackItem11.getRemovalNumber() ); // group 5: 2 parts
+464:   ASSERT_EQ( 5, stackItem12.getRemovalNumber() );
+</code></pre>
+<p><code>getRemovalNumber()</code> returns the PAPA record index from the LST — a 1-based integer that says &quot;this part is lifted during removal operation N.&quot; Parts sharing the same number are gripped by the arm in a single physical movement. The assertions verify that the LST parser correctly grouped all 12 PAUD records back to their parent PAPA records in the right order. Group 3 is the only 4-part simultaneous lift; groups 1, 2, 4, 5 are 2-part lifts.</p>
+<h3 id="palletizing-sequence-numbers">Palletizing sequence numbers</h3>
+<pre><code class="language-cpp">466:   ASSERT_EQ( 1, stackItem1.getPalletizingSequenceNumber() );
+       ...
+477:   ASSERT_EQ( 1, stackItem12.getPalletizingSequenceNumber() );
+</code></pre>
+<p>All 12 items have sequence number 1. This field distinguishes which pass of the sheet the part belongs to when a sheet is processed in multiple cycles. Because every part here belongs to the first (and only) processing pass, the value is 1 across the board. The assertion confirms the parser did not accidentally assign different cycle numbers to parts from different PAPA groups.</p>
+<h3 id="tolerance">Tolerance</h3>
+<pre><code class="language-cpp">479:   const double tolerance = 0.001;
+</code></pre>
+<p>One micron — 0.001 mm. All subsequent coordinate comparisons use this as the allowed floating-point error. It is tighter than in some other L76 tests (TC 07 uses exact <code>0.0</code>; TC 09 also uses <code>0.0</code>) but realistic for coordinate arithmetic done in double precision on LST-derived values.</p>
+<h3 id="center-of-gravity-in-sheet-coordinates-items-18">Center of gravity in sheet coordinates — items 1–8</h3>
+<p>These assertions verify where each part sits on the raw metal sheet, before the arm moves it anywhere.</p>
+<pre><code class="language-cpp">481:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem1( 1154.15, 444.87 );
+482:   ASSERT_TRUE( expectedPartCOGInSheetCoordinatesStackItem1.equals(
+483:     stackItem1.getPartCenterOfGravityInSheetCoordinates(), tolerance ) );
+</code></pre>
+<p><code>TyPoint2D::equals()</code> checks both x and y components against <code>tolerance</code>. <code>getPartCenterOfGravityInSheetCoordinates()</code> returns a <code>TcVector2D</code> in machine sheet coordinates (origin at sheet corner, in mm).</p>
+<p>The 8 values show the parts arranged in three rows across the sheet:</p>
+<table>
+<thead>
+<tr>
+<th>Items</th>
+<th>y (mm)</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1, 2</td>
+<td>444.87</td>
+<td>Bottom row — removal group 1</td>
+</tr>
+<tr>
+<td>3, 4</td>
+<td>858.77</td>
+<td>Middle row — removal group 2</td>
+</tr>
+<tr>
+<td>5, 6, 7, 8</td>
+<td>1197.86</td>
+<td>Top row — removal group 3 (4 parts)</td>
+</tr>
+</tbody>
+</table>
+<pre><code class="language-cpp">485:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem2( 1368.63, 444.87 );
+</code></pre>
+<p>Same y as item 1 (same row), x offset of ~214 mm — the part spacing within the row.</p>
+<pre><code class="language-cpp">489:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem3( 999.53, 858.77 );
+493:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem4( 1314.01, 858.77 );
+</code></pre>
+<p>Middle row. Items 3 and 4 are ~314 mm apart (the parts in this row are wider than in the bottom row).</p>
+<pre><code class="language-cpp">497:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem5( 1227.87, 1197.86 );
+501:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem6( 1383.46, 1197.86 );
+505:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem7( 1539.04, 1197.86 );
+509:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem8( 1694.63, 1197.86 );
+</code></pre>
+<p>Top row — 4 parts evenly spaced at ~155 mm intervals: 1227.87 → 1383.46 → 1539.04 → 1694.63.</p>
+<h3 id="center-of-gravity-in-sheet-coordinates-items-912">Center of gravity in sheet coordinates — items 9–12</h3>
+<pre><code class="language-cpp">513:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem9(  1628.49, 858.77 );
+517:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem10( 1942.97, 858.77 );
+521:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem11( 1583.11, 444.87 );
+525:   const TnGeometry::TyPoint2D expectedPartCOGInSheetCoordinatesStackItem12( 1797.59, 444.87 );
+</code></pre>
+<p>Items 9 and 10 are still in the middle row (y = 858.77) but further right on the sheet (x ~1628, ~1943) than items 3 and 4 (x ~999, ~1314). Items 11 and 12 are in the bottom row (y = 444.87), again further right than items 1 and 2. This confirms that the sheet has 12 distinct part positions — even though some will land on the same destination stack, they start at different locations on the raw sheet.</p>
+<h3 id="stacking-operations">Stacking operations</h3>
+<pre><code class="language-cpp">530:   const auto&amp; stackingOperationStackItem1  = *stackItem1.getStackingOperation();
+       ...
+541:   const auto&amp; stackingOperationStackItem12 = *stackItem12.getStackingOperation();
+</code></pre>
+<p><code>getStackingOperation()</code> returns a <code>shared_ptr&lt;TcStackingOperation&gt;</code>. Dereferencing gives the destination data for that part: which stack to land on, where within the stack, and the stacking mode. Binding all 12 upfront mirrors the stackItem binding above.</p>
+<h3 id="center-of-gravity-in-destination-items-18">Center of gravity in destination — items 1–8</h3>
+<p>These coordinates are in the destination region's local coordinate frame (the pallet or container unit, not the machine sheet).</p>
+<pre><code class="language-cpp">543:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem1( 130.0, 130.0 );
+544:   ASSERT_TRUE( expectedPartCOGInDestinationSectionStackItem1.equals(
+545:     stackingOperationStackItem1.getPartCenterOfGravityInDestinationRegion(), tolerance ) );
+</code></pre>
+<p>Item 1 lands at (130, 130) in its destination — 130 mm from each edge of the pallet section. This is the first-layer position for stack 1.</p>
+<pre><code class="language-cpp">547:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem2( 344.48, 130.0 );
+</code></pre>
+<p>Same y as item 1 (same row on the pallet), x = 344.48. The two parts of removal group 1 are placed side by side on the pallet.</p>
+<pre><code class="language-cpp">551:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem3( 180.0, 390.0 );
+555:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem4( 494.48, 390.0 );
+</code></pre>
+<p>Items 3 and 4 land at y = 390 on the pallet (a different row from items 1 and 2), in stack 3. x values are 180 and 494.48.</p>
+<pre><code class="language-cpp">559:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem5(   80.0, 600.0 );
+563:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem6(  235.585, 600.0 );
+567:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem7(  391.171, 600.0 );
+571:   const TnGeometry::TyPoint2D expectedPartCOGInDestinationSectionStackItem8(  546.756, 600.0 );
+</code></pre>
+<p>The 4 parts of removal group 3 all land at y = 600, equally spaced at ~155.585 mm intervals (80 → 235.585 → 391.171 → 546.756). They go into stack 5, which is not reused by any later group.</p>
+<h3 id="position-reuse-items-912">Position reuse — items 9–12</h3>
+<pre><code class="language-cpp">575:   // the following stack items 9-12 are stacked on the same positions than stack items 1-4
+576:   ASSERT_TRUE( expectedPartCOGInDestinationSectionStackItem3.equals(
+577:     stackingOperationStackItem9.getPartCenterOfGravityInDestinationRegion(), tolerance ) );
+</code></pre>
+<p>Item 9 lands at the same destination position as item 3: (180.0, 390.0). This is the second layer placed on stack 3. The test reuses the <code>expected...Item3</code> variable rather than declaring a new one — confirming via code that the positions are identical, not just numerically close.</p>
+<pre><code class="language-cpp">579:   ASSERT_TRUE( expectedPartCOGInDestinationSectionStackItem4.equals(
+580:     stackingOperationStackItem10.getPartCenterOfGravityInDestinationRegion(), tolerance ) );
+</code></pre>
+<p>Item 10 → same position as item 4: (494.48, 390.0). Together with item 9, this is the second layer of stack 3 from removal group 4.</p>
+<pre><code class="language-cpp">582:   ASSERT_TRUE( expectedPartCOGInDestinationSectionStackItem1.equals(
+583:     stackingOperationStackItem11.getPartCenterOfGravityInDestinationRegion(), tolerance ) );
+585:   ASSERT_TRUE( expectedPartCOGInDestinationSectionStackItem2.equals(
+586:     stackingOperationStackItem12.getPartCenterOfGravityInDestinationRegion(), tolerance ) );
+</code></pre>
+<p>Items 11 and 12 → same positions as items 1 and 2: (130.0, 130.0) and (344.48, 130.0). These are the second layer of stack 1, placed by removal group 5.</p>
+<p>Note the non-obvious mapping: items 9–12 reuse positions 3, 4, 1, 2 — not 1, 2, 3, 4. Stacks are filled inward-first (stack 3 gets its second layer before stack 1), matching the removal order: group 4 targets stack 3, group 5 targets stack 1.</p>
+<h3 id="stack-ids">Stack IDs</h3>
+<pre><code class="language-cpp">590:   ASSERT_EQ( 1, stackingOperationStackItem1.getStackId() );
+591:   ASSERT_EQ( 1, stackingOperationStackItem2.getStackId() );
+592:   ASSERT_EQ( 3, stackingOperationStackItem3.getStackId() );
+593:   ASSERT_EQ( 3, stackingOperationStackItem4.getStackId() );
+594:   ASSERT_EQ( 5, stackingOperationStackItem5.getStackId() );
+595:   ASSERT_EQ( 5, stackingOperationStackItem6.getStackId() );
+596:   ASSERT_EQ( 5, stackingOperationStackItem7.getStackId() );
+597:   ASSERT_EQ( 5, stackingOperationStackItem8.getStackId() );
+598:   ASSERT_EQ( 3, stackingOperationStackItem9.getStackId() );
+599:   ASSERT_EQ( 3, stackingOperationStackItem10.getStackId() );
+600:   ASSERT_EQ( 1, stackingOperationStackItem11.getStackId() );
+601:   ASSERT_EQ( 1, stackingOperationStackItem12.getStackId() );
+602: }
+</code></pre>
+<p><code>getStackId()</code> is the pallet stack column identifier from the LST's PAPA record. It ties a <code>TcStackItem</code> to a physical position on the unloading area unit — parts with the same stack ID are stacked vertically on top of each other across multiple removal operations.</p>
+<p>The ID pattern is 1, 1, 3, 3, 5, 5, 5, 5, 3, 3, 1, 1:</p>
+<ul>
+<li><strong>Stack 1</strong> (ID 1): holds items 1, 2 in layer 1 and items 11, 12 in layer 2</li>
+<li><strong>Stack 3</strong> (ID 3): holds items 3, 4 in layer 1 and items 9, 10 in layer 2</li>
+<li><strong>Stack 5</strong> (ID 5): holds items 5, 6, 7, 8 in a single 4-part layer</li>
+</ul>
+<p>The IDs skip even numbers (1, 3, 5) because TRUMPF LST uses consecutive PAPA numbering and the three stacks are the 1st, 3rd, and 5th PAPA records in the file. These stack ID assertions are complementary to the destination COG assertions above: COG confirms <em>where on the pallet</em> a part goes; stack ID confirms <em>which vertical column</em> it belongs to.</p>
+<hr />
+<h2 id="what-the-test-guarantees-end-to-end">What the test guarantees end-to-end</h2>
+<ol>
+<li>The LST parser correctly reads all 5 PAPA records and 12 PAUD records without conflating groups.</li>
+<li>Removal grouping is preserved in the model — the <code>removalNumber</code> field faithfully reflects the PAPA sequence.</li>
+<li>Sheet coordinates are extracted per-part accurately (tolerance 0.001 mm), even when parts are geometrically close or symmetrically placed.</li>
+<li>Destination coordinates are computed correctly in the pallet's local frame for all three stack columns.</li>
+<li>Position reuse across removal passes is handled correctly — two separate removal operations targeting the same stack column produce identical <code>getPartCenterOfGravityInDestinationRegion()</code> values, which is what makes physical layering possible.</li>
+<li>Stack IDs are correctly propagated from LST PAPA records through the conversion pipeline.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#physical-scenario">Physical scenario</a>
+  </li>
+  <li level="1">
+   <a href="#line-by-line">Line-by-line</a>
+  </li>
+  <li level="2">
+   <a href="#arrange">Arrange</a>
+  </li>
+  <li level="2">
+   <a href="#act">Act</a>
+  </li>
+  <li level="2">
+   <a href="#assert-count">Assert — count</a>
+  </li>
+  <li level="2">
+   <a href="#dereference-all-12-items">Dereference all 12 items</a>
+  </li>
+  <li level="2">
+   <a href="#removal-numbers">Removal numbers</a>
+  </li>
+  <li level="2">
+   <a href="#palletizing-sequence-numbers">Palletizing sequence numbers</a>
+  </li>
+  <li level="2">
+   <a href="#tolerance">Tolerance</a>
+  </li>
+  <li level="2">
+   <a href="#center-of-gravity-in-sheet-coordinates-items-18">Center of gravity in sheet coordinates — items 1–8</a>
+  </li>
+  <li level="2">
+   <a href="#center-of-gravity-in-sheet-coordinates-items-912">Center of gravity in sheet coordinates — items 9–12</a>
+  </li>
+  <li level="2">
+   <a href="#stacking-operations">Stacking operations</a>
+  </li>
+  <li level="2">
+   <a href="#center-of-gravity-in-destination-items-18">Center of gravity in destination — items 1–8</a>
+  </li>
+  <li level="2">
+   <a href="#position-reuse-items-912">Position reuse — items 9–12</a>
+  </li>
+  <li level="2">
+   <a href="#stack-ids">Stack IDs</a>
+  </li>
+  <li level="1">
+   <a href="#what-the-test-guarantees-end-to-end">What the test guarantees end-to-end</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></span>
+ <span class="next"><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

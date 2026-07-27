@@ -1,0 +1,1816 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Unload & Palletizing Extract — Demo LST Sheets</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a class="active" href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Unload & Palletizing Extract — Demo LST Sheets</h1>
+<p>Per-part unload/palletizing destinations extracted from the demo <code>.lst</code> files in <code>D:\Marcel\Palletizing3\demo</code>, reconstructed with the same field logic as <code>source/libraries/lstdata/fromlst/algorithm/source/TcReadFromLst.cpp</code> (tables <code>PARTS_IN_PROGRAM_POS</code>, <code>PARTS_UNLOAD_DATA</code>, <code>PARTS_PALLET_DATA</code>).</p>
+<p><strong>14 sheets · 66 stack items · machines: K07, L26, L76, L99 · unload devices: sortMaster, sortMasterCompact, sortMasterSpeed</strong></p>
+<h2 id="contents">Contents</h2>
+<ul>
+<li><a href="#k07-goodpartlst">k07_goodpart.lst</a> — K07, 1 item(s)</li>
+<li><a href="#k07-goodparts-papa-data-3-decimalslst">k07_goodparts_papa_data_3_decimals.lst</a> — K07, 9 item(s)</li>
+<li><a href="#k07-twogoodparts-rotation-0-90-degreeslst">k07_twogoodparts_rotation_0_90_degrees.lst</a> — K07, 2 item(s)</li>
+<li><a href="#l26-ninegoodparts-sixscrapparts-using-different-stackshiftoffsetslst">l26_ninegoodparts_sixscrapparts_using_different_stackshiftoffsets.lst</a> — L26, 15 item(s)</li>
+<li><a href="#l26-onegoodpart-twoscrappartslst">l26_onegoodpart_twoscrapparts.lst</a> — L26, 3 item(s)</li>
+<li><a href="#l76-lift-rotation-in-sheet-and-destination-regionlst">l76_lift_rotation_in_sheet_and_destination_region.lst</a> — L76, 1 item(s)</li>
+<li><a href="#l76-lift-rotation-only-in-destination-regionlst">l76_lift_rotation_only_in_destination_region.lst</a> — L76, 1 item(s)</li>
+<li><a href="#l76-multipartremovallst">l76_multipartremoval.lst</a> — L76, 12 item(s)</li>
+<li><a href="#l76-onegoodpart-twoscrappartslst">l76_onegoodpart_twoscrapparts.lst</a> — L76, 3 item(s)</li>
+<li><a href="#l76-onegoodpart-twoscrapparts-liftnotonpartcenterofgravitylst">l76_onegoodpart_twoscrapparts_liftnotonpartcenterofgravity.lst</a> — L76, 3 item(s)</li>
+<li><a href="#l76-twogoodparts-fourscrapparts-onepapatworelatedpaudlst">l76_twogoodparts_fourscrapparts_onepapatworelatedpaud.lst</a> — L76, 6 item(s)</li>
+<li><a href="#one-part-two-angles-17-sheet-repetitionslst">one_part_two_angles_17_sheet_repetitions.lst</a> — L26, 8 item(s)</li>
+<li><a href="#two-partslst">two_parts.lst</a> — L26, 2 item(s)</li>
+<li><a href="#gcode-core/samplelst">gcode_core/sample.LST</a> — L99, 0 item(s)</li>
+</ul>
+<hr />
+<h2 id="k07_goodpart.lst">k07_goodpart.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J1_1.LST</li>
+<li><strong>Machine:</strong> K07 (TruMatic 1000 (K07))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 1</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>BL_09</td>
+<td>finishedPart</td>
+<td>799.43, 819.14</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>250, 99.997</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="k07_goodparts_papa_data_3_decimals.lst">k07_goodparts_papa_data_3_decimals.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J2_1.LST</li>
+<li><strong>Machine:</strong> K07 (TruMatic 1000 (K07))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 9</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>7</td>
+<td>BL_07</td>
+<td>finishedPart</td>
+<td>2297.89, 1082.75</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>464.82, 153.36</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>8</td>
+<td>BL_07</td>
+<td>finishedPart</td>
+<td>1989.45, 1082.75</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>464.82, 153.36</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9</td>
+<td>BL_07</td>
+<td>finishedPart</td>
+<td>1681.01, 1082.75</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>464.82, 153.36</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>BL_07</td>
+<td>finishedPart</td>
+<td>1372.57, 1082.75</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>464.82, 153.36</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>12</td>
+<td>BL_12</td>
+<td>finishedPart</td>
+<td>469.07, 939.96</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>2</td>
+<td>section 3</td>
+<td>439.674, 400.16</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>14</td>
+<td>BL_12</td>
+<td>finishedPart</td>
+<td>627.51, 939.96</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>2</td>
+<td>section 3</td>
+<td>439.674, 400.16</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>27</td>
+<td>BL_05</td>
+<td>finishedPart</td>
+<td>938.48, 409.33</td>
+<td>180</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>3</td>
+<td>section 3</td>
+<td>189.227, 442</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>28</td>
+<td>BL_05</td>
+<td>finishedPart</td>
+<td>750.04, 409.33</td>
+<td>180</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>3</td>
+<td>section 3</td>
+<td>189.227, 442</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>29</td>
+<td>BL_05</td>
+<td>finishedPart</td>
+<td>561.6, 409.33</td>
+<td>180</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>3</td>
+<td>section 3</td>
+<td>189.227, 442</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="k07_twogoodparts_rotation_0_90_degrees.lst">k07_twogoodparts_rotation_0_90_degrees.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J11_1.LST</li>
+<li><strong>Machine:</strong> K07 (TruMatic 1000 (K07))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>BP_07_01</td>
+<td>finishedPart</td>
+<td>639.43, 734.54</td>
+<td>0</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>1</td>
+<td>section 3</td>
+<td>310.039, 523.75</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>BP_07_01</td>
+<td>finishedPart</td>
+<td>1415.31, 569.66</td>
+<td>90</td>
+<td>sortMasterCompact</td>
+<td>drop</td>
+<td>2</td>
+<td>section 3</td>
+<td>384.154, 130.725</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l26_ninegoodparts_sixscrapparts_using_different_stackshiftoffsets.lst">l26_ninegoodparts_sixscrapparts_using_different_stackshiftoffsets.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J1_1.LST</li>
+<li><strong>Machine:</strong> L26 (TruLaser Center 7030 (L26))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 15</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>BP_84 - Kopie</td>
+<td>finishedPart</td>
+<td>434.17, 1182.08</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>494.928, 300</td>
+<td>0</td>
+<td>1, 2</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>BP_84 - Kopie</td>
+<td>finishedPart</td>
+<td>1365.22, 1182.08</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>494.928, 300</td>
+<td>0</td>
+<td>1, 2</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>9</td>
+<td>BP_84 - Kopie</td>
+<td>finishedPart</td>
+<td>2296.28, 1182.08</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>494.928, 300</td>
+<td>0</td>
+<td>1, 2</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>10</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>2573.29, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>11</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>2667.07, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>12</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>2095.32, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>13</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>2189.1, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>14</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>1617.35, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>15</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>1711.13, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>16</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>1139.38, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>17</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>1233.16, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>18</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>661.41, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>19</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>755.19, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>20</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>183.44, 491.35</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>2</td>
+<td>section 3</td>
+<td>995.738, 149.811</td>
+<td>0</td>
+<td>1.5, 1.5</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>21</td>
+<td>BP_02 - Kopie</td>
+<td>finishedPart</td>
+<td>277.22, 491.59</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>3</td>
+<td>section 3</td>
+<td>1508.224, 250.243</td>
+<td>0</td>
+<td>2, 1</td>
+<td>PAPA-3</td>
+<td>PAUD-4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l26_onegoodpart_twoscrapparts.lst">l26_onegoodpart_twoscrapparts.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J13_1.LST</li>
+<li><strong>Machine:</strong> L26 (TruLaser Center 7030 (L26))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>@SCRAP_1</td>
+<td>wastePart</td>
+<td>815.75, 1190</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>1</td>
+<td>section 3</td>
+<td>573.255, 149.81</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>@SCRAP_1</td>
+<td>wastePart</td>
+<td>815.75, 660</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>dropFromMaxStackHeight</td>
+<td>1</td>
+<td>section 3</td>
+<td>573.255, 149.81</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>BP_25</td>
+<td>finishedPart</td>
+<td>815.75, 925</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>2</td>
+<td>section 3</td>
+<td>805.75, 874.62</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_lift_rotation_in_sheet_and_destination_region.lst">l76_lift_rotation_in_sheet_and_destination_region.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J6_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 1</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>BL_19</td>
+<td>finishedPart</td>
+<td>361.95, 891.97</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 2</td>
+<td>78.715, 153.41</td>
+<td>225</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_lift_rotation_only_in_destination_region.lst">l76_lift_rotation_only_in_destination_region.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J3_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 1</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>BP_14</td>
+<td>finishedPart</td>
+<td>1189.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>119.904, 1636.545</td>
+<td>90</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_multipartremoval.lst">l76_multipartremoval.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J5_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 12</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>200MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1154.15, 444.87</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>130, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>200MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1368.63, 444.87</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>344.48, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>300MMRECHTECK</td>
+<td>finishedPart</td>
+<td>999.53, 858.77</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>3</td>
+<td>unit 3</td>
+<td>180, 390</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>300MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1314.01, 858.77</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>3</td>
+<td>unit 3</td>
+<td>494.48, 390</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>100MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1227.87, 1197.86</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>5</td>
+<td>unit 3</td>
+<td>80, 600</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>100MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1383.46, 1197.86</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>5</td>
+<td>unit 3</td>
+<td>235.585, 600</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-6</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>100MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1539.04, 1197.86</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>5</td>
+<td>unit 3</td>
+<td>391.171, 600</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-7</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>100MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1694.63, 1197.86</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>5</td>
+<td>unit 3</td>
+<td>546.756, 600</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-8</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>300MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1628.49, 858.77</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>3</td>
+<td>unit 3</td>
+<td>180, 390</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>300MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1942.97, 858.77</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>3</td>
+<td>unit 3</td>
+<td>494.48, 390</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>200MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1583.11, 444.87</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>130, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>200MMRECHTECK</td>
+<td>finishedPart</td>
+<td>1797.59, 444.87</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>344.48, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_onegoodpart_twoscrapparts.lst">l76_onegoodpart_twoscrapparts.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J3_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>1309.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 2</td>
+<td>468.927, 305.776</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>@SCRAP_1</td>
+<td>wastePart</td>
+<td>1069.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 2</td>
+<td>468.927, 305.776</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>BP_14</td>
+<td>finishedPart</td>
+<td>1189.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>2</td>
+<td>unit 3</td>
+<td>472.936, 778.594</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_onegoodpart_twoscrapparts_liftnotonpartcenterofgravity.lst">l76_onegoodpart_twoscrapparts_liftnotonpartcenterofgravity.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J3_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 3</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>1309.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>2</td>
+<td>unit 2</td>
+<td>760.346, 290.626</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>@SCRAP_1</td>
+<td>wastePart</td>
+<td>1069.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>2</td>
+<td>unit 2</td>
+<td>760.345, 290.626</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>7</td>
+<td>BP_14</td>
+<td>finishedPart</td>
+<td>1189.4, 620.58</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>3</td>
+<td>unit 3</td>
+<td>263.991, 754.337</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="l76_twogoodparts_fourscrapparts_onepapatworelatedpaud.lst">l76_twogoodparts_fourscrapparts_onepapatworelatedpaud.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J2_1.LST</li>
+<li><strong>Machine:</strong> L76 (TruLaser 5030 (L76))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 6</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>72</td>
+<td>@SCRAP_4</td>
+<td>wastePart</td>
+<td>375, 1127.39</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>120, 80</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>73</td>
+<td>@SCRAP_2</td>
+<td>wastePart</td>
+<td>135, 1127.39</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>120, 80</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>74</td>
+<td>BP_14</td>
+<td>finishedPart</td>
+<td>255, 1127.39</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>2</td>
+<td>unit 3</td>
+<td>470, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-3</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>75</td>
+<td>@SCRAP_3</td>
+<td>wastePart</td>
+<td>375, 1341.79</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>120, 80</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-4</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>76</td>
+<td>@SCRAP_1</td>
+<td>wastePart</td>
+<td>135, 1341.79</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>1</td>
+<td>unit 3</td>
+<td>120, 80</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-2</td>
+<td>PAUD-5</td>
+</tr>
+<tr>
+<td>1</td>
+<td>77</td>
+<td>BP_14</td>
+<td>finishedPart</td>
+<td>255, 1341.79</td>
+<td>0</td>
+<td>sortMaster</td>
+<td>drop</td>
+<td>2</td>
+<td>unit 3</td>
+<td>470, 130</td>
+<td>0</td>
+<td>—</td>
+<td>PAPA-5</td>
+<td>PAUD-6</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="one_part_two_angles_17_sheet_repetitions.lst">one_part_two_angles_17_sheet_repetitions.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J9_1.LST</li>
+<li><strong>Machine:</strong> L26 (TruLaser Center 7030 (L26))</li>
+<li><strong>Sheet thickness:</strong> 2 mm</li>
+<li><strong>Repetitions:</strong> 17</li>
+<li><strong>Stack items:</strong> 8</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>503.5, 1300</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>1500.92, 1300</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>3</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>2585.26, 996.5</td>
+<td>90</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>2</td>
+<td>section 3</td>
+<td>1415.895, 493.5</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+<tr>
+<td>1</td>
+<td>4</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>2194.84, 996.5</td>
+<td>90</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>2</td>
+<td>section 3</td>
+<td>1415.895, 493.5</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-3</td>
+</tr>
+<tr>
+<td>1</td>
+<td>5</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>1500.92, 909.58</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>6</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>503.5, 909.58</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>7</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>503.5, 519.16</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-4</td>
+</tr>
+<tr>
+<td>1</td>
+<td>8</td>
+<td>BP_67</td>
+<td>finishedPart</td>
+<td>1500.92, 519.16</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-4</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="two_parts.lst">two_parts.lst</h2>
+<ul>
+<li><strong>Sheet:</strong> J4_1.LST</li>
+<li><strong>Machine:</strong> L26 (TruLaser Center 7030 (L26))</li>
+<li><strong>Sheet thickness:</strong> 6 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 2</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Seq</th>
+<th>Removal#</th>
+<th>Part</th>
+<th>Type</th>
+<th>Sheet CoG</th>
+<th>Sheet rot°</th>
+<th>Device</th>
+<th>Mode</th>
+<th>Stack#</th>
+<th>Dest. region</th>
+<th>Dest. CoG</th>
+<th>Dest. rot°</th>
+<th>Stack shift</th>
+<th>PAPA</th>
+<th>PAUD</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>1</td>
+<td>300T240_GTS</td>
+<td>finishedPart</td>
+<td>579.35, 1230.3</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>1</td>
+<td>section 3</td>
+<td>495, 190</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-1</td>
+<td>PAUD-1</td>
+</tr>
+<tr>
+<td>1</td>
+<td>2</td>
+<td>part01</td>
+<td>finishedPart</td>
+<td>496.15, 765.68</td>
+<td>0</td>
+<td>sortMasterSpeed</td>
+<td>deposit</td>
+<td>2</td>
+<td>section 3</td>
+<td>1269.921, 129.38</td>
+<td>0</td>
+<td>0, 0</td>
+<td>PAPA-2</td>
+<td>PAUD-2</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="gcode_coresample.lst">gcode_core/sample.LST</h2>
+<ul>
+<li><strong>Sheet:</strong> _1.LST</li>
+<li><strong>Machine:</strong> L99 (unknown)</li>
+<li><strong>Sheet thickness:</strong> 1.5 mm</li>
+<li><strong>Repetitions:</strong> 1</li>
+<li><strong>Stack items:</strong> 0</li>
+</ul>
+<p><em>No unload/palletizing stack items found (no PARTS_PALLET_DATA / PARTS_UNLOAD_DATA section, e.g. a raw geometry sample rather than a palletizing program).</em></p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#contents">Contents</a>
+  </li>
+  <li level="1">
+   <a href="#k07_goodpart.lst">k07_goodpart.lst</a>
+  </li>
+  <li level="1">
+   <a href="#k07_goodparts_papa_data_3_decimals.lst">k07_goodparts_papa_data_3_decimals.lst</a>
+  </li>
+  <li level="1">
+   <a href="#k07_twogoodparts_rotation_0_90_degrees.lst">k07_twogoodparts_rotation_0_90_degrees.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l26_ninegoodparts_sixscrapparts_using_different_stackshiftoffsets.lst">l26_ninegoodparts_sixscrapparts_using_different_stackshiftoffsets.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l26_onegoodpart_twoscrapparts.lst">l26_onegoodpart_twoscrapparts.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_lift_rotation_in_sheet_and_destination_region.lst">l76_lift_rotation_in_sheet_and_destination_region.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_lift_rotation_only_in_destination_region.lst">l76_lift_rotation_only_in_destination_region.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_multipartremoval.lst">l76_multipartremoval.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_onegoodpart_twoscrapparts.lst">l76_onegoodpart_twoscrapparts.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_onegoodpart_twoscrapparts_liftnotonpartcenterofgravity.lst">l76_onegoodpart_twoscrapparts_liftnotonpartcenterofgravity.lst</a>
+  </li>
+  <li level="1">
+   <a href="#l76_twogoodparts_fourscrapparts_onepapatworelatedpaud.lst">l76_twogoodparts_fourscrapparts_onepapatworelatedpaud.lst</a>
+  </li>
+  <li level="1">
+   <a href="#one_part_two_angles_17_sheet_repetitions.lst">one_part_two_angles_17_sheet_repetitions.lst</a>
+  </li>
+  <li level="1">
+   <a href="#two_parts.lst">two_parts.lst</a>
+  </li>
+  <li level="1">
+   <a href="#gcode_coresample.lst">gcode_core/sample.LST</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="test.html">L76 Test Cases — Palletizing2</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

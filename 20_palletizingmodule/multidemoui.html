@@ -1,0 +1,904 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>multipartdemoUI — Algorithm Documentation</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../07-lst/index.html">LST Format</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../07-lst/01-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../07-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Palletizing.exe</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="algorithm.html">Palletizing Algorithm — Technical Reference</a></li>
+    <li><button class="tree blank"></button><a href="swagger-analysis.html">Analysis of `swagger.json`</a></li>
+    <li><button class="tree blank"></button><a class="active" href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></li>
+    <li><button class="tree blank"></button><a href="multipartdemo.html">LST Palletizing-Data Reader — Algorithm Documentation</a></li>
+    <li><button class="tree blank"></button><a href="test.html">L76 Test Cases — Palletizing2</a></li>
+    <li><button class="tree blank"></button><a href="demopartextract.html">Unload & Palletizing Extract — Demo LST Sheets</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Palletizing.exe</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="multidemoui.html">multipartdemoUI — Algorithm Documentation</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>multipartdemoUI — Algorithm Documentation</h1>
+<p><code>demo/multipartdemoUI/main.cpp</code> reads a TRUMPF LST file through the
+<code>lstdata</code> library and writes a self-contained HTML file that visualises
+both the sheet layout and the pallet destination in detail.</p>
+<hr />
+<h2 id="functional-view">1 Functional View</h2>
+<h3 id="top-level-pipeline">1.1 Top-level pipeline</h3>
+<pre><code>main()
+ ├─ CLI parse (cxxopts)              --file / --output / --dir / --help
+ ├─ selectLstFile()                  interactive numbered list if --file omitted
+ ├─ TnPalletizingData::readFromLst() LST → TcSheet (full domain model)
+ ├─ generateHtml()
+ │   ├─ buildVizData()               TcSheet → vector&lt;ItemViz&gt;
+ │   ├─ generateSheetSvg()           sheet layout SVG string
+ │   ├─ generateDestSvg()            destination layout SVG string
+ │   ├─ generateLegend()             HTML legend bar
+ │   ├─ generateTable()              HTML item table
+ │   └─ generateJsonData()           ITEMS[] JS array for the detail panel
+ └─ write to output file
+</code></pre>
+<h3 id="key-data-structures">1.2 Key data structures</h3>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Pt</code></td>
+<td>2-D point in world coordinates (mm). Plain struct <code>{x, y}</code>.</td>
+</tr>
+<tr>
+<td><code>Vp</code></td>
+<td>Viewport transform. Maps world mm → SVG pixels with Y-axis flip. Stored as <code>{x0, y0, scale, svgH}</code>.</td>
+</tr>
+<tr>
+<td><code>ItemViz</code></td>
+<td>All data needed to render one <code>TcStackItem</code>. Holds both the sheet polygon and the destination polygon (already in world mm), the lift-point positions, and metadata strings for tooltips/table.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="geometry-extraction-pipeline-worldpolygon">1.3 Geometry extraction pipeline (<code>worldPolygon</code>)</h3>
+<p>The part outline comes from the GEO binary blob parsed by <code>TcGeoReader</code>
+inside <code>readFromLst</code>.  The resulting <code>TcRegion</code> holds a <code>TcCurve</code> (the
+outer boundary) made of <code>TcLineSegment</code> and <code>TcArcSegment</code> objects.</p>
+<pre><code>TcRegion::outerCurve()
+  └─ curvePoints()                   polygon approximation in LOCAL frame
+      ├─ TcLineSegment  → start point only
+      └─ TcArcSegment   → sample arcPts=24 points uniformly by angle
+  ↓
+  center at bounding-box centre      removes local-frame translation offset
+  ↓
+  rotate(angle)                      2-D rotation matrix, angle in radians
+  ↓
+  translate(cogX, cogY)              place at world COG
+  ↓
+  worldPolygon result                ready for SVG
+</code></pre>
+<p><strong>Bounding-box centering</strong> — the local coordinate frame of the geometry
+blob has no guaranteed origin.  Subtracting the bbox centre before
+rotating ensures the rotation is about the visual centre of the part,
+which matches the physical COG for symmetric sheet-metal parts.</p>
+<p><strong>Arc sampling</strong> — <code>absoluteStartAngle()</code> gives the angle of the first
+arc point in radians.  <code>signedSpanAngle()</code> is negative for CW arcs.
+The parametric formula is <code>a = a0 + t * da</code> for <code>t ∈ [0, 1)</code>.  The
+end point of the arc is the start point of the next segment and is
+therefore <em>not</em> emitted here (it will be emitted as the start of the
+next line or arc).</p>
+<h3 id="viewport-transform-makevp-vp">1.4 Viewport transform (<code>makeVp</code> / <code>Vp</code>)</h3>
+<p>Goal: fit the entire world-coordinate scene into an 800 × 560 pixel
+canvas with a 10 % padding margin.</p>
+<pre><code>1. Compute tight AABB over all world points.
+2. pad = max(dx, dy) * 0.10
+3. Expanded AABB: [xmn-pad, xmx+pad] × [ymn-pad, ymx+pad]
+4. scale = min(svgW / expandedDx, svgH / expandedDy)   ← preserves aspect ratio
+5. Center within canvas:
+     offX = (svgW - expandedDx*scale) / 2 / scale       ← extra space in world units
+6. World origin: x0 = xmn - pad - offX,  y0 = ymn - pad - offY
+7. toX(wx) = (wx - x0) * scale
+   toY(wy) = svgH - (wy - y0) * scale                   ← Y-flip
+</code></pre>
+<p>The Y-flip converts from the mathematical convention (Y up) used by the
+machine model to the SVG convention (Y down).</p>
+<h3 id="layer-computation">1.5 Layer computation</h3>
+<p>Parts in the same stack column are physically stacked on top of each
+other in removal-group order.  The layer number drives the painter's
+algorithm in the destination SVG and provides the <code>L</code> badge.</p>
+<pre><code>1. Group items by stackId  →  stackGroups[id] = [group, group, ...]
+2. For each stackId: sort groups, deduplicate          (ascending → lowest group first)
+3. For each item: layer = indexOf(item.group in sorted list) + 1
+</code></pre>
+<p>Layer 1 is the first removal into that column (placed deepest on the
+pallet or the first item picked from the sheet, depending on device
+type).  Layer N items are drawn on top in the destination SVG.</p>
+<h3 id="sheet-layout-svg-generatesheetsvg">1.6 Sheet layout SVG (<code>generateSheetSvg</code>)</h3>
+<p>Rendering order (painter's algorithm — last drawn is on top):</p>
+<pre><code>1. Background rect (#161e28, dark blue-grey)
+2. Grid lines (50 px intervals, 4 % opacity white)
+3. Per item:
+   a. Part polygon   — group colour, 55 % fill opacity
+   b. Lift arms      — dashed line COG→liftPt + arrowhead + diamond at tip
+   c. COG cross      — white ± 4 px crosshair
+   d. Label          — &quot;G&lt;group&gt;·&lt;idx&gt;&quot; above COG
+</code></pre>
+<p>The lift arms originate at <code>item.sheetCog</code> and end at each entry in
+<code>item.liftPts</code>.  <code>liftPts</code> are already in sheet world coordinates (see
+§1.7), so they map directly through <code>Vp</code>.</p>
+<h3 id="destination-layout-svg-generatedestsvg">1.7 Destination layout SVG (<code>generateDestSvg</code>)</h3>
+<p>The destination SVG uses a visual layer offset of <strong>8 mm</strong> per layer to
+separate physically-stacked parts from each other on screen.</p>
+<pre><code>kLayerOffset = 8.0 mm
+visualOffset = (layer - 1) * 8 mm  → applied to BOTH x and y (diagonal shift)
+</code></pre>
+<p>Rendering order:</p>
+<pre><code>1. Background rect (#1a1608, dark amber-black — pallet surface)
+2. Grid lines (3 % opacity)
+3. Stack column bands (per stackId: dashed rounded-rect + label)
+4. Parts — outer loop over targetLayer 1..maxLayer:
+   a. If layer &gt; 1: ghost outline of the same polygon at the previous
+      layer offset (dashed, 30 % opacity) — shows what is underneath
+   b. Part polygon — group colour, 60 % fill (layer 1) or 45 % (layer N)
+   c. COG circle — 3 px radius
+   d. Layer badge — &quot;L&lt;n&gt;&quot; next to COG for layer &gt; 1
+   e. Group·index label above COG
+   f. Destination coordinates in small text below COG
+</code></pre>
+<p>The outer <code>targetLayer</code> loop is painter's algorithm: all layer-1 parts
+are drawn first, then all layer-2 parts on top, so higher layers always
+appear in front regardless of their draw position.</p>
+<h3 id="html-assembly-generatehtml">1.8 HTML assembly (<code>generateHtml</code>)</h3>
+<p>The function concatenates raw string literals (C++11 <code>R&quot;(...)&quot;</code>) with
+generated substrings.  Structure of the emitted document:</p>
+<pre><code class="language-html">&lt;html&gt;
+  &lt;head&gt; &lt;!-- CSS: dark industrial theme, 2-column grid layout --&gt; &lt;/head&gt;
+  &lt;body&gt;
+    &lt;header&gt;  &lt;!-- filename, sheet name, machine, thickness, part count, group count --&gt;
+    &lt;section class=&quot;panels&quot;&gt;
+      &lt;!-- generateSheetSvg() + generateDestSvg() side by side --&gt;
+    &lt;/section&gt;
+    &lt;!-- generateLegend() --&gt;
+    &lt;section&gt;  &lt;!-- generateTable() --&gt;
+    &lt;script&gt;
+      &lt;!-- generateJsonData() → const ITEMS = [...] --&gt;
+      &lt;!-- inline JS: hi/unhiAll/showDetail/filterGroup event handlers --&gt;
+    &lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>The embedded <code>ITEMS</code> array mirrors the <code>ItemViz</code> fields so that the
+JavaScript detail panel does not need to re-read the SVG attributes.</p>
+<h3 id="javascript-interaction-model">1.9 JavaScript interaction model</h3>
+<p>All SVG elements that represent parts carry <code>data-item=&quot;N&quot;</code> and
+<code>data-group=&quot;G&quot;</code> HTML attributes.  Table rows carry only <code>data-item</code>.</p>
+<pre><code>mouseenter on .part or tr[data-item]
+  → hi(id):    querySelectorAll('[data-item=&quot;N&quot;]') → add class &quot;hi&quot;
+               CSS: filter:brightness(1.6) drop-shadow(...)
+  → showDetail(id): render ITEMS[id-1] fields into &lt;div id=&quot;detail&quot;&gt;
+mouseleave
+  → unhiAll(): remove class &quot;hi&quot; from all elements
+
+click on legend-item
+  → filterGroup(g):
+      if already active → clear filter
+      else → set [data-group != g] opacity=0.15, [data-group == g] opacity=1
+</code></pre>
+<hr />
+<h2 id="line-by-line-walkthrough">2 Line-by-Line Walkthrough</h2>
+<h3 id="helper-functions-lines-46116">2.1 Helper functions (lines 46–116)</h3>
+<table>
+<thead>
+<tr>
+<th>Lines</th>
+<th>Function</th>
+<th>What it does</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>46–55</td>
+<td><code>kGroupColors</code></td>
+<td>8-element array of hex colour strings, one per removal group (wraps with <code>% 8</code>).</td>
+</tr>
+<tr>
+<td>57–60</td>
+<td><code>groupColor(g)</code></td>
+<td>Returns <code>kGroupColors[(g-1) % 8]</code>. 1-based group index, wraps after 8.</td>
+</tr>
+<tr>
+<td>62–67</td>
+<td><code>fmtD(v, prec)</code></td>
+<td>Fixed-precision double → string via <code>ostringstream</code>. Default precision 2.</td>
+</tr>
+<tr>
+<td>69–72</td>
+<td><code>fmtDeg(rad)</code></td>
+<td>Converts radians to degrees, delegates to <code>fmtD</code> with precision 1, appends <code>°</code>.</td>
+</tr>
+<tr>
+<td>74–89</td>
+<td><code>xmlEsc(s)</code></td>
+<td>Escapes <code>&amp; &lt; &gt; &quot;</code> for safe embedding in SVG/HTML attributes and text nodes.</td>
+</tr>
+<tr>
+<td>91–102</td>
+<td><code>toString(TePartType)</code></td>
+<td>Enum → string. Covers <code>finishedPart</code>, <code>wastePart</code>, <code>scrapSkeleton</code>, <code>remainderSheet</code>.</td>
+</tr>
+<tr>
+<td>104–116</td>
+<td><code>toString(TeStackingMode)</code></td>
+<td>Enum → string. Covers all 5 stacking modes.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="struct-pt-and-geometry-primitives-lines-121132">2.2 <code>struct Pt</code> and geometry primitives (lines 121–132)</h3>
+<pre><code class="language-cpp">struct Pt { double x = 0, y = 0; };           // line 121-124
+Pt rotate(Pt p, double a)                      // line 126-130
+  → { p.x*cos(a) - p.y*sin(a),
+      p.x*sin(a) + p.y*cos(a) }
+Pt translate(Pt p, double tx, double ty)       // line 132
+  → { p.x+tx, p.y+ty }
+</code></pre>
+<p>Standard 2-D rotation matrix.  Angle <code>a</code> is in radians, CCW positive
+(matching the domain model convention).</p>
+<h3 id="curvepoints-lines-138163">2.3 <code>curvePoints</code> (lines 138–163)</h3>
+<pre><code class="language-cpp">// line 141
+for (const auto&amp; seg : curve.segments())
+</code></pre>
+<p>Iterates the ordered segment list of the outer curve.  Segments share
+endpoints: the end of segment <em>i</em> equals the start of segment <em>i+1</em>, so
+only the <strong>start point</strong> is emitted for line segments to avoid
+duplicates.</p>
+<pre><code class="language-cpp">// lines 143-146  — line segment branch
+auto* line = dynamic_cast&lt;const TcLineSegment*&gt;(seg.get())
+pts.push_back({ line-&gt;startPoint().x(), line-&gt;startPoint().y() })
+</code></pre>
+<p><code>startPoint()</code> returns <code>TyPoint3D = TcVector3D</code>.  Only x/y are used;
+z is always 0 for 2-D sheet geometry.</p>
+<pre><code class="language-cpp">// lines 147-160  — arc segment branch
+double a0 = arc-&gt;absoluteStartAngle();  // radians from positive X axis
+double da = arc-&gt;signedSpanAngle();     // negative = CW arc
+for (int i = 0; i &lt; arcPts; ++i)       // arcPts = 24 default
+  t = i / arcPts                        // t in [0, 1)
+  a = a0 + t * da                       // uniform angle parameter
+  pts.push_back({ cx + r*cos(a), cy + r*sin(a) })
+</code></pre>
+<p>The open interval <code>[0, 1)</code> means neither the start nor the end angle
+of the arc is exactly emitted.  The start coincides with the end of the
+previous segment (already emitted as a line start or arc start).  The
+end coincides with the start of the next segment (will be emitted
+there).</p>
+<h3 id="worldpolygon-lines-166186">2.4 <code>worldPolygon</code> (lines 166–186)</h3>
+<pre><code class="language-cpp">// lines 172-174  — bounding box centre in local frame
+const auto&amp; bbox = region.boundingBox();
+double lcx = (bbox.getXMin() + bbox.getXMax()) / 2.0;
+double lcy = (bbox.getYMin() + bbox.getYMax()) / 2.0;
+</code></pre>
+<p>The GEO blob coordinate system has an arbitrary origin.  Subtracting
+the bbox centre re-centres the polygon at the origin before rotation.</p>
+<pre><code class="language-cpp">// lines 176-185  — transform loop
+auto localPts = curvePoints(*region.outerCurve());
+for (const auto&amp; lp : localPts)
+  Pt centered = { lp.x - lcx, lp.y - lcy }   // re-centre
+  Pt rot      = rotate(centered, angle)         // rotate in-plane
+  world.push_back(translate(rot, cogX, cogY))  // place at world COG
+</code></pre>
+<p>The three-step transform (centre → rotate → translate) is the standard
+rigid-body placement for a part that sits at <code>(cogX, cogY)</code> in world
+coordinates and is rotated <code>angle</code> radians around its own COG.</p>
+<h3 id="struct-vp-and-makevp-lines-191230">2.5 <code>struct Vp</code> and <code>makeVp</code> (lines 191–230)</h3>
+<pre><code class="language-cpp">// lines 197-199  — transform accessors
+double toX(wx) → (wx - x0) * scale
+double toY(wy) → svgH - (wy - y0) * scale   // Y-flip
+Pt to(wx, wy) → { toX(wx), toY(wy) }
+</code></pre>
+<p><code>x0, y0</code> are the world coordinates that map to SVG pixel (0, 0) — the
+top-left of the canvas after centering.</p>
+<pre><code class="language-cpp">// lines 202-219  — makeVp
+tight AABB → expand by pad = max(dx,dy)*0.10
+scale = min(svgW/expandedDx, svgH/expandedDy)  // fit, keep aspect ratio
+offX = (svgW - expandedDx*scale) / 2 / scale   // centre horizontally (world units)
+return { xmn - pad - offX, ymn - pad - offY,   // x0, y0
+         scale, svgH }
+</code></pre>
+<p>Dividing <code>offX</code> by <code>scale</code> converts the centering offset back to world
+units, which is where <code>x0</code> is expressed.</p>
+<pre><code class="language-cpp">// lines 222-230  — ptsAttr
+for (const auto&amp; p : wPts)
+  s &lt;&lt; vp.toX(p.x) &lt;&lt; &quot;,&quot; &lt;&lt; vp.toY(p.y) &lt;&lt; &quot; &quot;
+</code></pre>
+<p>Builds the space-separated <code>&quot;x1,y1 x2,y2 ...&quot;</code> string for the SVG
+<code>points</code> attribute of a <code>&lt;polygon&gt;</code>.</p>
+<h3 id="struct-itemviz-lines-235263">2.6 <code>struct ItemViz</code> (lines 235–263)</h3>
+<p>All fields are populated by <code>buildVizData</code>.  The struct separates the
+two coordinate spaces:</p>
+<table>
+<thead>
+<tr>
+<th>Field group</th>
+<th>Coordinate space</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>sheetPoly</code>, <code>sheetCog</code>, <code>sheetRotDeg</code>, <code>sheetBboxW/H</code></td>
+<td>Sheet world (mm)</td>
+</tr>
+<tr>
+<td><code>destPoly</code>, <code>destCog</code>, <code>destRotDeg</code>, <code>stackShift</code></td>
+<td>Pallet/destination world (mm)</td>
+</tr>
+<tr>
+<td><code>liftPts</code></td>
+<td>Sheet world (mm) — already rotated and translated to part position</td>
+</tr>
+<tr>
+<td><code>group</code>, <code>layer</code>, <code>stackId</code>, <code>seqNum</code></td>
+<td>Logical metadata</td>
+</tr>
+<tr>
+<td><code>partType</code>, <code>stackMode</code>, <code>destType</code>, <code>destId</code></td>
+<td>Metadata strings for display</td>
+</tr>
+</tbody>
+</table>
+<h3 id="buildvizdata-lines-268342">2.7 <code>buildVizData</code> (lines 268–342)</h3>
+<p><strong>Per-item loop (lines 274–323):</strong></p>
+<pre><code class="language-cpp">// line 276-279  — dereference shared_ptr chain
+const auto&amp; item = *items[i];
+const auto&amp; op   = *item.getStackingOperation();
+const auto&amp; reg  = *item.getPart()-&gt;getRegion();
+const auto&amp; bbox = reg.boundingBox();
+</code></pre>
+<p><code>getStackItems()</code> returns <code>TyStackItemSPtrs</code> (vector of <code>shared_ptr</code>).
+All three further pointers (<code>getStackingOperation</code>, <code>getPart</code>,
+<code>getRegion</code>) return shared pointers that are guaranteed non-null here —
+<code>CHECKANDREPORT</code> in <code>readStackItems</code> would have skipped unresolved
+items.</p>
+<pre><code class="language-cpp">// lines 281-282  — rotation angles in radians
+double sheetAngle = item.getPartRotationAngle();
+double destAngle  = op.getPartRotationAngleInDestinationRegion();
+</code></pre>
+<p>Both are in radians, CCW positive.</p>
+<pre><code class="language-cpp">// lines 288-296  — lift points in sheet world coordinates
+for (const auto&amp; dev : item.getUnloadingDevicePositionAndRotationRelativeToPart())
+  const auto&amp; off = dev.m_positionInPartCenterOfGravityCoordinates  // TyPoint2D = TcVector2D
+  Pt liftLocal = { off.x(), off.y() }                               // offset in PART frame
+  Pt liftRot   = rotate(liftLocal, sheetAngle)                      // rotate into SHEET frame
+  liftPts.push_back(translate(liftRot, sc.x(), sc.y()))             // translate to part COG
+</code></pre>
+<p>The suction cup offset is stored in the part's own frame (origin at
+part COG).  Rotating by <code>sheetAngle</code> brings it into the sheet frame,
+then adding the part COG <code>(sc.x, sc.y)</code> gives the absolute position on
+the sheet.</p>
+<pre><code class="language-cpp">// lines 304-309  — polygon generation for both views
+v.sheetPoly = worldPolygon(reg, sheetAngle, sc.x(), sc.y())  // sheet position
+v.destPoly  = worldPolygon(reg, destAngle,  dc.x(), dc.y())  // pallet position
+</code></pre>
+<p>Both calls reuse the same <code>TcRegion</code> but apply different angles and
+COG translations.  <code>dc</code> comes from <code>op.getPartCenterOfGravityInDestinationRegion()</code>.</p>
+<pre><code class="language-cpp">// line 316-320  — destination region type
+v.destType = (op.getDestinationRegionType() == TeDestinationRegionType::section)
+               ? &quot;section&quot; : &quot;unit&quot;;
+v.destId = op.getDestinationRegionId();
+</code></pre>
+<p>A stack item targets either a pallet section (rectangular zone on a
+specific pallet) or an unloading-area unit (physical unit of a
+SortMaster device).</p>
+<p><strong>Layer computation (lines 325–339):</strong></p>
+<pre><code class="language-cpp">// lines 326-332  — build sorted unique group list per stack column
+std::map&lt;size_t, vector&lt;size_t&gt;&gt; stackGroups;  // stackId → [groups]
+for (const auto&amp; v : result)
+  stackGroups[v.stackId].push_back(v.group);
+for (auto&amp; [id, gs] : stackGroups)
+  sort(gs);  erase(unique(gs));               // sorted unique groups
+</code></pre>
+<p>After deduplication, <code>stackGroups[id]</code> contains the removal groups that
+contribute to that stack column in ascending order.</p>
+<pre><code class="language-cpp">// lines 334-339  — assign layer = 1-based rank within stack column
+for (auto&amp; v : result)
+  const auto&amp; gs = stackGroups[v.stackId];
+  auto it = find(gs, v.group);
+  v.layer = distance(gs.begin(), it) + 1;    // 1-based
+</code></pre>
+<h3 id="svgarrowdef-lines-347353">2.8 <code>svgArrowDef</code> (lines 347–353)</h3>
+<p>Emits an SVG <code>&lt;marker&gt;</code> element.  <code>refX=&quot;5&quot;</code> places the tip of the
+arrow (at x=6) exactly at the endpoint of the referencing line.
+<code>orient=&quot;auto&quot;</code> rotates the marker to match the line direction.</p>
+<h3 id="generatesheetsvg-lines-358455">2.9 <code>generateSheetSvg</code> (lines 358–455)</h3>
+<pre><code class="language-cpp">// lines 362-371  — viewport from all part + lift point positions
+vector&lt;Pt&gt; allPts;
+for (v : items)  allPts ← v.sheetPoly points + v.liftPts
+Vp vp = makeVp(allPts, W=800, H=560);
+</code></pre>
+<p>Lift points are included so that lift arms reaching far from the part
+centre are not clipped.</p>
+<pre><code class="language-cpp">// lines 395-411  — part polygon
+const char* col = groupColor(v.group);
+string pts = ptsAttr(v.sheetPoly, vp);
+svg &lt;&lt; &lt;polygon points=pts fill=col fill-opacity=0.55 ...
+             data-item=idx data-group=group&gt;
+       &lt;title&gt; ... human-readable tooltip ... &lt;/title&gt;
+     &lt;/polygon&gt;
+</code></pre>
+<p><code>data-item</code> and <code>data-group</code> are picked up by the JavaScript event
+handlers for hover highlighting and legend filtering.</p>
+<pre><code class="language-cpp">// lines 413-432  — lift arm per suction cup component
+for (const auto&amp; lp : v.liftPts)
+  svg &lt;&lt; &lt;line COG→liftPt dashed stroke-dasharray=&quot;3,2&quot; marker-end=arrow&gt;
+  svg &lt;&lt; &lt;polygon (diamond shape at liftPt)&gt;
+</code></pre>
+<p>Each entry in <code>liftPts</code> corresponds to one <code>TsUnloadingDeviceComponentPositionAndRotationRelativeToPart</code>
+record.  For a SortMaster L76, this is typically 2–8 suction cups.</p>
+<pre><code class="language-cpp">// lines 434-442  — COG crosshair: two perpendicular 8px lines
+// lines 444-450  — &quot;G&lt;group&gt;·&lt;idx&gt;&quot; text label 7px above COG
+</code></pre>
+<h3 id="generatedestsvg-lines-460619">2.10 <code>generateDestSvg</code> (lines 460–619)</h3>
+<pre><code class="language-cpp">// lines 464-476  — viewport from shifted destination polygons
+constexpr double kLayerOffset = 8.0;  // mm diagonal visual shift per layer
+for (v : items)
+  off = (v.layer - 1) * 8.0
+  allPts ← (v.destPoly[i].x + off, v.destPoly[i].y + off)
+  allPts ← (v.destCog.x + off, v.destCog.y + off)
+Vp vp = makeVp(allPts, W, H);
+</code></pre>
+<p>The shift is applied to both axes equally so the visual stack looks
+like a perspective shift toward the upper-right.</p>
+<pre><code class="language-cpp">// lines 478-498  — stack bounds computation
+map&lt;size_t, tuple&lt;xmn,xmx,ymn,ymx&gt;&gt; stackBounds;
+for (v : items)
+  off = (v.layer-1) * 8.0
+  expand AABB of (v.destPoly shifted by off) into stackBounds[v.stackId]
+</code></pre>
+<p>Each stack column's bounding box is the union of all its items' shifted
+polygons.  Used to draw the dashed column highlight rectangle.</p>
+<pre><code class="language-cpp">// lines 517-536  — column band per stackId
+for ([sid, b] : stackBounds)
+  tl = vp.to(sx0-12, sy1+12)     // top-left in SVG (padded)
+  br = vp.to(sx1+12, sy0-12)     // bottom-right in SVG (padded)
+  svg &lt;&lt; &lt;rect dashed rounded-rect&gt;
+  svg &lt;&lt; &lt;text &quot;Stack N&quot; centred at top of band&gt;
+</code></pre>
+<p>Note: <code>sy0</code> is the world-coordinate minimum y (bottom in world space),
+which maps to a larger SVG y value (lower on screen) due to the Y-flip.</p>
+<pre><code class="language-cpp">// lines 538-615  — painter's algorithm: draw by layer
+maxLayer = max of all v.layer
+for targetLayer in 1..maxLayer:
+  for v in items where v.layer == targetLayer:
+    off = (layer-1) * 8.0
+    shiftedPoly = destPoly translated by (+off, +off)
+    shiftedCog  = destCog  translated by (+off, +off)
+</code></pre>
+<pre><code class="language-cpp">    // lines 558-567  — ghost shadow for layer &gt; 1
+    if layer &gt; 1:
+      shadowPoly = destPoly shifted by ((layer-2)*8, (layer-2)*8)
+      svg &lt;&lt; &lt;polygon fill=none stroke=col stroke-dasharray=&quot;3,3&quot; opacity=0.3&gt;
+</code></pre>
+<p>The ghost is the same polygon at the <em>previous</em> layer's offset, giving
+a visual hint that part is stacked on something beneath it.</p>
+<pre><code class="language-cpp">    // lines 569-582  — main part polygon
+    fill-opacity = 0.60 if layer==1 else 0.45   // fades for higher layers
+    stroke-width = 2.0  if layer==1 else 1.5
+</code></pre>
+<pre><code class="language-cpp">    // lines 584-587  — COG circle (r=3)
+    // lines 589-596  — &quot;L&lt;n&gt;&quot; badge for layer &gt; 1
+    // lines 598-605  — &quot;G&lt;group&gt;·&lt;idx&gt;&quot; label
+    // lines 607-613  — dest COG coords in 8px text
+</code></pre>
+<h3 id="generatelegend-lines-624658">2.11 <code>generateLegend</code> (lines 624–658)</h3>
+<pre><code class="language-cpp">// lines 626-633  — aggregate per group
+map&lt;size_t, vector&lt;size_t&gt;&gt; groupItems;   // group → [itemIdx, ...]
+map&lt;size_t, set&lt;size_t&gt;&gt;    groupStacks;  // group → {stackId, ...}
+for (v : items)
+  groupItems[v.group].push_back(v.idx)
+  groupStacks[v.group].insert(v.stackId)
+</code></pre>
+<p><code>std::map</code> iterates in ascending key order so groups appear left to
+right in removal-group number order.</p>
+<pre><code class="language-cpp">// lines 635-657  — emit one legend chip per group
+for ([g, idxs] : groupItems)
+  svg &lt;&lt; &lt;div class=&quot;legend-item&quot; onclick=&quot;filterGroup(g)&quot;&gt;
+           &lt;span swatch style=background:col&gt;
+           &quot;Group G (N parts)&quot;
+           &quot;Stack S1, S2, ...&quot;
+         &lt;/div&gt;
+</code></pre>
+<h3 id="generatetable-lines-663698">2.12 <code>generateTable</code> (lines 663–698)</h3>
+<p>Emits a standard HTML table with one row per <code>ItemViz</code>.  The
+<code>--gcol: &lt;hex&gt;</code> CSS custom property on each <code>&lt;tr&gt;</code> is read by the
+<code>.row.hi td:first-child { color: var(--gcol) }</code> rule to colour the
+index cell in the group's colour when the row is highlighted.</p>
+<h3 id="generatejsondata-lines-703735">2.13 <code>generateJsonData</code> (lines 703–735)</h3>
+<pre><code class="language-cpp">o &lt;&lt; &quot;const ITEMS = [\n&quot;;
+for (v : items)
+  o &lt;&lt; &quot;  { idx:&quot; &lt;&lt; v.idx &lt;&lt; &quot;, group:&quot; &lt;&lt; v.group
+    &lt;&lt; &quot;, sheetX:&quot; &lt;&lt; fmtD(v.sheetCog.x) &lt;&lt; &quot;, ...
+    &lt;&lt; &quot; }&quot;;
+  if (v.idx &lt; items.size()) o &lt;&lt; &quot;,&quot;;    // no trailing comma
+o &lt;&lt; &quot;];\n&quot;;
+</code></pre>
+<p>The JS <code>ITEMS</code> array is indexed as <code>ITEMS[idx-1]</code> because <code>idx</code> is
+1-based.  <code>fmtD</code> with precision 2 limits the data size; the SVG already
+contains full-precision coordinates.</p>
+<h3 id="generatehtml-lines-740943">2.14 <code>generateHtml</code> (lines 740–943)</h3>
+<pre><code class="language-cpp">// lines 744-758  — generate all sub-parts
+auto items       = buildVizData(sheet);
+machineName/viewerName from sheet.getMachineSPtr()
+sheetSvg  = generateSheetSvg(items)
+destSvg   = generateDestSvg(items)
+legend    = generateLegend(items)
+table     = generateTable(items)
+jsonData  = generateJsonData(items)
+</code></pre>
+<pre><code class="language-cpp">// lines 763-940  — assemble HTML document
+R&quot;( ... static CSS ... )&quot;         // raw string literal, no escaping needed
+&lt;header&gt; with meta fields
+&lt;section class=&quot;panels&quot;&gt;
+  sheetSvg | destSvg
+&lt;/section&gt;
+legend
+&lt;section&gt; table &lt;/section&gt;
+&lt;script&gt;
+  jsonData                         // const ITEMS = [...]
+  GROUP_COLORS = { g: &quot;#hex&quot;, ... }
+  function hi/unhiAll/showDetail   // SVG + table row highlight
+  event listeners on .part and tr[data-item]
+  function filterGroup             // opacity-based group isolation
+&lt;/script&gt;
+</code></pre>
+<h3 id="selectlstfile-lines-948991">2.15 <code>selectLstFile</code> (lines 948–991)</h3>
+<pre><code class="language-cpp">// lines 950-961  — collect LST files from two locations
+directory_iterator(searchDir)                         // CWD or --dir
+directory_iterator(searchDir / &quot;testdata/lstdatafromlstalgorithm&quot;)  // test data subfolder
+</code></pre>
+<pre><code class="language-cpp">// lines 963-964  — sort + deduplicate
+sort(lstFiles);  lstFiles.erase(unique(lstFiles))
+// guards against the same file appearing in both scans
+</code></pre>
+<pre><code class="language-cpp">// lines 966-990  — selection logic
+if empty   → error
+if size==1 → auto-select, print confirmation
+else       → print numbered list, read integer from stdin
+             loop with cin.clear()+ignore until valid choice
+</code></pre>
+<h3 id="main-lines-9981083">2.16 <code>main</code> (lines 998–1083)</h3>
+<pre><code class="language-cpp">// lines 1000-1015  — cxxopts setup
+Options opts(&quot;multipartdemoui&quot;, description)
+  --file / -f   → override file path
+  --output / -o → output path (default &quot;visualization.html&quot;)
+  --dir / -d    → search directory (default &quot;&quot;)
+  --help / -h
+</code></pre>
+<pre><code class="language-cpp">// lines 1017-1023  — parse + error handling
+result = opts.parse(argc, argv)
+catch cxxopts::exceptions::exception → print error + help, exit 1
+</code></pre>
+<pre><code class="language-cpp">// lines 1031-1050  — resolve input file
+if --file given:
+  lstPath = result[&quot;file&quot;]
+  if !exists → exit 1
+else:
+  searchDir = --dir or current_path()
+  chosen = selectLstFile(searchDir)   // may block for user input
+  lstPath = *chosen
+</code></pre>
+<pre><code class="language-cpp">// lines 1055-1082  — parse + generate + write (single try block)
+sheet = TnPalletizingData::readFromLst(lstPath)   // throws on parse failure
+html  = generateHtml(sheet, lstPath)
+ofstream out(outputPath)
+out &lt;&lt; html
+print absolute path of output file
+</code></pre>
+<p>A single <code>try/catch(std::exception)</code> covers both LST parse errors and
+any geometry errors that escape <code>buildVizData</code>, so the user always gets
+a human-readable error message rather than an uncaught exception.</p>
+<hr />
+<h2 id="key-invariants">3 Key Invariants</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Invariant</th>
+<th>Source</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><code>TcStackItem::getStackingOperation()</code> is never null inside <code>buildVizData</code>. Items with unresolved operations are filtered out by <code>CHECKANDREPORT</code> in <code>readStackItems</code>.</td>
+<td><code>TcReadFromLst::readStackItems</code></td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>getRemovalNumber()</code> ≥ 1 for all palletizing items. Group 0 is reserved for the scrap skeleton.</td>
+<td><code>TcReadFromLst::readStackItems</code> field 190</td>
+</tr>
+<tr>
+<td>3</td>
+<td><code>curvePoints</code> does not emit the final closing point. The SVG <code>&lt;polygon&gt;</code> element closes the path automatically.</td>
+<td>SVG spec §10.6</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>worldPolygon</code> uses the bounding-box centre as the local-frame origin. This is exact only if the COG equals the geometric centre. For asymmetric parts the visual rotation centre may differ slightly from the physical COG.</td>
+<td><code>buildVizData</code> line 172–174</td>
+</tr>
+<tr>
+<td>5</td>
+<td>The destination polygon (<code>destPoly</code>) uses the COG from <code>getPartCenterOfGravityInDestinationRegion()</code>, which is the actual part COG as computed by device-type dispatch in <code>readStackingOperations</code>. It is not the device target position.</td>
+<td><code>TcReadFromLst::readStackingOperations</code></td>
+</tr>
+</tbody>
+</table>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#functional-view">1 Functional View</a>
+  </li>
+  <li level="2">
+   <a href="#top-level-pipeline">1.1 Top-level pipeline</a>
+  </li>
+  <li level="2">
+   <a href="#key-data-structures">1.2 Key data structures</a>
+  </li>
+  <li level="2">
+   <a href="#geometry-extraction-pipeline-worldpolygon">1.3 Geometry extraction pipeline ()</a>
+  </li>
+  <li level="2">
+   <a href="#viewport-transform-makevp-vp">1.4 Viewport transform ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#layer-computation">1.5 Layer computation</a>
+  </li>
+  <li level="2">
+   <a href="#sheet-layout-svg-generatesheetsvg">1.6 Sheet layout SVG ()</a>
+  </li>
+  <li level="2">
+   <a href="#destination-layout-svg-generatedestsvg">1.7 Destination layout SVG ()</a>
+  </li>
+  <li level="2">
+   <a href="#html-assembly-generatehtml">1.8 HTML assembly ()</a>
+  </li>
+  <li level="2">
+   <a href="#javascript-interaction-model">1.9 JavaScript interaction model</a>
+  </li>
+  <li level="1">
+   <a href="#line-by-line-walkthrough">2 Line-by-Line Walkthrough</a>
+  </li>
+  <li level="2">
+   <a href="#helper-functions-lines-46116">2.1 Helper functions (lines 46–116)</a>
+  </li>
+  <li level="2">
+   <a href="#struct-pt-and-geometry-primitives-lines-121132">2.2  and geometry primitives (lines 121–132)</a>
+  </li>
+  <li level="2">
+   <a href="#curvepoints-lines-138163">2.3  (lines 138–163)</a>
+  </li>
+  <li level="2">
+   <a href="#worldpolygon-lines-166186">2.4  (lines 166–186)</a>
+  </li>
+  <li level="2">
+   <a href="#struct-vp-and-makevp-lines-191230">2.5  and  (lines 191–230)</a>
+  </li>
+  <li level="2">
+   <a href="#struct-itemviz-lines-235263">2.6  (lines 235–263)</a>
+  </li>
+  <li level="2">
+   <a href="#buildvizdata-lines-268342">2.7  (lines 268–342)</a>
+  </li>
+  <li level="2">
+   <a href="#svgarrowdef-lines-347353">2.8  (lines 347–353)</a>
+  </li>
+  <li level="2">
+   <a href="#generatesheetsvg-lines-358455">2.9  (lines 358–455)</a>
+  </li>
+  <li level="2">
+   <a href="#generatedestsvg-lines-460619">2.10  (lines 460–619)</a>
+  </li>
+  <li level="2">
+   <a href="#generatelegend-lines-624658">2.11  (lines 624–658)</a>
+  </li>
+  <li level="2">
+   <a href="#generatetable-lines-663698">2.12  (lines 663–698)</a>
+  </li>
+  <li level="2">
+   <a href="#generatejsondata-lines-703735">2.13  (lines 703–735)</a>
+  </li>
+  <li level="2">
+   <a href="#generatehtml-lines-740943">2.14  (lines 740–943)</a>
+  </li>
+  <li level="2">
+   <a href="#selectlstfile-lines-948991">2.15  (lines 948–991)</a>
+  </li>
+  <li level="2">
+   <a href="#main-lines-9981083">2.16  (lines 998–1083)</a>
+  </li>
+  <li level="1">
+   <a href="#key-invariants">3 Key Invariants</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="swagger-analysis.html">Analysis of `swagger.json`</a></span>
+ <span class="next"><a href="multipart_test.html">TC 08 — Multi-Part Simultaneous Removal: Line-by-Line</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

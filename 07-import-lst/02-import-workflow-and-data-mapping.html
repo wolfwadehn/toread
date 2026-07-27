@@ -1,0 +1,293 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Import Workflow and Data Mapping</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="200" height="60" /></div>
+        <div><p>Palletizing Module Specification</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Palletizing Module — Specification</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../00-overview/index.html">Overview</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../00-overview/01-purpose-and-scope.html">Purpose and Scope</a></li>
+    <li><button class="tree blank"></button><a href="../00-overview/02-glossary.html">Glossary</a></li>
+    <li><button class="tree blank"></button><a href="../00-overview/03-source-material-and-references.html">Source Material and References</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../01-automation-types/index.html">Automation Types</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../01-automation-types/01-overview.html">Automation Types — Overview</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/02-gripper-unloaders-ak08-ak09.html">Gripper-Based Unloaders (AK08 / AK09 / SortMaster Speed)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/03-sheetmaster-and-sortmaster.html">SheetMaster and SortMaster (Pallet)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/04-container-and-box-sorting.html">Container / Box Sorting (SortMaster Box Linear)</a></li>
+    <li><button class="tree blank"></button><a href="../01-automation-types/05-material-flow-kb40-cs05-robots.html">Material Flow Systems (KB40 / CS05 / Robots)</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../02-select-automation/index.html">Select Automation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../02-select-automation/01-automation-profile-model.html">Automation Profile Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/02-selection-workflow.html">Selection Workflow</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/03-selection-rules-and-constraints.html">Selection Rules and Constraints</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/04-impact-of-automation-change.html">Impact of Changing the Selected Automation</a></li>
+    <li><button class="tree blank"></button><a href="../02-select-automation/05-rule-based-output-recommendation.html">Rule-Based Output Recommendation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../03-gripper-definition/index.html">Gripper Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/01-gripper-data-model.html">Gripper Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/02-gripper-geometry-and-reach-envelope.html">Gripper Geometry and Reach Envelope</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/03-excentric-gripper-and-stack-height-limits.html">Excentric Grippers and Stack-Height Limits</a></li>
+    <li><button class="tree blank"></button><a href="../03-gripper-definition/04-gripper-library-management.html">Gripper Library Management</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../04-pallet-definition/index.html">Pallet Definition</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/01-pallet-data-model.html">Pallet Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/02-standard-pallet-formats.html">Standard Pallet Formats</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/03-custom-pallets-and-multi-pallet-layout.html">Custom Pallets and Multi-Pallet Layout</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/04-pallet-zones-margins-and-orientation.html">Pallet Zones, Margins, and Orientation</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/05-carrier-assignment-rules.html">Carrier Assignment Rules</a></li>
+    <li><button class="tree blank"></button><a href="../04-pallet-definition/06-agv-and-transport-safety.html">AGV and Transport Safety</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../05-stack-and-pile-management/index.html">Stack and Pile Management</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/02-stack-status-visualization.html">Stack Status Visualization</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/04-equalize-and-lower-pile-height.html">Equalize Pile Heights / Lower Pile Height</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/05-manual-pick-split-and-merge.html">Manual Pick, Split, and Merge</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/06-deposit-settings.html">Deposit Settings</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">Schedules and Sheet Count</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/08-mini-nest-and-frame-handling.html">Mini-Nest and Frame Handling</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/09-variant-stacking.html">Variant Stacking (Cake/Pyramid Stacking)</a></li>
+    <li><button class="tree blank"></button><a href="../05-stack-and-pile-management/10-sorting-time-estimation.html">Sorting Time Estimation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../06-process-and-collision-constraints/index.html">Process and Collision Constraints</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/01-backward-planning-concept.html">Backward Planning Concept</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/02-reachability-and-non-reachable-zones.html">Reachability and Non-Reachable Zones</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/03-orientation-constraints-from-downstream-process.html">Orientation Constraints From the Downstream Process</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/04-collision-hazard-of-repositioned-parts.html">Collision Hazard of Repositioned Parts on the Machine</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/05-auto-suggested-stacking-patterns.html">Auto-Suggested Stacking Patterns</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/06-priority-and-sequencing-strategy.html">Priority and Sequencing Strategy</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/07-placement-quality-and-drop-height.html">Placement Quality and Drop Height</a></li>
+    <li><button class="tree blank"></button><a href="../06-process-and-collision-constraints/08-part-rotation-for-optimization.html">Part Rotation for Optimization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Import LST</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="01-lst-file-format-primer.html">LST File Format Primer</a></li>
+    <li><button class="tree blank"></button><a class="active" href="02-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="03-relevant-lst-sections-reference.html">Relevant LST Sections — Field Reference</a></li>
+    <li><button class="tree blank"></button><a href="04-validation-and-error-handling.html">Import Validation and Error Handling</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../08-export-lst/index.html">Export LST</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../08-export-lst/01-export-workflow-and-data-mapping.html">Export Workflow and Data Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/02-populated-fields-reference.html">Populated Fields Reference</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/03-nc-program-and-part-end-sequencing.html">NC Program and Part-End Sequencing</a></li>
+    <li><button class="tree blank"></button><a href="../08-export-lst/04-export-validation-and-round-trip.html">Export Validation and Round-Trip Guarantees</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../09-user-interface/index.html">User Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../09-user-interface/01-palletizing-ribbon-and-commands.html">Palletizing Ribbon and Commands</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/02-stack-data-dialog.html">Stack Data Dialog</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/03-visual-conventions.html">Visual Conventions</a></li>
+    <li><button class="tree blank"></button><a href="../09-user-interface/04-3d-palletizing-simulation.html">3D Palletizing Simulation</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../10-shopfloor-and-operator-interface/index.html">Shopfloor and Operator Interface</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/01-machine-side-manual-sorting-ui.html">Machine-Side Manual Sorting UI</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/02-notifications-and-carrier-change-alerts.html">Notifications and Carrier-Change Alerts</a></li>
+    <li><button class="tree blank"></button><a href="../10-shopfloor-and-operator-interface/03-digital-twin-visualization.html">Digital Twin Visualization</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../11-requirements-and-traceability/index.html">Requirements and Traceability</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../11-requirements-and-traceability/01-functional-requirements-summary.html">Functional Requirements Summary</a></li>
+    <li><button class="tree blank"></button><a href="../11-requirements-and-traceability/02-open-questions-and-assumptions.html">Open Questions and Assumptions</a></li>
+    <li><button class="tree blank"></button><a href="../11-requirements-and-traceability/03-traceability-matrix.html">Traceability Matrix — Source to Spec</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Import LST</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="02-import-workflow-and-data-mapping.html">Import Workflow and Data Mapping</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Import Workflow and Data Mapping</h1>
+<h2 id="steps">Steps</h2>
+<ol>
+<li><strong>Parse</strong> the LST per
+<a href="01-lst-file-format-primer.html">01-lst-file-format-primer.md</a> into an
+in-memory document that preserves every section (recognized and
+unrecognized) and their original order/formatting, so re-export is a
+round-trip rather than a regeneration.</li>
+<li><strong>Extract sheet/job context</strong> from <code>BEGIN_EINRICHTEPLAN_INFO</code> (machine,
+controller, programmer, date, job name, material id, sheet weight,
+remark) and <code>BEGIN_SHEET_TECH</code> (sheet dimension X/Y/Z, material id/density) —
+used for job header display in the palletizing view and for
+<code>Stacking Thickness</code> defaults (sheet dimension Z, see
+<a href="../05-stack-and-pile-management/07-schedule-and-sheet-count.html">05-stack-and-pile-management/07-schedule-and-sheet-count.md</a>).</li>
+<li><strong>Extract machine-load context</strong> from <code>BEGIN_MACHINE_LOAD_DATA</code>
+(<code>Pallet Changer Type</code>, <code>Sheet Stop</code>, <code>Calibration Active</code>) — used to
+pre-select an automation profile, see
+<a href="../02-select-automation/02-selection-workflow.html">02-select-automation/02-selection-workflow.md</a>.</li>
+<li><strong>Extract the part catalog</strong> from <code>BEGIN_PARTS_IN_PROGRAM</code> — one row per
+distinct part (<code>Part Identity Number</code> = program name, <code>Part File Name</code>,
+<code>Part Count</code>, <code>Dimension X/Y</code>, <code>Area</code>, <code>Cutting Length</code>) — becomes each
+part's <code>PartTypeRef</code> master record for the <a href="../05-stack-and-pile-management/01-stack-data-model.html">Stack Data Model</a>.</li>
+<li><strong>Extract part instances</strong> from <code>BEGIN_PARTS_IN_PROGRAM_POS</code> — one row per
+physical instance on the sheet (<code>Sequence</code>, <code>Position X/Y</code>, <code>Dimension X/Y</code>, <code>Angular Position</code>, <code>Centroid X/Y</code>) — becomes the initial,
+unassigned pile membership pool the palletizing view starts from. Fields
+<code>Unload Sequence</code>, <code>Reference Part</code>, <code>Unload Name</code>, <code>Pallet Name</code>,
+<code>Part Classification</code>, <code>Label Group Id</code> are <strong>read if already populated</strong>
+(e.g. re-importing a previously palletized job) and otherwise start blank
+— these are exactly the fields Export LST writes back, see
+<a href="../08-export-lst/02-populated-fields-reference.html">08-export-lst/02-populated-fields-reference.md</a>.</li>
+<li><strong>Extract linking metadata</strong> from <code>BEGIN_ANALYTICS_DATA</code>
+(<code>FluxCutLayoutGuid</code>, <code>FluxCutSessionGuid</code>, <code>NcProgramGuid</code>) — retained
+for traceability back to the originating Flux Cut job, and echoed into any
+log/report the palletizing module produces.</li>
+<li><strong>Leave untouched</strong> all cutting-technology sections not relevant to
+palletizing (<code>BEGIN_PROGRAM_PROPERTIES</code>, <code>BEGIN_SHEET_PROCESS_INFORMATION</code>,
+<code>BEGIN_LTT_CALLS</code>, <code>BEGIN_LTT_STAMM</code>, <code>BEGIN_MICROJOINT</code>,
+<code>BEGIN_LEAD_IN</code>) — parsed only far enough to preserve them verbatim on
+export.</li>
+</ol>
+<h2 id="building-the-palletizing-working-set">Building the palletizing working set</h2>
+<p>After import, the module's internal state is:</p>
+<ul>
+<li>One part-catalog entry per <code>BEGIN_PARTS_IN_PROGRAM</code> row
+(<code>PartTypeRef</code>).</li>
+<li>One part-instance entry per <code>BEGIN_PARTS_IN_PROGRAM_POS</code> row, initially
+unassigned to any pile unless <code>Unload Name</code>/<code>Pallet Name</code> were already
+populated.</li>
+<li>The stacking engine (<a href="../05-stack-and-pile-management/">chapter 05</a>) then
+groups instances into piles, by default one pile per <code>PartTypeRef</code> (see
+<a href="../05-stack-and-pile-management/03-auto-arrange.html">Auto Arrange</a>).</li>
+</ul>
+<h2 id="example-from-sample.lst">Example (from <code>sample.LST</code>)</h2>
+<p><code>BEGIN_PARTS_IN_PROGRAM</code> lists 3 part types (<code>hex</code>, <code>circ</code>, <code>rec</code>, each
+<code>Part Count = 3</code>); <code>BEGIN_PARTS_IN_PROGRAM_POS</code> lists 9 instances
+(sequence 1–9) at their nested positions, all with empty <code>Unload Sequence</code>,
+<code>Unload Name</code>, and <code>Pallet Name</code> — i.e. this sample is a <strong>plain cutting
+job with no palletizing applied yet</strong>, the exact starting state Import LST
+must handle.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#steps">Steps</a>
+  </li>
+  <li level="1">
+   <a href="#building-the-palletizing-working-set">Building the palletizing working set</a>
+  </li>
+  <li level="1">
+   <a href="#example-from-sample.lst">Example (from )</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="01-lst-file-format-primer.html">LST File Format Primer</a></span>
+ <span class="next"><a href="03-relevant-lst-sections-reference.html">Relevant LST Sections — Field Reference</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; 2026 by TRUMPF. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
