@@ -1,0 +1,892 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>PR #3597 — Case 47665: Improve error handling for multi pickup</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">Flux</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Notes</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">PRReviews</a>
+         <ul>
+          <li><button class="tree blank"></button><a class="active" href="pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Notes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">PRReviews</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>PR #3597 — Case 47665: Improve error handling for multi pickup</h1>
+<ul>
+<li><strong>Repo/PR:</strong> metamation/Flux #3597 · branch <code>Case.47665</code> → <code>main</code> · state <strong>OPEN</strong></li>
+<li><strong>Author:</strong> florian (EngertFlo) · <strong>Date reviewed:</strong> 2026-07-20</li>
+<li><strong>Size:</strong> +168 / −35, 14 files (8 source + 1 test + 1 test-data + 1 schema + 2 lang) · ~17 commits · <strong>Label:</strong> bend</li>
+<li><strong>Verdict:</strong> ✅ <strong>Approve with follow-ups</strong> — core machinery is correct, but <strong>one must-fix before merge</strong> (test-ID <code>18532</code> collides with open PR #3634) plus a real visual-feedback gap (<code>PaintRed</code>) and two convention follow-ups (APIGen, schema version).</li>
+</ul>
+<blockquote>
+<p>Reviewed with a deep manual pass plus a 7-agent adversarial verification workflow (6 dimension attackers + 1 completeness critic). 5/6 dimensions returned <strong>CONFIRMED_CORRECT</strong>; the i18n/IDs dimension returned <strong>BUG_FOUND</strong> (test-ID collision). One dimension (<code>rawstate-component-vm</code>) was re-run after an initial empty stub and then surfaced the <code>PaintRed</code> gap. The critic independently confirmed the load-bearing dismissals (re-entrancy, CGamut, FX round-trip) rather than refuting them.</p>
+</blockquote>
+<hr />
+<h2 id="what-the-pr-does">What the PR does</h2>
+<p>For a <strong>multi-pickup stack</strong> (a pallet holding an X×Y×Z grid of blanks), the old code error-checked only the <em>currently-simulated</em> pickup part. This PR checks <strong>all corner parts</strong> for: <code>ImpossibleIK</code>, robot-stroke, robot–cell and gripper–cell collision, plus a <strong>new part(stack)–cell collision</strong> (<code>EBCStatus.CellPickup</code>). Colliding pickup blanks are drawn red, and clicking an error in the bend grid selects the pickup part (<code>SimIndex</code>) where it occurs.</p>
+<p><strong>Key changes</strong></p>
+<ul>
+<li><strong><code>BPickup.cs</code></strong> — <code>ExtendedStrokeCheck()</code> (which tested only <code>SimIndex</code> 0 and −1 for stroke) is replaced by <code>ExtendedChecks(mask)</code>, which loops over <code>PPlan.Enum().Where(i =&gt; i.Corner)</code>, sets <code>SimIndex</code> to each corner, runs the crasher for <code>CRASH_CORNER_MASK = RobotStroke | RobotCell | GripperCell</code> + a per-corner <code>ImpossibleIK</code> test, and records each hit's <code>SimIndex</code> in a new <code>Dictionary&lt;EBCStatus,int&gt; ErrSimIndexMap</code>. <code>RawState</code>/<code>CRawState</code> are reworked to drive it (<code>ExtendedChecksNeeded</code> = <code>(CRASH_CORNER_MASK|ImpossibleIK) &amp; ~mCValid</code>, <code>0</code> for dispensers). New <code>ErrCellPickup =&gt; mCell.CellPickupCrash.AnyTrue()</code>.</li>
+<li><strong><code>BCellTech.cs</code></strong> — new <code>bool[] CellPickupCrash</code>: builds <code>FlatMeshCollider</code> colliders for on-floor components and each pickup blank and does an N×M crash sweep; caches per-part results and sets each floor component's <code>IsPickupCrash</code>.</li>
+<li><strong><code>Model3.cs</code></strong> — new <code>FlatCrashMesh</code> + <code>FlatMeshCollider</code> (mirror of <code>FoldedCrashMesh</code>).</li>
+<li><strong><code>BCComponent.cs</code></strong> — new <code>IsPickupCrash</code>; <code>IsColliding = IsStaticCrash | IsDepositCrash | IsPickupCrash</code>.</li>
+<li><strong><code>BCellVM.cs</code></strong> — <code>PartForPickupVM</code> gains a <code>colliding</code> flag → <code>Mood =&gt; mColliding ? EMood.Error : EMood.Nil</code> (red highlight).</li>
+<li><strong><code>BPickupPlan.cs</code></strong> — <code>Enum()</code> drops the dead <code>slice</code> variable and uses <code>z</code> (latent bug: <code>z</code> was declared but never incremented, so <code>Item.Corner</code> ignored the Z-layer and <code>Item.Matrix.Z</code> was always 0).</li>
+<li><strong><code>BendOpStatus.cs</code></strong> — new <code>EBCStatus.CellPickup = 1UL&lt;&lt;60</code>; <code>_Last</code> 59→61; added to <code>CellCrashes</code>.</li>
+<li><strong><code>BSimulate.cs</code></strong> — click-to-jump via <code>ErrSimIndexMap</code>; message code <code>[CellPickup] = 18512</code>; added to <code>ESRow.Cell</code>.</li>
+<li><strong>Test/data/schema/lang</strong> — <code>FanucUI.cs</code> <code>Test15</code> <code>[Test (18532, &quot;C47665: …&quot;)]</code>, <code>C47665.fx</code>, <code>metadata.curl</code> (FluxVersion 662→665.1 + <code>mErrSimIndexMap</code> field), and message <code>18512</code> added to <code>cell.txt</code> (EN) + <code>DE/cell.txt</code>.</li>
+</ul>
+<hr />
+<h2 id="correctness-analysis-the-deep-part">Correctness analysis (the deep part)</h2>
+<h3 id="slicez-is-a-clean-latent-bug-fix-pickup-only-with-no-regression"><code>slice</code>→<code>z</code> is a clean latent-bug fix, pickup-only, with no regression</h3>
+<p>Pre-PR, <code>BumpZ()</code> advanced <code>slice</code> while <code>z</code> stayed 0 — so pickup <code>Item.Corner</code> was true for X/Y-corners in <em>every</em> layer and <code>Item.Matrix.Z</code> was always 0. Both were <strong>dead</strong> (no pre-PR code read pickup <code>Item.Corner</code>/<code>Matrix.Z</code>), so fixing them can't regress anything. Verified: <strong><code>shift.Z</code> value is byte-identical</strong> before/after (<code>z</code> cycles exactly as <code>slice</code> did, for both ByPile/ByLayer and all StartCorner/YFirst combinations), so parts don't move. Deposit is fully isolated — <code>DPlan</code> is <code>BDepositPlan</code> with its own separate <code>Enum()</code>/<code>BumpZ</code>, and the only <code>Item.Matrix.Z</code> consumers are in deposit code. The new <code>Corner</code> set = the up-to-8 bounding-box corners (bottom+top-layer X/Y extremes), never empty (origin is always a corner), and strictly <em>more</em> coverage than the old 2-index stroke check.</p>
+<h3 id="extendedchecks-simindex-machinery-is-sound"><code>ExtendedChecks</code> + <code>SimIndex</code> machinery is sound</h3>
+<ul>
+<li><strong>Re-entrancy is not a real risk:</strong> the per-corner <code>SimIndex = item.NOverall</code> fires <code>Redraw</code> + <code>PFire(NVisiblePickupStack)</code>, but <code>Redraw</code> is a deferred <code>LazyCall</code> (no-op under <code>FX.Testing</code>), <code>BendAgent</code> ignores <code>NVisiblePickupStack</code>, and the sole VM listener reads only <code>SimIndex</code>, never re-reads <code>CState</code>. The old <code>ExtendedStrokeCheck</code> had the identical structural exposure.</li>
+<li><strong><code>ResetSteps(EBCStatus.D180Rotate)</code> in the <code>SimIndex</code> setter is load-bearing:</strong> if it still invalidated <code>ImpossibleIK</code> (as the old <code>ResetSteps()</code> did), the per-corner loop would invalidate the very bit it is computing. Not invalidating <code>ImpossibleIK</code> on a <code>SimIndex</code> change is correct because <code>ExtendedChecks</code> now computes it <strong>stack-wide</strong> (across all corners) — a <code>SimIndex</code> change is a view-only change.</li>
+<li><strong>Ordering is correct:</strong> <code>extendedChecks</code> is captured at the top of <code>CRawState</code> <em>before</em> <code>if (ErrImpossibleIK) state |= ImpossibleIK</code> validates the current-<code>SimIndex</code> result — giving a current-part fast path, then an all-corners sweep for whatever <code>remaining = mask &amp; ~mCState</code> is left. <code>state |= mCState &amp; extendedChecks</code> surfaces only the freshly corner-checked bits, and the <code>state &amp;= ~(CellCell|CellRail|CellTable|CellFrame)</code> middle block touches disjoint bits, so it cannot clobber <code>ImpossibleIK</code>/<code>CellPickup</code>/corner bits. <code>SimIndex</code> restore has no off-by-one (<code>n</code> getter resolves −1→<code>CParts-1</code>).</li>
+<li><strong><code>RawState</code> genuinely needs to run <code>ExtendedChecks</code> too</strong> (not redundant): the corner bits are in <code>NBendCrash.CGamut</code>, so a &quot;State-read-first&quot; path would otherwise validate them at the current <code>SimIndex</code> only and <code>CRawState</code> would then skip the corner sweep. <code>mCValid |= mask</code> prevents doubling across the State→CState pair.</li>
+</ul>
+<h3 id="cellpickupcrash-faithfully-mirrors-celldepositcrash-collider-is-co-located-with-the-drawn-part"><code>CellPickupCrash</code> faithfully mirrors <code>CellDepositCrash</code>; collider is co-located with the drawn part</h3>
+<p>The collider xfm <code>PartRestXfm * Shelf.Xfm * Translation(item.Shift + ZAxis*0.1)</code> is <strong>identical to <code>PartForPickupVM.GetXFM()</code></strong> (<code>BCellVM.cs:271</code>) apart from the +0.1 Z clearance nudge — so the collision geometry matches the rendered blank (the apparent &quot;double <code>Shelf.Xfm</code>&quot; is consistent with the VM because <code>Enum()</code> pre-multiplies <code>Shift</code>; the deposit path differs because <code>BDepositPlan.Enum</code> does <em>not</em> pre-multiply, and each collider correctly matches its own VM). <code>crashState[n++]</code> can't go out of range: every pickup-plan mutator routes through <code>Update()</code> → <code>Pickup.Dirty(Steps)</code> → <code>Dirty()</code> → nulls <code>CellPickupCrash</code>, so the cache is rebuilt before the next <code>Enum()</code>. Floor-only component selection is correct — rails/frames/tables are covered by the crasher (<code>TestStatic</code>) and robot/gripper reach by <code>CRASH_CORNER_MASK</code>.</p>
+<h3 id="enum-bit-fx-serialization-click-to-jump-are-functionally-correct">Enum bit / FX serialization / click-to-jump are functionally correct</h3>
+<p><code>CellPickup = 1UL&lt;&lt;60</code> doesn't collide (bit 59/60 free in <code>EBCStatus</code>; <code>_Last</code> is a doc-only sentinel, never a mask), and it's correctly in <code>CellCrashes</code>/<code>AllCrashes</code>/<code>IconExplosion</code> and the message map. <code>Dictionary&lt;EBCStatus,int&gt;</code> round-trips (ulong enum keys via <code>WriteUInt64</code>). The save/load→click flow is safe because <code>mCState</code>/<code>mCValid</code>/<code>SimIndex</code> are <strong>not</strong> serialized, so the first <code>CState</code> read after load rebuilds <code>ErrSimIndexMap</code> (with in-range <code>NOverall</code>) before the grid becomes clickable. <code>OnClick</code>'s <code>cstate</code> is a single bit, so the <code>TryGetValue</code> jump is correct. The <strong>dispenser short-circuit</strong> (<code>ExtendedChecksNeeded == 0</code> for <code>BDispenser</code>) is a verified-safe optimization — dispenser pickups use a fixed transfer xfm independent of <code>SimIndex</code>.</p>
+<hr />
+<h2 id="findings-severity-ranked">Findings (severity-ranked)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Sev</th>
+<th>Area</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>major / must-fix</strong></td>
+<td>G033</td>
+<td><strong>Test ID <code>18532</code> collides with open PR #3634</strong> (<code>FanucBase.cs</code> <code>Test21</code> &quot;C44835&quot;). <code>18532</code> is free on <code>main</code>, so this is a pure cross-branch collision: whichever PR merges <strong>second</strong> trips the duplicate-ID guard (<code>Runner.cs:70-73</code>) and one test is silently dropped. <strong>Renumber one of them before merge.</strong> (<code>FanucUI.cs:212</code>)</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>minor</strong></td>
+<td>correctness / UX</td>
+<td><strong><code>PaintRed</code> omits <code>IsPickupCrash</code></strong> (<code>BCellTech.cs:306</code>): <code>Components[i].IsColliding = c.Furniture[i] \|\| Components[i].IsDepositCrash</code> — the PR added <code>IsPickupCrash</code> to the <code>IsColliding</code> OR in the <code>BCComponent</code> setters but not here. <code>PaintRed</code> runs every sim frame (<code>BendTech.cs:1369</code>), so for a pickup-only stack↔cell collision (no static <code>Furniture</code>/<code>Deposit</code> crash) it resets the offending <strong>cell component</strong> back to not-red, undoing the highlight <code>CellPickupCrash</code> set. Deposit works because <code>IsDepositCrash</code> <em>is</em> included. The blank itself still turns red (independent <code>PartForPickupVM.Mood</code>) and the grid still reports <code>CellPickup</code>, so it's the component-highlight half of the feature that's defeated. <strong>Fix: add <code>\|\| Components[i].IsPickupCrash</code>.</strong></td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>minor</strong></td>
+<td>G026</td>
+<td><strong>APIGen not regenerated.</strong> <code>Src/API/Gen/Basic.gen.cs</code> (public <code>Flux.API.EBCStatus</code>) has no <code>CellPickup</code> member, so API consumers can't reference it by name. Runtime is unaffected (API composites alias the real <code>Flux.EBCStatus.*</code>, so bit 60 still flows through <code>CellCrashes</code>), but per G026 re-run APIGen and commit the <code>.gen.cs</code>.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>minor</strong></td>
+<td>FX / schema</td>
+<td><strong><code>mErrSimIndexMap</code> (a derived cache) is serialized, and <code>Flux.BCPickup</code> schema <code>Version</code> wasn't bumped</strong> (stays 13 in <code>metadata.curl</code> despite the new field). The map is fully rebuilt by <code>ExtendedChecks</code> on the first <code>CState</code> read, and its sibling state (<code>mCState</code>/<code>mCValid</code>) isn't persisted — so persisting it adds no value and creates the only theoretical out-of-range path: a stale entry loaded into a now-smaller stack, applied by <code>OnClick</code> before a rebuild, would make <code>StackXfm</code>'s <code>Enum().First(NOverall==SimIndex)</code> throw (<code>BPickup.cs:455</code>; low reachability — the grid must render <code>CState</code> first). <strong>Prefer not serializing it (mark computed); and bump the schema Version to 14</strong> per convention (cf. commit <code>592452de49</code>). Defensively, clamp <code>SimIndex</code> to <code>[0, CParts-1]</code> in the setter.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><del>minor</del> <strong>n/a</strong></td>
+<td>G025</td>
+<td><del>Localization incomplete</del> <strong>Not a finding.</strong> Message <code>18512</code> is correctly present in <strong>EN + DE</strong>, which is the team's expected PR scope — the other ~22 languages are filled in later by a <strong>translation office</strong>, not the feature author. (Confirmed by aiko; codified in the review rules under G025.) Missing per-key falls back to English at runtime, no crash.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>minor</strong></td>
+<td>UX (pre-existing pattern)</td>
+<td><strong>Red pickup-highlight goes stale after a pallet or floor-component <em>move</em>.</strong> <code>PartForPickupVM.mColliding</code> is <code>readonly</code>, captured in <code>AddPickupVMs</code> (fires only on <code>EProp.BCPickup</code>). A shelf/component move nulls the cache and repositions the blanks but doesn't re-run <code>AddPickupVMs</code>, so the red/not-red state lags until the next stack-param edit or reload. Grid reporting (<code>CState</code>) is unaffected. Mirrors the shipped deposit design, hence minor.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>nit</td>
+<td>style</td>
+<td><code>EBCStatus.CellPickup = 1UL&lt;&lt;60</code> skips bit <strong>59</strong> (the old <code>_Last</code> slot, and the next contiguous free bit) for no reason — harmless (no member uses 59; <code>_Last</code> isn't a mask) but wastes a scarce flags bit.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>nit</td>
+<td>G033 hygiene</td>
+<td>Translation ID <code>18512</code> reuses a number already used as a <strong>test</strong> ID (<code>Bend2025.cs:320</code>). Separate namespaces → harmless, but confusing; a fresh unused number is cleaner.</td>
+</tr>
+<tr>
+<td>9</td>
+<td>nit</td>
+<td>G006</td>
+<td>Magic <code>Vector3.ZAxis * 0.1</code> floor-clearance nudge (<code>BCellTech.cs:54</code>) — the same directory names similar biases (<code>COLLIDERBIAS</code>, <code>BIAS</code>); and the repeated <code>for (i&lt;64)</code> bit-width loops in <code>ExtendedChecks</code> could use a named const.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>nit</td>
+<td>style</td>
+<td><code>FanucUI.cs</code> missing trailing newline; typos &quot;spcific&quot; (Test15 comment) and &quot;happend&quot; (<code>ErrSimIndexMap</code> doc).</td>
+</tr>
+<tr>
+<td>11</td>
+<td>nit</td>
+<td>test</td>
+<td><code>Test15</code> reads <code>ErrSimIndexMap[status]</code> via the indexer — throws <code>KeyNotFoundException</code> if the status is true at the <em>current</em> <code>SimIndex</code> (no map entry then). Test correctness silently depends on the default <code>SimIndex</code> (<code>CParts-1</code>) being crash-clean for the asserted statuses. Not a production defect.</td>
+</tr>
+<tr>
+<td>12</td>
+<td>nit</td>
+<td>process</td>
+<td>~17 commits incl. several &quot;Minor&quot;, two &quot;Merge main&quot;, and a store-in-FX / compute-on-the-fly / store-in-FX flip-flop for <code>mErrSimIndexMap</code>. <strong>Squash before merge</strong> so the schema bump + the map's final design land atomically.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="praise">Praise</h3>
+<ul>
+<li>The <strong><code>slice</code>→<code>z</code> fix</strong> quietly repairs a latent enumeration bug and is what makes the new corner logic correct — with a provable <code>shift.Z</code> invariant so nothing visually moves.</li>
+<li><strong><code>CellPickupCrash</code>/<code>FlatMeshCollider</code></strong> faithfully mirror the shipped <code>CellDepositCrash</code> pattern, and the collider is co-located with the rendered blank.</li>
+<li>Careful attention to the <strong><code>SimIndex</code>-churn hazards</strong>: <code>ResetSteps(D180Rotate)</code> (avoiding self-invalidation), the current-part-fast-path-then-all-corners ordering, and treating <code>ImpossibleIK</code>/crash bits as stack-wide.</li>
+</ul>
+<hr />
+<h2 id="guideline-compliance-g001g035">Guideline compliance (G001–G035)</h2>
+<ul>
+<li><strong>G005</strong> ✓ (<code>&quot;C47665:&quot;</code> prefix, not <code>&quot;Case&quot;</code>). <strong>G033</strong> ✗ — the <code>18532</code> cross-branch collision (finding #1) is the headline. <strong>G026</strong> ✗ — APIGen not regenerated (#3). <strong>G025</strong> ✓ — EN + DE present, which is the accepted PR scope (other languages via translation office; see #5). <strong>G006</strong> nits (#9).</li>
+<li>Source hunks are otherwise style-clean; <code>CRASH_CORNER_MASK</code> SCREAMING_CASE const matches sibling precedent (not flagged). <code>_ = ErrImpossibleIK;</code> is a documented side-effect pattern (mirrors <code>BendOp.cs:151-154</code>), not a smell.</li>
+<li><strong>ReFlux companion:</strong> likely not required — no machine/3D-model, tool-catalog, TBS, WIBU, or flavor changes. (The <code>metadata.curl</code> schema + <code>FluxVersion</code> bump are in-repo.) Worth a glance given it touches serialization. See [[ReFlux — Companion Repo Checklist]].</li>
+</ul>
+<hr />
+<h2 id="bottom-line">Bottom line</h2>
+<p>The feature is well-built and the core error-checking machinery is correct under adversarial scrutiny. <strong>Do not merge until test ID <code>18532</code> is renumbered</strong> (hard collision with open PR #3634). Then fix the <code>PaintRed</code> omission (the component-highlight half of the feature is a one-liner away from working), re-run APIGen, bump the <code>BCPickup</code> schema version (and prefer not persisting the derived <code>ErrSimIndexMap</code>), and either complete the 21 missing translations or confirm a follow-up batch. Everything else is nits.</p>
+<hr />
+<p>Related: [[PR-3634 Case 44835 - ACB laser trace on FlexCell]] (same author; <strong>shares the <code>18532</code> test ID — the collision to resolve</strong>) · [[PR-3649 Case 47961 - Rounding &amp; regrip-during-bend waypoints]] · [[PR-3645 Case 48000 - Overbending when base plane inside machine]].</p>
+<hr />
+<h1 id="round-2-author-response-analysis-2026-07-22">Round 2 — Author response analysis (2026-07-22)</h1>
+<p>Florian replied on the <code>mErrSimIndexMap</code> comment and pushed 6 commits after the reviewed <code>b2d90711</code>. His answer, verbatim intent: he rejected (a) serializing the map and (b) Opus's &quot;invalidate in <code>PostLoad</code> so it recomputes on first <code>CState</code> read&quot; (too slow on FX load), and instead <strong>computes the map on demand when a bend-grid error is clicked, only if the entry doesn't already exist</strong>.</p>
+<p>New commits: <code>1e1ff9425d</code> (review feedback), <code>df6480da39</code> (APIGen), <code>573146aa78</code> (<strong>the answer</strong> — stop serializing, compute on demand), <code>9ef6b799ff</code> (invalidate <code>flatCrashMes</code>/<code>flatMeshCollider</code>), <code>8d8c3c04</code> (fix the <code>EBCStatus</code> bit).</p>
+<h2 id="resolution-of-round-1-findings">Resolution of round-1 findings</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Round-1 finding</th>
+<th>Status</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Test ID <code>18532</code> collides with PR #3634</td>
+<td>✅ <strong>Fixed</strong> — renumbered to <code>18534</code> (<code>FanucUI.cs:238</code>).</td>
+</tr>
+<tr>
+<td>2</td>
+<td><code>PaintRed</code> omits <code>IsPickupCrash</code></td>
+<td>✅ <strong>Fixed</strong> — <code>BCellTech.cs:307</code> now <code>… \|\| component.IsDepositCrash \|\| component.IsPickupCrash</code>.</td>
+</tr>
+<tr>
+<td>3</td>
+<td>APIGen not regenerated</td>
+<td>✅ <strong>Fixed</strong> — <code>CellPickup = Flux.EBCStatus.CellPickup</code> in <code>Basic.gen.cs:535</code>.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><code>mErrSimIndexMap</code> serialized + no schema bump</td>
+<td>✅ <strong>Resolved</strong> — see deep-dive below (removed from serialization; version legitimately stays 13).</td>
+</tr>
+<tr>
+<td>7</td>
+<td><code>CellPickup</code> skips bit 59</td>
+<td>✅ <strong>Fixed</strong> — moved to bit 59 (<code>_Last</code> → bit 60), <code>BendOpStatus.cs:167</code>.</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Red highlight stale after component move</td>
+<td>Partly addressed by the <code>flatCrashMes</code>/<code>flatMeshCollider</code> invalidation commit; still the shipped deposit pattern. Low priority.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="deep-dive-is-the-merrsimindexmap-answer-correct-yes-approve-it">Deep-dive: is the <code>mErrSimIndexMap</code> answer correct? → <strong>Yes, approve it</strong></h2>
+<p><strong>Serialization is genuinely gone and the schema-version worry is now moot.</strong></p>
+<ul>
+<li>Renamed <code>mErrSimIndexMap</code> → private <code>_errSimIndexMap</code> (<code>BPickup.cs:716</code>). Flux's serializer skips any <code>_</code>-prefixed field (<code>AuType.cs:433</code> <code>NeedField</code>), and it's no longer in the schema (<code>metadata.curl:138</code>). At <code>b2d90711</code> it <strong>was</strong> a serialized field (<code>metadata.curl:154</code>, Version left at 13) — so the round-1 point was correct.</li>
+<li>Removing it reverts the serialized shape to exactly what <code>main</code> already ships as Version 13, so <strong>no bump is needed</strong> and 13 is correct. Old FX carrying the field loads fine — the serializer stashes the unknown field into an <code>extra</code> bag and drops it (<code>AuType.cs:194-198, 505-511, 371-374</code>).</li>
+</ul>
+<p><strong>Why the design is <em>necessary</em>, not just adequate.</strong> <code>mCState</code>/<code>mCValid</code> <strong>are</strong> persisted (proof: the <code>PostLoad</code> version-guards at <code>BPickup.cs:42-49</code> clear specific <code>mCValid</code> bits — pointless unless <code>mCValid</code> is loaded). So after a load the grid shows the cached error straight from <code>mCState</code> <strong>without</strong> re-running <code>ExtendedChecks</code> (the valid bit is set), leaving <code>_errSimIndexMap</code> empty. That's why <code>TryGetErrSimIndex</code> clears <strong>both</strong> <code>mCValid</code> <em>and</em> <code>mCState</code> before the recompute (<code>BPickup.cs:711</code>) — clearing <code>mCState</code> is strictly required because <code>ExtendedChecks</code> uses <code>remaining = mask &amp; ~mCState</code> (<code>:811</code>); if the bit stayed set, <code>remaining == 0</code>, the corner loop exits, and the map would stay empty. Non-obvious, and he got it right.</p>
+<p><strong>The &quot;we do not trigger it unnecessarily&quot; claim holds.</strong> In-session the grid render reads <code>CState</code> → <code>CRawState</code> runs <code>ExtendedChecks</code> whenever <code>ExtendedChecksNeeded != 0</code>, so the map is already populated and clicks hit the fast path. The on-demand recompute is a rare <em>post-load</em> fallback. The per-corner <code>SimIndex</code> churn inside <code>ExtendedChecks</code> fires <code>Redraw()</code>, but that's a coalesced <code>LazyCall</code> (<code>BendTech.cs:2071-2090</code>) — no repaint storm, no reentrancy, and the churn already existed on the render path.</p>
+<h2 id="original-crash-concern-stackxfm.first-throw">Original crash concern (<code>StackXfm.First()</code> throw)</h2>
+<ul>
+<li><strong>Cross-load variant (what round 1 flagged): fully closed</strong> — the map is no longer loaded from the FX.</li>
+<li><strong>In-session variant: not reachable via normal flow.</strong> Any stack/plan change routes <code>pickup.Dirty(EBDirty.Steps)</code> → <code>Dirty()</code>, which invalidates the <strong>full</strong> <code>EXTENDED_MASK</code>: <code>RobotStroke\|RobotCell\|GripperCell</code> via <code>Invalidate(…CGamut…)</code>, <strong>and <code>ImpossibleIK</code></strong> because <code>Dirty()</code> calls no-arg <code>ResetSteps()</code> whose default mask is <code>D180Rotate \| ImpossibleIK</code> (<code>BCellUtil.cs:154</code>). (The <code>SimIndex</code> setter's narrower <code>ResetSteps(D180Rotate)</code> deliberately preserves <code>ImpossibleIK</code> — fine, since changing <code>SimIndex</code> doesn't change the corner set.) <code>Dirty()</code> then <code>Redraw()</code>s → grid re-reads <code>CState</code> → <code>ExtendedChecks</code> repopulates the map with valid indices before a click is possible.</li>
+</ul>
+<p><strong>Residual robustness note (low, optional):</strong> safety is <em>indirect</em> — it depends on every stack-mutating path going through <code>Dirty()</code>→<code>ResetSteps()</code>→<code>Redraw()</code> before a click. The fast path returns the cached index with <strong>no bounds re-validation</strong>, the <code>SimIndex</code> setter still has <strong>no upper clamp</strong> (<code>BPickup.cs:424</code>), and <code>StackXfm</code> still <code>.First()</code>s (throws, <code>:463</code>). A one-liner would make it crash-proof regardless: <code>return … &amp;&amp; simIndex &lt; mCell.PPlan.CParts;</code> in <code>TryGetErrSimIndex</code>, or <code>.FirstOrDefault()</code> in <code>StackXfm</code>. Defense-in-depth, not a blocker.</p>
+<h2 id="new-minor-observation-cellpickup-click-doesnt-jump-simindex">New minor observation: <code>CellPickup</code> click doesn't jump <code>SimIndex</code></h2>
+<p><code>CellPickup</code> (bit 59) is <strong>not</strong> in <code>EXTENDED_MASK</code>, and <code>CellPickupCrash</code> (<code>BCellTech.cs:537</code>) computes a static per-corner <code>bpart[]</code> that never feeds <code>_errSimIndexMap</code>. So <code>TryGetErrSimIndex(CellPickup)</code> returns false and clicking a pickup-stack↔cell error doesn't move <code>SimIndex</code> — unlike the crash-corner errors. <strong>Acceptable, not a bug:</strong> the whole stack is drawn regardless of <code>SimIndex</code> and the colliding part is already red via <code>PartForPickupVM.Mood =&gt; EMood.Error</code> (<code>BCellVM.cs:36-39, 267</code>) plus the red floor component (<code>:307</code>). Slightly asymmetric vs deposit, which <em>does</em> jump via <code>DepositSimIndex</code> (<code>BSimulate.cs:639</code>). Optional to add for symmetry.</p>
+<h2 id="bottom-line-round-2">Bottom line (round 2)</h2>
+<p><strong>Approve the <code>mErrSimIndexMap</code> change</strong> — it removes the serialized derived cache exactly as asked, keeps the schema legitimately at 13, and the on-demand recompute is correct (the dual <code>mCState</code>+<code>mCValid</code> clear is the subtle bit he nailed). All round-1 must-fix/minor items are resolved. Two optional, non-blocking follow-ups: (1) a defensive bounds guard so a future missed-invalidation can't crash <code>StackXfm</code>; (2) make <code>CellPickup</code> clicks jump like the crash-corner errors if full symmetry is wanted — otherwise the red highlight covers it.</p>
+<p><em>Verification: 5-thread adversarial workflow. A1 (serialization), A2 (recompute correctness), A4 (<code>CellPickup</code> = minor/acceptable), A5 (side-effects + perf claim) all returned CONFIRMED/high. A3 (in-session crash reachability) resolved by direct code trace above (<code>ResetSteps</code> default mask + <code>Dirty</code>→<code>Redraw</code>); the workflow's adversarial A3 refutation was still finalizing at save time — update if it surfaces a repro.</em></p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#what-the-pr-does">What the PR does</a>
+  </li>
+  <li level="1">
+   <a href="#correctness-analysis-the-deep-part">Correctness analysis (the deep part)</a>
+  </li>
+  <li level="2">
+   <a href="#slicez-is-a-clean-latent-bug-fix-pickup-only-with-no-regression">→ is a clean latent-bug fix, pickup-only, with no regression</a>
+  </li>
+  <li level="2">
+   <a href="#extendedchecks-simindex-machinery-is-sound"> +  machinery is sound</a>
+  </li>
+  <li level="2">
+   <a href="#cellpickupcrash-faithfully-mirrors-celldepositcrash-collider-is-co-located-with-the-drawn-part"> faithfully mirrors ; collider is co-located with the drawn part</a>
+  </li>
+  <li level="2">
+   <a href="#enum-bit-fx-serialization-click-to-jump-are-functionally-correct">Enum bit / FX serialization / click-to-jump are functionally correct</a>
+  </li>
+  <li level="1">
+   <a href="#findings-severity-ranked">Findings (severity-ranked)</a>
+  </li>
+  <li level="2">
+   <a href="#praise">Praise</a>
+  </li>
+  <li level="1">
+   <a href="#guideline-compliance-g001g035">Guideline compliance (G001–G035)</a>
+  </li>
+  <li level="1">
+   <a href="#bottom-line">Bottom line</a>
+  </li>
+  <li level="1">
+   <a href="#resolution-of-round-1-findings">Resolution of round-1 findings</a>
+  </li>
+  <li level="1">
+   <a href="#deep-dive-is-the-merrsimindexmap-answer-correct-yes-approve-it">Deep-dive: is the  answer correct? → Yes, approve it</a>
+  </li>
+  <li level="1">
+   <a href="#original-crash-concern-stackxfm.first-throw">Original crash concern ( throw)</a>
+  </li>
+  <li level="1">
+   <a href="#new-minor-observation-cellpickup-click-doesnt-jump-simindex">New minor observation:  click doesn't jump </a>
+  </li>
+  <li level="1">
+   <a href="#bottom-line-round-2">Bottom line (round 2)</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">PRReviews</a></span>
+ <span class="next"><a href="pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,1660 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>106CADDetailGeometryKernelAlgorithms</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a class="active" href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>106CADDetailGeometryKernelAlgorithms</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-geometry-kernel-algorithms-doc-10.6-cad-detail-geometry-kernel-algorithms-id-prefix-fr-cad-krn-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Geometry Kernel Algorithms&quot;
+doc: &quot;10.6 - CAD Detail - Geometry Kernel Algorithms&quot;
+id-prefix: &quot;FR-CAD-KRN&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-geometry-kernel-algorithms">CAD Detail — Geometry Kernel Algorithms</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Reconstructed intent from static source analysis, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document specifies, at the algorithm/implementation level, the <strong>2-D geometry kernel</strong> that underpins the TruTops CAD editor. It refines the system-level requirements of the parent [[10 - FR - CAD Geometry &amp; Drawing Editing]] (in particular FR-CAD-001..035 concerning geometry creation, editing, contour arithmetic, snapping and dimensioning) by documenting the primitives, numeric tolerances, and algorithms on which those interactive commands depend.</p>
+<p>The primary implementation surveyed is the managed <strong>GeoAlgorithmsKernel / GeoKernel</strong> assembly (<code>Trumpf.TruTops.GeoKernel.*</code>, C#), which supersedes the older native <code>tc_math</code> primitives. Where CAD's native C/C++ layer (<code>cad_asm</code>, <code>tc_dbase</code>, <code>tc_geoPlan</code>, <code>tc_math</code>, <code>tc_geoUtils</code>) still hosts geometry, this is noted, together with the C++/CLI <strong>GAKUnmanagedAdapter</strong> bridge that marshals native <code>Element</code>/<code>Kontur</code>/<code>Teil</code> structures into the managed kernel.</p>
+<p>Scope covered here:</p>
+<ul>
+<li>Geometric primitives and their operations: point/vector, line segment, arc segment, curve, single-area, area, bounding box.</li>
+<li>Element–element intersection (line-line, line-arc, arc-arc) and tolerance handling.</li>
+<li>Point-in-contour / containment (curve-point, curve-segment, curve-curve, area).</li>
+<li>Transformation matrices and composition (2-D homogeneous 3×3; native 4×4).</li>
+<li>Distance / nearest-point / orthogonal projection / tangent computations.</li>
+<li>Contour orientation, oriented area size, and centroid.</li>
+<li>Higher-level shape recognition and convex-hull generation.</li>
+<li>The topological plan/graph model (<code>tc_geoPlan</code> corner/element iterators; GeoKernel DCEL half-edge structure) and the quad-tree spatial index.</li>
+<li>Metric/inch consistency, and the managed/unmanaged bridge.</li>
+</ul>
+<p>Out of scope (covered elsewhere): boolean contour arithmetic (offset/union/difference) — see [[10.7 - CAD Detail - Contour Arithmetic Algorithms]]; curve approximation and Fourier analysis — see [[10.8 - CAD Detail - Curve Approximation &amp; Fourier Analysis]]; punching/laser technology decomposition (<code>GeoAlgorithmsKernel/PunchUp</code>, <code>Technologie</code>).</p>
+<p>German domain terms used: <em>Kontur</em>=contour, <em>Ecke</em>=corner, <em>Element</em>=element (line/arc/circle), <em>Äquidistante</em>=equidistant/offset, <em>Rundung</em>=fillet, <em>Fase</em>=chamfer, <em>Langloch</em>=slot/oblong, <em>Fläche</em>=area, <em>Fangen</em>=snapping, <em>Winkelhalbierende</em>=angle bisector, <em>Umschreibendes Rechteck</em>=bounding rectangle. Link terms to [[04 - Domain Model &amp; Glossary]].</p>
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Name (class / method)</th>
+<th>German / plain meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TcGeoVector</code></td>
+<td>Immutable 2-D vector / point primitive</td>
+<td>FR-CAD-KRN-001</td>
+</tr>
+<tr>
+<td>Vector operators (<code>+ - * /</code>)</td>
+<td>Vector arithmetic</td>
+<td>FR-CAD-KRN-002</td>
+</tr>
+<tr>
+<td><code>AbsoluteAngle</code>, <code>AbsoluteAngle_Atan2</code></td>
+<td>Absolute angle of vector</td>
+<td>FR-CAD-KRN-003</td>
+</tr>
+<tr>
+<td><code>Matches(tol)</code></td>
+<td>Vector equality within tolerance</td>
+<td>FR-CAD-KRN-004</td>
+</tr>
+<tr>
+<td><code>ScalarProduct</code>, <code>VectorProductZ</code></td>
+<td>Dot &amp; 2-D cross product</td>
+<td>FR-CAD-KRN-005</td>
+</tr>
+<tr>
+<td><code>GetOrthogonalClw/Cclw</code>, <code>GetRotated</code>, <code>GetNormalized</code></td>
+<td>Orthogonal / rotate / normalize</td>
+<td>FR-CAD-KRN-006</td>
+</tr>
+<tr>
+<td><code>IsParallelTo</code>, <code>IsAntiparallelTo</code>, <code>IsOrthogonalTo</code>, <code>AngleTo</code></td>
+<td>Direction relation tests</td>
+<td>FR-CAD-KRN-007</td>
+</tr>
+<tr>
+<td><code>TcDefinitions</code></td>
+<td>System-wide tolerance constants</td>
+<td>FR-CAD-KRN-008</td>
+</tr>
+<tr>
+<td><code>ConvertMmToInchIfNecessary</code>, <code>TcToleranzContainer</code></td>
+<td>Metric/inch unit consistency</td>
+<td>FR-CAD-KRN-009</td>
+</tr>
+<tr>
+<td><code>TcGeoSegment</code> (abstract)</td>
+<td>Segment parameterization contract</td>
+<td>FR-CAD-KRN-010</td>
+</tr>
+<tr>
+<td><code>TcGeoLineSegment</code></td>
+<td>Finite line segment</td>
+<td>FR-CAD-KRN-011</td>
+</tr>
+<tr>
+<td><code>TcGeoArcSegment</code></td>
+<td>Arc segment / span angle</td>
+<td>FR-CAD-KRN-012</td>
+</tr>
+<tr>
+<td>Arc full-circle handling</td>
+<td>Kreis-Erkennung eines Bogens</td>
+<td>FR-CAD-KRN-013</td>
+</tr>
+<tr>
+<td><code>AngleToParameter</code>, <code>IsAbsoluteAngleOnArc</code></td>
+<td>Arc angle↔parameter mapping</td>
+<td>FR-CAD-KRN-014</td>
+</tr>
+<tr>
+<td><code>CreateParallelSegment</code></td>
+<td>Äquidistante / offset segment</td>
+<td>FR-CAD-KRN-015</td>
+</tr>
+<tr>
+<td><code>SnapParameterToEnds</code></td>
+<td>Snap parameter to segment ends</td>
+<td>FR-CAD-KRN-016</td>
+</tr>
+<tr>
+<td><code>BoundingBox</code> (segment)</td>
+<td>Segment AABB</td>
+<td>FR-CAD-KRN-017</td>
+</tr>
+<tr>
+<td><code>TcGeoCurve</code></td>
+<td>Ordered segment chain (Kontur)</td>
+<td>FR-CAD-KRN-018</td>
+</tr>
+<tr>
+<td><code>IsClosed</code></td>
+<td>Closed-contour test</td>
+<td>FR-CAD-KRN-019</td>
+</tr>
+<tr>
+<td><code>OrientedAreaSize</code> / <code>CalcSumCrossProductZ</code></td>
+<td>Oriented area (shoelace + arc form)</td>
+<td>FR-CAD-KRN-020</td>
+</tr>
+<tr>
+<td><code>Orientation</code></td>
+<td>Contour orientation CLW/CCLW</td>
+<td>FR-CAD-KRN-021</td>
+</tr>
+<tr>
+<td><code>CalcCenterOfGravity</code></td>
+<td>Centroid / Flächenschwerpunkt</td>
+<td>FR-CAD-KRN-022</td>
+</tr>
+<tr>
+<td><code>TcGeoSingleArea</code></td>
+<td>Area with outer + inner curves</td>
+<td>FR-CAD-KRN-023</td>
+</tr>
+<tr>
+<td><code>TcGeoArea</code></td>
+<td>Collection of single areas</td>
+<td>FR-CAD-KRN-024</td>
+</tr>
+<tr>
+<td><code>IsInStandardForm</code>, <code>SimplifyCurve</code></td>
+<td>Standard form / merge colinear</td>
+<td>FR-CAD-KRN-025</td>
+</tr>
+<tr>
+<td><code>TcGeoIntersection.Intersect</code> dispatcher</td>
+<td>Segment-segment intersection</td>
+<td>FR-CAD-KRN-026</td>
+</tr>
+<tr>
+<td>Line–line intersection</td>
+<td>Gerade-Gerade Schnitt</td>
+<td>FR-CAD-KRN-027</td>
+</tr>
+<tr>
+<td>Line–arc intersection</td>
+<td>Gerade-Bogen Schnitt</td>
+<td>FR-CAD-KRN-028</td>
+</tr>
+<tr>
+<td>Arc–arc intersection</td>
+<td>Bogen-Bogen Schnitt</td>
+<td>FR-CAD-KRN-029</td>
+</tr>
+<tr>
+<td><code>TcGeoIntersectionData</code> model</td>
+<td>Intersection relation classification</td>
+<td>FR-CAD-KRN-030</td>
+</tr>
+<tr>
+<td><code>IntersectBoundingBoxes</code>, <code>GetUnion</code></td>
+<td>Bounding-box set ops</td>
+<td>FR-CAD-KRN-031</td>
+</tr>
+<tr>
+<td><code>TcGeoIntersectionCurvePoint</code></td>
+<td>Point-in-curve (ray casting)</td>
+<td>FR-CAD-KRN-032</td>
+</tr>
+<tr>
+<td><code>TcGeoIntersectionCurveSegment</code></td>
+<td>Curve–segment relation</td>
+<td>FR-CAD-KRN-033</td>
+</tr>
+<tr>
+<td><code>TcGeoIntersectionCurveCurve</code></td>
+<td>Curve–curve containment</td>
+<td>FR-CAD-KRN-034</td>
+</tr>
+<tr>
+<td><code>IsPointInside</code> (area/single-area)</td>
+<td>Point-in-area with holes</td>
+<td>FR-CAD-KRN-035</td>
+</tr>
+<tr>
+<td><code>TcInterval</code>, <code>TcIntervalSet</code></td>
+<td>Parameter-interval arithmetic</td>
+<td>FR-CAD-KRN-036</td>
+</tr>
+<tr>
+<td><code>TcMatrix</code>, <code>TcMatrix2D</code></td>
+<td>Matrix &amp; 3×3 homogeneous transform</td>
+<td>FR-CAD-KRN-037</td>
+</tr>
+<tr>
+<td>Rotation/translation/scaling factories</td>
+<td>Transform factories &amp; composition</td>
+<td>FR-CAD-KRN-038</td>
+</tr>
+<tr>
+<td><code>TiTransformable.GetTransformed</code></td>
+<td>Transform application to geometry</td>
+<td>FR-CAD-KRN-039</td>
+</tr>
+<tr>
+<td><code>TcTransformationMatrix</code> (native 4×4)</td>
+<td>Native transform matrix</td>
+<td>FR-CAD-KRN-040</td>
+</tr>
+<tr>
+<td><code>CalcLinePointDistance</code>, <code>CalcOrthogonalProjection*</code></td>
+<td>Line-point distance &amp; projection</td>
+<td>FR-CAD-KRN-041</td>
+</tr>
+<tr>
+<td><code>DistanceTo(point)</code> (segment)</td>
+<td>Segment-point nearest distance</td>
+<td>FR-CAD-KRN-042</td>
+</tr>
+<tr>
+<td><code>NearestVertex</code>, <code>FindVertex</code>, <code>FindEdge</code></td>
+<td>Nearest vertex/edge lookup</td>
+<td>FR-CAD-KRN-043</td>
+</tr>
+<tr>
+<td><code>CalcTouchingPointsOf…Tangents…</code></td>
+<td>Circle/arc tangent construction</td>
+<td>FR-CAD-KRN-044</td>
+</tr>
+<tr>
+<td><code>TcGeoShapeRecognizer</code></td>
+<td>Shape recognition (square/rect/round)</td>
+<td>FR-CAD-KRN-045</td>
+</tr>
+<tr>
+<td>Curve/area shape predicates</td>
+<td><code>IsRectangle</code>/<code>IsPolygon</code>/…</td>
+<td>FR-CAD-KRN-046</td>
+</tr>
+<tr>
+<td><code>CalculateConvexHull</code> (arc-aware)</td>
+<td>Convex hull incl. arcs</td>
+<td>FR-CAD-KRN-047</td>
+</tr>
+<tr>
+<td><code>TcConvexHullGraham</code> (native)</td>
+<td>Graham-scan convex hull</td>
+<td>FR-CAD-KRN-048</td>
+</tr>
+<tr>
+<td><code>TcGeoElementChecker</code></td>
+<td>Geometry equality comparison</td>
+<td>FR-CAD-KRN-049</td>
+</tr>
+<tr>
+<td><code>TcBoundingBox</code>, <code>TcRotatedBoundingBox</code>, main direction</td>
+<td>Bounding rectangle / min-area / main direction</td>
+<td>FR-CAD-KRN-050</td>
+</tr>
+<tr>
+<td><code>TcGeoPlan</code> + Ecken-/Elemente-Iterator</td>
+<td>Topological plan/graph model</td>
+<td>FR-CAD-KRN-051</td>
+</tr>
+<tr>
+<td><code>TcEcke</code> corner classification</td>
+<td>Innen-/Außenecke Klassifikation</td>
+<td>FR-CAD-KRN-052</td>
+</tr>
+<tr>
+<td><code>TcDcel&lt;TV,TE,TF&gt;</code> half-edge</td>
+<td>DCEL half-edge topology</td>
+<td>FR-CAD-KRN-053</td>
+</tr>
+<tr>
+<td><code>TcQuadTree</code>, <code>TcBoundingBoxesHolder</code></td>
+<td>Spatial index for segments</td>
+<td>FR-CAD-KRN-054</td>
+</tr>
+<tr>
+<td><code>GAKUnmanagedAdapter</code></td>
+<td>Managed/unmanaged bridge</td>
+<td>FR-CAD-KRN-055</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="fr-cad-krn-001-immutable-2-d-vector-point-primitive">FR-CAD-KRN-001 — Immutable 2-D vector / point primitive</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide an immutable 2-D vector type (<code>TcGeoVector</code>) storing double-precision <code>X</code>, <code>Y</code>, exposing a cached <code>Length = sqrt(X²+Y²)</code> and <code>GetSquareLength()</code>, providing the singletons <code>NULL_VECTOR (0,0)</code>, <code>UNIT_VECTOR_X (1,0)</code>, <code>UNIT_VECTOR_Y (0,1)</code>, and a factory <code>CreateRotatedVector(angle, length)</code> / <code>CreateRotatedUnitVector(angle)</code>. The same type SHALL represent both free vectors and positional points in the plane.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Inputs are two doubles (or a copy source). Length is computed once at construction. <code>CreateRotatedVector</code> asserts <code>length &gt; 0</code>. No unit is intrinsic to the vector; values are interpreted in the active drawing unit (mm or inch, see FR-CAD-KRN-009).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Immutability lets vectors be shared by reference across segments/curves without defensive copies (exploited by the copy-ctors of <code>TcGeoLineSegment</code>/<code>TcGeoArcSegment</code>), simplifying the whole kernel.</li>
+<li><strong>Source:</strong> <code>GeoAlgorithmsKernel/GeoKernel/GeoElements/TcGeoVector.cs</code> (fields <code>mX/mY/mLength</code>, readonly; <code>NULL_VECTOR</code>, ctor).</li>
+<li><strong>Verification:</strong> Inspection (immutability), Test (length/factory values).</li>
+</ul>
+<h3 id="fr-cad-krn-002-vector-arithmetic-operators">FR-CAD-KRN-002 — Vector arithmetic operators</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoVector</code> SHALL support operator <code>+</code>, binary and unary <code>-</code>, scalar <code>*</code> (both operand orders), and scalar <code>/</code>, each returning a new immutable vector computed component-wise.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Exact IEEE-754 double arithmetic; no tolerance applied. Division by zero yields ±∞/NaN per IEEE-754 (not guarded).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Vector algebra is the substrate for every downstream geometric computation.</li>
+<li><strong>Source:</strong> <code>TcGeoVector.cs</code> (<code>#region Operators</code>).</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-003-absolute-angle-of-a-vector">FR-CAD-KRN-003 — Absolute angle of a vector</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL compute the vector's absolute angle via <code>AbsoluteAngle_Atan2()</code> returning <code>atan2(Y,X)</code> in (−π, π], and <code>AbsoluteAngle()</code> returning the angle normalized to <code>[0, 2π)</code>, with an explicit guard that prevents the result reaching <code>2π</code> through floating-point overshoot (resetting to <code>0.0</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Undefined for the zero vector — asserted (<code>Debug.Assert(X!=0 || Y!=0)</code>); in release builds a zero vector yields <code>atan2(0,0)=0</code>. Output range invariant asserted <code>0 ≤ angle &lt; 2π</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Consistent <code>[0,2π)</code> normalization is required by arc parameterization and corner-angle computations.</li>
+<li><strong>Source:</strong> <code>TcGeoVector.cs</code> <code>AbsoluteAngle()</code>/<code>AbsoluteAngle_Atan2()</code>.</li>
+<li><strong>Verification:</strong> Test (boundary near 2π), Analysis (zero-vector edge case).</li>
+</ul>
+<h3 id="fr-cad-krn-004-vector-equality-within-tolerance">FR-CAD-KRN-004 — Vector equality within tolerance</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoVector.Matches(other[, tolerance])</code> SHALL return true iff the squared Euclidean distance between the two points is <code>≤ tolerance²</code>, using <code>TcDefinitions.TOL</code> as the default tolerance. The tolerance SHALL be asserted non-negative.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Comparison uses squared distance (no square root) against squared tolerance. Default tolerance <code>TOL = 1e-4</code> mm (FR-CAD-KRN-008).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Point coincidence is the atomic tolerance decision reused by segment-matching, curve closedness, circle detection, and intersection snapping.</li>
+<li><strong>Source:</strong> <code>TcGeoVector.cs</code> <code>Matches(...)</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-005-dot-product-and-2-d-cross-product">FR-CAD-KRN-005 — Dot product and 2-D cross product</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>ScalarProduct</code> (dot product <code>x1·x2 + y1·y2</code>) and <code>VectorProductZ</code>/<code>CrossProductZ</code> (the z-component of the 3-D cross product, <code>x1·y2 − y1·x2</code>) as <code>TcGeoVector</code> extension methods.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Exact double arithmetic, no tolerance. The sign of <code>VectorProductZ</code> encodes left/right orientation used by corner convexity tests.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Dot/cross products drive angle, projection, orientation, area, and left/right decisions throughout the kernel.</li>
+<li><strong>Source:</strong> <code>TcGeoVectorExtensions.cs</code> <code>ScalarProduct</code>, <code>VectorProductZ</code>, <code>CrossProductZ</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-006-orthogonal-rotation-and-normalization-operations">FR-CAD-KRN-006 — Orthogonal, rotation and normalization operations</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>GetOrthogonalClw()</code> = <code>(Y, −X)</code>, <code>GetOrthogonalCclw()</code> = <code>(−Y, X)</code>, <code>GetRotated(angle)</code> (2-D rotation by <code>angle</code> rad), and <code>GetNormalized()</code> (divide by cached length).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>GetNormalized()</code> divides by <code>Length</code>; on a zero vector this yields NaN (not guarded). Rotation uses <code>Math.Cos/Sin</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Offset/equidistant construction (normal direction) and arc point evaluation depend on these.</li>
+<li><strong>Source:</strong> <code>TcGeoVectorExtensions.cs</code> (<code>GetOrthogonalClw/Cclw</code>, <code>GetRotated</code>); <code>TcGeoVector.cs</code> <code>GetNormalized</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-007-direction-relation-tests-parallel-antiparallel-orthogonal-angle">FR-CAD-KRN-007 — Direction relation tests (parallel / antiparallel / orthogonal / angle)</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>IsParallelTo</code>, <code>IsAntiparallelTo</code>, <code>IsParallelOrAntiparallelTo</code>, <code>IsOrthogonalTo</code>, <code>AngleTo</code>, and <code>GetDirectionRelation</code> (LEFT/RIGHT/EQUAL/INVERTED) for direction vectors. Parallelism SHALL be decided by comparing the distance between the normalized vectors against <code>TcDefinitions.TOL_ANGLE_RAD</code> (exploiting the small-angle approximation <code>d = 2·sin(α/2) ≈ α</code>); orthogonality by <code>|cos α| &lt; TOL_ANGLE_RAD</code>; <code>AngleTo</code> SHALL return a value in <code>[0,π]</code> clamping <code>cos α</code> to <code>[−1,1]</code> to avoid <code>acos</code> domain errors.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default angular tolerance <code>TOL_ANGLE_RAD = TOL_ANGLE_DEG·π/180 = 0.01°·π/180 ≈ 1.745e-4 rad</code>. Zero-length inputs asserted invalid.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> These decide colinearity, right-angle detection, and the parallel/overlapping branch of line-line intersection.</li>
+<li><strong>Source:</strong> <code>TcGeoVectorExtensions.cs</code> (<code>IsParallelTo</code>, <code>IsAntiparallelTo</code>, <code>IsOrthogonalTo</code>, <code>AngleTo</code>, <code>GetDirectionRelation</code>); <code>TcDefinitions.cs</code>.</li>
+<li><strong>Verification:</strong> Test, Analysis (small-angle approximation validity).</li>
+</ul>
+<h3 id="fr-cad-krn-008-system-wide-tolerance-constants">FR-CAD-KRN-008 — System-wide tolerance constants</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL centralize numeric tolerances in <code>TcDefinitions</code> with defaults: <code>TOL = 1e-4</code>, <code>TOL_AREA = 1e-4</code>, <code>TOL_PERCENT = 0.001</code>, <code>TOL_ANGLE_DEG = 0.01</code> (deriving <code>TOL_ANGLE_RAD</code>), <code>TOL_TWINLINE_DISTANCE = 0.001</code>, <code>SCALLOP_HEIGHT = 0.15</code>, <code>OVERLAPPING = 2.0</code>, <code>TOL_MIN_SCRAP_AREA_REMOVAL_PARTS = 1e-8</code>, plus flags <code>INCH_MODE</code>, <code>MULTITHREADING_ENABLED</code>, <code>BOOLEAN_LIBRARY_LOGGING</code> (all default false). <code>SetDefinition(key, value)</code> SHALL validate ranges (e.g. <code>TOL ∈ [0, MaxValue)</code>, <code>TOL_PERCENT ∈ [0,100)</code>, <code>TOL_ANGLE_DEG ∈ [0,360)</code>) and throw <code>ArgumentException</code> for unknown keys or out-of-range values. The helper <code>TOL_PARAM_FOR_LENGTH(length) = TOL / max(TOL, length)</code> SHALL convert a length tolerance into a segment-parameter tolerance.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Values are set at startup and may be overridden per TruTops version (metric/inch). Units are millimeters unless <code>INCH_MODE</code> transforms them.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A single, validated tolerance source guarantees consistent tolerance behavior across every algorithm and both unit systems.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcDefinitions.cs</code>.</li>
+<li><strong>Verification:</strong> Test (range validation), Inspection (default values).</li>
+</ul>
+<h3 id="fr-cad-krn-009-metric-inch-unit-consistency">FR-CAD-KRN-009 — Metric / inch unit consistency</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a fixed length threshold is used, the kernel SHALL scale it to the active unit via <code>TcDefinitions.ConvertMmToInchIfNecessary(valueInMm)</code>, which divides by <code>25.4</code> when <code>INCH_MODE</code> is set. On the native side, the tolerance singleton <code>TcToleranzContainer</code> SHALL supply per-purpose tolerances (enumerated <code>TeToleranz</code>: length, value, area, degree, radian, coarse length, fine value, …) selected by the <code>gritunit</code> metric/inch flag, with values loaded from the database (<code>toleranz.asc</code>, e.g. length metric 1e-4 vs inch 1e-5).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Conversion factor exactly <code>25.4</code>. <code>toleranz.asc</code> records carry the unit column (<code>0</code>=metric, <code>1</code>=inch, <code>99</code>=unit-independent).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> CAD ships in metric and inch builds; hard-coded thresholds (e.g. the 0.05 mm relevance threshold in convex-hull bridging) must track the active unit to keep behavior geometrically equivalent.</li>
+<li><strong>Source:</strong> <code>TcDefinitions.cs</code> <code>ConvertMmToInchIfNecessary</code>; used in <code>TcGeoConvexHullGeneration.cs</code>; <code>tc_math/TcToleranzContainer.h</code>, <code>tc_math/toleranz.asc</code>.</li>
+<li><strong>Verification:</strong> Test (both modes), Inspection.</li>
+</ul>
+<h3 id="fr-cad-krn-010-abstract-segment-parameterization-contract">FR-CAD-KRN-010 — Abstract segment parameterization contract</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL define an abstract <code>TcGeoSegment</code> (implementing <code>TiGeoElement</code>, <code>TiBoundingBox</code>, <code>TiTransformable</code>, <code>ICloneable</code>) exposing <code>Start</code>, <code>End</code>, <code>Length</code>, <code>BoundingBox</code>, a <code>Parent</code> curve reference, and the parameterization contract <code>ParameterToPoint(t)</code>, <code>PointToParameter(point)</code>, <code>DirectionInPoint</code>, <code>DirectionAtParameter</code>, <code>CreateParallelSegment</code>, <code>SnapParameterToEnds</code>, <code>GetInvertedSegment</code>, <code>GetTransformed</code>, <code>Clone</code>. Segment parameter <code>t=0</code> SHALL map to <code>Start</code> and <code>t=1</code> to <code>End</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Concrete subtypes are <code>TcGeoLineSegment</code> and <code>TcGeoArcSegment</code>; dispatch elsewhere is by runtime type test (<code>is</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A uniform parametric contract lets curves, intersection, projection and containment treat lines and arcs polymorphically.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoSegment.cs</code>.</li>
+<li><strong>Verification:</strong> Inspection.</li>
+</ul>
+<h3 id="fr-cad-krn-011-finite-line-segment">FR-CAD-KRN-011 — Finite line segment</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoLineSegment</code> SHALL represent a finite line from <code>Start</code> to <code>End</code>, exposing <code>Direction = End − Start</code>, lazily-cached normalized <code>NormDirection</code>, <code>Length = |Direction|</code>, <code>ParameterToPoint(t) = (1−t)·Start + t·End</code>, and <code>PointToParameter(p) = ((p−Start)·Direction)/|Direction|²</code> (i.e. orthogonal-projection parameter). <code>DirectionInPoint</code>/<code>DirectionAtParameter</code> SHALL return <code>NormDirection</code> regardless of the argument.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>PointToParameter</code> yields values outside <code>[0,1]</code> for points beyond the segment ends. Zero-length segments produce division by zero (callers must ensure <code>Length &gt; TOL</code>; asserted in <code>DebugAssertConsistency</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Lines are the most common contour element; the projection-based parameter is reused by intersection and distance.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoLineSegment.cs</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-012-arc-segment-representation-and-span-angle">FR-CAD-KRN-012 — Arc segment representation and span angle</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoArcSegment</code> SHALL represent an arc by <code>Center</code>, <code>Radius</code>, <code>Start</code>, <code>End</code>, <code>StartAngle</code>, <code>EndAngle</code>, and <code>Orientation</code> (CLW/CCLW), providing constructors from (center, start, enclosed angle), (start, end, center[, radius], orientation, isCircle-flag), and (center, startAngle, endAngle, radius, orientation, isCircle). It SHALL compute the oriented <code>SpanAngle</code> (negative for CLW, positive for CCLW; ±2π for a full circle) and <code>Length = |SpanAngle · Radius|</code>. <code>ParameterToPoint(t)</code> SHALL rotate <code>(Start − Center)</code> by <code>t·SpanAngle</code>; <code>t=0</code>→Start and <code>t=1</code>→End are returned exactly.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Constructors assert radius consistency between start-center and end-center within <code>TOL</code>, and enclosed angle within <code>[−2π, 2π]</code>. Instances are immutable. A zero enclosed angle throws <code>ArgumentException</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Arcs (fillets, slots, holes) require oriented span handling so that clockwise/counter-clockwise sweeps and full circles are represented unambiguously.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoArcSegment.cs</code> (constructors, <code>SpanAngle</code>, <code>ParameterToPoint</code>).</li>
+<li><strong>Verification:</strong> Test (span-angle sign &amp; wrap), Analysis (radius-consistency assertions).</li>
+</ul>
+<h3 id="fr-cad-krn-013-arc-full-circle-detection-and-handling">FR-CAD-KRN-013 — Arc full-circle detection and handling</h3>
+<ul>
+<li><strong>Requirement:</strong> An arc SHALL be treated as a full circle when constructed with an explicit <code>isCircle=true</code> flag, or (legacy/obsolete ctors) when <code>Start</code> and <code>End</code> match within <code>TcDefinitions.TOL</code> (<code>DoesLookLikeCircle</code>). When <code>IsCircle()</code> is true, <code>SpanAngle</code> SHALL be exactly ±2π according to orientation. The kernel SHALL assert that for a genuine full circle the start/end points coincide far more tightly than <code>TOL</code> (within <code>TOL/1000</code>), documenting the known risk that a very short arc segment could be misclassified as a circle.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>TOL</code> match for legacy detection; <code>TOL/1000</code> sanity assertion. The explicit-flag constructors are preferred; the tolerance-detecting ones are marked <code>[Obsolete]</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Full circles are a degenerate arc (start=end) requiring special span/length/area handling; misclassification corrupts area and intersection results.</li>
+<li><strong>Source:</strong> <code>TcGeoArcSegment.cs</code> (<code>mIsCircleWithinGivenTolerance</code>, <code>DoesLookLikeCircle</code>, <code>IsCircle</code>, obsolete-ctor annotations).</li>
+<li><strong>Verification:</strong> Analysis, Test (short-arc edge case).</li>
+</ul>
+<h3 id="fr-cad-krn-014-arc-angle-parameter-mapping-and-on-arc-test">FR-CAD-KRN-014 — Arc angle ↔ parameter mapping and on-arc test</h3>
+<ul>
+<li><strong>Requirement:</strong> The arc SHALL map angles to parameters via <code>AngleToNonnegativeParameter(angle)</code> (result in <code>[0, 1+m)</code> with <code>m = (2π − |SpanAngle|)/|SpanAngle|</code>) and <code>AngleToParameter</code> / <code>NormalizedParameter</code> (result in <code>[−m/2, 1+m/2)</code>), handling CLW/CCLW wrap and preventing numerical overshoot past the maximum non-negative parameter. <code>IsAbsoluteAngleOnArc(angle)</code> SHALL return whether an absolute angle lies on the swept arc, and <code>PointToParameter</code>/<code>PointToNonnegativeParameter</code> SHALL convert a point (via its center-connection angle) to a parameter, treating exterior points as beyond the end.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Uses <code>ModPositive</code> for angle wrapping (FR-CAD-KRN-036). Parameters beyond <code>[0,1]</code> denote points outside the arc but on its base circle.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Correct angle/parameter conversion underlies arc intersection classification, tangent clamping, and bounding-box extremes.</li>
+<li><strong>Source:</strong> <code>TcGeoArcSegment.cs</code> (<code>AngleToNonnegativeParameter</code>, <code>AngleToParameter</code>, <code>NormalizedParameter</code>, <code>IsAbsoluteAngleOnArc</code>, <code>PointToParameter</code>).</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-015-parallel-equidistant-offset-segment">FR-CAD-KRN-015 — Parallel / equidistant (offset) segment</h3>
+<ul>
+<li><strong>Requirement:</strong> Each segment SHALL create a parallel copy at a signed distance via <code>CreateParallelSegment(distance)</code>: for a line, translate by <code>distance · NormDirection.GetOrthogonalCclw()</code>; for an arc, adjust the radius by <code>+distance</code> (CLW) or <code>−distance</code> (CCLW) keeping the same center and angles, throwing <code>ArgumentException</code> if the resulting radius would be <code>≤ 0</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Positive distance offsets to the left of the direction of travel. Arc degeneration (radius ≤ 0) is rejected with an exception.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Äquidistante/offset is the geometric core of contour offsetting, kerf compensation and slot construction invoked from CAD editing commands.</li>
+<li><strong>Source:</strong> <code>TcGeoLineSegment.cs</code> <code>CreateParallelLineSegment</code>; <code>TcGeoArcSegment.cs</code> <code>CreateParallelArcSegment</code>.</li>
+<li><strong>Verification:</strong> Test (sign, arc degeneration).</li>
+</ul>
+<h3 id="fr-cad-krn-016-snap-parameter-to-segment-ends">FR-CAD-KRN-016 — Snap parameter to segment ends</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>SnapParameterToEnds(parameter, lengthTolerance)</code> SHALL snap a parameter to exactly <code>0.0</code> or <code>1.0</code> when it lies within <code>lengthTolerance / max(TOL, Length)</code> (converted to parameter space) of the start or end; if both apply, it SHALL snap to whichever end is nearer. For arcs, snapping SHALL first normalize the parameter and SHALL snap even parameters that differ by a multiple of <code>2π/|SpanAngle|</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>lengthTolerance</code> asserted <code>≥ 0</code>. Parameter tolerance derived per-segment from its length.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Snapping stabilizes intersection endpoint classification so that touching/connected segments are not spuriously reported as intersecting mid-segment.</li>
+<li><strong>Source:</strong> <code>TcGeoLineSegment.cs</code>/<code>TcGeoArcSegment.cs</code> <code>SnapParameterToEnds</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-017-segment-bounding-box">FR-CAD-KRN-017 — Segment bounding box</h3>
+<ul>
+<li><strong>Requirement:</strong> Each segment SHALL expose an axis-aligned <code>BoundingBox</code>. For a line it SHALL be computed with at most two comparisons (no <code>Math.Min/Max</code>, no NaN checks, for speed). For an arc it SHALL include the extreme points at cardinal angles (0, π/2, π, 3π/2) that lie on the swept arc (<code>IsAbsoluteAngleOnArc</code>), otherwise the min/max of start and end.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Exact; no tolerance. Line-box optimization is explicitly documented as performance-critical for boolean operations.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Bounding boxes gate every spatial-index and intersection short-circuit; arc extremes must be captured so containment tests are sound.</li>
+<li><strong>Source:</strong> <code>TcGeoLineSegment.cs</code> <code>CalcBoundingBox</code>; <code>TcGeoArcSegment.cs</code> <code>CalcBoundingBox</code>.</li>
+<li><strong>Verification:</strong> Test (arc crossing a cardinal axis).</li>
+</ul>
+<h3 id="fr-cad-krn-018-ordered-segment-chain-curve-kontur">FR-CAD-KRN-018 — Ordered segment chain (curve / Kontur)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve</code> SHALL hold an ordered list of <code>TcGeoSegment</code>s with add/insert/remove/replace/clear operations, <code>SegmentAt</code>, <code>FirstSegment</code>, <code>LastSegment</code>, <code>IndexOfSegment</code>, <code>SegmentsCount</code>, factory helpers <code>AddLineSegment</code>/<code>AddArcSegment</code>, deep <code>Clone</code>, <code>BuildInverseCurve</code>, and <code>GetTransformed</code>. Adding a segment SHALL set the segment's <code>Parent</code> to the curve and SHALL invalidate cached dependent data (bounding box, closedness, oriented area).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Cache invalidation (<code>ResetDependentData</code>) on every mutation. <code>BuildInverseCurve</code> reverses order and inverts each segment.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The curve is the primary contour object; correct parent-linking and cache invalidation keep derived quantities consistent after edits.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoCurve.cs</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-019-closed-contour-test">FR-CAD-KRN-019 — Closed-contour test</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.IsClosed</code> SHALL return true iff, for every segment, the previous segment's end matches the segment's start within <code>TcDefinitions.TOL</code> (wrapping the last→first). Querying <code>IsClosed</code> on an empty curve SHALL throw <code>ApplicationException</code>. The result SHALL be cached until the curve is mutated.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Uses <code>TcGeoVector.Matches(TOL)</code>. A single arc that is a full circle is closed (start=end).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Closedness is a precondition for area, orientation and containment; small gaps within tolerance must be accepted so imported contours are usable.</li>
+<li><strong>Source:</strong> <code>TcGeoCurve.cs</code> <code>IsClosed</code>.</li>
+<li><strong>Verification:</strong> Test (gap at/below/above TOL).</li>
+</ul>
+<h3 id="fr-cad-krn-020-oriented-area-size-shoelace-arc-closed-form">FR-CAD-KRN-020 — Oriented area size (shoelace + arc closed form)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.OrientedAreaSize</code> SHALL return <code>−0.5 · Σ z</code>, where <code>z</code> is summed over all segments: for a line, <code>Start.X·End.Y − End.X·Start.Y</code>; for an arc, <code>Center.X·(End.Y−Start.Y) + Center.Y·(Start.X−End.X) + Radius²·SpanAngle</code>; plus a linear correction term across any gap between consecutive segments (<code>prevEnd × segStart</code>). It SHALL require a closed curve (asserted) and SHALL be cached. A positive area SHALL denote CCLW vertex order (negative area = CLW), with the sign convention consumed by <code>Orientation</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> The arc closed form is the analytic limit of the polygonal shoelace sum for an arc (documented as derived with Maxima). Result asserted finite and (in <code>CalcSumCrossProductZ</code>) non-zero.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Exact oriented area (including true arc contribution rather than a chord approximation) is required for correct area reporting, orientation, and centroid.</li>
+<li><strong>Source:</strong> <code>TcGeoCurve.cs</code> <code>OrientedAreaSize</code>, <code>CalcSumCrossProductZ</code>.</li>
+<li><strong>Verification:</strong> Analysis (closed-form correctness), Test (mixed line/arc contour vs numeric integration).</li>
+</ul>
+<h3 id="fr-cad-krn-021-contour-orientation-determination">FR-CAD-KRN-021 — Contour orientation determination</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.Orientation</code> SHALL return <code>CLW</code> when <code>OrientedAreaSize &gt; TOL²</code>, <code>CCLW</code> when <code>&lt; TOL²</code>, and (asserted-degenerate) <code>UNDEFINED</code> for a non-closed curve or vanishing area. <code>TcGeoSingleArea</code> SHALL require its outer curve to be <code>CLW</code> and every closed inner curve to be <code>CCLW</code> (asserted in <code>DebugAssertConsistency</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Area tolerance <code>TOL·TOL</code> (noted FIXME: should be <code>TOL_AREA</code>). <code>TcOrientation.GetInverted</code> maps CLW↔CCLW.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The CLW-outer / CCLW-inner convention lets area size sum signed contributions and lets the kernel distinguish material from holes.</li>
+<li><strong>Source:</strong> <code>TcGeoCurve.cs</code> <code>Orientation</code>; <code>TcGeoSingleArea.cs</code> invariants; <code>GeoElements/TeOrientation.cs</code>.</li>
+<li><strong>Verification:</strong> Test, Inspection (invariant asserts).</li>
+</ul>
+<h3 id="fr-cad-krn-022-centroid-center-of-gravity">FR-CAD-KRN-022 — Centroid / center of gravity</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.CalcCenterOfGravity(out areaSize)</code> SHALL compute the area centroid of a closed curve, summing per-segment contributions using the shoelace cross-product weighting for straight parts plus an analytic arc correction (arc area <code>R²·(SpanAngle − sin SpanAngle)</code> and the corresponding shifted arc-segment centroid), then dividing the accumulated moment by <code>6·areaSize</code>. Full-circle arcs SHALL be handled by the dedicated <code>R²·SpanAngle</code> branch.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Requires a closed, non-empty curve (asserted). <code>areaSize</code> returned as half the accumulated cross-product sum.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Centroid is needed for labeling, tool placement, symmetry detection and part balancing; the arc correction avoids chord-approximation error.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoCurveExtensions.cs</code> <code>CalcCenterOfGravity</code>; <code>TcGeoAreaExtensions.cs</code>/<code>TcGeoSingleAreaExtensions.cs</code> <code>CalcCenterOfGravity</code>.</li>
+<li><strong>Verification:</strong> Analysis, Test (circle &amp; semicircle vs known centroid).</li>
+</ul>
+<h3 id="fr-cad-krn-023-single-area-with-outer-and-inner-curves">FR-CAD-KRN-023 — Single area with outer and inner curves</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoSingleArea</code> SHALL represent one connected area with exactly one outer curve and zero-or-more inner curves (holes), exposing <code>OuterCurve</code>, <code>InnerCurves</code>, <code>InnerCurvesCount</code>, <code>AreaSize</code> (outer oriented area + Σ inner oriented areas, cached), <code>BoundingBox</code> (= outer curve box), add/remove inner curves, deep <code>Clone</code>, and <code>GetTransformed</code>/<code>GetTransformedTo(translation, rotationDeg)</code>. It SHALL assert the outer curve is CLW and (on add) that each inner curve's bounding box is contained in the outer box.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Because inner curves are CCLW their oriented area is negative and subtracts from the total, so <code>AreaSize</code> yields net material area.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parts with holes are the norm in sheet-metal CAD; net area and hole containment must be represented directly.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoSingleArea.cs</code>.</li>
+<li><strong>Verification:</strong> Test (area with holes), Inspection (invariants).</li>
+</ul>
+<h3 id="fr-cad-krn-024-area-as-collection-of-single-areas">FR-CAD-KRN-024 — Area as collection of single areas</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoArea</code> SHALL represent a collection of <code>TcGeoSingleArea</code>s (treated as a simple, possibly overlapping, list — overlaps not merged), exposing <code>SingleAreas</code>, <code>SingleAreaCount</code>, <code>AreaSize</code> (sum, counting overlaps multiply), <code>BoundingBox</code> (union), <code>GetAllSegments</code>, deep <code>Clone</code>, and <code>GetTransformed</code>/<code>GetTransformedTo</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> No implicit boolean merge; the caller owns overlap semantics. Parent back-references maintained on add/remove.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A part / nested geometry may comprise several disjoint bodies; the area aggregates them for transform, bounding and iteration.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoArea.cs</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-025-standard-form-and-curve-simplification">FR-CAD-KRN-025 — Standard form and curve simplification</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>IsInStandardForm()</code> (curve is closed, CLW, and contains no consecutive colinear line pairs nor consecutive co-radial/co-centric same-orientation arc pairs) and <code>SimplifyCurve()</code> which returns a clone with (a) colinear consecutive line segments merged into one line and (b) consecutive arcs sharing center, radius (within <code>TOL</code>) and orientation merged into one arc, iterating over the ring twice.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Colinearity via matching mid-parameter directions; arc merge via <code>Center.Matches</code> and <code>|ΔRadius| &lt; TOL</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Simplification removes redundant vertices produced by editing/import, giving canonical contours for comparison and processing.</li>
+<li><strong>Source:</strong> <code>TcGeoCurve.cs</code> <code>IsInStandardForm</code>; <code>TcGeoCurveExtensions.cs</code> <code>SimplifyCurve</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-026-segmentsegment-intersection-dispatcher">FR-CAD-KRN-026 — Segment–segment intersection dispatcher</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoIntersection.Intersect(segment1, segment2[, tolerance, toleranceAngleRad], storeOnlySegmentCommonPoints=true)</code> SHALL determine the concrete types of both segments and dispatch to the line-line, line-arc, arc-line or arc-arc routine, defaulting tolerances to <code>TcDefinitions.TOL</code> and <code>TOL_ANGLE_RAD</code>. It SHALL be exposed as an extension method (<code>segment1.Intersect(segment2)</code>). When <code>storeOnlySegmentCommonPoints</code> is false, intersection points of the infinite base geometries lying outside the finite segments SHALL still be stored.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Returns <code>TcGeoIntersectionData</code>. Unknown segment types throw <code>InvalidOperationException</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A single polymorphic entry point keeps callers agnostic to line/arc typing while preserving the option to obtain base-geometry crossings.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoIntersection.cs</code> <code>Intersect(this TcGeoSegment,…)</code>.</li>
+<li><strong>Verification:</strong> Test (all four type pairings).</li>
+</ul>
+<h3 id="fr-cad-krn-027-lineline-intersection">FR-CAD-KRN-027 — Line–line intersection</h3>
+<ul>
+<li><strong>Requirement:</strong> Line-line intersection SHALL classify the base-geometry relation as Identic / Parallel / Intersecting / NotIntersecting and the segment relation as NoCommonPoints / Intersecting / Overlapping. It SHALL first test overlap by checking whether both endpoints of one segment lie within <code>tolerance</code> of the other's infinite line (via <code>CalcLinePointDistance</code>); overlapping segments SHALL yield the clipped parameter interval (snapped to ends and clipped to <code>[0,1]</code>) producing one common point (touching at an end) or two (true overlap). Non-parallel lines SHALL compute the single crossing parameter from the direction determinant <code>d = dir1.Y·dir2.X − dir1.X·dir2.Y</code> and report it as a common point only if it lies on both finite segments.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Distance test at <code>tolerance</code> (default <code>TOL</code>); parallelism at <code>toleranceAngleRad</code>. Because tolerance is applied to distance and angle independently, segments may be reported overlapping without being classified parallel (documented).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Line-line crossing is the most frequent intersection in contour editing, trimming and snapping.</li>
+<li><strong>Source:</strong> <code>TcGeoIntersection.cs</code> <code>Intersect(TcGeoLineSegment, TcGeoLineSegment,…)</code>.</li>
+<li><strong>Verification:</strong> Test (crossing, parallel, overlapping, T-touch, near-parallel).</li>
+</ul>
+<h3 id="fr-cad-krn-028-linearc-intersection">FR-CAD-KRN-028 — Line–arc intersection</h3>
+<ul>
+<li><strong>Requirement:</strong> Line-arc intersection SHALL compute the distance <code>d</code> from the arc center to the infinite line; classify Touching when <code>|Radius − d| ≤ min(tolerance, 0.5·Radius)</code> (touch point = orthogonal projection of center onto the line), Intersecting when <code>d &lt; Radius</code> (two points at <code>parameterMiddle ± sqrt(R²−d²)/lineLength</code> about the center's projection), else NotIntersecting. Each candidate point SHALL be reclassified to a segment common point only if it lies on both finite segments. The arc-line overload SHALL delegate to line-arc and swap the result.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Touch tolerance clamped to <code>0.5·Radius</code> to avoid over-eager touch classification on small arcs. Segment membership via <code>CommonPointToIntersectionPointData</code> with per-segment parameter tolerance.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Line-arc is needed for trimming lines against fillets/holes and for tangency detection.</li>
+<li><strong>Source:</strong> <code>TcGeoIntersection.cs</code> <code>Intersect(TcGeoLineSegment, TcGeoArcSegment,…)</code> and swapped overload.</li>
+<li><strong>Verification:</strong> Test (secant, tangent, miss, tangent on small arc).</li>
+</ul>
+<h3 id="fr-cad-krn-029-arcarc-intersection">FR-CAD-KRN-029 — Arc–arc intersection</h3>
+<ul>
+<li><strong>Requirement:</strong> Arc-arc intersection SHALL first order the two arcs so segment1 has the larger radius (swapping and swapping the result back). It SHALL classify: Concentric-overlapping (Identic) when center distance ≤ tolerance and <code>|ΔRadius| ≤ tolerance</code>, computing the overlapping parameter interval(s) via <code>TcIntervalSet</code> union/subtraction over the unit interval and setting relative orientation same/reverse; Concentric (no common points) when radii differ; Touching when <code>|R1+R2 − dist| ≤ tolerance</code> or <code>|R1−R2 − dist| ≤ tolerance</code> (touch point along the center-connection); Intersecting when <code>R1−R2 &lt; dist &lt; R1+R2</code> (two points via the standard radical-line construction); else NotIntersecting. Candidate points SHALL be filtered to segment membership.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Radical-line distance <code>a = (R1²−R2²+dist²)/(2·dist)</code>; half-chord <code>h = sqrt(R1²−a²)</code>. Center distance compared at <code>tolerance</code> (default <code>TOL</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Arc-arc crossing/tangency/concentric-overlap classification is required for fillet chaining, hole interactions and contour repair.</li>
+<li><strong>Source:</strong> <code>TcGeoIntersection.cs</code> <code>Intersect(TcGeoArcSegment, TcGeoArcSegment,…)</code>.</li>
+<li><strong>Verification:</strong> Test (two-point, external/internal tangent, concentric equal/unequal, disjoint).</li>
+</ul>
+<h3 id="fr-cad-krn-030-intersection-relation-classification-model">FR-CAD-KRN-030 — Intersection relation classification model</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoIntersectionData</code> SHALL carry the two segments, the list of <code>TcIntersectionPointData</code> (each with intersection point and parameter on each segment), and the enums <code>TeBaseGeoRelation</code> {Invalid, NotIntersecting, Intersecting, Touching, Parallel, Concentric, Identic}, <code>TeSegmentRelation</code> {Invalid, NoCommonPoints, Intersecting, Touching, Overlapping} and <code>TeRelativeOrientation</code> {Invalid, SameOrientation, ReverseOrientation}. It SHALL support <code>HasCommonPoints</code>, <code>SwapSegments</code> (swapping per-point parameters), and <code>GetOverlappingIntervals(segmentNumber)</code> returning the overlap intervals in the chosen segment's parameter space.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> No tolerance of its own; a data carrier. Overlap intervals are formed from point pairs.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A rich, explicit relation model lets higher-level operations (trim, split, boolean) act on the geometric relationship, not just point coordinates.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoIntersectionData.cs</code>; <code>GeoMath/TcIntersectionPointData.cs</code>.</li>
+<li><strong>Verification:</strong> Inspection, Test (<code>SwapSegments</code>, <code>GetOverlappingIntervals</code>).</li>
+</ul>
+<h3 id="fr-cad-krn-031-bounding-box-set-operations">FR-CAD-KRN-031 — Bounding-box set operations</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcBoundingBox</code> SHALL support <code>DoesIntersect(other, tolerance)</code>, <code>IntersectBoundingBoxes</code>/<code>GetIntersection</code> (null if disjoint), <code>GetUnion</code>, <code>GetExpanded(inc)</code>, <code>GetShrinked(dec)</code> (degenerating to a line/point rather than inverting), <code>Contains(box|point[, tolerance])</code>, <code>ContainsProperly</code>, <code>Matches(other[, tolerance])</code>, <code>AreaSize</code>, <code>GetCenterPoint</code>/corner accessors, and <code>GetPercentageOfBoxOverlap</code>. An invalid (NaN-initialized) box SHALL be reported by <code>isValid()</code> and treated as non-intersecting/non-containing.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Tolerances default to <code>0.0</code> for intersection, <code>TcDefinitions.TOL</code> for <code>Matches</code>. Increments asserted non-negative.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> AABB tests are the first-pass filter for every spatial query, driving the order-of-magnitude speedups in intersection and containment.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcBoundingBox.cs</code>; <code>GeoMath/TcGeoIntersection.cs</code> <code>IntersectBoundingBoxes</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-032-point-in-curve-ray-casting-test">FR-CAD-KRN-032 — Point-in-curve (ray-casting) test</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.Intersect(point, tolerance[, bboxesHolder])</code> SHALL classify a point as OUTSIDE, OVERLAPPING (on the boundary), or INSIDE. It SHALL (1) reject points outside the tolerance-expanded curve bounding box as OUTSIDE; (2) report OVERLAPPING when the minimum distance to any bounding-box-candidate segment is <code>&lt; tolerance</code>; (3) otherwise perform a parity (even-odd) ray-cast, counting crossings of a probe segment from the point to just outside the bounding box, with <strong>zero</strong> intersection tolerance. Probe directions SHALL be chosen cyclically across the four bounding-box sides at a fixed pseudo-random sequence of side parameters; when a probe hits a vertex (parameter within <code>1e-6</code> of a segment end) or touches/overlaps a segment, the result SHALL be deemed ambiguous and the test retried with a different probe, up to 99 attempts.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Boundary band = <code>tolerance</code> (default <code>TOL</code>). Ray-cast crossing uses tolerance <code>0</code>. Fixed RNG seed (<code>new Random(1)</code>) makes the probe sequence deterministic. After 99 ambiguous tries, the last parity result is returned and a diagnostic logged.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Point-in-contour is fundamental to selection, hole classification, containment and technology assignment; the retry-on-ambiguity scheme robustly handles the degenerate cases (vertex/tangent hits) that break naive ray casting.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoIntersectionCurvePoint.cs</code>; relation enum <code>TcGeoIntersectionDataCurvePoint.TeRelationCurvePoint</code> {OUTSIDE, OVERLAPPING, INSIDE}.</li>
+<li><strong>Verification:</strong> Analysis (parity method &amp; ambiguity handling), Test (point near vertex, on edge, inside, outside).</li>
+</ul>
+<h3 id="fr-cad-krn-033-curvesegment-relation">FR-CAD-KRN-033 — Curve–segment relation</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.Intersect(segment[, tolerance, bboxesHolder])</code> SHALL classify a segment relative to a (closed) curve as OUTSIDE, INSIDE, OVERLAPPING or INTERSECTING and return the list of common points. It SHALL bounding-box-filter, collect de-duplicated common points between the segment and each candidate curve segment (only start/end of overlaps stored), then sample &quot;interesting points&quot; at the midpoints between consecutive common points (plus the segment's start &amp; end for open segments, or opposite/gap points for a closed circular segment) and classify each with the point-in-curve test (FR-CAD-KRN-032). The combination of inside/outside interesting points SHALL determine the result (both→INTERSECTING; only inside→INSIDE; only outside→OUTSIDE; neither→OVERLAPPING).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default tolerance <code>TOL</code>. Duplicate common points suppressed within <code>tolerance</code>. Common points sorted by parameter on the probe segment.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Deciding whether an edge lies inside/outside/crossing a contour is the building block for curve-curve containment and for cut-path validation.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoIntersectionCurveSegment.cs</code>; relation enum {OUTSIDE, OVERLAPPING, INTERSECTING, INSIDE}.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-034-curvecurve-containment-relation">FR-CAD-KRN-034 — Curve–curve containment relation</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoCurve.Intersect(curveA, curveB[, tolerance, holders])</code> SHALL classify two curves as DISJOINT, INTERSECTING, A_CONTAINS_B, B_CONTAINS_A or IDENTICAL. It SHALL iterate the segments of the smaller-count curve (swapping arguments and result if needed), classifying each against the other curve via FR-CAD-KRN-033; an intersecting segment or a mix of inside+outside segments ⇒ INTERSECTING; all-inside ⇒ B_CONTAINS_A; all-outside ⇒ test whether B has a segment inside A (⇒ A_CONTAINS_B) else DISJOINT; all-overlapping ⇒ IDENTICAL.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default <code>TOL</code>. Optional bounding-box holders reused across calls for performance.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Nesting/containment of contours (part-in-part, hole-in-body) is required for area assembly, nesting and boolean pre-checks.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoIntersectionCurveCurve.cs</code>; relation enum {DISJOINT, INTERSECTING, A_CONTAINS_B, B_CONTAINS_A, IDENTICAL}.</li>
+<li><strong>Verification:</strong> Test (nested, identical, crossing, disjoint).</li>
+</ul>
+<h3 id="fr-cad-krn-035-point-in-area-with-holes">FR-CAD-KRN-035 — Point-in-area (with holes)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoSingleArea.IsPointInside(point)</code> SHALL return true iff the point is not OUTSIDE the outer curve (i.e. inside or on it) and is not strictly INSIDE any inner (hole) curve. <code>TcGeoArea.IsPointInside(point)</code> SHALL return true iff the point is inside any of its single areas. <code>IsPointOnOuterCurve</code>/<code>IsPointOnAnyOuterCurve(tolerance)</code> SHALL report boundary membership (OVERLAPPING).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Uses <code>TcDefinitions.TOL</code> for the underlying point-in-curve tests. Boundary points count as inside for <code>IsPointInside</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Correct hole handling ensures selections and technology assignment treat material vs. cut-out regions correctly.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoSingleAreaExtensions.cs</code> <code>IsPointInside</code>/<code>IsPointOnOuterCurve</code>; <code>TcGeoAreaExtensions.cs</code> <code>IsPointInside</code>/<code>IsPointOnAnyOuterCurve</code>.</li>
+<li><strong>Verification:</strong> Test (point in hole, in material, on boundary).</li>
+</ul>
+<h3 id="fr-cad-krn-036-parameter-interval-arithmetic">FR-CAD-KRN-036 — Parameter-interval arithmetic</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>TcInterval</code> (start/end, <code>UnitInterval</code> = [0,1], <code>Contains</code>/<code>ContainsProperly</code>/<code>Overlaps</code> with tolerance, <code>GetClosestValue</code>, <code>GetSpan</code>, <code>RoundToMinMaxIfInTolerance</code>) and <code>TcIntervalSet</code> (union, intersection, subtraction of interval sets, e.g. <code>UnitIntervalSet.GetIntersection/GetSubtraction</code>). It SHALL also provide angle helpers <code>ModPositive(dividend, divisor)</code> (result in <code>[0,|divisor|)</code> with overshoot guard), <code>IsIntegerMultiple</code>, <code>EqualsAngleRAD</code>, <code>Equals(a,b,tol)</code>, and <code>Sort(ref a, ref b)</code> in <code>TcMath</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>Equals</code> short-circuits to exact <code>==</code> when tolerance is <code>0</code>. <code>ModPositive</code> asserts result range. Interval sets are used to represent overlap regions in arc-arc and projection operations.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Overlap and periodic-angle reasoning require robust interval and modulo arithmetic with tolerance.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcInterval.cs</code>, <code>GeoMath/TcIntervalSet.cs</code>, <code>Utils/TcMath.cs</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-037-matrix-and-33-homogeneous-transform-representation">FR-CAD-KRN-037 — Matrix and 3×3 homogeneous transform representation</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide a general <code>TcMatrix</code> (arbitrary rows×columns, identity-initialized, dimension-checked multiplication throwing <code>ArgumentException</code> on mismatch) and a specialized <code>TcMatrix2D</code> (3×3 homogeneous) with <code>Determinant()</code>, 3×3 matrix product, and matrix×<code>TcGeoVector</code> multiplication that promotes the vector to homogeneous coordinates <code>(x, y, 1)</code> and returns the transformed 2-D point.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Exact double arithmetic. The homogeneous form enables composing rotation, translation and scaling into a single matrix.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A homogeneous 3×3 matrix is the standard, composable representation for 2-D affine transforms applied throughout editing (move/rotate/mirror/scale).</li>
+<li><strong>Source:</strong> <code>GeoMath/TcMatrix.cs</code>, <code>GeoMath/TcMatrix2D.cs</code>.</li>
+<li><strong>Verification:</strong> Test (identity, product, point transform).</li>
+</ul>
+<h3 id="fr-cad-krn-038-transform-factories-and-composition">FR-CAD-KRN-038 — Transform factories and composition</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide factories: <code>TcMatrix2D.CreateTranslationMatrix(vector)</code>, <code>CreateRotationMatrix(angleRad)</code>, <code>CreateScalingMatrix(factor)</code> and <code>CreateScalingMatrix(factor, center)</code>; the subclasses <code>TcTranslationMatrix2D</code> (with negation operator) and <code>TcRotationMatrix2D</code> (angle in DEG by default or RAD, with <code>InverseRotation()</code> and unary <code>−</code>). Composition SHALL be expressed by matrix multiplication (e.g. <code>new TcTranslationMatrix2D(t) * new TcRotationMatrix2D(deg)</code>), as used by <code>GetTransformedTo(translation, rotationDeg)</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Rotation matrix <code>[[cos,−sin],[sin,cos]]</code>. Scaling about a center sets translation <code>(1−f)·center</code>. Angle-unit enum defaults to DEG for <code>TcRotationMatrix2D</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Named factories and operator composition make transform chains (rotate-about-point, scale-about-center) explicit and reusable by editing commands.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcMatrix2D.cs</code> factories; <code>GeoMath/TcTranslationMatrix2D.cs</code>, <code>GeoMath/TcRotationMatrix2D.cs</code>; usage in <code>TcGeoArea.cs</code>/<code>TcGeoSingleArea.cs</code> <code>GetTransformedTo</code>.</li>
+<li><strong>Verification:</strong> Test (rotate-about-center, scale-about-center composition).</li>
+</ul>
+<h3 id="fr-cad-krn-039-transform-application-to-geometry">FR-CAD-KRN-039 — Transform application to geometry</h3>
+<ul>
+<li><strong>Requirement:</strong> All geometric types (<code>TcGeoVector</code>, <code>TcGeoSegment</code>/line/arc, <code>TcGeoCurve</code>, <code>TcGeoSingleArea</code>, <code>TcGeoArea</code>) SHALL implement <code>TiTransformable.GetTransformed(TcMatrix2D)</code> returning a new, transformed instance without mutating the original. Transforming a curve/area SHALL transform every constituent segment/curve; the transformed children SHALL have their <code>Parent</code> reset to null before re-parenting.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Arcs transform center/start/end and retain orientation; a documented TODO notes that a mirror matrix would require flipping arc orientation (currently not handled).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Non-destructive transformation is required so editing previews and undo can operate on copies.</li>
+<li><strong>Source:</strong> <code>GeoMath/TiTransformable.cs</code>; <code>GetTransformed</code> in <code>TcGeoVector.cs</code>, <code>TcGeoLineSegment.cs</code>, <code>TcGeoArcSegment.cs</code> (TODO note), <code>TcGeoCurve.cs</code>, <code>TcGeoSingleArea.cs</code>, <code>TcGeoArea.cs</code>.</li>
+<li><strong>Verification:</strong> Test, Inspection (mirror TODO limitation).</li>
+</ul>
+<h3 id="fr-cad-krn-040-native-44-transformation-matrix">FR-CAD-KRN-040 — Native 4×4 transformation matrix</h3>
+<ul>
+<li><strong>Requirement:</strong> The native layer SHALL provide <code>TcTransformationMatrix</code>, a 4×4 (<code>std::array&lt;std::array&lt;double,4&gt;,4&gt;</code>) matrix with <code>setIdentityMatrix()</code> and internal <code>zeroize()</code>, used to transform native geometry (e.g. positioning <code>TcGeoPlan</code> elements) and passed across the GAK bridge for absolute-position conversions.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Homogeneous 3-D form (4×4) on the native side vs. 3×3 on the managed side; the bridge maps between them for 2-D geometry.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Legacy native code retains a 4×4 matrix; documenting it clarifies the coordinate hand-off to the managed kernel.</li>
+<li><strong>Source:</strong> <code>tc_math/TcTransformationMatrix.h</code>; used by <code>tc_geoPlan/TcGeoPlan.h</code> ctors and GAK bridge (<code>ConvertToAdapterVektor(..., transformation)</code>).</li>
+<li><strong>Verification:</strong> Inspection.</li>
+</ul>
+<h3 id="fr-cad-krn-041-line-point-distance-and-orthogonal-projection">FR-CAD-KRN-041 — Line-point distance and orthogonal projection</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>CalcLinePointDistance(line, point)</code> (= <code>|NormDirection × (point−Start)|</code>, absolute perpendicular distance to the infinite line), <code>CalcLinePointOrientedDistance</code> (signed variant giving left/right side), <code>CalcOrthogonalProjectionParameter</code>, and <code>CalcOrthogonalProjectionPoint(line, point[, out parameter])</code> (foot of perpendicular on the infinite line).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> No tolerance; exact. The oriented distance sign encodes half-plane membership.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Perpendicular distance and projection are needed for snapping, dimension witness lines, line-arc touch detection and overlap tests.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoMath.cs</code> (<code>CalcLinePointDistance</code>, <code>CalcLinePointOrientedDistance</code>, <code>CalcOrthogonalProjection*</code>).</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-042-segment-point-nearest-distance">FR-CAD-KRN-042 — Segment-point nearest distance</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoSegment.DistanceTo(point)</code> SHALL return the true nearest distance from a point to the finite segment: for a parameter within <code>[0,1]</code> the perpendicular distance, otherwise the distance to the nearer endpoint. For an arc whose center equals the point, it SHALL return the radius. <code>DistanceFromPointToStraightLine</code> SHALL give the perpendicular distance to the infinite line of a line segment.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Endpoint clamping avoids reporting perpendicular distance to a projection lying beyond the segment. Center-coincidence special case avoids an undefined arc parameter.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Correct point-to-segment distance underlies the boundary band of point-in-curve, snapping to nearest element, and proximity queries.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoSegmentExtensions.cs</code> <code>DistanceTo</code>, <code>DistanceFromPointToStraightLine</code>.</li>
+<li><strong>Verification:</strong> Test (foot inside, beyond ends, arc center case).</li>
+</ul>
+<h3 id="fr-cad-krn-043-nearest-vertex-edge-lookup">FR-CAD-KRN-043 — Nearest vertex / edge lookup</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide <code>TcGeoArea.NearestVertex(point)</code> (the segment start point at minimum Euclidean distance; throws on an empty area), <code>FindVertex(vertex, out edge1, out edge2)</code> (the two edges meeting at a matching vertex) and <code>FindEdge(point, out edge)</code> (an edge on which the point lies). <code>GetLongestSegment</code>/<code>GetShortestSegment</code> and their index variants SHALL select extremal segments from a collection.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Vertex matching uses <code>TcGeoVector.Matches</code>. Edge membership uses the point-in-curve/segment overlap tolerance.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Snapping to vertices/edges and identifying corner geometry (for fillet/chamfer) require nearest-feature lookups.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoAreaExtensions.cs</code> (<code>NearestVertex</code>, <code>FindVertex</code>, <code>FindEdge</code>); <code>TcGeoSegmentExtensions.cs</code> (<code>GetLongestSegment</code>, etc.).</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-044-circle-arc-tangent-construction">FR-CAD-KRN-044 — Circle / arc tangent construction</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL compute tangents: <code>CalcTouchingPointsOfTangentThroughExteriorPoint(center, radius, exteriorPoint)</code> (two touch points via the Thales circle / two-circle radical construction, with reprojection onto the circle for numerical robustness), <code>CalcTouchingPointsOfOuterTangentsOfTwoCircles</code> (outer common tangents via the intercept theorem for unequal radii or the center-normal for equal radii), and the arc-clamped variants <code>TcGeoArcSegment.GetTangentPointsThroughExteriorPoint</code>, <code>GetTouchingPointsOfTangentThroughExteriorPoint</code>, <code>GetTouchingPointsOfOuterTangentsToArcSegment</code>, <code>GetTouchingPointOfTangentForTangentDirection</code> that filter/clamp touch points to the arc's parameter range.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Exterior-point precondition asserted (<code>|p−center| &gt; radius + TOL</code>). Computed points reprojected if they exceed <code>radius + TOL</code>. Arc variants keep only touch points with parameter in <code>[0,1]</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Tangent construction is required by the arc-aware convex hull and by tangent-line/round-off editing operations.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoMath.cs</code> (<code>CalcTouchingPointsOf…</code>); <code>TcGeoArcSegment.cs</code> <code>GetTangentPointsThroughExteriorPoint</code>; <code>TcGeoSegmentExtensions.cs</code> (<code>GetTouchingPointsOf…</code>).</li>
+<li><strong>Verification:</strong> Analysis (construction correctness), Test.</li>
+</ul>
+<h3 id="fr-cad-krn-045-shape-recognition-square-rectangle-round">FR-CAD-KRN-045 — Shape recognition (square / rectangle / round)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoShapeRecognizer</code> SHALL identify canonical tool/part shapes centered at the origin: <code>IdentifyRectangularShaped(area, out width, out height)</code> (area is a rectangle, axis-parallel, symmetric about the origin within <code>TOL</code>), <code>IdentifySquareShape(area, out sideLength)</code> (rectangle with <code>|width−height| &lt; TOL</code>), and <code>IdentifyRound(area, out radius)</code> (single circle centered at the origin with <code>radius &gt; TOL</code>; excentric rounds — e.g. push-out tools — return false). <code>IsOblongTool</code> is declared but not implemented (asserts false).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> All comparisons use <code>TcDefinitions.TOL</code>. Excentric/off-origin shapes are rejected as not-recognized (by design, for tool typing).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Recognizing standard tool footprints (round, square, rectangular, oblong) drives punch-tool selection and technology mapping.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoShapeRecognizer.cs</code>.</li>
+<li><strong>Verification:</strong> Test (positive &amp; excentric cases), Inspection (<code>IsOblongTool</code> not implemented).</li>
+</ul>
+<h3 id="fr-cad-krn-046-curve-area-shape-predicates">FR-CAD-KRN-046 — Curve / area shape predicates</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide shape predicates on curves and areas: <code>IsCircle</code>, <code>IsPolygon</code>, <code>IsConvexPolygon</code>, <code>IsTriangle</code>, <code>IsQuadrangle</code>, <code>IsConvexQuadrangle</code>, <code>IsRectangle([tolerance])</code>, <code>IsParallelogram</code>, <code>IsTrapezoid</code>, <code>HasAnyLineSegment</code>/<code>HasOnlyLineSegments</code>, <code>HasAnyArcSegment</code>/<code>HasOnlyArcSegments</code>, <code>HasAnyRightAngle</code>/<code>HasOnlyRightAngles</code>, and segment/corner convexity tests (<code>IsConvex</code>/<code>IsConcave</code> for arcs; <code>IsConvexCorner</code>/<code>IsConcaveCorner</code> using the sign of the corner cross product against orientation, threshold <code>TOL</code>). Rectangle recognition SHALL require four line segments each orthogonal to its successor (checked via orthogonal-direction match within <code>lengthTolerance</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>IsRectangle</code> default tolerance <code>TOL</code>; convex/concave corner threshold <code>TOL</code> on the (signed) cross product. <code>IsCircle</code> = one segment and closed.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> These predicates classify user-drawn geometry for dimensioning, variant recognition, and technology decisions.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoCurveExtensions.cs</code>; <code>TcGeoSingleAreaExtensions.cs</code>; <code>TcGeoAreaExtensions.cs</code>; <code>TcGeoSegmentExtensions.cs</code> (<code>IsConvexCorner</code>/<code>IsConcaveCorner</code>, <code>IsConvex</code>/<code>IsConcave</code>).</li>
+<li><strong>Verification:</strong> Test (each predicate, boundary tolerance).</li>
+</ul>
+<h3 id="fr-cad-krn-047-convex-hull-including-arcs-managed">FR-CAD-KRN-047 — Convex hull including arcs (managed)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoConvexHullGeneration.CalculateConvexHull(curve)</code> SHALL compute the convex hull of a closed, oriented curve <strong>respecting arc segments</strong> (not just vertices). It SHALL require the curve closed and oriented (throwing <code>ArgumentException</code> otherwise), work on a CLW clone (inverting a CCLW/inner curve and re-inverting the result), replace concave arcs with their chord line, then iteratively bridge concave corners with tangent line segments — using outer-tangent touch points for arc-arc, arc-line and line-arc constellations (clamping arcs to their touch points) — while resolving self-intersections introduced by bridging (inner/outer loop with a relevance tolerance of <code>0.05</code> mm, unit-scaled) and rejecting bridges lying inside the current hull.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Relevance tolerance <code>TcDefinitions.ConvertMmToInchIfNecessary(0.05)</code>; antiparallel-tangent match tolerance <code>0.005</code>. Two full cycles over the ring (the top-left corner is not otherwise re-evaluated). Output hull preserves arc segments where they lie on the hull boundary.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> An arc-aware hull is needed for tight bounding, collision and nesting envelopes of contours containing fillets/holes, where a vertex-only hull would be wrong.</li>
+<li><strong>Source:</strong> <code>GeoMath/TcGeoConvexHullGeneration.cs</code>; exposed via <code>TcGeoCurveExtensions.CalculateConvexHull</code>.</li>
+<li><strong>Verification:</strong> Analysis (bridging &amp; self-intersection resolution), Test (contours with convex/concave arcs).</li>
+</ul>
+<h3 id="fr-cad-krn-048-graham-scan-convex-hull-native">FR-CAD-KRN-048 — Graham-scan convex hull (native)</h3>
+<ul>
+<li><strong>Requirement:</strong> The native <code>TcConvexHullGraham(pointList)</code> SHALL compute the convex polygon of an unsorted 2-D point cloud by Graham's algorithm: pick the lowest-leftmost point, fan-sort the remaining points counter-clockwise by angle (without evaluating the exact angle), then scan, keeping convex turns (cross product &gt; 0) and discarding concave ones (cross product &lt; 0). <code>computeHull()</code> SHALL reorder the input list so that indices <code>0..return</code> hold the hull vertices and return that count.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> In-place reordering of the caller's <code>TyPoint2DList</code>. Convexity by cross-product sign. (Point-cloud hull only; does not model arcs — cf. FR-CAD-KRN-047.)</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The legacy native hull is retained for point-based hull needs; it is superseded for contour hulls by the managed arc-aware routine.</li>
+<li><strong>Source:</strong> <code>tc_math/TcConvexHullGraham.h</code>/<code>.cpp</code>; base <code>tc_math/TcConvexHull.h</code> (merged into Graham).</li>
+<li><strong>Verification:</strong> Test, Inspection.</li>
+</ul>
+<h3 id="fr-cad-krn-049-geometry-equality-comparison">FR-CAD-KRN-049 — Geometry equality comparison</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcGeoElementChecker</code> SHALL provide tolerance-based equality comparisons: <code>CompareVectors</code> (X,Y within <code>TOL</code>), <code>CompareLineSegment</code>/<code>CompareArcSegment</code>/<code>CompareSegments</code> (bounding box, endpoints, length within <code>TOL</code>, plus center/radius/circle-flag/end-angle within <code>TOL</code>/<code>TOL_ANGLE_DEG</code> for arcs), <code>CompareCurves</code> (bounding box, orientation, segment count), <code>CompareSingleAreas</code> (area size within <code>TOL_AREA</code>, bounding box, outer curve, order-independent segment and inner-curve matching), and <code>CompareAreas</code> (area size, bounding box, order-independent single-area matching). Set-style comparisons SHALL match each element of one collection to an unused element of the other. Additionally, <code>TcGeoCurve.Matches</code>/<code>TcGeoSegment.Matches</code> SHALL provide orientation-aware (optionally inverse) structural equality within a given tolerance.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Value tolerance <code>TOL</code>, area tolerance <code>TOL_AREA</code>, angle tolerance <code>TOL_ANGLE_DEG</code>. <code>CompareDoubleValues</code> is an inclusive band test.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Duplicate detection, undo/redo verification, nesting identity and regression testing all need robust geometry equality.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoElementChecker.cs</code>; <code>TcGeoCurveExtensions.Matches</code>; <code>TcGeoSegmentExtensions.Matches</code>.</li>
+<li><strong>Verification:</strong> Test.</li>
+</ul>
+<h3 id="fr-cad-krn-050-bounding-rectangle-rotated-bounding-box-and-main-direction">FR-CAD-KRN-050 — Bounding rectangle, rotated bounding box and main direction</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL compute: the axis-aligned bounding box of any curve/area (union of segment boxes); the area's main-direction angle <code>CalcMainDirectionAngle</code> (in <code>[0, π/2)</code>) as the direction (mod π/2, within <code>TOL_ANGLE_RAD</code>) carrying the greatest total edge length, optionally ignoring arcs; the rotation <code>CalcTrafoToMainDirection</code> (<code>−mainDirectionAngle</code>) that aligns the area to its principal axes; a rotated/oriented bounding box (<code>TcRotatedBoundingBox</code>); and <code>GetMaximalEmptyRectangle(obstacles)</code> (largest axis-aligned obstacle-free rectangle, per Breuel's recursive pivot approach).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Main-direction binning tolerance <code>TOL_ANGLE_RAD</code>; full circles and (optionally) arcs are excluded from the direction histogram. Empty-rectangle recursion asserts obstacles lie within the box.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Oriented bounding boxes and main-direction alignment support minimal-envelope nesting, labeling orientation and free-space placement.</li>
+<li><strong>Source:</strong> <code>GeoElements/TcGeoAreaExtensions.cs</code> (<code>CalcMainDirectionAngle</code>, <code>CalcTrafoToMainDirection</code>, <code>MapSegmentsAnglesToLengthSums</code>); <code>TcBoundingBox.cs</code> <code>GetMaximalEmptyRectangle</code>; <code>TcRotatedBoundingBox.cs</code>.</li>
+<li><strong>Verification:</strong> Analysis, Test (rotated rectangle, obstacle field).</li>
+</ul>
+<h3 id="fr-cad-krn-051-topological-plan-graph-model-with-iterators">FR-CAD-KRN-051 — Topological plan / graph model with iterators</h3>
+<ul>
+<li><strong>Requirement:</strong> The native <code>TcGeoPlan</code> SHALL build and manage a list of geometry descriptors (<code>TcGeoPlanObjekt</code>) from a list of contour elements (<code>TiElementAdapter</code>) and a contour adapter (<code>TiKonturAdapter</code>), optionally positioned by a <code>TcTransformationMatrix</code>. It SHALL create typed iterators via <code>erzeugeGeoIterator(TeIteratorTyp)</code> — <code>e_AllGeoPlanObjekteIterator</code>, <code>e_EckenIterator</code> (corners), <code>e_ElementeIterator</code> (elements) — and SHALL support corner iterators filtered by corner type (<code>erzeugeEckenIterator</code>) and element iterators filtered by element type (<code>erzeugeElementeIterator</code>), each optionally constrained to a rectangular search window (<code>t_suchFensterMin</code>/<code>Max</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Element types (<code>TcElement::TeElementTyp</code>): <code>e_Linie=1</code>, <code>e_Bogen=2</code>, <code>e_Kreis=4</code>, <code>e_UnbestimmterTyp=7</code> (all). Iteration order follows contour traversal. Search windows are axis-aligned bounding filters.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The plan/graph model gives CAD commands (snapping, corner operations, geometric queries) a navigable topological view over a contour independent of the raw dbase storage.</li>
+<li><strong>Source:</strong> <code>tc_geoPlan/TcGeoPlan.h</code>; <code>TiGeoPlanIterator.h</code> (<code>TeIteratorTyp</code>); <code>TcEckenIterator.*</code>, <code>TcElementeIterator.*</code>, <code>TcAllGeoPlanObjekteIterator.*</code>; <code>TcElement.h</code> (<code>TeElementTyp</code>).</li>
+<li><strong>Verification:</strong> Inspection, Demonstration (iterate corners/elements within a window).</li>
+</ul>
+<h3 id="fr-cad-krn-052-corner-classification-ecke">FR-CAD-KRN-052 — Corner classification (Ecke)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcEcke</code> SHALL represent a contour corner with an enclosed angle <code>getWinkel()</code> (angle in the good part), a position <code>getPunkt()</code>, a bisector query (<code>Winkelhalbierende</code>), an associated element pointer, and a corner-type <code>TeEckenArt</code>: <code>e_KeineEcke=0</code> (no corner), <code>e_InnenEcke=1</code> (inner/concave corner), <code>e_AussenEcke=2</code> (outer/convex corner), <code>e_UnbestimmteEcke=3</code> (both/indeterminate). The classification SHALL be derivable from the corner angle relative to the traversal orientation.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Angle stored in radians (<code>m_winkel</code>); classification by the corner's turn direction. The managed equivalent is <code>TcGeoSegmentExtensions.IsConvexCorner</code>/<code>IsConcaveCorner</code> with threshold <code>TOL</code> (cf. FR-CAD-KRN-046).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Distinguishing inner vs. outer corners is required for fillet/chamfer placement, kerf offset direction, and corner-based snapping.</li>
+<li><strong>Source:</strong> <code>tc_geoPlan/TcEcke.h</code> (<code>TeEckenArt</code>, <code>getWinkel</code>, <code>getPunkt</code>, bisector); managed counterpart <code>TcGeoSegmentExtensions.cs</code>.</li>
+<li><strong>Verification:</strong> Test (inner vs outer corner), Inspection.</li>
+</ul>
+<h3 id="fr-cad-krn-053-dcel-half-edge-topology">FR-CAD-KRN-053 — DCEL half-edge topology</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide a doubly-connected edge list <code>TcDcel&lt;TV,TE,TF&gt;</code> (half-edge data structure) whose <code>TcHalfEdge</code> carries <code>Data</code> (edge), <code>Origin</code> (start vertex), <code>Face</code>, <code>Twin</code> (opposite-direction half-edge sharing the two endpoints), <code>Next</code> and <code>Prev</code> (successor/predecessor around the same face), plus container linkage (<code>NextInContainer</code>/<code>PrevInContainer</code>) and <code>RemoveFromContainer()</code> in O(1). Navigation and modification helpers SHALL be provided (<code>NavigationHelper</code>, <code>ModificationHelper</code>, <code>ValidationHelper</code>) together with adapters (<code>IVertexAdapter</code>, <code>IFaceBoundaryAdapter</code>, <code>AreaToHalfEdge</code>) to build a DCEL from a <code>TcGeoArea</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Generic over vertex/edge/face payloads; twin/next/prev invariants define face boundaries. Topological, not tolerance-driven.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> A DCEL supports planar-subdivision queries (face adjacency, boundary walking) used by advanced decomposition/boolean and area-to-topology conversions.</li>
+<li><strong>Source:</strong> <code>GeoAlgorithmsKernel/GeoKernel/HalfedgeTopology/TcDcel.cs</code>, <code>AreaToHalfEdge.cs</code>, <code>IVertexAdapter.cs</code>, <code>IFaceBoundaryAdapter.cs</code>, <code>NavigationHelper/</code>, <code>ModificationHelper/</code>, <code>ValidationHelper/</code>.</li>
+<li><strong>Verification:</strong> Inspection, Test (twin/next/prev consistency via ValidationHelper).</li>
+</ul>
+<h3 id="fr-cad-krn-054-spatial-index-for-segments-quad-tree">FR-CAD-KRN-054 — Spatial index for segments (quad-tree)</h3>
+<ul>
+<li><strong>Requirement:</strong> The kernel SHALL provide a bounding-box spatial index <code>TcBoundingBoxesHolder&lt;T&gt;</code> selectable as <code>SimpleList</code>, <code>QuadTree</code> (default), or <code>SimpleListAndQuadTree</code>, wrapping <code>TcQuadTree&lt;T&gt;</code> — a self-balancing region quad-tree that splits a node when it holds more than <code>SPLIT_THRESHOLD (6)</code> objects and merges when a subtree drops below <code>MERGE_THRESHOLD (3)</code>. It SHALL support <code>Add</code>/<code>AddRange</code> and <code>Intersect(box|segment, tolerance)</code> returning candidate objects whose bounding boxes intersect the query. Point-in-curve, curve-segment and curve-curve routines SHALL use this index to restrict intersection tests to spatially relevant segments.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Objects must expose a valid (non-NaN) bounding box (asserted). Default index-area hint <code>[-0.5,0.5]²</code>. Thresholds constrain <code>MERGE_THRESHOLD ≥ 2</code>, <code>SPLIT_THRESHOLD &gt; MERGE_THRESHOLD</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Without spatial indexing, intersection/containment over large contours would be O(n²); the quad-tree makes CAD-scale geometry interactive.</li>
+<li><strong>Source:</strong> <code>GeoAlgorithmsKernel/GeoKernel/GeoIndex/TcQuadTree.cs</code>, <code>TcBoundingBoxesHolder.cs</code>, <code>TiBoundingBoxesHolder.cs</code>.</li>
+<li><strong>Verification:</strong> Test (split/merge behavior, query completeness).</li>
+</ul>
+<h3 id="fr-cad-krn-055-managed-unmanaged-gak-bridge">FR-CAD-KRN-055 — Managed / unmanaged (GAK) bridge</h3>
+<ul>
+<li><strong>Requirement:</strong> The C++/CLI <code>GeoAlgorithmsKernelAdapter</code> together with <code>TcGAKUnmanagedAdapter</code> SHALL bridge native CAD geometry into the managed GeoKernel. <code>TnGAKUnmanagedAdapterConversion</code> SHALL define POD adapter structs (<code>TsAdapterGeoVector</code>, <code>TsAdapterGeoSegment</code>, <code>TsAdapterGeoCurve</code>, <code>TsAdapterGeoSingleArea</code>, <code>TsAdapterGeoArea</code>, <code>TsAdapterBoundingBox</code>, <code>TsAdapterInterval</code>) and conversion functions mapping between native types (<code>TcVector</code>, <code>Element</code>, <code>Kontur</code>, <code>TCOKontur</code>, <code>Teil</code>, dbase <code>S_teil</code>, <code>TcTempTeil</code>) and those adapter structs, including a variant that applies a <code>TcTransformationMatrix</code> during vector conversion for absolute positioning. Native call sites SHALL invoke geometry algorithms through <code>TcGAKUnmanagedAdapter</code> (which forwards to the managed layer) rather than reimplementing them natively.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Round-trip conversion (native→adapter→managed and back to <code>TCOKontur</code>/<code>TcTempTeil</code>) must preserve geometry within kernel tolerance; open contours are ignored when converting <code>TcTempTeil</code>→<code>TsAdapterGeoArea</code> (documented). Unit consistency governed by FR-CAD-KRN-009.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The bridge lets the legacy native CAD core reuse the modern managed kernel, avoiding duplicate (and divergent) geometry code.</li>
+<li><strong>Source:</strong> <code>GeoAlgorithmsKernel/GAKUnmanagedAdapter/TcGAKUnmanagedAdapter.h</code>/<code>.cpp</code>, <code>TnGAKUnmanagedAdapterConversion.h</code>/<code>.cpp</code>; <code>GeoAlgorithmsKernel/GeoAlgorithmsKernelAdapter/</code> (<code>TcGeoAlgorithmsKernelAdapter</code>, <code>TcCallbacksAdapter</code>, <code>TcManagedUnmanagedObjectMap.h</code>).</li>
+<li><strong>Verification:</strong> Inspection (struct/function mapping), Test (native↔managed round-trip fidelity).</li>
+</ul>
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>Area orientation tolerance FIXME.</strong> <code>TcGeoCurve.Orientation</code> compares oriented area against <code>TOL·TOL</code> with an in-code note that this should be <code>TOL_AREA</code>. Degenerate/near-zero-area curves yield <code>UNDEFINED</code> and trigger a &quot;please report&quot; assertion — the intended production behavior for such contours is unspecified.</li>
+<li><strong>Full-circle-from-short-arc risk.</strong> The legacy tolerance-based <code>DoesLookLikeCircle</code> can misclassify a sufficiently short arc as a full circle (acknowledged in comments). The magnitude of arc that triggers this, and whether all call paths now use the explicit <code>isCircle</code> flag, is not established.</li>
+<li><strong>Mirror transforms on arcs.</strong> <code>TcGeoArcSegment.GetTransformedArcSegment</code> carries a TODO: a mirror (negative-determinant) matrix is applied without flipping arc orientation, which would invert the swept region. Whether callers ever pass mirror matrices to arcs is unverified.</li>
+<li><strong>Point-in-curve determinism vs. concurrency.</strong> <code>TcGeoIntersectionCurvePoint</code> seeds <code>Random(1)</code> for reproducible probe directions, but <code>TcMath.Rand</code> seeds from <code>DateTime.Now</code>. The interaction with <code>MULTITHREADING_ENABLED</code> (default false) and thread-safety of the point-in-curve static state is not documented.</li>
+<li><strong><code>IsOblongTool</code> unimplemented.</strong> <code>TcGeoShapeRecognizer.IsOblongTool</code> asserts false and returns false; the intended slot/oblong (Langloch) recognition algorithm and its tolerances are undefined here — possibly handled elsewhere (variant scripting, see [[10.5 - CAD Detail - Parametric Variants &amp; Scripting]]).</li>
+<li><strong>Tolerance source duality.</strong> Managed <code>TcDefinitions</code> holds a small fixed tolerance set, while native <code>TcToleranzContainer</code> enumerates 80+ purpose-specific tolerances from the database (<code>toleranz.asc</code>). How (and whether) the managed defaults are re-synchronized from the database per install/unit is not evidenced in the surveyed files.</li>
+<li><strong>Curve-segment overlap on open vs. closed segments.</strong> The &quot;interesting point&quot; sampling in <code>TcGeoIntersectionCurveSegment</code> uses a hard-coded arbitrary parameter (<code>0.123456789</code>) for a circle with no common points; the robustness of this choice against pathological curves is unverified.</li>
+<li><strong>geoPlan corner angle convention.</strong> <code>TcEcke.getWinkel</code> is described as &quot;angle in the good part&quot; (Gutteil); the exact reference (interior angle vs. turn angle) and its unit at the boundary between inner/outer classification were not confirmed from the header alone.</li>
+<li><strong>Native vs. managed authority.</strong> Some geometry (e.g. <code>tc_math</code> matrices, <code>tc_geoPlan</code>) still lives natively while equivalents exist in the managed kernel. Which layer is authoritative for a given CAD command (and where the bridge is invoked) requires call-graph analysis beyond the surveyed headers.</li>
+<li><strong>Degenerate/zero-length inputs.</strong> Several operations (<code>GetNormalized</code>, <code>PointToParameter</code>, <code>CreateParallelLineSegment</code>) divide by length with only debug-time assertions; release-mode behavior for zero-length segments (NaN propagation) and whether upstream commands always prevent them is not established.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-geometry-kernel-algorithms-doc-10.6-cad-detail-geometry-kernel-algorithms-id-prefix-fr-cad-krn-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Geometry Kernel Algorithms"
+doc: "10.6 - CAD Detail - Geometry Kernel Algorithms"
+id-prefix: "FR-CAD-KRN"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-001-immutable-2-d-vector-point-primitive">FR-CAD-KRN-001 — Immutable 2-D vector / point primitive</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-002-vector-arithmetic-operators">FR-CAD-KRN-002 — Vector arithmetic operators</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-003-absolute-angle-of-a-vector">FR-CAD-KRN-003 — Absolute angle of a vector</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-004-vector-equality-within-tolerance">FR-CAD-KRN-004 — Vector equality within tolerance</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-005-dot-product-and-2-d-cross-product">FR-CAD-KRN-005 — Dot product and 2-D cross product</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-006-orthogonal-rotation-and-normalization-operations">FR-CAD-KRN-006 — Orthogonal, rotation and normalization operations</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-007-direction-relation-tests-parallel-antiparallel-orthogonal-angle">FR-CAD-KRN-007 — Direction relation tests (parallel / antiparallel / orthogonal / angle)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-008-system-wide-tolerance-constants">FR-CAD-KRN-008 — System-wide tolerance constants</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-009-metric-inch-unit-consistency">FR-CAD-KRN-009 — Metric / inch unit consistency</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-010-abstract-segment-parameterization-contract">FR-CAD-KRN-010 — Abstract segment parameterization contract</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-011-finite-line-segment">FR-CAD-KRN-011 — Finite line segment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-012-arc-segment-representation-and-span-angle">FR-CAD-KRN-012 — Arc segment representation and span angle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-013-arc-full-circle-detection-and-handling">FR-CAD-KRN-013 — Arc full-circle detection and handling</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-014-arc-angle-parameter-mapping-and-on-arc-test">FR-CAD-KRN-014 — Arc angle ↔ parameter mapping and on-arc test</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-015-parallel-equidistant-offset-segment">FR-CAD-KRN-015 — Parallel / equidistant (offset) segment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-016-snap-parameter-to-segment-ends">FR-CAD-KRN-016 — Snap parameter to segment ends</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-017-segment-bounding-box">FR-CAD-KRN-017 — Segment bounding box</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-018-ordered-segment-chain-curve-kontur">FR-CAD-KRN-018 — Ordered segment chain (curve / Kontur)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-019-closed-contour-test">FR-CAD-KRN-019 — Closed-contour test</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-020-oriented-area-size-shoelace-arc-closed-form">FR-CAD-KRN-020 — Oriented area size (shoelace + arc closed form)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-021-contour-orientation-determination">FR-CAD-KRN-021 — Contour orientation determination</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-022-centroid-center-of-gravity">FR-CAD-KRN-022 — Centroid / center of gravity</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-023-single-area-with-outer-and-inner-curves">FR-CAD-KRN-023 — Single area with outer and inner curves</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-024-area-as-collection-of-single-areas">FR-CAD-KRN-024 — Area as collection of single areas</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-025-standard-form-and-curve-simplification">FR-CAD-KRN-025 — Standard form and curve simplification</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-026-segmentsegment-intersection-dispatcher">FR-CAD-KRN-026 — Segment–segment intersection dispatcher</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-027-lineline-intersection">FR-CAD-KRN-027 — Line–line intersection</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-028-linearc-intersection">FR-CAD-KRN-028 — Line–arc intersection</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-029-arcarc-intersection">FR-CAD-KRN-029 — Arc–arc intersection</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-030-intersection-relation-classification-model">FR-CAD-KRN-030 — Intersection relation classification model</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-031-bounding-box-set-operations">FR-CAD-KRN-031 — Bounding-box set operations</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-032-point-in-curve-ray-casting-test">FR-CAD-KRN-032 — Point-in-curve (ray-casting) test</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-033-curvesegment-relation">FR-CAD-KRN-033 — Curve–segment relation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-034-curvecurve-containment-relation">FR-CAD-KRN-034 — Curve–curve containment relation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-035-point-in-area-with-holes">FR-CAD-KRN-035 — Point-in-area (with holes)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-036-parameter-interval-arithmetic">FR-CAD-KRN-036 — Parameter-interval arithmetic</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-037-matrix-and-33-homogeneous-transform-representation">FR-CAD-KRN-037 — Matrix and 3×3 homogeneous transform representation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-038-transform-factories-and-composition">FR-CAD-KRN-038 — Transform factories and composition</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-039-transform-application-to-geometry">FR-CAD-KRN-039 — Transform application to geometry</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-040-native-44-transformation-matrix">FR-CAD-KRN-040 — Native 4×4 transformation matrix</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-041-line-point-distance-and-orthogonal-projection">FR-CAD-KRN-041 — Line-point distance and orthogonal projection</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-042-segment-point-nearest-distance">FR-CAD-KRN-042 — Segment-point nearest distance</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-043-nearest-vertex-edge-lookup">FR-CAD-KRN-043 — Nearest vertex / edge lookup</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-044-circle-arc-tangent-construction">FR-CAD-KRN-044 — Circle / arc tangent construction</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-045-shape-recognition-square-rectangle-round">FR-CAD-KRN-045 — Shape recognition (square / rectangle / round)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-046-curve-area-shape-predicates">FR-CAD-KRN-046 — Curve / area shape predicates</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-047-convex-hull-including-arcs-managed">FR-CAD-KRN-047 — Convex hull including arcs (managed)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-048-graham-scan-convex-hull-native">FR-CAD-KRN-048 — Graham-scan convex hull (native)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-049-geometry-equality-comparison">FR-CAD-KRN-049 — Geometry equality comparison</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-050-bounding-rectangle-rotated-bounding-box-and-main-direction">FR-CAD-KRN-050 — Bounding rectangle, rotated bounding box and main direction</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-051-topological-plan-graph-model-with-iterators">FR-CAD-KRN-051 — Topological plan / graph model with iterators</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-052-corner-classification-ecke">FR-CAD-KRN-052 — Corner classification (Ecke)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-053-dcel-half-edge-topology">FR-CAD-KRN-053 — DCEL half-edge topology</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-054-spatial-index-for-segments-quad-tree">FR-CAD-KRN-054 — Spatial index for segments (quad-tree)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-krn-055-managed-unmanaged-gak-bridge">FR-CAD-KRN-055 — Managed / unmanaged (GAK) bridge</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></span>
+ <span class="next"><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

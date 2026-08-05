@@ -1,0 +1,1861 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>104CADDetailAttributesSnappingSelectionLifecycle</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a class="active" href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>104CADDetailAttributesSnappingSelectionLifecycle</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-attributes-snapping-selection-drawing-lifecycle-doc-10.4-cad-detail-attributes-snapping-selection-lifecycle-id-prefix-fr-cad-att-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Attributes, Snapping, Selection &amp; Drawing Lifecycle&quot;
+doc: &quot;10.4 - CAD Detail - Attributes, Snapping, Selection &amp; Lifecycle&quot;
+id-prefix: &quot;FR-CAD-ATT&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-attributes-snapping-selection-drawing-lifecycle">CAD Detail — Attributes, Snapping, Selection &amp; Drawing Lifecycle</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Derived from static source analysis — reconstructed intent, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document is the fine-grained, command- and algorithm-level companion to the system-level summary in [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Where the parent states <em>that</em> the editor supports colour/style attributes, snapping, selection, undo/redo and a drawing lifecycle, this document specifies <em>how each individual mask (interactive command) and each kernel capability behaves</em> — parameters, options, modes, defaults, units, tolerances and degenerate cases.</p>
+<p>It refines the following parent requirements:</p>
+<table>
+<thead>
+<tr>
+<th>Parent requirement</th>
+<th>Refined by (this doc)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>FR-CAD-023</strong> Element colour &amp; line-style attributes</td>
+<td>FR-CAD-ATT-001 … 014</td>
+</tr>
+<tr>
+<td><strong>FR-CAD-024</strong> Point snapping (Fangen)</td>
+<td>FR-CAD-ATT-015 … 023</td>
+</tr>
+<tr>
+<td><strong>FR-CAD-009 / 014 / 017 / 032</strong> contour/selection ops</td>
+<td>FR-CAD-ATT-024 … 040</td>
+</tr>
+<tr>
+<td><strong>FR-CAD-034</strong> Undo &amp; redo</td>
+<td>FR-CAD-ATT-041 … 048</td>
+</tr>
+<tr>
+<td><strong>FR-CAD-030</strong> Scale drawing; lifecycle (new/open/save)</td>
+<td>FR-CAD-ATT-049 … 063</td>
+</tr>
+<tr>
+<td>(unit/tolerance foundation, cross-cutting)</td>
+<td>FR-CAD-ATT-064 … 066</td>
+</tr>
+</tbody>
+</table>
+<p><strong>In scope:</strong> the 16-entry GRIT line-colour palette (index 0–15) and the 9 line styles; the colour-as-layer-surrogate model and DXF layer↔colour/style mapping; the snapping subsystem (<code>fangen</code>) — mode/what, kind/how, scope/where, region/area, radius, catch conditions, disable, tracers, per-element catch algorithms; interactive selection (pick/box/confirm/all) with mode/method/focus/scope filters; marking; the contour assistant; the undo/redo transaction model; the native drawing lifecycle (new/open/save/save-as/save-selection/workfile/close/scale) including the Geo read/write facades and <code>cad_load</code>/<code>cad_store</code>; and the metric/inch (<code>gritunit</code>) unit duality with the tolerance container.</p>
+<p><strong>Out of scope / covered elsewhere:</strong> geometry creation and editing commands ([[10.1 - CAD Detail - Geometry Creation Commands]], [[10.2 - CAD Detail - Editing &amp; Transformation Commands]]); dimensioning ([[10.3 - CAD Detail - Dimensioning Commands]]); variants/scripting ([[10.5 - CAD Detail - Parametric Variants &amp; Scripting]]); contour-arithmetic internals of melt/close ([[10.7 - CAD Detail - Contour Arithmetic Algorithms]]); import/export file-format details for non-native formats ([[11 - FR - Import, Export &amp; File Formats]]). Domain terms link to [[04 - Domain Model &amp; Glossary]].</p>
+<blockquote>
+<p><strong>Interpreter model.</strong> Commands live as <em>masks</em> in <code>tc_bof/aCadFunc.gritx</code> (176 masks total). Each mask's <code>EnterFunction</code> runs an MMK-interpreter script that opens dialogs (<code>dialog_box</code>) and drives the C++ finite-state automata via <code>asm_call( … )</code>. The automata (e.g. <code>color</code>, <code>line_type</code>, <code>undo</code>, <code>load</code>, <code>store</code>) are defined in <code>tc_cad/**</code>, and mutate the dbase model (<code>S_draw</code>/<code>S_teil</code>/<code>S_kontur</code>/<code>S_element</code>) in <code>tc_dbase/**</code>. <code>aCad*</code> masks are the full interactive commands; <code>tCad*</code> masks are thin, parameterised entry points (typically called from ribbon/tool buttons) that pass a <code>_Par0</code>/<code>_Par1</code> argument straight to an <code>asm_call</code>.</p>
+</blockquote>
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Name (mask / class / API)</th>
+<th>German / plain meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>color</code> automaton, <code>set_color_index</code>, <code>tCadSetColor</code></td>
+<td>set active line colour</td>
+<td>FR-CAD-ATT-001</td>
+</tr>
+<tr>
+<td><code>line_type</code> automaton, <code>set_linetype_index</code>, <code>tCadSetType</code></td>
+<td>set active line style</td>
+<td>FR-CAD-ATT-002</td>
+</tr>
+<tr>
+<td><code>color change</code> (pick), <code>aCadChangeElemColorSelection</code>, <code>tCadChangeElemColorSelection</code></td>
+<td>recolour picked/confirmed elements</td>
+<td>FR-CAD-ATT-003</td>
+</tr>
+<tr>
+<td><code>color change all</code>, <code>aCadChangeElemColorAll</code></td>
+<td>recolour all elements</td>
+<td>FR-CAD-ATT-004</td>
+</tr>
+<tr>
+<td><code>color change replace</code>, <code>f_replace_farbe</code></td>
+<td>replace one colour by another everywhere</td>
+<td>FR-CAD-ATT-005</td>
+</tr>
+<tr>
+<td><code>line_type change</code> (pick), <code>aCadChangeElemStyleSelection</code>, <code>tCadChangeElemStyleSelection</code></td>
+<td>restyle picked/confirmed elements</td>
+<td>FR-CAD-ATT-006</td>
+</tr>
+<tr>
+<td><code>line_type change all</code>, <code>aCadChangeElemStyleAll</code></td>
+<td>restyle all elements</td>
+<td>FR-CAD-ATT-007</td>
+</tr>
+<tr>
+<td><code>line_type change replace</code>, <code>f_replace_linetype</code></td>
+<td>replace one style by another everywhere</td>
+<td>FR-CAD-ATT-008</td>
+</tr>
+<tr>
+<td>GRIT palette 0–15, <code>M_MenueZeichnungAuswahlLinCol</code></td>
+<td>16-entry line-colour palette</td>
+<td>FR-CAD-ATT-009</td>
+</tr>
+<tr>
+<td><code>aCadChangeActSettings</code></td>
+<td>set active colour <strong>and</strong> style together</td>
+<td>FR-CAD-ATT-010</td>
+</tr>
+<tr>
+<td><code>attribute keep\|no_keep</code>, <code>tCadSetAttribute</code>, <code>tCadChangeAttributeKeep</code></td>
+<td>keep-attributes-on-edit toggle</td>
+<td>FR-CAD-ATT-011</td>
+</tr>
+<tr>
+<td>colour-as-layer semantics, <code>removeColorElements</code>, <code>e_ignoreColorElements</code></td>
+<td>white=cut / yellow=mark classification</td>
+<td>FR-CAD-ATT-012</td>
+</tr>
+<tr>
+<td><code>getLayerColor</code>, <code>lese_layer_im_layer</code></td>
+<td>DXF layer → colour/style on import</td>
+<td>FR-CAD-ATT-013</td>
+</tr>
+<tr>
+<td><code>schreibe_layer</code>, <code>schreibe_line_style</code></td>
+<td>colour/style → DXF layer/linetype on export</td>
+<td>FR-CAD-ATT-014</td>
+</tr>
+<tr>
+<td><code>db_setze_fang_modus</code>, <code>TnCatchMode</code></td>
+<td>snap mode (WHAT to catch)</td>
+<td>FR-CAD-ATT-015</td>
+</tr>
+<tr>
+<td><code>db_setze_fang_art</code>, <code>TnCatchType</code></td>
+<td>snap kind (HOW to catch)</td>
+<td>FR-CAD-ATT-016</td>
+</tr>
+<tr>
+<td><code>db_setze_fang_bereich</code>, <code>Fang_bereich</code>, <code>TeScope</code></td>
+<td>snap scope (which parts)</td>
+<td>FR-CAD-ATT-017</td>
+</tr>
+<tr>
+<td><code>db_setze_fang_gebiet</code>, <code>TeFangGebiet</code></td>
+<td>snap region/area (box)</td>
+<td>FR-CAD-ATT-018</td>
+</tr>
+<tr>
+<td><code>db_set_fanggroesse</code> / <code>db_reset_fanggroesse</code></td>
+<td>snap radius</td>
+<td>FR-CAD-ATT-019</td>
+</tr>
+<tr>
+<td><code>Fang_bedingung</code>, <code>db_setzeFangBedingung*</code></td>
+<td>catch on elem / equidistant / auxiliary</td>
+<td>FR-CAD-ATT-020</td>
+</tr>
+<tr>
+<td><code>db_setCatchOffForSomeActions</code>, <code>e_catchNothing</code></td>
+<td>disable snapping</td>
+<td>FR-CAD-ATT-021</td>
+</tr>
+<tr>
+<td><code>suche_best_pick_result</code>, <code>TeSelectorTracerType</code></td>
+<td>best-pick resolution &amp; tracers</td>
+<td>FR-CAD-ATT-022</td>
+</tr>
+<tr>
+<td><code>fange_kreis/bogen/linie/spline/text/hkreis/hlinie/pfeil/viereck</code></td>
+<td>per-element-type catch algorithms</td>
+<td>FR-CAD-ATT-023</td>
+</tr>
+<tr>
+<td><code>TiSelectionController</code> (pick/box/confirm/all)</td>
+<td>selection controller</td>
+<td>FR-CAD-ATT-024</td>
+</tr>
+<tr>
+<td><code>TeSelectionMode</code></td>
+<td>single / multiple-add / multiple-invert</td>
+<td>FR-CAD-ATT-025</td>
+</tr>
+<tr>
+<td><code>TeSelectionMethod</code></td>
+<td>pick / box / pick-and-box</td>
+<td>FR-CAD-ATT-026</td>
+</tr>
+<tr>
+<td><code>TiDbaseSelectorFactory::TeFocus</code></td>
+<td>selection focus filter (what units)</td>
+<td>FR-CAD-ATT-027</td>
+</tr>
+<tr>
+<td><code>TiDbaseSelectorFactory::TeScope</code></td>
+<td>selection scope filter (where)</td>
+<td>FR-CAD-ATT-028</td>
+</tr>
+<tr>
+<td><code>TeSelectorState</code>, <code>TeSelectorPreview</code>, <code>TeSelectionInfoLevel</code></td>
+<td>selector state / preview / info</td>
+<td>FR-CAD-ATT-029</td>
+</tr>
+<tr>
+<td><code>aCadMarkElem</code> / <code>aCadDemarkElem</code> (<code>marking on\|off</code>)</td>
+<td>mark / unmark elements</td>
+<td>FR-CAD-ATT-030</td>
+</tr>
+<tr>
+<td><code>aCadMarkContour</code> (<code>marking on contour[ part]</code>)</td>
+<td>mark contours</td>
+<td>FR-CAD-ATT-031</td>
+</tr>
+<tr>
+<td><code>aCadMarkBendline</code> / <code>aCadDemarkBendline</code> (<code>bend sample</code>)</td>
+<td>sample / unsample bend lines</td>
+<td>FR-CAD-ATT-032</td>
+</tr>
+<tr>
+<td><code>aCadAssiContourStart/Next/Zoom</code> (<code>assist contour</code>)</td>
+<td>outer-contour assistant walk</td>
+<td>FR-CAD-ATT-033</td>
+</tr>
+<tr>
+<td><code>aCadAssiContourMark/Delete/Color</code></td>
+<td>assistant per-contour actions</td>
+<td>FR-CAD-ATT-034</td>
+</tr>
+<tr>
+<td><code>tCadAssiContourSetFather</code> (<code>relative\|absolute</code>)</td>
+<td>assistant father/nesting mode</td>
+<td>FR-CAD-ATT-035</td>
+</tr>
+<tr>
+<td><code>aCadDeleteSelection</code>, <code>aCadDeleteContour</code></td>
+<td>delete selection / contour</td>
+<td>FR-CAD-ATT-036</td>
+</tr>
+<tr>
+<td><code>aCadCloseContour</code>, <code>aCadMeltContours</code>, <code>aCadHatchContour</code></td>
+<td>selection-driven contour ops</td>
+<td>FR-CAD-ATT-037</td>
+</tr>
+<tr>
+<td><code>db_fange_sel_attribut[_rekursiv]</code></td>
+<td>attribute-based selection</td>
+<td>FR-CAD-ATT-038</td>
+</tr>
+<tr>
+<td><code>aCadUndo</code> (<code>undo 1</code>)</td>
+<td>undo</td>
+<td>FR-CAD-ATT-039</td>
+</tr>
+<tr>
+<td><code>aCadRedo</code> (<code>redo 1</code>)</td>
+<td>redo</td>
+<td>FR-CAD-ATT-040</td>
+</tr>
+<tr>
+<td><code>undo sequenz start/stop</code>, <code>TcUndoManager</code> transactions</td>
+<td>transaction grouping</td>
+<td>FR-CAD-ATT-041</td>
+</tr>
+<tr>
+<td><code>undo clear</code>, <code>resetUndoActions</code>/<code>resetRedoActions</code></td>
+<td>clear undo history</td>
+<td>FR-CAD-ATT-042</td>
+</tr>
+<tr>
+<td><code>TcDbaseActionManager</code>, mementos, <code>TcDbaseChange*Action</code></td>
+<td>dbase action/memento model</td>
+<td>FR-CAD-ATT-043</td>
+</tr>
+<tr>
+<td><code>TcASMUndo</code>, <code>TiUndoPossibleNotify</code></td>
+<td>undo/redo button enablement</td>
+<td>FR-CAD-ATT-044</td>
+</tr>
+<tr>
+<td><code>aCadProfEdUndo</code> / <code>aCadProfEdRedo</code></td>
+<td>profile-editor undo/redo</td>
+<td>FR-CAD-ATT-045</td>
+</tr>
+<tr>
+<td><code>TcUndoManager(maxSize)</code></td>
+<td>bounded history</td>
+<td>FR-CAD-ATT-046</td>
+</tr>
+<tr>
+<td><code>aCadNewDrawing</code></td>
+<td>new drawing</td>
+<td>FR-CAD-ATT-047</td>
+</tr>
+<tr>
+<td><code>tCadLoadDrawing</code>, <code>aCadModusLoad</code></td>
+<td>open/load drawing (format dispatch)</td>
+<td>FR-CAD-ATT-048</td>
+</tr>
+<tr>
+<td><code>tCadOpenFile</code></td>
+<td>open file by name (extension detect)</td>
+<td>FR-CAD-ATT-049</td>
+</tr>
+<tr>
+<td><code>aCadSaveDrawing</code>, <code>aCadModusSave</code>, <code>FUNC_CAD_Store</code></td>
+<td>save</td>
+<td>FR-CAD-ATT-050</td>
+</tr>
+<tr>
+<td><code>aCadSaveAsDrawing</code>, <code>aCadModusSaveAs</code></td>
+<td>save-as (format + password gating)</td>
+<td>FR-CAD-ATT-051</td>
+</tr>
+<tr>
+<td><code>aCadSaveDrawingSelection</code> (<code>tCadExtractPart</code>)</td>
+<td>save selection</td>
+<td>FR-CAD-ATT-052</td>
+</tr>
+<tr>
+<td><code>aCadSaveWorkfile</code> / <code>aCadLoadWorkfile</code></td>
+<td>write / read workfile</td>
+<td>FR-CAD-ATT-053</td>
+</tr>
+<tr>
+<td><code>FUNC_CAD_AskStoreAndContinue</code>, <code>somethingchanged</code></td>
+<td>unsaved-changes guard</td>
+<td>FR-CAD-ATT-054</td>
+</tr>
+<tr>
+<td><code>aCadCloseCad</code>, <code>aCadModusExit</code></td>
+<td>close / exit mode</td>
+<td>FR-CAD-ATT-055</td>
+</tr>
+<tr>
+<td><code>aCadChangeToDaten</code>, <code>aCadOpenDaten</code></td>
+<td>switch to data mode</td>
+<td>FR-CAD-ATT-056</td>
+</tr>
+<tr>
+<td><code>aCadScaleDrawing</code> (<code>M_Skalierung</code>)</td>
+<td>scale whole drawing</td>
+<td>FR-CAD-ATT-057</td>
+</tr>
+<tr>
+<td><code>TcGeoImportFacade</code></td>
+<td>native Geo read facade</td>
+<td>FR-CAD-ATT-058</td>
+</tr>
+<tr>
+<td><code>TcGeoExportFacade</code></td>
+<td>native Geo write facade</td>
+<td>FR-CAD-ATT-059</td>
+</tr>
+<tr>
+<td><code>cad_load</code> / <code>cad_store</code></td>
+<td>core load/store engine &amp; flags</td>
+<td>FR-CAD-ATT-060</td>
+</tr>
+<tr>
+<td>MRU ring buffer, <code>setWindowTitle</code></td>
+<td>recent-files &amp; title</td>
+<td>FR-CAD-ATT-061</td>
+</tr>
+<tr>
+<td><code>GRITUNIT</code>, <code>TeUnit</code>, <code>einheits_wert_to_gritunit</code></td>
+<td>metric/inch unit duality</td>
+<td>FR-CAD-ATT-062</td>
+</tr>
+<tr>
+<td><code>TcToleranzContainer</code></td>
+<td>unit-specific tolerance container</td>
+<td>FR-CAD-ATT-063</td>
+</tr>
+<tr>
+<td><code>setUnits</code>/<code>getUnits</code>, <code>info write … einheit</code></td>
+<td>persist unit flag with drawing</td>
+<td>FR-CAD-ATT-064</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="line-colour-line-style-attributes">3.1 Line colour &amp; line-style attributes</h3>
+<h3 id="fr-cad-att-001-set-active-line-colour">FR-CAD-ATT-001 — Set active line colour</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a command to set the <em>active</em> line colour used for all subsequently created contour, text and marker elements; on selection of a colour it SHALL call <code>set_color_index(farbe)</code> which sets the contour, text and marker default colour on the element initializer and updates the drawing background/feedback pen accordingly.</li>
+<li><strong>Parameters &amp; options:</strong> Named colours accepted by the <code>color</code> automaton and mapped by <code>befehl_to_farbe</code>: <code>white</code>(1), <code>black</code>(0), <code>red</code>(2), <code>green</code>(4), <code>blue</code>(6), <code>cyan</code>(5), <code>magenta</code>(7), <code>yellow</code>(3) → <code>TnColor::TeColor</code>. <code>tCadSetColor_Par0</code> ∈ {<code>c_white</code>,<code>c_red</code>,<code>c_yellow</code>,<code>c_green</code>,<code>c_cyan</code>,<code>c_blue</code>,<code>c_magenta</code>,<code>c_black</code>}; unknown → <code>white</code> (default). Initial active colour = <code>TnColor::e_white</code>. A non-positive index is rejected with message 206.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The active colour is the primary element-classification default; colour is used in place of named layers (see FR-CAD-ATT-012).</li>
+<li><strong>Source:</strong> <code>tc_bof/aCadFunc.gritx</code> <code>tCadSetColor</code> (L44613); <code>tc_cad/cad_asm/color.cpp</code> <code>set_color_index</code>, <code>farb_fkt</code>, <code>init_color_befehl</code>; <code>tc_cad/allg_asm/cline.cpp</code> <code>befehl_to_farbe</code>; <code>tc_visualize/visDefines.h</code> <code>TnColor::TeColor</code>.</li>
+<li><strong>Verification:</strong> Test — set each colour, create an element, inspect stored <code>S_element.farbe</code>.</li>
+</ul>
+<h3 id="fr-cad-att-002-set-active-line-style">FR-CAD-ATT-002 — Set active line style</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a command to set the <em>active</em> line style for subsequently created elements; on selection it SHALL call <code>set_linetype_index(linetype)</code> which sets the contour style on the element initializer, updates the GUI style-preview text and emits confirmation message 208 (or 209 for a negative index).</li>
+<li><strong>Parameters &amp; options:</strong> 9 styles (<code>TC_MAX_ANZ_LINETYPES = 9</code>): <code>TC_SOLID</code>(0), <code>TC_DASH</code>(1), <code>TC_DOT</code>(2), <code>TC_DASH_DOT</code>(3), <code>TC_DASH_DOT_DOT</code>(4), <code>TC_LONG_DASH</code>(5), <code>TC_CENTER_DASH</code>(6), <code>TC_CENTER_DASH_DASH</code>(7), <code>TC_SOLID_THICK</code>(8). Automaton tokens: <code>solid</code>,<code>dash</code>,<code>dot</code>,<code>dash_dot</code>,<code>dash_dot_dot</code>,<code>long_dash</code>, plus a raw <code>ASM_INTEGER</code> index. <code>tCadSetType_Par0</code> ∈ {<code>c_solid</code>,<code>c_dash</code>,<code>c_dot</code>,<code>c_dash_dot</code>}; unknown → <code>solid</code>. Default active style = <code>TC_SOLID</code>. <strong>Note:</strong> the interactive preview text only distinguishes solid/dash/dash_dot/dot; styles 4–8 fall back to the solid preview text.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Line style classifies elements (e.g. construction vs. cut) and is preserved in native Geo and mapped to DXF linetypes.</li>
+<li><strong>Source:</strong> <code>tCadSetType</code> (L45137); <code>tc_cad/cad_asm/linetype.cpp</code> <code>set_linetype_index</code>, <code>linetype_fkt</code>, <code>linetype_zahl_fkt</code>; <code>cline.cpp</code> <code>befehl_to_linetype</code>; <code>visDefines.h</code> line-art constants.</li>
+<li><strong>Verification:</strong> Test — set each style, create an element, inspect stored <code>S_element.art</code>.</li>
+</ul>
+<h3 id="fr-cad-att-003-change-colour-of-picked-confirmed-elements">FR-CAD-ATT-003 — Change colour of picked / confirmed elements</h3>
+<ul>
+<li><strong>Requirement:</strong> When the &quot;change colour&quot; option is active, the system shall let the user select a target colour and then recolour interactively picked, box-selected or confirmed elements via a <code>TcDbaseChangeColorCommand</code>, executing the change only when the confirmed-selection count is greater than zero and then clearing the selection.</li>
+<li><strong>Parameters &amp; options:</strong> Enter via <code>color … change &lt;colour&gt;</code>; per-pick handler <code>change_col(x,y)</code> picks then executes; <code>change_col_confirm</code> executes on the confirmed set; the feedback selector is <code>createSelector(e_allParts, e_elements)</code>; info level <code>e_selectInfoCount</code>. <code>tCadChangeElemColorSelection_Par0</code> selects the target colour token; <code>aCadChangeElemColorSelection</code> first resolves the GRIT palette index to a colour name then issues <code>asm_call( end color change &lt;name&gt; )</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Editing element classification after creation is a core CAD task.</li>
+<li><strong>Source:</strong> <code>aCadChangeElemColorSelection</code> (L3195), <code>tCadChangeElemColorSelection</code> (L38156); <code>color.cpp</code> <code>set_change_col</code>,<code>change_col</code>,<code>change_col_confirm</code>,<code>change_col_execute</code>; <code>tc_cad/cad_asm/color.cpp</code> uses <code>TcDbaseChangeColorCommand</code>.</li>
+<li><strong>Verification:</strong> Test — pick two elements, apply red, confirm both become <code>e_red</code>; verify empty selection cannot execute.</li>
+</ul>
+<h3 id="fr-cad-att-004-change-colour-of-all-elements">FR-CAD-ATT-004 — Change colour of all elements</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses &quot;all&quot; during colour change, the system shall recolour every element in the active scope to the selected colour in a single command (<code>change_col_all</code> → <code>controller-&gt;all()</code> → <code>TcDbaseChangeColorCommand::execute</code>).</li>
+<li><strong>Parameters &amp; options:</strong> Automaton token <code>YACC_ALL</code>; <code>aCadChangeElemColorAll</code> opens <code>M_ZeichnungKopiereFarbe</code> then issues the returned <code>asm_call</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Bulk reclassification (e.g. make everything a cut colour).</li>
+<li><strong>Source:</strong> <code>aCadChangeElemColorAll</code> (L2953); <code>color.cpp</code> <code>change_col_all</code>.</li>
+<li><strong>Verification:</strong> Test — apply &quot;all → white&quot;; verify every element becomes <code>e_white</code>.</li>
+</ul>
+<h3 id="fr-cad-att-005-replace-one-colour-by-another-recolour-by-attribute">FR-CAD-ATT-005 — Replace one colour by another (recolour by attribute)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user selects the &quot;replace&quot; colour option, the system shall gather <em>all</em> elements currently carrying a specified old colour (via <code>db_fange_sel_attribut_rekursiv(..., farbe=oldColor, art=-1)</code>), fix any pending change first, and recolour that set to the new active colour.</li>
+<li><strong>Parameters &amp; options:</strong> Two-colour interaction: old colour picked in state <code>z6</code>, new colour previously set; catch list keyed on <code>fang_kenn = e_catchElements</code>, <code>aend_kenn = AENDERE_ELEM</code>. <code>-1</code> means &quot;ignore this attribute&quot;.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Global remap of a classification colour without manual picking.</li>
+<li><strong>Source:</strong> <code>color.cpp</code> <code>f_replace_farbe</code>; <code>tc_dbase/fang_sel.h</code> <code>db_fange_sel_attribut_rekursiv</code>.</li>
+<li><strong>Verification:</strong> Test — with mixed colours, replace red→blue; verify only red elements changed.</li>
+</ul>
+<h3 id="fr-cad-att-006-change-line-style-of-picked-confirmed-elements">FR-CAD-ATT-006 — Change line style of picked / confirmed elements</h3>
+<ul>
+<li><strong>Requirement:</strong> When the &quot;change style&quot; option is active, the system shall let the user select a target style and restyle interactively picked, box-selected or confirmed elements via a <code>TcDbaseChangeStyleCommand</code>, executing only when the confirmed-selection count is greater than zero.</li>
+<li><strong>Parameters &amp; options:</strong> <code>line_type … change &lt;style&gt;</code>; handlers <code>change_lt</code>, <code>change_lt_confirm</code>, <code>change_lt_execute</code>; selector <code>createSelector(e_allParts, e_elements)</code>. <code>tCadChangeElemStyleSelection_Par0</code> ∈ {<code>c_solid</code>,<code>c_dash</code>,<code>c_dot</code>,<code>c_dash_dot</code>} → <code>asm_call( end line_type change &lt;style&gt; )</code>; unknown → <code>solid</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Post-creation restyling mirrors recolouring.</li>
+<li><strong>Source:</strong> <code>aCadChangeElemStyleSelection</code> (L3750), <code>tCadChangeElemStyleSelection</code> (L38428); <code>linetype.cpp</code> <code>set_change_lt</code>,<code>change_lt*</code>.</li>
+<li><strong>Verification:</strong> Test — pick element, apply dash, verify <code>art == TC_DASH</code>.</li>
+</ul>
+<h3 id="fr-cad-att-007-change-line-style-of-all-elements">FR-CAD-ATT-007 — Change line style of all elements</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses &quot;all&quot; during style change, the system shall restyle every element in the active scope to the selected style (<code>change_lt_all</code> → <code>controller-&gt;all()</code>).</li>
+<li><strong>Parameters &amp; options:</strong> <code>YACC_ALL</code>; <code>aCadChangeElemStyleAll</code> opens <code>M_ZeichnungKopiereArt</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Bulk restyling.</li>
+<li><strong>Source:</strong> <code>aCadChangeElemStyleAll</code> (L3508); <code>linetype.cpp</code> <code>change_lt_all</code>.</li>
+<li><strong>Verification:</strong> Test — apply &quot;all → solid&quot;; verify uniform style.</li>
+</ul>
+<h3 id="fr-cad-att-008-replace-one-line-style-by-another-restyle-by-attribute">FR-CAD-ATT-008 — Replace one line style by another (restyle by attribute)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user selects the &quot;replace&quot; style option, the system shall gather all elements carrying a specified old style (via <code>db_fange_sel_attribut_rekursiv(..., farbe=-1, art=oldType)</code>), fix any pending change first, and restyle that set to the new active style.</li>
+<li><strong>Parameters &amp; options:</strong> As FR-CAD-ATT-005 but keyed on <code>art</code> (line style) rather than colour.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Global style remap (e.g. dot→dash).</li>
+<li><strong>Source:</strong> <code>linetype.cpp</code> <code>f_replace_linetype</code>; <code>fang_sel.h</code>.</li>
+<li><strong>Verification:</strong> Test — restyle all dotted → dashed; verify only dotted changed.</li>
+</ul>
+<h3 id="fr-cad-att-009-16-entry-grit-line-colour-palette-index-015">FR-CAD-ATT-009 — 16-entry GRIT line-colour palette (index 0–15)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall present a line-colour chooser dialog offering a 16-entry palette indexed 0–15 (GRIT display palette), and shall translate the chosen GRIT index into the corresponding ToPs colour name before activating it.</li>
+<li><strong>Parameters &amp; options:</strong> Dialog <code>M_MenueZeichnungAuswahlLinCol</code>; result on <code>O_AktLineColor</code>. Index→name map (from the mask scripts): 15→white, 14→brown, 13→lightmagenta, 12→red, 11→cyan, 10→green, 9→blue, 8→grey53, 7→white, 6→yellow, 5→magenta, 4→red, 3→cyan, 2→limegreen, 1→blue, 0→black. Palette file configured by <code>GRITCOLOR= …\GRITCOL.24</code>. <strong>Ambiguity:</strong> the ToPs element model (<code>TnColor::TeColor</code>) has only 11 semantic colours (0–10); several GRIT indices collapse onto the same ToPs colour, and index 2 maps to <code>limegreen</code> in the settings/colour masks but to the default (<code>white</code>) in the contour-assistant recolour map — see Open Questions.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The GRIT palette is the user-facing colour set; only a subset carries machining semantics.</li>
+<li><strong>Source:</strong> <code>aCadChangeActSettings</code> (L1633), <code>aCadAssiContourColor</code> (L16), <code>aCadChangeElemColorSelection</code> (L3195); dialog <code>M_MenueZeichnungAuswahlLinCol</code>; <code>ini_files/ToPsCad/GritCad.org</code> <code>GRITCOLOR</code>; <code>visDefines.h</code> <code>TnColor::TeColor</code>.</li>
+<li><strong>Verification:</strong> Inspection — enumerate palette entries in the dialog against the index→name table.</li>
+</ul>
+<h3 id="fr-cad-att-010-set-active-colour-and-style-together">FR-CAD-ATT-010 — Set active colour and style together</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a combined &quot;current settings&quot; command that lets the user pick both an active line colour (GRIT index) and an active line style from one dialog and applies both (<code>asm_call( color &lt;name&gt; )</code> then <code>asm_call( line_type &lt;style&gt; )</code>), also recolouring the settings-scroll-field label.</li>
+<li><strong>Parameters &amp; options:</strong> Dialog <code>M_MenueZeichnungAuswahlLinCol</code>; outputs <code>O_AktLineColor</code>,<code>O_AktLineTyp</code>; style preview text via <code>db_get_text(10011)</code> (solid) or literal dash/dot patterns. Empty selections leave the respective attribute unchanged.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Convenience: set both drawing defaults at once.</li>
+<li><strong>Source:</strong> <code>aCadChangeActSettings</code> (L1633).</li>
+<li><strong>Verification:</strong> Demonstration — pick colour+style; verify both defaults and the label update.</li>
+</ul>
+<h3 id="fr-cad-att-011-keep-attributes-on-edit-toggle">FR-CAD-ATT-011 — Keep-attributes-on-edit toggle</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a toggle controlling whether elements retain their existing attributes when edited: <code>attribute keep</code> preserves attributes, <code>attribute no_keep</code> lets edits overwrite them; the current state SHALL be reflected in <code>ST_AktAttributeChange</code> and the scroll label (<code>db_get_text 10649/10650</code>).</li>
+<li><strong>Parameters &amp; options:</strong> <code>tCadSetAttribute_Par0</code> = <code>c_fixed</code> → keep, else no_keep. <code>tCadChangeAttributeKeep_Par0</code> = 1 → keep (<code>ST_AktAttributeChange=0</code>), else no_keep (<code>=1</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Controls whether transformations/copies inherit or reset element attributes.</li>
+<li><strong>Source:</strong> <code>tCadSetAttribute</code> (L44366), <code>tCadChangeAttributeKeep</code> (L37903).</li>
+<li><strong>Verification:</strong> Test — with keep on/off, edit an element and verify attribute retention.</li>
+</ul>
+<h3 id="fr-cad-att-012-colour-as-layer-surrogate-semantics-whitecut-yellowmark">FR-CAD-ATT-012 — Colour-as-layer-surrogate semantics (white=cut, yellow=mark)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall treat element colour as the machining-classification surrogate for layers: white elements denote cutting geometry and yellow elements denote marking/scribing geometry; where an import is configured to ignore coloured elements, the importer SHALL remove all elements except white (cut) and yellow (mark).</li>
+<li><strong>Parameters &amp; options:</strong> Import option <code>TcGeoImportFacade::e_ignoreColorElements</code>; <code>removeColorElements()</code> documented as &quot;only white (schneiden) and yellow (kennzeichnen) elements remain&quot;. No named-layer object exists in the native model.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> TruTops CAD has no named layers; colour is the only per-element classification carried into downstream technology (cut vs. mark).</li>
+<li><strong>Source:</strong> <code>TcGeoImportFacade.h</code> <code>e_ignoreColorElements</code> (L86), <code>removeColorElements</code> (L840); <code>visDefines.h</code> <code>TnColor</code>.</li>
+<li><strong>Verification:</strong> Analysis/Test — import with ignore-colour set; verify only white+yellow survive.</li>
+</ul>
+<h3 id="fr-cad-att-013-dxf-layer-colourstyle-mapping-on-import">FR-CAD-ATT-013 — DXF layer → colour/style mapping on import</h3>
+<ul>
+<li><strong>Requirement:</strong> When reading a DXF file, the system shall read each layer's colour code and linetype name into a layer table and derive the imported element colour/style from the layer (via <code>getLayerColor(layerName, color)</code>), and shall record frozen layers and switched-off layers (encoded as a negative layer colour) so that they can be optionally imported per the conversion options.</li>
+<li><strong>Parameters &amp; options:</strong> Layer record fields <code>S_Layer.farbe</code> (DXF colour code; negative ⇒ layer off, magnitude retained), <code>S_Layer.linename</code> (DXF linetype), plus frozen flag → <code>add_dxf_frozen_layer</code>, off → <code>add_dxf_off_layer</code>. Conversion options <code>e_dxfFrozenLayer</code>, <code>e_dxfOffLayer</code>, <code>e_dxfBlockSection</code>, <code>e_dxfAutoPrepare</code>; filters <code>e_dxfTempLayer</code>,<code>e_dxfAddLayer</code>,<code>e_dxfBlock</code>,<code>e_dxfLayout</code> (layer/layout selection).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> DXF layers are the external analogue of TruTops colours; mapping preserves classification.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_tabl.h</code> <code>getLayerColor</code>; <code>tc_dxf/dxf_tabl.cpp</code> <code>lese_layer_im_layer</code> (farbe/linename/frozen/off, L390–476); <code>TcGeoImportFacade.h</code> <code>TeConversionOption</code>/<code>TeConversionFilter</code>.</li>
+<li><strong>Verification:</strong> Test — import a DXF with coloured/frozen/off layers; verify element colours and layer handling per options.</li>
+</ul>
+<h3 id="fr-cad-att-014-colourstyle-dxf-layerlinetype-mapping-on-export">FR-CAD-ATT-014 — Colour/style → DXF layer/linetype mapping on export</h3>
+<ul>
+<li><strong>Requirement:</strong> When writing DXF, the system shall map each element's colour to a DXF layer name and its line style to a DXF linetype name.</li>
+<li><strong>Parameters &amp; options:</strong> Colour→layer (<code>schreibe_layer</code>, group 8): black→BLACK, red→RED, yellow→YELLOW, green→GREEN, cyan→CYAN, blue→BLUE, magenta→MAGENTA, default→WHITE. Style→linetype (<code>schreibe_line_style</code>, group 6): SOLID→CONTINUOUS, DASH→HIDDEN, DOT→DOT, DASH_DOT→DASHDOT, DASH_DOT_DOT→DIVIDE, LONG_DASH→DASHED, CENTER_DASH→CENTER, CENTER_DASH_DASH→BORDER, default→CONTINUOUS.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Round-trips TruTops classification into DXF's layer/linetype conventions.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxfutil.cpp</code> <code>schreibe_layer</code> (L145), <code>schreibe_line_style</code> (L194).</li>
+<li><strong>Verification:</strong> Test — export coloured/styled geometry to DXF; grep layer/linetype names.</li>
+</ul>
+<h3 id="point-snapping-fangen">3.2 Point snapping (Fangen)</h3>
+<h3 id="fr-cad-att-015-snap-mode-what-to-catch">FR-CAD-ATT-015 — Snap mode (WHAT to catch)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support a settable snap <em>mode</em> (<code>Fang_modus</code>) that determines which kind of geometry a picked point snaps to, set via <code>db_setze_fang_modus()</code> and queryable via <code>db_gib_fang_modus()</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TnCatchMode::TeCatchMode</code> (17 values): <code>e_catchNothing</code>(0), <code>e_catchAll</code>(1), <code>e_catchParts</code>(2), <code>e_catchSubParts</code>(3), <code>e_catchContours</code>(4), <code>e_catchPoints</code>(5), <code>e_catchElements</code>(6), <code>e_catchRound</code>(7), <code>e_catchLinear</code>(8), <code>e_catchSpline</code>(9), <code>e_catchTanElem</code>(10), <code>e_catchCut</code>(11), <code>e_catchArrow</code>(12), <code>e_catchText</code>(13), <code>e_catchSquare</code>(14), <code>e_catchPointElement</code>(15), <code>e_catchBending</code>(16).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Different construction steps require snapping to different geometry classes.</li>
+<li><strong>Source:</strong> <code>tc_dbase/fangmodi.h</code> <code>db_setze_fang_modus</code>/<code>db_gib_fang_modus</code>; <code>tc_dbase/fangen.h</code> <code>TnCatchMode</code>, global <code>Fang_modus</code>.</li>
+<li><strong>Verification:</strong> Demonstration — set each mode, pick near mixed geometry, verify snap target class.</li>
+</ul>
+<h3 id="fr-cad-att-016-snap-kind-how-to-catch-and-result-type">FR-CAD-ATT-016 — Snap kind (HOW to catch) and result type</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support a settable snap <em>kind</em> (<code>Fang_art</code>, via <code>db_setze_fang_art</code>/<code>db_gib_fang_art</code>) controlling how the pick is resolved, and shall classify the pick result as none, plain geometry, or an intersection point.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TnCatchType::TeCatchType</code> = {<code>e_catchTypeNone</code>(0), <code>e_catchTypeGeometry</code>(1), <code>e_catchTypeIntersection</code>(2)}; result probed by <code>pruefe_pick_ergebnis()</code>; <code>suche_best_pick_result(schnitt)</code> chooses between geometry and intersection when the <code>schnitt</code> (intersection) flag is set.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A pick may resolve to an element point or the intersection of two elements; the kind decides.</li>
+<li><strong>Source:</strong> <code>fangmodi.h</code> <code>db_setze_fang_art</code>/<code>db_gib_fang_art</code>; <code>tc_dbase/fangnear.h</code> <code>TnCatchType</code>, <code>pruefe_pick_ergebnis</code>, <code>suche_best_pick_result</code>.</li>
+<li><strong>Verification:</strong> Demonstration — with intersection catching enabled, pick a crossing and verify snap to the intersection.</li>
+</ul>
+<h3 id="fr-cad-att-017-snap-scope-which-parts-where">FR-CAD-ATT-017 — Snap scope (which parts / where)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support a settable snap <em>scope</em> (<code>Fang_bereich</code>, via <code>db_setze_fang_bereich</code>/<code>db_gib_fang_bereich</code>) restricting the search to the active part, all parts, subparts, originals and/or auxiliary geometry.</li>
+<li><strong>Parameters &amp; options:</strong> Bit-composed constants: <code>AKTIV_TEIL</code>(1), <code>ALLE_TEILE</code>(2), <code>AKTIV_SUBPART</code>(13), <code>ONLY_SUBPART</code>(8), <code>ONLY_ORIGINAL</code>(16), <code>ONLY_HGEO</code>(32); composites <code>ONLY_AKTIV_PARTS</code>, <code>ONLY_TEILE_PARTS</code>, <code>ONLY_AKTIV_ORIG</code>, <code>ONLY_ORIGINALE</code>. Higher-level equivalent for the interactive selector: <code>TiDbaseSelectorFactory::TeScope</code> = {<code>e_activePart</code>, <code>e_constructionPart</code>, <code>e_allParts</code>, <code>e_allPartsAndTube</code>, <code>e_activePartFirst</code>}.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Confines snapping to relevant parts (e.g. active part only, or auxiliary geometry).</li>
+<li><strong>Source:</strong> <code>fangen.h</code> scope defines (L60–70); <code>fangmodi.h</code> <code>db_setze_fang_bereich</code>; <code>TiDbaseSelectorFactory.h</code> <code>TeScope</code>.</li>
+<li><strong>Verification:</strong> Test — set scope to active part; verify picks in other parts are ignored.</li>
+</ul>
+<h3 id="fr-cad-att-018-snap-region-area-geometric-box-filter">FR-CAD-ATT-018 — Snap region / area (geometric box filter)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support a settable snap <em>region</em> (<code>Fang_gebiet</code>, via <code>db_setze_fang_gebiet</code>/<code>db_gib_fang_gebiet</code>) that constrains the next box search to inside, on, or outside a box, or a CAD-like region.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TeFangGebiet</code> = {<code>e_FANGE_UNDEFINED</code>(0), <code>e_FANGE_IN_BOX</code>, <code>e_FANGE_AUF_BOX</code>, <code>e_FANGE_NICHT_IN_BOX</code> (outside), <code>e_FANGE_NICHT_AUF_BOX</code>, <code>e_FANGE_CADLIKE</code>}. Applied by <code>db_fange_in_box</code>. Viewport flags <code>VIEWPORT</code>(0)/<code>NO_VIEWPORT</code>(1).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Box selection semantics (fully-inside vs. crossing vs. outside) determine which elements are caught.</li>
+<li><strong>Source:</strong> <code>fangen.h</code> <code>TeFangGebiet</code> (L79–87); <code>fangmodi.h</code> <code>db_setze_fang_gebiet</code>.</li>
+<li><strong>Verification:</strong> Demonstration — box-select with each region; verify inclusion/exclusion.</li>
+</ul>
+<h3 id="fr-cad-att-019-snap-radius">FR-CAD-ATT-019 — Snap radius</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a settable snap radius (catch-circle radius); <code>db_set_fanggroesse(t_groesse)</code> SHALL convert the given size into pixel coordinates, remember the previous value, and <code>db_reset_fanggroesse()</code> SHALL restore it.</li>
+<li><strong>Parameters &amp; options:</strong> Radius as <code>double</code> (world units, converted to pixels); save/restore pairing for temporary override.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The catch radius governs pick tolerance and must be adjustable and restorable per action.</li>
+<li><strong>Source:</strong> <code>fangmodi.h</code> <code>db_set_fanggroesse</code>/<code>db_reset_fanggroesse</code> (L46–59).</li>
+<li><strong>Verification:</strong> Test — set a large radius, verify farther picks snap; reset and verify restoration.</li>
+</ul>
+<h3 id="fr-cad-att-020-catch-conditions-elements-equidistants-auxiliary-geometry">FR-CAD-ATT-020 — Catch conditions: elements / equidistants / auxiliary geometry</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support independent catch conditions controlling whether snapping considers elements, equidistants (offset geometry) and auxiliary geometry (Hilfsgeo), with a defined reset state that enables elements + equidistants + auxiliary geometry.</li>
+<li><strong>Parameters &amp; options:</strong> <code>Fang_bedingung</code> is a <code>std::bitset&lt;e_fangBed_Max&gt;</code> over <code>TeFangBedingung</code> = {<code>e_fangBed_Equi</code>(0), <code>e_fangBed_Elem</code>(1), <code>e_fangBed_Hilf</code>(2)}. Setters: <code>db_setzeFangBedingung(t_bedingung, t_status)</code>, <code>db_resetFangBedingung()</code> (all on), <code>db_setzeFangBedingungElemEqui(t_elem, t_equi)</code> — and if elements are disabled, auxiliary geometry is not caught either.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Lets a command snap to construction geometry but not offsets (or vice-versa).</li>
+<li><strong>Source:</strong> <code>fangen.h</code> <code>TeFangBedingung</code>, <code>Fang_bedingung</code> (L91–130); <code>fangmodi.h</code> <code>db_setzeFangBedingung*</code>, <code>db_resetFangBedingung</code> (L87–110).</li>
+<li><strong>Verification:</strong> Test — disable equidistant catching; verify offsets are not snapped.</li>
+</ul>
+<h3 id="fr-cad-att-021-disable-snapping">FR-CAD-ATT-021 — Disable snapping</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall be able to disable snapping globally for designated actions: while the catch-off flag is set, requests to set a snap mode SHALL install <code>FANGE_NICHTS</code> (catch nothing) instead of the requested mode, while the &quot;intended&quot; mode remains queryable for restoration.</li>
+<li><strong>Parameters &amp; options:</strong> <code>db_setCatchOffForSomeActions(bool t_off)</code>; <code>db_setzeFangModusLautCatchFlag(t_wasFangen)</code> sets the requested mode only when catch is on, else <code>e_catchNothing</code>; <code>db_getFangmodusIfOn()</code> returns the mode that would apply if catch were on.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Certain actions (e.g. free placement) must suppress snapping without losing the user's preferred mode.</li>
+<li><strong>Source:</strong> <code>fangmodi.h</code> <code>db_setCatchOffForSomeActions</code>, <code>db_setzeFangModusLautCatchFlag</code>, <code>db_getFangmodusIfOn</code> (L61–84); <code>fangen.h</code> <code>e_catchNothing</code>.</li>
+<li><strong>Verification:</strong> Test — set catch-off, request a mode, verify effective mode is &quot;nothing&quot; and preference is retained.</li>
+</ul>
+<h3 id="fr-cad-att-022-best-pick-resolution-and-snap-tracers">FR-CAD-ATT-022 — Best-pick resolution and snap tracers</h3>
+<ul>
+<li><strong>Requirement:</strong> When resolving a pick, the system shall select the best result among candidate geometry (and optional intersection), and shall expose the snapped position and a tracer type indicating the snapped feature (endpoint, intersection, midpoint, quadrant, virtual corner, on-element or none).</li>
+<li><strong>Parameters &amp; options:</strong> <code>reset_near_fang_werte(x,y)</code> initialises the search around the raw pick; <code>suche_best_pick_result(schnitt)</code> picks the closest; <code>db_fange_pick_punkt(&amp;x,&amp;y)</code> returns the caught coordinate; controller <code>getCaughtPosition(x,y)</code> returns the snapped point which may differ from the raw pick. Tracer types <code>TeSelectorTracerType</code> = {endPoint, cut, middle, 0/90/180/270 degrees, virtualCorner, element, none}.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Users need visual/positional feedback of exactly what was snapped.</li>
+<li><strong>Source:</strong> <code>fangnear.h</code> <code>suche_best_pick_result</code>,<code>reset_near_fang_werte</code>; <code>fangpick.h</code> <code>db_fange_pick_punkt</code>; <code>TiSelectionController.h</code> <code>getCaughtPosition</code>; <code>TeSelectionEnums.h</code> <code>TeSelectorTracerType</code>.</li>
+<li><strong>Verification:</strong> Demonstration — hover near features, verify tracer type and snapped coordinate.</li>
+</ul>
+<h3 id="fr-cad-att-023-per-element-type-catch-algorithms">FR-CAD-ATT-023 — Per-element-type catch algorithms</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide element-type-specific catch routines that compute the closest point (and pick distance) on each geometry type for both &quot;move&quot; (bewege) and &quot;transform&quot; (umform) interaction modes, including linear, circular, arc, spline, text, rectangle, auxiliary-line, auxiliary-circle and arrow elements, and shall compute the perpendicular foot point on lines (<code>pick_punkt_linear</code>) and the nearest point on circles (<code>pick_punkt_circular</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Inputs: candidate element list, transformation matrix, rotate flag; outputs populate <code>S_pick</code>/<code>Fundus</code> (element, point, <code>pick_pkt</code>, <code>pick_abst</code>, <code>radius</code>, <code>p1</code>,<code>p2</code>). Routines: <code>fange_linie_*</code>, <code>fange_kreis_*</code>, <code>fange_bogen_*</code>, <code>fange_spline_*</code>, <code>fange_viereck_*</code>, <code>fange_hlinie_*</code>, <code>fange_hkreis_*</code>, <code>fange_pfeil_*</code> (each <code>_bewege</code>/<code>_umform</code>), <code>fange_text</code>, <code>fange_schnittpunkt</code>, <code>suche_gepickte_ccir_mitte</code>, plus element searches <code>suche_gepicktes_element</code>, <code>suche_gepicktes_rundelement</code>, <code>suche_gepicktes_linienelement</code>, <code>suche_gepickte_hgeo</code>, <code>suche_schnitt_elemente</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Accurate snapping requires exact closest-point math per geometry type.</li>
+<li><strong>Source:</strong> <code>tc_dbase/fang_lin.h</code>, <code>fang_arc.h</code>, <code>fang_pkt.h</code>, <code>fangutil.h</code>; <code>fangen.h</code> <code>S_pick</code>/<code>Fundus</code>.</li>
+<li><strong>Verification:</strong> Analysis/Test — pick each element type at several offsets; verify snapped foot point and distance.</li>
+</ul>
+<h3 id="interactive-selection-filters">3.3 Interactive selection &amp; filters</h3>
+<h3 id="fr-cad-att-024-selection-controller-pick-box-confirm-all">FR-CAD-ATT-024 — Selection controller (pick / box / confirm / all)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a selection controller supporting single-point pick, box selection, confirmation of the current set, select-all, and deselect-all, and shall report whether a box is active and the caught position.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TiSelectionController</code> virtuals: <code>pick(x,y)</code>, <code>all()</code>, <code>confirm()</code>, <code>deselectAll()</code>, <code>isBoxActive()</code>, <code>getCaughtPosition(x,y)</code>; the active <code>TcSelector</code> is created via <code>TiDbaseSelectorFactory::createSelector(scope, focus)</code>. Confirmed-count gate: change commands execute only when <code>getConfirmedSelectionCount() &gt; 0</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Uniform selection engine underlies every multi-element command (colour, style, delete, transform).</li>
+<li><strong>Source:</strong> <code>tc_interface/tc_selection/TiSelectionController.h</code>; <code>tc_cad/cad_asm/color.cpp</code>/<code>linetype.cpp</code> (usage); <code>tc_selection/</code> implementation.</li>
+<li><strong>Verification:</strong> Test — exercise pick/box/confirm/all/deselect on a controller instance.</li>
+</ul>
+<h3 id="fr-cad-att-025-selection-mode-single-multiple-add-multiple-invert">FR-CAD-ATT-025 — Selection mode (single / multiple-add / multiple-invert)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support selectable selection <em>modes</em> controlling accumulation of picks: default (as configured in the UI), single (act after each pick/box), multiple-add (accumulate across steps), and multiple-invert (accumulate, but re-picking an item toggles it off).</li>
+<li><strong>Parameters &amp; options:</strong> <code>TeSelectionMode</code> = {<code>e_selectDefault</code>(0), <code>e_selectSingle</code>(1), <code>e_selectMultipleAdd</code>(2), <code>e_selectMultipleInvert</code>(3)}; set via <code>setMode(mode, default)</code>. Box change policy <code>TeSelectionBoxChangeMode</code> = {<code>e_selectBoxNoChange</code>, <code>e_selectBoxChangeAll</code>, <code>e_selectBoxChangeMultiple</code>}.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Commands differ in whether they act per-pick or on a confirmed multi-selection.</li>
+<li><strong>Source:</strong> <code>TeSelectionEnums.h</code> <code>TeSelectionMode</code>, <code>TeSelectionBoxChangeMode</code>; <code>TiSelectionController.h</code> <code>setMode</code>.</li>
+<li><strong>Verification:</strong> Test — in multiple-invert, re-pick an element and verify it deselects.</li>
+</ul>
+<h3 id="fr-cad-att-026-selection-method-pick-box-pick-and-box">FR-CAD-ATT-026 — Selection method (pick / box / pick-and-box)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall support selectable selection <em>methods</em>: pick only, box only, or pick-then-box (attempt a pick and, on failure, fall back to a box), settable via <code>setMethod</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TeSelectionMethod</code> = {<code>e_selectPick</code>(1), <code>e_selectBox</code>(2), <code>e_selectPickAndBox</code>(3)}.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Some commands require exact picks; others benefit from rubber-band boxing.</li>
+<li><strong>Source:</strong> <code>TeSelectionEnums.h</code> <code>TeSelectionMethod</code>; <code>TiSelectionController.h</code> <code>setMethod</code>.</li>
+<li><strong>Verification:</strong> Test — set each method and verify pick/box acceptance.</li>
+</ul>
+<h3 id="fr-cad-att-027-selection-focus-filter-what-units-are-selectable">FR-CAD-ATT-027 — Selection focus filter (what units are selectable)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall restrict what unit type a selector catches by a focus filter, supporting positions, points, points-or-cuts, elements, bendings, contours, parts, and element-subtype filters (round/linear/tangential, line/arc/circle/chamfer/fillet, construction line/circle, point element, text, attributes).</li>
+<li><strong>Parameters &amp; options:</strong> <code>TiDbaseSelectorFactory::TeFocus</code> (25 values incl. <code>e_position</code>, <code>e_points</code>, <code>e_pointsAndCuts</code>, <code>e_elements</code>, <code>e_elementsSimple</code>, <code>e_bendings</code>, <code>e_elementsAndBendings</code>, <code>e_contours</code>, <code>e_newContours</code>, <code>e_roundElements</code>, <code>e_linearElements</code>, <code>e_tangentialElements</code>, <code>e_conLineElements</code>, <code>e_conCircleElements</code>, <code>e_pointElements</code>, <code>e_lineElements</code>, <code>e_arcElements</code>, <code>e_circleElements</code>, <code>e_chamferElements</code>, <code>e_filletElements</code>, <code>e_textElements</code>, <code>e_attributes</code>, <code>e_attributesSimple</code>, <code>e_attributeElements</code>, <code>e_parts</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Filtering by geometry class is the CAD &quot;selection filter&quot; facility.</li>
+<li><strong>Source:</strong> <code>tc_interface/tc_selection/sel_dbase/TiDbaseSelectorFactory.h</code> <code>TeFocus</code> (L60–87).</li>
+<li><strong>Verification:</strong> Test — with focus <code>e_circleElements</code>, verify only circles are selectable.</li>
+</ul>
+<h3 id="fr-cad-att-028-selection-scope-filter-where-selection-searches">FR-CAD-ATT-028 — Selection scope filter (where selection searches)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall restrict where a selector searches by a scope filter: active part, construction (auxiliary-geometry) part, all parts, all parts including the tube part, or active-part-first-then-rest.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TiDbaseSelectorFactory::TeScope</code> = {<code>e_activePart</code>(1), <code>e_constructionPart</code>(2), <code>e_allParts</code>(3), <code>e_allPartsAndTube</code>(4), <code>e_activePartFirst</code>(5)} (the interactive-selection analogue of the low-level <code>Fang_bereich</code>, FR-CAD-ATT-017).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Confines interactive selection to the relevant part set.</li>
+<li><strong>Source:</strong> <code>TiDbaseSelectorFactory.h</code> <code>TeScope</code> (L50–57).</li>
+<li><strong>Verification:</strong> Test — scope <code>e_activePart</code>; verify other parts are not selected.</li>
+</ul>
+<h3 id="fr-cad-att-029-selector-state-preview-and-info-level">FR-CAD-ATT-029 — Selector state, preview and info level</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let a command set the selector's display state (off / hidden / show-selection / show-selection+preview), enable or disable a hover preview, and choose the information feedback level (none / count / user-text).</li>
+<li><strong>Parameters &amp; options:</strong> <code>TeSelectorState</code> = {<code>e_selectorOff</code>(0), <code>e_selectorHide</code>(1), <code>e_selectorShowSelection</code>(2), <code>e_selectorShowPreview</code>(3)}; <code>TeSelectorPreview</code> = {<code>e_previewOff</code>(1), <code>e_previewOn</code>(2), <code>e_previewHide</code>(3)}; <code>TeSelectionInfoLevel</code> = {<code>e_selectNoInfo</code>(0), <code>e_selectInfoCount</code>(1), <code>e_selectInfoUser</code>(2)}; <code>TeSelectionDevice</code> = {<code>e_selectMouse</code>(1), <code>e_selectKeyboard</code>(2)}; keyboard catch via <code>setCatchKeyboard</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Governs live feedback while selecting (colour/style commands use <code>e_selectInfoCount</code>).</li>
+<li><strong>Source:</strong> <code>TeSelectionEnums.h</code>; <code>TiSelectionController.h</code> <code>setState</code>/<code>setPreview</code>/<code>setInfoLevel</code>/<code>setInputDevice</code>/<code>setCatchKeyboard</code>.</li>
+<li><strong>Verification:</strong> Demonstration — verify count feedback and preview toggling.</li>
+</ul>
+<h3 id="fr-cad-att-030-mark-unmark-elements">FR-CAD-ATT-030 — Mark / unmark elements</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let the user mark (select-persistently) individual elements and remove element marking, via <code>marking on</code> / <code>marking off</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadMarkElem</code> → <code>asm_call( marking on )</code>; <code>aCadDemarkElem</code> → <code>asm_call( marking off )</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Persistent marking feeds subsequent bulk operations.</li>
+<li><strong>Source:</strong> <code>aCadMarkElem</code> (L17787), <code>aCadDemarkElem</code> (L11307).</li>
+<li><strong>Verification:</strong> Test — mark elements, verify marked set; unmark, verify cleared.</li>
+</ul>
+<h3 id="fr-cad-att-031-mark-contours">FR-CAD-ATT-031 — Mark contours</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let the user mark whole contours; where the &quot;delete/select over all&quot; option is off (ToPs 400 special case) marking SHALL be confined to the active part (<code>marking on contour part</code>), otherwise it spans the drawing (<code>marking on contour</code>).</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadMarkContour</code>; branch on <code>ST_CAD_ContourDeleteOverAll != c_no</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Contour-level marking accelerates classification/deletion.</li>
+<li><strong>Source:</strong> <code>aCadMarkContour</code> (L17542).</li>
+<li><strong>Verification:</strong> Test — mark a contour with option on/off; verify scope.</li>
+</ul>
+<h3 id="fr-cad-att-032-sample-mark-unsample-bend-lines">FR-CAD-ATT-032 — Sample (mark) / unsample bend lines</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let the user mark bend lines either fully or up to a specified sample length, and remove bend-line marking.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadMarkBendline</code> opens <code>M_ZeichnungBendMarkLength</code>; if <code>ST_CadBendMarkFull==1</code> → <code>bend sample all</code>, else <code>bend sample &lt;length&gt;</code>. <code>aCadDemarkBendline</code> → <code>bend sample remove</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Bend-line marking supports bending preparation.</li>
+<li><strong>Source:</strong> <code>aCadMarkBendline</code> (L17294), <code>aCadDemarkBendline</code> (L11071).</li>
+<li><strong>Verification:</strong> Test — sample bend lines full and by length; verify markings; remove.</li>
+</ul>
+<h3 id="fr-cad-att-033-contour-assistant-outer-contour-enumeration">FR-CAD-ATT-033 — Contour assistant: outer-contour enumeration</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a contour assistant that detects outer contours and lets the user walk through them one at a time, redrawing on each step, and shall report the special cases &quot;only one outer contour&quot; (message 11032) and &quot;no outer contours found&quot; (11033), ending the assistant in those cases.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadAssiContourStart</code> → <code>assist contour start</code> (error/<code>COUNT</code> semantics; <code>&gt;1</code> normal start); <code>aCadAssiContourNext</code> → <code>next</code> + <code>redraw</code>; <code>aCadAssiContourZoom</code> → <code>zoom</code> (frame current contour).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Guided per-contour review/classification of a part.</li>
+<li><strong>Source:</strong> <code>aCadAssiContourStart</code> (L1132), <code>aCadAssiContourNext</code> (L888), <code>aCadAssiContourZoom</code> (L1397).</li>
+<li><strong>Verification:</strong> Demonstration — start on a multi-contour part; verify step/zoom and edge-case messages.</li>
+</ul>
+<h3 id="fr-cad-att-034-contour-assistant-per-contour-actions-mark-delete-recolour">FR-CAD-ATT-034 — Contour assistant per-contour actions (mark / delete / recolour)</h3>
+<ul>
+<li><strong>Requirement:</strong> While the contour assistant is active on a current contour, the system shall let the user mark it (<code>property</code>), delete it (<code>remove</code>), or recolour+restyle it, and then advance to the next contour.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadAssiContourMark</code> → <code>property</code> then next; <code>aCadAssiContourDelete</code> → <code>remove</code> then next; <code>aCadAssiContourColor</code> opens the LinCol dialog (once, guarded by <code>tmp_colorCalled</code>), maps the GRIT index to a colour name and a style, issues <code>asm_call( &lt;style&gt; &lt;colour&gt; )</code> on the current contour, then advances.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Efficient contour-by-contour classification.</li>
+<li><strong>Source:</strong> <code>aCadAssiContourMark</code> (L650), <code>aCadAssiContourDelete</code> (L412), <code>aCadAssiContourColor</code> (L16).</li>
+<li><strong>Verification:</strong> Test — for each action, verify the current contour is marked/deleted/recoloured and the assistant advances.</li>
+</ul>
+<h3 id="fr-cad-att-035-contour-assistant-father-nesting-mode">FR-CAD-ATT-035 — Contour assistant father / nesting mode</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let the user set the contour assistant's father-reference mode to relative or absolute, starting the assistant automaton if not already active, and SHALL persist the choice in <code>ST_ZeichnungContourFather</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>tCadAssiContourSetFather_Par0</code>==1 → <code>relative</code> (<code>ST_ZeichnungContourFather=1</code>), else <code>absolute</code> (<code>=0</code>); guarded by an <code>assist contour … check</code> for <code>AKTIV</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Controls how inner/outer contour parent relationships are computed.</li>
+<li><strong>Source:</strong> <code>tCadAssiContourSetFather</code> (L37634).</li>
+<li><strong>Verification:</strong> Test — toggle mode; verify persisted flag and assistant behaviour.</li>
+</ul>
+<h3 id="fr-cad-att-036-delete-current-selection-contour">FR-CAD-ATT-036 — Delete current selection / contour</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall delete the current interactive selection (via a chosen delete sub-command) and shall delete a picked whole contour.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadDeleteSelection</code> opens <code>M_ZeichnungAuswLoeschen</code> and executes the returned <code>ST_ZeichnungBefehlStr</code>; <code>aCadDeleteContour</code> → <code>asm_call( delete contour )</code>. (Bulk small-element/small-contour/double-hole deletions are specified in [[10 - FR - CAD Geometry &amp; Drawing Editing]] FR-CAD-009.)</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Deletion is the most common selection-driven operation.</li>
+<li><strong>Source:</strong> <code>aCadDeleteSelection</code> (L10084), <code>aCadDeleteContour</code> (L9138).</li>
+<li><strong>Verification:</strong> Test — select, delete; verify removal and undoability.</li>
+</ul>
+<h3 id="fr-cad-att-037-selection-driven-contour-operations-close-melt-hatch">FR-CAD-ATT-037 — Selection-driven contour operations (close / melt / hatch)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide selection/contour operations to close open contours within an element-length threshold, melt/split contours, and hatch closed contours.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadCloseContour</code> opens <code>M_CadSchliesseOffeneKonturen</code> then <code>thin close set &lt;elementLength&gt; thin close</code>; <code>aCadMeltContours</code> → <code>split contour</code> (or <code>split contour part</code> when over-all is off); <code>aCadHatchContour</code> opens <code>M_ZeichnungSchraffur</code>. <strong>Cross-ref:</strong> algorithmic detail of melt/close/gap-closing is in [[10.7 - CAD Detail - Contour Arithmetic Algorithms]]; hatch behaviour in [[10 - FR - CAD Geometry &amp; Drawing Editing]] FR-CAD-032.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> These operations complete/clean the selected contour topology.</li>
+<li><strong>Source:</strong> <code>aCadCloseContour</code> (L5288), <code>aCadMeltContours</code> (L18024), <code>aCadHatchContour</code> (L15753).</li>
+<li><strong>Verification:</strong> Test — close a gapped contour, melt overlapping contours, hatch a closed region.</li>
+</ul>
+<h3 id="fr-cad-att-038-attribute-based-non-interactive-selection">FR-CAD-ATT-038 — Attribute-based (non-interactive) selection</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall be able to gather elements by attribute — colour, line style and/or geometry type — either within one contour/part (<code>db_fange_sel_attribut</code>) or recursively across the whole part tree (<code>db_fange_sel_attribut_rekursiv</code>), where a value of −1 for any attribute means &quot;match any&quot;, returning a dbase error code (0 = OK, 6002 = out of memory).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Inputs <code>(teil, part, kontur, typ, farbe, art)</code>; output = filled catch list. <strong>Caveat (documented):</strong> repeated calls may enqueue an element multiple times, which can crash on delete; callers must call once or use mutually exclusive parameters, or clean the list afterwards.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Underpins &quot;change colour/style replace&quot; (FR-CAD-ATT-005/008) and other bulk-by-attribute operations.</li>
+<li><strong>Source:</strong> <code>tc_dbase/fang_sel.h</code> <code>db_fange_sel_attribut</code>, <code>db_fange_sel_attribut_rekursiv</code>.</li>
+<li><strong>Verification:</strong> Test — select all red arcs; verify exact set and error codes.</li>
+</ul>
+<h3 id="undo-redo-transaction-model">3.4 Undo / redo transaction model</h3>
+<h3 id="fr-cad-att-039-undo">FR-CAD-ATT-039 — Undo</h3>
+<ul>
+<li><strong>Requirement:</strong> After an editing operation, the system shall undo the most recent operation on request, restoring the exact prior geometry state, via <code>asm_call( undo 1 )</code> which drives <code>TcASMUndo::turnBack(1)</code> against the <code>TcUndoManager</code> undo stack.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadUndo</code> → <code>undo 1</code>; the automaton command id is <code>YACC_T2_UNDO</code>(7101); step count is the numeric argument (1 by default).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Reversibility of edits is a core editor guarantee (parent FR-CAD-034).</li>
+<li><strong>Source:</strong> <code>aCadUndo</code> (L35875); <code>tc_undo/undo_asm/TcASMUndo.h</code> <code>turnBack</code>; <code>tc_undo/undo_asm/undo_lex.hpp</code> <code>YACC_T2_UNDO</code>.</li>
+<li><strong>Verification:</strong> Test — edit, undo, verify geometry restored.</li>
+</ul>
+<h3 id="fr-cad-att-040-redo">FR-CAD-ATT-040 — Redo</h3>
+<ul>
+<li><strong>Requirement:</strong> After an undo, the system shall redo the last-undone operation on request via <code>asm_call( redo 1 )</code>, provided the undone transaction consisted only of redoable actions.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadRedo</code> → <code>redo 1</code>; command id <code>YACC_T2_REDO</code>(7102). The redo stack is filled automatically during undo when the transaction is fully redoable.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Redo complements undo.</li>
+<li><strong>Source:</strong> <code>aCadRedo</code> (L28529); <code>undo_lex.hpp</code> <code>YACC_T2_REDO</code>; <code>TcUndoManager.h</code> (redo-stack semantics, L57–67).</li>
+<li><strong>Verification:</strong> Test — edit, undo, redo, verify edit re-applied.</li>
+</ul>
+<h3 id="fr-cad-att-041-transaction-grouping-atomic-non-atomic">FR-CAD-ATT-041 — Transaction grouping (atomic / non-atomic)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall group a sequence of dbase actions into a single undoable transaction so that one undo reverses the whole group; explicit sequence bracketing SHALL be available (<code>undo sequenz start</code> / <code>undo sequenz stop</code>), and transactions SHALL be either atomic (auto-collecting the atomic create/delete/modify actions of undoable objects) or non-atomic (rejecting those atomic actions).</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadSaveWorkfile</code> brackets its store with <code>undo sequenz start</code>/<code>stop</code>. <code>TcUndoManager</code> distinguishes atomic vs. non-atomic transactions; <code>undo</code>/<code>redo</code> operate per whole transaction.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Multi-step commands must undo as a unit, not step-by-step.</li>
+<li><strong>Source:</strong> <code>tc_undo/undo_allg/TcUndoManager.h</code> (transaction model, L46–130); <code>aCadSaveWorkfile</code> (<code>undo sequenz start/stop</code>).</li>
+<li><strong>Verification:</strong> Test — run a composite command, undo once, verify all sub-steps reverse together.</li>
+</ul>
+<h3 id="fr-cad-att-042-clear-undo-history">FR-CAD-ATT-042 — Clear undo history</h3>
+<ul>
+<li><strong>Requirement:</strong> When starting a new drawing or loading a file, the system shall clear the undo/redo history (<code>asm_call( undo clear )</code>), and the undo manager SHALL provide <code>reset()</code>, <code>resetUndoActions()</code> and <code>resetRedoActions()</code> which destroy the stored actions (permanently deleting objects held for deletion-undo) and notify listeners of the new undo/redo availability.</li>
+<li><strong>Parameters &amp; options:</strong> <code>undo clear</code> invoked from <code>aCadNewDrawing</code>, <code>tCadLoadDrawing</code>, <code>aCadLoadWorkfile</code> after a load.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> History from a previous drawing must not leak into a new one.</li>
+<li><strong>Source:</strong> <code>aCadNewDrawing</code> (L20471), <code>tCadLoadDrawing</code> (L39750); <code>TcUndoManager.h</code> <code>reset</code>/<code>resetUndoActions</code>/<code>resetRedoActions</code> (L100–117).</li>
+<li><strong>Verification:</strong> Test — after new/load, verify undo is unavailable.</li>
+</ul>
+<h3 id="fr-cad-att-043-dbase-action-memento-model">FR-CAD-ATT-043 — Dbase action / memento model</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall implement undo via a dbase action manager that records typed actions and object mementos for created/deleted/changed model objects, enabling exact state capture and restoration; the manager SHALL be globally enable/disable-able and drive undo/redo GUI availability.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcDbaseActionManager</code> (singleton, <code>M_isEnabled</code>); action types include <code>TcDbaseChangeColorAction</code>, <code>TcDbaseChangeStyleAction</code>, <code>TcDbaseCreatedElementAction</code>, <code>TcDbaseDeleteElementAction</code>, <code>TcDbaseChangeElementAction</code>, <code>TcDbaseCompositeAction</code>, plus mementos (<code>TcDbaseLineMemento</code>, <code>TcDbaseArcMemento</code>, <code>TcDbaseCircleMemento</code>, <code>TcDbasePointMemento</code>, <code>TcDbaseTextMemento</code>, <code>TcDbasePartMemento</code>, …) built by <code>TcDbaseMementoFactory</code>; <code>TcAppStateCurrentState::SetStateUndo/Redo</code> reflect availability.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Memento-per-object is the mechanism that makes &quot;restore exact state&quot; possible for each geometry type.</li>
+<li><strong>Source:</strong> <code>tc_dbase/dbase_undo/TcDbaseActionManager.cpp</code> (Enable/Disable); <code>tc_dbase/dbase_undo/TcDbase*Action.*</code>, <code>TcDbase*Memento.*</code>, <code>TcDbaseMementoFactory.*</code>.</li>
+<li><strong>Verification:</strong> Analysis/Test — recolour then undo; verify colour action reverses via memento.</li>
+</ul>
+<h3 id="fr-cad-att-044-undoredo-button-enablement">FR-CAD-ATT-044 — Undo/redo button enablement</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall keep the undo and redo GUI buttons enabled only when a corresponding action is available, via a listener registered with the undo manager, and SHALL set contextual &quot;not possible&quot; texts when unavailable.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcASMUndo</code> registers <code>TcUndoRedoButtonEnable</code> (implements <code>TiUndoPossibleNotify</code>); <code>setPossible(type,val)</code> enables/disables; <code>setUndoText</code>/<code>setRedoText</code>/<code>refreshButtons</code>; neutral texts for &quot;undo/redo not possible&quot;.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Prevents invalid undo/redo invocation and gives feedback.</li>
+<li><strong>Source:</strong> <code>tc_undo/undo_asm/TcASMUndo.h</code> (<code>TcUndoRedoButtonEnable</code>, <code>setButton</code>, <code>refreshButtons</code>); <code>tc_undo/undo_allg/TiUndoPossibleNotify.h</code>.</li>
+<li><strong>Verification:</strong> Demonstration — verify buttons enable/disable as the stacks change.</li>
+</ul>
+<h3 id="fr-cad-att-045-profile-editor-undo-redo">FR-CAD-ATT-045 — Profile-editor undo / redo</h3>
+<ul>
+<li><strong>Requirement:</strong> Within the profile editor, the system shall provide dedicated step-back and step-forward commands over the profile edit history.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadProfEdUndo</code> → <code>asm_call( cad_profile new bevor )</code> (step back); <code>aCadProfEdRedo</code> → <code>asm_call( cad_profile new after )</code> (step forward).</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> The tube profile editor maintains its own edit history (see [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]]).</li>
+<li><strong>Source:</strong> <code>aCadProfEdUndo</code> (L28292), <code>aCadProfEdRedo</code> (L27296).</li>
+<li><strong>Verification:</strong> Test — edit a profile, step back/forward.</li>
+</ul>
+<h3 id="fr-cad-att-046-bounded-undo-history">FR-CAD-ATT-046 — Bounded undo history</h3>
+<ul>
+<li><strong>Requirement:</strong> The undo manager shall be constructed with a maximum number of retained transactions, bounding memory use by discarding the oldest transactions beyond the limit.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcUndoManager(unsigned long t_maxSize)</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Prevents unbounded growth of undo memory on long sessions.</li>
+<li><strong>Source:</strong> <code>TcUndoManager.h</code> ctor (L85–90).</li>
+<li><strong>Verification:</strong> Analysis — verify oldest transactions drop after <code>maxSize</code> operations.</li>
+</ul>
+<h3 id="drawing-lifecycle">3.5 Drawing lifecycle</h3>
+<h3 id="fr-cad-att-047-new-drawing">FR-CAD-ATT-047 — New drawing</h3>
+<ul>
+<li><strong>Requirement:</strong> On &quot;new drawing&quot;, the system shall (after the unsaved-changes guard confirms) delete all geometry (<code>delete all confirm</code>), reset file properties and drawing name, redraw the coordinate cross, turn off bend-parallel display, reset variants, clear the undo history, mark the drawing unchanged, and — unless in variant mode — switch the UI into the geometry-creation field.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadNewDrawing</code>: <code>FUNC_CAD_AskStoreAndContinue</code>; <code>asm_call(delete all confirm)</code>, <code>bend parallel off</code>, <code>variant reset</code>, <code>undo clear</code>, <code>somethingchanged(0)</code>; clears <code>DATEINAME</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Provides a clean drawing baseline.</li>
+<li><strong>Source:</strong> <code>aCadNewDrawing</code> (L20471).</li>
+<li><strong>Verification:</strong> Test — after new, verify empty model, no filename, undo unavailable.</li>
+</ul>
+<h3 id="fr-cad-att-048-open-load-drawing-format-dispatch">FR-CAD-ATT-048 — Open / load drawing (format dispatch)</h3>
+<ul>
+<li><strong>Requirement:</strong> On &quot;load drawing&quot;, after the unsaved-changes guard the system shall present a file selector filtered to the enabled formats, detect the file format, dispatch to the correct loader, fit the view, update the MRU/title, and open the message list on error. Password-protected formats (DXF/DWG/IGES/MI) SHALL be gated by a licence check.</li>
+<li><strong>Parameters &amp; options:</strong> <code>tCadLoadDrawing</code>; formats <code>c_geo</code>/<code>c_gmv</code> (<code>load del_draw var_geo</code>), <code>c_dxf</code> (options dialog + <code>tops_check_pwd DXF_PASSWORD</code>), <code>c_dwg</code> (convert to DXF then load), <code>c_igs</code>, <code>c_mi</code>, <code>c_vlg</code>/<code>c_wzg</code>/<code>c_bwzg</code>/<code>c_rpf</code>/<code>c_bmt</code>, <code>c_gra</code> (<code>load del_draw mi capt</code>), raster <code>c_bmp/jpg/png/tif/gif/pdf</code> (<code>load del_draw bmp</code>, vectorised). Modifiers via <code>tCadLoadDrawing_Par0</code>: <code>c_Varianten</code> (variant description), <code>c_Compare</code> (add without clearing), <code>c_bitmap</code>. <code>del_draw</code> clears the previous drawing; <code>undo clear</code> after load; <code>window fit</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Single entry point for opening every supported format into the editor. (Non-native format semantics detailed in [[11 - FR - Import, Export &amp; File Formats]].)</li>
+<li><strong>Source:</strong> <code>tCadLoadDrawing</code> (L39750); <code>aCadModusLoad</code> (L18761); <code>tc_cad/cad_util/cad_load.hpp</code>.</li>
+<li><strong>Verification:</strong> Test — load each format; verify correct dispatch, view fit, MRU/title, error handling.</li>
+</ul>
+<h3 id="fr-cad-att-049-open-file-by-name-extension-based">FR-CAD-ATT-049 — Open file by name (extension-based)</h3>
+<ul>
+<li><strong>Requirement:</strong> Given an explicit file path, the system shall determine its type from the extension, warn and fall back if the type is unknown, honour a &quot;forced&quot; mode that only sets the filename when a check fails, and (in ToPs 100 preparation mode) accept only Geo files.</li>
+<li><strong>Parameters &amp; options:</strong> <code>tCadOpenFile_Par0</code> = path, <code>_Par1</code> = <code>c_force</code> (uses <code>load check</code>, may skip actual load). Type via <code>FUNC_GetInfoForFileExt</code>/<code>FUNC_GetInfoForFileType</code>; unknown → message 10014 then fall back to <code>O_SelektorAuswahl</code> or <code>c_geo</code>. Preparation-mode guard rejects non-Geo with message 10537.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Programmatic/silent open (macros, drag-drop, fab-file flow).</li>
+<li><strong>Source:</strong> <code>tCadOpenFile</code> (L43169).</li>
+<li><strong>Verification:</strong> Test — open by path for each extension; verify type detection and fallbacks.</li>
+</ul>
+<h3 id="fr-cad-att-050-save-in-place">FR-CAD-ATT-050 — Save (in place)</h3>
+<ul>
+<li><strong>Requirement:</strong> On &quot;save&quot;, if the drawing already has a filename the system shall store to that path via <code>FUNC_CAD_Store</code>; otherwise it SHALL delegate to Save-As. In each editor mode the save SHALL route to the mode-appropriate handler.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadSaveDrawing</code> (filename present → <code>FUNC_CAD_Store</code>, else <code>aCadSaveAsDrawing</code>). <code>aCadModusSave</code> routes: compare→<code>aCadCompareSave</code>, variant→<code>aCadSaveDrawing</code>, preparation→<code>aCadPrepareSave</code>, else <code>aCadSaveDrawing</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Standard save semantics with mode awareness.</li>
+<li><strong>Source:</strong> <code>aCadSaveDrawing</code> (L30364), <code>aCadModusSave</code> (L19016).</li>
+<li><strong>Verification:</strong> Test — save named and unnamed drawings; verify path and Save-As fallback.</li>
+</ul>
+<h3 id="fr-cad-att-051-save-as-format-selection-password-gating">FR-CAD-ATT-051 — Save as (format selection + password gating)</h3>
+<ul>
+<li><strong>Requirement:</strong> On &quot;save as&quot;, the system shall open a save file selector with a format chooser, enable/disable formats per licence (<code>tops_check_pwd</code> for DXF/GMV) and per state (when variants are defined, restrict to GMV unless explicitly allowed, to avoid losing variant information), preselect the current path/name, store via <code>FUNC_CAD_Store(…, c_saveAs, …)</code>, and treat a cancelled selector as no-op.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadSaveAsDrawing</code>; format flags <code>ST_AktSelGeo/Vlg/Wzg/BWzg/Dxf/Rpf/Gmv</code>; title text id 10023; <code>aCadSaveAsDrawing_Par0</code> = <code>c_NoVariants</code> allows Geo even with variants; <code>STORE_ERROR_STR=='CANCEL'</code> clears filename. <code>aCadModusSaveAs</code> routes per mode.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Controlled export with licensing and variant-safety.</li>
+<li><strong>Source:</strong> <code>aCadSaveAsDrawing</code> (L29560), <code>aCadModusSaveAs</code> (L19271).</li>
+<li><strong>Verification:</strong> Test — save-as for allowed/blocked formats; verify variant restriction to GMV.</li>
+</ul>
+<h3 id="fr-cad-att-052-save-selection-extract-part">FR-CAD-ATT-052 — Save selection (extract part)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall save only the currently selected geometry as a separate part by delegating to the part-extraction flow.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadSaveDrawingSelection</code> → <code>callEnterFunction( tCadExtractPart, c_Element )</code>. (Extraction detail in [[10 - FR - CAD Geometry &amp; Drawing Editing]] FR-CAD-033.)</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Persist a sub-selection without affecting the main drawing.</li>
+<li><strong>Source:</strong> <code>aCadSaveDrawingSelection</code> (L30617).</li>
+<li><strong>Verification:</strong> Test — select subset, save selection, verify extracted file content.</li>
+</ul>
+<h3 id="fr-cad-att-053-write-read-workfile">FR-CAD-ATT-053 — Write / read workfile</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall write and read a per-user autosave &quot;workfile&quot; as a Geo file named <code>&lt;WORKFILE&gt;_&lt;user&gt;.&lt;GeoExt&gt;</code> under <code>TOPS_PWD</code>; the write SHALL first fill missing file info and write part metadata (<code>info write …</code>), bracket the store in an undo sequence, and use <code>store del_old</code>; the read SHALL load with <code>load del_draw var_geo</code>, clear undo, fit the view, and deliberately NOT set the drawing filename, add to the MRU or show a title (so a later normal save cannot overwrite real data or strip auxiliary geometry).</li>
+<li><strong>Parameters &amp; options:</strong> <code>ST_WORKFILE</code> default <code>workfile</code>; user from <code>pdm_util user</code>; <code>aCadSaveWorkfile</code> writes metadata (number, name, worker, client, material, thickness, ruleset, table, rotatable, MTL, machine, disposal, unit, angle, priority, sample-part, GTS flags/blocks); <code>aCadLoadWorkfile</code> sets title to empty.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Crash-safety / hand-off working state without polluting the real file.</li>
+<li><strong>Source:</strong> <code>aCadSaveWorkfile</code> (L30853), <code>aCadLoadWorkfile</code> (L16470).</li>
+<li><strong>Verification:</strong> Test — save workfile, reload; verify content restored, no filename/title/MRU set.</li>
+</ul>
+<h3 id="fr-cad-att-054-unsaved-changes-guard">FR-CAD-ATT-054 — Unsaved-changes guard</h3>
+<ul>
+<li><strong>Requirement:</strong> Before any operation that discards the current drawing (new, load, open-by-name, switch-to-data, close), the system shall check the modified flag and, if set, prompt the user to store, discard or cancel, proceeding only on confirmation; the modified flag SHALL be maintained via <code>somethingchanged</code>/<code>getsomethingchanged</code> and reset to unchanged after a successful load/save/new.</li>
+<li><strong>Parameters &amp; options:</strong> <code>FUNC_CAD_AskStoreAndContinue</code> → <code>tmp_continue</code> ∈ {<code>c_yes</code>,<code>c_no</code>}; compare-mode load only prompts if a comparison drawing already exists (via <code>geo_diff compare check</code>, message 10021).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Prevents silent data loss.</li>
+<li><strong>Source:</strong> <code>aCadNewDrawing</code>, <code>tCadLoadDrawing</code>, <code>tCadOpenFile</code>, <code>aCadChangeToDaten</code>, <code>aCadLoadWorkfile</code> (all call <code>FUNC_CAD_AskStoreAndContinue</code>); <code>somethingchanged</code>.</li>
+<li><strong>Verification:</strong> Test — with unsaved edits, trigger new/load; verify prompt and cancel path.</li>
+</ul>
+<h3 id="fr-cad-att-055-close-exit-mode">FR-CAD-ATT-055 — Close / exit mode</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a close/exit command that, depending on the active mode, exits the comparison, variant or preparation mode, or otherwise closes the CAD part; a raw close SHALL delegate to <code>FUNC_CadQuit</code> with an (de)init parameter.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadModusExit</code> branches on <code>ST_ZeichnungVergleichsModus</code>/<code>VariantenModus</code>/<code>AufbereitungsModus</code> → <code>aCadCompareExit</code>/<code>aCadVariantExit</code>/<code>aCadPrepareExit</code>, else <code>aCadCloseCad</code>. <code>aCadCloseCad</code> → <code>FUNC_CadQuit( aCadCloseCad_Par0 )</code> (e.g. <code>c_deinit</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Mode-aware teardown.</li>
+<li><strong>Source:</strong> <code>aCadModusExit</code> (L18506), <code>aCadCloseCad</code> (L5052).</li>
+<li><strong>Verification:</strong> Test — exit from each mode; verify correct handler.</li>
+</ul>
+<h3 id="fr-cad-att-056-switch-to-data-management-mode">FR-CAD-ATT-056 — Switch to data (management) mode</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall let the user switch from the CAD editor into the data-management part, storing/guarding first, closing the CAD part, hiding then re-showing the Qt GUI around the switch (so the drawing area resizes correctly), and re-opening a named file afterwards if one was pending.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadChangeToDaten</code> (guard, <code>aCadCloseCad c_deinit</code>, <code>showQtGUI 0/1</code>, <code>aCadOpenDaten c_noAsk</code>, then <code>tCadOpenFile</code>). <code>aCadOpenDaten</code> runs <code>sys_init</code>, opens <code>HintergrundToPsDaten</code>, optionally clears cache, and brackets with topsbugfix suppression.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Integration with the surrounding data-management application.</li>
+<li><strong>Source:</strong> <code>aCadChangeToDaten</code> (L4471), <code>aCadOpenDaten</code> (L20742).</li>
+<li><strong>Verification:</strong> Demonstration — switch to data mode and back; verify GUI resize and pending-file open.</li>
+</ul>
+<h3 id="fr-cad-att-057-scale-the-whole-drawing">FR-CAD-ATT-057 — Scale the whole drawing</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a command to scale the entire drawing, presented through a scaling dialog.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadScaleDrawing</code> → <code>dialog_box( M_Skalierung )</code> (scale factor entered in the dialog). Refines parent FR-CAD-030.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Correct wrongly-scaled imports / unit rework.</li>
+<li><strong>Source:</strong> <code>aCadScaleDrawing</code> (L31145).</li>
+<li><strong>Verification:</strong> Test — scale by a factor; verify all coordinates multiplied.</li>
+</ul>
+<h3 id="fr-cad-att-058-native-geo-read-facade">FR-CAD-ATT-058 — Native Geo read facade</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a facade to read a native Geo drawing and expose its contents element-by-element, with self-holding conversion settings and typed error codes; it SHALL report units, material, part info and root-face reference, and enumerate contours, bendings, bend-meta-info (joggle/bumping/hem), strokes, points, texts, elements and their attributes.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>TcGeoImportFacade</code>; <code>importFromFile(name, format)</code> with format ∈ {<code>TCO_</code>,<code>MI_</code>,<code>IGES_</code>,<code>DXF_</code>,<code>DSTV_</code>,<code>DWG_FORMAT</code>,<code>VAR_GEO</code>}. Conversion setters with defaults: <code>setBSplineConversion(mode, distance=0.05, minLength=0.1)</code>; <code>setContourPreparation(on, distance=0.02)</code> (merge points closer than distance); <code>setCloseContours(on, gap=0.1)</code>; <code>setTextConversion(on, fontNr=1)</code>; <code>setSmoothMode(mode=0, distance=0.1, minLength=1, angle=30)</code>; options <code>e_dxfFrozenLayer</code>,<code>e_dxfOffLayer</code>,<code>e_dxfBlockSection</code>,<code>e_dxfAutoPrepare</code>,<code>e_miDetailDrawing</code>,<code>e_ignoreColorElements</code>,<code>e_autoBendNotch</code>,<code>e_detectStrokes</code>,<code>e_angleConversion</code>,<code>e_DINFactorOverride</code>,<code>e_removeExtraGeometry</code>. Errors <code>TeErrorCode</code> (0..13). <code>getElementStyle(color, type)</code> returns per-element colour+style.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The canonical, structured reader used by loaders and consumers of Geo data.</li>
+<li><strong>Source:</strong> <code>tc_dbase/dbase_facade/TcGeoImportFacade.h</code>.</li>
+<li><strong>Verification:</strong> Test — import a Geo with contours/bends/strokes/texts; verify enumerated data and error codes.</li>
+</ul>
+<h3 id="fr-cad-att-059-native-geo-write-facade">FR-CAD-ATT-059 — Native Geo write facade</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a facade to define and write a native Geo (or DXF) drawing, accepting units, material, part info and root-face reference, then lines, arcs, circles, markers, texts and bendings with colour/style, plus strokes, marking blocks, element/bend attributes and bend meta-info; it SHALL write with configurable overwrite, DXF-format, freeze-position and heal (gap-closing) options.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>TcGeoExportFacade</code>; <code>setUnits(metric)</code> sets a flag only (no value conversion — all values assumed already in the target system); primitive adders default <code>lineType=TC_SOLID</code>, <code>color=TnColor::e_white</code>; <code>createText(…, fontNr=1, color=white, angle=0, ratio=0, lineSpace=1, charAngle=0, orientation=5, path=1)</code>; <code>exportToFile(name, overwrite=true, dxfFormat=false, freezePos=false, heal=false)</code>; error codes <code>TeErrorCode</code> (0..7).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The canonical structured writer for Geo/DXF output.</li>
+<li><strong>Source:</strong> <code>tc_dbase/dbase_facade/TcGeoExportFacade.h</code>.</li>
+<li><strong>Verification:</strong> Test — build a drawing via the facade, export, re-import, verify round-trip.</li>
+</ul>
+<h3 id="fr-cad-att-060-core-load-store-engine-and-flags">FR-CAD-ATT-060 — Core load / store engine and flags</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a low-level <code>cad_load</code>/<code>cad_store</code> engine driven by bit-flag options that select the input/output format, whether to clear the previous drawing, whether to read/write variant Geo, and DXF mode; <code>cad_store</code> SHALL report contour errors and open contours, and a helper SHALL test whether a drawing is empty (optionally ignoring auxiliary geometry).</li>
+<li><strong>Parameters &amp; options:</strong> <code>cad_load(datei, load_option, anz_mtl, &amp;draw, useFilesystem=false, changeMirrorMatrix=true)</code> with load flags <code>TCO_FORMAT</code>(1), <code>MI_FORMAT</code>(2), <code>IGES_FORMAT</code>(4), <code>DXF_FORMAT</code>(8), <code>DEL_DRAW</code>(16), <code>DSTV_FORMAT</code>(32), <code>VAR_GEO</code>(64), <code>DWG_FORMAT</code>(128), <code>CLEAR_OPT</code>(256), <code>TEO_PREVIEW</code>(512), <code>BMT_UNFOLD</code>(1024), <code>RASTER_FORMAT</code>(2048). <code>cad_store(draw, datei, store_option, &amp;kont_error, &amp;open_kont)</code> with store flags <code>CAD_STORE_DEL_OLD</code>(1), <code>CAD_STORE_DEL_MTL</code>(2), <code>CAD_STORE_LAS_PREP</code>(4), <code>CAD_STORE_DXF</code>(8), <code>CAD_STORE_WZG_PREP</code>(16), <code>CAD_STORE_PRF</code>(32), <code>CAD_STORE_VAR_GEO</code>(64). <code>cad_zeichnung_is_empty(draw, ignoreConstructElem=false)</code>. Interpreter font/spline setters <code>set_interpreter_fonts</code>, <code>set_interpreter_convertSpline[Param]</code>, <code>set_interpreter_ignoreText</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The shared engine beneath every load/save mask and the facades.</li>
+<li><strong>Source:</strong> <code>tc_cad/cad_util/cad_load.hpp</code>, <code>tc_cad/cad_util/cad_stor.hpp</code>.</li>
+<li><strong>Verification:</strong> Test — call with each flag combination; verify format/clear/variant behaviour and error outputs.</li>
+</ul>
+<h3 id="fr-cad-att-061-recent-files-mru-ring-buffer-window-title">FR-CAD-ATT-061 — Recent-files (MRU) ring buffer &amp; window title</h3>
+<ul>
+<li><strong>Requirement:</strong> After a successful load or save, the system shall add the file to a bounded recent-files ring buffer and set the window title to the file name; a failed load SHALL NOT be added, and workfile load SHALL neither add to the MRU nor set a title.</li>
+<li><strong>Parameters &amp; options:</strong> <code>stackRingBuffer_add( ST_MenueZeichnungSelRingBuf, ST_MenueZeichnungRingBufAnz, name )</code>; <code>setWindowTitle(name)</code>; <code>O_MenueZeichnungDateiname</code>/<code>ST_MenueZeichnungDateiname</code> hold the current file.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Usability (recent files, clear title) with correctness (no bogus MRU entries).</li>
+<li><strong>Source:</strong> <code>tCadLoadDrawing</code>, <code>aCadSaveWorkfile</code>, <code>aCadLoadWorkfile</code>.</li>
+<li><strong>Verification:</strong> Test — load valid/invalid files; verify MRU/title updates.</li>
+</ul>
+<h3 id="units-tolerances">3.6 Units &amp; tolerances</h3>
+<h3 id="fr-cad-att-062-metric-inch-unit-duality-gritunit">FR-CAD-ATT-062 — Metric / inch unit duality (gritunit)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall operate in a single active measurement system (metric or inch) selected by the <code>GRITUNIT</code> configuration key, and SHALL provide conversions between an application unit value and the current gritunit and back, plus explicit inch↔metric conversions and a query of the active system.</li>
+<li><strong>Parameters &amp; options:</strong> <code>GRITUNIT</code> ∈ {0 = metric, 1 = inch} (<code>topsCad.org</code> → 0; <code>topsCadInch.org</code> → 1; also in <code>GritCad.org</code>). Unit kinds <code>METER</code>(1), <code>CENTIMETER</code>(2), <code>MILLIMETER</code>(3), <code>FLAECHE</code>(4), <code>GEWICHT</code>(5), <code>DRUCK</code>(6), <code>GESCHWINDIGKEIT</code>(7), <code>BESCHLEUNIGUNG</code>(8), <code>KRAFT</code>(9), <code>DICHTE</code>(10). API: <code>einheits_wert_to_gritunit(was, wert)</code>, <code>gritunit_wert_to_einheit(was, wert)</code>, <code>convToUnit</code>, <code>convInchToMetric</code>, <code>convMetricToInch</code>, <code>gib_aktuelle_einheit</code>/<code>set_aktuelle_einheit</code>, <code>getActUnit()</code> → <code>TeUnit</code> {<code>e_UnitIsMetric</code>(0), <code>e_UnitIsInch</code>(1), <code>e_UnitUndefined</code>(2)}. <strong>Caveat (documented):</strong> dbase unit codes differ from tc_math/grit codes — dbase {0=undef,1=metric,2=inch} vs tc_math {0=metric,1=inch,2=undef}.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Every geometric quantity is unit-dependent; a consistent duality prevents scale errors.</li>
+<li><strong>Source:</strong> <code>tc_math/units.h</code>; <code>ini_files/ToPsCad/topsCad.org</code> (<code>GRITUNIT=0</code>), <code>topsCadInch.org</code> (<code>GRITUNIT=1</code>), <code>GritCad.org</code> (<code>GRITUNIT</code>, <code>GRITCOLOR</code>).</li>
+<li><strong>Verification:</strong> Test — with GRITUNIT=0 and 1, round-trip values through the converters; verify dbase-vs-tc_math code mapping.</li>
+</ul>
+<h3 id="fr-cad-att-063-unit-specific-tolerance-container">FR-CAD-ATT-063 — Unit-specific tolerance container</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a singleton tolerance container holding the full set of named tolerances in the currently active unit system (all metric or all inch per gritunit), initialised once and queried by enumerated tolerance id, returning a default when a tolerance is missing.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcToleranzContainer::init(tolFile=&quot;&quot;)</code> (from DB or <code>tc_math/toleranz.asc</code> for DLLs without DB access); <code>getToleranz(TeToleranz)</code> — an array lookup for performance. <code>TeToleranz</code> enumerates ~100+ tolerances aligned to DB field <code>TOL_TOLERANZ_NUMMER</code>, including geometry-relevant ones such as <code>e_laenge</code>(1), <code>e_wert</code>(2), <code>e_grad</code>(4), <code>e_analytisch</code>(15), <code>e_minElementLaenge</code>(17), <code>e_nullLaenge</code>(67), <code>e_MaxSehneBogenDist</code>(79), <code>e_schnittKreise</code>(31), <code>e_equiEcke</code>(32). Errors <code>TeToleranzFehler</code> {ok, keineToleranzInDB, zuWenigToleranzenInDB, nummerGroesserAnzahl, cannotOpenTolFile}.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Kernel algorithms (snapping, contour arithmetic, comparison, approximation) rely on a coherent, unit-correct tolerance set.</li>
+<li><strong>Source:</strong> <code>tc_math/TcToleranzContainer.h</code>.</li>
+<li><strong>Verification:</strong> Inspection/Test — init in metric and inch; verify tolerances scale and ids match the DB numbering.</li>
+</ul>
+<h3 id="fr-cad-att-064-persist-the-unit-flag-with-the-drawing">FR-CAD-ATT-064 — Persist the unit flag with the drawing</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall persist the drawing's measurement system as part of its metadata on save and restore/report it on load, so that geometry values are interpreted in the correct unit system; the Geo facades SHALL set/get a metric flag without converting the stored values.</li>
+<li><strong>Parameters &amp; options:</strong> <code>aCadSaveWorkfile</code> writes <code>#ST_CadAktEinheit</code> via <code>info write</code>; <code>TcGeoImportFacade::getUnits(&amp;metric)</code> and <code>TcGeoExportFacade::setUnits(metric)</code> (flag only, no value conversion — values are always assumed to be in the correct system).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A Geo without a reliable unit flag would be mis-scaled by consumers.</li>
+<li><strong>Source:</strong> <code>aCadSaveWorkfile</code> (<code>info write … #ST_CadAktEinheit</code>); <code>TcGeoImportFacade.h</code> <code>getUnits</code>; <code>TcGeoExportFacade.h</code> <code>setUnits</code>.</li>
+<li><strong>Verification:</strong> Test — save inch and metric drawings; reload; verify reported unit flag.</li>
+</ul>
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>GRIT palette index → colour name inconsistency.</strong> Index 2 maps to <code>limegreen</code> in <code>aCadChangeActSettings</code>/<code>aCadChangeElemColorSelection</code> but to the default <code>white</code> in the <code>aCadAssiContourColor</code> recolour map (which omits indices 2, 8, 13, 14). Is this deliberate (assistant only offers the ToPs-machining subset) or a latent bug? The exact 16-entry RGB palette lives in the external binary <code>GRITCOL.24</code>, which was not inspected.</li>
+<li><strong>Palette breadth vs. model breadth.</strong> The chooser exposes 16 GRIT indices but the element model (<code>TnColor::TeColor</code>) has only 11 semantic colours (0–10, incl. <code>e_highlight1/2</code> and <code>e_lightGrey</code>). Which GRIT indices are ever actually storable on an element, and how are the collapsed duplicates (e.g. two &quot;red&quot;, two &quot;blue&quot;) resolved on store? <code>befehl_to_farbe</code> only ever yields the 8 primary ToPs colours.</li>
+<li><strong>Line-style breadth vs. UI.</strong> <code>TC_MAX_ANZ_LINETYPES = 9</code> (incl. <code>TC_CENTER_DASH</code>, <code>TC_CENTER_DASH_DASH</code>, <code>TC_SOLID_THICK</code>) but the interactive automata and preview text only expose 6 (solid/dash/dot/dash_dot/dash_dot_dot/long_dash). Are the center/thick styles creatable only via import (DXF CENTER/BORDER) and macros, never interactively?</li>
+<li><strong><code>attribute keep/no_keep</code> scope.</strong> The precise set of edit operations affected by the keep-attributes toggle (transform, copy, colour change, split/merge?) is not evident from the mask scripts alone; the consuming automaton logic was not traced.</li>
+<li><strong>Snap radius units.</strong> <code>db_set_fanggroesse</code> takes a <code>double</code> &quot;size&quot; converted to pixels; whether the caller passes world units (mm/inch via gritunit) or a raw pixel value is not fully determined from the header.</li>
+<li><strong>Undo granularity of attribute changes.</strong> <code>TcDbaseChangeColorAction</code>/<code>TcDbaseChangeStyleAction</code> exist, but whether a multi-element &quot;change all/replace&quot; is recorded as one composite transaction (single undo) or per-element actions was not confirmed from the manager code read.</li>
+<li><strong>Workfile concurrency.</strong> The workfile name embeds the session user (<code>_&lt;user&gt;</code>) to avoid collisions, but no locking is evident; behaviour with two concurrent sessions of the same user is unspecified.</li>
+<li><strong>DXF import colour-code → TruTops colour.</strong> <code>getLayerColor</code> returns the raw DXF layer colour code; the mapping from AutoCAD colour indices (1–255) to <code>TnColor</code> on import was not located in the files read (export mapping is explicit in <code>dxfutil.cpp</code>; the import side needs confirmation).</li>
+<li><strong><code>e_UnitUndefined</code> handling.</strong> How geometry values are treated when the active unit is undefined (<code>getActUnit()==e_UnitUndefined</code>) — reject, default to metric, or defer — is not specified in <code>units.h</code>.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-attributes-snapping-selection-drawing-lifecycle-doc-10.4-cad-detail-attributes-snapping-selection-lifecycle-id-prefix-fr-cad-att-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Attributes, Snapping, Selection & Drawing Lifecycle"
+doc: "10.4 - CAD Detail - Attributes, Snapping, Selection & Lifecycle"
+id-prefix: "FR-CAD-ATT"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#line-colour-line-style-attributes">3.1 Line colour & line-style attributes</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-001-set-active-line-colour">FR-CAD-ATT-001 — Set active line colour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-002-set-active-line-style">FR-CAD-ATT-002 — Set active line style</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-003-change-colour-of-picked-confirmed-elements">FR-CAD-ATT-003 — Change colour of picked / confirmed elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-004-change-colour-of-all-elements">FR-CAD-ATT-004 — Change colour of all elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-005-replace-one-colour-by-another-recolour-by-attribute">FR-CAD-ATT-005 — Replace one colour by another (recolour by attribute)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-006-change-line-style-of-picked-confirmed-elements">FR-CAD-ATT-006 — Change line style of picked / confirmed elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-007-change-line-style-of-all-elements">FR-CAD-ATT-007 — Change line style of all elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-008-replace-one-line-style-by-another-restyle-by-attribute">FR-CAD-ATT-008 — Replace one line style by another (restyle by attribute)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-009-16-entry-grit-line-colour-palette-index-015">FR-CAD-ATT-009 — 16-entry GRIT line-colour palette (index 0–15)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-010-set-active-colour-and-style-together">FR-CAD-ATT-010 — Set active colour and style together</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-011-keep-attributes-on-edit-toggle">FR-CAD-ATT-011 — Keep-attributes-on-edit toggle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-012-colour-as-layer-surrogate-semantics-whitecut-yellowmark">FR-CAD-ATT-012 — Colour-as-layer-surrogate semantics (white=cut, yellow=mark)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-013-dxf-layer-colourstyle-mapping-on-import">FR-CAD-ATT-013 — DXF layer → colour/style mapping on import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-014-colourstyle-dxf-layerlinetype-mapping-on-export">FR-CAD-ATT-014 — Colour/style → DXF layer/linetype mapping on export</a>
+  </li>
+  <li level="2">
+   <a href="#point-snapping-fangen">3.2 Point snapping (Fangen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-015-snap-mode-what-to-catch">FR-CAD-ATT-015 — Snap mode (WHAT to catch)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-016-snap-kind-how-to-catch-and-result-type">FR-CAD-ATT-016 — Snap kind (HOW to catch) and result type</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-017-snap-scope-which-parts-where">FR-CAD-ATT-017 — Snap scope (which parts / where)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-018-snap-region-area-geometric-box-filter">FR-CAD-ATT-018 — Snap region / area (geometric box filter)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-019-snap-radius">FR-CAD-ATT-019 — Snap radius</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-020-catch-conditions-elements-equidistants-auxiliary-geometry">FR-CAD-ATT-020 — Catch conditions: elements / equidistants / auxiliary geometry</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-021-disable-snapping">FR-CAD-ATT-021 — Disable snapping</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-022-best-pick-resolution-and-snap-tracers">FR-CAD-ATT-022 — Best-pick resolution and snap tracers</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-023-per-element-type-catch-algorithms">FR-CAD-ATT-023 — Per-element-type catch algorithms</a>
+  </li>
+  <li level="2">
+   <a href="#interactive-selection-filters">3.3 Interactive selection & filters</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-024-selection-controller-pick-box-confirm-all">FR-CAD-ATT-024 — Selection controller (pick / box / confirm / all)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-025-selection-mode-single-multiple-add-multiple-invert">FR-CAD-ATT-025 — Selection mode (single / multiple-add / multiple-invert)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-026-selection-method-pick-box-pick-and-box">FR-CAD-ATT-026 — Selection method (pick / box / pick-and-box)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-027-selection-focus-filter-what-units-are-selectable">FR-CAD-ATT-027 — Selection focus filter (what units are selectable)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-028-selection-scope-filter-where-selection-searches">FR-CAD-ATT-028 — Selection scope filter (where selection searches)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-029-selector-state-preview-and-info-level">FR-CAD-ATT-029 — Selector state, preview and info level</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-030-mark-unmark-elements">FR-CAD-ATT-030 — Mark / unmark elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-031-mark-contours">FR-CAD-ATT-031 — Mark contours</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-032-sample-mark-unsample-bend-lines">FR-CAD-ATT-032 — Sample (mark) / unsample bend lines</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-033-contour-assistant-outer-contour-enumeration">FR-CAD-ATT-033 — Contour assistant: outer-contour enumeration</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-034-contour-assistant-per-contour-actions-mark-delete-recolour">FR-CAD-ATT-034 — Contour assistant per-contour actions (mark / delete / recolour)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-035-contour-assistant-father-nesting-mode">FR-CAD-ATT-035 — Contour assistant father / nesting mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-036-delete-current-selection-contour">FR-CAD-ATT-036 — Delete current selection / contour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-037-selection-driven-contour-operations-close-melt-hatch">FR-CAD-ATT-037 — Selection-driven contour operations (close / melt / hatch)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-038-attribute-based-non-interactive-selection">FR-CAD-ATT-038 — Attribute-based (non-interactive) selection</a>
+  </li>
+  <li level="2">
+   <a href="#undo-redo-transaction-model">3.4 Undo / redo transaction model</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-039-undo">FR-CAD-ATT-039 — Undo</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-040-redo">FR-CAD-ATT-040 — Redo</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-041-transaction-grouping-atomic-non-atomic">FR-CAD-ATT-041 — Transaction grouping (atomic / non-atomic)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-042-clear-undo-history">FR-CAD-ATT-042 — Clear undo history</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-043-dbase-action-memento-model">FR-CAD-ATT-043 — Dbase action / memento model</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-044-undoredo-button-enablement">FR-CAD-ATT-044 — Undo/redo button enablement</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-045-profile-editor-undo-redo">FR-CAD-ATT-045 — Profile-editor undo / redo</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-046-bounded-undo-history">FR-CAD-ATT-046 — Bounded undo history</a>
+  </li>
+  <li level="2">
+   <a href="#drawing-lifecycle">3.5 Drawing lifecycle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-047-new-drawing">FR-CAD-ATT-047 — New drawing</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-048-open-load-drawing-format-dispatch">FR-CAD-ATT-048 — Open / load drawing (format dispatch)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-049-open-file-by-name-extension-based">FR-CAD-ATT-049 — Open file by name (extension-based)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-050-save-in-place">FR-CAD-ATT-050 — Save (in place)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-051-save-as-format-selection-password-gating">FR-CAD-ATT-051 — Save as (format selection + password gating)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-052-save-selection-extract-part">FR-CAD-ATT-052 — Save selection (extract part)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-053-write-read-workfile">FR-CAD-ATT-053 — Write / read workfile</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-054-unsaved-changes-guard">FR-CAD-ATT-054 — Unsaved-changes guard</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-055-close-exit-mode">FR-CAD-ATT-055 — Close / exit mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-056-switch-to-data-management-mode">FR-CAD-ATT-056 — Switch to data (management) mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-057-scale-the-whole-drawing">FR-CAD-ATT-057 — Scale the whole drawing</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-058-native-geo-read-facade">FR-CAD-ATT-058 — Native Geo read facade</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-059-native-geo-write-facade">FR-CAD-ATT-059 — Native Geo write facade</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-060-core-load-store-engine-and-flags">FR-CAD-ATT-060 — Core load / store engine and flags</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-061-recent-files-mru-ring-buffer-window-title">FR-CAD-ATT-061 — Recent-files (MRU) ring buffer & window title</a>
+  </li>
+  <li level="2">
+   <a href="#units-tolerances">3.6 Units & tolerances</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-062-metric-inch-unit-duality-gritunit">FR-CAD-ATT-062 — Metric / inch unit duality (gritunit)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-063-unit-specific-tolerance-container">FR-CAD-ATT-063 — Unit-specific tolerance container</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-att-064-persist-the-unit-flag-with-the-drawing">FR-CAD-ATT-064 — Persist the unit flag with the drawing</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></span>
+ <span class="next"><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

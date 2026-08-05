@@ -1,0 +1,749 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Laser Cutting Technology</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Data & Process</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a class="active" href="lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Data & Process</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="lasertech.html">Laser Cutting Technology</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Laser Cutting Technology</h1>
+<p>This document explains the laser cutting pipeline in Flux: the cutting-condition
+database, the cut-step class hierarchy, the auto-tooler, and the NC output path.</p>
+<p><strong>Primary files:</strong></p>
+<p>** <code>Core/Laser/LaserCore.cs</code> — cutting-condition database infrastructure
+** <code>Core/Laser/LaserCut.cs</code> — <code>LaserStep</code>, <code>LaserPathCut</code>, <code>PointCut</code>, <code>LaserText</code>
+** <code>Core/Laser/PlineCut.cs</code> — <code>PlineCut</code> and <code>MacroCut</code> (the main cut steps)
+** <code>Core/Laser/TraceCut.cs</code> — <code>TraceCut</code> (approach/escape/profile base)
+** <code>Core/Laser/Ops/LaserAuto.cs</code> — <code>LaserAutotooler</code></p>
+<h2 id="overview">Overview</h2>
+<p>The laser pipeline has three layers that work in sequence:</p>
+<p>[source]</p>
+<pre><code>Drawing2  (E2Pline, E2Point entities)
+   ↓  LaserAutotooler.DoTooling()
+FlatTech  (IStepCollection of CutStep objects: PlineCut, PointCut, …)
+   ↓  ICodeGenerator / LSTGen
+NC file   (.lst, .nc, .nc3d, …)
+</code></pre>
+<p>The <strong>database layer</strong> (<code>LaserCore.cs</code>) provides the cutting parameters — speed, gas
+pressure, kerf width, pierce time — for a given material and thickness. The
+<strong>step layer</strong> (<code>PlineCut</code>, <code>TraceCut</code>) carries per-contour tooling: which condition to
+use, where the approach starts, corner treatments, bevel data. The <strong>tooler</strong>
+(<code>LaserAutotooler</code>) creates steps from drawing entities and selects conditions
+automatically.</p>
+<h2 id="the-cutting-condition-database-lasercore.cs">The Cutting-Condition Database (LaserCore.cs)</h2>
+<p><code>LaserCore.cs</code> is the core database infrastructure. It is not named after a machine —
+the file provides the classes that represent a machine's laser parameter database
+(Trumpf calls this an &quot;LTT&quot;, Laser Technology Table).</p>
+<h3 id="the-three-level-hierarchy">The three-level hierarchy</h3>
+<p>[source]</p>
+<pre><code>LaserDBBook   (one per machine)
+  └── LaserDBPage[]   (one per material × thickness × surface combination)
+        └── LaserCondition[]  (cut, mark, vaporize, pierce conditions)
+</code></pre>
+<h3 id="laserdbbook">LaserDBBook</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCore.cs:385</code></p>
+<p>One <code>LaserDBBook</code> exists per <code>CutMachine</code>. It is the top-level container for all
+cutting conditions on that machine and is loaded from two <code>.curl</code> files:</p>
+<p>** <code>mc:&lt;machineId&gt;/cutdbFactory.curl</code> — factory-shipped defaults (read-only)
+** <code>mc:&lt;machineId&gt;/cutdbUser.curl</code> — user modifications layered on top</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>MachineID</code>   | Machine identifier string (e.g. <code>&quot;7035&quot;</code>)
+| <code>Pages</code>       | All <code>LaserDBPage</code> objects in this book
+| <code>CCField</code>     | Ordered array of field IDs for cutting conditions
+| <code>PCField</code>     | Ordered array of field IDs for pierce conditions
+| <code>ECField</code>     | Ordered array of field IDs for edge-control conditions
+| <code>AllowedPages</code>| Pages filtered by the machine's <code>ExcludedFocalLengths</code>
+| <code>SupportedMaterial</code> | Materials for which at least one page exists; follows <code>LaserAlias</code> links
+| <code>Changes</code>     | <code>LaserPageChangeset</code> list — diffs between factory and user books
+|===</p>
+<p><strong><strong>Looking up a page:</strong></strong></p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Method | Behaviour</p>
+<p>| <code>GetPagesFor(mat, thickness, film, treatment)</code> | Exact match only; returns ordered sequence
+| <code>GetLenientPagesFor(...)</code> | Closest match with scoring: ±thickness 5 %, film mismatch +5, treatment mismatch +1500, wrong material +1000. Returns up to ~3 score buckets.
+| <code>GetDefaultPage(...)</code> | First exact match (<code>FirstOrDefault</code>)
+| <code>GetBestPage(...)</code> | First lenient match
+|===</p>
+<p>Field index lookups (<code>GetCCFieldIndex</code>, <code>GetPCFieldIndex</code>) map a <code>LaserDBField.EFields</code>
+enum value to the offset inside <code>LaserCondition.Val[]</code>. The result is cached in a
+256-entry byte array, so the lookup is O(1) after the first call.</p>
+<p><strong><strong>Saving:</strong></strong></p>
+<p><code>Save()</code> writes only the diff between the factory book and the current book to
+<code>cutdbUser.curl</code> using <code>AuCurl.Save</code>. <code>SaveFactory()</code> writes the entire book to the
+shared archive (developer use only).</p>
+<h3 id="laserdbpage">LaserDBPage</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCore.cs:960</code></p>
+<p>A <code>LaserDBPage</code> is one row in the machine's technology table — cutting parameters for
+a specific <strong>material × thickness × surface</strong> combination.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Id</code>               | <code>int</code>    | Unique ID. Factory pages: &lt; 100001. User-defined: ≥ 100001.
+| <code>IsFactoryPage</code>    | <code>bool</code>   | <code>Id &lt; UserPageIdStart (100001)</code>
+| <code>Material</code>         | <code>string</code> | Material name matching <code>Material.Name</code> in Flux DB (e.g. <code>&quot;STEEL&quot;</code>, <code>&quot;SS&quot;</code>)
+| <code>Thickness</code>        | <code>float</code>  | Sheet thickness in mm
+| <code>SurfaceTreatment</code> | <code>Sheaf.ETreatment</code> | Painted, oiled, bare, etc.
+| <code>Film</code>             | <code>Sheaf.EFilm</code> | Protective film presence
+| <code>ProcType</code>         | <code>ELaserProcessTypes</code> | Standard, OxygenCutting, HiLas, HighSpeed, CompressedAir, BrightLine, etc.
+| <code>ProcOptions</code>      | <code>ELaserProcessOptions</code> | Flags: FlyLine, CoolLine, BevelCut, RedFlyLine, NanoJoints
+| <code>GasType</code>          | <code>EGasTypes</code> | N₂, O₂, Air, Argon, N₂O₂, Custom
+| <code>FocalLength</code>      | <code>float</code>  | Lens focal length (mm)
+| <code>PageName</code>         | <code>string</code> | Human-readable name (e.g. <code>&quot;P0008-N2-1.0&quot;</code>)
+| <code>Conds</code>            | <code>List&lt;LaserCondition&gt;</code> | All conditions on this page
+| <code>STAMMData</code>        | <code>string[]</code> | Raw LST STAMM table values (Trumpf machines)
+| <code>LTXData</code>          | <code>Ltx</code>    | LTC/LCE/LPE table data (newer Trumpf format)
+| <code>AccelerationLimit</code>| <code>float</code>  | Maximum acceleration for this page (m/s²)
+| <code>MaxChamferAngle</code>  | <code>double</code> | Maximum bevel chamfer angle (default 50°)
+| <code>NozzleDia</code>        | <code>float</code>  | Parsed from <code>Lense</code> string (mm; default 2 mm)
+| <code>ReqMacFunctions</code>  | <code>ERequiredMachineFunctions</code> | Required machine capabilities
+|===</p>
+<p><strong><strong>Convenience accessors:</strong></strong></p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property / Method | Meaning</p>
+<p>| <code>StdCC</code>           | The &quot;large contour&quot; <code>ECut.Cut</code> condition (first in <code>GetCCs(ECut.Cut)</code>)
+| <code>StdKerfWidth</code>    | <code>StdCC.KerfWidth</code>
+| <code>ActiveCutConds</code>  | Non-redundant cut conditions, largest geometry first. Drops medium if it is identical to small.
+| <code>SupportsVaporization</code> | True if any <code>ECut.Vaporize</code> condition exists
+| <code>VaporizeCond</code>    | The vaporize condition (or null)
+| <code>GetCCs(ECut op)</code> | All path conditions of the given cut type
+| <code>GetCC(id)</code>       | Single condition by ID
+| <code>GetPC(EPierce)</code>  | Best pierce condition for the given pierce type, respecting <code>PierceLine</code> availability
+| <code>GetCCByLayer(name)</code> | Condition tagged to a specific layer name
+| <code>IsTinyContour(pline)</code> | True if the pline is smaller than the smallest active condition's <code>GeomSize</code>
+| <code>ChooseCC(op, pline, ccBy)</code> | Auto-selects the best condition for a pline
+|===</p>
+<h4 id="choosecc-how-a-condition-is-selected-for-a-contour"><code>ChooseCC</code> — how a condition is selected for a contour</h4>
+<p><strong>File:</strong> <code>Core/Laser/LaserCore.cs:1120</code></p>
+<p>The goal is to pick the fastest condition whose geometry threshold the pline satisfies.</p>
+<p>When <code>ccBy == EChooseCCBy.Area</code>: uses the pline's enclosed area directly —
+selects the first condition whose <code>GeomSize ≤ area</code>.</p>
+<p>When <code>ccBy == EChooseCCBy.Average</code> or <code>MaxSegment</code>: measures segment lengths along
+the pline, but <strong>merges consecutive segments separated by a turn angle &lt; 10°</strong> to avoid
+penalising smooth spline-approximated curves. For each resulting effective segment
+length, a &quot;corrected&quot; length is computed that accounts for curve radius:</p>
+<p>[source]</p>
+<pre><code>corrected*len = len × (1 + (f - 1) × (1 - R*threshold / seg.Radius))  // for curves
+corrected*len = len × f                                                  // for straights
+  where f = 2 × √π ≈ 3.545
+</code></pre>
+<p>The average (or maximum) corrected length is compared against
+<code>2 × √(GeomSize × π)</code> — the diameter of a circle with area = <code>GeomSize</code>. The
+first condition for which the metric exceeds this threshold is chosen (large
+contour condition = largest <code>GeomSize</code> = selected for large/complex contours).</p>
+<p>If no condition qualifies, the last (slowest) condition is returned as fallback.</p>
+<h3 id="lasercondition">LaserCondition</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCore.cs:1338</code></p>
+<p>A single cutting or piercing condition. All numeric parameters are stored as <code>float[] Val</code>, indexed by position in the owner book's <code>CCField</code> or <code>PCField</code> array.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Id</code>         | <code>int</code>   | Unique within the page
+| <code>Name</code>       | <code>string</code>| <code>&quot;Large&quot;</code>, <code>&quot;Medium&quot;</code>, <code>&quot;Small&quot;</code>, <code>&quot;Normal&quot;</code>, <code>&quot;Gentle&quot;</code>, etc.
+| <code>Kind</code>       | <code>EKind</code> | <code>Path</code> (contour), <code>Point</code> (pierce), <code>EdgeCtrl</code>
+| <code>LaserOp</code>    | <code>short</code> | Cast to <code>ECut</code> (for Path) or <code>EPierce</code> (for Point)
+| <code>Layer</code>      | <code>string</code>| Layer name this condition is mapped to (for layer-driven selection)
+| <code>GeomSize</code>   | <code>float</code> | Minimum contour area (mm²) for this condition to apply
+| <code>Val[]</code>      | <code>float[]</code>| Parameter values; indexed via <code>GetCCFieldIndex</code> / <code>GetPCFieldIndex</code>
+| <code>SHDict</code>     | <code>SHDict</code>| Sheaf settings attached to this condition (approach radius, etc.)
+| <code>UVal[]</code>     | <code>float[]</code>| Vendor-specific extra values (third-party machines)
+|===</p>
+<p><strong><strong>Fast-access properties</strong></strong> (call <code>GetValue(EFields.xxx)</code> internally):</p>
+<p>[cols=&quot;2,4&quot;]
+|===
+| <code>Speed</code>          | Cutting speed (m/min)
+| <code>GasPressure</code>    | Gas pressure (bar)
+| <code>KerfWidth</code>      | Cut width on sheet (mm)
+| <code>NozzleDistance</code> | Head-to-sheet distance (mm)
+| <code>PierceTime</code>     | Pierce duration (s)
+| <code>IsMarking</code>      | True for <code>ECut.Mark</code>, <code>ECut.DotMark</code>, or <code>EPierce.Mark</code>
+| <code>IsVaporize</code>     | True for <code>ECut.Vaporize</code>
+| <code>IsStdCC</code>        | True if this is the large-contour standard condition
+| <code>WithPierceLine</code> | True if Trumpf PierceLine field is set in <code>Val</code>
+|===</p>
+<h3 id="key-enumerations">Key Enumerations</h3>
+<h4 id="epierce-pierce-operation-types">EPierce — pierce operation types</h4>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Value | Meaning</p>
+<p>| <code>Normal</code>      | Standard pierce (default; stored as 0 so it can be omitted in .curl)
+| <code>None</code>        | No pierce (start on sheet edge or pre-pierced)
+| <code>Gentle</code>      | Soft / slow pierce for sensitive materials
+| <code>Quick</code>       | Power / fast pierce
+| <code>Cool</code>        | Cool pierce (gas cooling)
+| <code>Mark</code>        | Dot-mark only (no through-cut)
+| <code>Tool</code>        | Punched on a combination machine
+| <code>Peck</code>        | Peck piercing (staged)
+| <code>Multi</code>       | Multi-step pierce
+| <code>RampPower/Duty/Focus</code> | Ramp-modulated piercing variants
+| <code>Jet</code>/<code>Blow</code>/<code>OilSpray</code>/<code>SoapSpray</code> | Gas-assisted pierce variants
+| <code>Rapid</code>       | Fast pierce
+|===</p>
+<h4 id="ecut-path-operation-types">ECut — path operation types</h4>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Value | Meaning</p>
+<p>| <code>Cut</code>      | Through-cut (removes material)
+| <code>Vaporize</code> | Burns off protective film without cutting through
+| <code>Mark</code>     | Engraves/scores the surface
+| <code>DotMark</code>  | Dot-by-dot marking
+|===</p>
+<h4 id="elaserprocesstypes-primary-process">ELaserProcessTypes — primary process</h4>
+<p>Standard, OxygenCutting, HiLas (nitrogen high-pressure), HighSpeed, CompressedAir,
+NitroLinePlasma, HighQuality, BrightLine, ThickLine, ArgonCutting, PrecisionCutting,
+Reliable3D.</p>
+<h4 id="elaserprocessoptions-secondary-flags-bitfield">ELaserProcessOptions — secondary flags (bitfield)</h4>
+<p><code>FlyLine</code> (stitch cut), <code>CoolLine</code>, <code>BevelCut</code>, <code>RedFlyLine</code>, <code>NanoJoints</code>.</p>
+<h4 id="egastypes">EGasTypes</h4>
+<p><code>Undefined</code>, <code>N2</code>, <code>O2</code>, <code>Air</code>, <code>Argon</code>, <code>N2O2</code>, <code>Custom</code>.</p>
+<h4 id="ecornertreatment">ECornerTreatment</h4>
+<p><code>DoNothing</code>, <code>Rounding</code>, <code>Looping</code>, <code>Dwell</code>, <code>Cool</code>, <code>Stop</code>, <code>Slowdown</code>,
+<code>BevelSharpCorner</code>, <code>BevelCylindricalRounding</code>, <code>BevelConicalPoint</code>.</p>
+<h2 id="the-cut-step-class-hierarchy">The Cut-Step Class Hierarchy</h2>
+<p>[source]</p>
+<pre><code>CutStep  (abstract base — Entity2 + CutConfig)
+  └── LaserStep  (abstract — adds LaserPage, Settings)
+        ├── LaserPathCut  (abstract — adds CCId, CC, BevelData, Pierce)
+        │     └── TraceCut  (abstract — adds Trace, approach/escape profile)
+        │           ├── PlineCut    ← main workhorse for contour cutting
+        │           └── MacroCut   ← special-shape template cutting
+        ├── PointCut      ← point pierce / dot mark
+        └── LaserText     ← automatically added text markings
+</code></pre>
+<h3 id="cutstep">CutStep</h3>
+<p>The base class shared across laser, punch, and other technologies. Holds:
+<code>Entity2 Entity</code>, <code>CutConfig Config</code>, <code>ESFlags Flags</code>, and the dirty/notification
+infrastructure (<code>Dirty()</code>, <code>PFire()</code>).</p>
+<h3 id="laserstep">LaserStep</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCut.cs:58</code></p>
+<p>Adds laser-specific concerns:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Member | Meaning</p>
+<p>| <code>LaserPage</code>    | The <code>LaserDBPage</code> for this step. Defaults to <code>Config.LaserPage</code>; can be overridden per-step. Persisted as <code>LaserPageId</code> (int) to avoid bloating the file.
+| <code>Settings</code>     | <code>LaserCAMSettings</code> wrapper — lazy proxy into the Sheaf settings hierarchy
+| <code>HeadBound</code>    | Always equals <code>Bound</code> (the laser head occupies the same footprint as the cut)
+| <code>LaserPageChanged()</code> | Abstract — called by <code>FlatTech</code> when the page on <code>CutConfig</code> changes; derived classes reset their condition IDs
+| <code>IsIdentical(other)</code> | Adds <code>LaserPage.Id</code> to the equality check
+|===</p>
+<h3 id="laserpathcut">LaserPathCut</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCut.cs:111</code></p>
+<p>Abstract base for all contour operations. Adds cutting-condition selection:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Member | Meaning</p>
+<p>| <code>CCId</code>   | Primary cutting-condition ID. <code>-1</code> = auto-select on next access. Auto-selection reads the layer use (<code>VBend</code> / <code>MBend</code> → Mark, <code>Evaporate</code> → Vaporize, etc.), checks if the contour is tiny, and calls <code>LaserDBPage.ChooseCC</code>. Once auto-selected the ID is cached.
+| <code>CC</code>     | <code>LaserCondition</code> — lazy resolve of <code>CCId</code>
+| <code>PierceCondition</code> | Pierce condition ID auto-selected from the page
+| <code>Pierce</code> | <code>EPierce</code> type; set to <code>None</code> automatically for open plines that are being marked
+| <code>BD</code>     | <code>BevelData</code> — null for straight cuts; carries angle, radius, corner treatment for bevel cutting
+| <code>HasBevel</code> | <code>BD != null &amp;&amp; !IsStraightCut &amp;&amp; CC.LaserOp == ECut.Cut</code>
+| <code>IsTinyContour</code> | True when the pline is smaller than the page's smallest condition geometry
+| <code>LaserPageChanged()</code> | Resets <code>CCId = -1</code> and clears <code>BD</code> if the new page doesn't support bevel
+| <code>SHParent</code> | Parent in the Sheaf hierarchy: wraps <code>CC.SHDict</code> above <code>Config</code> — approach parameters cascade from condition → config → machine
+|===</p>
+<h3 id="plinecut">PlineCut</h3>
+<p><strong>File:</strong> <code>Core/Laser/PlineCut.cs:13</code></p>
+<p>The primary cut step for normal contours. Extends <code>TraceCut</code> with per-cut overrides:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>BeamOffset</code>      | <code>EBeamOffset</code> — <code>None</code>, <code>BySoftware</code> (Flux applies kerf offset), <code>ByHardware</code> (machine controller handles offset)
+| <code>Acceleration</code>    | <code>ELevel</code> — <code>Normal</code>, <code>Reduced</code>, <code>Maximum</code>; written to NC code
+| <code>Dynamics</code>        | <code>ELevel</code> from Sheaf; controls machine dynamic settings
+| <code>EndOptimization</code> | <code>EEndOptType</code> — <code>None</code>, <code>RampDown</code>, <code>ReduceSpeed</code>; affects approach radius near cut end
+| <code>CanAutoMoveApp</code>  | True when approach point is not fixed and there are no mid-path CC changes
+| <code>CCChanges</code>       | <code>ImmutableArray&lt;CCChange&gt;</code> — sorted list of condition changes at specific lies along the path (e.g. slow down before a sharp corner, then resume)
+| <code>Corners</code>         | <code>CornerData[]</code> — corner index, angle, treatment, rounding radius, and trace node index for every corner on the pline
+| <code>CornerOverrules</code> | User-overridden corner treatments (by corner index)
+| <code>JunctionsLies</code>   | Crossing points with other cuts (for commonline/shared-cut optimisation)
+| <code>BevelChangePoints</code>| Positions where bevel angle changes (from <code>BevelData</code> geometry)
+| <code>BevelJointLies</code>  | Lie values where bevel joints are inserted
+|===</p>
+<h3 id="macrocut">MacroCut</h3>
+<p><strong>File:</strong> <code>Core/Laser/PlineCut.cs</code> (at the end of the file)</p>
+<p>A <code>TraceCut</code> that cuts a standard shape (circle, D-shape, rounded rectangle, chamfered
+rectangle, double-D) using a pre-computed shape template instead of the entity pline
+directly. The <code>LaserAutotooler</code> creates <code>MacroCut</code> when <code>ToolStdShape</code> succeeds.</p>
+<h3 id="tracecut">TraceCut</h3>
+<p><strong>File:</strong> <code>Core/Laser/TraceCut.cs</code></p>
+<p>Abstract base for <code>PlineCut</code> and <code>MacroCut</code>. Owns the computed toolpath profile:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>Trace</code> / <code>Trace0</code> | The main trace polyline (approach + cut + escape)
+| <code>TDNeutral</code>        | <code>TraceData</code> for the neutral (non-bevel) plane
+| <code>Profile</code>          | Complete toolpath: approach → pierce position → cut → escape
+| <code>Start</code> / <code>End</code>    | First and last points of the profile
+| <code>CutLength</code>        | Total path length being cut (not counting approach/escape)
+| <code>ApproachLength</code> / <code>EscapeLength</code> | Lead-in / lead-out arc or line lengths
+| <code>FixedApproachLie</code> | Forced approach position on the pline (float, NaN = auto)
+| <code>FixedEndLie</code>      | Forced cut-end position (used for sheared-sheet edge cuts)
+| <code>IsAppLieFixed</code>    | <code>Flags.HasFlag(ESFlags.ApproachLieFixed)</code>
+| <code>Flags</code>            | <code>ESFlags</code> bitfield (see below)
+|===</p>
+<p>Key <code>ESFlags</code> values:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Flag | Meaning</p>
+<p>| <code>ApproachLieFixed</code> | Approach location locked (from approach marker entity or user)
+| <code>FullCut</code>          | Standard <code>PlineCut</code> (set in constructor)
+| <code>BendMark</code>         | This cut marks a bend line (selects Mark condition automatically)
+| <code>StartOnSheetEdge</code> | Approach starts on a sheared sheet edge
+| <code>EndOnSheetEdge</code>   | Cut ends on a sheared sheet edge
+| <code>OffsetIssuesChecked</code> | Kerf offset has been validated; cleared when <code>CCId</code> changes
+|===</p>
+<p>Key methods:</p>
+<p>** <code>Dirty()</code> — marks the profile for recomputation and fires <code>EProp.CodeDirty</code>.
+** <code>GetNestingPlines()</code> — returns approach and escape plines for nesting (the <code>CutTooling</code>
+layer plines added to the part outline for collision avoidance).
+** <code>GetToolingPlines()</code> — approach, cut body, and escape segments separately.
+** <code>MoveApproach(lie)</code> — relocates the approach start on the pline.
+** <code>Flip(really)</code> — reverses the cut direction (clockwise ↔ counter-clockwise).</p>
+<h3 id="pointcut">PointCut</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCut.cs:262</code></p>
+<p>A single pierce or dot-mark at a point. Can be created from:
+** <code>E2Point ep</code> — explicit point entity in the drawing
+** <code>E2Pline e2p</code> — pierces the bounding box centre of the pline (for pre-pierce)</p>
+<p>Key properties: <code>Pierce</code> (<code>EPierce</code>), <code>PierceCondition</code> (the <code>LaserCondition</code>).
+NC generation calls <code>cg.TurnLaserOn(PierceCondition, null, EKerfCorrection.None)</code>.
+Optionally calls <code>cg.VaporizePoint</code> for film vaporization around the pierce.</p>
+<h3 id="lasertext">LaserText</h3>
+<p><strong>File:</strong> <code>Core/Laser/LaserCut.cs:356</code></p>
+<p>A marking step for automatically added laser text (part numbers, data-matrix codes,
+etc.) created by finishing rules. Not backed by an <code>E2Text</code> entity in the drawing.
+Properties include <code>Text</code>, <code>Angle</code>, font settings, position, and <code>EMarkOutputType</code>
+(plain text, data-matrix, QR, etc.).</p>
+<h2 id="laserautotooler.dotooling">LaserAutotooler.DoTooling</h2>
+<p><strong>File:</strong> <code>Core/Laser/Ops/LaserAuto.cs:24</code></p>
+<p><code>LaserAutotooler</code> is the orchestrator that transforms a <code>Drawing2</code> into a fully tooled
+<code>FlatTech</code> (the <code>IStepCollection</code>). Called from <code>Part.DoCutTooling()</code>.</p>
+<h3 id="precondition">Precondition</h3>
+<p>If <code>Config.LaserPage == null</code> (no cutting-condition page could be found for this
+material/thickness), the tooler returns <code>EResult.NoLaserPage</code> immediately.</p>
+<h3 id="step-by-step-process">Step-by-step process</h3>
+<p>[source,csharp]</p>
+<pre><code>public EResult DoTooling (EDoFlags flags = EDoFlags.Default) {
+    Tech.CompOnce.Clear ();          // 1. clear cached values
+    GatherSpecialEntities ();        // 2. find approach markers
+    // 3. stitch cutting
+    if (FlyLine &amp;&amp; StitchCutDist &gt; 1) {
+        new StitchCutterCircles (Tech).DoTooling ();
+        new StitchCutter (Tech).DoTooling ();
+    }
+    // 4. tool each entity
+    foreach (var ent in Dwg.Entities) { … create PlineCut / PointCut … }
+    // 5. sheared-sheet edge notches
+    // 6. trim concavities (experimental)
+    // 7. finishing rules
+    Tech.ApplyFinishingRules (contourMap);
+    Tech.OptimizeCutEnds ();         // 8. optimize
+    Tech.RefreshMarkings ();         // 9. laser markings
+    Tech.MarkBendLines ();           // 10. bend-line marks
+    return EResult.OK;
+}
+</code></pre>
+<h4 id="step-2-approach-markers">Step 2 — Approach markers</h4>
+<p>Entities on the <code>ApproachMarker</code> layer are gathered. Their positions are matched
+against plines later in step 4 to lock the approach point.</p>
+<h4 id="step-3-stitch-cutting-flyline">Step 3 — Stitch cutting (FlyLine)</h4>
+<p>When <code>ELaserProcessOptions.FlyLine</code> is enabled and <code>StitchCutDist &gt; 1 mm</code>,
+<code>StitchCutterCircles</code> and <code>StitchCutter</code> create <code>PlineCut</code> fragments that produce
+tabs between parts on a nested sheet — the laser cuts almost all the way around each
+part but leaves small uncut bridges (stitches) so pieces stay connected until the
+operator removes them.</p>
+<h4 id="step-4-tooling-entities">Step 4 — Tooling entities</h4>
+<p>For each <code>E2Pline</code> in the drawing:</p>
+<ol>
+<li><em><strong>Skip already-tooled</strong></em>* (<code>Tech.HasSteps(ent)</code>) and covered entities.</li>
+<li><strong><strong>Sheared sheet:</strong></strong> if the outer pline has sheared edges, skip it here; handle it
+separately after the main loop.</li>
+<li><strong><strong>Standard shape</strong></strong> (<code>ToolStdShape</code>): if the machine has <code>SplShapeMask</code> and the
+pline matches a supported shape (circle, D, rounded rect, chamfered rect,
+double-D), a <code>MacroCut</code> is created with a pre-computed shape trace and a fixed
+90° approach. Returns <code>true</code> to skip further handling.</li>
+<li><strong><strong>Normal pline:</strong></strong> create <code>PlineCut(e2p, config)</code>.
+<ul>
+<li>If the auto-selected <code>CC</code> is not a cut (marking/vaporize), set <code>Pierce = None</code>.</li>
+<li>For outer or open plines: disable end optimisation.</li>
+<li>If <code>SlowerCCForConstrainedApproach</code> is set: while the approach is constrained
+(tool head can't reach the start without crossing the part), try a slower CC
+that provides a longer approach lead-in.</li>
+</ul>
+</li>
+<li>For <code>E2Point</code> entities: create <code>PointCut</code> with the configured pierce type.</li>
+</ol>
+<h4 id="step-5-sheared-sheet-notches">Step 5 — Sheared-sheet notches</h4>
+<p>If the outer pline has sections that should be sheared (sheet edge already cut by
+guillotine), only the remaining unsheared portions are tooled as separate <code>PlineCut</code>
+fragments with <code>StartOnSheetEdge</code> / <code>EndOnSheetEdge</code> flags set.</p>
+<h4 id="steps-710-post-processing">Steps 7–10 — Post-processing</h4>
+<p>** <code>ApplyFinishingRules</code> — applies user-defined rules (e.g. mark this feature, skip
+that layer, add approach at specific angle).
+** <code>OptimizeCutEnds</code> — moves approach start points to minimise rapid-travel distance
+between consecutive cuts.
+** <code>RefreshMarkings</code> — adds <code>LaserText</code> steps for part numbers, barcodes etc. as
+configured by marking rules.
+** <code>MarkBendLines</code> — creates <code>PlineCut</code> steps with <code>ESFlags.BendMark</code> for each
+<code>E2Bendline</code>, using the <code>Mark</code> condition.</p>
+<h4 id="toolstdshape-special-shape-macro-cuts"><code>ToolStdShape</code> — special-shape macro cuts</h4>
+<p><strong>File:</strong> <code>Core/Laser/Ops/LaserAuto.cs:150</code></p>
+<p>Checks <code>SplShapeMask</code> against the pline's <code>ShapeDesc</code>. Recognized shapes:</p>
+<p>[cols=&quot;1,1,4&quot;, options=&quot;header&quot;]
+|===
+| Shape | <code>sliceAt</code> | Approach</p>
+<p>| <code>Circle</code>            | 0   | Approach at segment 0, max approach = diameter
+| <code>RoundRectangle</code> / <code>ChamferedRectangle</code> | 2.5 | Approach at segment 2.5
+| <code>SingleD</code>           | 1   | Max approach = width / √2
+| <code>DoubleD</code>           | 3   | Max approach = width / √2
+|===</p>
+<p>A <code>MacroCut</code> is created with <code>AppLength</code> capped at the shape's maximum approach, zero
+radius, and a 90° approach angle.</p>
+<p>Thin-shape rejection: if <code>BreakThinMacro</code> is set and the aspect ratio exceeds
+<code>ThinMacroFactor</code>, the macro is rejected and a normal <code>PlineCut</code> is used instead.</p>
+<h2 id="trumpf-ltt-data-lstlttparameter-and-ltx">Trumpf LTT Data: LstLTTParameter and Ltx</h2>
+<h3 id="lstlttparameter">LstLTTParameter</h3>
+<p>*<em>File:</em> <code>Core/Laser/LaserCore.cs:1442</code></p>
+<p>Metadata for each column in a Trumpf LST STAMM table. Loaded once from <code>ltxData.json</code>:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Field | Meaning</p>
+<p>| <code>Id</code>          | JSON key (camelCase, e.g. <code>&quot;cuttingSpeed&quot;</code>)
+| <code>LstColumnId</code> | LST column number (e.g. 2290 = MaterialStandard)
+| <code>Unit</code>        | Unit string written into STAMM (<code>&quot;m/min&quot;</code>, <code>&quot;bar&quot;</code>, etc.)
+| <code>IsNumeric</code>   | <code>true</code> = numeric column (<code>Z</code>), <code>false</code> = text column (<code>T</code>)
+|===</p>
+<p><code>CreateSTAMMTable(pages)</code> generates the <code>BEGIN*LTT*STAMM … END*LTT_STAMM</code> block
+for the LST file by iterating <code>LstLTTParameter.Parameters</code> and reading each page's
+<code>STAMMData</code> array at the matching index.</p>
+<h3 id="ltx-ltxrow-ltxfield-ltxparameter">Ltx, LtxRow, LtxField, LtxParameter</h3>
+<p>Newer Trumpf laser machines use an <code>LTX</code> format (three linked tables: LTC common
+parameters, LCE cut extension, LPE pierce extension) instead of the older STAMM
+approach.</p>
+<p><code>Ltx</code> holds the three table strings. <code>LtxRow</code> stores a row of encrypted
+(AES-256) key-value pairs, protecting proprietary machine parameters. <code>LtxParameter</code>
+provides the static column definitions (loaded from <code>ltxData.json</code>) and formula
+rules for generating LST expressions.</p>
+<h2 id="complete-pipeline">Complete Pipeline</h2>
+<p>[source]</p>
+<pre><code>Drawing2 (E2Pline, E2Point, E2Bendline)
+  │
+  ↓  Part.DoCutTooling()
+  │    → new LaserAutotooler(part).DoTooling()
+  │
+  ├── For each E2Pline
+  │     ├── ToolStdShape?  → MacroCut (template trace)
+  │     └── else           → PlineCut
+  │           ├── CCId auto-select: LaserDBPage.ChooseCC(op, pline, ccBy)
+  │           ├── Pierce auto-select: LaserDBPage.GetPC(pierceType)
+  │           └── Profile computed by TraceCut (approach arc + cut + escape)
+  │
+  ├── For each E2Point → PointCut
+  ├── StitchCutter → stitch PlineCuts (FlyLine)
+  ├── ApplyFinishingRules
+  ├── OptimizeCutEnds
+  ├── RefreshMarkings → LaserText steps
+  └── MarkBendLines → PlineCut (BendMark flag, Mark condition)
+  │
+  ↓  FlatTech (IStepCollection)
+       all CutStep objects in cut order
+  │
+  ↓  ICodeGenerator.GenCode() / LSTGen
+       per step:
+         ├── PlineCut  → RapidMove to approach → TurnLaserOn(CC, pierce)
+         │               → CutPath with kerf offset, corner treatments,
+         │               → CCChanges mid-path → TurnLaserOff → escape
+         ├── PointCut  → VaporizePoint (optional) → TurnLaserOn(PC)
+         └── LaserText → WriteText
+  │
+  ↓  NC file (.lst, .nc, .nc3d, …)
+       + Trumpf STAMM / LTX tables (LstLTTParameter.CreateSTAMMTable)
+</code></pre>
+<h2 id="key-files">Key Files</h2>
+<p>[cols=&quot;3,5&quot;, options=&quot;header&quot;]
+|===
+| File | Responsibility</p>
+<p>| <code>Core/Laser/LaserCore.cs</code>       | Database: <code>LaserDBBook</code>, <code>LaserDBPage</code>, <code>LaserCondition</code>, <code>LstLTTParameter</code>, <code>Ltx</code>; all cutting-condition enumerations
+| <code>Core/Laser/LaserCut.cs</code>        | Class hierarchy: <code>LaserStep</code>, <code>LaserPathCut</code>, <code>PointCut</code>, <code>LaserText</code>; corner treatment and epilog enumerations
+| <code>Core/Laser/PlineCut.cs</code>        | <code>PlineCut</code> (main cut step), <code>MacroCut</code>, <code>CornerData</code>, <code>CCChange</code>
+| <code>Core/Laser/TraceCut.cs</code>        | <code>TraceCut</code> — approach/escape/profile computation, trace data, <code>ESFlags</code>
+| <code>Core/Laser/Ops/LaserAuto.cs</code>   | <code>LaserAutotooler.DoTooling()</code> — full auto-tooling pipeline
+| <code>Core/Laser/Ops/StitchCutter.cs</code>| <code>StitchCutter</code>, <code>StitchCutterCircles</code> — FlyLine/stitch cutting
+| <code>Core/Laser/Ops/AutoRouter.cs</code>  | Cut-sequence routing optimisation
+| <code>Core/Part/Part.cs</code>             | <code>Part.DoCutTooling()</code> — outer entry point
+| <code>Core/Layout/Post/LSTGen.cs</code>    | Trumpf LST NC code generator; consumes <code>LaserDBPage.STAMMData</code>
+|===</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#overview">Overview</a>
+  </li>
+  <li level="1">
+   <a href="#the-cutting-condition-database-lasercore.cs">The Cutting-Condition Database (LaserCore.cs)</a>
+  </li>
+  <li level="2">
+   <a href="#the-three-level-hierarchy">The three-level hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#laserdbbook">LaserDBBook</a>
+  </li>
+  <li level="2">
+   <a href="#laserdbpage">LaserDBPage</a>
+  </li>
+  <li level="3">
+   <a href="#choosecc-how-a-condition-is-selected-for-a-contour"> — how a condition is selected for a contour</a>
+  </li>
+  <li level="2">
+   <a href="#lasercondition">LaserCondition</a>
+  </li>
+  <li level="2">
+   <a href="#key-enumerations">Key Enumerations</a>
+  </li>
+  <li level="3">
+   <a href="#epierce-pierce-operation-types">EPierce — pierce operation types</a>
+  </li>
+  <li level="3">
+   <a href="#ecut-path-operation-types">ECut — path operation types</a>
+  </li>
+  <li level="3">
+   <a href="#elaserprocesstypes-primary-process">ELaserProcessTypes — primary process</a>
+  </li>
+  <li level="3">
+   <a href="#elaserprocessoptions-secondary-flags-bitfield">ELaserProcessOptions — secondary flags (bitfield)</a>
+  </li>
+  <li level="3">
+   <a href="#egastypes">EGasTypes</a>
+  </li>
+  <li level="3">
+   <a href="#ecornertreatment">ECornerTreatment</a>
+  </li>
+  <li level="1">
+   <a href="#the-cut-step-class-hierarchy">The Cut-Step Class Hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#cutstep">CutStep</a>
+  </li>
+  <li level="2">
+   <a href="#laserstep">LaserStep</a>
+  </li>
+  <li level="2">
+   <a href="#laserpathcut">LaserPathCut</a>
+  </li>
+  <li level="2">
+   <a href="#plinecut">PlineCut</a>
+  </li>
+  <li level="2">
+   <a href="#macrocut">MacroCut</a>
+  </li>
+  <li level="2">
+   <a href="#tracecut">TraceCut</a>
+  </li>
+  <li level="2">
+   <a href="#pointcut">PointCut</a>
+  </li>
+  <li level="2">
+   <a href="#lasertext">LaserText</a>
+  </li>
+  <li level="1">
+   <a href="#laserautotooler.dotooling">LaserAutotooler.DoTooling</a>
+  </li>
+  <li level="2">
+   <a href="#precondition">Precondition</a>
+  </li>
+  <li level="2">
+   <a href="#step-by-step-process">Step-by-step process</a>
+  </li>
+  <li level="3">
+   <a href="#step-2-approach-markers">Step 2 — Approach markers</a>
+  </li>
+  <li level="3">
+   <a href="#step-3-stitch-cutting-flyline">Step 3 — Stitch cutting (FlyLine)</a>
+  </li>
+  <li level="3">
+   <a href="#step-4-tooling-entities">Step 4 — Tooling entities</a>
+  </li>
+  <li level="3">
+   <a href="#step-5-sheared-sheet-notches">Step 5 — Sheared-sheet notches</a>
+  </li>
+  <li level="3">
+   <a href="#steps-710-post-processing">Steps 7–10 — Post-processing</a>
+  </li>
+  <li level="3">
+   <a href="#toolstdshape-special-shape-macro-cuts"> — special-shape macro cuts</a>
+  </li>
+  <li level="1">
+   <a href="#trumpf-ltt-data-lstlttparameter-and-ltx">Trumpf LTT Data: LstLTTParameter and Ltx</a>
+  </li>
+  <li level="2">
+   <a href="#lstlttparameter">LstLTTParameter</a>
+  </li>
+  <li level="2">
+   <a href="#ltx-ltxrow-ltxfield-ltxparameter">Ltx, LtxRow, LtxField, LtxParameter</a>
+  </li>
+  <li level="1">
+   <a href="#complete-pipeline">Complete Pipeline</a>
+  </li>
+  <li level="1">
+   <a href="#key-files">Key Files</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bend.html">Bend Technology</a></span>
+ <span class="next"><a href="machineids.html">Machine ID Scheme</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

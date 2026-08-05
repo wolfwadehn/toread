@@ -1,0 +1,236 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>CLAUDE.md</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../2fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../3iu/index.html">3IU</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">MD for coding</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a class="active" href="flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">MD for coding</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="flux.html">CLAUDE.md</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>CLAUDE.md</h1>
+<h2 id="architecture">Architecture</h2>
+<h3 id="project-layout-srcflux.sln">Project layout (<code>Src/Flux.sln</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Project</th>
+<th>Depends on</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Flux.Base</code></td>
+<td>(none)</td>
+<td>Foundation: geometry (<code>Geo</code>, <code>Mesh</code>, <code>Pline</code>), the <code>Au</code> metadata serialization system (<code>Attribute.cs</code>, <code>BStruct.cs</code>), 2D/3D rendering (<code>Lux/</code>), low-level WPF controls, <code>BHub</code> event hub.</td>
+</tr>
+<tr>
+<td><code>Flux.Core</code></td>
+<td>Base</td>
+<td>The domain model and CAM business logic — <code>Part</code>, <code>NestJob</code>, bend/fold/punch/cut/laser/trim &quot;Tech&quot; objects, simulation. Defines <code>Hub</code> (extends <code>BHub</code>) and the global <code>FX</code> static class.</td>
+</tr>
+<tr>
+<td><code>Flux.UI</code></td>
+<td>Base, Core</td>
+<td>Reusable WPF panels/controls organized per domain (<code>UI/Bend</code>, <code>UI/Fold</code>, <code>UI/Job</code>, <code>UI/Laser</code>, etc.) plus shared <code>Controls/</code>, <code>Dialogs/</code>, <code>Settings/</code>. No dependency on <code>App</code>.</td>
+</tr>
+<tr>
+<td><code>Flux.App</code></td>
+<td>Base, Core, UI, API</td>
+<td>The actual application (<code>WinExe</code>) — <code>App.xaml</code>, <code>MainWindow.xaml</code>, <code>MenuCmds.cs</code>, domain dialogs under <code>App/Bend</code>, <code>App/Job</code>, <code>App/CAM</code>, <code>App/Workflow</code>.</td>
+</tr>
+<tr>
+<td><code>Flux.API</code></td>
+<td>Base, Core, UI</td>
+<td>Public SDK surface (built with <code>_FLUXSDK</code> define) that external consumers (see <code>SDK/Samples</code>) build against. Public-API changes require regenerating code via <code>APIGen</code>.</td>
+</tr>
+<tr>
+<td><code>Flux.Console</code></td>
+<td>Base, Core, UI</td>
+<td>Headless CLI batch processor for CAM operations (part processing, nesting, NC generation) — root namespace <code>FConsole</code>.</td>
+</tr>
+<tr>
+<td><code>Flux.Migrate</code></td>
+<td>Base, Core, UI</td>
+<td>Import/migration tool for legacy file formats — root namespace <code>Flume</code>.</td>
+</tr>
+<tr>
+<td><code>Test</code> (<code>Flux.Test</code>)</td>
+<td>API, Base, Core, UI</td>
+<td>The Flit test suite (see Tests above).</td>
+</tr>
+</tbody>
+</table>
+<p><code>Src/Hula</code> is a separate native C++ project (<code>Hula64.vcxproj</code>) providing a native interop layer, loaded by managed code via <code>Flux.Hula64.dll</code>.</p>
+<h3 id="core-domain-model-srccore">Core domain model (<code>Src/Core/</code>)</h3>
+<p>The domain generally flows <strong>Part → Tech → Sequence → CAM/NC output</strong>:</p>
+<ul>
+<li><code>Part/</code> — a sheet-metal part; can carry a 3D model, a 2D drawing, or both, and owns one or more &quot;Tech&quot; objects.</li>
+<li><code>Model/</code> — 3D geometry (<code>Model3</code>, entities, planes, flexes for bend lines).</li>
+<li><code>Bend/</code> — <code>BendTech</code>/<code>BendOp</code>, press-brake tooling, machine DB (<code>BCell/</code>).</li>
+<li><code>Fold/</code> — <code>FoldTech</code>, panel-bender (folding) technology and gripper config.</li>
+<li><code>Punch/</code> — <code>PunchTech</code>, punch-press technology and tooling.</li>
+<li><code>CAM/</code> — <code>CutTech</code>/<code>CutSequence</code>, cutting tool geometry, step sequencing, machine/material DB.</li>
+<li><code>Laser/</code> — laser-specific cut path logic (vector paths, slicing).</li>
+<li><code>Nest/</code> — <code>NestJob</code>/<code>NestData</code>/<code>NestSheet</code>, nesting parts onto sheets.</li>
+<li><code>Trim/</code> — CNC trim machine technology and step sequencing.</li>
+<li><code>Sim/</code> — physics simulation for bend/fold operations (inverse kinematics, collision/&quot;smash&quot; detection).</li>
+</ul>
+<h3 id="key-patterns">Key patterns</h3>
+<ul>
+<li><strong><code>FX</code> (<code>Src/Core/FX.cs</code>)</strong> is the central static class holding global app state, settings (<code>FX.Settings</code>), the data directory, unit system, licensing, and stream locators (<code>wad:</code>, <code>mc:</code>, <code>btool:</code> schemes). Nearly every entry point calls <code>FX.Init()</code> first; <code>UI.Init()</code> follows for anything with a UI. Both <code>Flux.App</code> and the Flit test runner call this pair at startup.</li>
+<li><strong><code>Hub</code> / <code>BHub</code></strong> — an event/notification hub. <code>BHub</code> (Base) holds generic callbacks (selection, clipboard); <code>Hub</code> (Core) extends it with domain events (<code>PartSaved</code>, <code>JobSaved</code>, profile changes). Used to decouple layers instead of direct references.</li>
+<li><strong>&quot;Au&quot; serialization</strong> (<code>Src/Base/Attribute.cs</code>, <code>BStruct.cs</code>) — a custom metadata/attribute-driven serialization system (<code>[AuDefault]</code>, <code>[AuPrimitive]</code>, <code>[AuInclude]</code>) used for persistence and undo/redo via CURL-format files. Fields cached for this system use the <code>_</code> prefix instead of <code>m</code> (see <code>codestyle.md</code>) and are auto-excluded from serialization.</li>
+<li><strong><code>Lux</code> (<code>Src/Base/Lux/</code>)</strong> — the 2D/3D drawing/viewport engine (<code>Lux</code>, <code>LuxDraw</code>, <code>LuxPanel</code>, <code>Scene</code>); both the app's model viewport and the Flit test runner's snapshot window are built on it.</li>
+</ul>
+<h3 id="tools-tools-separate-solution-ftools.sln">Tools (<code>Tools/</code>, separate solution <code>FTools.sln</code>)</h3>
+<ul>
+<li><strong>APIGen</strong> — generates <code>Flux.API</code>'s wrapper code; must be re-run after any public API change (see Code style above).</li>
+<li><strong>FShip</strong> — build/release packaging.</li>
+<li><strong>XLate</strong> — translation table management for <code>lang/*.txt</code> files.</li>
+<li><strong>XNCSign</strong> — code/file signing.</li>
+<li><strong>FDoc</strong> — documentation generation.</li>
+<li><strong>Sim5K</strong> / <strong>Sim7K</strong> — standalone 5-axis/7-axis bend-machine simulation apps.</li>
+<li><strong>Flux.Log</strong>, <strong>FMatrix</strong>, <strong>FTex</strong>, <strong>FluxLines</strong>, <strong>Annotate-C</strong> — smaller supporting utilities.</li>
+</ul>
+<h3 id="sdk-sdk">SDK (<code>SDK/</code>)</h3>
+<p>A separate public-facing package: <code>SDK/Samples</code> holds example consumers of <code>Flux.API</code> (bend profile, nesting job, model viewer, part details), and <code>SDK/Ship</code> builds the shippable SDK package.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#architecture">Architecture</a>
+  </li>
+  <li level="2">
+   <a href="#project-layout-srcflux.sln">Project layout ()</a>
+  </li>
+  <li level="2">
+   <a href="#core-domain-model-srccore">Core domain model ()</a>
+  </li>
+  <li level="2">
+   <a href="#key-patterns">Key patterns</a>
+  </li>
+  <li level="2">
+   <a href="#tools-tools-separate-solution-ftools.sln">Tools (, separate solution )</a>
+  </li>
+  <li level="2">
+   <a href="#sdk-sdk">SDK ()</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="pix.html">CLAUDE.md</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

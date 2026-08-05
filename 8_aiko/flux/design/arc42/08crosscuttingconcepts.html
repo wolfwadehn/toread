@@ -1,0 +1,1094 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>08CrosscuttingConcepts</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">Flux</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../flux.html">Flux</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Design</a>
+       <ul>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">Arc42</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a class="active" href="08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Design</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Arc42</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="08crosscuttingconcepts.html">08CrosscuttingConcepts</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>08CrosscuttingConcepts</h1>
+<hr />
+<h2 id="product-flux-org-metamation-type-design-tags-flux-arc42-architecture-source-ddevflux-webdocarc4208_crosscutting_concepts.md-updated-2026-07-14">product: flux
+org: metamation
+type: design
+tags: [flux, arc42, architecture]
+source: 'D:\dev\Flux-Web\Doc\Arc42\08_Crosscutting_Concepts.md'
+updated: 2026-07-14</h2>
+<!-- Space: TZB -->
+<!-- Parent: Arc42 -->
+<!-- Title: Flux Arc42 - 08 Crosscutting Concepts -->
+<!-- Label: arc42 -->
+<!-- Label: flux -->
+<h1 id="crosscutting-concepts">08 — Crosscutting Concepts</h1>
+<p>The recurring themes that show up everywhere in Flux. If you understand these, you can read code in any subsystem.</p>
+<h2 id="settings-cascade-sheaf-isheafsite">8.1 Settings cascade — <code>Sheaf</code> / <code>ISheafSite</code></h2>
+<p><strong>Where:</strong> <code>Src\Core\Settings\Sheaf.cs</code>.</p>
+<p><strong>Pattern.</strong> Every settings-bearing object implements:</p>
+<pre><code class="language-csharp">public interface ISheafSite {
+   string SHName { get; }                       // e.g. &quot;Machine 135&quot; or &quot;Bend 3&quot;
+   Dictionary&lt;SH, object&gt; SHDict { get; set; }  // local overrides (may be null)
+   ISheafSite SHParent { get; }                 // fallback site
+}
+</code></pre>
+<p>A read for <code>SH.RamVBend</code> on a <code>BendOp</code> walks: <code>BendOp.SHDict</code> → <code>BendTech.SHDict</code> → <code>BendMachine.SHDict</code> → defaults. The first hit wins.</p>
+<p><strong>Implications.</strong></p>
+<ul>
+<li>Setting on the op level shadows tech and machine values.</li>
+<li>Setting on the machine level affects every tech using that machine.</li>
+<li>The keys are values of the closed <code>enum SH</code>.</li>
+<li>Cascade reads must be efficient — they happen frequently during render and auto-tooling.</li>
+</ul>
+<h3 id="defaults-pipeline-base-unit-overlay-flavor-overlay-installation">8.1.1 Defaults pipeline — base + unit overlay + flavor overlay + installation</h3>
+<p>The &quot;defaults&quot; end of the cascade is itself built by overlaying four sources, in order, in the <code>FX.Settings</code> getter (<code>Src\Core\FX.cs:130</code>–<code>:166</code>):</p>
+<ol>
+<li><p><strong>Base</strong> — <code>wad:core/settings.curl</code> (~12 KB, ~190 lines). The factory floor: every section (<code>Info</code>, <code>Bend</code>, <code>Fold</code>, <code>Cut</code>, <code>Laser</code>, …) populated with conservative defaults.</p>
+</li>
+<li><p><strong>Unit overlay</strong> — <code>wad:core/delta-inch.curl</code>, merged in <strong>only if</strong> <code>FX.DefaultUnit == EUnit.Inch</code> (read from <code>unit.dat</code> via <code>Notes.GetS(&quot;Unit&quot;)</code>). Unit-driven, <em>not</em> flavor-driven.</p>
+</li>
+<li><p><strong>Flavor overlay</strong> — one of nine files in <code>wad:core/</code>, picked by <code>Permit.SettingsOverlay</code> (<code>Src\Core\Permit.cs:332</code>):</p>
+<table>
+<thead>
+<tr>
+<th>Returned filename</th>
+<th>Selecting condition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>delta-dev.curl</code></td>
+<td><code>EFlavor.Dev</code></td>
+</tr>
+<tr>
+<td><code>delta-meta.curl</code></td>
+<td><code>EFlavor.Engine</code>, <code>Flux</code>, <code>Viewer</code></td>
+</tr>
+<tr>
+<td><code>delta-trumpf.curl</code></td>
+<td><code>EFlavor.Trumpf</code></td>
+</tr>
+<tr>
+<td><code>delta-boost.curl</code></td>
+<td><code>EFlavor.Boost</code></td>
+</tr>
+<tr>
+<td><code>delta-lantek.curl</code></td>
+<td><code>EFlavor.Lantek</code></td>
+</tr>
+<tr>
+<td><code>delta-sftouchpoint.curl</code></td>
+<td><code>Permit.SFTouchpoint</code> (ShopFloor + <code>FluxSFType=touchpoint</code>)</td>
+</tr>
+<tr>
+<td><code>delta-sfdelem.curl</code></td>
+<td><code>Permit.SFDelem</code> (ShopFloor + <code>FluxSFType=delem</code>)</td>
+</tr>
+<tr>
+<td><code>delta-sfplb.curl</code></td>
+<td><code>Permit.SFPlb</code> (ShopFloor + <code>FluxSFType=plb</code>)</td>
+</tr>
+<tr>
+<td>(none)</td>
+<td>other flavors</td>
+</tr>
+</tbody>
+</table>
+<p>Each delta is a small Curl document ( ~300 B – ~2 kB) containing only the keys that diverge from base. Example (<code>delta-trumpf.curl</code>):</p>
+<pre><code>(FluxSettings){
+  Bend:{ Outputs:{ BendRepTemplate:&quot;wad:Report/trumpf.bend.ftrep&quot;
+                   BendRepDestination:&quot;C:\TecZoneBend&quot;  ... } }
+  Fold:{ Outputs:{ ... } }
+}
+</code></pre>
+<p>Lantek's overlay uses env-var substitution like <code>BendRepTemplate:&quot;$LANTEKINSTALLDIR\Data\Samples\Report\lantek.bend.ftrep&quot;</code>, resolved at load.</p>
+</li>
+<li><p><strong>Installation overlay</strong> — <code>home:System/settings.curl</code> (per-install, customer-mutable). Wrapped as a <code>SheafHolder</code> whose parent is the merged factory holder (steps 1–3).</p>
+</li>
+</ol>
+<p>The result of step 4 is what every <code>ISheafSite</code> chain bottoms out at — so a per-op write shadows tech / machine / installation / flavor / unit / base, in that order.</p>
+<p>Implication: <strong>shipping a per-flavor behaviour change is a content edit, not a code change.</strong> Adding a new flavor <em>does</em> require a delta file plus a <code>Permit.SettingsOverlay</code> arm.</p>
+<h2 id="cross-layer-wiring-hub-slots">8.2 Cross-layer wiring — <code>Hub</code> slots</h2>
+<p><strong>Where:</strong> <code>Src\Core\Hub.cs</code> (definitions), <code>Src\API\Basis\Basis.cs:122</code> (one set of fillers), <code>Src\App</code> (the rest).</p>
+<p><strong>Pattern.</strong> Static <code>Func&lt;&gt;</code> / <code>Action&lt;&gt;</code> slots. App fills at startup; Core/UI invoke null-safely.</p>
+<pre><code class="language-csharp">// in Hub.cs
+public static Func&lt;object, string, object&gt; GenerateNC;
+public static Func&lt;string, string, IList&lt;string&gt;, int, bool, object, int&gt; BigChooser;
+public static Action CloseBlankMainWindow;
+
+// at startup (Basis.cs)
+Hub.GenerateNC = GenerateNC;
+Hub.APIWrapper = DoAPIWrap;
+Hub.MCBtoTXT = MCBReader.Convert;
+
+// from Core or UI
+var nc = Hub.GenerateNC?.Invoke (part, &quot;trumpfdld&quot;);
+</code></pre>
+<p>The pattern replaces the legacy &quot;Hub whiteboard&quot; anti-pattern (untyped object bag). It is <strong>explicit</strong>, <strong>typed</strong>, <strong>debuggable</strong>, and naturally null-safe for the headless Engine flavor.</p>
+<h2 id="mutation-through-ba.set">8.3 Mutation through <code>BA.Set</code></h2>
+<p><strong>Where:</strong> <code>Flux.Base</code>, search <code>class BA</code>.</p>
+<p><code>BA.Set&lt;T&gt;(ref _field, value, …)</code> does three things in one call:</p>
+<ol>
+<li>Equality check (skip if no change).</li>
+<li>Notification (<code>INotifyPropChanged</code>).</li>
+<li>Undo registration.</li>
+</ol>
+<p>Flag-based properties use a different overload — <code>Set (EFlags.X, value)</code> — but the contract is the same.</p>
+<p>A direct <code>_field = value</code> is a smell unless the property has a deliberately different contract (private fixup, <code>[PostLoad]</code> migration, etc.). The PR-review rule is explicit on this.</p>
+<h2 id="result-enums-eresult-over-exceptions">8.4 Result enums (<code>EResult</code>) over exceptions</h2>
+<p><strong>Where:</strong> <code>Flux.Base</code>.</p>
+<p>Predictable failures return <code>EResult</code> (<code>OK</code> plus a fixed set of failure modes). Exceptions are reserved for invariant violations (<code>CodingError</code>).</p>
+<p>Callers:</p>
+<ul>
+<li><code>BendTech.Make (...).Is (EResult.OK)</code></li>
+<li><code>Part.DoFoldTo3D ().Is (EResult.OK)</code></li>
+</ul>
+<p>Adding a new failure mode is a deliberate change because callers exhaustive-switch on the enum. This is the source of high signal/noise in error handling.</p>
+<h2 id="au-binary-persistence-postload-migrations">8.5 Au binary persistence + <code>[PostLoad]</code> migrations</h2>
+<p><strong>Where:</strong> <code>Flux.Base\Gold\</code> (runtime), every persisted model (consumers).</p>
+<p>Each Au-serialized type carries an <code>ObjVersion</code>. After deserialization, any method tagged <code>[PostLoad]</code> runs. Inside, callers check <code>AuType.ObjVersion &lt; N</code> and migrate fields forward.</p>
+<pre><code class="language-csharp">[PostLoad]
+void PostLoad () {
+   if (AuType.ObjVersion &lt; 4 &amp;&amp; BMachine != null) {
+      // migrate clamp positions to new origin
+      float dx = BMachine.Clamp0XPos;
+      for (int i = 0; i &lt; mClampPos.Length; i++) mClampPos[i] += dx;
+   }
+   if (AuType.ObjVersion &lt; 5)
+      foreach (var m in mMounts) AdjustLockedMount (m);
+}
+</code></pre>
+<p>Migrations are forward-only. They never read into the future.</p>
+<h2 id="curl-text-persistence">8.6 Curl text persistence</h2>
+<p><strong>Where:</strong> machine definitions, tool catalogues, settings profiles. Documented in <code>Notes\Tech\2007.CurlFiles.ftx</code>.</p>
+<p>Lisp-flavored, hand-readable, mergeable in version control. Curl is for things humans curate; Au is for things engines persist at scale.</p>
+<h2 id="determinism">8.7 Determinism</h2>
+<p>Several mechanisms enforce that the same input + machine + options produce the same output:</p>
+<ul>
+<li><strong><code>GeomSort</code></strong> instead of plain <code>OrderBy</code> on doubles — handles float near-ties consistently.</li>
+<li><strong>Stable test machines</strong> — id 13 (default standalone), id 99 (Default in <code>BA.Testing</code>), id 93 (cell-attached default). Their <code>Machine.curl</code> is the de-facto contract.</li>
+<li><strong><code>Dump</code> test contract</strong> — the textual snapshot of the auto-tooler's output is the regression-test backbone.</li>
+<li><strong>No <code>Random</code> without explicit seed</strong> — design principle.</li>
+</ul>
+<p>Determinism is the prerequisite for the golden-file test strategy (see §8.10).</p>
+<h2 id="caching-with-explicit-invalidation">8.8 Caching with explicit invalidation</h2>
+<p><strong>Where:</strong> Pervasive — wherever you see a <code>_field</code> named with a leading underscore.</p>
+<p>Design principle D002: every cached field gets a paired invalidation strategy. The naming convention (leading underscore) makes caches grep-able. Every cache must have an answer to:</p>
+<ul>
+<li>What action invalidates this cache?</li>
+<li>Is there a second code path that modifies related state but doesn't reset the cache?</li>
+<li>Is it safer to compute lazily at the call site instead of caching?</li>
+</ul>
+<p>A cache without an invalidation plan is a stale-data bug waiting to happen.</p>
+<h2 id="compute-once-transform-dont-re-convert">8.9 Compute once, transform — don't re-convert</h2>
+<p><strong>Where:</strong> Numerical / geometric pipelines.</p>
+<p>Design principle D007. Converting between heavy types (Mesh ↔ Collider ↔ scene-graph) is expensive; applying a transform is cheap. Once you have a converted form, <strong>transform</strong> it instead of round-tripping through the conversion.</p>
+<p>Rule of thumb: if a method ever calls <code>ToCollider(...)</code> more than once on the same mesh, it's wrong.</p>
+<h2 id="testing-flit-golden-files">8.10 Testing — Flit + golden files</h2>
+<p><strong>Where:</strong> <code>X:\Test\</code> (~169 files). Documented in <a href="../../guide/onboarding/06_tests_and_golden_paths.html">Onboarding chapter 06</a>.</p>
+<p>Idiom:</p>
+<pre><code class="language-csharp">[TestFixture (4, &quot;Basic bend auto-tooler tests&quot;, Module = &quot;Bend&quot;, Subsystem = &quot;AutoTool&quot;)]
+class BasicBendAuto {
+   [Test (82, &quot;Tooling basic part: Bend_04.geo&quot;)]
+   void Test1 () =&gt; Test (&quot;Bend/Auto/Bend_04.geo&quot;);
+
+   public static Part Test (string file, int idMachine = 13, /* ... */) {
+      Part part = FX.LoadTestPart (file);
+      BendTech.Make (part, BendMachine.Get (idMachine)).Is (EResult.OK);
+      BendTooler.Process (part.BendTech, flags);
+      CheckDump (tech, outfile);   // ← golden-file compare
+      return part;
+   }
+}
+</code></pre>
+<p>Golden files are <code>.txt</code> next to the input fixture.</p>
+<h2 id="logging-messages-numeric-ids">8.11 Logging / messages — numeric IDs</h2>
+<p><strong>Where:</strong> <code>FX.Out (EOut.Info, msgId, args)</code>. Documented in <code>Notes\Tech\2015.MessageIDs.ftx</code>.</p>
+<p>Each user-visible message has a numeric ID. Translation tables map IDs → strings per locale. Searching for a message ID in source code locates exactly where it's emitted.</p>
+<p>Design principle: never <code>return</code> silently from a fallible operation. Always emit a message.</p>
+<h2 id="threading-and-re-entrancy">8.12 Threading and re-entrancy</h2>
+<p><strong>Reality:</strong> UI thread + opportunistic worker tasks. No general concurrency model.</p>
+<p><strong>Static singletons</strong> (<code>Part.Current</code>, <code>Part.Active</code>, <code>BendMachine.Default</code>, <code>Hub.*</code>) are UI-thread-only in practice.</p>
+<p>The realistic concurrency hazard is <strong>re-entrancy</strong>: a property setter triggering a render, which triggers another setter. Where re-entrancy matters, code uses <code>if (mInsideX) return;</code> guards.</p>
+<h2 id="coordinate-systems">8.13 Coordinate systems</h2>
+<table>
+<thead>
+<tr>
+<th>CS</th>
+<th>Anchored to</th>
+<th>Used in</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>World</td>
+<td>scene origin</td>
+<td>overall rendering</td>
+</tr>
+<tr>
+<td>Plane CS</td>
+<td>each <code>E3Plane</code>'s side wall (Org / XVec / YVec / ZVec)</td>
+<td>bend-area modeling — see <code>Notes\Dev\1005.BendAreaModeling.ftx</code></td>
+</tr>
+<tr>
+<td>Flex CS</td>
+<td>inherited from leeward plane</td>
+<td>bend operations</td>
+</tr>
+<tr>
+<td>Machine CS</td>
+<td>machine table (X along table length)</td>
+<td>machine-relative geometry</td>
+</tr>
+<tr>
+<td>Mount CS</td>
+<td>local on table</td>
+<td>tool placement</td>
+</tr>
+</tbody>
+</table>
+<p>When coordinates look wrong on screen, the first question is &quot;which CS is this in?&quot; Plane↔World transitions are a frequent source of subtle bugs.</p>
+<h2 id="units-and-tolerances">8.14 Units and tolerances</h2>
+<ul>
+<li>All lengths in <strong>mm</strong>.</li>
+<li>All angles in <strong>radians</strong> at runtime; degrees only in user-facing strings via <code>.D2R()</code> / <code>.R2D()</code>.</li>
+<li>Tolerances are domain-specific (geometric vs. simulation vs. file-format precision).</li>
+</ul>
+<h2 id="identity">8.15 Identity</h2>
+<table>
+<thead>
+<tr>
+<th>Concept</th>
+<th>Stable across</th>
+<th>Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BendOp.UID</code>, <code>BendSetup.UID</code></td>
+<td>save/load</td>
+<td>per-tech sequence counter</td>
+</tr>
+<tr>
+<td><code>Part.GUID</code></td>
+<td>save/load</td>
+<td>random GUID, persisted</td>
+</tr>
+<tr>
+<td><code>BendMachine.Id</code></td>
+<td>install</td>
+<td>integer, used as folder name</td>
+</tr>
+<tr>
+<td><code>VModel.Id</code></td>
+<td>one process</td>
+<td>scene-graph routing only — never persist</td>
+</tr>
+</tbody>
+</table>
+<h2 id="telemetry-analytics">8.16 Telemetry / analytics</h2>
+<p>Trumpf-flavor builds emit telemetry through <code>TrumpfAnalytics</code>. Design principle D004 was extracted from feedback on this code: messages return their JSON payload; the send is a separate extension method. This makes them testable without a <code>FX.Testing</code> runtime check.</p>
+<h2 id="permissions-fx.permits">8.17 Permissions (<code>FX.Permits</code>)</h2>
+<p>Capability-style runtime checks. Examples:</p>
+<ul>
+<li><code>FX.Permits (EPermit.Hoops)</code> — gate 3D import features.</li>
+<li><code>FX.Permits (EPermit.Bend)</code> — gate the entire press-brake module.</li>
+</ul>
+<p>The active permits are derived from flavor + license. The Engine flavor has different permits than the Trumpf flavor.</p>
+<h2 id="the-hub.apiwrapper-indirection">8.18 The <code>Hub.APIWrapper</code> indirection</h2>
+<p><strong>Where:</strong> <code>Src\API\Basis\Basis.cs:117</code>.</p>
+<p>A single delegate wraps Core objects with their API counterparts. When Core hands an object across the API boundary, it goes through <code>Hub.APIWrapper?.Invoke (...)</code>. This keeps Core innocent of the API's existence.</p>
+<h2 id="architecture-invariants-checklist-for-code-review">8.19 Architecture invariants checklist (for code review)</h2>
+<p>When reviewing a PR, the unspoken checklist is:</p>
+<ul>
+<li>Does it respect the M/V/Glob layering?</li>
+<li>Is <code>BA.Set</code> used, not direct field assignment?</li>
+<li>Are caches paired with invalidation?</li>
+<li>Does the change keep the Engine flavor working (no UI dependency added to Core)?</li>
+<li>Are new public types necessary, or can existing ones extend?</li>
+<li>Is <code>[PostLoad]</code> updated for any persisted shape change?</li>
+<li>Are golden files regenerated and reviewed?</li>
+<li>Are message IDs added (not silent returns)?</li>
+<li>Are warnings clean?</li>
+</ul>
+<p>The review-ruleset under <code>.github\instructions\</code> codifies this.</p>
+<h2 id="localization-xl-and-the-lang-folder">8.20 Localization — <code>XL</code> and the lang folder</h2>
+<p>Every user-facing string in Flux runs through <code>XL</code> (&quot;translate&quot;). It is an extension method with several overloads on <code>string</code>, <code>int</code>, <code>Enum</code>, <code>Type</code>, and <code>MemberInfo</code>, defined in <code>Src\Core\Extension.cs:97</code>+ and <code>:400</code>+. Two callers cover ~99 % of usage:</p>
+<table>
+<thead>
+<tr>
+<th>Caller</th>
+<th>Form</th>
+<th>What gets translated</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>FX.Out (EOut.Info, 1192, args)</code></td>
+<td><code>int.XL ()</code></td>
+<td>A <em>numeric message ID</em> — looked up by its decimal name (<code>&quot;1192&quot;</code>) in the lang dictionary. The convention is in <code>Notes\Tech\2015.MessageIDs.ftx</code>.</td>
+</tr>
+<tr>
+<td><code>someEnum.XL ()</code></td>
+<td><code>Enum.XL ()</code></td>
+<td>An <em>enum value</em> — looked up by <code>&lt;TypeName&gt;.&lt;EnumValue&gt;</code> (e.g. <code>EBStatus.PunchCrash</code>). Used for status / error codes that need translation in error reports.</td>
+</tr>
+</tbody>
+</table>
+<p>Both forms hit the same dictionary; the only difference is the lookup key. <code>XL</code> returns the English text if the active language has no entry — never throws.</p>
+<h3 id="file-layout">File layout</h3>
+<p><code>Wad\lang\</code> (loose folder on dev machines; baked into <code>Flux.wad</code> on installs) holds one sub-folder per language:</p>
+<pre><code>Wad\lang\          ← English (default; root files)
+        \DE\       ← German
+        \CHS\      ← Chinese (Simplified)
+        \CHT\      ← Chinese (Traditional)
+        \CS\  \DA\ \ES\  \FR\  \GR\  \ID\  \IT\  \JP\  \KO\
+        \HU\  \NL\ \PL\  \BR\  \RU\  \SK\  \FI\  \SV\  \TH\  \TR\
+        \TE\       ← Trumpf English (override of EN for Trumpf-flavor terminology)
+</code></pre>
+<p>Each language folder contains topic-split <code>.txt</code> files (<code>general.txt</code>, <code>bend.txt</code>, <code>fold.txt</code>, <code>cut.txt</code>, <code>editors.txt</code>, <code>settings.txt</code>, <code>report.txt</code>, <code>workflow.txt</code>, <code>boost.txt</code>, <code>2d.txt</code>, <code>3d.txt</code>, …). Format is <code>key, value</code> per line:</p>
+<pre><code>EGTag.UseAsBasePlane, Set Baseplane
+190, Set this as the base-plane for panel-bending
+</code></pre>
+<p>Numeric and string keys live in the same file. The 24 <code>ELanguage</code> enum values are declared in <code>Src\Core\Enums.cs:64</code>–<code>:93</code> (<code>Unk</code>, <code>EN</code>, <code>DE</code>, <code>CHS</code>, <code>CHT</code>, <code>CS</code>, <code>DA</code>, <code>ES</code>, <code>TE</code>, <code>FR</code>, <code>GR</code>, <code>ID</code>, <code>IT</code>, <code>JP</code>, <code>KO</code>, <code>HU</code>, <code>NL</code>, <code>PL</code>, <code>BR</code>, <code>RU</code>, <code>SK</code>, <code>FI</code>, <code>SV</code>, <code>TH</code>, <code>TR</code>, <code>_Last</code>).</p>
+<h3 id="active-language-selection-at-startup">Active-language selection at startup</h3>
+<p><code>Src\App\App.xaml.cs:184</code>–<code>:188</code> (and <code>Src\Core\FX.cs:1604</code> for the runtime setter):</p>
+<pre><code>if (FX.Env.Language == ELanguage.Unk &amp;&amp; !FX.BatchRun) {
+   if      (Permit.ShopFloor)              FX.Env.Language = ELanguage.DE;   // shop-floor HMIs ship German
+   else if (args.Any (a =&gt; a.EndsWithIC (&quot;.fxcmd&quot;))) FX.Env.Language = ELanguage.EN;  // Boost batch defaults to EN
+   else    PickLanguage ();                                                  // interactive picker dialog
+}
+</code></pre>
+<p>The picker (<code>PickLanguage.xaml</code>) writes the choice into <code>FX.Notes</code>; subsequent runs skip it. <code>FX.SetLanguage</code> flushes the lang dictionary and reloads from the chosen folder. Auto-compute paths inside the engine call <code>SetLanguage</code> per-job (so a German-locale install can still emit English error messages in a <code>.fxresp</code> file when the requesting Boost adapter asks for English).</p>
+<h3 id="translator-workflow">Translator workflow</h3>
+<p>The <code>Tools\XLate\</code> project is the round-trip tool: <code>xlate make &lt;lang&gt;</code> extracts an Excel spreadsheet from the current <code>.txt</code> tables (output into <code>Y:\XLate\New</code>); a translator fills it in; <code>xlate use &lt;lang&gt;</code> writes the result back into the lang folder. <code>delpics &lt;lang&gt;</code> strips embedded illustration images before checking the lang folder back into source control. See <a href="05_10_module_tools.html">§05.10</a>.</p>
+<h2 id="experimental-feature-flags-experimental-class">8.21 Experimental feature flags — <code>Experimental</code> class</h2>
+<p>A second feature-gating system, parallel to (not interacting with) the licensing <code>EFeature</code> enum. Where <code>EFeature</code> gates <em>whole product capabilities</em> sold under contract (Bend, Laser, Fold, BendCell, Trial, …), <code>Experimental</code> toggles <em>in-development features</em> that have shipped but aren't yet defaults.</p>
+<p><strong>Where:</strong> <code>Src\Core\Classes.cs:20</code>–<code>:193</code>. Static class. Each flag is a <code>static bool</code> <em>property</em> backed by a private <code>static int</code> field, plus optional <code>[Nom(&quot;section~Description&quot;)]</code> attribute on the property to mark it UI-visible.</p>
+<p><strong>Storage.</strong> Persistent in <code>&lt;DataDir&gt;\System\experimental.ini</code> (section <code>[Settings]</code>, INI key/value). Loaded at static-constructor time (<code>Classes.cs:23</code>–<code>:39</code>); <code>Save()</code> (<code>:41</code>–<code>:49</code>) writes only the <code>[Nom]</code>-attributed flags so non-UI fields can stay private. Skipped under <code>BA.Testing</code>.</p>
+<p><strong>Sample flags</strong> (pulled from the file):</p>
+<ul>
+<li><code>UndoBend</code>, <code>UndoCut</code> — newer undo machinery for Bend / Cut.</li>
+<li><code>FlexCellSupport</code> — flexible robotic-cell machine type.</li>
+<li><code>BNCOutput</code> — output BNC files for B23 / B28 alongside DLD.</li>
+<li><code>CanTurnGripper</code>, <code>BendFormsinGeo</code>, <code>BtdImportExport</code>, <code>ShoppingList</code>, <code>DLCGraphics</code>, <code>UpdateDuringDrag</code>, <code>CheckFoldOffCenter</code>, <code>ForceDXFImportUnit</code>, <code>FitArcOrLine</code>, <code>ShowModelOrigin</code>, <code>BToolExportDLD</code>.</li>
+<li>Non-bool fields: <code>WindowMode</code> (string), <code>PressForceFactorTouchpoint</code> (double), <code>FlexCellMC</code> (int).</li>
+<li><code>DisableBricks</code> — diagnostic kill-switch for the plugin loader (<code>Src\API\Bricks.cs:22</code>).</li>
+</ul>
+<p><strong>UI.</strong> The &quot;Experimental&quot; dialog (<code>EditExperimental</code> in <code>Src\App\UI\MiscUI.cs:113</code>–<code>:150</code>) reflects all <code>[Nom]</code> properties into a checkbox list. The <code>Nom</code> string format <code>&quot;Section~Description&quot;</code> (split on <code>~</code>) groups related flags under bold section headers. Toggling fires <code>TrumpfAnalytics.ButtonInteraction</code>.</p>
+<p><strong>Telemetry.</strong> <code>Experimental.GetFeatures (onlyNom: false)</code> returns a <code>Dictionary&lt;string, int&gt;</code> of every int field's current value. Emitted with each <code>application_startup</code> analytics message (<code>TrumpfAnalytics.AppStarted</code> in <code>Src\Core\CmdProcess.cs:1933</code>–<code>:1939</code>) so Trumpf-side analysis knows which experimental paths a given session exercised.</p>
+<p><strong>Distinction from licensing.</strong> Flipping an experimental flag does <em>not</em> unlock a licensed feature; both gates apply independently. Promoting an experimental flag to &quot;default on&quot; is a code change (move it out of <code>Experimental</code> and into the relevant subsystem's settings).</p>
+<hr />
+<p><em>Next: <a href="09_architecture_decisions.html">09 — Architecture Decisions</a>.</em></p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-flux-org-metamation-type-design-tags-flux-arc42-architecture-source-ddevflux-webdocarc4208_crosscutting_concepts.md-updated-2026-07-14">product: flux
+org: metamation
+type: design
+tags: [flux, arc42, architecture]
+source: 'D:\dev\Flux-Web\Doc\Arc42\08_Crosscutting_Concepts.md'
+updated: 2026-07-14</a>
+  </li>
+  <li level="1">
+   <a href="#settings-cascade-sheaf-isheafsite">8.1 Settings cascade —  / </a>
+  </li>
+  <li level="2">
+   <a href="#defaults-pipeline-base-unit-overlay-flavor-overlay-installation">8.1.1 Defaults pipeline — base + unit overlay + flavor overlay + installation</a>
+  </li>
+  <li level="1">
+   <a href="#cross-layer-wiring-hub-slots">8.2 Cross-layer wiring —  slots</a>
+  </li>
+  <li level="1">
+   <a href="#mutation-through-ba.set">8.3 Mutation through </a>
+  </li>
+  <li level="1">
+   <a href="#result-enums-eresult-over-exceptions">8.4 Result enums () over exceptions</a>
+  </li>
+  <li level="1">
+   <a href="#au-binary-persistence-postload-migrations">8.5 Au binary persistence +  migrations</a>
+  </li>
+  <li level="1">
+   <a href="#curl-text-persistence">8.6 Curl text persistence</a>
+  </li>
+  <li level="1">
+   <a href="#determinism">8.7 Determinism</a>
+  </li>
+  <li level="1">
+   <a href="#caching-with-explicit-invalidation">8.8 Caching with explicit invalidation</a>
+  </li>
+  <li level="1">
+   <a href="#compute-once-transform-dont-re-convert">8.9 Compute once, transform — don't re-convert</a>
+  </li>
+  <li level="1">
+   <a href="#testing-flit-golden-files">8.10 Testing — Flit + golden files</a>
+  </li>
+  <li level="1">
+   <a href="#logging-messages-numeric-ids">8.11 Logging / messages — numeric IDs</a>
+  </li>
+  <li level="1">
+   <a href="#threading-and-re-entrancy">8.12 Threading and re-entrancy</a>
+  </li>
+  <li level="1">
+   <a href="#coordinate-systems">8.13 Coordinate systems</a>
+  </li>
+  <li level="1">
+   <a href="#units-and-tolerances">8.14 Units and tolerances</a>
+  </li>
+  <li level="1">
+   <a href="#identity">8.15 Identity</a>
+  </li>
+  <li level="1">
+   <a href="#telemetry-analytics">8.16 Telemetry / analytics</a>
+  </li>
+  <li level="1">
+   <a href="#permissions-fx.permits">8.17 Permissions ()</a>
+  </li>
+  <li level="1">
+   <a href="#the-hub.apiwrapper-indirection">8.18 The  indirection</a>
+  </li>
+  <li level="1">
+   <a href="#architecture-invariants-checklist-for-code-review">8.19 Architecture invariants checklist (for code review)</a>
+  </li>
+  <li level="1">
+   <a href="#localization-xl-and-the-lang-folder">8.20 Localization —  and the lang folder</a>
+  </li>
+  <li level="2">
+   <a href="#file-layout">File layout</a>
+  </li>
+  <li level="2">
+   <a href="#active-language-selection-at-startup">Active-language selection at startup</a>
+  </li>
+  <li level="2">
+   <a href="#translator-workflow">Translator workflow</a>
+  </li>
+  <li level="1">
+   <a href="#experimental-feature-flags-experimental-class">8.21 Experimental feature flags —  class</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="07deploymentview.html">07DeploymentView</a></span>
+ <span class="next"><a href="09architecturedecisions.html">09ArchitectureDecisions</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

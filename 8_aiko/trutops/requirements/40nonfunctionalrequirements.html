@@ -1,0 +1,1058 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>40NonFunctionalRequirements</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a class="active" href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>40NonFunctionalRequirements</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-non-functional-requirements-doc-40-non-functional-requirements-id-prefix-nfr-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-30-external-interface-requirements-50-constraints-assumptions-22-fr-ui-framework-dialogs-interaction-grit-12-fr-part-data-management-19-fr-tools-machines-materials-technology-tags-requirements-trutops-nfr">product: trutopscad
+org: trumpf
+title: &quot;Non-Functional Requirements&quot;
+doc: &quot;40 - Non-Functional Requirements&quot;
+id-prefix: &quot;NFR&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[30 - External Interface Requirements]]&quot;, &quot;[[50 - Constraints &amp; Assumptions]]&quot;, &quot;[[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]&quot;, &quot;[[12 - FR - Part &amp; Data Management]]&quot;, &quot;[[19 - FR - Tools, Machines, Materials &amp; Technology]]&quot;]
+tags: [requirements, trutops, nfr]</h2>
+<h1 id="non-functional-requirements">Non-Functional Requirements</h1>
+<p>This document specifies the quality attributes and constraints of the TruTops CAD/CAM suite (ToPsCad, ToPs 100, ToPs 300, ToPs 400, ToPsNest, ToPs Tube and their Lite/2000 variants). It is reverse-engineered from static analysis of the legacy source snapshot and is complementary to the functional requirements in documents [[10 - FR - CAD Geometry &amp; Drawing Editing]] through [[23 - FR - Automation, Scripting &amp; Integration]], the interface requirements in [[30 - External Interface Requirements]] and the environmental limits recorded in [[50 - Constraints &amp; Assumptions]].</p>
+<p>Because the system is a mature product reverse-engineered from code, most quality targets are <strong>implicit</strong> — the code embodies a mechanism (a bounded optimizer, a crash-reporting hook, a metric/inch database pair) without stating a numeric acceptance threshold. Where a metric is evidenced in source it is quoted; otherwise the attribute is stated and its target marked <strong>(to be quantified)</strong> so a maintainer can set a measurable bound against the current release. Domain terms are defined in [[04 - Domain Model &amp; Glossary]].</p>
+<p>Priority levels follow ISO/IEC/IEEE 29148: <strong>Essential</strong> (the product is not acceptable without it), <strong>Conditional</strong> (adds value; degradation is tolerable), <strong>Optional</strong> (desirable).</p>
+<hr />
+<h2 id="performance-capacity">Performance &amp; Capacity</h2>
+<h3 id="nfr-001-interactive-editing-and-view-responsiveness">NFR-001 — Interactive editing and view responsiveness</h3>
+<p><strong>Requirement.</strong> Interactive CAD/CAM operations (pick, drag, zoom/pan, redraw of the drawing or nested sheet) shall present visible feedback without perceptible lag under normal working part sizes. The rendering stack shall use off-screen bitmap double-buffering and a redraw cache to avoid flicker and full recomputation on each repaint, and shall bracket every repaint by an explicit start/end redraw guarded by a redraw-in-progress flag so overlapping redraws cannot corrupt the display.
+<strong>Category.</strong> Performance &amp; Capacity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> The suite is an interactive editor; sluggish or flickering redraw directly degrades operator productivity on the shop floor and touch panels.
+<strong>Source.</strong> <code>tc_visualize</code> off-screen DC / redraw-cache design and <code>TC_Viewport</code> redraw lifecycle (digest [[21 - FR - Visualization, Viewing &amp; Plotting]], FR-VIS-004); interactive echo/XOR rubber-band mode; GRIT <code>Grafb</code> graphics canvas.
+<strong>Verification.</strong> Timed interaction test on a reference large part and a full nested sheet, measuring frame/redraw latency; visual inspection for flicker with double-buffering enabled vs disabled. Target frame latency <strong>(to be quantified)</strong>.</p>
+<h3 id="nfr-002-large-part-large-nest-and-large-program-capacity">NFR-002 — Large-part, large-nest and large-program capacity</h3>
+<p><strong>Requirement.</strong> The system shall load, edit, nest and generate NC for production-scale data: sheet drawings containing many parts, contours and geometry elements; nested sheets with many placed parts; and punch/laser programs with large operation counts. No fixed compile-time array shall silently truncate a valid production data set; capacity limits that do exist (e.g. path/filename buffers) shall be documented.
+<strong>Category.</strong> Performance &amp; Capacity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Real jobs routinely nest hundreds of parts per sheet and generate thousands of hits/cuts; the punch technology module alone is ~840k LOC and the laser module ~590k LOC, reflecting the scale of programs handled.
+<strong>Source.</strong> <code>tc_stz</code> (~840k LOC) and <code>tc_las</code> (~590k LOC) scale (digest [[13 - FR - Punching (ToPs 300)]], [[14 - FR - Laser Cutting (ToPs 100)]]); nesting to order quantities across multi-sheet/multi-format nests ([[17 - FR - Nesting &amp; Palletizing]]); fixed buffer constants observed in <code>tc_dbase</code> (<code>MAX_DIR_SIZE 500</code>, <code>MAX_FNAME_SIZE 100</code>, <code>MAX_EXT_SIZE 10</code>).
+<strong>Verification.</strong> Load/nest/NC-generate stress test with a large representative order; confirm element/part/hit counts survive a save-load-round-trip; audit fixed-size buffers against documented limits. Concrete capacity numbers <strong>(to be quantified)</strong>.</p>
+<h3 id="nfr-003-bounded-configurable-nesting-and-optimization-compute-time">NFR-003 — Bounded, configurable nesting and optimization compute time</h3>
+<p><strong>Requirement.</strong> Long-running automatic operations — true-shape nesting and processing-order optimization — shall run within an operator-configurable time budget and shall return the best result found so far when the budget is reached. The nesting engine shall accept an explicit maximum run time in seconds, and the utilization optimizer shall run a bounded set of trials.
+<strong>Category.</strong> Performance &amp; Capacity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Nesting and TSP-style sequencing are NP-hard; without a time bound the operator cannot predict programming turnaround. A configurable ceiling trades solution quality for throughput.
+<strong>Source.</strong> GSSL NestLib <code>NSetMaxTimeLimit(maxTimeInSecs)</code> / <code>NInqMaxTimeLimit</code> wrapped in <code>tc_nest/nestlib_interface</code> (verified in source); multi-trial utilization optimizer with trial sets and time limit (digest [[17 - FR - Nesting &amp; Palletizing]]); configurable optimization quality/level FR-NC-010 ([[18 - FR - NC Generation &amp; Motion Optimization]]).
+<strong>Verification.</strong> Run nesting/optimization with several time limits and confirm the run terminates within the limit and yields a valid (if suboptimal) layout.</p>
+<h3 id="nfr-004-geometry-and-motion-compute-correctness-and-efficiency">NFR-004 — Geometry- and motion-compute correctness and efficiency</h3>
+<p><strong>Requirement.</strong> Compute-intensive kernels — boolean contour arithmetic and offset generation, curve approximation/Fourier similarity, constrained-TSP sequencing, per-tool travel-time optimization, jerk-limited cycle-time estimation and collision-free path finding — shall produce numerically stable results within tolerances and complete in a time proportional to problem size acceptable for interactive/batch programming.
+<strong>Category.</strong> Performance &amp; Capacity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> These algorithms drive both correctness (valid cut paths) and estimated machine time; instability or poor scaling makes generated programs unusable.
+<strong>Source.</strong> <code>GeoAlgorithmsKernel</code> / <code>BooleanLibraryAdapter</code>, <code>tc_aprox</code>, <code>tc_fou</code>, <code>tc_contourArithmeticTool</code> ([[10 - FR - CAD Geometry &amp; Drawing Editing]]); <code>tc_constrainedTspSolver</code> (nearest-neighbour + Ant-Colony + post-optimization), <code>tc_wegzeit</code> (jerk-limited ramps), <code>tc_wopt</code>, <code>tc_pathf</code> ([[18 - FR - NC Generation &amp; Motion Optimization]]).
+<strong>Verification.</strong> Unit/regression tests (see <code>tc_contourArithmeticToolTest</code>, <code>unitTests</code>) comparing algorithm output against reference geometries and timing curves over increasing element counts.</p>
+<h3 id="nfr-005-batch-and-headless-throughput">NFR-005 — Batch and headless throughput</h3>
+<p><strong>Requirement.</strong> Batch and server-side surfaces — the standalone converter, headless reproduction nesting and headless laser shop-floor programming — shall process jobs without an interactive session and shall support unattended, schedulable execution (including overnight bulk operations).
+<strong>Category.</strong> Performance &amp; Capacity
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Integration with PDM/MES and regression pipelines depends on non-interactive throughput; database porting is explicitly scheduled for off-hours to avoid contention.
+<strong>Source.</strong> <code>tc_conv.exe</code> / <code>pdmConvert.exe</code> with <code>@response</code> files ([[11 - FR - Import, Export &amp; File Formats]]); <code>tc_reproduction</code> (NestCore re-nesting) and TruTopsLaser SFP DLL ([[23 - FR - Automation, Scripting &amp; Integration]]); <code>DB_Port_SqlSrv_InchRefresh_ExecuteOnlyAtNight_legacy.ps1</code>.
+<strong>Verification.</strong> Run each headless entry point on a batch of representative inputs and confirm completion, output validity and absence of GUI dependency.</p>
+<hr />
+<h2 id="reliability-data-integrity">Reliability &amp; Data Integrity</h2>
+<h3 id="nfr-006-transaction-based-undoredo">NFR-006 — Transaction-based undo/redo</h3>
+<p><strong>Requirement.</strong> User-initiated editing and technology operations shall be reversible. Groups of related actions shall be committed or rolled back atomically as a single transaction, so undo/redo never leaves the model in a partially-modified state; the framework shall notify the UI when undo/redo is (un)available.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Atomic undo is the primary safety net against operator error and is a baseline expectation of a CAD editor.
+<strong>Source.</strong> <code>tc_undo</code> (<code>TcUndoManager</code>, <code>TcUndoCaretaker</code>, <code>TcTransactionStart</code>, <code>TiUndoPossibleNotify</code>, atomic/non-atomic transactions); <code>tc_undo/undo_asm</code> command-ID coupling to <code>tc_stz</code>/<code>tc_las</code> ASM (verified in source); FR-UI transaction-based undo/redo ([[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).
+<strong>Verification.</strong> Perform composite operations (e.g. a multi-element transform) and confirm a single undo restores the pre-operation state exactly; confirm redo availability signalling.</p>
+<h3 id="nfr-007-crash-reporting-and-diagnostic-capture">NFR-007 — Crash reporting and diagnostic capture</h3>
+<p><strong>Requirement.</strong> On an unhandled fault the application shall produce a diagnostic report via Windows Error Reporting (WER) containing at minimum a minidump of the crash call stack, and shall associate the currently open document file(s) with the report so TRUMPF can reproduce the fault from concrete data rather than a stack alone. Progress logging shall be captured such that it is available in the crash report.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> A large legacy C++ codebase deployed at many customer sites needs field-fault telemetry; WER + registered document files materially shortens defect diagnosis.
+<strong>Source.</strong> <code>tc_log/TnWindowsErrorReporting</code> (<code>TcActiveDocumentFileRegistry</code>, minidump + winqual portal description, verified in source); <code>tc_log</code> logging facility (<code>LOG_MELDEBOX</code>/<code>LOG_DATEI</code>).
+<strong>Verification.</strong> Trigger a controlled fault in a test build and confirm a WER report with minidump and the registered active document is generated.</p>
+<h3 id="nfr-008-database-transactional-integrity-and-record-locking">NFR-008 — Database transactional integrity and record locking</h3>
+<p><strong>Requirement.</strong> Concurrent access to shared master data, orders and stock inventory shall preserve integrity. Records that must not be edited while in use (stock/nesting/gripper-config records) shall be lockable, and lock/governance state shall be honoured across sessions. Relational writes shall use the SQL Server / ODBC engine's transactional guarantees.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Multiple programmers and machines share one technology database; unmanaged concurrent edits would corrupt orders, stock counts and rule sets.
+<strong>Source.</strong> <code>*_GESPERRT</code> / <code>MAT_LOCKSTATE</code> / <code>VAR_EINTRAG_GESPERRT</code> locking flags and ODBC/SQL Server access ([[12 - FR - Part &amp; Data Management]]); <code>BendGripperConf</code> LOCK/OWNER/CHANGES store; per-record <code>*_LOCKSTATE</code>/<code>*_VISIBLE</code> governance flags ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Verification.</strong> Concurrency test: two clients attempt to edit a locked stock/rule record; confirm the second is refused or serialized without data loss. Exact concurrency model (engine vs flags vs PDM check-out) <strong>(to be quantified)</strong>.</p>
+<h3 id="nfr-009-schema-enforced-referential-and-value-integrity">NFR-009 — Schema-enforced referential and value integrity</h3>
+<p><strong>Requirement.</strong> The relational schema shall enforce referential integrity between related tables and value integrity (type, unit, min/max, regex, uniqueness) on individual columns, driven by the data dictionary rather than ad-hoc application checks, so invalid technology/master data cannot be persisted.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Technology data feeds NC generation directly; out-of-range or dangling values would produce unsafe machine programs.
+<strong>Source.</strong> <code>DATADICT</code> / <code>DATADICT_SPALTEN</code> (type, units, min/max, regex, uniqueness) and relation definitions ([[12 - FR - Part &amp; Data Management]]); <code>TiConsistencyChecker</code> and <code>MAS_REGEL</code> rule bounds ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Verification.</strong> Attempt inserts violating type/range/uniqueness/foreign-key rules and confirm rejection; audit that schema creation derives from DATADICT.</p>
+<h3 id="nfr-010-robust-import-with-error-reporting-and-graceful-degradation">NFR-010 — Robust import with error reporting and graceful degradation</h3>
+<p><strong>Requirement.</strong> Foreign-format import shall not abort silently on malformed or partially-unsupported input. Import errors shall be collected by scope/line and offered as an optional load report (LOG/HTML), and the importer shall recover as much valid geometry as possible while flagging what was dropped.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Customer CAD files are frequently non-conforming; a hard failure with no diagnostics blocks the whole job.
+<strong>Source.</strong> <code>TcDxfLoadReport</code> (errors by scope/line, optional .LOG/HTML) and per-format import controls ([[11 - FR - Import, Export &amp; File Formats]], FR-IMPEX-007); <code>TnIssueManager</code> severity-typed issue tracking ([[13 - FR - Punching (ToPs 300)]] task/issue manager, verified in <code>tc_issue</code>).
+<strong>Verification.</strong> Import a corpus of malformed DXF/IGES/MI files; confirm a report is produced and valid geometry is retained.</p>
+<h3 id="nfr-011-file-and-document-format-version-tolerance">NFR-011 — File- and document-format version tolerance</h3>
+<p><strong>Requirement.</strong> Readers shall accept documented prior versions of TRUMPF-native and project formats and shall reject or migrate incompatible versions with a clear diagnostic rather than misinterpreting data. Geometry files carry an MI/GEO format version; programming projects carry a PPJ document version.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Long product lifetime means old files must remain readable; misreading a version would corrupt geometry or machining.
+<strong>Source.</strong> MI versions 2.21/2.4 with <code>MI_Version_Nr</code> ([[12 - FR - Part &amp; Data Management]]); PPJ XML versions 1.0–5.0 with explicit incompatible-version rejection FR-PLAN-005 ([[20 - FR - Production Planning &amp; Projects]]); GEO/GEO_102 ([[11 - FR - Import, Export &amp; File Formats]]).
+<strong>Verification.</strong> Round-trip and open files of each supported version; confirm an out-of-range version is rejected with a message, not silently loaded.</p>
+<h3 id="nfr-012-consistency-and-issue-surfacing">NFR-012 — Consistency and issue surfacing</h3>
+<p><strong>Requirement.</strong> The system shall detect and surface program/data consistency problems (technology inconsistencies, validation failures) as classified issues with severity (low/medium/high/critical) and lifecycle state (valid/outdated/resolved), so the operator can act before NC generation.
+<strong>Category.</strong> Reliability &amp; Data Integrity
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Surfacing issues before hand-off to the machine prevents scrapped sheets and machine faults.
+<strong>Source.</strong> <code>tc_issue</code> (<code>TcIssueManager</code>, <code>TcIssue</code> <code>TeSeverity</code>/<code>TeState</code>, verified in source); program consistency checking ([[13 - FR - Punching (ToPs 300)]]); collision detection/reporting ([[14 - FR - Laser Cutting (ToPs 100)]]).
+<strong>Verification.</strong> Introduce a known inconsistency and confirm it is raised with correct severity/state and clears when resolved.</p>
+<hr />
+<h2 id="usability-interaction">Usability &amp; Interaction</h2>
+<h3 id="nfr-013-consistent-interaction-model-across-all-editions">NFR-013 — Consistent interaction model across all editions</h3>
+<p><strong>Requirement.</strong> All editions shall present one coherent interaction model — masks/dialogs, finder lists, popup menus, buttons, keyboard/mouse handling, and interactive graphical selection (pick/box/all, single/add/invert, type-filtered) — through the shared GRIT framework, so an operator moving between punch, laser, bend, tube, nest and CAD editions encounters uniform behaviour.
+<strong>Category.</strong> Usability &amp; Interaction
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> A single UI framework across editions reduces training cost and operator error.
+<strong>Source.</strong> GRIT framework shared by all editions; mask object model, six button types, selection modes ([[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]); <code>tc_selection</code>, <code>tc_catch</code> picking.
+<strong>Verification.</strong> Cross-edition UI review confirming identical selection/menu/dialog conventions.</p>
+<h3 id="nfr-014-input-plausibility-validation-at-point-of-entry">NFR-014 — Input plausibility validation at point of entry</h3>
+<p><strong>Requirement.</strong> Data-entry fields shall validate input against declared plausibility rules (interval, set, alphanumeric, constant, free-form) and against unit/format/decimal constraints before the value is accepted, giving immediate feedback on invalid entry.
+<strong>Category.</strong> Usability &amp; Interaction
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Catching bad technology/geometry values at entry prevents downstream failures and is safer than post-hoc checks.
+<strong>Source.</strong> GRIT <code>Plausi</code> validation (interval/set/alphanum/constant/freeform) and input-field format/decimal control ([[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).
+<strong>Verification.</strong> Enter out-of-interval and wrong-type values into representative fields; confirm rejection with feedback.</p>
+<h3 id="nfr-015-interactive-graphical-feedback-and-on-screen-help">NFR-015 — Interactive graphical feedback and on-screen help</h3>
+<p><strong>Requirement.</strong> Interactive geometry operations shall provide live visual feedback (reversible XOR/echo rubber-band drawing), and the UI shall offer per-language tooltips and prompt/help text for controls, plus toggleable display classes so the operator can focus the view (geometry, machining, tool paths, micro-joints, cycles, collisions, scrap, etc.).
+<strong>Category.</strong> Usability &amp; Interaction
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Rubber-band feedback and selective display are essential for accurate manual editing and for reviewing dense nests.
+<strong>Source.</strong> Echo/XOR interactive drawing mode, tooltips, per-language help/prompt text ([[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]); toggleable display classes ([[21 - FR - Visualization, Viewing &amp; Plotting]], FR-VIS).
+<strong>Verification.</strong> Exercise rubber-band operations and display-class toggles; confirm feedback and per-language tooltip text.</p>
+<h3 id="nfr-016-guided-programming-for-non-expert-operators">NFR-016 — Guided programming for non-expert operators</h3>
+<p><strong>Requirement.</strong> Where automatic technology assignment is available, the system shall offer guided/assistant workflows (technology assistant, bend tool assistant) and rule-based automation so a less-experienced operator can produce a valid program with minimal manual technology decisions.
+<strong>Category.</strong> Usability &amp; Interaction
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Shop-floor programming (including Lite editions) targets operators, not CAM specialists; guidance widens the usable operator base.
+<strong>Source.</strong> Guided automatic programming (technology assistant) FR-PUNCH-002 ([[13 - FR - Punching (ToPs 300)]]); AutoCut/Regelwerk automatic assignment ([[14 - FR - Laser Cutting (ToPs 100)]]); Biegewerkzeugassistent ([[16 - FR - Bending (ToPs 600)]]).
+<strong>Verification.</strong> Task-based usability walkthrough producing a program via the assistant path.</p>
+<hr />
+<h2 id="localization-units">Localization &amp; Units</h2>
+<h3 id="nfr-017-multi-language-user-interface">NFR-017 — Multi-language user interface</h3>
+<p><strong>Requirement.</strong> All operator-facing text shall be presented in a user-selected language, selectable at startup and switchable, with support for a large language set (framework capacity of 30 language slots, including CJK) and per-language, per-resolution fonts. No functional behaviour shall depend on the active language.
+<strong>Category.</strong> Localization &amp; Units
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> TruTops ships worldwide; language coverage (incl. CJK glyph rendering) is a market requirement.
+<strong>Source.</strong> GRIT language array of 30 slots (<code>ANZ_SPRACHEN</code>, verified <code>grit/src/graf.cpp</code>); <code>GRITLANG</code> startup key and <code>LANGUAGE=-C de-DE</code> launch parameter (<code>GritCad.org</code>, <code>StartTruTops.bat</code>); up to 30 languages incl. CJK, per-language+resolution fonts ([[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).
+<strong>Verification.</strong> Switch language across the supported set (incl. a CJK language) and confirm correct text/glyph rendering and unchanged behaviour.</p>
+<h3 id="nfr-018-metric-imperial-mm-inch-duality">NFR-018 — Metric / imperial (mm / inch) duality</h3>
+<p><strong>Requirement.</strong> The system shall operate in either a metric or an imperial measurement system, selected per installation/session, with unit-aware configuration and a parallel inch technology database so that dimensions, tolerances, technology parameters and displayed unit suffixes are consistent throughout. Switching measurement systems shall not require recompilation.
+<strong>Category.</strong> Localization &amp; Units
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> North-American and other imperial markets require inch working; mixing units would produce wrong-scale parts.
+<strong>Source.</strong> Parallel <code>*_inch</code> schemas (e.g. <code>Punch</code>/<code>Punch_inch</code>, <code>Laser</code>/<code>Laser_inch</code>, <code>Nest</code>/<code>Nest_inch</code>) in <code>Databases/SQLServerDatabase/Tables</code>; per-edition <code>Inch.Org</code> config files (<code>topsCadInch.org</code>, <code>ToPs100Inch.ORG</code>, …); <code>GRITUNIT</code> key and <code>StartTruTops.bat</code> m/i selection; <code>Common.UNITS</code>/<code>Common.SI_UNITS</code>; metric/inch DB duality ([[12 - FR - Part &amp; Data Management]]).
+<strong>Verification.</strong> Run an edition in metric and inch; confirm dimensions, DB values and unit suffixes are consistent and no metric/inch cross-contamination occurs.</p>
+<h3 id="nfr-019-externalized-localizable-text-and-resources">NFR-019 — Externalized, localizable text and resources</h3>
+<p><strong>Requirement.</strong> Domain and UI text shall be stored externally (translation tables / config), keyed by text number and language, rather than hard-coded, so translation and re-branding require no source change. Colour, font and icon tables shall likewise be externally configurable.
+<strong>Category.</strong> Localization &amp; Units
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Externalized strings/resources are prerequisite to the 30-language capability and to customer-specific configuration.
+<strong>Source.</strong> <code>Text.COMMON_TEXT</code> / <code>SPRACHEN</code> and <code>*_TEXTNR</code> columns ([[19 - FR - Tools, Machines, Materials &amp; Technology]], [[12 - FR - Part &amp; Data Management]]); GRIT <code>GRITCOLOR</code>/<code>GRIT_RGB</code>/<code>GRITCONF</code>/<code>GRITFONT</code>/<code>GRITICON</code> config files (<code>GritCad.org</code>).
+<strong>Verification.</strong> Change a text-number entry and a colour/font table and confirm the running UI reflects it without recompilation.</p>
+<hr />
+<h2 id="portability-platform">Portability &amp; Platform</h2>
+<h3 id="nfr-020-windows-platform-and-toolchain-baseline">NFR-020 — Windows platform and toolchain baseline</h3>
+<p><strong>Requirement.</strong> The product shall build and run on supported Microsoft Windows releases using the established toolchain, rendering via the Windows GDI graphics and print stack. The primary shipped configuration is a 32-bit build produced with Visual Studio 2010 (compiler Msvc100, MultiByte character set).
+<strong>Category.</strong> Portability &amp; Platform
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> The deployed platform is Windows; the toolchain baseline constrains dependencies and third-party libraries and must be recorded for maintenance.
+<strong>Source.</strong> <code>tcolib_win_VS2010.sln</code>/<code>.vcxproj</code> (<code>PlatformToolset</code> v100, <code>&lt;Platform&gt;Win32&lt;/Platform&gt;</code>, <code>CharacterSet MultiByte</code>); <code>CompilerName.txt</code> = <code>Msvc100</code>; GDI rendering (<code>vis_gdi</code>, <code>grit/drive/elem_win.cpp</code>) ([[21 - FR - Visualization, Viewing &amp; Plotting]]).
+<strong>Verification.</strong> Clean build with the pinned toolchain and smoke test on a supported Windows version. Exact supported Windows versions <strong>(to be quantified)</strong> — see [[50 - Constraints &amp; Assumptions]].</p>
+<h3 id="nfr-021-64-bit-build-capability">NFR-021 — 64-bit build capability</h3>
+<p><strong>Requirement.</strong> The codebase shall additionally support a 64-bit (x64) build to remove 32-bit address-space limits for very large jobs, using the newer compiler toolchain provided for that target.
+<strong>Category.</strong> Portability &amp; Platform
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Large nests/programs can exhaust the 32-bit address space; an x64 path future-proofs capacity.
+<strong>Source.</strong> <code>_shell_x64/environment.bat</code> (VS2012/VS2015 <code>amd64</code> <code>vcvars64.bat</code>) alongside the 32-bit <code>_shell</code> (VS2010); <code>Databases_SQL_2019</code> newer-server support.
+<strong>Verification.</strong> Build and smoke-test the x64 configuration; confirm large-job handling beyond the 32-bit ceiling.</p>
+<h3 id="nfr-022-backend-abstracted-rendering-and-platform-neutral-core">NFR-022 — Backend-abstracted rendering and platform-neutral core</h3>
+<p><strong>Requirement.</strong> Rendering shall be isolated behind a backend-independent visualizer abstraction (GDI / GRIT / headless), and interactive/UI drawing shall not assume a specific windowing system, preserving the historical portability boundary (a Unix/X11 rendering path exists) and enabling headless operation.
+<strong>Category.</strong> Portability &amp; Platform
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> The abstraction supports headless batch rendering today and reflects the product's cross-platform (HP-UX/X11) heritage; keeping it clean protects future portability.
+<strong>Source.</strong> Backend-independent visualizer <code>vis_gdi</code>/<code>vis_grit</code>/<code>vis_none</code> FR-VIS-002 ([[21 - FR - Visualization, Viewing &amp; Plotting]]); legacy X11/Motif rendering path (<code>grit/drive/elem_ux.cpp</code>, <code>grit/src/graf_x11.cpp</code>, <code>grit/drive/x11_def.h</code>, <code>grit/hpux</code>).
+<strong>Verification.</strong> Render the same drawing via GDI and headless backends and compare output; confirm no direct Win32 calls leak into core geometry code.</p>
+<hr />
+<h2 id="interoperability">Interoperability</h2>
+<h3 id="nfr-023-broad-cad-and-exchange-format-interoperability">NFR-023 — Broad CAD and exchange-format interoperability</h3>
+<p><strong>Requirement.</strong> The system shall import and export the industry CAD/exchange and TRUMPF-native formats required for customer data hand-off, through a shared converter framework, with per-format import controls and post-processing. See [[30 - External Interface Requirements]] for the authoritative format list.
+<strong>Category.</strong> Interoperability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Fabricators receive geometry in many formats; broad, controllable interchange is a core value proposition.
+<strong>Source.</strong> DXF/DWG/IGES/ME10-MI/DSTV import and DXF/ME10/IGES/SVG/HPGL/GEO/XML/XCAD export via <code>convmain</code> ([[11 - FR - Import, Export &amp; File Formats]]); GeoViewer multi-format load ([[21 - FR - Visualization, Viewing &amp; Plotting]]).
+<strong>Verification.</strong> Round-trip representative files per format and confirm geometric fidelity within tolerance.</p>
+<h3 id="nfr-024-data-management-database-and-pdm-interoperability">NFR-024 — Data-management, database and PDM interoperability</h3>
+<p><strong>Requirement.</strong> The system shall interoperate with SQL Server (and locally-attached MDB) technology databases over ODBC, and with the TRUMPF.NET PDM vault (via a file-access facade / CORBA naming service) transparently, so file access and catalog queries work identically over the local file system or the vault.
+<strong>Category.</strong> Interoperability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Enterprise deployments store parts in PDM and technology in a shared database; transparent access is required for those workflows.
+<strong>Source.</strong> ODBC/SQL Server and locally-attached MDF; <code>OmAdapter</code>/<code>TiPdmFacet</code> PDM facade ([[12 - FR - Part &amp; Data Management]]); <code>pdmConvert.exe</code> CORBA naming-service connection ([[11 - FR - Import, Export &amp; File Formats]]); <code>GRITPATH= X:\TRUMPF.NET\Data\...</code> (<code>GritCad.org</code>).
+<strong>Verification.</strong> Exercise open/save/catalog over both local FS and a PDM vault and confirm equivalent behaviour.</p>
+<h3 id="nfr-025-programmatic-and-integration-interoperability">NFR-025 — Programmatic and integration interoperability</h3>
+<p><strong>Requirement.</strong> The system shall expose programmatic surfaces for automation and MES integration: an embedded Python interpreter, command interpreters (ASM/MMK), per-edition external component APIs, headless P/Invoke interop DLLs with managed .NET wrappers, and a PPS/MES (TruTops Fab) adapter, so third-party and in-house software can drive nesting, conversion and laser programming.
+<strong>Category.</strong> Interoperability
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Integration into factory MES/PPS and regression pipelines depends on stable programmatic entry points.
+<strong>Source.</strong> <code>tc_python</code> (Python 2.5), <code>tc_asm</code>, Xidl component APIs, <code>tc_reproduction</code>/<code>TruTopsDllNET</code> P/Invoke, <code>tc_fabAdapter</code> ([[23 - FR - Automation, Scripting &amp; Integration]]); <code>TruTopsGeoInterface.dll</code> C-API ([[12 - FR - Part &amp; Data Management]]).
+<strong>Verification.</strong> Drive a nesting/conversion job through each programmatic surface and confirm expected results.</p>
+<hr />
+<h2 id="security-licensing">Security &amp; Licensing</h2>
+<h3 id="nfr-026-dongle-wibu-licensing-enforcement">NFR-026 — Dongle / Wibu licensing enforcement</h3>
+<p><strong>Requirement.</strong> Product and feature availability shall be gated by hardware/software licensing (dongle and/or Wibu software licence) validated at the relevant entry points; when a required licence is absent the corresponding functionality shall be denied. A dongle-less emulation/check-file mode shall be supported for machine-side operation as designed.
+<strong>Category.</strong> Security &amp; Licensing
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Licensing protects TRUMPF's commercial model and gates per-edition/per-format capabilities.
+<strong>Source.</strong> <code>tc_pwd</code> (<code>TcDongle</code>, <code>TcLicenseCheck</code>, <code>check_dll</code>, dongle-less check-file emulation described in <code>tops_pwd</code>); per-format passwords <code>DXF_PASSWORD</code>/<code>IGES_PASSWORD</code>/… ([[11 - FR - Import, Export &amp; File Formats]]).
+<strong>Verification.</strong> Run with/without dongle and with/without a format password; confirm gated features are enabled/denied accordingly.</p>
+<h3 id="nfr-027-per-format-and-per-machine-feature-gating">NFR-027 — Per-format and per-machine feature gating</h3>
+<p><strong>Requirement.</strong> Individual import/export formats and machine-specific post-processor licences shall be independently licensable, including per-machine (Wibu) licences for modular (&quot;Baukasten&quot;/Hawc-OPP) machine families, so a customer receives exactly the capabilities purchased.
+<strong>Category.</strong> Security &amp; Licensing
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Fine-grained gating matches TRUMPF's à-la-carte licensing and machine-specific post-processors.
+<strong>Source.</strong> Per-format Wibu/password keys ([[11 - FR - Import, Export &amp; File Formats]]); <code>tc_pwd</code> machine-password check (<code>checkMachinePassword</code>) with the <code>S_WIBU_Map_HawcOPP_Machines</code> modular-machine map and per-machine postprocessor licence check (verified in <code>tc_pwd/tops_pwd.cpp</code>).
+<strong>Verification.</strong> Toggle format and machine-postprocessor licences and confirm independent enable/deny.</p>
+<h3 id="nfr-028-controlled-superuser-service-bypass">NFR-028 — Controlled superuser / service bypass</h3>
+<p><strong>Requirement.</strong> A superuser/service mode may bypass certain licence checks (e.g. Lite edition restrictions) for support and factory scenarios; when active it shall be applied consistently and shall not silently relax checks in normal operation.
+<strong>Category.</strong> Security &amp; Licensing
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Support and manufacturing need a controlled override; it must be explicit to avoid becoming a security hole.
+<strong>Source.</strong> Superuser-mode handling in <code>tc_pwd/tops_pwd.cpp</code> (Lite password check skipped only in superuser mode, verified in source); superuser bypass noted in [[11 - FR - Import, Export &amp; File Formats]].
+<strong>Verification.</strong> Confirm superuser mode is required to bypass and that normal mode enforces the checks.</p>
+<h3 id="nfr-029-database-access-role-authorization">NFR-029 — Database access-role authorization</h3>
+<p><strong>Requirement.</strong> Access to the relational technology/master databases shall be governed by defined database roles with least-privilege grants, distinguishing at least read-only viewing, administration, import and porting/migration duties.
+<strong>Category.</strong> Security &amp; Licensing
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> Separating admin/import/port roles from ordinary viewing limits accidental or unauthorized modification of technology data that drives machine programs.
+<strong>Source.</strong> <code>GRANT</code> role model in <code>Databases/SQLServerDatabase/Tables/*.sql</code>: <code>VIEWER</code>, <code>MDB_ADMIN</code>, <code>MDB_IMPORTER</code>, <code>MDB_PORTER</code> (verified — thousands of per-object grants).
+<strong>Verification.</strong> Connect under each role and confirm the permitted DML/DDL matches the intended privilege set.</p>
+<hr />
+<h2 id="maintainability-configurability">Maintainability &amp; Configurability</h2>
+<h3 id="nfr-030-data-driven-technology-and-nc-output">NFR-030 — Data-driven technology and NC output</h3>
+<p><strong>Requirement.</strong> Adding or changing a machine, controller, material, tool, technology table or NC cycle/format shall be possible by editing database master data (not source code). NC generation shall render controller-specific output from data-driven cycle/format/head tables keyed by machine + controller + version.
+<strong>Category.</strong> Maintainability &amp; Configurability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> The product supports a wide, evolving machine/controller/material matrix; a data-driven model is essential to maintain it without a release for every new machine.
+<strong>Source.</strong> Data-driven <code>NCZYKLEN</code>/<code>AUS_FORMAT</code>/<code>NC_KOPF_TABELLEN</code>/<code>NC_KOPFTAB_MASCHINE</code> keyed by machine+controller+version ([[18 - FR - NC Generation &amp; Motion Optimization]]); machine/tool/material/LTT master tables and <code>AUTOCUT_KONFIG</code> ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Verification.</strong> Add a machine/controller-version row and confirm NC output adapts without a code change.</p>
+<h3 id="nfr-031-externalized-runtime-configuration-and-per-edition-feature-flags">NFR-031 — Externalized runtime configuration and per-edition feature flags</h3>
+<p><strong>Requirement.</strong> Runtime behaviour — active edition, feature/menu exposure, mask set, language, unit, colour/font/icon tables, paths and resolution — shall be controlled by external <code>.org</code>/<code>.ini</code>/<code>.ORG</code> configuration files, so editions and site variants are configured without rebuilding.
+<strong>Category.</strong> Maintainability &amp; Configurability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> One codebase produces many editions/site configurations; externalized configuration is how that is achieved.
+<strong>Source.</strong> Per-edition <code>ini_files/&lt;Edition&gt;/*.Org</code>/<code>Grit*.ORG</code> and <code>*.ORG</code>/<code>*Inch.ORG</code> pairs; <code>StartTruTops.bat</code> edition/unit selection; edition <code>.ORG</code> feature/menu control ([[13 - FR - Punching (ToPs 300)]], [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).
+<strong>Verification.</strong> Change a feature flag / mask set in the <code>.org</code>/<code>.ini</code> and confirm the running edition reflects it.</p>
+<h3 id="nfr-032-schema-driven-source-controlled-database-maintenance">NFR-032 — Schema-driven, source-controlled database maintenance</h3>
+<p><strong>Requirement.</strong> The database schema shall be defined and maintained through the data dictionary and kept under source control with automated compare/sync tooling, so schema evolution is auditable and reproducible across metric and imperial variants.
+<strong>Category.</strong> Maintainability &amp; Configurability
+<strong>Priority.</strong> Conditional
+<strong>Rationale.</strong> A ~1,700-table schema with metric/inch variants is unmanageable without dictionary-driven generation and versioned compare/sync.
+<strong>Source.</strong> <code>DATADICT</code> schema-driving triggers ([[12 - FR - Part &amp; Data Management]]); Red Gate SQL Source Control + Perforce hooks (<code>RedGate.ssc</code>, <code>CommandLineHooks.xml</code>, <code>Databases/RedGateFilter/RedGateStructure{Metric,Imperial}.scpf</code>); ~1,773 <code>.sql</code> table files under <code>Databases/SQLServerDatabase</code>.
+<strong>Verification.</strong> Regenerate the schema from the dictionary and diff against the source-controlled baseline; confirm metric/imperial structures stay in sync.</p>
+<hr />
+<h2 id="installability-operability">Installability &amp; Operability</h2>
+<h3 id="nfr-033-scripted-repeatable-deployment">NFR-033 — Scripted, repeatable deployment</h3>
+<p><strong>Requirement.</strong> Installation and provisioning of databases and connectivity shall be automated and repeatable: create/attach the SQL Server databases (or local MDB), create ODBC DSN entries, generate the runtime ini files, and launch a chosen edition — without manual per-step database administration.
+<strong>Category.</strong> Installability &amp; Operability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Field installs and developer/test setups must be reproducible; manual DB setup is error-prone at customer sites.
+<strong>Source.</strong> <code>Databases/createSqlServerLocalMdb.bat</code>, <code>AttachSqlServerLocalMdb.bat</code>, <code>createSqlServerOdbcEntry.bat</code>, <code>createTcolibIniFiles.bat</code>, <code>createAll.bat</code>, <code>StartTruTops.bat</code> (verified).
+<strong>Verification.</strong> Run the provisioning scripts on a clean machine and confirm a working, launchable installation.</p>
+<h3 id="nfr-034-databaseapplication-version-compatibility-and-migration">NFR-034 — Database/application version compatibility and migration</h3>
+<p><strong>Requirement.</strong> The application shall verify that the connected database schema version is compatible with the running executable version and refuse or guide the user on mismatch; supported schema upgrades and metric↔inch porting shall be provided as migration procedures, including the recorded provenance of the Access-to-SQL-Server migration.
+<strong>Category.</strong> Installability &amp; Operability
+<strong>Priority.</strong> Essential
+<strong>Rationale.</strong> Running a new executable against an old schema (or vice versa) can silently corrupt or misread technology data; explicit compatibility gating and migrations prevent this.
+<strong>Source.</strong> Per-schema <code>DB_VERSION</code> tables and <code>DbRequiredApplicExeVersion</code> system rule set to the current exe version (<code>Databases/UpdateDbRequiredApplicExeVersion_ps_legacy.bat</code>, <code>VERSION=140</code>, verified); <code>DB_Port_SqlSrv*.ps1</code> porting incl. overnight inch refresh; <code>MS_SSMA_SOURCE</code> extended properties recording the SQL Server Migration Assistant source (e.g. <code>TCommon_V100</code>); DB versioning &amp; migration ([[12 - FR - Part &amp; Data Management]]).
+<strong>Verification.</strong> Point a new executable at an out-of-date schema and confirm the mismatch is detected; run a metric→inch port and a schema upgrade and confirm success.</p>
+<hr />
+<h2 id="notes-and-open-points">Notes and open points</h2>
+<ul>
+<li><strong><code>tc_catch</code> is snapping/picking, not exception handling.</strong> The crash-handling capability cited in the brief for &quot;tc_catch/tc_issue&quot; is actually implemented in <code>tc_log/TnWindowsErrorReporting</code> (WER minidumps, NFR-007); <code>tc_issue</code> is a consistency/validation <strong>issue manager</strong> (NFR-012); <code>tc_catch</code> is geometry hit-testing/snapping (see [[10 - FR - CAD Geometry &amp; Drawing Editing]] / [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).</li>
+<li><strong>Numeric targets are largely unstated in source.</strong> Many performance/capacity thresholds (frame latency, element/part ceilings, supported Windows versions, concurrency model) are marked <strong>(to be quantified)</strong>; they should be pinned against the current release and recorded in [[50 - Constraints &amp; Assumptions]].</li>
+<li><strong>Mixed toolchain.</strong> The 32-bit product uses VS2010/Msvc100 while the x64 shell targets VS2012/VS2015; the authoritative shipping configuration should be confirmed with the build owner (NFR-020/NFR-021).</li>
+<li>Cross-references: interfaces referenced here are specified in [[30 - External Interface Requirements]]; domain terms in [[04 - Domain Model &amp; Glossary]]; full traceability in [[60 - Requirements Traceability Index]].</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-non-functional-requirements-doc-40-non-functional-requirements-id-prefix-nfr-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-30-external-interface-requirements-50-constraints-assumptions-22-fr-ui-framework-dialogs-interaction-grit-12-fr-part-data-management-19-fr-tools-machines-materials-technology-tags-requirements-trutops-nfr">product: trutopscad
+org: trumpf
+title: "Non-Functional Requirements"
+doc: "40 - Non-Functional Requirements"
+id-prefix: "NFR"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[30 - External Interface Requirements]]", "[[50 - Constraints & Assumptions]]", "[[22 - FR - UI Framework, Dialogs & Interaction (GRIT)]]", "[[12 - FR - Part & Data Management]]", "[[19 - FR - Tools, Machines, Materials & Technology]]"]
+tags: [requirements, trutops, nfr]</a>
+  </li>
+  <li level="1">
+   <a href="#performance-capacity">Performance & Capacity</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-001-interactive-editing-and-view-responsiveness">NFR-001 — Interactive editing and view responsiveness</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-002-large-part-large-nest-and-large-program-capacity">NFR-002 — Large-part, large-nest and large-program capacity</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-003-bounded-configurable-nesting-and-optimization-compute-time">NFR-003 — Bounded, configurable nesting and optimization compute time</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-004-geometry-and-motion-compute-correctness-and-efficiency">NFR-004 — Geometry- and motion-compute correctness and efficiency</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-005-batch-and-headless-throughput">NFR-005 — Batch and headless throughput</a>
+  </li>
+  <li level="1">
+   <a href="#reliability-data-integrity">Reliability & Data Integrity</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-006-transaction-based-undoredo">NFR-006 — Transaction-based undo/redo</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-007-crash-reporting-and-diagnostic-capture">NFR-007 — Crash reporting and diagnostic capture</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-008-database-transactional-integrity-and-record-locking">NFR-008 — Database transactional integrity and record locking</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-009-schema-enforced-referential-and-value-integrity">NFR-009 — Schema-enforced referential and value integrity</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-010-robust-import-with-error-reporting-and-graceful-degradation">NFR-010 — Robust import with error reporting and graceful degradation</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-011-file-and-document-format-version-tolerance">NFR-011 — File- and document-format version tolerance</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-012-consistency-and-issue-surfacing">NFR-012 — Consistency and issue surfacing</a>
+  </li>
+  <li level="1">
+   <a href="#usability-interaction">Usability & Interaction</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-013-consistent-interaction-model-across-all-editions">NFR-013 — Consistent interaction model across all editions</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-014-input-plausibility-validation-at-point-of-entry">NFR-014 — Input plausibility validation at point of entry</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-015-interactive-graphical-feedback-and-on-screen-help">NFR-015 — Interactive graphical feedback and on-screen help</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-016-guided-programming-for-non-expert-operators">NFR-016 — Guided programming for non-expert operators</a>
+  </li>
+  <li level="1">
+   <a href="#localization-units">Localization & Units</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-017-multi-language-user-interface">NFR-017 — Multi-language user interface</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-018-metric-imperial-mm-inch-duality">NFR-018 — Metric / imperial (mm / inch) duality</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-019-externalized-localizable-text-and-resources">NFR-019 — Externalized, localizable text and resources</a>
+  </li>
+  <li level="1">
+   <a href="#portability-platform">Portability & Platform</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-020-windows-platform-and-toolchain-baseline">NFR-020 — Windows platform and toolchain baseline</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-021-64-bit-build-capability">NFR-021 — 64-bit build capability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-022-backend-abstracted-rendering-and-platform-neutral-core">NFR-022 — Backend-abstracted rendering and platform-neutral core</a>
+  </li>
+  <li level="1">
+   <a href="#interoperability">Interoperability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-023-broad-cad-and-exchange-format-interoperability">NFR-023 — Broad CAD and exchange-format interoperability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-024-data-management-database-and-pdm-interoperability">NFR-024 — Data-management, database and PDM interoperability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-025-programmatic-and-integration-interoperability">NFR-025 — Programmatic and integration interoperability</a>
+  </li>
+  <li level="1">
+   <a href="#security-licensing">Security & Licensing</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-026-dongle-wibu-licensing-enforcement">NFR-026 — Dongle / Wibu licensing enforcement</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-027-per-format-and-per-machine-feature-gating">NFR-027 — Per-format and per-machine feature gating</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-028-controlled-superuser-service-bypass">NFR-028 — Controlled superuser / service bypass</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-029-database-access-role-authorization">NFR-029 — Database access-role authorization</a>
+  </li>
+  <li level="1">
+   <a href="#maintainability-configurability">Maintainability & Configurability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-030-data-driven-technology-and-nc-output">NFR-030 — Data-driven technology and NC output</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-031-externalized-runtime-configuration-and-per-edition-feature-flags">NFR-031 — Externalized runtime configuration and per-edition feature flags</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-032-schema-driven-source-controlled-database-maintenance">NFR-032 — Schema-driven, source-controlled database maintenance</a>
+  </li>
+  <li level="1">
+   <a href="#installability-operability">Installability & Operability</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-033-scripted-repeatable-deployment">NFR-033 — Scripted, repeatable deployment</a>
+  </li>
+  <li level="2">
+   <a href="#nfr-034-databaseapplication-version-compatibility-and-migration">NFR-034 — Database/application version compatibility and migration</a>
+  </li>
+  <li level="1">
+   <a href="#notes-and-open-points">Notes and open points</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></span>
+ <span class="next"><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

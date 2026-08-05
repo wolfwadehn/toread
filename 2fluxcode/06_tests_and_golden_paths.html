@@ -1,0 +1,423 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Tests and Golden Paths</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a class="active" href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">3IU</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Tests and Golden Paths</h1>
+<p>_<strong>*
+<strong>Goal:</strong> read tests as documentation. Use them to learn the API contracts, the expected outputs, and the ways the team has frozen behavior. Reading time: 45 minutes.
+<strong>You don't write tests in this chapter.</strong> You learn to <em>consume</em> them.
+*</strong>*</p>
+<p>'''</p>
+<h2 id="the-test-framework-flit">1. The test framework -- Flit</h2>
+<p>Flux uses a <strong>custom</strong> test framework called <strong>Flit</strong>, not NUnit or xUnit. The project is <code>Test\Flux.Test.csproj</code> (169 .cs files). Conventions:</p>
+<p>** <strong>Namespace:</strong> <code>namespace Flit;</code> (file-scoped).
+** <strong>Attributes:</strong>
+*** <code>+[TestFixture (id, description, Module = &quot;...&quot;, Subsystem = &quot;...&quot;)]+</code> on classes.
+**** <code>[Test (id, description)]</code> on methods.
+** <strong>Assertions:</strong> <code>Assert.AreTextFilesEqual</code>, <code>Assert.True</code>, <code>Assert.False</code>, plus extension methods like <code>.Is (EResult.OK)</code>.
+** <strong>Fixtures:</strong> standard <code>BendMachine.Get (13)</code> style -- fixtures are real domain objects loaded from <code>X:\TData</code> and <code>X:\Data</code>.</p>
+<p>A canonical fixture (from <code>Test\Bend\BasicBendAuto.cs</code>):</p>
+<p>[,csharp]</p>
+<pre><code>namespace Flit;
+#nullable enable
+
+[TestFixture (4, &quot;Basic bend auto-tooler tests&quot;, Module = &quot;Bend&quot;, Subsystem = &quot;AutoTool&quot;)]
+class BasicBendAuto {
+   [Test (82, &quot;Tooling basic part: Bend*04.geo&quot;)]
+   void Test1 () =&gt; Test (&quot;Bend/Auto/Bend*04.geo&quot;);
+
+   public static Part Test (string file, int idMachine = 13, /** ... **/) {
+      Part part = FX.LoadTestPart (file);
+      if (part.Model == null) part.DoFoldTo3D ().Is (EResult.OK);
+      BendTech.Make (part, BendMachine.Get (idMachine)).Is (EResult.OK);
+      var tech = part.BendTech;
+      // ...
+      BendTooler.Process (part.BendTech, flags);
+      CheckDump (tech, outfile);
+      return part;
+   }
+
+   public static void CheckDump (BendTech tech, string refFile) {
+      string file = FX.TmpTestFile;
+      using (StreamWriter sw = new (file)) tech.Dump (sw);
+      Assert.AreTextFilesEqual (refFile, file);
+   }
+}
+</code></pre>
+<h3 id="test-ids">Test IDs</h3>
+<p>Test IDs (<code>82</code>, <code>84</code>, <code>85</code>, ...) are <strong>globally unique</strong> and stable across the entire test suite. An ID conflict during merge is a real conflict. A test that disappears keeps its ID retired.</p>
+<p>'''</p>
+<h2 id="test-categories">2. Test categories</h2>
+<p>Flux has roughly four categories of tests, all in the same project:</p>
+<p>|===
+| Category | What they assert | Example file</p>
+<p>| <strong>Pure unit</strong>
+| A small algorithm, often in <code>Flux.Base</code>
+| <code>Test\Geometry\</code></p>
+<p>| <strong>Integration</strong>
+| A whole subsystem flow with real fixtures
+| <code>Test\Bend\BasicBendAuto.cs</code></p>
+<p>| <strong>Golden-file</strong>
+| A <code>Dump</code> output against a stored <code>.txt</code>
+| most of <code>Test\Bend\</code></p>
+<p>| <strong>Regression bundles</strong>
+| Year-grouped fixes (one file per year)
+| <code>Test\Bend\Bend2017.cs</code> ... <code>Bend2025.cs</code>
+|===</p>
+<p>The line between integration and golden-file is often thin -- most integration tests in Bend / Fold <em>are</em> golden-file tests because the easiest assertion is &quot;the auto-tooler still produces the same setup as last week&quot;.</p>
+<p>'''</p>
+<h2 id="the-golden-file-pattern-most-common">3. The golden-file pattern (most common)</h2>
+<h3 id="how-it-works">How it works</h3>
+<p>. A test loads a <code>.geo</code> (or <code>.dxf</code>, <code>.fx</code>) input from <code>X:\TData\&lt;domain&gt;\&lt;area&gt;\…</code>.
+. The subsystem's <code>Make</code> + auto-router runs to completion.
+. The resulting tech is asked to <code>Dump (TextWriter)</code>.
+. The output is compared to a <code>.txt</code> file <em>next to</em> the input.</p>
+<p>The <code>.txt</code> file is the <em>golden</em>. It is checked in. When the auto-tooler legitimately produces different output, the golden is regenerated and the diff is reviewed.</p>
+<h3 id="why-this-pattern-works">Why this pattern works</h3>
+<p>** The dump format is hand-readable, so a diff in a PR is reviewable.
+** It captures dozens of decisions per file (sequence, tools, BG positions, BA placement, Z transitions) in a compact form.
+** A regression in any of those decisions changes the golden -- which makes accidental drift impossible to ship.</p>
+<h3 id="why-this-pattern-hurts">Why this pattern hurts</h3>
+<p>** <strong>Brittle.</strong> A cosmetic change to <code>Dump</code> cascades to dozens of <code>.txt</code> files.
+** <strong>Coupling.</strong> The dump format is the test contract -- change it, change everything.
+** <strong>Hidden semantics.</strong> The <code>.txt</code> is a record, not an explanation. Some tests are reverse-engineered from &quot;this is what the engine used to do&quot;.</p>
+<h3 id="how-to-read-a-golden-file">How to read a golden file</h3>
+<p>Open <code>X:\TData\Bend\Auto\Bend*04.txt</code>. You'll see machine setup info, a list of tool mounts with X positions, and bend-specific lines per op. Match each line back to the <code>Dump</code> method in the relevant tech (<code>BendSetup.Dump</code>, <code>BendTech.Dump</code>).</p>
+<p>'''</p>
+<h2 id="the-yearly-regression-bundles">4. The yearly regression bundles</h2>
+<p>In <code>Test\Bend\</code> you'll see <code>Bend2017.cs</code> ... <code>Bend2025.cs</code>. Each file is a layer of fixes from that year, captured as named regression cases. New cases land in the <em>current year</em> file.</p>
+<p>[,csharp]</p>
+<pre><code>[Test (1128, &quot;P10976: Part requires 2 setups, with punches mounted in opposite flips&quot;)]
+void Test13 () { ... }
+
+[Test (1129, &quot;Case 10939: One bend not possible (23.16)&quot;)]
+void Test14 () =&gt; BasicBendAuto3D.Test (&quot;Fold/Accept5/23.16.fx&quot;, 13, &quot;Bend/Auto3/23.16.txt&quot;);
+</code></pre>
+<p>Patterns to notice:</p>
+<p>** Cases reference internal issue numbers (<code>P10976</code>, <code>Case 10939</code>). Useful for cross-referencing.
+** A regression test typically just runs the standard helper with a specific input and a specific golden -- no re-implementation of logic.</p>
+<p>'''</p>
+<h2 id="test-data-layout">5. Test data layout</h2>
+<pre><code>X:\TData\
+├── 2D\           inputs for 2D drawing tests
+├── 3D\           inputs for 3D model tests
+├── Base\         Flux.Base level (Geometry / Math / Sys / IO)
+├── Bend\         press-brake inputs (.geo, .dxf, .fx) + golden .txt
+│   ├── Auto\     auto-tooling fixtures
+│   ├── Auto3\    extended fixtures (often 3D-input)
+│   ├── ...
+├── Cell\         BCell fixtures
+├── Cell7K\       7000-series cell variants
+├── Cut\          flat-cut fixtures
+├── Dwg\          drawing fixtures
+├── Fanuc\        Fanuc-related (BCell controller)
+├── Fold\         panel-bender fixtures
+├── IO\           IO format fixtures
+├── Laser\        laser fixtures
+├── Lib\          tool-library fixtures
+├── Nest\         nesting fixtures
+├── OEM\          OEM-specific fixtures
+├── Punch\        punch fixtures
+├── Sys\          system-level
+├── System\       (separate from Sys — historical split)
+└── Tmp\          scratch (test outputs go here transiently)
+</code></pre>
+<p><code>X:\TDATA</code> is a separate clone of test data; the env var <code>FLUXTESTDATA</code> should point to it.</p>
+<p>'''</p>
+<h2 id="reading-a-test-in-five-steps">6. Reading a test in five steps</h2>
+<p>For any test you want to understand, do this:</p>
+<p>. <strong>Read the <code>[TestFixture]</code> line</strong> -- Module + Subsystem tell you the area.
+. <strong>Read the <code>[Test]</code> description</strong> -- usually a one-line summary of the scenario.
+. <strong>Find the helper</strong> -- the test body is usually a one-liner calling a static helper.
+. <strong>Read the helper's <code>Test</code> method</strong> -- that's where the actual workflow runs (<code>Make</code>, <code>Process</code>, <code>CheckDump</code>).
+. <strong>Open the input + golden</strong> -- match dump-line to a model property by reading either <code>BendSetup.Dump</code> or the tech's <code>Dump</code>.</p>
+<p>This is the <strong>same workflow you'd use</strong> when writing a new test. So reading tests is also rehearsal for writing them.</p>
+<p>'''</p>
+<h2 id="useful-helpers-fx-and-friends">7. Useful helpers (<code>FX</code> and friends)</h2>
+<p>|===
+| Helper | What it does | Where used</p>
+<p>| <code>FX.LoadTestPart (relPath)</code>
+| Loads <code>.geo</code> / <code>.dxf</code> / <code>.fx</code> from <code>X:\TData</code>
+| every fixture</p>
+<p>| <code>FX.TestFile (relPath)</code>
+| Resolves a path under <code>X:\TData</code>
+| golden-file paths</p>
+<p>| <code>FX.TmpTestFile</code>
+| A scratch path for test output
+| dump comparisons</p>
+<p>| <code>FX.Testing</code>
+| True while running under Flit
+| conditionals in production code</p>
+<p>| <code>BA.Testing</code>
+| Mirror flag inside Flux.Base
+| conditionals in low-level code</p>
+<p>| <code>BendMachine.Get (id)</code>
+| Loads machine 13 / 99 / etc.
+| every Bend test</p>
+<p>| <code>BToolLibrary.Get (1)</code>
+| Loads tool catalog 1
+| inventory setup</p>
+<p>| <code>Assert.AreTextFilesEqual (a, b)</code>
+| Diff-aware text compare
+| golden assertions
+|===</p>
+<p>'''</p>
+<h2 id="running-tests-what-you-actually-do">8. Running tests -- what you actually do</h2>
+<p>_<strong>*
+<strong>Day-1 caveat.</strong> This section describes the intended flow. The exact runner UI evolves; ask your buddy on day 1 for the current command.
+*</strong>*</p>
+<p>The Flit runner is the <code>Flux.Test.exe</code> (built from <code>Test\Flux.Test.csproj</code>). It supports:</p>
+<p>** Console mode for headless / CI runs.
+** A GUI runner for interactive use, including coverage.</p>
+<p>Test scope filters are typically by <code>Module</code>, <code>Subsystem</code>, or by a list of test IDs. A typical workflow:</p>
+<p>** Run the smallest meaningful subset while iterating (e.g. <code>Module=Bend</code>, <code>Subsystem=AutoTool</code>).
+** Run the whole suite before opening a PR.</p>
+<p>Test inputs come from <code>X:\TData</code> (env var <code>FLUXTESTDATA</code>); make sure that subst drive is mounted and pointing at a fresh clone.</p>
+<p>'''</p>
+<h2 id="debugging-a-failing-test-read-only">9. Debugging a failing test, read-only</h2>
+<p>Even if you can't write code yet, here's how to debug a failing test in a way that explains the failure:</p>
+<p>. <strong>Find the diff.</strong> <code>Assert.AreTextFilesEqual</code> should print a diff (line-by-line). The first changed line is your scent.
+. <strong>Match the diff to a <code>Dump</code> line.</strong> Open <code>BendSetup.Dump</code> (or the tech's <code>Dump</code>) and trace which property emits that line.
+. <strong>Set a breakpoint at the property</strong> in the production code. Run the test under the debugger.
+. <strong>Inspect the difference.</strong> Did the value change? Did the calling order change? Did a new code path activate?
+. <strong>Compare to git history.</strong> <code>git log -p &lt;file&gt;</code> on the property's class will often surface the responsible change.</p>
+<p>You don't need to fix it -- but at this point you can describe the failure and the suspected cause, which is the deliverable.</p>
+<p>'''</p>
+<h2 id="five-hand-picked-tests-to-read-first">10. Five hand-picked tests to read first</h2>
+<p>|===
+| File | Why</p>
+<p>| <code>Test\Bend\BasicBendAuto.cs</code>
+| Canonical golden-file pattern. Read first.</p>
+<p>| <code>Test\Bend\BugFixes.cs</code>
+| A grab-bag of historical bugs -- entertaining and instructive.</p>
+<p>| <code>Test\Bend\BGPath.cs</code>
+| Heavy back-gauge tests (~31 KB). Shows BG-placer flows.</p>
+<p>| <code>Test\Geometry\</code>
+| Pure unit tests in Flux.Base -- useful for <code>Pline</code> / <code>Geo</code> API surface.</p>
+<p>| <code>Test\IO\</code>
+| DXF / GEO reader-writer round-trips. Good for IO understanding.
+|===</p>
+<p>'''</p>
+<h2 id="the-seven-test-smells-diagnostics-for-stale-tests">11. The seven test &quot;smells&quot; -- diagnostics for stale tests</h2>
+<p>When tests are failing in unexpected ways, look for:</p>
+<p>|===
+| Smell | What it usually means</p>
+<p>| Many goldens change for a small code change
+| The dump format changed (review intent).</p>
+<p>| One golden changes that no one expected
+| Hidden coupling -- the property under test feeds the dump indirectly.</p>
+<p>| Tests that are skipped (<code>#if FALSE</code>, <code>[Test (… )]</code> commented out)
+| Quarantined work; ask your buddy.</p>
+<p>| <code>BA.Testing</code> checks in production code
+| A code path bypassed during tests; understand <em>why</em> before changing.</p>
+<p>| Hard-coded machine IDs (13, 99)
+| Standard test machines; touching their <code>Machine.curl</code> cascades to everything.</p>
+<p>| Random-seeded behavior
+| Determinism violation; investigate.</p>
+<p>| Input fixture missing
+| Fresh clone of <code>TData</code> likely needed.
+|===</p>
+<p>'''</p>
+<h2 id="self-check">12. Self-check</h2>
+<p>. What does <code>Assert.AreTextFilesEqual</code> do? <em>(§7)</em>
+. Why are most Bend tests golden-file tests rather than direct-property checks? <em>(§3)</em>
+. Where do test IDs come from, and why do they matter? <em>(§1)</em>
+. What does the <code>Bend2025.cs</code> file mean? <em>(§4)</em>
+. If <code>BendSetup.Dump</code> changes its format, what <em>else</em> needs to change? <em>(§3, §11)</em>
+. Where is the .geo fixture file <code>Bend*04.geo</code> stored? <em>(§5)</em></p>
+<p>'''</p>
+<h2 id="if-you-take-just-one-thing-from-this-chapter">13. If you take just one thing from this chapter</h2>
+<p>_<strong>*
+*<em>In Flux, tests are documentation. The <code>.txt</code> golden files are the most precise spec we have for many subsystems. Read them. When in doubt, the golden is the truth.</em>
+*</strong>*</p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. Verified against <code>Test\Bend\BasicBendAuto.cs</code>, <code>Test\Flux.Test.csproj</code>, and the <code>Test\Bend\</code> inventory._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#the-test-framework-flit">1. The test framework -- Flit</a>
+  </li>
+  <li level="2">
+   <a href="#test-ids">Test IDs</a>
+  </li>
+  <li level="1">
+   <a href="#test-categories">2. Test categories</a>
+  </li>
+  <li level="1">
+   <a href="#the-golden-file-pattern-most-common">3. The golden-file pattern (most common)</a>
+  </li>
+  <li level="2">
+   <a href="#how-it-works">How it works</a>
+  </li>
+  <li level="2">
+   <a href="#why-this-pattern-works">Why this pattern works</a>
+  </li>
+  <li level="2">
+   <a href="#why-this-pattern-hurts">Why this pattern hurts</a>
+  </li>
+  <li level="2">
+   <a href="#how-to-read-a-golden-file">How to read a golden file</a>
+  </li>
+  <li level="1">
+   <a href="#the-yearly-regression-bundles">4. The yearly regression bundles</a>
+  </li>
+  <li level="1">
+   <a href="#test-data-layout">5. Test data layout</a>
+  </li>
+  <li level="1">
+   <a href="#reading-a-test-in-five-steps">6. Reading a test in five steps</a>
+  </li>
+  <li level="1">
+   <a href="#useful-helpers-fx-and-friends">7. Useful helpers ( and friends)</a>
+  </li>
+  <li level="1">
+   <a href="#running-tests-what-you-actually-do">8. Running tests -- what you actually do</a>
+  </li>
+  <li level="1">
+   <a href="#debugging-a-failing-test-read-only">9. Debugging a failing test, read-only</a>
+  </li>
+  <li level="1">
+   <a href="#five-hand-picked-tests-to-read-first">10. Five hand-picked tests to read first</a>
+  </li>
+  <li level="1">
+   <a href="#the-seven-test-smells-diagnostics-for-stale-tests">11. The seven test "smells" -- diagnostics for stale tests</a>
+  </li>
+  <li level="1">
+   <a href="#self-check">12. Self-check</a>
+  </li>
+  <li level="1">
+   <a href="#if-you-take-just-one-thing-from-this-chapter">13. If you take just one thing from this chapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></span>
+ <span class="next"><a href="07_guided_code_tours.html">Guided Code Tours</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

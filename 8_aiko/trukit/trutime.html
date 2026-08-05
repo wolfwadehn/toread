@@ -1,0 +1,1207 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>TruTime</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">TruKit</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a class="active" href="trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">TruKit</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="trutime.html">TruTime</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>TruTime</h1>
+<hr />
+<h2 id="product-trukit-org-trumpf-title-trutime-status-released-tags-trukit-tool-trutime-jira-sap-worklog-timebooking-updated-2026-07-15">product: trukit
+org: trumpf
+title: TruTime
+status: released
+tags: [trukit, tool, trutime, jira, sap, worklog, timebooking]
+updated: 2026-07-15</h2>
+<h1 id="trutime">TruTime</h1>
+<p>Part of [[TruKit]]. A <strong>monthly time-booking cockpit</strong> that puts your <strong>SAP</strong>
+work time and your <strong>Jira</strong> worklogs side by side, so you can see — and fix —
+where the two don't line up, and how your hours split across <strong>Internal Order</strong>
+numbers.</p>
+<blockquote>
+<p><strong>Status: released — latest 5.0.32</strong> (2026-07-15). 5.0.31 shipped the tool
+(P0–P6); <strong>5.0.32</strong> (<code>aef63b9</code>) adds two things: IO targets can <strong>group
+several internal orders under one shared %</strong> (e.g. IO-A 45% + [IO-B, IO-C] 50%
+= 95%), and IO resolution follows an <strong>&quot;is in package&quot; issue link when an issue
+has no parent</strong>. Both cross-built + published to OneDrive + broadcast via the
+self-update manifest; <code>main</code> pushed. Still wants real-machine validation (live
+Jira worklogs + SAP SSO; confirm the <code>Internal Order BEND</code> field type + that
+the link phrase is literally &quot;is in package&quot;). <em>(planned)</em> (P7) items still
+open. See the <strong>Implementation log</strong> at the bottom.</p>
+</blockquote>
+<h2 id="what-it-does">What it does</h2>
+<ul>
+<li><strong>Monthly calendar</strong> — one cell per day, <strong>weekends greyed</strong>. Each day shows
+the <strong>SAP-booked hours</strong> (imported like [[TruWork]]) next to the <strong>Jira-logged
+hours</strong>, with a badge when the two don't match.</li>
+<li><strong>SAP import</strong> — reuses the [[TruWork]] SAP path; read-only, nothing written
+back to SAP, no credentials stored. Stores per-day SAP totals for comparison.</li>
+<li><strong>Jira worklog import</strong> — pulls the user's worklogs per issue per day via the
+Jira REST API, and shows <strong>how much was booked on what</strong>.</li>
+<li><strong>Internal Order (IO) resolution</strong> — reads the IO number from the issue; if
+empty, <strong>walks up to the parent</strong> issue to find it.</li>
+<li><strong>Target vs actual</strong> — a <strong>settings block</strong> to set a target <strong>% per IO
+number</strong>, driving a <strong>monthly diagram</strong> of <em>should-be</em> vs <em>actual</em> hours per
+IO, with the running delta.</li>
+<li><strong>Worklog CRUD</strong> — <strong>add, edit, and delete</strong> worklog entries directly from the
+tool (written back to Jira).</li>
+<li><strong>Quick add</strong> — paste a Jira key like <code>BENDCAM-1245</code> and it immediately opens
+an <strong>add-worklog dialog</strong> for that issue.</li>
+</ul>
+<h2 id="planned-extensions">Planned extensions</h2>
+<ul>
+<li><strong>SAP ↔ Jira reconciliation</strong> <em>(planned)</em> — a per-day and per-month
+&quot;unaccounted hours&quot; figure (SAP booked but not covered by Jira worklogs, or
+the reverse); click a day to distribute the missing time across issues.</li>
+<li><strong>Realistic targets</strong> <em>(planned)</em> — base target hours on actual working days
+(minus holidays, vacation, part-time factor / contracted weekly hours), not a
+flat month, so the % targets stay accurate for non-full-time schedules.</li>
+<li><strong>IO caching</strong> <em>(planned)</em> — cache the resolved IO per issue so the parent
+lookup isn't repeated on every load, with a manual <strong>refresh IO</strong> action.</li>
+<li><strong>Smart quick-add</strong> <em>(planned)</em> — recent/favorite issues, autocomplete by
+summary, prefilled IO and duration, and shorthand like
+<code>BENDCAM-1245 2h &quot;unit tests&quot;</code>.</li>
+<li><strong>Bulk &amp; repeat entries</strong> <em>(planned)</em> — copy a day's worklogs to another day,
+template a typical week, or split a block across issues by percentage.</li>
+<li><strong>Validation &amp; warnings</strong> <em>(planned)</em> — flag days over/under contracted hours,
+worklogs on closed issues, and issues whose IO can't be resolved.</li>
+<li><strong>Reporting / export</strong> <em>(planned)</em> — monthly CSV/Excel grouped by IO for
+controlling, plus a printable monthly summary.</li>
+<li><strong>Filters</strong> <em>(planned)</em> — filter the calendar by IO or project; optional
+read-only team view (respecting Jira permissions).</li>
+</ul>
+<h2 id="availability">Availability</h2>
+<p><strong>Proposed archetype: local-backend</strong> — like [[TruJira]], the Jira API access
+and worklog write-back most likely need TruKit's Rust backend, so it would run
+on the <strong>desktop</strong> app. (SAP import can reuse [[TruWork]]'s client-side flow.)
+Final archetype to be confirmed during design.</p>
+<h2 id="notes">Notes</h2>
+<ul>
+<li>Overlaps with [[TruWork]] (SAP import, work-time view) and [[TruJira]] (Jira
+API, worklog sync) — reuse those code paths where possible.</li>
+<li>SAP is strictly <strong>read-only</strong>; all write-backs go <strong>only</strong> to Jira worklogs.</li>
+<li>Handle Jira's <strong>paginated</strong> worklog responses and rate limits.</li>
+</ul>
+<hr />
+<h2 id="design-log-2026-07-14">Design log — 2026-07-14</h2>
+<blockquote>
+<p>Status moved <strong>proposed → planning</strong>. Grounded against the real TruKitV5
+codebase (<code>~/dev/trumpf/TruKitV5</code>). This section is updated as the design
+firms up; the plan/roadmap lands at the bottom once verified.</p>
+</blockquote>
+<h3 id="reuse-surfaces-confirmed-in-code">Reuse surfaces confirmed in code</h3>
+<ul>
+<li><strong>SAP import is already solved.</strong> Tauri command <code>sap_time_import(from, to) → DayEvents[]</code> (<code>apps/desktop/src/sap_time.rs</code>) opens a visible <strong>zero-IPC</strong>
+<code>sap-auth</code> webview (SSO/MFA against <code>saperp.corp.trumpf.com</code>), then fetches
+per-day time events + mobile/leave via the pure <code>crates/sap-time</code>
+(fetch/parse/model) over <code>jkit-core</code>'s WinHTTP transport. <strong>TruWork and
+TruHomo already consume it client-side</strong> — TruTime reuses it verbatim to get
+per-day SAP hours. <code>DayEvents = { date, blocks:[{start,end,status?,label?}], notes?:[{label,status?}] }</code>.</li>
+<li><strong>Jira client</strong> is the pure crate <code>crates/jkit-jira/src/client.rs</code>
+(<code>JiraClient::new</code>, <code>get_issue</code>, <code>search_jql</code>, <code>find_custom_field_id</code>,
+<code>edit_issue</code>, <code>set_field</code>, comments, <code>request_json/send</code> helpers).
+<code>IssueBean.fields</code> is a generic <code>serde_json::Map</code>, so <strong>parent</strong> and any
+<strong><code>customfield_XXXXX</code></strong> (the IO field) are reachable without codegen changes.
+⚠️ <strong>No worklog methods exist yet</strong> — worklog CRUD + a &quot;my worklogs&quot; path must
+be added here.</li>
+<li><strong>Jira credentials already exist</strong> in TruJira's plugin (<code>crates/trujira</code>,
+namespace <code>plugin:trujira|</code>): <code>AppState.jira_store</code> = machine-encrypted
+<code>&lt;data_dir&gt;/TruJira/credentials/jira.enc</code>. TruTime should <strong>reuse the same
+single Jira config</strong> (not a second credential prompt).</li>
+<li>Tools plug in via <strong>one <code>registry.ts</code> entry + a Svelte module</strong> under
+<code>packages/ui/src/tools/&lt;id&gt;/</code>; shared tokens/theme from <code>trukit-ui-kit</code>; all
+tool UIs are <strong>English only</strong>.</li>
+<li><strong>Austrian holidays</strong> (Computus) already computed in TruHomo, and <strong>net-hours
+/ break math</strong> (Austrian AZG) already in TruWork — reuse for realistic
+targets and the SAP↔Jira comparison basis, don't reinvent.</li>
+</ul>
+<h3 id="archetype-confirmed">Archetype — confirmed</h3>
+<p><strong>local-backend</strong>, <code>available: () =&gt; true</code> — like [[TruJira]]. Needs the Rust
+backend for Jira worklog CRUD and reuses the desktop-only <code>sap_time_import</code>, so
+it's desktop-only by nature. Every backend call is still runtime-guarded with
+<code>isTauri()</code> + a not-desktop empty state (TruWork's pattern), so a browser dev tab
+degrades gracefully instead of erroring.</p>
+<h3 id="verified-findings-design-workflow-wf_9bccedf9-583-5-designers-4-adversarial-verifiers">Verified findings (design workflow <code>wf_9bccedf9-583</code>, 5 designers + 4 adversarial verifiers)</h3>
+<ul>
+<li>✅ <strong>&quot;My worklogs for a month&quot; has no single Jira endpoint</strong> — CONFIRMED. The
+sanctioned path is JQL <code>worklogAuthor = currentUser() AND worklogDate &gt;= from AND worklogDate &lt;= to</code> → stream matching issues → per-issue <strong>paginated</strong>
+<code>GET /rest/api/3/issue/{key}/worklog</code> → <strong>re-filter client-side</strong> by
+<code>author.accountId == me</code> <em>and</em> <code>started</code> in range (JQL matches the <em>issue</em>, not
+the worklog, so a coarse match can slip in other authors / out-of-range logs).
+Add <code>GET /rest/api/3/myself</code> for the caller's <code>accountId</code> (Cloud hides emails,
+so email lookup is unreliable). <strong>Do NOT</strong> read the embedded <code>issue.fields.worklog</code>
+— it's capped at ~20 entries; use the dedicated endpoint. Pass
+<code>startedAfter</code>/<code>startedBefore</code> (epoch ms) to shrink pages.</li>
+<li>⚠️ <strong>Worklog DELETE needs a tiny <code>jkit-core</code> change</strong> — REFUTED the &quot;no new
+infra&quot; assumption. GET-worklogs / add / update reuse the existing
+<code>request_json</code> / <code>request_no_content</code> helpers verbatim (same shape as
+<code>get_comments</code>/<code>add_comment</code>), but the <code>Method</code> enum only has GET/POST/PUT
+(<code>crates/jkit-core/src/http/mod.rs</code>). Add a <code>Delete</code> variant (+ <code>as_str</code> +
+the reqwest arm; WinHTTP auto-works via <code>as_str</code>). ~3 lines, but it <em>is</em> a
+cross-crate change.</li>
+<li>⚠️ <strong><code>started</code> write format is load-bearing</strong> — Jira Cloud rejects RFC-3339
+<code>+00:00</code> (colon) and needs RFC-822 <code>+0000</code>: <code>%Y-%m-%dT%H:%M:%S%.3f%z</code> (millis
+mandatory). Comment is <strong>ADF</strong> on read <em>and</em> write — reuse <code>adf::text_to_adf</code>
+for writes, add an <code>adf_to_text</code> flattener for display.</li>
+<li>⚠️ <strong>The &quot;reuse TruWork/TruHomo math&quot; is only half-true</strong> — the net-hours /
+06:00-floor math and the Austrian-holiday Computus live <strong>inline in the
+<code>.svelte</code> <code>$derived</code></strong>, not as importable functions. They must be <strong>extracted
+into shared pure modules</strong> (<code>packages/ui/src/lib/worktime.ts</code> +
+<code>austrianHolidays.ts</code>) — a small refactor touching TruWork &amp; TruHomo — or
+TruTime copies them and they silently drift. No per-day SAP total helper
+exists today.</li>
+<li>✅ <strong>Sharing TruJira's <code>jira.enc</code> from a second reader is sound</strong> — CONFIRMED.
+The AES key derives from <strong>machine UUID + OS username, not the file path</strong>
+(<code>jkit-core/src/cipher.rs</code>), and <code>FileBackend::load()</code> re-reads+decrypts every
+call (no cache, no stale reads). <strong>Guard rail:</strong> TruTime stays <strong>read-only</strong> on
+<code>jira.enc</code> (writes to it happen only in TruJira's settings, and the save is a
+non-atomic in-place write) — a read racing that rare write returns a
+recoverable <code>Err</code>, never corruption.</li>
+</ul>
+<h3 id="architecture-decision-backend-placement-decided-new-trutime-plugin-crate">Architecture decision — backend placement ✅ <em>decided: new <code>trutime</code> plugin crate</em></h3>
+<p><strong>New <code>trutime</code> plugin crate</strong> (option A — matches the repo's one-plugin-per-tool
+convention, see [[trujira-crate-rename]]). It opens TruJira's <code>jira.enc</code>
+<strong>read-only</strong>, owns its own non-Jira state (IO cache, IO targets, settings), and
+namespaces its commands <code>plugin:trutime|…</code>. Scaffolding to add: <code>crates/trutime/</code>
+(<code>Cargo.toml</code>, <code>src/lib.rs</code> <code>init() -&gt; TauriPlugin</code>, <code>src/state.rs</code>,
+<code>src/commands.rs</code>, <code>build.rs</code>, <code>permissions/</code>), the workspace-member + app
+<code>Cargo.toml</code> deps, <code>.plugin(trutime::init())</code> in <code>apps/desktop/src/lib.rs</code>, and
+<code>&quot;trutime:default&quot;</code> in <code>apps/desktop/capabilities/default.json</code>. Use a <strong>shared
+path constant</strong> for TruJira's data dir so a layout change can't silently blank
+TruTime's creds.</p>
+<p>The <strong>worklog client methods go in the shared <code>jkit-jira</code> crate</strong> (reused by
+both), and <strong>credential writes stay solely in TruJira</strong> — TruTime only reads
+<code>jira.enc</code> and, if Jira isn't configured, shows a CTA pointing the user to
+TruJira's settings.</p>
+<h3 id="reuse-map-what-trutime-borrows-with-anchors">Reuse map (what TruTime borrows, with anchors)</h3>
+<table>
+<thead>
+<tr>
+<th>Need</th>
+<th>Reuse</th>
+<th>Where</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Per-day SAP hours</td>
+<td><code>sap_time_import(from,to)</code> <strong>as-is</strong></td>
+<td><code>apps/desktop/src/sap_time.rs:22</code>, called like <code>TruWorkTool.svelte:357-378</code></td>
+</tr>
+<tr>
+<td>SAP data shape</td>
+<td><code>DayEvents/Block/DayNote</code></td>
+<td><code>crates/sap-time/src/model.rs</code>, TS mirror <code>truwork/sapImport.ts:8-11</code></td>
+</tr>
+<tr>
+<td>Month range / import flow</td>
+<td><code>monthRange</code>, lazy-<code>invoke</code>, <code>isTauri()</code> gate</td>
+<td><code>truwork/sapImport.ts:25</code>, <code>TruWorkTool.svelte:90</code></td>
+</tr>
+<tr>
+<td>Jira HTTP plumbing</td>
+<td><code>request_json</code> / <code>request_no_content</code> / <code>send</code></td>
+<td><code>jkit-jira/client.rs:716-776</code></td>
+</tr>
+<tr>
+<td>Worklog pagination template</td>
+<td><code>get_comments</code> startAt/total loop</td>
+<td><code>jkit-jira/client.rs:433-451</code></td>
+</tr>
+<tr>
+<td>Issue scan</td>
+<td><code>search_jql</code> streaming</td>
+<td><code>jkit-jira/client.rs:150</code></td>
+</tr>
+<tr>
+<td>IO field id by name</td>
+<td><code>find_custom_field_id</code></td>
+<td><code>jkit-jira/client.rs:80</code></td>
+</tr>
+<tr>
+<td>Tolerant field read</td>
+<td><code>parse_external_id</code> number-or-string pattern</td>
+<td><code>trujira/commands.rs:31-39</code></td>
+</tr>
+<tr>
+<td>Creds + per-call client</td>
+<td><code>jira_store.load()</code> → <code>JiraClient::new</code></td>
+<td><code>trujira/state.rs:48</code>, <code>commands.rs:406-412</code></td>
+</tr>
+<tr>
+<td>Configured-state gate</td>
+<td><code>credentials_status</code></td>
+<td><code>trujira/commands.rs:313</code></td>
+</tr>
+<tr>
+<td>IO cache</td>
+<td><code>trujira</code> <code>Cache</code> (stale-while-revalidate JSON)</td>
+<td><code>trujira/cache.rs</code></td>
+</tr>
+<tr>
+<td>Frontend invoke chokepoint</td>
+<td><code>plugin:…\|</code> prefix wrapper</td>
+<td><code>tools/jkit/api.ts:1-8</code></td>
+</tr>
+<tr>
+<td>Austrian holidays (Computus)</td>
+<td><code>easterSunday</code>/<code>austrianHolidays</code> <strong>→ extract to shared lib</strong></td>
+<td><code>truhomo/TruHomoTool.svelte:69-114</code></td>
+</tr>
+<tr>
+<td>Net-hours / 06:00 floor / AZG breaks</td>
+<td><code>counted</code>/<code>netH</code>/<code>toMin</code> <strong>→ extract to shared lib</strong></td>
+<td><code>truwork/TruWorkTool.svelte:44,116-237</code></td>
+</tr>
+<tr>
+<td>Registry entry + icon tile</td>
+<td><code>ToolDescriptor</code> shape</td>
+<td><code>shell/registry.ts</code> (TruJira entry)</td>
+</tr>
+</tbody>
+</table>
+<h3 id="new-code-inventory">New-code inventory</h3>
+<p><strong>Backend (Rust)</strong></p>
+<ul>
+<li><code>crates/jkit-jira/src/worklog.rs</code> <em>(new)</em> — <code>Worklog</code>, <code>WorklogAuthor</code>,
+<code>WorklogPage</code>, <code>WorklogInput</code> DTOs + <code>format_started(DateTime&lt;FixedOffset&gt;)</code>.</li>
+<li><code>crates/jkit-jira/src/client.rs</code> <em>(edit)</em> — <code>get_issue_worklogs(key, after?, before?)</code>
+(paginated), <code>add_worklog</code>, <code>update_worklog</code>, <code>delete_worklog</code>, <code>get_myself()</code>.</li>
+<li><code>crates/jkit-jira/src/adf.rs</code> <em>(edit)</em> — <code>adf_to_text(&amp;Value) -&gt; String</code>.</li>
+<li><code>crates/jkit-core/src/http/{mod.rs,reqwest_backend.rs}</code> <em>(edit)</em> — add
+<code>Method::Delete</code> (enum + <code>as_str</code> + reqwest arm).</li>
+<li><code>crates/jkit-jira/src/error.rs</code> + <code>client.rs</code> <em>(edit, P0)</em> — parse <code>Retry-After</code>
+and add a <strong>bounded backoff on idempotent GETs</strong>; today 429 → <code>None</code> and
+nothing retries, and the month import fans out N per-issue calls.</li>
+<li><strong>Commands</strong> (in the chosen crate) — <code>trutime_my_worklogs(from,to)</code>,
+<code>trutime_resolve_io(key, refresh)</code>, <code>trutime_add/update/delete_worklog</code>,
+<code>trutime_get/save_settings</code>, <code>trutime_refresh_io_cache</code>. IO resolution: field
+id via <code>find_custom_field_id(&quot;Internal Order BEND&quot;)</code> (the official Jira field
+name; overridable in settings), tolerant value reader,
+<strong>bounded parent walk</strong> (<code>fields[&quot;parent&quot;][&quot;key&quot;]</code>, MAX_DEPTH 5 + visited-set),
+results cached to <code>&lt;data_dir&gt;/TruTime/cache/io.json</code>.</li>
+</ul>
+<p><strong>Frontend (Svelte 5 + TS, all UI English)</strong></p>
+<ul>
+<li><code>tools/trutime/TruTimeTool.svelte</code> (root) + thin sub-components: <code>MonthGrid</code>,
+<code>DayDetail</code>, <code>WorklogEditor</code>, <code>IoTargets</code>, <code>IoChart</code>.</li>
+<li><code>tools/trutime/api.ts</code> — typed invoke wrappers (Jira via <code>plugin:…|</code>, SAP via
+<code>sap_time_import</code>).</li>
+<li><code>tools/trutime/worklog.ts</code> — pure helpers: <code>parseQuickAdd</code>/<code>parseWorklogKey</code>/
+<code>parseTimeSpent</code> (<code>2h</code>, <code>1h30m</code>, <code>90m</code>, <code>1.5h</code>), <code>groupByDay</code>, <code>sumByIo</code>,
+<code>mismatchLevel</code>, <code>fmtHours</code>. <strong>+ <code>worklog.test.ts</code></strong>.</li>
+<li><code>tools/trutime/calc.ts</code> — realistic targets + reconciliation (see math below).
+<strong>+ <code>calc.test.ts</code></strong>.</li>
+<li><code>tools/trutime/calendar.ts</code> — Monday-first <code>buildMonthGrid</code>, <code>monthWorkingHours</code>.</li>
+<li><code>lib/worktime.ts</code> + <code>lib/austrianHolidays.ts</code> <em>(shared extraction; refactors
+TruWork &amp; TruHomo to import them)</em>.</li>
+<li><code>shell/registry.ts</code> <em>(edit)</em> — <code>ICON_TRUTIME</code> (calendar + clock) + the
+<code>trutime</code> <code>ToolDescriptor</code>.</li>
+<li>Store: <code>localStorage</code> key <strong><code>trukit.trutime.v1</code></strong> — <code>{ settings:{weeklyHours, workdaysPerWeek, floorMin, toleranceMin, ioTargets:[{io,percent}], io_field_name:&quot;Internal Order BEND&quot;}, ioCache, sapTotals:{[iso]:hours}, sapNotes, sapOpenDays, lastImport, ui:{month} }</code>.
+<strong>Never persisted:</strong> Jira token, SAP cookies, or full worklog bodies (re-fetched
+live per month).</li>
+</ul>
+<h3 id="math-targets-reconciliation-calc.ts-integer-minute-arithmetic">Math — targets &amp; reconciliation (<code>calc.ts</code>, integer-minute arithmetic)</h3>
+<ul>
+<li><code>dailyHours = weeklyHours / workdaysPerWeek</code> (default 38.5/5 = 7.7). Part-time
+is just a smaller <code>weeklyHours</code> — no separate factor to special-case.</li>
+<li><code>availableHours(month) = availableDays × dailyHours</code>, where <code>availableDays</code> =
+(Mon–Fri, minus Austrian public holidays) − SAP full-day absences (Vacation /
+Sick / Flex day / Pflegefreistellung, read from <code>notes</code>).</li>
+<li><code>shouldBe(IO) = availableHours × pct/100</code>; <code>Σpct ≠ 100</code> → warn + show an
+&quot;unallocated&quot; bucket, never silently normalize.</li>
+<li><code>actual(IO)</code> = month's worklogs grouped by resolved IO; unresolved → a
+<code>(unresolved)</code> bucket kept in the total but excluded from per-IO deltas.</li>
+<li><strong>Reconciliation (per day, minutes):</strong> <code>diff = sapNet − jira</code>;
+<code>unaccountedSap = max(0, diff)</code>, <code>excessJira = max(0, −diff)</code>; <code>|diff| ≤ toleranceMin</code> (default 5) → reconciled. <strong>Two month totals:</strong> day-wise
+<code>Σ max(0, diff)</code> (actionable &quot;still needs a worklog&quot;) and aggregate <code>Σsap − Σjira</code> (sanity). Skip future days.</li>
+<li><strong>SAP net basis:</strong> <code>Σ over closed blocks of max(0, end − max(start, 06:00 floor))</code>; open blocks (<code>end==&quot;&quot;</code>) count 0 and flag the day incomplete (except
+today → extend to now); labels Mobile/Business trip/Travel count as work;
+full-day notes contribute 0 and zero the day's target. <em>(06:00 floor and
+net-vs-gross exposed as settings — see decision below.)</em></li>
+<li><strong>Distribute missing time:</strong> <code>distributeMissing(missingMin, issues[])</code> uses
+<strong>largest-remainder rounding</strong> so the split sums <em>exactly</em> to the gap (the day
+reconciles to 0 after the writes).</li>
+</ul>
+<h3 id="phased-roadmap-backend-first-each-phase-shippable">Phased roadmap (backend-first, each phase shippable)</h3>
+<ul>
+<li><strong>P0 — jkit-jira worklog foundation.</strong> <code>worklog.rs</code> DTOs, the 4 client methods
+<ul>
+<li><code>get_myself</code>, <code>Method::Delete</code>, <code>adf_to_text</code>, <strong>429/Retry-After backoff</strong>.
+Unit-testable in the crate.</li>
+</ul>
+</li>
+<li><strong>P1 — shared-lib extraction.</strong> <code>lib/worktime.ts</code> + <code>lib/austrianHolidays.ts</code>;
+refactor TruWork/TruHomo to import them (green <code>svelte-check</code> + existing tests).</li>
+<li><strong>P2 — backend commands + IO resolution.</strong> <code>trutime_my_worklogs</code>,
+<code>trutime_resolve_io</code> + parent walk + cache; wire the plugin (per the placement
+decision). Verify against a real BENDCAM issue.</li>
+<li><strong>P3 — read-only cockpit.</strong> Registry entry + <code>MonthGrid</code> + SAP import button +
+Jira refresh; per-day SAP-vs-Jira badges; not-configured / not-desktop states.</li>
+<li><strong>P4 — day detail + worklog CRUD.</strong> <code>DayDetail</code> + <code>WorklogEditor</code> + quick-add
+(paste a key); confirm-gated writes, refetch-verify, <code>adjustEstimate=leave</code>.</li>
+<li><strong>P5 — targets &amp; IO diagram.</strong> <code>IoTargets</code> settings + <code>IoChart</code> (theme-aware
+inline-SVG bullet chart) + running delta.</li>
+<li><strong>P6 — reconciliation &amp; validation.</strong> Unaccounted-hours figures, distribute-
+missing planner, warnings (closed issues, unresolved IO, missing clock-out).</li>
+<li><strong>P7 — planned extras.</strong> IO caching refresh UX, smart quick-add
+(<code>KEY 2h &quot;note&quot;</code>, autocomplete), bulk/repeat entries, CSV/Excel export, filters.</li>
+</ul>
+<h3 id="risks-watch-items">Risks / watch-items</h3>
+<ul>
+<li><strong>429 backoff is a hard P0 dependency</strong>, not optional — the month import
+fans out N per-issue calls and Retry-After is currently dropped.</li>
+<li><strong>Timezone:</strong> Jira <code>started</code> is in the <em>author's</em> profile tz; bucket by
+instant → <strong>machine-local date</strong>, and pad the JQL/<code>startedAfter</code> window ±1 day
+so midnight-boundary logs aren't lost. Do the local-date derivation <strong>backend-
+side</strong>; the frontend must not re-derive from an ISO string.</li>
+<li><strong>DST on write:</strong> <code>from_local_datetime</code> can be <code>None</code>/ambiguous twice a year —
+pick a deterministic resolution (<code>.single()</code> else earliest).</li>
+<li><strong>Net ≠ SAP payroll net</strong> if a break sits inside a block (no clock-out) — our
+figure can read higher than SAP's official net (we only have raw punches).
+Document as a known limitation.</li>
+<li><strong><code>sap_time_import</code> re-authenticates every call</strong> (visible SSO/MFA webview,
+240 s timeout) — keep it an explicit button, never on month-nav.</li>
+<li><strong>Interval overlap</strong> (Mobile block vs. terminal punches on a mixed day) — merge
+overlapping intervals before summing to avoid double-counting.</li>
+<li><strong>Cross-crate path coupling</strong> (if option A) — reference TruJira's data dir via a
+shared constant so a layout change doesn't silently blank TruTime's creds.</li>
+</ul>
+<h3 id="locked-decisions-2026-07-14">Locked decisions — 2026-07-14</h3>
+<ol>
+<li>✅ <strong>Backend placement</strong> — <strong>new <code>trutime</code> plugin crate</strong> (<code>plugin:trutime|</code>),
+reading TruJira's <code>jira.enc</code> read-only. <em>(see architecture section above)</em></li>
+<li>✅ <strong>IO custom-field name</strong> — <strong><code>Internal Order BEND</code></strong> (official Jira field
+name). Default in settings; still overridable. Value type + parent-walk
+behaviour confirmed against a real issue during P2.</li>
+<li>✅ <strong>Comparison basis</strong> — SAP <strong>net w/ 06:00 floor</strong> (identical to TruWork's
+<code>netH</code>), exposed as a setting.</li>
+</ol>
+<h3 id="still-to-confirm-during-build-not-blocking-the-plan">Still to confirm during build (not blocking the plan)</h3>
+<ul>
+<li>IO field <strong>value type</strong> (text / number / single-select) → shape the tolerant
+reader; and whether <code>Internal Order BEND</code> is set on the issue itself or only on
+the parent/Epic (drives how often the parent walk fires).</li>
+<li>Grid <strong>week start</strong> — defaulting to <strong>Monday</strong> (Austrian); flip if preferred.</li>
+<li><strong>Bare-number</strong> in quick-add (<code>2</code> → 2 <strong>hours</strong>, booking-friendly) vs. minutes.</li>
+<li>Whether should-be targets are <strong>full-month</strong> or <strong>run-to-date</strong> as the month
+progresses.</li>
+</ul>
+<hr />
+<h2 id="implementation-log-2026-07-14-branch-feattrutime">Implementation log — 2026-07-14 (branch <code>feat/trutime</code>)</h2>
+<p>Built P0–P6. Every layer verified against the real build.</p>
+<p><strong>P0 — jkit-jira worklog foundation</strong> ✅</p>
+<ul>
+<li><code>crates/jkit-core/src/http/{mod.rs,reqwest_backend.rs}</code> — added <code>Method::Delete</code>
+(enum + <code>as_str</code> + reqwest arm; WinHTTP auto-works via <code>as_str</code>).</li>
+<li><code>crates/jkit-jira/src/worklog.rs</code> — <code>Worklog</code>/<code>WorklogAuthor</code>/<code>WorklogPage</code>/
+<code>WorklogInput</code> DTOs + <code>format_started</code> (no-colon offset, tested).</li>
+<li><code>crates/jkit-jira/src/client.rs</code> — <code>get_issue_worklogs</code> (paginated),
+<code>add/update/delete_worklog</code>, <code>get_myself</code>, <strong>+ 429 Retry-After backoff</strong> in
+<code>send()</code> (3 tries, honors header, safe for all verbs since 429 = not processed).</li>
+<li><code>crates/jkit-jira/src/adf.rs</code> — <code>adf_to_text</code> flattener.</li>
+<li>✅ <code>cargo test -p jkit-core -p jkit-jira</code> (28) + clippy <code>-D warnings</code>.</li>
+</ul>
+<p><strong>P2 — <code>trutime</code> plugin crate</strong> ✅ <em>(the chosen new-crate architecture)</em></p>
+<ul>
+<li><code>crates/trutime/</code> — <code>Cargo.toml</code> (<code>links=&quot;trutime&quot;</code>), <code>build.rs</code>, <code>lib.rs</code>
+(<code>init()</code> → <code>plugin:trutime|</code>), <code>state.rs</code> (reads TruJira <code>jira.enc</code>
+<strong>read-only</strong>; IO-field-id + accountId caches), <code>io_cache.rs</code> (persistent IO
+cache), <code>commands.rs</code> (<code>my_worklogs</code>, <code>resolve_io</code>, <code>add/update/delete_worklog</code>,
+<code>credentials_status</code>, <code>clear_io_cache</code>), <code>permissions/default.toml</code>.</li>
+<li>Wired: workspace member, <code>apps/desktop</code> dep + <code>.plugin(trutime::init())</code> +
+<code>trutime:default</code> capability.</li>
+<li>✅ <code>cargo build -p trukit-desktop</code> (validates the capability) + clippy.</li>
+</ul>
+<p><strong>P1 — shared-lib extraction</strong> ✅</p>
+<ul>
+<li><code>packages/ui/src/lib/austrianHolidays.ts</code> (Computus, extracted from TruHomo;
+TruHomo refactored to import it) + <code>worktime.ts</code> (<code>netMinutes</code> w/ 06:00 floor,
+break-exclusion, overlap-merge; <code>toMin</code>; <code>fmtHM</code>). Both vitest-tested.</li>
+</ul>
+<p><strong>P3–P6 — the tool UI</strong> ✅</p>
+<ul>
+<li><code>packages/ui/src/tools/trutime/</code>: <code>api.ts</code> (invoke wrappers), <code>worklog.ts</code>
+(types + quick-add/time parsing + grouping + <code>mismatchLevel</code>), <code>calc.ts</code>
+(targets + reconciliation + <code>distributeMissing</code> largest-remainder), <code>calendar.ts</code>
+(Monday-first grid), <code>sapHours.ts</code> (SAP net per day), <code>store.ts</code> (localStorage
+<code>trukit.trutime.v1</code>), and components <code>TruTimeTool</code>/<code>MonthGrid</code>/<code>DayDetail</code>/
+<code>WorklogEditor</code>/<code>IoTargets</code>/<code>IoChart</code>.</li>
+<li><code>shell/registry.ts</code> — <code>trutime</code> entry (local-backend, <code>available: () =&gt; true</code>)
+<ul>
+<li>calendar-clock icon.</li>
+</ul>
+</li>
+<li>✅ svelte-check <strong>0 errors</strong>, <strong>72</strong> vitest tests pass, <code>vite build</code> OK
+(TruTime is its own code-split chunk; <code>austrianHolidays</code> a shared chunk).</li>
+</ul>
+<p><strong>Defaults chosen for the &quot;to confirm&quot; items:</strong> Monday-first grid; bare number =
+hours; targets full-month. All easily flipped.</p>
+<h3 id="pre-existing-repo-issue-found-not-trutime">⚠️ Pre-existing repo issue found (not TruTime)</h3>
+<p><code>main</code> is <strong>rustfmt-dirty under the current stable rustfmt (1.9.0, 2026-04)</strong> —
+the repo was formatted with an older stable, and <code>cargo fmt --all --check</code>
+(the CI gate) now reports diffs across ~38 pre-existing files (sap-time, jkit-*,
+apps/desktop, …). TruTime's <strong>new</strong> files are formatted clean under current
+stable, but the CI fmt gate would fail on <code>main</code> regardless. Recommend a
+separate housekeeping <code>cargo fmt --all</code> commit (or pin a rustfmt version in
+<code>rust-toolchain.toml</code>) — kept out of this feature branch to avoid a 38-file
+churn diff mixed with the feature.</p>
+<h3 id="not-yet-done">Not yet done</h3>
+<ul>
+<li><strong>Real-machine validation:</strong> live Jira worklog import/CRUD (needs configured
+TruJira creds + network), the <code>Internal Order BEND</code> field's real value type +
+where it lives (issue vs Epic), SAP SSO import, and the desktop webview run.</li>
+<li><strong>P7 extras:</strong> smart quick-add autocomplete, bulk/repeat entries, CSV/Excel
+export, project/IO filters, read-only team view.</li>
+</ul>
+<h3 id="post-implementation-review-2-bugs-found-fixed">Post-implementation review (2 bugs found + fixed)</h3>
+<p>Adversarial review (parallel reviewers over Rust backend, Svelte reactivity, the
+JS↔Rust contract, and calc logic) confirmed <strong>2 real bugs</strong>, both fixed:</p>
+<ol>
+<li><strong>IO parent-walk aborted the whole month import</strong> — <code>resolve_io_for_issue</code>
+used <code>client.get_issue(parent).await?</code>, so an unreadable ancestor (deleted /
+restricted Epic → 403/404) failed <em>all</em> worklogs for the month. Fixed: the
+walk now stops on a parent-fetch error and leaves the IO unresolved (a
+warning), matching the other graceful-degradation paths.</li>
+<li><strong>Stale worklogs leaked into the reconciliation totals on month change</strong> —
+<code>worklogs</code> wasn't cleared on nav, so the recon bar briefly (or permanently, if
+the refetch errored) mixed the previous month's Jira with the new month's SAP.
+Grid/DayDetail were unaffected (keyed by ISO). Fixed: month nav clears
+<code>worklogs</code> (not <code>refreshJira</code>, so a same-month manual refresh doesn't blank the
+view). The contract (all 7 commands), the two <code>$effect</code>s, the request-token
+race guard, the 429 retry loop, and the timezone/DST math were all reviewed
+and cleared. Re-verified green after the fixes.</li>
+</ol>
+<hr />
+<h2 id="implementation-log-2026-07-22-branch-featsend-time-booking-merged-to-main">Implementation log — 2026-07-22 (branch <code>feat/send-time-booking</code>, merged to <code>main</code>)</h2>
+<p>Added <strong>send-time-booking (preview / dry-run only)</strong> — the ability to <em>fill out</em> a
+Mobile / Travel / Office time booking and <strong>preview the exact SAP OData request(s)
+that would be sent</strong>, without ever submitting. This deliberately stops short of the
+live POST: sending a booking triggers SAP notifications the user doesn't want, so
+the feature is &quot;build-up-to-send + analyze how to send&quot; only. The SAP services and
+field shapes are captured in [[SAP Time-Booking OData Reference]] (live-verified via
+read-only Playwright <code>$metadata</code>/entity GETs — no writes).</p>
+<p><strong>Curated scope (this pass):</strong> Mobile (<code>0406</code>), Travel (<code>9800</code> Passive Reisezeit /
+<code>0800</code> Dienstreise), and Office time (<code>P10</code>/<code>P20</code> clock events). Full-day/quota
+types (Vacation, Gleittag, …) and a data-driven full absence-type form are deferred.</p>
+<p><strong>What shipped</strong></p>
+<ul>
+<li><code>crates/sap-time/src/write.rs</code> <em>(new)</em> — typed <code>BookingRequest</code>
+(Mobile/Travel/Office), SAP date/time formatters (<code>/Date(ms)/</code>, <code>HHMMSS</code>,
+<code>PTnnHnnM00S</code>), spec builders <code>leave_request_spec</code> (→ <code>LeaveRequestSet</code>) and
+<code>time_event_specs</code> (→ two <code>TimeEventSet</code> P10+P20), and a dry-run
+<code>prepare()</code> returning serializable <code>PreparedRequest</code>s (method/url/body).
+Reuses the existing generic <code>WriteSpec</code> + <code>odata_write</code> primitive (which is
+<strong>never called</strong> — verified branch-wide).</li>
+<li><code>crates/trutime/src/commands.rs</code> — <code>sap_book_preview</code> (live-path DRY RUN,
+returns the built request(s)) + <code>sap_file_book_time</code> (disconnected bridge: drops
+<code>OP_ODATA_WRITE</code> command files for TruKitSync to execute on the connected PC —
+TruTime itself never POSTs). Bridge write is best-effort <strong>rolled back</strong> on
+partial failure so a lone clock-in can't be left orphaned.</li>
+<li><code>packages/trutime/src/BookingForm.svelte</code> + <code>api.ts</code> bindings — a preview-only
+form (type / start / end / note); <strong>no submit button</strong>.</li>
+</ul>
+<p><strong>Process / verification.</strong> Brainstorm → spec (<code>docs/superpowers/specs/…</code>) → plan
+(<code>docs/superpowers/plans/…</code>) → 6 TDD tasks via subagent-driven development, each
+reviewed. Final whole-branch review: no Critical issues, confirmed the
+<strong>no-live-POST invariant holds across the whole branch</strong>. Rust 59/59 + svelte-check
+0/0 green. Merged to <code>main</code> (<code>--no-ff</code>).</p>
+<p><strong>Open follow-ups.</strong> Wiring the live <code>SendMode</code>/submit is a separate,
+explicitly-authorized step (intentionally not built — no live-submit code to
+mis-wire). <code>BookingForm</code> isn't mounted in a view yet (plan scope = create only).
+<code>SAP_ORIGIN</code> is duplicated between <code>trutime/commands.rs</code> and <code>sap-tauri/lib.rs</code> —
+could share one const in <code>sap-time</code>.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trukit-org-trumpf-title-trutime-status-released-tags-trukit-tool-trutime-jira-sap-worklog-timebooking-updated-2026-07-15">product: trukit
+org: trumpf
+title: TruTime
+status: released
+tags: [trukit, tool, trutime, jira, sap, worklog, timebooking]
+updated: 2026-07-15</a>
+  </li>
+  <li level="1">
+   <a href="#what-it-does">What it does</a>
+  </li>
+  <li level="1">
+   <a href="#planned-extensions">Planned extensions</a>
+  </li>
+  <li level="1">
+   <a href="#availability">Availability</a>
+  </li>
+  <li level="1">
+   <a href="#notes">Notes</a>
+  </li>
+  <li level="1">
+   <a href="#design-log-2026-07-14">Design log — 2026-07-14</a>
+  </li>
+  <li level="2">
+   <a href="#reuse-surfaces-confirmed-in-code">Reuse surfaces confirmed in code</a>
+  </li>
+  <li level="2">
+   <a href="#archetype-confirmed">Archetype — confirmed</a>
+  </li>
+  <li level="2">
+   <a href="#verified-findings-design-workflow-wf_9bccedf9-583-5-designers-4-adversarial-verifiers">Verified findings (design workflow , 5 designers + 4 adversarial verifiers)</a>
+  </li>
+  <li level="2">
+   <a href="#architecture-decision-backend-placement-decided-new-trutime-plugin-crate">Architecture decision — backend placement ✅ decided: new  plugin crate</a>
+  </li>
+  <li level="2">
+   <a href="#reuse-map-what-trutime-borrows-with-anchors">Reuse map (what TruTime borrows, with anchors)</a>
+  </li>
+  <li level="2">
+   <a href="#new-code-inventory">New-code inventory</a>
+  </li>
+  <li level="2">
+   <a href="#math-targets-reconciliation-calc.ts-integer-minute-arithmetic">Math — targets & reconciliation (, integer-minute arithmetic)</a>
+  </li>
+  <li level="2">
+   <a href="#phased-roadmap-backend-first-each-phase-shippable">Phased roadmap (backend-first, each phase shippable)</a>
+  </li>
+  <li level="2">
+   <a href="#risks-watch-items">Risks / watch-items</a>
+  </li>
+  <li level="2">
+   <a href="#locked-decisions-2026-07-14">Locked decisions — 2026-07-14</a>
+  </li>
+  <li level="2">
+   <a href="#still-to-confirm-during-build-not-blocking-the-plan">Still to confirm during build (not blocking the plan)</a>
+  </li>
+  <li level="1">
+   <a href="#implementation-log-2026-07-14-branch-feattrutime">Implementation log — 2026-07-14 (branch )</a>
+  </li>
+  <li level="2">
+   <a href="#pre-existing-repo-issue-found-not-trutime">⚠️ Pre-existing repo issue found (not TruTime)</a>
+  </li>
+  <li level="2">
+   <a href="#not-yet-done">Not yet done</a>
+  </li>
+  <li level="2">
+   <a href="#post-implementation-review-2-bugs-found-fixed">Post-implementation review (2 bugs found + fixed)</a>
+  </li>
+  <li level="1">
+   <a href="#implementation-log-2026-07-22-branch-featsend-time-booking-merged-to-main">Implementation log — 2026-07-22 (branch , merged to )</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="trunc.html">TruNC</a></span>
+ <span class="next"><a href="trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

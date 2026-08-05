@@ -1,0 +1,2074 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>108CADDetailCurveApproximationFourierAnalysis</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a class="active" href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>108CADDetailCurveApproximationFourierAnalysis</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-curve-approximation-fourier-analysis-doc-10.8-cad-detail-curve-approximation-fourier-analysis-id-prefix-fr-cad-apx-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Curve Approximation &amp; Fourier Analysis&quot;
+doc: &quot;10.8 - CAD Detail - Curve Approximation &amp; Fourier Analysis&quot;
+id-prefix: &quot;FR-CAD-APX&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-curve-approximation-fourier-analysis">CAD Detail — Curve Approximation &amp; Fourier Analysis</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Reconstructed intent from static source analysis, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document is the algorithm-level refinement of two numerical geometry libraries that sit
+beneath the interactive CAD editor and the drawing-comparison subsystem:</p>
+<ul>
+<li><strong><code>tc_aprox</code> — curve approximation.</strong> A strategy-driven engine (<code>Tc_Approximator</code>) that converts
+a parametrised 2D curve (rational/integral B-spline, polynomial, parametric arc) into a chain of
+straight-line and circular-arc segments that stay within a caller-defined deviation tolerance. It
+is the machine that lets a NURBS/spline be exported or manufactured as lines+arcs. It is consumed
+by IGES export (<code>tc_iges/ig_ausg.cpp</code>), the drawing &quot;thin/linearise&quot; command
+(<code>tc_dbase/dbase_command/TcDbaseThinCommand.cpp</code>), micro-joint/nest utilities and contour tooling
+(<code>tc_cad/cad_ttf/TcContour.cpp</code>, <code>tc_nest/taf_util</code>, <code>tc_mi/mi_write.cpp</code>).</li>
+<li><strong><code>tc_fou</code> — Fourier contour analysis.</strong> Computes a Fourier coefficient set (FKS) and a
+rotation/scale/translation-invariant Fourier descriptor set (FDS) of a <em>closed</em> contour
+(<code>TcFourierBeschr</code>), tests whether two contours are geometrically related (&quot;verwandt&quot;), and — when
+related — recovers the relationship parameters (Drehwinkel = rotation angle, Streckungsfaktor =
+scale factor, Translationsvektor = translation, plus a combined transformation matrix). It is
+consumed by the contour/feature finders (<code>tc_dbase/dbase_util/TcDbaseContourFinder</code>,
+<code>tc_dbase/dbase_pattern/TcPatFeatList</code>, <code>tc_las/las_tech/db/TcKonturenSucher</code>).</li>
+</ul>
+<p>It refines the parent system-level requirements: <strong>FR-CAD-018</strong> (smooth/thin/linearise),
+<strong>FR-CAD-025</strong> (curve approximation used by smooth/melt/equidistant, IGES/DXF export) and the
+drawing-comparison capability that consumes Fourier matching. Boolean contour arithmetic is in
+[[10.7 - CAD Detail - Contour Arithmetic Algorithms]]; the geometry kernel primitives are in
+[[10.6 - CAD Detail - Geometry Kernel Algorithms]]. German domain terms link to
+[[04 - Domain Model &amp; Glossary]].</p>
+<p><strong>Architecture note (applies throughout Part A).</strong> <code>Tc_Approximator</code> is a factory + orchestrator
+over four pluggable <em>strategy</em> roles (comments at <code>tc_aprox/tc_aprox.cpp:29-39</code>):
+<em>Parameterstrategie</em> (WHICH parameter interval to approximate next), <em>Segmentstrategie</em> (HOW to
+approximate that interval — line/arc variants), <em>Verbindungsstrategie</em> (how a new segment connects
+to the previous one — point/tangent continuity) and <em>Bewertungsstrategie</em> (evaluate/accept a
+candidate segment and score it). The curve itself is any subclass of the abstract
+<code>Tc_ParametricCurve</code> (<code>tc_interface/tc_aprox/paracurv.h</code>). Error codes are integers; <code>0</code> = success;
+<code>10600-10644</code> = domain errors; <code>10613/10614</code> are non-fatal warnings; <code>10630</code> = approximation
+finished (no more segments); <code>10631</code> = no acceptable segment found.</p>
+<p><strong>Architecture note (applies throughout Part B).</strong> A <code>TcFourierBeschr</code> is built from a dbase contour
+<code>S_kontur*</code>. The contour is (a) forced to a defined orientation (Umlaufsinn), (b) rounded to
+<code>nk_stellen</code> decimals, (c) polygonised (arcs sampled at <code>F_W_INKR = 10°</code>), (d) reduced to a complex
+polygon list <code>S_K_KONTUR</code>, then (e) transformed into a Fourier coefficient list <code>S_FOU</code> (<code>struct Fou</code>
+= {int index; S_KOMPLEX coeff; double winkel; next}) and a normalised descriptor list. Tolerances
+come from <code>TcToleranzContainer</code> (<code>e_fouEpsilonWert</code> base ≈ 1e-4, <code>e_t3_eilo_FourAnzNKS</code> decimals,
+<code>e_wert</code> general). All angles internally in radians (converted to degrees at the public boundary).</p>
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<h3 id="part-a-curve-approximation-tc_aprox">Part A — Curve approximation (<code>tc_aprox</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Class / function</th>
+<th>German / plain meaning</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Tc_ParametricCurve</code> (<code>paracurv.h</code>)</td>
+<td>abstract parametrised 2D curve</td>
+<td>FR-CAD-APX-001</td>
+</tr>
+<tr>
+<td><code>Tc_BSpline</code> (<code>bspline.cpp</code>)</td>
+<td>integral B-spline (de Boor)</td>
+<td>FR-CAD-APX-002</td>
+</tr>
+<tr>
+<td><code>Tc_BSplineRational</code> (<code>bspliner.cpp</code>)</td>
+<td>rational (NURBS) B-spline, weights</td>
+<td>FR-CAD-APX-003</td>
+</tr>
+<tr>
+<td><code>Tc_BSpline</code> open/closed, knot wrap, <code>setUniformParam</code>, <code>setParamInterval</code></td>
+<td>offener/geschlossener Spline, Parametereinschränkung</td>
+<td>FR-CAD-APX-004</td>
+</tr>
+<tr>
+<td><code>getFirstDerivative</code>/<code>getSecondDerivative</code> (spline)</td>
+<td>1./2. Ableitung</td>
+<td>FR-CAD-APX-005</td>
+</tr>
+<tr>
+<td><code>getLength</code> (spline/polynom)</td>
+<td>Kurvenlänge (lineare Interpolation)</td>
+<td>FR-CAD-APX-006</td>
+</tr>
+<tr>
+<td><code>Tc_Polynom</code> (<code>polynom.cpp</code>)</td>
+<td>Polynom Grad n (Horner)</td>
+<td>FR-CAD-APX-007</td>
+</tr>
+<tr>
+<td><code>TcParametricArc</code> (<code>parametricarc.cpp</code>)</td>
+<td>parametrischer Kreisbogen</td>
+<td>FR-CAD-APX-008</td>
+</tr>
+<tr>
+<td><code>TcParametricArc</code> radius/definition checks</td>
+<td>Radius-Konsistenz, Vollständigkeit</td>
+<td>FR-CAD-APX-009</td>
+</tr>
+<tr>
+<td><code>Tc_Approximator</code> (factory/orchestrator)</td>
+<td>Approximator-Architektur (4 Strategien)</td>
+<td>FR-CAD-APX-010</td>
+</tr>
+<tr>
+<td><code>getNextSegment(int&amp;)</code> retry loop</td>
+<td>Approximationsschleife / Konvergenz</td>
+<td>FR-CAD-APX-011</td>
+</tr>
+<tr>
+<td><code>initNextSegment</code> defaults</td>
+<td>Default-Strategiekonfiguration</td>
+<td>FR-CAD-APX-012</td>
+</tr>
+<tr>
+<td>residual-interval merge</td>
+<td>Reststück zu kurz → Kurvenende</td>
+<td>FR-CAD-APX-013</td>
+</tr>
+<tr>
+<td><code>getNextSegment(isArc,…)</code>, <code>getNextLineSegment</code>, <code>getNextArcSegment</code></td>
+<td>typisierte Segmentausgabe</td>
+<td>FR-CAD-APX-014</td>
+</tr>
+<tr>
+<td>termination/failure codes 10630/10631</td>
+<td>Ende / kein Segment</td>
+<td>FR-CAD-APX-015</td>
+</tr>
+<tr>
+<td><code>te_paramCount</code> / <code>te_paramLength</code></td>
+<td>uniform im Parametergebiet</td>
+<td>FR-CAD-APX-016</td>
+</tr>
+<tr>
+<td><code>te_curveCount</code> / <code>te_curveLength</code></td>
+<td>uniform entlang Kurve (Bisektion)</td>
+<td>FR-CAD-APX-017</td>
+</tr>
+<tr>
+<td><code>te_adaptiv</code></td>
+<td>adaptiv an Kurvenkomplexität</td>
+<td>FR-CAD-APX-018</td>
+</tr>
+<tr>
+<td><code>getAlternativeNextPoint</code></td>
+<td>Intervallhalbierung bei Ablehnung</td>
+<td>FR-CAD-APX-019</td>
+</tr>
+<tr>
+<td><code>te_directLine</code></td>
+<td>Sehne durch 2 Punkte</td>
+<td>FR-CAD-APX-020</td>
+</tr>
+<tr>
+<td><code>te_leftSidedLine</code> / <code>te_rightSidedLine</code></td>
+<td>einseitige Linie</td>
+<td>FR-CAD-APX-021</td>
+</tr>
+<tr>
+<td><code>te_leastSquareLine</code></td>
+<td>Ausgleichsgerade (Least Squares)</td>
+<td>FR-CAD-APX-022</td>
+</tr>
+<tr>
+<td><code>te_directArc</code></td>
+<td>Bogen durch 3 Punkte</td>
+<td>FR-CAD-APX-023</td>
+</tr>
+<tr>
+<td><code>te_leftSidedArc</code> / <code>te_rightSidedArc</code></td>
+<td>einseitiger Bogen</td>
+<td>FR-CAD-APX-024</td>
+</tr>
+<tr>
+<td><code>Tc_ApproxSegmentBestOfTwo</code></td>
+<td>beste aus zwei Strategien</td>
+<td>FR-CAD-APX-025</td>
+</tr>
+<tr>
+<td><code>te_point</code> connection</td>
+<td>Punktstetigkeit (C0)</td>
+<td>FR-CAD-APX-026</td>
+</tr>
+<tr>
+<td><code>te_tangent</code> connection</td>
+<td>Tangentenstetigkeit (C0+C1)</td>
+<td>FR-CAD-APX-027</td>
+</tr>
+<tr>
+<td>force final endpoint at curve end</td>
+<td>letztes Segment endet im Kurvenendpunkt</td>
+<td>FR-CAD-APX-028</td>
+</tr>
+<tr>
+<td><code>te_maxDistance</code> / <code>te_maxDistanceOriented</code></td>
+<td>max. Abstand (Toleranz)</td>
+<td>FR-CAD-APX-029</td>
+</tr>
+<tr>
+<td><code>te_averageDistance</code> / <code>…Oriented</code></td>
+<td>durchschnittlicher Abstand</td>
+<td>FR-CAD-APX-030</td>
+</tr>
+<tr>
+<td><code>te_maxLength</code> / <code>te_minLength</code></td>
+<td>max./min. Segmentlänge</td>
+<td>FR-CAD-APX-031</td>
+</tr>
+<tr>
+<td><code>te_maxRadius</code></td>
+<td>max. Bogenradius</td>
+<td>FR-CAD-APX-032</td>
+</tr>
+<tr>
+<td><code>te_forceType</code> / <code>te_excludeType</code></td>
+<td>Segmenttyp erzwingen/ausschließen</td>
+<td>FR-CAD-APX-033</td>
+</tr>
+<tr>
+<td><code>Tc_ApproxEvalSumOfTwo</code> / <code>…Proxy</code>, bit flags</td>
+<td>Bewertungskomposition</td>
+<td>FR-CAD-APX-034</td>
+</tr>
+<tr>
+<td><code>getDistance</code> sign convention</td>
+<td>Abstands-Vorzeichen (links +/rechts −)</td>
+<td>FR-CAD-APX-035</td>
+</tr>
+<tr>
+<td><code>Tc_ApproxLineSegment</code></td>
+<td>approximierendes Liniensegment</td>
+<td>FR-CAD-APX-036</td>
+</tr>
+<tr>
+<td><code>Tc_ApproxArcSegment</code> (<code>calcArcData</code>)</td>
+<td>approximierendes Bogensegment</td>
+<td>FR-CAD-APX-037</td>
+</tr>
+</tbody>
+</table>
+<h3 id="part-b-fourier-contour-analysis-tc_fou">Part B — Fourier contour analysis (<code>tc_fou</code>)</h3>
+<table>
+<thead>
+<tr>
+<th>Class / function</th>
+<th>German / plain meaning</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>TcFourierBeschr</code> constructors / <code>berechneDich</code></td>
+<td>Fourierbeschreibung einer geschlossenen Kontur</td>
+<td>FR-CAD-APX-038</td>
+</tr>
+<tr>
+<td>Umlaufsinn normalisation (<code>berechneDich</code>)</td>
+<td>Umlaufsinn vereinheitlichen (CCLW)</td>
+<td>FR-CAD-APX-039</td>
+</tr>
+<tr>
+<td>rounding decimals / tolerance level</td>
+<td>Nachkommastellen / Toleranzstufe</td>
+<td>FR-CAD-APX-040</td>
+</tr>
+<tr>
+<td><code>f_bild_kompl_list</code> polygonisation</td>
+<td>Polygonisierung (Bögen @ 10°)</td>
+<td>FR-CAD-APX-041</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_co</code> / <code>f_rech_poly_ck</code></td>
+<td>Fourierkoeffizienten c0/ck</td>
+<td>FR-CAD-APX-042</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_fks</code> search + symmetry</td>
+<td>Koeffizientensuche / Symmetriegrad</td>
+<td>FR-CAD-APX-043</td>
+</tr>
+<tr>
+<td>Umlaufsinn from spectrum</td>
+<td>Umlaufsinn aus Spektrum (Index −1)</td>
+<td>FR-CAD-APX-044</td>
+</tr>
+<tr>
+<td><code>f_rech_kreis_fks_u_fds</code></td>
+<td>Kreis-Sonderfall (analytisch)</td>
+<td>FR-CAD-APX-045</td>
+</tr>
+<tr>
+<td>standard-type recognition (<code>typ</code>)</td>
+<td>Standard-Werkzeugtyp-Erkennung</td>
+<td>FR-CAD-APX-046</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_dk</code> / <code>f_rech_poly_fds</code></td>
+<td>Fourierdeskriptoren (Invarianten)</td>
+<td>FR-CAD-APX-047</td>
+</tr>
+<tr>
+<td><code>doCompare</code> / <code>compareFourierDeskriptorenSaetze</code></td>
+<td>Verwandtschaftsprüfung</td>
+<td>FR-CAD-APX-048</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_dphi</code></td>
+<td>Verwandtschaftswinkel (Drehwinkel)</td>
+<td>FR-CAD-APX-049</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_my</code></td>
+<td>Streckungsfaktor</td>
+<td>FR-CAD-APX-050</td>
+</tr>
+<tr>
+<td><code>f_rech_poly_delta</code> / <code>f_rech_poly_translation</code></td>
+<td>Translationsvektor</td>
+<td>FR-CAD-APX-051</td>
+</tr>
+<tr>
+<td><code>f_rech_verwandt_parameter</code> matrix assembly</td>
+<td>Verwandtschaftsmatrix</td>
+<td>FR-CAD-APX-052</td>
+</tr>
+<tr>
+<td><code>calcRelationship</code></td>
+<td>Verwandtschaftsparameter-API</td>
+<td>FR-CAD-APX-053</td>
+</tr>
+<tr>
+<td><code>doCompareSizeIdentity</code></td>
+<td>verwandt + gleich groß</td>
+<td>FR-CAD-APX-054</td>
+</tr>
+<tr>
+<td><code>doCompareLookIdentity</code></td>
+<td>verwandt + gleich groß + gleiche Lage</td>
+<td>FR-CAD-APX-055</td>
+</tr>
+<tr>
+<td><code>getSchwerpunkt</code></td>
+<td>Schwerpunkt (c0)</td>
+<td>FR-CAD-APX-056</td>
+</tr>
+<tr>
+<td><code>getSymmetrie</code> / <code>getSymmetrieAngle</code> / <code>getUmlaufsinn</code></td>
+<td>Symmetriegrad/-winkel, Umlaufsinn</td>
+<td>FR-CAD-APX-057</td>
+</tr>
+<tr>
+<td><code>f_ident_k_zahlen</code> tolerance stages</td>
+<td>Toleranzstufen (10<sup>-4 · 10</sup>n)</td>
+<td>FR-CAD-APX-058</td>
+</tr>
+<tr>
+<td>consumer integration</td>
+<td>Einbindung (Vergleich/Finder/Thin/IGES)</td>
+<td>FR-CAD-APX-059</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="part-a-curve-approximation-tc_aprox-1">Part A — Curve approximation (<code>tc_aprox</code>)</h3>
+<h3 id="fr-cad-apx-001-abstract-parametric-curve-model">FR-CAD-APX-001 — Abstract parametric-curve model</h3>
+<ul>
+<li><strong>Requirement:</strong> The approximation engine SHALL operate on any curve exposing the
+<code>Tc_ParametricCurve</code> interface, which SHALL provide: <code>getParamInterval(tmin,tmax)</code>,
+<code>getPoint(t,x,y)</code>, <code>getFirstDerivative(t,x,y)</code>, <code>getSecondDerivative(t,x,y)</code> and
+<code>getLength(tStart,tEnd,length)</code>. The engine SHALL NOT depend on the concrete curve subtype.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Parameter <code>t</code> is a scalar in <code>[tmin,tmax]</code>; points and
+derivatives are 2D <code>(x,y)</code>. Out-of-domain <code>t</code> SHALL yield <code>10603</code>; incompletely defined curve
+SHALL yield <code>10604</code>; undefined derivative SHALL yield <code>10608</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Decoupling the approximator from spline/polynomial/arc specifics is the core design
+contract; every strategy is written against this interface only.</li>
+<li><strong>Source:</strong> <code>tc_interface/tc_aprox/paracurv.h:12-32</code>; <code>tc_aprox/tc_aprox.cpp:45-73</code>.</li>
+<li><strong>Verification:</strong> Inspection (interface) + Test (drive engine with each concrete curve subclass).</li>
+</ul>
+<h3 id="fr-cad-apx-002-integral-b-spline-point-evaluation-de-boor">FR-CAD-APX-002 — Integral B-spline point evaluation (de Boor)</h3>
+<ul>
+<li><strong>Requirement:</strong> For an integral B-spline of order <code>k</code> with <code>n+1</code> control points and knot vector
+of length <code>n+k+1</code>, <code>Tc_BSpline::getPoint(t)</code> SHALL evaluate the curve point using the de Boor
+recurrence over the support interval containing <code>t</code>, after locating that interval via
+<code>getInterval</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Zero-division in the recurrence weight SHALL be guarded
+(<code>fakt2 == 0 ⇒ fakt = 0</code>, <code>bspline.cpp:617-624</code>). <code>t</code> outside <code>[param[iStart],param[iEnd]]</code> ⇒
+<code>10603</code>; not fully defined ⇒ <code>10604</code>; interval not found ⇒ <code>10605</code>; illegal order ⇒ <code>10606</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Point sampling is the primitive on which every deviation measurement and segment
+fit ultimately depends.</li>
+<li><strong>Source:</strong> <code>tc_aprox/bspline.cpp:320-343</code> (<code>getPoint</code>), <code>:555-574</code> (<code>getInterval</code>),
+<code>:599-631</code> (<code>calcBSplineValue</code>).</li>
+<li><strong>Verification:</strong> Test (compare against reference NURBS evaluation at sampled parameters).</li>
+</ul>
+<h3 id="fr-cad-apx-003-rational-b-spline-nurbs-evaluation-with-weights">FR-CAD-APX-003 — Rational B-spline (NURBS) evaluation with weights</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>Tc_BSplineRational</code> SHALL extend the integral B-spline with a per-control-point
+weight array and SHALL evaluate points in homogeneous coordinates, dividing the weighted x/y sums
+by the weighted weight sum to obtain non-homogeneous <code>(x,y)</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Division by the homogeneous weight SHALL be performed only when
+<code>|w| &gt; 1e-5</code>; otherwise the homogeneous values SHALL be retained unscaled. Weight index outside
+<code>0..n</code> ⇒ <code>10600</code>; undefined weight read ⇒ <code>10607</code>. <code>isDefined()</code> SHALL require all knots, all
+knot-vector params and all weights set.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Real CAD splines are rational; weights change both point positions and derivatives.</li>
+<li><strong>Source:</strong> <code>tc_aprox/bspliner.cpp:116-162</code> (<code>getPoint</code>), <code>:407-414</code> (<code>isDefined</code>),
+<code>:55-66</code> (<code>setWeight</code>).</li>
+<li><strong>Verification:</strong> Test (rational vs. integral evaluation of a circle-arc NURBS).</li>
+</ul>
+<h3 id="fr-cad-apx-004-openclosed-b-splines-knot-wrap-uniform-knot-vector-parameter-restriction">FR-CAD-APX-004 — Open/closed B-splines, knot wrap, uniform knot vector, parameter restriction</h3>
+<ul>
+<li><strong>Requirement:</strong> A B-spline SHALL support an <code>open</code> flag selecting support bounds
+(open: <code>iStart=k-1, iEnd=n+1</code>; else <code>iStart=0, iEnd=n+1</code>). For closed splines, control-point and
+parameter indices SHALL wrap via <code>calcKnotIndex</code>/<code>calcParamDiff</code>. <code>setUniformParam()</code> SHALL fill a
+clamped uniform knot vector for open splines and a plain integer sequence otherwise.
+<code>setParamInterval(tmin,tmax)</code> SHALL further restrict the reported parameter domain to a
+sub-interval without altering control data.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>getParamInterval</code> SHALL clamp the restricted <code>[tMin,tMax]</code> into
+the knot-defined domain when <code>att_restricted</code> is set.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Closed contours and clamped-endpoint behaviour are both required by CAD geometry;
+restriction lets a caller approximate only part of a spline.</li>
+<li><strong>Source:</strong> <code>tc_aprox/bspline.cpp:14-51</code>, <code>:144-175</code> (<code>setUniformParam</code>), <code>:252-298</code>
+(<code>getParamInterval</code>/<code>setParamInterval</code>), <code>:802-882</code> (wrap helpers).</li>
+<li><strong>Verification:</strong> Test (closed spline continuity across wrap; restricted-domain sampling).</li>
+</ul>
+<h3 id="fr-cad-apx-005-b-spline-first-and-second-derivatives">FR-CAD-APX-005 — B-spline first and second derivatives</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>getFirstDerivative</code> SHALL evaluate as an order-<code>(k-1)</code> B-spline over the divided
+differences of the control polygon (scaled by <code>k-1</code>); <code>getSecondDerivative</code> SHALL evaluate as an
+order-<code>(k-2)</code> B-spline over second divided differences (scaled by <code>(k-1)(k-2)</code>). For rational
+splines the homogeneous weight derivative SHALL be applied identically.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> First derivative requires <code>k ≥ 2</code>, second requires <code>k ≥ 3</code>,
+else <code>10608</code>.</li>
+<li><strong>Priority:</strong> Conditional (needed only by tangent-continuity and one-sided strategies)</li>
+<li><strong>Rationale:</strong> Tangent continuity (FR-CAD-APX-027) and orientation checks need curve tangents.</li>
+<li><strong>Source:</strong> <code>tc_aprox/bspline.cpp:368-465</code>; <code>tc_aprox/bspliner.cpp:187-352</code>.</li>
+<li><strong>Verification:</strong> Analysis + Test (finite-difference cross-check of derivatives).</li>
+</ul>
+<h3 id="fr-cad-apx-006-curve-arc-length-by-adaptive-linear-interpolation">FR-CAD-APX-006 — Curve arc-length by adaptive linear interpolation</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>getLength(tStart,tEnd,length)</code> SHALL approximate arc length by summing chord
+lengths of points sampled at a parameter step derived from the straight-line endpoint distance.
+The B-spline implementation SHALL use at least 5 subdivision steps (so closed curves whose
+endpoints coincide do not report length 0) and SHALL cap the chord-distance estimate at 10000 to
+guard against astronomically large splines.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>tStart&lt;tmin</code>/<code>tEnd&gt;tmax</code> ⇒ <code>10603</code>; <code>tStart&gt;tEnd</code> ⇒ <code>10609</code>.
+Result is an approximation, not exact arc length.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Length underlies the <code>curveLength</code>/<code>curveCount</code> parameter strategies and residual
+checks; the &quot;≥5 steps / cap 10000&quot; guards were added for degenerate closed and huge curves.</li>
+<li><strong>Source:</strong> <code>tc_aprox/bspline.cpp:488-533</code>; <code>tc_aprox/polynom.cpp:287-325</code>.</li>
+<li><strong>Verification:</strong> Test (length of known circle/segment within a few percent).</li>
+</ul>
+<h3 id="fr-cad-apx-007-polynomial-curve-of-arbitrary-degree-horner">FR-CAD-APX-007 — Polynomial curve of arbitrary degree (Horner)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>Tc_Polynom(order n)</code> SHALL represent a 2D polynomial with <code>n+1</code> <code>(cx,cy)</code>
+coefficients and SHALL evaluate points and derivatives via Horner's scheme. <code>getPoint</code> SHALL
+require all coefficients defined (<code>10604</code>) and <code>t ∈ [tmin,tmax]</code> (<code>10603</code>).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> First derivative requires <code>n ≥ 1</code>, second requires <code>n ≥ 2</code>, else
+<code>10608</code>. Coefficient index outside <code>0..n</code> ⇒ <code>10610</code>; undefined coefficient read ⇒ <code>10611</code>.</li>
+<li><strong>Priority:</strong> Optional (supported curve family, less used than splines)</li>
+<li><strong>Rationale:</strong> Provides a lightweight parametric curve family reusing the same approximation
+engine.</li>
+<li><strong>Source:</strong> <code>tc_aprox/polynom.cpp:169-265</code>; <code>tc_aprox/polynom.h</code>.</li>
+<li><strong>Verification:</strong> Test (polynomial point/derivative vs. closed-form).</li>
+</ul>
+<h3 id="fr-cad-apx-008-parametric-circular-arc-curve">FR-CAD-APX-008 — Parametric circular-arc curve</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcParametricArc</code> SHALL represent an arc parametrised by angle, defined by start
+point, centre point, end point and a direction (CLW/CCLW). <code>getParamInterval</code> SHALL return start
+and end angles via <code>atan2</code> (normalised to <code>[0,2π)</code>, end raised by <code>2π</code> when start &gt; end); for a
+clockwise arc the start/end angles SHALL be swapped, and <code>getPoint</code> SHALL invert the parameter
+(<code>t = minAngle + maxAngle − t</code>) so the reported parameter always increases. <code>getLength</code> SHALL
+return <code>angle × radius</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Incomplete definition (start, centre, end and direction not all
+set) ⇒ <code>10604</code>. Derivatives are intentionally not implemented (return <code>1</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Lets arcs be handled through the same <code>Tc_ParametricCurve</code> contract as splines.</li>
+<li><strong>Source:</strong> <code>tc_aprox/parametricarc.cpp:84-260</code>; <code>tc_interface/tc_aprox/parametricarc.h</code>.</li>
+<li><strong>Verification:</strong> Test (arc point/length vs. analytic).</li>
+</ul>
+<h3 id="fr-cad-apx-009-parametric-arc-definition-and-radius-consistency-validation">FR-CAD-APX-009 — Parametric-arc definition and radius-consistency validation</h3>
+<ul>
+<li><strong>Requirement:</strong> When start/centre/end are set incrementally, <code>TcParametricArc</code> SHALL verify that
+the start-to-centre and end-to-centre radii agree within <code>S_Tolerance = 0.0001</code>; a mismatch SHALL
+return <code>10644</code> and reject the offending point. When all four defining items are set, the internal
+min/max angles SHALL be (re)computed.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>S_Tolerance = 1e-4</code>; <code>allSet()</code> bitmask must equal 15.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Prevents an ill-formed arc (unequal radii) from silently producing wrong geometry.</li>
+<li><strong>Source:</strong> <code>tc_aprox/parametricarc.cpp:30-35, 272-469</code>.</li>
+<li><strong>Verification:</strong> Test (inconsistent radius rejected with 10644).</li>
+</ul>
+<h3 id="fr-cad-apx-010-strategy-based-approximation-architecture">FR-CAD-APX-010 — Strategy-based approximation architecture</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>Tc_Approximator</code> SHALL own exactly one <em>parameter</em> strategy, one <em>segment</em>
+strategy (which may itself be a composite of alternatives), one <em>connection</em> strategy and one
+<em>evaluation</em> strategy, and SHALL act as the factory that instantiates each from its enumeration.
+The evaluation strategy SHALL be composed as the sum of (a) a user proxy holding caller-added
+evaluations and (b) a slot for a temporary internal evaluation (e.g. &quot;force line&quot;).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Factory failures return <code>10624</code> (parameter), <code>10625</code> (segment),
+<code>10626</code> (connection), <code>10627</code> (evaluation).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The pluggable-strategy decomposition is the defining design of the module and the
+contract that all callers configure.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:45-98, 122-654</code>; <code>tc_interface/tc_aprox/tc_aprox.h:46-170</code>.</li>
+<li><strong>Verification:</strong> Inspection + Test (each factory enum instantiates the expected strategy).</li>
+</ul>
+<h3 id="fr-cad-apx-011-segment-fitting-retry-loop-and-convergence">FR-CAD-APX-011 — Segment-fitting retry loop and convergence</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>getNextSegment</code> SHALL, for the current parameter interval <code>[tStart,tEnd]</code>,
+iterate up to <code>att_precision = 20</code> attempts to obtain an acceptable segment. On each attempt it
+SHALL reset the segment strategy to the interval, apply the connection strategy to the previous
+segment, compute the candidate segment and evaluate it. If the evaluation flags <em>only</em>
+&quot;too short&quot;, the interval SHALL be extended (<code>getNextPoint</code> from <code>tEnd</code>); otherwise a smaller
+interval SHALL be tried (<code>getAlternativeNextPoint</code>). The loop SHALL stop when the evaluation
+returns <code>te_approxEvalOk</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Warnings <code>10613</code>/<code>10614</code> are ignored inside the loop. If no
+segment is accepted within 20 attempts the function SHALL return <code>10631</code>. On success <code>tStart</code> is
+advanced to <code>tEnd</code> and a clone of the accepted segment is stored as the &quot;last segment&quot;.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This bounded adaptive loop is the actual convergence mechanism of the approximator;
+the 20-attempt cap bounds runtime on pathological curves.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:683-823</code> (loop at <code>:724-804</code>); <code>att_precision</code> at <code>:48</code>.</li>
+<li><strong>Verification:</strong> Test (curve requiring subdivision converges; adversarial curve hits 10631).</li>
+</ul>
+<h3 id="fr-cad-apx-012-default-strategy-configuration">FR-CAD-APX-012 — Default strategy configuration</h3>
+<ul>
+<li><strong>Requirement:</strong> If the caller has not configured strategies before the first <code>getNextSegment</code>,
+<code>initNextSegment</code> SHALL install defaults: parameter strategy = <code>te_paramCount</code> with count 10;
+segment strategies = <code>te_directLine</code> and <code>te_directArc</code> (combined best-of-two); connection =
+<code>te_point</code>; evaluation = <code>te_maxDistance</code> (accept-all scoring with a very large default distance).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default distance for accept-all scoring = 10000 units
+(<code>addEvaluationStrategy</code>, <code>:360</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Guarantees the engine is usable out-of-the-box and defines documented default
+behaviour for callers that do not tune it.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:1064-1097</code> (<code>initNextSegment</code>), <code>:348-400</code>.</li>
+<li><strong>Verification:</strong> Test (unconfigured approximator produces line+arc output).</li>
+</ul>
+<h3 id="fr-cad-apx-013-residual-interval-too-small-merge">FR-CAD-APX-013 — Residual-interval &quot;too small&quot; merge</h3>
+<ul>
+<li><strong>Requirement:</strong> When the proposed next interval end <code>tEnd</code> lies before the curve end <code>tMax</code>, the
+engine SHALL test the straight chord from <code>tEnd</code> to <code>tMax</code>; if the evaluation flags that remainder
+as &quot;too short&quot;, <code>tEnd</code> SHALL be set to <code>tMax</code> so no micro-segment is left dangling. This test
+SHALL be applied both on initial interval selection and after each &quot;too short&quot; extension.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> &quot;Too short&quot; is defined by the active length evaluation
+(FR-CAD-APX-031) via the user-supplied minimum length.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Prevents an unmanufacturably short final segment; folds the tail into the previous
+segment.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:707-719, 779-791</code>.</li>
+<li><strong>Verification:</strong> Test (curve whose remainder is below min-length ends flush at tMax).</li>
+</ul>
+<h3 id="fr-cad-apx-014-typed-segment-output-accessors">FR-CAD-APX-014 — Typed segment output accessors</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL expose the accepted segment in three forms:
+(a) <code>getNextSegment(int&amp;error)</code> returning the polymorphic <code>Tc_ApproxSegment*</code>;
+(b) <code>getNextSegment(isArc, xFirst,yFirst, xLast,yLast, xMiddle,yMiddle, [xCenter,yCenter])</code>
+returning line/arc geometry with <code>isArc</code> flag and optional arc centre;
+(c) <code>getNextLineSegment(...)</code> / <code>getNextArcSegment(...)</code> which force the segment to the requested
+type via a temporary <code>te_forceType</code> evaluation and return <code>10629</code> if that type cannot be produced.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> For a line, middle/centre are 0. <code>getNextArcSegment</code> SHALL clear
+its temporary force-type evaluation after use.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Callers such as IGES/DXF writers need explicit line-vs-arc records with endpoints,
+a mid-point and (for arcs) a centre.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:826-1044</code>.</li>
+<li><strong>Verification:</strong> Test (each accessor returns geometrically correct primitives).</li>
+</ul>
+<h3 id="fr-cad-apx-015-termination-and-failure-signalling">FR-CAD-APX-015 — Termination and failure signalling</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>getNextSegment</code> SHALL return <code>10630</code> when <code>tStart ≥ tMax</code> (approximation
+complete, no further segments) and <code>10631</code> when a segment for the current interval cannot be
+determined. Callers iterate until <code>10630</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>10630</code> is the normal loop-terminator; <code>10631</code> is an error.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Defines the iteration contract for consumers.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:697, 807-809</code>; consumer loops in
+<code>tc_iges/ig_ausg.cpp:1228</code>, <code>tc_dbase/.../TcDbaseThinCommand.cpp:1018</code>.</li>
+<li><strong>Verification:</strong> Test (iteration stops on 10630; 10631 surfaces to caller).</li>
+</ul>
+<h3 id="fr-cad-apx-016-uniform-in-parameter-interval-strategy-te_paramcount-te_paramlength">FR-CAD-APX-016 — Uniform-in-parameter interval strategy (<code>te_paramCount</code> / <code>te_paramLength</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL provide a parameter strategy that advances by a fixed step in
+parameter space. <code>te_paramLength</code> SHALL use the caller-given step directly; <code>te_paramCount</code> SHALL
+derive the step as <code>(tMax−tMin)/count</code>. <code>getNextPoint</code> SHALL clamp to the domain end and return
+warning <code>10613</code> when the step would exceed it.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default count when unspecified = 10.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Simplest deterministic subdivision; cheap and predictable.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:135-205</code>; <code>tc_aprox/paramstg.cpp:38-145</code>.</li>
+<li><strong>Verification:</strong> Test (n equal parameter steps produced).</li>
+</ul>
+<h3 id="fr-cad-apx-017-uniform-along-curve-interval-strategy-te_curvecount-te_curvelength">FR-CAD-APX-017 — Uniform-along-curve interval strategy (<code>te_curveCount</code> / <code>te_curveLength</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL provide a parameter strategy that advances a fixed arc-length
+step along the curve. <code>te_curveLength</code> SHALL use the given length; <code>te_curveCount</code> SHALL derive it
+as <code>totalLength/count</code>. <code>getNextPoint</code> SHALL locate the parameter yielding that arc length by
+interval bisection, iterating at most 25 times to a length tolerance of 0.01 units; if the
+remaining curve is shorter than one step it SHALL clamp to the end and return <code>10613</code>, and if the
+bisection does not converge it SHALL return warning <code>10614</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Bisection tolerance 0.01; max 25 iterations.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Produces geometrically (not parametrically) even segmentation, important where the
+parameterisation is non-uniform.</li>
+<li><strong>Source:</strong> <code>tc_aprox/paramstg.cpp:203-240</code>; <code>tc_aprox/tc_aprox.cpp:186-196</code>.</li>
+<li><strong>Verification:</strong> Test (segment chord lengths approximately equal; convergence within 25 iters).</li>
+</ul>
+<h3 id="fr-cad-apx-018-adaptive-interval-strategy-te_adaptiv">FR-CAD-APX-018 — Adaptive interval strategy (<code>te_adaptiv</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The adaptive parameter strategy SHALL initially propose the entire remaining
+interval (up to <code>tMax</code>) and, on each rejection, propose a nearer point via bisection
+(<code>getAlternativeNextPoint</code>), so the interval shrinks until a segment is accepted.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>getNextPoint</code> always returns <code>tMax</code> as the first proposal.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Yields the fewest segments meeting tolerance (used by IGES export and the thin
+command); complexity adapts to local curvature.</li>
+<li><strong>Source:</strong> <code>tc_aprox/paramstg.cpp:316-381</code>; enum <code>tc_interface/tc_aprox/tc_aprox.h:63</code>.</li>
+<li><strong>Verification:</strong> Test (straight regions → few long segments, curved regions → many short ones).</li>
+</ul>
+<h3 id="fr-cad-apx-019-alternative-point-bisection-on-rejection">FR-CAD-APX-019 — Alternative-point bisection on rejection</h3>
+<ul>
+<li><strong>Requirement:</strong> For every parameter strategy, <code>getAlternativeNextPoint(tStart,tNew)</code> SHALL return
+the midpoint <code>(tStart+tNew)/2</code>, halving the interval when the previous proposal was rejected.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Common, monotone shrink guaranteeing progress toward an acceptable interval.</li>
+<li><strong>Source:</strong> <code>tc_aprox/paramstg.cpp:114-119, 263-268, 376-381</code>.</li>
+<li><strong>Verification:</strong> Test (rejected proposal halves interval).</li>
+</ul>
+<h3 id="fr-cad-apx-020-direct-line-segment-strategy-te_directline">FR-CAD-APX-020 — Direct-line segment strategy (<code>te_directLine</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The direct-line strategy SHALL approximate the interval by the straight segment
+joining the interval's start and end curve points (or the connection-supplied points), i.e. a
+chord / linear interpolation. It SHALL NOT accept tangent constraints.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The baseline linear approximation; cheapest and always available.</li>
+<li><strong>Source:</strong> <code>tc_aprox/segmstg.h:126-154</code>; <code>tc_aprox/tc_aprox.cpp:235-236</code>.</li>
+<li><strong>Verification:</strong> Test (chord endpoints equal curve endpoints of the interval).</li>
+</ul>
+<h3 id="fr-cad-apx-021-one-sided-line-strategies-te_leftsidedline-te_rightsidedline">FR-CAD-APX-021 — One-sided line strategies (<code>te_leftSidedLine</code> / <code>te_rightSidedLine</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The one-sided line strategies SHALL choose a line that keeps the curve entirely on
+one side (left or right of the line's travel direction). The strategy SHALL vary the free line
+endpoint(s) — start, end or both — and iterate up to <code>att_precision = 5</code> orientation-correction
+passes; the side test SHALL sample the curve across the interval and detect any point on the wrong
+side.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>att_precision = 5</code>; orientation encoded by the sign of the
+signed distance (FR-CAD-APX-035).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Guarantees a conservative (single-sided) approximation, e.g. so an offset/cut never
+crosses the true curve.</li>
+<li><strong>Source:</strong> <code>tc_aprox/segmstg.h:161-280</code>; <code>tc_aprox/segmstg.cpp:462, 631-670, 879-</code>
+(<code>checkOrientation</code>).</li>
+<li><strong>Verification:</strong> Test (all curve samples lie on the required side).</li>
+</ul>
+<h3 id="fr-cad-apx-022-least-squares-line-strategy-te_leastsquareline">FR-CAD-APX-022 — Least-squares line strategy (<code>te_leastSquareLine</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The least-squares line strategy SHALL fit a line by Gauss least squares: it SHALL
+first determine a point on the line (a supplied point, else the mean of sample points), then fit a
+direction, then project the line endpoints onto the interval span. It SHALL support fixing the
+start and/or end point and iterate to <code>att_precision = 20</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>att_precision = 20</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Minimises mean-square deviation where a balanced (not one-sided) fit is preferred.</li>
+<li><strong>Source:</strong> <code>tc_aprox/segmstg.h:287-345</code>; <code>tc_aprox/segmstg.cpp:1057</code>.</li>
+<li><strong>Verification:</strong> Test (fitted line minimises squared residuals vs. brute-force fit).</li>
+</ul>
+<h3 id="fr-cad-apx-023-direct-arc-segment-strategy-te_directarc">FR-CAD-APX-023 — Direct-arc segment strategy (<code>te_directArc</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The direct-arc strategy SHALL approximate the interval by the circular arc
+through the interval start point, the interval end point (or connection-supplied points) and the
+curve's mid-interval point, i.e. a 3-point arc interpolation. It SHALL NOT accept tangent
+constraints.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The baseline arc approximation; lets curved regions be captured by a single arc
+rather than many lines.</li>
+<li><strong>Source:</strong> <code>tc_aprox/segmstg.h:403-432</code>; <code>tc_aprox/tc_aprox.cpp:247-248</code>.</li>
+<li><strong>Verification:</strong> Test (arc passes through the three defining curve points).</li>
+</ul>
+<h3 id="fr-cad-apx-024-one-sided-arc-strategies-te_leftsidedarc-te_rightsidedarc">FR-CAD-APX-024 — One-sided arc strategies (<code>te_leftSidedArc</code> / <code>te_rightSidedArc</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The one-sided arc strategies SHALL choose an arc that keeps the curve on one side,
+varying the arc's centre along a computed variation line to adjust the radius, and iterate up to
+<code>att_precision = 5</code> orientation-correction passes.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>att_precision = 5</code>; a near-zero orientation is nudged over up to
+100 inner iterations (<code>segmstg.cpp:2180</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Conservative single-sided arc fit (analogue of FR-CAD-APX-021 for arcs).</li>
+<li><strong>Source:</strong> <code>tc_aprox/segmstg.h:439-555</code>; <code>tc_aprox/segmstg.cpp:1718, 2080-2081</code>.</li>
+<li><strong>Verification:</strong> Test (all curve samples lie on the required side of the arc).</li>
+</ul>
+<h3 id="fr-cad-apx-025-best-of-two-segment-composition">FR-CAD-APX-025 — Best-of-two segment composition</h3>
+<ul>
+<li><strong>Requirement:</strong> When more than one segment strategy is added, the engine SHALL wrap them in
+<code>Tc_ApproxSegmentBestOfTwo</code>, compute both candidate segments, evaluate each with the active
+evaluation strategy and return the better-scoring candidate. Adding a third strategy SHALL nest
+another best-of-two so all added strategies compete.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> &quot;Better&quot; = lower evaluation score (FR-CAD-APX-029/030); a rejected
+candidate loses.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This is how line-vs-arc selection is made per interval (the default pairs directLine
+and directArc); segment-type selection is emergent from evaluation scoring, not hard-coded.</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:260-286</code>; <code>tc_aprox/segmstg.h:584-635</code>.</li>
+<li><strong>Verification:</strong> Test (arc chosen on curved interval, line on straight interval).</li>
+</ul>
+<h3 id="fr-cad-apx-026-point-continuity-connection-te_point">FR-CAD-APX-026 — Point-continuity connection (<code>te_point</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The point connection strategy SHALL set the new segment's start point equal to the
+previous segment's end point (or, for the first segment, to the curve start point), enforcing C0
+continuity of the segment chain.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A manufacturable contour must be gap-free.</li>
+<li><strong>Source:</strong> <code>tc_aprox/conecstg.h:82-104</code>; <code>tc_aprox/tc_aprox.cpp:319, 734-742</code>.</li>
+<li><strong>Verification:</strong> Test (adjacent segment endpoints coincide).</li>
+</ul>
+<h3 id="fr-cad-apx-027-tangent-continuity-connection-te_tangent">FR-CAD-APX-027 — Tangent-continuity connection (<code>te_tangent</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The tangent connection strategy SHALL enforce both point and tangent continuity
+(C0 + C1) between adjacent segments, transferring the previous segment's end direction as the new
+segment's start tangent.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Smooth (tangent-continuous) output where the consumer needs it; requires curve
+derivatives (FR-CAD-APX-005).</li>
+<li><strong>Source:</strong> <code>tc_aprox/conecstg.h:111-142</code>; <code>tc_aprox/tc_aprox.cpp:322</code>.</li>
+<li><strong>Verification:</strong> Test (tangent directions match at joins within tolerance).</li>
+</ul>
+<h3 id="fr-cad-apx-028-force-final-segment-to-end-at-curve-end">FR-CAD-APX-028 — Force final segment to end at curve end</h3>
+<ul>
+<li><strong>Requirement:</strong> When the current interval reaches <code>tMax</code>, the engine SHALL additionally constrain
+the segment so that it terminates exactly at the curve's end point (connect &quot;not at beginning&quot;).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Guarantees the approximation chain closes on the true curve endpoint (and closes a
+closed contour).</li>
+<li><strong>Source:</strong> <code>tc_aprox/tc_aprox.cpp:744-748</code>.</li>
+<li><strong>Verification:</strong> Test (last segment endpoint equals curve endpoint).</li>
+</ul>
+<h3 id="fr-cad-apx-029-max-distance-evaluation-and-deviation-tolerance-te_maxdistance-te_maxdistanceoriented">FR-CAD-APX-029 — Max-distance evaluation and deviation tolerance (<code>te_maxDistance</code> / <code>te_maxDistanceOriented</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The max-distance evaluation SHALL accept a candidate segment only if the sampled
+deviation of the curve from the segment does not exceed the caller-given tolerance. It SHALL sample
+the interval at <code>att_precision = 10</code> steps plus the exact endpoint, taking the signed segment
+distance at each. The oriented variant SHALL enforce a separate left and right tolerance
+(<code>max</code> positive-side vs <code>min</code> negative-side); the unoriented variant SHALL use one tolerance both
+sides. To improve accuracy the sampling step SHALL be reduced to at most <code>10 × tolerance</code> when the
+tolerance is meaningful (&gt; 1e-4). The score SHALL be the maximum absolute deviation (smaller =
+better); exceeding tolerance SHALL flag <code>te_approxEvalToFar</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>att_precision = 10</code>; step cap <code>10 × maxDistance</code>; accept-all
+default distance 10000; tolerance units = drawing units.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This is the deviation-tolerance contract of the whole engine — the guarantee that
+the line/arc chain stays within the requested band of the curve.</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.cpp:217-342</code>; <code>tc_aprox/evalstg.h:126-192</code>.</li>
+<li><strong>Verification:</strong> Test (max sampled deviation ≤ tolerance for accepted segments; oriented left/right
+respected).</li>
+</ul>
+<h3 id="fr-cad-apx-030-average-distance-evaluation-te_averagedistance-te_averagedistanceoriented">FR-CAD-APX-030 — Average-distance evaluation (<code>te_averageDistance</code> / <code>te_averageDistanceOriented</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The average-distance evaluation SHALL accept a candidate only if the accumulated
+left/right sampled distances do not exceed their tolerances, sampling at <code>att_precision = 10</code>
+steps plus the exact endpoint, and SHALL score by the accumulated deviation. The oriented variant
+SHALL track left (positive) and right (negative) sums separately.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>att_precision = 10</code>; step cap <code>10 × tolerance</code> (as
+FR-CAD-APX-029).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Allows an aggregate rather than worst-case tolerance where mean fidelity matters.</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.cpp:391-537</code>; <code>tc_aprox/evalstg.h:199-267</code>.</li>
+<li><strong>Verification:</strong> Test (accepted iff summed deviation within tolerance).</li>
+</ul>
+<h3 id="fr-cad-apx-031-length-evaluations-te_maxlength-te_minlength">FR-CAD-APX-031 — Length evaluations (<code>te_maxLength</code> / <code>te_minLength</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The length evaluations SHALL flag a candidate <code>te_approxEvalToLong</code> when its
+length exceeds the given maximum, or <code>te_approxEvalToShort</code> when its length is below the given
+minimum, and SHALL otherwise accept. The &quot;too short&quot; flag SHALL drive interval extension in the
+fitting loop (FR-CAD-APX-011) and the residual merge (FR-CAD-APX-013).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Length in drawing units; both bounds are caller-supplied.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Bounds segment granularity — avoids both unmanufacturably short and overly long
+primitives; IGES export and the thin command set a <code>te_minLength</code>.</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.cpp:675-778</code>; <code>tc_aprox/evalstg.h:274-337</code>;
+consumer <code>tc_iges/ig_ausg.cpp:1220</code>, <code>TcDbaseThinCommand.cpp:1143</code>.</li>
+<li><strong>Verification:</strong> Test (over-long/under-short segments flagged correctly).</li>
+</ul>
+<h3 id="fr-cad-apx-032-maximum-arc-radius-evaluation-te_maxradius">FR-CAD-APX-032 — Maximum-arc-radius evaluation (<code>te_maxRadius</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The max-radius evaluation SHALL reject an arc candidate whose radius exceeds the
+given maximum (flag <code>te_approxEvalToBig</code>), so near-straight regions become lines rather than
+huge-radius arcs. It SHALL not constrain line candidates.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Radius limit in drawing units.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Prevents numerically unstable, effectively-straight large-radius arcs (used by the
+thin command).</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.h:427-457</code>; <code>tc_aprox/tc_aprox.cpp:456</code>;
+consumer <code>TcDbaseThinCommand.cpp:1150</code>.</li>
+<li><strong>Verification:</strong> Test (arc above radius limit rejected in favour of a line).</li>
+</ul>
+<h3 id="fr-cad-apx-033-segment-type-constraint-evaluations-te_forcetype-te_excludetype">FR-CAD-APX-033 — Segment-type constraint evaluations (<code>te_forceType</code> / <code>te_excludeType</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> The force-type evaluation SHALL accept only segments of a given type
+(line or arc), flagging others <code>te_approxEvalWrongType</code>; the exclude-type evaluation SHALL accept
+everything except the given type. These SHALL be usable both as caller-added constraints and as
+the internal temporary constraint used by <code>getNextLineSegment</code>/<code>getNextArcSegment</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Lets a consumer request a lines-only (or arcs-only) approximation.</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.h:60-123</code>; <code>tc_aprox/evalstg.cpp:120-194</code>;
+<code>tc_aprox/tc_aprox.cpp:558-598, 940, 1015</code>.</li>
+<li><strong>Verification:</strong> Test (forcing lines yields no arcs and vice versa).</li>
+</ul>
+<h3 id="fr-cad-apx-034-evaluation-composition-sum-of-two-proxy-bit-flags">FR-CAD-APX-034 — Evaluation composition (sum-of-two, proxy, bit flags)</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL combine multiple evaluation strategies by summing their scores
+and OR-ing their status bit-flags (<code>te_approxEvalOk=0</code>, <code>WrongType=1</code>, <code>ToFar=2</code>, <code>ToShort=4</code>,
+<code>ToLong=8</code>, <code>ToBig=16</code>). Caller evaluations SHALL be held behind a proxy so that adding one does
+not delete previously added ones; a segment SHALL be accepted only when the combined status is
+exactly <code>te_approxEvalOk</code> (0).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Enables stacking tolerance + length + radius + type constraints simultaneously,
+which every real consumer does.</li>
+<li><strong>Source:</strong> <code>tc_aprox/evalstg.cpp:850-882</code>; <code>tc_aprox/evalstg.h:340-424</code>;
+<code>tc_aprox/tc_aprox.cpp:617-654, 765-766</code>.</li>
+<li><strong>Verification:</strong> Test (a segment failing any one constraint is rejected; scores add).</li>
+</ul>
+<h3 id="fr-cad-apx-035-signed-point-to-segment-distance-convention">FR-CAD-APX-035 — Signed point-to-segment distance convention</h3>
+<ul>
+<li><strong>Requirement:</strong> Both <code>Tc_ApproxLineSegment::getDistance</code> and <code>Tc_ApproxArcSegment::getDistance</code>
+SHALL return a signed distance that is positive when the point lies left of the segment's travel
+direction and negative when it lies right. Within the segment span the perpendicular (normal)
+distance SHALL be used; outside the span the Euclidean distance to the nearer endpoint SHALL be
+used, carrying the orientation sign. An undefined segment SHALL return <code>10612</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Sign is set negative when the normal distance is <code>&lt; 0.0001</code>
+(right side); arc uses <code>att_clockwise</code> to orient the normal distance.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The oriented (left/right) tolerance evaluations depend entirely on this sign
+convention.</li>
+<li><strong>Source:</strong> <code>tc_aprox/linesegm.cpp:77-113</code>; <code>tc_aprox/arcsegm.cpp:89-133, 1200</code>.</li>
+<li><strong>Verification:</strong> Test (points left/right of a directed segment produce +/− distances).</li>
+</ul>
+<h3 id="fr-cad-apx-036-approximating-line-segment-primitive">FR-CAD-APX-036 — Approximating line-segment primitive</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>Tc_ApproxLineSegment</code> SHALL store first point, last point, direction and length,
+and SHALL provide: length, first/last/middle point, first/last direction, endpoint stretch,
+along-line and normal distance decomposition, and a definedness bitmask. <code>getMiddlePoint</code> SHALL
+return the segment midpoint.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The concrete output primitive for line approximation and the object the evaluators
+measure against.</li>
+<li><strong>Source:</strong> <code>tc_aprox/linesegm.h:12-95</code>; <code>tc_aprox/segment.h:10-44</code>.</li>
+<li><strong>Verification:</strong> Inspection + Test (accessors return consistent geometry).</li>
+</ul>
+<h3 id="fr-cad-apx-037-approximating-arc-segment-primitive-with-consistency-derivation">FR-CAD-APX-037 — Approximating arc-segment primitive with consistency derivation</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>Tc_ApproxArcSegment</code> SHALL store first/last/middle points, centre, radius,
+start/end/middle directions, length and orientation, SHALL derive missing quantities via
+<code>calcArcData</code> (centre, radius, mid-point, orientation, directions) from whatever subset is set, and
+SHALL validate consistency via <code>checkArcData</code>. It SHALL provide the arc centre and a mid-arc point
+for downstream line/arc records.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Definedness tracked by a bitmask (<code>te_all_defined = 255</code>); an
+undefined arc distance query returns <code>10612</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Arc output must be fully specified (centre + radius + orientation) for CAM and
+export formats.</li>
+<li><strong>Source:</strong> <code>tc_aprox/arcsegm.h:17-174</code>; <code>tc_aprox/arcsegm.cpp</code> (<code>calcArcData</code> et al.).</li>
+<li><strong>Verification:</strong> Test (arc reconstructed correctly from 3 points; inconsistent data rejected).</li>
+</ul>
+<hr />
+<h3 id="part-b-fourier-contour-analysis-tc_fou-1">Part B — Fourier contour analysis (<code>tc_fou</code>)</h3>
+<h3 id="fr-cad-apx-038-fourier-description-of-a-closed-contour">FR-CAD-APX-038 — Fourier description of a closed contour</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>TcFourierBeschr</code> SHALL, given a dbase contour <code>S_kontur*</code>, compute and hold a
+Fourier coefficient list (FKS) and a Fourier descriptor list (FDS), the contour's rotational
+symmetry degree, its used orientation (Umlaufsinn) and a recognised standard tool type, via
+<code>f_bestimm_fks_u_fds_einer_kontur</code>. <code>isStatusOK()</code> SHALL return true only when the computation
+succeeded (internal status 1) and both lists exist.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Input MUST be a closed contour; a contour with no elements ⇒
+error 290; any Fourier error <code>≥ 200</code> leaves status not-OK. A verrechnung (pre-)matrix may be
+supplied; default is the identity matrix.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This is the entry object for all contour-relationship queries and the unit the
+drawing comparison and contour finders build.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:101-400</code>; <code>tc_fou/f_math.cpp:1476-1549</code>.</li>
+<li><strong>Verification:</strong> Test (build description for known contours; status OK; symmetry as expected).</li>
+</ul>
+<h3 id="fr-cad-apx-039-orientation-umlaufsinn-normalisation-before-analysis">FR-CAD-APX-039 — Orientation (Umlaufsinn) normalisation before analysis</h3>
+<ul>
+<li><strong>Requirement:</strong> Before computing coefficients, the contour SHALL be forced to a defined
+orientation: for the requested sense <code>t_umlaufsinn ≥ 0</code> the contour SHALL be set to mathematically
+positive (CCLW) — i.e. flipped when its z-orientation is negative — and for <code>&lt; 0</code> to CLW. The
+original orientation SHALL be restored after computation. A differing orientation between two
+contours mirrors the non-vanishing spectral lines about index 0 and would make identical contours
+compare as unequal, so normalisation is mandatory.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Orientation read from <code>kontur-&gt;umlauf.vwert[F_Z]</code> (±1).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Guarantees comparability of two descriptions regardless of stored winding.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:312-345, 393-397</code>.</li>
+<li><strong>Verification:</strong> Test (same contour with opposite winding yields identical descriptors).</li>
+</ul>
+<h3 id="fr-cad-apx-040-rounding-decimals-and-tolerance-level">FR-CAD-APX-040 — Rounding decimals and tolerance level</h3>
+<ul>
+<li><strong>Requirement:</strong> The description SHALL round contour geometry to <code>t_rundungsStellenAnzahl</code>
+decimals; when <code>≤ 0</code> this SHALL default to the tolerance-container value
+<code>e_t3_eilo_FourAnzNKS</code>, falling back to 4 decimals if that is non-positive. A tolerance <em>stage</em>
+<code>m_toleranzStufenzahl</code> in 1..4 SHALL be honoured (out-of-range clamped to 1) and passed into the
+coefficient computation to scale comparison tolerance (stage n ⇒ base·10^(n−1)).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Default decimals = 4; stage default = 1.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Rounding controls numerical robustness of the (integral-based) coefficients; the
+stage lets callers trade precision for tolerance to matching.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:347-371</code>; <code>tc_fou/f_math.cpp:408-422</code>.</li>
+<li><strong>Verification:</strong> Test (coefficients stable under rounding; stage widens acceptance).</li>
+</ul>
+<h3 id="fr-cad-apx-041-contour-polygonisation-before-transform">FR-CAD-APX-041 — Contour polygonisation before transform</h3>
+<ul>
+<li><strong>Requirement:</strong> The contour SHALL be reduced to a complex polygon point list (<code>S_K_KONTUR</code>) via
+<code>f_bild_kompl_list</code>, in which circular-arc elements are polygonised at a fixed angular increment
+<code>F_W_INKR = 10°</code>; a degenerate arc that yields no interior support point SHALL be treated as a
+line. Contour points SHALL be rounded to <code>nk_stellen</code> decimals and rotated into the complex (xy)
+plane.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>F_W_INKR = 10.0</code> degrees; duplicate points removed.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The Fourier integrals are defined over a polygon; arc sampling density trades
+fidelity for cost.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_kont.cpp:575-700</code> (<code>f_bild_kompl_list</code>); <code>tc_fou/f_glob.h:96</code>.</li>
+<li><strong>Verification:</strong> Test (arc contour polygonised at 10° steps; length preserved within tolerance).</li>
+</ul>
+<h3 id="fr-cad-apx-042-fourier-coefficient-computation-c0-centroid-ck">FR-CAD-APX-042 — Fourier coefficient computation (c0 centroid, ck)</h3>
+<ul>
+<li><strong>Requirement:</strong> For the closed polygon of total length <code>L</code>, the engine SHALL compute the zeroth
+coefficient <code>c0</code> as the length-weighted midpoint average over all edges divided by <code>2L</code> (the
+contour centroid), and each further coefficient <code>c_k</code> from the per-vertex direction differences
+weighted by the complex exponential <code>e^(−i·2πk·s/L)</code> and scaled by <code>−L/(2πk)²</code>. Each coefficient's
+Euler-form angle SHALL be stored alongside its complex value.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Zero/degenerate polygon length (&lt; <code>e_fouEpsilonWert</code>) ⇒ error 208.
+<code>s</code> = cumulative polygon length to the vertex.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The coefficient set is the raw &quot;fingerprint&quot; of the contour; c0 is the centroid used
+as the translation reference.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:893-1028</code> (<code>f_rech_poly_co</code>, <code>f_rech_poly_ck</code>).</li>
+<li><strong>Verification:</strong> Analysis + Test (coefficients of a known contour vs. analytic/reference values).</li>
+</ul>
+<h3 id="fr-cad-apx-043-coefficient-search-count-and-symmetry-degree">FR-CAD-APX-043 — Coefficient search, count and symmetry degree</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL search successive coefficient indices for <code>F_ANZ_PRUEF_KOEFF</code>
+(=<code>FGlob_AnzahlKoeffizienten</code>, default 4) coefficients that are not the zero complex number,
+scanning up to <code>F_MAX_INDEX = 2000</code>. The index stride SHALL be chosen from a known standard type
+(<code>add_wert</code> = 1, 2 or 4 by type), and the rotational symmetry degree SHALL be derived as the index
+spacing between the first two non-vanishing coefficients (<code>anker-&gt;next-&gt;next-&gt;index − anker-&gt;next-&gt;index</code>). Failure to find enough coefficients within the index limit ⇒ error 223.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Zero-coefficient test uses <code>f_ident_k_zahlen</code> at the active
+tolerance stage.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Only a handful of significant coefficients are needed to characterise the contour;
+symmetry degree is central to angle recovery.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1058-1156</code>; constants <code>tc_fou/f_glob.h:91-95</code>.</li>
+<li><strong>Verification:</strong> Test (square ⇒ symmetry 4, rectangle ⇒ 2, circle ⇒ special).</li>
+</ul>
+<h3 id="fr-cad-apx-044-orientation-detection-from-spectrum">FR-CAD-APX-044 — Orientation detection from spectrum</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL infer the contour orientation from the coefficient spectrum:
+when the first significant coefficient does not have index 1, it SHALL compute the index-(−1)
+coefficient; if that is non-zero the orientation SHALL be <code>F_LINKS_SYS</code> (CLW) and the (−1)
+coefficient re-anchored to the list head, otherwise error 213. When the first significant index is
+1 and symmetry &gt; 2, orientation SHALL be <code>F_RECHTS_SYS</code> (CCLW). Otherwise it SHALL remain
+<code>F_UNBEKANNT</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Confirms/derives winding needed for consistent comparison and for the descriptor
+normalisation reference.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1119-1152</code>; enums <code>tc_fou/f_glob.h:87-89</code>.</li>
+<li><strong>Verification:</strong> Test (orientation reported per known contours).</li>
+</ul>
+<h3 id="fr-cad-apx-045-circle-special-case-description">FR-CAD-APX-045 — Circle special-case description</h3>
+<ul>
+<li><strong>Requirement:</strong> When the contour's single element is a circle, the engine SHALL bypass the
+polygon integrals: <code>c0</code> SHALL be the (rounded, optionally transformed) circle centre, <code>c1</code> SHALL be
+the circle radius, the symmetry degree SHALL be infinity (<code>F_UNENDL</code>), orientation <code>F_RECHTS_SYS</code>
+and type = 1 (circle). The descriptor <code>d1</code> SHALL be 1.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Radius rounded to <code>nk_stellen</code>; <code>F_UNENDL = 1e308</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A circle has no finite symmetry degree; the analytic path avoids polygonisation
+error and yields exact scale via the radius ratio.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:789-867</code> (<code>f_rech_kreis_fks_u_fds</code>), <code>:1532-1540</code>.</li>
+<li><strong>Verification:</strong> Test (two circles ⇒ scale = radius ratio, angle 0).</li>
+</ul>
+<h3 id="fr-cad-apx-046-standard-tool-type-recognition">FR-CAD-APX-046 — Standard tool-type recognition</h3>
+<ul>
+<li><strong>Requirement:</strong> During coefficient computation the engine SHALL, where possible, classify the
+contour as a standard tool type per the CAPT tool table: 1 = circle, 2 = rounded rectangle,
+3 = square, 4 = rectangle, 7 = rounded square, 8 = slot (Langloch), 16 = radius; otherwise 0. The
+recognised type SHALL set the coefficient index stride (FR-CAD-APX-043).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Enables standard-punch matching and faster/cleaner spectra for regular shapes.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1071-1082, 1310-1315</code>; <code>TcFourierBeschr.cpp:389</code>.</li>
+<li><strong>Verification:</strong> Test (standard shapes classified correctly).</li>
+</ul>
+<h3 id="fr-cad-apx-047-fourier-descriptor-computation-invariant-fingerprint">FR-CAD-APX-047 — Fourier descriptor computation (invariant fingerprint)</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL compute a descriptor set (FDS) by normalising each non-zero
+coefficient (index ≠ 0) against a normalisation coefficient (the index-1 or index-(−1) coefficient
+with magnitude &gt; <code>e_fouEpsilonWert</code>), dividing by it and multiplying by a phase term
+<code>e^{ i·((idx_norm − idx)/symmetryDegree)·Δφ }</code>, where <code>Δφ</code> is the phase difference of the two
+normalisation coefficients. The resulting descriptors SHALL be invariant to start-point shift,
+rotation, size and translation.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> If too few coefficients exist to normalise, no descriptors are
+produced (diagnostic printed).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Descriptors are the comparison key; invariance is what lets &quot;same shape, any
+pose/size&quot; be detected.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1184-1286</code> (<code>f_rech_poly_dk</code>, <code>f_rech_poly_fds</code>).</li>
+<li><strong>Verification:</strong> Analysis + Test (descriptors unchanged under rotation/scale/translation of one
+contour).</li>
+</ul>
+<h3 id="fr-cad-apx-048-relationship-verwandtschaft-test-via-descriptor-comparison">FR-CAD-APX-048 — Relationship (verwandtschaft) test via descriptor comparison</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>doCompare(other, tol)</code> SHALL report two contours as related iff their descriptor
+sets are identical in both index sequence and coefficient values within <code>tol</code>
+(<code>compareFourierDeskriptorenSaetze</code>): descriptors SHALL be compared pairwise (index equality AND
+<code>|Δreal| &lt; tol</code> AND <code>|Δimag| &lt; tol</code>), and the sets SHALL have equal length.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> <code>tol</code> is caller-supplied (drawing-comparison tolerance); a NULL
+set fails the comparison.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This boolean is the gate before any relationship parameters are computed; it is the
+core of geometric duplicate/feature detection.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:546-555</code>; <code>tc_fou/f_kont.cpp:1007-1044</code>,
+<code>:943-992</code> (<code>f_pruefe_2_fou_list_auf_ident</code>).</li>
+<li><strong>Verification:</strong> Test (congruent/similar shapes match; different shapes do not).</li>
+</ul>
+<h3 id="fr-cad-apx-049-relationship-parameter-rotation-angle-drehwinkel">FR-CAD-APX-049 — Relationship parameter: rotation angle (Drehwinkel)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>f_rech_poly_dphi</code> SHALL compute the rotation angle carrying the reference contour
+onto the comparison contour from the phase angles of two matched coefficients (indices q and r):
+<code>φ = (r·(φ_q^ek − φ_q^rk) − q·(φ_r^ek − φ_r^rk))/(r − q)</code>, rounded to the tolerance grid. When
+symmetry is to be honoured (<code>genau = 1</code>), the angle SHALL be reduced modulo <code>360°/(r−q)</code>
+(equivalently <code>360°/symmetryDegree</code>) so that, e.g., a square's 90/180/270° relate to 0°; otherwise
+it SHALL be reduced modulo 360°. The result SHALL be returned in radians internally.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Tolerance grid = <code>e_fouEpsilonWert</code>; requires matching coefficient
+indices, else error 224.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Rotation recovery is one of the three relationship outputs the CAD/comparison layer
+needs to place one contour onto another.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1581-1660</code>.</li>
+<li><strong>Verification:</strong> Test (rotate a contour by known angle ⇒ recovered angle within tolerance; square
+symmetry folding).</li>
+</ul>
+<h3 id="fr-cad-apx-050-relationship-parameter-scale-factor-streckungsfaktor">FR-CAD-APX-050 — Relationship parameter: scale factor (Streckungsfaktor)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>f_rech_poly_my</code> SHALL compute the scale factor <code>μ</code> as the magnitude ratio of the
+first significant coefficient of the comparison contour to that of the reference contour
+(<code>|c1^ek| / |c1^rk|</code>), provided their indices match; it SHALL also report the absolute magnitude
+difference. Missing coefficients ⇒ error 224. For a circle, <code>μ</code> SHALL instead be the real-part
+ratio of the radius coefficients (FR-CAD-APX-045).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Scale recovery is required to decide size identity and to build the transformation
+matrix.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1403-1428</code>; circle path <code>:1886-1895</code>.</li>
+<li><strong>Verification:</strong> Test (scaled contour ⇒ recovered μ equals scale factor).</li>
+</ul>
+<h3 id="fr-cad-apx-051-relationship-parameter-translation-vector-translationsvektor">FR-CAD-APX-051 — Relationship parameter: translation vector (Translationsvektor)</h3>
+<ul>
+<li><strong>Requirement:</strong> The engine SHALL compute two translation-related vectors:
+(a) <code>f_rech_poly_delta(μ, φ, rk, ek)</code> = <code>c0^ek − e^{iφ}·μ·c0^rk</code>, the vector accounting for a tool
+reference point differing from the centroid (rotation and scale included); and
+(b) <code>f_rech_poly_translation(rk, ek)</code> = <code>c0^ek − c0^rk</code>, the pure centroid-to-centroid shift used
+when assembling the transformation matrix. Vectors SHALL be returned in the xy plane.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Translation completes the pose; the code history (comments) shows the centroid-shift
+form is the one used in the matrix, while delta covers non-centroid reference points.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1694-1777</code>.</li>
+<li><strong>Verification:</strong> Test (translated contour ⇒ recovered translation equals shift).</li>
+</ul>
+<h3 id="fr-cad-apx-052-relationship-transformation-matrix-assembly">FR-CAD-APX-052 — Relationship transformation matrix assembly</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>f_rech_verwandt_parameter</code> SHALL assemble the relationship (Verwandtschafts-)
+matrix as the product rotation × scale × translation, where rotation is about the z-axis through
+the <em>reference contour's centroid</em> (<code>drehe_um_gerade</code> about c0, not the origin), scale is
+<code>skalierungs_matrix(μ,μ,1)</code> and translation uses the centroid-to-centroid vector. For a circle it
+SHALL set angle 0 and derive μ and translation analytically. Absence of a c0 coefficient ⇒ error
+250.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The single matrix applied to the reference contour reproduces the comparison
+contour — the deliverable of the whole relationship computation.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:1872-1960</code>; matrix helper <code>f_rechne_fourier_matrix</code> <code>:1810-1825</code>.</li>
+<li><strong>Verification:</strong> Test (applying matrix to reference points reproduces comparison points within
+tolerance).</li>
+</ul>
+<h3 id="fr-cad-apx-053-relationship-api-calcrelationship">FR-CAD-APX-053 — Relationship API (<code>calcRelationship</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>calcRelationship(other, optWinkel, μ, angle, translation, matrix)</code> SHALL return
+the scale factor, rotation angle (converted to <strong>degrees</strong> at the boundary), translation vector and
+transformation matrix for two related descriptions; <code>optWinkel = true</code> SHALL request the
+symmetry-folded minimal angle. It SHALL succeed only when both descriptions are status-OK and the
+underlying computation returns 0. It SHALL NOT re-test relatedness (the caller must have called
+<code>doCompare</code> first).</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Angle output in degrees; internal radians converted via
+<code>RAD_TO_DEG</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The public façade over FR-CAD-APX-049..052 used by consumers.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:686-733</code>.</li>
+<li><strong>Verification:</strong> Test (end-to-end recovery of angle/scale/translation for a posed contour).</li>
+</ul>
+<h3 id="fr-cad-apx-054-size-identity-comparison-docomparesizeidentity">FR-CAD-APX-054 — Size-identity comparison (<code>doCompareSizeIdentity</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>doCompareSizeIdentity(other, tol, matrix)</code> SHALL report the contours as identical
+in size iff their descriptors match within <code>tol</code> AND the recovered scale factor satisfies
+<code>|μ − 1| &lt; tol</code>; on success it SHALL output the relationship matrix.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Distinguishes congruent (same-size) shapes from merely similar ones — needed for true
+duplicate detection.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:572-601</code>.</li>
+<li><strong>Verification:</strong> Test (same-size relatives pass; scaled relatives fail).</li>
+</ul>
+<h3 id="fr-cad-apx-055-pose-identity-comparison-docomparelookidentity">FR-CAD-APX-055 — Pose-identity comparison (<code>doCompareLookIdentity</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>doCompareLookIdentity(other, tol, matrix)</code> SHALL report identity iff size
+identity holds (FR-CAD-APX-054) AND the recovered 2D rotation angle of the relationship matrix is
+≈ 0 within the general tolerance <code>e_wert</code>. It SHALL assert/fail when either description is not
+status-OK (e.g. an open contour).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Detects contours that are identical <em>and</em> already in the same orientation (no
+rotation needed) — e.g. to avoid re-placing an already-aligned feature.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:617-655</code>.</li>
+<li><strong>Verification:</strong> Test (same size + same angle passes; rotated copy fails).</li>
+</ul>
+<h3 id="fr-cad-apx-056-contour-centroid-retrieval-getschwerpunkt">FR-CAD-APX-056 — Contour centroid retrieval (<code>getSchwerpunkt</code>)</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>getSchwerpunkt(vector)</code> SHALL return the contour centroid as the real/imag parts
+of the index-0 Fourier coefficient (z = 0), returning false when no c0 coefficient exists.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The centroid is a useful placement/anchor point and the rotation pivot.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:746-771</code>.</li>
+<li><strong>Verification:</strong> Test (centroid equals geometric centroid of known contour).</li>
+</ul>
+<h3 id="fr-cad-apx-057-symmetry-and-orientation-accessors">FR-CAD-APX-057 — Symmetry and orientation accessors</h3>
+<ul>
+<li><strong>Requirement:</strong> The description SHALL expose <code>getSymmetrie()</code> (rotational symmetry degree),
+<code>getSymmetrieAngle()</code> (<code>360°/degree</code>) and <code>getUmlaufsinn()</code> (−1 = CLW, 0 = undetermined,
+1 = CCLW).</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Consumers use symmetry degree/angle for angle folding and orientation for
+comparability checks.</li>
+<li><strong>Source:</strong> <code>tc_fou/TcFourierBeschr.cpp:486-533</code>.</li>
+<li><strong>Verification:</strong> Inspection + Test (accessor values for known shapes).</li>
+</ul>
+<h3 id="fr-cad-apx-058-complex-number-tolerance-stages">FR-CAD-APX-058 — Complex-number tolerance stages</h3>
+<ul>
+<li><strong>Requirement:</strong> Equality of two complex coefficients SHALL be tested component-wise
+(<code>|Δreal| &lt; ε</code> AND <code>|Δimag| &lt; ε</code>), where <code>ε</code> is the base Fourier tolerance <code>e_fouEpsilonWert</code>
+multiplied by <code>10^(stage−1)</code> for stage ∈ {1,2,3,4} (stage 1 ≈ 1e-4, stage 2 ≈ 1e-3, stage 3 ≈
+1e-2, stage 4 ≈ 1e-1).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A single, documented tolerance ladder underlies coefficient significance, symmetry
+detection and descriptor comparison; the stage lets callers relax matching.</li>
+<li><strong>Source:</strong> <code>tc_fou/f_math.cpp:408-454</code> (<code>f_ident_k_zahlen</code>, <code>compareKoeffizienten</code>).</li>
+<li><strong>Verification:</strong> Test (stage widens the acceptance band by decades).</li>
+</ul>
+<h3 id="fr-cad-apx-059-consumer-integration-contract">FR-CAD-APX-059 — Consumer integration contract</h3>
+<ul>
+<li><strong>Requirement:</strong> The two libraries SHALL be usable by higher-level features without modification:
+the approximator by IGES export, the drawing thin/linearise command, nest/micro-joint utilities and
+contour tooling; the Fourier description by the contour finder, pattern/feature list and laser
+contour searcher. Each consumer SHALL configure the approximator strategies it needs and SHALL
+gate Fourier relationship recovery on a prior <code>doCompare</code>/<code>isStatusOK</code>.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> IGES export uses <code>te_adaptiv</code> + <code>te_maxDistance</code> + <code>te_minLength</code>;
+the thin command adds <code>te_maxRadius</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Documents the intended integration surface and typical strategy recipes, grounding
+the parent FR-CAD-018/025 refinements.</li>
+<li><strong>Source:</strong> <code>tc_iges/ig_ausg.cpp:1199-1308</code>; <code>tc_dbase/dbase_command/TcDbaseThinCommand.cpp:1000-1150</code>;
+<code>tc_dbase/dbase_util/TcDbaseContourFinder.cpp</code>; <code>tc_dbase/dbase_pattern/TcPatFeatList.cpp</code>;
+<code>tc_las/las_tech/db/TcKonturenSucher.cpp</code>.</li>
+<li><strong>Verification:</strong> Demonstration (drive one consumer end-to-end for each library).</li>
+</ul>
+<hr />
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>Least-squares direction fit details.</strong> The header documents <code>Tc_ApproxSegmentLeastSquareLine</code>
+as &quot;point + slope via Gauss least squares&quot; but the exact normal-equation formulation and the
+sampling count feeding it are inside <code>segmstg.cpp</code> (<code>calcLinePoint</code>/<code>calcDirection</code>) and were not
+fully traced. The <code>att_precision = 20</code> figure is captured; the residual weighting is not.
+<em>(inferred that it is unweighted uniform sampling.)</em></li>
+<li><strong><code>te_maxLength</code> two-parameter overload bug.</strong> In <code>addEvaluationStrategy(strategy, param1)</code> the
+<code>te_minLength</code> case constructs a <code>Tc_ApproxEvalMinLength</code>, but in the two-parameter overload
+<code>te_minLength</code> constructs a <code>Tc_ApproxEvalMaxLength</code> (<code>tc_aprox.cpp:524</code>). This looks like a
+copy-paste defect; unclear whether any caller exercises the two-parameter min-length path.</li>
+<li><strong>Exact symmetry-folding branch for negative angles.</strong> The <code>f_rech_poly_dphi</code> <code>genau=1</code> branch
+(<code>f_math.cpp:1628-1644</code>) has non-obvious sign handling around <code>delta</code>/<code>*dphi</code>; the precise
+intended behaviour for angles near the half-symmetry boundary should be confirmed against test
+vectors.</li>
+<li><strong><code>FGlob_AnzahlKoeffizienten</code> runtime value.</strong> <code>F_ANZ_PRUEF_KOEFF = 4</code> is the compile-time
+constant, but the actual count used is the global <code>FGlob_AnzahlKoeffizienten</code>; where/when it is
+set (and whether it can differ from 4 at runtime) was not located in the read slice.</li>
+<li><strong><code>delta</code> vs <code>translation</code> selection.</strong> <code>f_rech_verwandt_parameter</code> computes both
+<code>f_rech_poly_delta</code> (returned as <code>*delta</code>) and <code>f_rech_poly_translation</code> (used to build the
+matrix). The extensive comment history shows repeated reversals; which vector a given consumer
+should trust as &quot;the translation&quot; is context-dependent and should be documented per consumer.</li>
+<li><strong>Circle vs polygon symmetry infinity handling in comparison.</strong> <code>doCompare</code> on a circle relies on
+descriptor <code>d1 = 1</code>; how two circles of different radius (same descriptors, different <code>c1</code>)
+interact with <code>doCompareSizeIdentity</code> when symmetry is <code>F_UNENDL</code> should be verified.</li>
+<li><strong>Units of the approximation tolerance.</strong> Assumed to be drawing units (mm or inch per <code>GRITUNIT</code>),
+inherited from the curve's coordinate space; not asserted in <code>tc_aprox</code> itself. <em>(inferred.)</em></li>
+<li><strong>Derivative-free parametric arc + tangent connection.</strong> <code>TcParametricArc</code> does not implement
+derivatives (returns 1), so using <code>te_tangent</code> connection with an arc curve would fail; whether
+any path combines them is unconfirmed.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-curve-approximation-fourier-analysis-doc-10.8-cad-detail-curve-approximation-fourier-analysis-id-prefix-fr-cad-apx-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Curve Approximation & Fourier Analysis"
+doc: "10.8 - CAD Detail - Curve Approximation & Fourier Analysis"
+id-prefix: "FR-CAD-APX"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="2">
+   <a href="#part-a-curve-approximation-tc_aprox">Part A — Curve approximation ()</a>
+  </li>
+  <li level="2">
+   <a href="#part-b-fourier-contour-analysis-tc_fou">Part B — Fourier contour analysis ()</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#part-a-curve-approximation-tc_aprox-1">Part A — Curve approximation ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-001-abstract-parametric-curve-model">FR-CAD-APX-001 — Abstract parametric-curve model</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-002-integral-b-spline-point-evaluation-de-boor">FR-CAD-APX-002 — Integral B-spline point evaluation (de Boor)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-003-rational-b-spline-nurbs-evaluation-with-weights">FR-CAD-APX-003 — Rational B-spline (NURBS) evaluation with weights</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-004-openclosed-b-splines-knot-wrap-uniform-knot-vector-parameter-restriction">FR-CAD-APX-004 — Open/closed B-splines, knot wrap, uniform knot vector, parameter restriction</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-005-b-spline-first-and-second-derivatives">FR-CAD-APX-005 — B-spline first and second derivatives</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-006-curve-arc-length-by-adaptive-linear-interpolation">FR-CAD-APX-006 — Curve arc-length by adaptive linear interpolation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-007-polynomial-curve-of-arbitrary-degree-horner">FR-CAD-APX-007 — Polynomial curve of arbitrary degree (Horner)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-008-parametric-circular-arc-curve">FR-CAD-APX-008 — Parametric circular-arc curve</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-009-parametric-arc-definition-and-radius-consistency-validation">FR-CAD-APX-009 — Parametric-arc definition and radius-consistency validation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-010-strategy-based-approximation-architecture">FR-CAD-APX-010 — Strategy-based approximation architecture</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-011-segment-fitting-retry-loop-and-convergence">FR-CAD-APX-011 — Segment-fitting retry loop and convergence</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-012-default-strategy-configuration">FR-CAD-APX-012 — Default strategy configuration</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-013-residual-interval-too-small-merge">FR-CAD-APX-013 — Residual-interval "too small" merge</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-014-typed-segment-output-accessors">FR-CAD-APX-014 — Typed segment output accessors</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-015-termination-and-failure-signalling">FR-CAD-APX-015 — Termination and failure signalling</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-016-uniform-in-parameter-interval-strategy-te_paramcount-te_paramlength">FR-CAD-APX-016 — Uniform-in-parameter interval strategy ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-017-uniform-along-curve-interval-strategy-te_curvecount-te_curvelength">FR-CAD-APX-017 — Uniform-along-curve interval strategy ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-018-adaptive-interval-strategy-te_adaptiv">FR-CAD-APX-018 — Adaptive interval strategy ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-019-alternative-point-bisection-on-rejection">FR-CAD-APX-019 — Alternative-point bisection on rejection</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-020-direct-line-segment-strategy-te_directline">FR-CAD-APX-020 — Direct-line segment strategy ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-021-one-sided-line-strategies-te_leftsidedline-te_rightsidedline">FR-CAD-APX-021 — One-sided line strategies ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-022-least-squares-line-strategy-te_leastsquareline">FR-CAD-APX-022 — Least-squares line strategy ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-023-direct-arc-segment-strategy-te_directarc">FR-CAD-APX-023 — Direct-arc segment strategy ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-024-one-sided-arc-strategies-te_leftsidedarc-te_rightsidedarc">FR-CAD-APX-024 — One-sided arc strategies ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-025-best-of-two-segment-composition">FR-CAD-APX-025 — Best-of-two segment composition</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-026-point-continuity-connection-te_point">FR-CAD-APX-026 — Point-continuity connection ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-027-tangent-continuity-connection-te_tangent">FR-CAD-APX-027 — Tangent-continuity connection ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-028-force-final-segment-to-end-at-curve-end">FR-CAD-APX-028 — Force final segment to end at curve end</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-029-max-distance-evaluation-and-deviation-tolerance-te_maxdistance-te_maxdistanceoriented">FR-CAD-APX-029 — Max-distance evaluation and deviation tolerance ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-030-average-distance-evaluation-te_averagedistance-te_averagedistanceoriented">FR-CAD-APX-030 — Average-distance evaluation ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-031-length-evaluations-te_maxlength-te_minlength">FR-CAD-APX-031 — Length evaluations ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-032-maximum-arc-radius-evaluation-te_maxradius">FR-CAD-APX-032 — Maximum-arc-radius evaluation ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-033-segment-type-constraint-evaluations-te_forcetype-te_excludetype">FR-CAD-APX-033 — Segment-type constraint evaluations ( / )</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-034-evaluation-composition-sum-of-two-proxy-bit-flags">FR-CAD-APX-034 — Evaluation composition (sum-of-two, proxy, bit flags)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-035-signed-point-to-segment-distance-convention">FR-CAD-APX-035 — Signed point-to-segment distance convention</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-036-approximating-line-segment-primitive">FR-CAD-APX-036 — Approximating line-segment primitive</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-037-approximating-arc-segment-primitive-with-consistency-derivation">FR-CAD-APX-037 — Approximating arc-segment primitive with consistency derivation</a>
+  </li>
+  <li level="2">
+   <a href="#part-b-fourier-contour-analysis-tc_fou-1">Part B — Fourier contour analysis ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-038-fourier-description-of-a-closed-contour">FR-CAD-APX-038 — Fourier description of a closed contour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-039-orientation-umlaufsinn-normalisation-before-analysis">FR-CAD-APX-039 — Orientation (Umlaufsinn) normalisation before analysis</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-040-rounding-decimals-and-tolerance-level">FR-CAD-APX-040 — Rounding decimals and tolerance level</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-041-contour-polygonisation-before-transform">FR-CAD-APX-041 — Contour polygonisation before transform</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-042-fourier-coefficient-computation-c0-centroid-ck">FR-CAD-APX-042 — Fourier coefficient computation (c0 centroid, ck)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-043-coefficient-search-count-and-symmetry-degree">FR-CAD-APX-043 — Coefficient search, count and symmetry degree</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-044-orientation-detection-from-spectrum">FR-CAD-APX-044 — Orientation detection from spectrum</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-045-circle-special-case-description">FR-CAD-APX-045 — Circle special-case description</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-046-standard-tool-type-recognition">FR-CAD-APX-046 — Standard tool-type recognition</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-047-fourier-descriptor-computation-invariant-fingerprint">FR-CAD-APX-047 — Fourier descriptor computation (invariant fingerprint)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-048-relationship-verwandtschaft-test-via-descriptor-comparison">FR-CAD-APX-048 — Relationship (verwandtschaft) test via descriptor comparison</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-049-relationship-parameter-rotation-angle-drehwinkel">FR-CAD-APX-049 — Relationship parameter: rotation angle (Drehwinkel)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-050-relationship-parameter-scale-factor-streckungsfaktor">FR-CAD-APX-050 — Relationship parameter: scale factor (Streckungsfaktor)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-051-relationship-parameter-translation-vector-translationsvektor">FR-CAD-APX-051 — Relationship parameter: translation vector (Translationsvektor)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-052-relationship-transformation-matrix-assembly">FR-CAD-APX-052 — Relationship transformation matrix assembly</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-053-relationship-api-calcrelationship">FR-CAD-APX-053 — Relationship API ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-054-size-identity-comparison-docomparesizeidentity">FR-CAD-APX-054 — Size-identity comparison ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-055-pose-identity-comparison-docomparelookidentity">FR-CAD-APX-055 — Pose-identity comparison ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-056-contour-centroid-retrieval-getschwerpunkt">FR-CAD-APX-056 — Contour centroid retrieval ()</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-057-symmetry-and-orientation-accessors">FR-CAD-APX-057 — Symmetry and orientation accessors</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-058-complex-number-tolerance-stages">FR-CAD-APX-058 — Complex-number tolerance stages</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-apx-059-consumer-integration-contract">FR-CAD-APX-059 — Consumer integration contract</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></span>
+ <span class="next"><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

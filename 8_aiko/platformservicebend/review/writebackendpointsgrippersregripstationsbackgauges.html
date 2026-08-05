@@ -1,0 +1,963 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>WriteBackEndpointsGrippersRegripStationsBackGauges</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">PlatformServiceBend</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Review</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a class="active" href="writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">PlatformServiceBend</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Review</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>WriteBackEndpointsGrippersRegripStationsBackGauges</h1>
+<hr />
+<h2 id="product-psb-tags-code-review-psb-azure-pr-api-dto-write-back-spike-flux-core-project-platformservicebend-branch-spikewrite-data-back-to-flux-ticket-none-spike-no-linked-work-item-pr-234386-author-abdulaziz-morad-reviewer-aiko-radlingmayr-date-2026-07-17-status-active-vote-not-voted-pre-merge-deep-review-source-azure-devops">product: psb
+tags: [code-review, PSB, azure-pr, api, dto, write-back, spike, flux-core]
+project: PlatformServiceBend
+branch: spike/write-data-back-to-flux
+ticket: none (spike — no linked work item)
+pr: 234386
+author: Abdulaziz Morad
+reviewer: Aiko Radlingmayr
+date: 2026-07-17
+status: active
+vote: not-voted (pre-merge deep review)
+source: azure-devops</h2>
+<h1 id="code-review-write-back-endpoints-grippers-regrip-stations-back-gauges">Code Review — Write-Back Endpoints (Grippers, Regrip-Stations, Back-Gauges)</h1>
+<blockquote>
+<p>Deep review of Azure DevOps PR <a href="https://dev.azure.com/trumpfcorp/flux/_git/platformservicebend/pullrequest/234386">!234386</a>
+— &quot;Added Get and Put Endpoints for Grippers, Regrip-Stations and Back-Gauges&quot;, by <strong>Abdulaziz Morad</strong>,
+<code>spike/write-data-back-to-flux</code> → <code>main</code>, merge head <code>eb5fb091</code>, still <strong>active</strong>.
+Findings verified against Flux source (<code>~/dev/trumpf/Flux</code>, Flux 667 <code>ca45fee873</code>) with file:line evidence;
+35 candidate findings, 31 confirmed / 4 refuted.</p>
+</blockquote>
+<h2 id="scope">Scope</h2>
+<p>First <strong>write-back</strong> path in PSB (until now the service was read-only over Flux). 15 files, +515/−5:</p>
+<ul>
+<li><strong>Back-gauge stage params</strong> — <code>PUT /bend/tech/stages/{stage}/backgauges/{bg}</code>, partial update
+(<code>SetBackGaugeStageRequest</code>, all fields optional; unknown-property rejection).</li>
+<li><strong>Regrip-station step positions</strong> — <code>GET</code>/<code>PUT /bend/tech/stages/{stage}/steps/{step}/regrip-station</code>.</li>
+<li><strong>Gripper</strong> — <code>GET</code>/<code>PUT /bend/tech/gripper</code> (current), <code>GET /database/bend/grippers</code> (available list).</li>
+<li>New <code>BendGripperService</code>, <code>BendGripperAdapter</code>, DTOs, DI registration, endpoint wiring.</li>
+</ul>
+<p>Layering (DTO → Adapter → Service → Endpoint) and instincts (partial-update, unknown-prop rejection,
+validation, <code>Dispatcher.Run</code> marshalling) are right. But two issues make the feature
+non-functional/unsafe on its primary path.</p>
+<h2 id="verdict">Verdict</h2>
+<table>
+<thead>
+<tr>
+<th>Severity</th>
+<th>Count</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Critical</td>
+<td>1</td>
+</tr>
+<tr>
+<td>High</td>
+<td>2</td>
+</tr>
+<tr>
+<td>Medium</td>
+<td>5</td>
+</tr>
+<tr>
+<td>Low</td>
+<td>9</td>
+</tr>
+<tr>
+<td>Nit</td>
+<td>5</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="critical">CRITICAL</h2>
+<h3 id="c1-regrip-put-throws-notsupportedexception-for-every-real-bend-stage">C1 — Regrip PUT throws <code>NotSupportedException</code> for every real bend stage</h3>
+<p><code>src/PlatformServiceBend.Adapter/Part/Bend/Step/RegripStationStepParametersAdapter.cs</code> (SET method)</p>
+<pre><code class="language-csharp">var simStage = bendStage.Q0;               // Q0 is typed Flux.IBSimStage
+if (simStage is not Flux.BCStage stage) {  // ← excludes BendOp
+  throw new NotSupportedException(&quot;Regrip station positions cannot be updated with the available Flux API.&quot;);
+}
+</code></pre>
+<p><code>Flux.BCStage</code> is the base class <strong>only</strong> for <code>BCPickup</code> / <code>BCRegrip</code> / <code>BCDeposit</code>. A normal bend stage is
+<code>Flux.BendOp</code>, declared <code>public sealed partial class BendOp : ISheafSite, IBSimStage</code>
+(Flux <code>Src/Core/Bend/BendOp.cs:34</code>) — it does <strong>not</strong> derive from <code>BCStage</code>. <code>GetBendStage(stageIndex)</code>
+indexes <code>bendTech.Stages</code>, which wraps every <code>Flux.BendOp</code> (Flux <code>Src/API/Bend/BendTech.cs:251</code>), so a normal
+bend step flows straight into the cast and hits the <code>throw</code>.</p>
+<p>The paired <strong>GET</strong> (<code>From</code>) only requires <code>bendStage.Tech.Robotic</code> and happily returns From/To ranges for those
+same stages — so a client GETs data, edits it, PUTs it back, and gets <code>NotSupportedException</code>. <strong>The write-back
+is non-functional for its primary case, and GET/PUT are asymmetric.</strong></p>
+<p>The cast is also <strong>unnecessary</strong>: <code>Waypoints</code> is declared on the <code>IBSimStage</code> interface itself
+(Flux <code>Src/Core/Bend/Ops/BSimulate.cs:37</code> <code>Dictionary&lt;EBPhase, BWaypoint&gt; Waypoints { get; }</code>), and
+<code>BWaypoint</code>'s ctor takes <code>IBSimStage</code>.</p>
+<p><strong>Fix:</strong> operate on <code>simStage.Waypoints</code> directly (works for <code>BendOp</code> <em>and</em> all <code>BCStage</code> subclasses), or gate
+on <code>Tech.Robotic</code> to exactly mirror the GET. Drop the <code>BCStage</code> narrowing.</p>
+<hr />
+<h2 id="high">HIGH</h2>
+<h3 id="h1-back-gauge-position-getset-use-non-inverse-coordinate-transforms-round-trip-drift">H1 — Back-gauge <code>Position</code> GET↔SET use non-inverse coordinate transforms (round-trip drift)</h3>
+<p>GET: <code>src/PlatformServiceBend.Adapter/Part/Bend/Stage/BendStageAdapter.cs:61</code>
+SET: <code>src/PlatformServiceBend.Adapter/Part/Bend/Stage/BackGaugeStageParametersAdapter.cs</code> (<code>bgDatum.Position = request.Position.ToApiPoint3();</code>)</p>
+<ul>
+<li><strong>GET.X</strong> = <code>backGauge.Vec.X + bendOp.MappingPt.X - ncxCenter</code>. The API <code>MappingPt.X</code> resolves to
+<code>XPosition = coreMappingPt.X + (XFullSpan.Min+XFullSpan.Max)/2 + NCXCenter</code> (Flux <code>Src/API/Bend/BendOp.cs:380, 562-565</code>).
+The <code>NCXCenter</code> cancels ⇒ <strong>GET.X = Vec.X + coreMappingPt.X + span</strong> (span = half the X-span).</li>
+<li><strong>SET</strong> writes <code>BGDatum.Position</code>, whose setter forwards to <code>mOp.SetBGPos</code> (Flux <code>Src/API/Bend/BendOp.cs:1018-1019</code>,
+<code>Src/Core/Bend/BendOp.cs:3747+</code>). The setter's <em>true</em> inverse is the <code>BGDatum.Position</code> <strong>getter</strong> (line 1015),
+which uses <strong><code>+NCXCenter</code></strong>, not <code>+span</code>.</li>
+</ul>
+<p>So GET and the setter differ by <code>span − NCXCenter</code> in X. Feeding a GET value back through SET yields a next GET
+of <code>x + (span − NCXCenter)</code> — <strong>silent, accumulating drift</strong> on every GET→edit→PUT cycle. In Y, the setter
+applies a <code>−DY</code> shift the GET never adds, so Y drifts by <code>DY</code> on bump ops. Z round-trips correctly.</p>
+<p><strong>Fix:</strong> make the two layers share one convention — have the GET read <code>BGDatum.Position</code> (the API getter, which
+<em>is</em> the inverse of the setter the SET drives) instead of the hand-rolled <code>Vec.X + MappingPt.X − ncxCenter</code>.
+Do not mix a hand-rolled GET transform with the <code>BGDatum.Position</code> setter.</p>
+<h3 id="h2-writes-perform-no-invalidation-camnc-output-and-dependent-values-stay-stale">H2 — Writes perform no invalidation → CAM/NC output and dependent values stay stale</h3>
+<p>Regrip SET (end of method) and, by the same reasoning, all three write paths.</p>
+<p>The regrip SET ends at <code>stage.Waypoints[step.Phase] = waypoint;</code> with no invalidation. Flux's own write path
+(<code>Src/UI/BCell/BWaypointUI.cs:679-681</code>) does three things after assigning the waypoint:</p>
+<ol>
+<li><code>mStage.IDirty(EBInput.Waypoint)</code> — resets cached <code>_steps</code> / robot path,</li>
+<li><code>DirtyNext()</code> — invalidates the <strong>next</strong> stage when the last step is edited (a step's <em>To</em> feeds the next step's <em>From</em>),</li>
+<li>sets <code>Tech.CodeDirty</code>.</li>
+</ol>
+<p>None of that runs here. A GET of the <em>same</em> step's <em>To</em> reflects the change (the reader reads the live dict), but
+generated NC/simulation, the part's dirty-for-save flag, and the <strong>next step's From</strong> do not update until some
+unrelated edit invalidates the stage. (The gripper SET has the analogous gap — see M3.)</p>
+<p><strong>Fix:</strong> after writing, call <code>simStage.IDirty(EBInput.Waypoint)</code>, replicate <code>DirtyNext</code> for last-step edits, and
+set <code>Tech.CodeDirty</code> (mirror <code>BWaypointUI.Update</code>); or use a settable API that self-marks dirty.</p>
+<hr />
+<h2 id="medium">MEDIUM</h2>
+<h3 id="m1-back-gauge-put-never-bounds-checks-backgaugeindex-500-partial-mutation">M1 — Back-gauge PUT never bounds-checks <code>backGaugeIndex</code> → 500 + partial mutation</h3>
+<p><code>BackGaugeStageParametersAdapter.cs</code> SET indexes <code>bendOp.BGData[backGaugeIndex]</code> and later
+<code>bendOp.Q.Gauges[backGaugeIndex].SetRetraction(...)</code> with <strong>no</strong> validation, whereas the GET's
+<code>InternalGetBgPos</code> validates <code>index &lt; 0 || &gt;= Gauges.Length</code> and throws <code>ErrorCode.ValidationError</code> (→ 400).</p>
+<ul>
+<li>Negative / too-large index throws raw <code>IndexOutOfRangeException</code> → <code>UnhandledException</code> → <strong>500</strong> (GET returns 400).</li>
+<li><code>BGData</code> length is <code>Math.Max(Gauges.Length, 2)</code> with modulo mapping (Flux <code>Src/API/Bend/BendOp.cs:317,320</code>).
+On a <strong>1-gauge machine</strong>, <code>backGaugeIndex=1</code> is a <em>valid</em> <code>BGData</code> slot aliasing gauge 0: Position/Surface/Speed
+apply to gauge 0, then <code>Gauges[1].SetRetraction</code> (no modulo) throws → <strong>500 with the model already partially mutated.</strong></li>
+</ul>
+<p><strong>Fix:</strong> reuse the GET's <code>Gauges.Length</code> guard at the <strong>top</strong> of the SET, before any mutation.</p>
+<h3 id="m2-gripper-wristtotip-convention-differs-between-current-and-available">M2 — Gripper <code>WristToTip</code> convention differs between &quot;current&quot; and &quot;available&quot;</h3>
+<p><code>GripperParameterAdapter.cs</code> — <code>From(BCComponent)</code> (current) subtracts <code>GetTrumpfOffset</code> (default ≈ −34.5 mm) from
+Z and uses the mounted pickup <code>GripConfig</code>. The new <code>From(BGripper)</code> (available/catalog) uses
+<code>InternalGetWristToTip</code>, which for cup grips builds <code>Matrix3.Translation(Midpoint.X, Midpoint.Y, ZCup + DefaultConfig.DZCup)</code>
+with <strong>no</strong> Trumpf offset and the <strong>default</strong> config.</p>
+<p>⇒ The same physical gripper reported via <code>GET /bend/tech/gripper</code> vs <code>GET /database/bend/grippers</code> yields
+<code>WristToTip.Z</code> differing by ≈34.5 mm (and possibly a different DZCup). All members are valid and the <code>null</code>
+<code>WristToTip(null, DefaultArgs)</code> call is safe (the <code>is ICupGrip</code> guard steers every comp-dereferencing gripper away
+from it) — so this is a convention bug, not a crash.</p>
+<p><strong>Fix:</strong> apply the same coupling-offset + config source in the catalog path, or document that catalog <code>WristToTip</code>
+is a raw design-time value.</p>
+<h3 id="m3-gripper-put-does-not-recompute-bend-tech-after-the-swap">M3 — Gripper PUT does not recompute bend tech after the swap</h3>
+<p><code>BendGripperAdapter.SetCurrentGripper</code> does only <code>fluxCellTech.Gripper = gripper;</code>. The core setter swaps the item
+and clears two caches, and <code>BCComponent.Item</code> fires <code>ItemChanged</code>/<code>PFire</code> — but in a headless HTTP service <strong>there
+are no subscribers</strong>. Flux's real gripper-swap path <code>RedoGripper</code> (Flux <code>Src/UI/BCell/BGripperToolUI.cs:263-273</code>)
+clears <code>BendTechMemo</code>, calls <code>PrepareToGAPModel()</code>, runs <code>BendTooler.Process(...)</code>, sets <code>CodeDirty</code>, redraws. None
+of that runs, so computed poses/collision/payload/NC stay consistent with the <strong>old</strong> gripper.</p>
+<p><strong>Fix:</strong> trigger a reprocess equivalent to <code>RedoGripper</code> (or set <code>CodeDirty</code>), or document that a subsequent
+<code>GenerateBendTech</code> is required. Acceptable to defer for a spike <strong>if flagged</strong>.</p>
+<h3 id="m4-back-gauge-put-documents-422-for-unknown-properties-but-returns-400">M4 — Back-gauge PUT documents 422 for unknown properties but returns 400</h3>
+<p><code>BendTechStagesEndpoints.cs</code> — the handler rejects unknown JSON props by throwing <code>new ErrorException(new ValidationError { … })</code>
+and declares <code>.ProducesWithDescription(Status422UnprocessableEntity, …)</code>. But a <code>ValidationError</code> is forced to
+<strong>HTTP 400</strong> (<code>ErrorExtensions.cs:82-84</code>; <code>FromCode</code> maps <code>ValidationError → 400</code>). So at runtime this case is 400,
+never 422 — the OpenAPI contract is wrong. It also collides with the group-level 422 (<code>BendTechMissing</code>) entry: the
+operation filter skips a status already declared on the endpoint, so the genuine 422 case loses its description here.</p>
+<p><strong>Fix:</strong> declare this case as 400 (matching runtime), or throw an error whose code maps to 422 if 422 is truly
+intended — and don't reuse the 422 slot for a different semantic.</p>
+<h3 id="m5-tool-catalog-gripper-collection-is-dead-code-and-does-wasted-disk-io">M5 — Tool-catalog gripper collection is dead code (and does wasted disk I/O)</h3>
+<p><code>BendGripperAdapter.InternalCollectFromToolCatalogs</code> and the second loop of <code>InternalFindGripperByName</code> iterate every
+installed <strong>bend-tool</strong> library looking for grippers, but can never add one: grippers (<code>Flux.BGripper : BCellItem</code>)
+and bend tools (<code>BTool : BPunch/BDie/BAdapter</code>) are <strong>disjoint hierarchies</strong>, so <code>tool.GetType().Name.Contains(&quot;Grip&quot;)</code>
+never matches the <code>API.BPunch/BDie/BAdapter</code> wrappers and <code>(object)tool is Flux.BGripper</code> (API wrapper → core type)
+is always false. Both loop bodies are unreachable. Worse than inert: <code>BToolLibrary.Get(catalog.Id, true)</code> loads each
+library <strong>from disk on every call</strong>, for zero benefit, and misleads readers into thinking catalogs are a gripper source.</p>
+<p><strong>Fix:</strong> delete both catalog paths; <code>Flux.BGripper.GetAll(includeHidden: true)</code> already returns the full gripper library.</p>
+<hr />
+<h2 id="low">LOW</h2>
+<ul>
+<li><strong>L1 — Pullback + RetractionPath in one request silently discards Pullback.</strong> SET applies <code>Pullback</code>
+(→ <code>SetPullback</code> → <code>SetRetraction([v,0,0])</code>) then, if <code>RetractionPath</code> is present, <code>Gauges[i].SetRetraction(path)</code>
+overwrites the same <code>mRetract</code>. GET.Pullback then returns the path sum, not the requested pullback.
+<strong>Fix:</strong> reject both-supplied, or define/document precedence.</li>
+<li><strong>L2 — <code>Position</code>-then-<code>Surface</code> ordering can override the just-set Position.</strong> The <code>BGDatum.Surface</code> setter isn't
+a plain field write — on a changed value it calls <code>BGPlacer.AutoPlaceOne</code>, which re-places the gauge and can move
+<code>Vec</code> (Flux <code>Src/API/Bend/BendOp.cs:1065-1068</code>). SET writes Position before Surface, so a combined request may
+discard the explicit Position. <strong>Fix:</strong> apply Surface first, or reject combined Position+Surface.</li>
+<li><strong>L3 — <code>GetCurrentGripper</code> <code>ReferenceEquals</code> predicate is dead.</strong> <code>cellTech.Gripper</code> and <code>c.Item</code> allocate fresh
+API wrappers per access (<code>BGripper.Wrap</code>/<code>BCellItem.Wrap</code> both <code>new</code>), so <code>ReferenceEquals(gripper, currentGripper)</code>
+is always false; control always falls to the fallback. Harmless <em>today</em> (one gripper component) but the intended
+disambiguation never happens. <strong>Fix:</strong> drop the predicate or compare via <code>Equals</code>/<code>.Q</code>.</li>
+<li><strong>L4 — StepChangePoint out-of-range enum → 500 instead of 400.</strong> <code>JsonStringEnumConverter</code> allows integer values,
+so <code>{&quot;stepChangePoint&quot;: 999}</code> binds; the switch default throws <code>ArgumentOutOfRangeException</code> <strong>without</strong>
+<code>Data[&quot;ErrorCode&quot;]</code> → <code>UnhandledException</code> → 500. <strong>Fix:</strong> tag the exception with <code>ErrorCode.ValidationError</code>
+(or throw <code>ErrorException(ValidationError)</code>).</li>
+<li><strong>L5 — Unknown-property rejection only on back-gauge PUT.</strong> <code>SetBackGaugeStageRequest</code> has <code>[JsonExtensionData]</code>
+<ul>
+<li>a guard; the regrip (<code>RegripStationStepParameterRequest</code>) and gripper (<code>GripperSelectionRequest</code>) PUTs have
+neither, so a typo like <code>&quot;positionToo&quot;</code> is silently dropped and writes 0. Inconsistent strictness across the three
+new write endpoints. <strong>Fix:</strong> make the three consistent.</li>
+</ul>
+</li>
+<li><strong>L6 — 404 undeclared in OpenAPI for regrip endpoints.</strong> <code>GetBendStage</code>/<code>GetBendStep</code> throw
+<code>BendStageNotFound</code>/<code>BendStepNotFound</code> (codes contain &quot;NotFound&quot; → <strong>404</strong>), but the regrip GET/PUT declare only 400.
+The sibling tip-pose GET correctly declares both. <strong>Fix:</strong> add <code>.ProducesWithDescription(Status404NotFound, …)</code>.
+<em>(The back-gauge PUT's stageIndex is a route param whose <code>ArgumentException</code> maps to 400 — so that one is fine.)</em></li>
+<li><strong>L7 — German &quot;Validierung:&quot; in English API descriptions</strong> (two gripper endpoints). <strong>Fix:</strong> &quot;Validation:&quot; or drop it.</li>
+<li><strong>L8 — <code>{stepIndex}</code> lacks <code>:int</code> while <code>{stageIndex:int}</code> is constrained</strong> in the same regrip route templates.
+A non-int segment matches then fails binding (framework 400) instead of not matching. Copies the pre-existing
+tip-pose route rather than the constrained back-gauge one. <strong>Fix:</strong> <code>{stepIndex:int}</code>.</li>
+<li><strong>L9 — Duplicated gripper enumeration/lookup logic</strong> across <code>GetAvailableGrippers</code> and <code>InternalFindGripperByName</code>
+(once dead catalog code is removed). The list path filters blank names + dedupes case-insensitively; the by-name
+path does neither, so listable vs selectable sets can drift. <strong>Fix:</strong> one shared <code>name → BGripper</code> source.</li>
+</ul>
+<h3 id="contested-one-verifier-confirmed-another-refuted-with-an-empirical-repro">⚠️ Contested (one verifier confirmed, another refuted with an empirical repro)</h3>
+<ul>
+<li><strong>Regrip PUT null-body → NRE/500.</strong> The concern: a JSON body of literal <code>null</code> binds to the non-nullable
+<code>RegripStationStepParameterRequest[]</code> param and <code>[.. regripStationParameters]</code> NREs before the adapter's
+<code>IsDefaultOrEmpty</code> guard. <strong>However</strong>, a repro on the pinned SDK (.NET 10.0.300) showed minimal APIs infer a
+non-nullable complex body as <em>required</em> and return <strong>400 before the handler runs</strong> (handler never entered, zero
+NREs). So this is <strong>likely a non-issue</strong> in practice. Still worth hardening for intent: bind as
+<code>RegripStationStepParameterRequest[]?</code> and reject null explicitly rather than relying on framework behavior + a
+guard that sits after the spread.</li>
+</ul>
+<hr />
+<h2 id="nits">NITs</h2>
+<ul>
+<li><strong>N1 — MovementStrategy raw enum cast</strong> <code>(Flux.Sheaf.EBGMovePath)request.MovementStrategy.Value</code>. Values align 1:1
+today (<code>EBGMovePath { ASV=0, ZthenX=1, ASW=2 }</code> vs DTO 0/1/2), so <strong>not a live bug</strong>, but there's no compile-time
+safety and no range validation — an out-of-range int is cast and stored silently. The PR already uses an explicit
+<code>switch</code> for <code>StepChangePoint</code> (whose enums are ordered differently); MovementStrategy should do the same.</li>
+<li><strong>N2 — Gripper-name empty/null validation duplicated</strong> in both the endpoint and <code>SetCurrentGripper</code> (different
+ParamName/Data → different 400 response shape). Keep it in one layer.</li>
+<li><strong>N3 — Gripper endpoint tag <code>bend/tech/gripper</code> (singular)</strong> vs plural siblings / new <code>database/bend/grippers</code>.
+Arguably intentional (single active gripper); note the intent or align.</li>
+<li><strong>N4 — Private helper <code>GetType(API.BGripper)</code> shadows <code>object.GetType</code></strong>, also called in the same class; the PR
+adds a second caller. Rename to <code>MapGripperType</code>.</li>
+<li><strong>N5 — Inconsistent lambda indentation</strong> in <code>BendGripperService.GetAvailableGrippers</code> (body at 4 spaces vs 6 in
+the sibling methods). Run the formatter.</li>
+</ul>
+<hr />
+<h2 id="considered-and-dismissed-verified-not-defects">Considered and dismissed (verified NOT defects)</h2>
+<ul>
+<li><strong>&quot;<code>new BendOpSettings(bendOp.Q)</code> is a copy → lost writes.&quot;</strong> <em>Refuted.</em> It's a <strong>live write-through view</strong>
+(Flux Sheaf), so the settings-backed fields (ParallelRetraction, MovementStrategy, StepChangePoint,
+StepChangeDelay, Speed) <strong>do persist</strong>. This was the biggest initial worry and it's fine.</li>
+<li><strong>&quot;PUT used for partial/merge is inconsistent with siblings.&quot;</strong> <em>Refuted.</em> The sibling press-beam write is itself
+a nullable/all-optional partial merge (<code>PressBeamSettingsAdapter</code> guards every field with <code>if (… != null)</code>).
+The new endpoints <strong>follow</strong> the existing convention.</li>
+<li><strong>&quot;Public <code>GetRegripStationStepParameters</code> is a redundant pass-through.&quot;</strong> <em>Refuted.</em> The internal <code>From</code> overload
+is <code>internal</code> to the Adapter assembly; the caller is in the separate Core assembly with no <code>InternalsVisibleTo</code>,
+so the public wrapper is the necessary cross-assembly surface.</li>
+<li><strong>&quot;Gripper endpoints have a phantom 404 / undocumented 422.&quot;</strong> <em>Refuted.</em> 422 is declared at the group level; the
+404 is the real &quot;Session not found&quot; path. Only residue: <code>GetCurrentGripper</code> throws
+<code>InvalidOperationException(&quot;Gripper not found.&quot;)</code> tagged <code>BendCellTechMissing</code>, so the response <em>title</em> differs in
+wording from the <em>detail</em> — a cosmetic nit.</li>
+</ul>
+<hr />
+<h2 id="recommended-actions-before-this-leaves-spike-status">Recommended actions before this leaves spike status</h2>
+<ol>
+<li><strong>C1</strong> — fix the <code>BCStage</code> cast (blocks the whole regrip feature).</li>
+<li><strong>H1</strong> — unify the back-gauge Position convention so GET↔SET round-trips.</li>
+<li><strong>H2 / M3</strong> — add invalidation/recompute after writes (or explicitly document that a <code>GenerateBendTech</code> is required).</li>
+<li><strong>M1</strong> — add the <code>backGaugeIndex</code> bounds check before any mutation.</li>
+<li><strong>M4</strong> — reconcile the 422-vs-400 contract.</li>
+<li><strong>M5</strong> — delete the dead tool-catalog code (also removes per-call disk I/O).</li>
+<li>Sweep the LOWs (L1/L2 data-loss surprises, L4/L5 validation gaps) and NITs as a cleanup pass.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-psb-tags-code-review-psb-azure-pr-api-dto-write-back-spike-flux-core-project-platformservicebend-branch-spikewrite-data-back-to-flux-ticket-none-spike-no-linked-work-item-pr-234386-author-abdulaziz-morad-reviewer-aiko-radlingmayr-date-2026-07-17-status-active-vote-not-voted-pre-merge-deep-review-source-azure-devops">product: psb
+tags: [code-review, PSB, azure-pr, api, dto, write-back, spike, flux-core]
+project: PlatformServiceBend
+branch: spike/write-data-back-to-flux
+ticket: none (spike — no linked work item)
+pr: 234386
+author: Abdulaziz Morad
+reviewer: Aiko Radlingmayr
+date: 2026-07-17
+status: active
+vote: not-voted (pre-merge deep review)
+source: azure-devops</a>
+  </li>
+  <li level="1">
+   <a href="#scope">Scope</a>
+  </li>
+  <li level="1">
+   <a href="#verdict">Verdict</a>
+  </li>
+  <li level="1">
+   <a href="#critical">CRITICAL</a>
+  </li>
+  <li level="2">
+   <a href="#c1-regrip-put-throws-notsupportedexception-for-every-real-bend-stage">C1 — Regrip PUT throws  for every real bend stage</a>
+  </li>
+  <li level="1">
+   <a href="#high">HIGH</a>
+  </li>
+  <li level="2">
+   <a href="#h1-back-gauge-position-getset-use-non-inverse-coordinate-transforms-round-trip-drift">H1 — Back-gauge  GET↔SET use non-inverse coordinate transforms (round-trip drift)</a>
+  </li>
+  <li level="2">
+   <a href="#h2-writes-perform-no-invalidation-camnc-output-and-dependent-values-stay-stale">H2 — Writes perform no invalidation → CAM/NC output and dependent values stay stale</a>
+  </li>
+  <li level="1">
+   <a href="#medium">MEDIUM</a>
+  </li>
+  <li level="2">
+   <a href="#m1-back-gauge-put-never-bounds-checks-backgaugeindex-500-partial-mutation">M1 — Back-gauge PUT never bounds-checks  → 500 + partial mutation</a>
+  </li>
+  <li level="2">
+   <a href="#m2-gripper-wristtotip-convention-differs-between-current-and-available">M2 — Gripper  convention differs between "current" and "available"</a>
+  </li>
+  <li level="2">
+   <a href="#m3-gripper-put-does-not-recompute-bend-tech-after-the-swap">M3 — Gripper PUT does not recompute bend tech after the swap</a>
+  </li>
+  <li level="2">
+   <a href="#m4-back-gauge-put-documents-422-for-unknown-properties-but-returns-400">M4 — Back-gauge PUT documents 422 for unknown properties but returns 400</a>
+  </li>
+  <li level="2">
+   <a href="#m5-tool-catalog-gripper-collection-is-dead-code-and-does-wasted-disk-io">M5 — Tool-catalog gripper collection is dead code (and does wasted disk I/O)</a>
+  </li>
+  <li level="1">
+   <a href="#low">LOW</a>
+  </li>
+  <li level="2">
+   <a href="#contested-one-verifier-confirmed-another-refuted-with-an-empirical-repro">⚠️ Contested (one verifier confirmed, another refuted with an empirical repro)</a>
+  </li>
+  <li level="1">
+   <a href="#nits">NITs</a>
+  </li>
+  <li level="1">
+   <a href="#considered-and-dismissed-verified-not-defects">Considered and dismissed (verified NOT defects)</a>
+  </li>
+  <li level="1">
+   <a href="#recommended-actions-before-this-leaves-spike-status">Recommended actions before this leaves spike status</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></span>
+ <span class="next"><a href="../../reflux/index.html">ReFlux</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

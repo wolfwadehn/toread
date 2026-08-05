@@ -1,0 +1,2241 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>ARVTablesDiesSpecialBendTools</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruKit</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Reference</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ARV</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a class="active" href="arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruKit</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Reference</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ARV</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>ARVTablesDiesSpecialBendTools</h1>
+<hr />
+<h2 id="product-trukit-org-trumpf-title-arv-tables-dies-special-bend-tools-tags-trukit-truarv-arv-bend-reference-source-trutopscad-legacy-source-bend-db-schema-tops-600-files-dated-may-2024-status-reverse-engineered-draft-related-arv-format-value-mapping-truarv-arv-value-legends-consolidated">product: trukit
+org: trumpf
+title: &quot;ARV Tables — Dies &amp; Special Bend Tools&quot;
+tags: [trukit, truarv, arv, bend, reference]
+source: &quot;TruTopsCAD legacy source — Bend DB schema (ToPs 600), files dated May 2024&quot;
+status: reverse-engineered-draft
+related: [&quot;[[ARV Format &amp; Value Mapping]]&quot;, &quot;[[TruARV]]&quot;, &quot;[[ARV Value Legends (consolidated)]]&quot;]</h2>
+<h1 id="arv-tables-dies-special-bend-tools">ARV Tables — Dies &amp; Special Bend Tools</h1>
+<p>This cluster documents the <strong>lower-tool / special-forming-tool</strong> tables of the TRUMPF Bend database (ToPs 600) as they appear in an <code>.arv</code> export: the die catalogue (<code>WZG_GESENK</code>), folding/hemming leaves (<code>WZG_FALZ</code>), flat-processing tools (<code>WZG_FLACH</code>), Z-bend tools (<code>WZG_ZBIEG</code>), hinge tools (<code>WZG_SCHARNIER</code>), swivel benders (<code>WZG_SCHWENKBIEGER</code>), radius/wave shafts (<code>WZG_WELLE</code>), angle-measuring combinations (<code>WZG_MESS_BEREICHE</code> / <code>WZG_MESS_SCHENKEL</code>) and sensor disks (<code>WZG_TASTSCHEIBEN</code>). In an ARV <code>[ENTRY_i]</code>, <code>table:</code> names one of these tables and each <code>attribnameN</code>/<code>attribvalueN</code> pair is a <strong>column name + value</strong>. Many <code>*ID</code> / <code>*Flag</code> / <code>*Form*</code> columns are <strong>coded integers</strong> that resolve against the (un-exported) <code>ENUMWERTE</code> table; where the code→meaning legend is knowable it is given inline below, otherwise it is marked <em>undetermined (needs ENUMWERTE data)</em>.</p>
+<blockquote>
+<p><strong>Source of truth:</strong> each column's German <code>MS_Description</code> (extended property) in <code>Databases/SQLServerDatabase/Tables/Bend.&lt;TABLE&gt;.sql</code>. English is a translation, German kept in parentheses. Legends are tagged with SOURCE (INFO_TEXTS = legend already shipped in TruARV <code>infotexts.ts</code>; MS_Description; CHECK; code-crossref = <code>tc_dbase/benddef.h</code>; inferred) and CONFIDENCE.</p>
+</blockquote>
+<blockquote>
+<p><strong>Schema-only caveat:</strong> this is a DDL snapshot with <strong>no seed data</strong>, so <code>ENUMWERTE</code> is empty. All the die/tool <strong>shape</strong> enums (<code>GesenkformID</code>, <code>GesenkartID</code>, <code>FlachBearbID</code>, <code>WellenformID</code>, <code>MessformID</code>) have a <em>known meaning</em> but an <em>unknown numeric legend</em> — their column defaults (21, 28, 24, 36, 34…) do <strong>not</strong> fall in the ToPs600 shape ranges shown in the legacy resx (e.g. <code>MatritzenformID</code> 58–71), so those legends are <strong>not</strong> assumed to transfer. See Open questions.</p>
+</blockquote>
+<h2 id="shared-columns-present-in-nearly-every-tool-table">Shared columns (present in nearly every tool table)</h2>
+<p>Almost all main tables below share a common tool-header block. It is documented <strong>once here</strong>; per-table sections list only the columns that differ or that carry a table-specific meaning. (<code>WZG_MESS_BEREICHE</code>, <code>WZG_MESS_SCHENKEL</code> and <code>WZG_TASTSCHEIBEN</code> are structured differently and are fully documented in their own sections.)</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Unique tool number (eindeutige Werkzeugnummer)</td>
+<td>int</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Typ</td>
+<td>Type/description ident string (Identnummer/Beschreibung Werkzeugtyp)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free text (part of PK)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>GruppeID</td>
+<td>Bend-factor group the tool belongs to (Gruppe bzgl. Abkantfaktor)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free text</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BeschreibungID</td>
+<td>Tool description class (Werkzeugtyp/Beschreibung)</td>
+<td>int</td>
+<td>—</td>
+<td>38 Punch; 39 Die; 40 Radius punch; 41 Sensor disk; 42 Hemming block; 43 Radius holder; 44 Tool holder; 45 Adapter; 46 Z-Bending tool; 47 Die tool; 48 Flat-processing tool; 49 Hinge tool; 50 Wing Bend; 51 Folding Die</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>AufnahmeID</td>
+<td>Tool seat / mount (Werkzeugaufnahme)</td>
+<td>int</td>
+<td>—</td>
+<td>Seat catalogue: 0 Sensors; 50 MODUFIX; 63 13MM_TOOL_SEAT; 64 OW209/S; 65 AMADA_60MM; … up to 110 EHT_OWH01 Wöhr (partial)</td>
+<td>INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>WerkstoffID</td>
+<td>Tool material number (Werkzeugmaterial)</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE data); default 1</td>
+<td>—</td>
+<td>low</td>
+</tr>
+<tr>
+<td>EndbearbeitungID</td>
+<td>Finishing/treatment class (Art der Endbearbeitung)</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE); defaults 51/52/53 by table</td>
+<td>—</td>
+<td>low</td>
+</tr>
+<tr>
+<td>LageID</td>
+<td>Beam and/or table position (für Balken und/oder Tisch)</td>
+<td>int</td>
+<td>—</td>
+<td>13 Upper; 14 Lower; 15 Upper and Lower</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>EinbauID</td>
+<td>Whether tool may be rotated (ob Werkzeug gedreht werden darf)</td>
+<td>int</td>
+<td>—</td>
+<td>10 as drawn; 11 only flipped; 12 either way</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MontageID</td>
+<td>Insert vs. complete tool (Einbau- oder Komplettwerkzeug)</td>
+<td>int</td>
+<td>—</td>
+<td>8 complete tool; 9 tool insert</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>FestigkeitVon / FestigkeitBis</td>
+<td>Min / max tensile strength (min./max. Festigkeit)</td>
+<td>float</td>
+<td>N/mm²</td>
+<td>— range</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BelastungMax</td>
+<td>Max load (maximale Belastung)</td>
+<td>float</td>
+<td>kN/m (typ.)</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Gewicht</td>
+<td>Weight per metre (Gewicht pro Meter)</td>
+<td>float</td>
+<td>kg/m</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Arbeitshoehe</td>
+<td>Working height, tool height w/o seat (Arbeitshöhe ohne Aufnahme)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>NachschleifLaenge</td>
+<td>Regrind length (Nachschleiflänge)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SkizzeDetail</td>
+<td>Tool drawing name (Werkzeugzeichnung)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Identifizierung</td>
+<td>How tool is recognised (wie wird Werkzeug erkannt)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypAlt</td>
+<td>Old type designation (alte Typbezeichnung)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SymmetrieX_Negativ / SymmetrieX_Positiv</td>
+<td>Tool width from 0 in −/+ direction (Werkzeugbreite von 0)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Profilnummer</td>
+<td>SAP profile number of tool type (Profilnummer aus SAP)</td>
+<td>nvarchar(20)</td>
+<td>—</td>
+<td>— free (CHECK: no <code>%</code> char)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>ZugeordneteProfilnummer</td>
+<td>Profile number combinable with this type (kombinierbarer Werkzeugtyp)</td>
+<td>nvarchar(20)</td>
+<td>—</td>
+<td>— free (CHECK: no <code>%</code> char)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>NachgiebigkeitXX/XY/YX/YY</td>
+<td>Elastic compliance of tool deformation, force-direction × deform-direction (elastische Nachgiebigkeit)</td>
+<td>float</td>
+<td>mm/kN</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>EinbauSafetyClickID</td>
+<td>Which side the Safety Click is on (Seite des Safety Click)</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE); default 0</td>
+<td>—</td>
+<td>low</td>
+</tr>
+<tr>
+<td>WerkzeugwechslerFlag</td>
+<td>Suitable for automatic tool changer (geeignet für autom. Werkzeugwechsler)</td>
+<td>int</td>
+<td>—</td>
+<td>0–3 (CHECK 0..3); exact codes undetermined, 0 = default/not suitable</td>
+<td>CHECK</td>
+<td>low</td>
+</tr>
+</tbody>
+</table>
+<h3 id="shared_attribute-columns-per-length-tool-instances">Shared <code>*_ATTRIBUTE</code> columns (per-length tool instances)</h3>
+<p>Each main table has a companion <code>WZG_&lt;X&gt;_ATTRIBUTE</code> table (FK <code>ID</code> → parent <code>ID</code>, <code>ON DELETE CASCADE</code>) holding one row per physical tool length/order number. Common columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Single-tool ident, FK to parent type (Identnummer Einzelwerkzeug)</td>
+<td>int</td>
+<td>—</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_LAENGE</td>
+<td>Tool length (Länge des Werkzeugs)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_TYP_ID</td>
+<td>Tool-type ident (Identnummer vom Werkzeugtyp)</td>
+<td>int</td>
+<td>—</td>
+<td>16 Normal; 17 Left ear; 18 Right ear; 19 measuring tool; 20 window tool; 21 Z measuring tool; 22 groove die; 23 calibration tool; 24 Z-measuring easy; 25 empty tool; 26 Z-measuring wireless</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_ANZAHL</td>
+<td>Number of physical tools available (Anzahl vorhandener Werkzeuge)</td>
+<td>int</td>
+<td>—</td>
+<td>— count</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_ZEICHNUNG</td>
+<td>Front-view or full-3D drawing name (Zeichnungsname)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_BESTELLNUMMER</td>
+<td>Order number (Werkzeugbestellnummer)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free (part of PK)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_MAXBELASTUNG</td>
+<td>Max load if different from type (max. Belastung, wenn abweichend)</td>
+<td>float</td>
+<td>kN/m</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_AUFNAHMELAENGE</td>
+<td>Length at the tool seat (Länge an der Werkzeugaufnahme)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 69)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>LaengeOffsetZ</td>
+<td>Length offset Z (Länge Offset Z)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SchwerpunktX/Y/Z</td>
+<td>Centre of gravity (Schwerpunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>GreifpunktVornX/Y/Z, GreifpunktHintenX/Y/Z</td>
+<td>Front/rear robot grip point (Greifpunkt vorne/hinten)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypGreifnut</td>
+<td>Type &amp; position of grip groove (Typ und Lage der Greifnut)</td>
+<td>int</td>
+<td>—</td>
+<td><strong>MS_Description: 0 = B06; 1 = B23.</strong> Legacy TruARV/resx instead lists: 0 None; 1 A0; 2 A1; 3 A2; 4 S1; (?) L0 — <strong>divergent, see Open questions</strong></td>
+<td>MS_Description / INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>Austauschbarkeit</td>
+<td>Tool may be substituted (ob austauschbar)</td>
+<td>int</td>
+<td>—</td>
+<td>1 = Yes; 0 = No</td>
+<td>MS_Description + CHECK</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Oberflaechenbehandlung</td>
+<td>Surface treatment (Oberflächenbehandlung)</td>
+<td>int</td>
+<td>—</td>
+<td>0 None; 1 burnished; 2 chem. nickel-coated; 3 hard coating; 4 painted; 5 Plas-Nitr-Oxide; 6 Lzgn-Oxide; 7 hard coating ZN; 8 FE; 9 VA; 10 AL; 11 ZND</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Note: <code>WZG_SCHARNIER_ATTRIBUTE</code> omits <code>TypGreifnut</code>, <code>Austauschbarkeit</code>, <code>Oberflaechenbehandlung</code>, <code>Schwerpunkt*</code>, <code>Greifpunkt*</code>; <code>WZG_FALZ/FLACH/WELLE/SCHWENKBIEGER_ATTRIBUTE</code> omit <code>Greifpunkt*</code>/<code>Schwerpunkt*</code> except where noted.)</em></p>
+<h2 id="wzg_gesenk">WZG_GESENK</h2>
+<p>Die catalogue — deep/forming dies (V-, U-, round dies etc.). Uses all shared columns; the die-specific and coded columns are:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>GesenkformID</td>
+<td>Die shape: V-, U- or round die (ob V-, U- oder Rundgesenk)</td>
+<td>int</td>
+<td>—</td>
+<td>Meaning fixed; <strong>numeric legend undetermined</strong> (needs ENUMWERTE). Conceptually the same enum family as the resx <code>MatritzenformID</code> (58 V; 59 U; 61 Multi-V; 62 round; 70 ACB calib.; 71 asym. V) but the column <strong>default is 21</strong>, outside that range, so codes are not assumed identical</td>
+<td>MS_Description (+INFO_TEXTS ref)</td>
+<td>low</td>
+</tr>
+<tr>
+<td>GesenkartID</td>
+<td>Whether die has extra bend right and/or left (Zusatzbiegung rechts/links)</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE); default 28</td>
+<td>MS_Description</td>
+<td>low</td>
+</tr>
+<tr>
+<td>Gesenktiefe</td>
+<td>Die depth (Gesenktiefe)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Gesenkweite</td>
+<td>Die width / V-opening (Gesenkweite)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Radius</td>
+<td>Working radius (Arbeitsradius)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Winkel</td>
+<td>Die angle (Gesenkwinkel)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MittenVersatz</td>
+<td>Centre offset in Y (Mittenversatz in Y-Richtung)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Eintauchtiefe</td>
+<td>Relative beam travel to perform the bend (relative Balkenbewegung)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Biegeversatz</td>
+<td>Offset to zero for laying in the bend edge (Versatz zum Nullpunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Endlagewinkel</td>
+<td>Part attitude angle after the bend (Lagewinkel nach Biegung)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BlechdickeMin / BlechdickeMax</td>
+<td>Min/max part sheet thickness for this tool (Mindest-/max. Blechdicke)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (defaults 0.5 / 1)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RichtungNachUnten</td>
+<td>Whether the reference edge is a downward bend (Referenzkante = Biegung nach unten)</td>
+<td>int</td>
+<td>—</td>
+<td>default 5; by the DB's 4/5 yes-no convention likely <strong>4 = yes; 5 = no</strong></td>
+<td>inferred</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>TypPassendesWzg</td>
+<td>Matching upper/lower tool designation (dazugehöriges Ober-/Unterwerkzeug)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Haltertyp</td>
+<td>Matching holder if insert tool (passender Werkzeughalter)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free label (EV/70, FEV H60, OW/K 80/130/190, OW209/S, OW308/K, OW308/S …)</td>
+<td>MS_Description / INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wzg_falz">WZG_FALZ</h2>
+<p>Folding / hemming leaves (&quot;Falz&quot; die tools). Shared columns apply; folding-specific &amp; coded columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZudrueckID</td>
+<td>Whether mounted at die front or rear (Einbau an Matrize vorne oder hinten)</td>
+<td>int</td>
+<td>—</td>
+<td>32 hemming front; 33 hemming rear</td>
+<td>INFO_TEXTS + MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>ZudrueckTiefe</td>
+<td>Max punch penetration depth (max. Eintauchtiefe des Stempels)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>ZudrueckVersatz</td>
+<td>Hemming position in Y w/o die width (Zudrückposition in Y)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BreiteZudrueckspalt</td>
+<td>Width of hemming gap, needed if station rotated (Breite der Zudrückspalte)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 14)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<p><em>(Falz tables carry <code>EndbearbeitungID</code> default 52; <code>MontageID</code> default 9 = tool insert; <code>LageID</code> default 14 = Lower; <code>BeschreibungID</code> default 42 = Hemming block. No <code>Haltertyp</code>, no <code>WerkzeugwechslerFlag</code>, no <code>EinbauSafetyClickID</code>.)</em></p>
+<h2 id="wzg_flach">WZG_FLACH</h2>
+<p>Flat-processing tools (coining, joining, forming on a flat). Shared columns apply; specific &amp; coded columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>FlachBearbID</td>
+<td>Flat machining type — coining, joining etc. (Bearbeitungsart: Prägen, Fügen …)</td>
+<td>int</td>
+<td>—</td>
+<td>Meaning fixed; <strong>numeric legend undetermined</strong> (needs ENUMWERTE); default 24. Cross-ref only: benddef.h <code>Biegetechnik</code> 10 Prägung / 11 Fügung / 12 Umformen — different subsystem, not the same numbering</td>
+<td>MS_Description (code-crossref)</td>
+<td>low</td>
+</tr>
+<tr>
+<td>MittenVersatz</td>
+<td>Centre offset in Y (Mittenversatz in Y)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MinEintauchtiefe</td>
+<td>Min penetration into sheet (Mindest-Eintauchtiefe)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypPassendeMatrize</td>
+<td>Matching upper/lower tool (dazugehöriges Ober-/Unterwerkzeug)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Haltertyp</td>
+<td>Matching holder if insert tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free label</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<p><em>(<code>BeschreibungID</code> default 48 = Flat-processing tool; <code>LageID</code> default 13 = Upper; <code>EndbearbeitungID</code> default 53. Has <code>TypGreifnut</code>, <code>Schwerpunkt*</code>, <code>Greifpunkt*</code> in its ATTRIBUTE table.)</em></p>
+<h2 id="wzg_zbieg">WZG_ZBIEG</h2>
+<p>Z-bend tools (form a Z / offset). Shared columns apply; Z-specific &amp; coded columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>BiegenImGesenk</td>
+<td>Whether bending happens in the die (ob Biegen im Gesenk)</td>
+<td>int</td>
+<td>—</td>
+<td>4 = active; 5 = not active</td>
+<td>INFO_TEXTS (default 4)</td>
+<td>high</td>
+</tr>
+<tr>
+<td>ZHoehe</td>
+<td>Height of the finished Z (Höhe des fertigen Z)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RadiusSpitze</td>
+<td>Radius at the tip (Radius an der Spitze)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RadiusMatrize</td>
+<td>Radius in the die (Radius im Gesenk)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WinkelOben / WinkelUnten</td>
+<td>Angle for the up / down bend (Winkel Biegung nach Oben/Unten)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>VersatzBgOben / VersatzBgUnten</td>
+<td>Centre offset in Y for the up / down bend (Mittenversatz Biegung Oben/Unten)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WinkelEndlage</td>
+<td>Part end attitude when bending, if not bending-in-die (Endlage, nur wenn nicht Biegen im Gesenk)</td>
+<td>float</td>
+<td>degrees</td>
+<td>— (default 45)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Gesenkweite</td>
+<td>Die width (Gesenkweite)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BlechDickeMin / BlechDickeMax</td>
+<td>Min/max workpiece sheet thickness</td>
+<td>float</td>
+<td>mm</td>
+<td>— (defaults 0.5 / 3)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MittenVersatz</td>
+<td>Offset to centre (Versatz zur Mitte)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypPassendesWzg</td>
+<td>Matching upper/lower tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Haltertyp</td>
+<td>Matching holder if insert tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free label</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<p><em>(<code>BeschreibungID</code> default 46 = Z-Bending tool; <code>LageID</code> default 15 = Upper and Lower.)</em></p>
+<h2 id="wzg_scharnier">WZG_SCHARNIER</h2>
+<p>Hinge (Scharnier) tools — curl/hinge forming. Shared columns apply; specific columns (this table has <strong>no</strong> coded shape enum, no compliance, no changer flag):</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Radius</td>
+<td>Radius at the tool tip (Radius an der Werkzeugspitze)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Eintauchtiefe</td>
+<td>Max penetration depth (maximale Eintauchtiefe)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypPassendeMatrize</td>
+<td>Matching upper/lower tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<p><em>(<code>BeschreibungID</code> default 49 = Hinge tool; <code>LageID</code> default 13 = Upper; <code>EndbearbeitungID</code> default 53. Its ATTRIBUTE table has only ID/length/typ/count/drawing/order-no/max-load/seat-length/Z-offset.)</em></p>
+<h2 id="wzg_schwenkbieger">WZG_SCHWENKBIEGER</h2>
+<p>Swivel bender (Schwenkbieger) — a driven swivel/wing-bend unit. Shared columns apply; the many geometry columns and defaults are:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>LaengeGrundkoerper</td>
+<td>Base-body length (Länge des Grundkörpers)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SkizzeSchwenkeinheit</td>
+<td>Drawing of the swivel unit (Zeichnung der Schwenkeinheit)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Mutepunkt</td>
+<td>Punch hold point above sheet thickness for part insertion (Haltepunkt des Stempels über Blechdicke)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 4)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>FingerabstandMin</td>
+<td>Min back-gauge finger distance from die edge (Mindestabstand Anschlagfinger)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MinSchenkel / MaxSchenkel</td>
+<td>Min / max leg length (Mindest-/max. Schenkellänge)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BlechDickeMin / BlechDickeMax</td>
+<td>Min/max workpiece sheet thickness</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WinkelMin / WinkelMax</td>
+<td>Min / max bend angle (min./max. Biegewinkel)</td>
+<td>float</td>
+<td>degrees</td>
+<td>— (defaults 90 / 180)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>EinbauHebelY / EinbauHebelZ</td>
+<td>Lever mount position in Y / Z (Position Einbauhebel)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RadiusHebel</td>
+<td>Working radius at the lever (Arbeitsradius am Hebel)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>LaengeHebel</td>
+<td>Lever length (Länge des Hebels)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WinkelHebel</td>
+<td>Lever angle to lever axis (Winkel des Hebels zur Hebelachse)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>EinbauwinkelHebel</td>
+<td>Lever mounting angle (Einbauwinkel des Hebels)</td>
+<td>float</td>
+<td>degrees/rad</td>
+<td>— (default 0.868)</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>MittenVersatz</td>
+<td>Centre offset in Y</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MaxEintauchtiefe</td>
+<td>Max Z travel of the swivel unit (max. Bewegung Schwenkeinheit in Z)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Distanzblock</td>
+<td>Distance-block size (Größe Distanzblock)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BestellnrBlock</td>
+<td>Distance-block order number (Bestellnummer Distanzblock)</td>
+<td>nvarchar(20)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Gesenkweite</td>
+<td>Here: distance lever↔bend point (Abstand Hebel-Biegepunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 5)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RadiusAntriebsrad</td>
+<td>Radius at the drive wheel (Radius am Antriebsrad)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 14)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>RadiusAntriebsflaeche</td>
+<td>Radius at the drive face (Radius an Antriebsfläche)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 32.2)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>PositionRadY / PositionRadZ</td>
+<td>Wheel↔mount-point distance in Y / Z (Abstand Rad zum Einbaupunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (defaults 88.5 / −16.5)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>PositionFlaecheY / PositionFlaecheZ</td>
+<td>Wheel↔face-centre distance in Y / Z (Abstand Rad zum Flächenmittelpunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (defaults 106.7 / −15.7)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Haltertyp</td>
+<td>Matching holder if insert tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free label</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<p><em>(<code>BeschreibungID</code> default 39 = Die; <code>AufnahmeID</code> default 63 = 13MM_TOOL_SEAT; <code>LageID</code> default 14 = Lower. No <code>NachschleifLaenge</code>; <code>Arbeitshoehe</code> present.)</em></p>
+<h2 id="wzg_welle">WZG_WELLE</h2>
+<p>Radius / wave shafts (Welle) — roll-formed radius and conical shafts. Shared columns apply; shaft-specific &amp; coded columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>WellenformID</td>
+<td>Shaft form — round / conical (Form der Welle: Rund, Konisch)</td>
+<td>int</td>
+<td>—</td>
+<td>Meaning fixed; <strong>numeric legend undetermined</strong> (needs ENUMWERTE); default 36</td>
+<td>MS_Description</td>
+<td>low</td>
+</tr>
+<tr>
+<td>RadiusStart / RadiusEnde</td>
+<td>Shaft radius at start / end point (Radius am Start-/Endpunkt)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SonderRadiusMin / SonderRadiusMax</td>
+<td>Min / max working radius for ordering (Arbeitsradius für Bestellungen)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Haltertyp</td>
+<td>Matching holder if insert tool</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free label</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+</tbody>
+</table>
+<p><em>(<code>BeschreibungID</code> default 40 = Radius punch; <code>LageID</code> default 13 = Upper; <code>MontageID</code> default 9 = tool insert. No <code>NachschleifLaenge</code>.)</em></p>
+<h2 id="wzg_mess_bereiche">WZG_MESS_BEREICHE</h2>
+<p>Angle-measuring ranges — a disk/measuring-tool combination and the sheet-thickness / strength / angle windows it can measure and hem within. One-line purpose: <em>&quot;Identnummer (Beschreibung) of the disk combination&quot;</em> per measuring range. No shared tool-header block; own columns:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Unique tool number (eindeutige Werkzeugnummer)</td>
+<td>int</td>
+<td>—</td>
+<td>— (FK target for <code>WZG_MESS_SCHENKEL</code>)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>OwTyp</td>
+<td>Matching upper-tool type (dazupassender Oberwerkzeugtyp)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Typ</td>
+<td>Ident/description of the combination (Identnummer Kombination)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypScheibe1 / TypScheibe2</td>
+<td>Drawing of measuring disk 1 / 2 (Werkzeugzeichnung Scheibe 1/2)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypMesswerkzeug</td>
+<td>Matching measuring-tool type — Normal / ZM (Messwerkzeugtyp: Normal, ZM)</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE); <strong>default 90</strong>. Likely shares the <code>WZG_TYP_ID</code> space (19 measuring tool = Normal; 21 Z-measuring = ZM), but default 90 is outside it — treat as unresolved</td>
+<td>MS_Description (INFO_TEXTS ref)</td>
+<td>low</td>
+</tr>
+<tr>
+<td>MinWzgRadius / MaxWzgRadius</td>
+<td>Min / max tool radius (MS_Description mislabels as min/max Festigkeit)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (defaults 1 / 1)</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>ZudrueckFlag</td>
+<td>Whether this combination can hem (ob zugedrückt werden kann)</td>
+<td>int</td>
+<td>—</td>
+<td>4 = hemming active; 5 = hemming not active</td>
+<td>INFO_TEXTS (default 5)</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MaxZugfestigkeit1/2/3</td>
+<td>Max tensile strength for range 1/2/3 (max. Zugfestigkeit Bereich n)</td>
+<td>float</td>
+<td>N/mm²</td>
+<td>— (defaults 500 / 800 / 0)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MinBlechdicke1/2/3, MaxBlechdicke1/2/3</td>
+<td>Min/max sheet thickness where combination applies, range 1/2/3</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MinMesswinkel1/2/3, MaxMesswinkel1/2/3</td>
+<td>Min/max measurable bend angle, range 1/2/3 (min./max. messbarer Biegewinkel)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wzg_mess_schenkel">WZG_MESS_SCHENKEL</h2>
+<p>Measuring legs — minimum leg length required to measure at a given angle, per measuring combination (child of <code>WZG_MESS_BEREICHE</code>, FK <code>ID</code>, <code>ON DELETE CASCADE</code>).</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Unique tool number (FK → WZG_MESS_BEREICHE.ID)</td>
+<td>int</td>
+<td>—</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>OwTyp</td>
+<td>Upper-tool type (Oberwerkzeugtyp)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Typ</td>
+<td>Ident/description of the combination (Identnummer Kombination)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Messwinkel</td>
+<td>Measuring angle (Messwinkel)</td>
+<td>float</td>
+<td>degrees</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MinSchenkellaenge</td>
+<td>Minimum leg length (minimale Schenkellänge)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<h2 id="wzg_tastscheiben">WZG_TASTSCHEIBEN</h2>
+<p>Sensor / measuring disks (Tastscheiben) used for in-die angle measuring. Own columns (no full shared header; no <code>FestigkeitVon/Bis</code>, no <code>Gewicht</code>, no <code>EndbearbeitungID</code>):</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute (DB column)</th>
+<th>Meaning (EN, German)</th>
+<th>Type</th>
+<th>Unit</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ID</td>
+<td>Unique tool number</td>
+<td>int</td>
+<td>—</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Typ</td>
+<td>Ident/description of tool type</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BeschreibungID</td>
+<td>Tool description class</td>
+<td>int</td>
+<td>—</td>
+<td>see BeschreibungID legend; default 41 = Sensor disk</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>AufnahmeID</td>
+<td>Tool seat/mount</td>
+<td>int</td>
+<td>—</td>
+<td>see AufnahmeID catalogue; default 0 = Sensors</td>
+<td>INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>WerkstoffID</td>
+<td>Tool material number</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined (needs ENUMWERTE); default 1</td>
+<td>—</td>
+<td>low</td>
+</tr>
+<tr>
+<td>LageID</td>
+<td>Beam/table position</td>
+<td>int</td>
+<td>—</td>
+<td>13 Upper; 14 Lower; 15 both (default 13)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>EinbauID</td>
+<td>Whether may be rotated</td>
+<td>int</td>
+<td>—</td>
+<td>10 as drawn; 11 only flipped; 12 either way (default 12)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MontageID</td>
+<td>Insert vs. complete tool</td>
+<td>int</td>
+<td>—</td>
+<td>8 complete; 9 insert (default 9)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>BelastungMax</td>
+<td>Max load</td>
+<td>float</td>
+<td>kN</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Arbeitshoehe</td>
+<td>Working height w/o seat</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>MessformID</td>
+<td>Measuring-disk form — round / linear (Form der Mess-Scheibe: Rund, linear)</td>
+<td>int</td>
+<td>—</td>
+<td>Meaning fixed; <strong>numeric legend undetermined</strong> (needs ENUMWERTE); default 34</td>
+<td>MS_Description</td>
+<td>low</td>
+</tr>
+<tr>
+<td>OwTyp</td>
+<td>Matching upper-tool type</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TypMesswerkzeug</td>
+<td>Matching measuring-tool type — Normal / ZM</td>
+<td>int</td>
+<td>—</td>
+<td>undetermined; <strong>default 19</strong> = &quot;measuring tool&quot; per <code>WZG_TYP_ID</code> legend (Normal); 21 would be Z-measuring (ZM). Medium: shares WZG_TYP_ID space</td>
+<td>MS_Description / INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>Messwert</td>
+<td>Radius of the measuring disk (Radius der Mess-Scheibe)</td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>AnzVorhandenerScheiben</td>
+<td>Number of measuring disks available (Anzahl vorhandener Messscheiben)</td>
+<td>int</td>
+<td>—</td>
+<td>— count</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>SkizzeDetail</td>
+<td>Tool drawing (Werkzeugzeichnung)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>TrumpfIdentnummer</td>
+<td>TCO tool ident number for ordering (TCO-Werkzeugidentnummer)</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Identifizierung</td>
+<td>How the disk is recognised</td>
+<td>nvarchar(50)</td>
+<td>—</td>
+<td>— free</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Eckradius</td>
+<td>Length of the sensor disk (only if linear) — <em>column named &quot;Eckradius&quot; but MS_Description says length</em></td>
+<td>float</td>
+<td>mm</td>
+<td>—</td>
+<td>MS_Description</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>Scheibendicke</td>
+<td>Thickness of the sensor disk (Dicke der Tastscheibe)</td>
+<td>float</td>
+<td>mm</td>
+<td>— (default 1)</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<h2 id="related-legends-i-own-that-live-in-sibling-tables-wzg_ma-wzg_ma_gruppe-wzg_ow">Related legends I own that live in sibling tables (WZG_MA / WZG_MA_GRUPPE / WZG_OW)</h2>
+<p>These ARV attributes are <strong>not</strong> columns of the 15 tables above — they belong to the standard lower-die (<code>WZG_MA</code>, &quot;Matrize&quot;), die-group (<code>WZG_MA_GRUPPE</code>) and upper-tool (<code>WZG_OW</code>) tables of a sibling cluster — but this cluster owns their value legends per the task. Documented here for completeness/reconciliation:</p>
+<table>
+<thead>
+<tr>
+<th>ARV attribute</th>
+<th>Home table (DB)</th>
+<th>Meaning (EN, German)</th>
+<th>Value legend</th>
+<th>Source</th>
+<th>Conf</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>MatritzenformID</td>
+<td>ToPs600 / legacy resx only (<strong>no DB column</strong> found; conceptually WZG_MA die shape)</td>
+<td>Die shape (Matrizenform)</td>
+<td>58 V die; 59 U-die; 61 Multi-V die; 62 round die; 70 ACB calibration die; 71 asymmetrical V die</td>
+<td>INFO_TEXTS</td>
+<td>medium</td>
+</tr>
+<tr>
+<td>Biegeart</td>
+<td>WZG_MA.Biegeart / WZG_OW.Biegeart</td>
+<td>Bend method possible with tool (Freibiegen, Prägen)</td>
+<td>1 Folding; 2 Air Bending; 3 Bottom Bending (default 2). <strong>≠ benddef.h <code>Biegeart</code></strong> (0 std bend…9 aux)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Verwendung</td>
+<td>WZG_MA.Verwendung / WZG_OW.Verwendung</td>
+<td>Usage/application (Napf, Form, Prägen, Kieme …)</td>
+<td>1 Air Bending; 2 Bottom bending; 3 U; 4 Z; 5 Hinge; 6 panel bending; 7 Cup; 8 Louvre; 9 Hat; 10 Bead; 11 Hemming; 12 SBW; 13 Radius; 14 Countersink; 15 shifted bending line; 16 bracing; 17 deep-drawing; 18 Radius insert; 19 3D form; 20 Logo; 21 Letter; 22 bend relief; 23 press; 24 corner forming; 25 clip; 26 shape; 27 ACB; 28 window; 29 window swiveling; 30 unknown (default 0 = none)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>Falzspalte</td>
+<td>WZG_MA.Falzspalte</td>
+<td>Multi-V with folding gap (Multi-V mit Falzspalte)</td>
+<td>4 = active; 5 = not active (default 5)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>GWOhneRadius</td>
+<td>WZG_MA.GWOhneRadius</td>
+<td>Die width without draw-in radius (Gesenkweite ohne Einzugsradius)</td>
+<td>5 = Trumpf die-width intersection (radius-inside); 4 = tangent intersection point (Amada-like) (default 5)</td>
+<td>INFO_TEXTS</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_MA_BIEGEART</td>
+<td>WZG_MA_GRUPPE.WZG_MA_BIEGEART</td>
+<td>Bend method of the dies in this group (Freibiegen, Prägen)</td>
+<td>Likely 1 air / 2 bottom (cf. WZG_OW_BIEGEART); <strong>default 0</strong> → unresolved</td>
+<td>INFO_TEXTS / inferred</td>
+<td>low</td>
+</tr>
+<tr>
+<td>WZG_MA_GESENKWEITE</td>
+<td>WZG_MA_GRUPPE.WZG_MA_GESENKWEITE</td>
+<td>Die width of the dies in the group (Gesenkweite der Gruppe)</td>
+<td>— numeric (mm), not coded</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+<tr>
+<td>WZG_MA_WINKEL</td>
+<td>WZG_MA_GRUPPE.WZG_MA_WINKEL</td>
+<td>Angle of the dies in the group (Winkel der Gruppe)</td>
+<td>— numeric (degrees), not coded</td>
+<td>MS_Description</td>
+<td>high</td>
+</tr>
+</tbody>
+</table>
+<h2 id="open-questions">Open questions</h2>
+<ul>
+<li><strong><code>TypGreifnut</code> legend conflict.</strong> The DB <code>MS_Description</code> says <code>0 = B06; 1 = B23</code>, but the shipped TruARV/resx legend says <code>0 None; 1 A0; 2 A1; 3 A2; 4 S1; (?) L0</code>. These are two different code systems (grip-groove standard designations vs. named grooves). Needs a live <code>ENUMWERTE</code> / groove-catalogue export to reconcile; current tables default <code>TypGreifnut = 0</code>.</li>
+<li><strong>Die/tool shape enums have known meaning but unknown numbers.</strong> <code>GesenkformID</code> (default 21), <code>GesenkartID</code> (28), <code>FlachBearbID</code> (24), <code>WellenformID</code> (36), <code>MessformID</code> (34) all reference <code>ENUMWERTE</code>, which is empty in this DDL snapshot. Their defaults lie outside the resx <code>MatritzenformID</code> (58–71) / <code>StempelformID</code> (54–57) ranges, so those shipped legends <strong>cannot</strong> be assumed to apply. Legends undetermined until <code>ENUMWERTE</code> seed data is obtained.</li>
+<li><strong><code>TypMesswerkzeug</code> default mismatch.</strong> <code>WZG_TASTSCHEIBEN</code> defaults 19 (matches <code>WZG_TYP_ID</code> &quot;measuring tool&quot;), but <code>WZG_MESS_BEREICHE</code> defaults 90. Whether <code>TypMesswerkzeug</code> uses the <code>WZG_TYP_ID</code> code space, a <code>MessformID</code>-style space, or its own is unconfirmed.</li>
+<li><strong><code>WerkstoffID</code>, <code>EndbearbeitungID</code>, <code>EinbauSafetyClickID</code>, <code>WerkzeugwechslerFlag</code> codes</strong> — no legend derivable from schema (no CHECK, no INFO_TEXTS entry). <code>WerkzeugwechslerFlag</code> is only bounded 0..3 by CHECK. All need <code>ENUMWERTE</code> (and for the finishing/material tables, the <code>SPRACHEN_ENG</code> text join).</li>
+<li><strong><code>RichtungNachUnten</code> (WZG_GESENK)</strong> — legend inferred (4=yes / 5=no) from the DB's consistent 4/5 yes-no convention (<code>BiegenImGesenk</code>, <code>BohrungMoeglich</code>, <code>Falzspalte</code>, <code>ZudrueckFlag</code>), not directly documented. Default 5.</li>
+<li><strong>ToPs600 vs. tc_dbase enum divergence.</strong> The ARV/ToPs600 <code>Biegeart</code> (1 Folding / 2 Air / 3 Bottom) is <strong>not</strong> the tc_dbase <code>benddef.h</code> <code>Biegeart</code> (0 Normkantung … 9 Hilfsbiegung); likewise <code>FlachBearbID</code> is only loosely related to <code>benddef.h</code> <code>Biegetechnik</code> (10 Prägung / 11 Fügung / 12 Umformen). Treat benddef.h strictly as cross-reference, not as the code source for ARV columns.</li>
+<li><strong><code>MinWzgRadius</code> / <code>MaxWzgRadius</code> (WZG_MESS_BEREICHE)</strong> carry an <code>MS_Description</code> that reads &quot;min/max Festigkeit&quot; (strength) although the column names say radius — likely a copy-paste error in the schema comment; treated here as tool radius (mm) per the column name.</li>
+<li><strong><code>MatritzenformID</code> has no DB column</strong> in this schema. It appears only as a legacy resx/ToPs600 attribute name; the physical die-shape column is <code>GesenkformID</code> (WZG_GESENK) or the WZG_MA die table. Confirm which table the ARV exporter emits <code>MatritzenformID</code> for.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trukit-org-trumpf-title-arv-tables-dies-special-bend-tools-tags-trukit-truarv-arv-bend-reference-source-trutopscad-legacy-source-bend-db-schema-tops-600-files-dated-may-2024-status-reverse-engineered-draft-related-arv-format-value-mapping-truarv-arv-value-legends-consolidated">product: trukit
+org: trumpf
+title: "ARV Tables — Dies & Special Bend Tools"
+tags: [trukit, truarv, arv, bend, reference]
+source: "TruTopsCAD legacy source — Bend DB schema (ToPs 600), files dated May 2024"
+status: reverse-engineered-draft
+related: ["[[ARV Format & Value Mapping]]", "[[TruARV]]", "[[ARV Value Legends (consolidated)]]"]</a>
+  </li>
+  <li level="1">
+   <a href="#shared-columns-present-in-nearly-every-tool-table">Shared columns (present in nearly every tool table)</a>
+  </li>
+  <li level="2">
+   <a href="#shared_attribute-columns-per-length-tool-instances">Shared  columns (per-length tool instances)</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_gesenk">WZG_GESENK</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_falz">WZG_FALZ</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_flach">WZG_FLACH</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_zbieg">WZG_ZBIEG</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_scharnier">WZG_SCHARNIER</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_schwenkbieger">WZG_SCHWENKBIEGER</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_welle">WZG_WELLE</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_mess_bereiche">WZG_MESS_BEREICHE</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_mess_schenkel">WZG_MESS_SCHENKEL</a>
+  </li>
+  <li level="1">
+   <a href="#wzg_tastscheiben">WZG_TASTSCHEIBEN</a>
+  </li>
+  <li level="1">
+   <a href="#related-legends-i-own-that-live-in-sibling-tables-wzg_ma-wzg_ma_gruppe-wzg_ow">Related legends I own that live in sibling tables (WZG_MA / WZG_MA_GRUPPE / WZG_OW)</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions">Open questions</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></span>
+ <span class="next"><a href="arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

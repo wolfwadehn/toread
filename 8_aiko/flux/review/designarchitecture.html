@@ -1,0 +1,1247 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>DesignArchitecture</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Flux</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Review</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a class="active" href="designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Review</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="designarchitecture.html">DesignArchitecture</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>DesignArchitecture</h1>
+<hr />
+<p>product: flux
+org: metamation
+tags:</p>
+<ul>
+<li>metamation</li>
+<li>knowledge-base</li>
+<li>code-review</li>
+<li>flux</li>
+<li>design-architecture
+type: code-review-guidelines
+project: Flux
+priority: firm
+updated: 2026-07-13</li>
+</ul>
+<hr />
+<h1 id="flux-review-design-architecture">🏛️ Flux Review — Design &amp; Architecture</h1>
+<blockquote>
+<p>[!abstract] Scope · priority: <strong>firm</strong>
+Root-cause thinking, API-surface hygiene, invariants-by-construction, strong typing, DRY.</p>
+<p><strong>This page has two parts:</strong> the <strong>official repo rules</strong> for this theme (G006, G011, G023, G026, G027, G033, G035, D001, D002, D003, D004, D005, D006, D014, D017, D018, D020, D021, D025) and <strong>Arvind's mined additions</strong> (29 rules, 26 novel).</p>
+<p>⬅ Back to [[Flux — Code Review Guidelines|the review index]].</p>
+</blockquote>
+<h2 id="official-repo-rules-source-of-truth">📘 Official repo rules (source of truth)</h2>
+<blockquote>
+<p>[!note] Verbatim from the repo — do not edit here
+Copied from <code>.github/instructions/pr-review-guidelines.instructions.md</code> and <code>.github/instructions/design-principles.instructions.md</code> (loaded automatically by Copilot/Claude), synced from commit <code>cf7f99c55</code> on 2026-07-13. The <strong>repo is authoritative</strong> — edit there and re-run the KB sync.</p>
+</blockquote>
+<h4 id="g006-magic-numbers-use-named-constants-58-occurrences">G006: Magic Numbers — Use Named Constants (58 occurrences)</h4>
+<p><strong>Severity: High</strong></p>
+<p>Replace all unexplained numeric literals with named constants:</p>
+<pre><code class="language-csharp">// ❌ Wrong
+if (distance &gt; 0.001) { }
+mBuffer = new byte[4096];
+for (int i = 0; i &lt; 42; i++) { }
+
+// ✅ Correct
+const double Tolerance = 0.001;
+const int BufferSize = 4096;
+const int MaxIterations = 42;
+if (distance &gt; Tolerance) { }
+mBuffer = new byte[BufferSize];
+</code></pre>
+<p>Real reviewer feedback:</p>
+<blockquote>
+<p><em>&quot;We should not use any magic numbers. Create a constant with a proper name and use it.&quot;</em><br />
+<em>&quot;Since the size is a fixed value, this can be a <code>const</code>.&quot;</em><br />
+<em>&quot;Replace magic numbers with <code>double.MaxValue</code> for clarity.&quot;</em></p>
+</blockquote>
+<p><strong>Exceptions</strong> (not magic numbers): <code>-1, 0, 1, 2, 3, 4, 5</code> in loops; array indexing <code>[0]</code>, <code>[1]</code>; <code>360</code>, <code>180</code>, <code>90</code> for geometry; <code>0.5</code> for halving; <code>Math.PI</code>; coordinate origin <code>(0, 0, 0)</code>.</p>
+<h4 id="g011-remove-dead-commented-out-code-24-occurrences">G011: Remove Dead / Commented-Out Code (24 occurrences)</h4>
+<p><strong>Severity: Medium</strong></p>
+<p>Never commit commented-out code. Remove it entirely.</p>
+<pre><code class="language-csharp">// ❌ Wrong
+// var old = ComputeOld ();
+// return old.Value;
+return ComputeNew ();
+
+// ✅ Correct
+return ComputeNew ();
+</code></pre>
+<p>The only exception: a <code>// TODO:</code> comment with a full explanation of <em>what</em> is temporary and <em>when/why</em> it will be addressed:</p>
+<pre><code class="language-csharp">// TODO: Camera position values are hard-coded for now. This will be replaced
+// as soon as the tool master implementation is available (tracked in #45123).
+</code></pre>
+<p>Vague TODOs are also rejected:</p>
+<pre><code class="language-csharp">// ❌ Vague and rejected
+// TODO calc coords
+// TODO fix this
+// TODO mod even more coords for part, gripper
+
+// ✅ Accepted — full sentence with context
+// TODO: Stop positions are hard-coded pending the backgauge calibration API (Case 44801).
+</code></pre>
+<h4 id="g023-flat-namespaces-only-r020">G023: Flat Namespaces Only (R020)</h4>
+<p><strong>Severity: High — structural rule</strong></p>
+<p>Only these namespaces are allowed:</p>
+<ul>
+<li><code>namespace Flux;</code></li>
+<li><code>namespace Flux.API;</code></li>
+<li><code>namespace Flux.APP;</code></li>
+<li><code>namespace Flit;</code> (for test files)</li>
+</ul>
+<pre><code class="language-csharp">// ❌ Wrong
+namespace Flux.Core;
+namespace Flux.API.Bend;
+namespace Flux.API.Bend.Post.BNCX;
+
+// ✅ Correct
+namespace Flux.API;
+</code></pre>
+<h4 id="g026-re-run-apigen-after-api-changes-p008">G026: Re-run APIGen After API Changes (P008)</h4>
+<p><strong>Severity: Critical for API changes</strong></p>
+<p>If you add, modify, or remove any <code>public</code> member in <code>namespace Flux.API</code>:</p>
+<ol>
+<li>Re-run <code>APIGen</code> to regenerate the <code>.gen.cs</code> output files.</li>
+<li>Commit the regenerated files in the same PR.</li>
+<li>Document the API change in the PR description.</li>
+</ol>
+<h4 id="g027-singleton-pattern-with-lazyt-r018">G027: Singleton Pattern with <code>Lazy&lt;T&gt;</code> (R018)</h4>
+<p><strong>Severity: Low — but marks code quality</strong></p>
+<p>For thread-safe singletons:</p>
+<pre><code class="language-csharp">// ✅ Thread-safe singleton
+static readonly Lazy&lt;MCSettings&gt; mLazy = new (() =&gt; new ());
+public static MCSettings It =&gt; mLazy.Value;
+
+// ✅ Acceptable non-thread-safe (simple cases)
+public static MCSettings It =&gt; mIt ??= new ();
+</code></pre>
+<p>Singleton property must be named <code>It</code>.</p>
+<h4 id="g033-duplicate-ids-are-rejected">G033: Duplicate IDs Are Rejected</h4>
+<p><strong>Severity: Critical</strong></p>
+<ul>
+<li><strong>Translation IDs</strong>: must be globally unique across all lang files.</li>
+<li><strong>Test case IDs</strong>: must be unique; never reuse IDs from other branches.</li>
+</ul>
+<blockquote>
+<p><em>&quot;8091 and 8092 IDs are duplicated. Please use new IDs.&quot;</em></p>
+</blockquote>
+<h4 id="g035-repeated-conditions-extract-to-property-or-variable-p001">G035: Repeated Conditions — Extract to Property or Variable (P001)</h4>
+<p><strong>Severity: Low — code quality</strong></p>
+<p>If you write the same condition 3+ times, extract it:</p>
+<pre><code class="language-csharp">// ❌ Wrong — same condition repeated
+TPickup = isMagnet ? 0 : plate[&quot;PickupTime&quot;].F,
+TRelease = isMagnet ? 0 : plate[&quot;ReleaseTime&quot;].F,
+TStop    = isMagnet ? 0 : plate[&quot;StopTime&quot;].F,
+
+// ✅ Better
+bool isSuction = !isMagnet;
+TPickup = isSuction ? plate[&quot;PickupTime&quot;].F  : 0,
+TRelease = isSuction ? plate[&quot;ReleaseTime&quot;].F : 0,
+TStop    = isSuction ? plate[&quot;StopTime&quot;].F    : 0,
+</code></pre>
+<blockquote>
+<p><em>&quot;We use this <code>or</code> combination at least 3 times. Should we make a property reflecting what it means?&quot;</em></p>
+</blockquote>
+<h4 id="d001-prefer-2d-over-3d-when-possible">D001: Prefer 2D Over 3D When Possible</h4>
+<p>When a problem can be solved in 2D, do not introduce 3D.<br />
+If parts are placed flat (e.g. on a centering table, double-sheet detector), treat it as a 2D problem first.</p>
+<blockquote>
+<p><em>&quot;First, we should try to see whether we can solve the problem using 2d instead of 3d. Here, as we are placing the part flat, this can be a 2d problem.&quot;</em></p>
+</blockquote>
+<p><strong>Implication:</strong> Before adding a <code>Point3</code> / <code>Matrix3</code> / <code>XForm4</code> computation, ask: is the Z axis actually needed here?</p>
+<h4 id="d002-caching-requires-an-explicit-invalidation-strategy">D002: Caching Requires an Explicit Invalidation Strategy</h4>
+<p>Every time you introduce a cache field (prefixed with <code>_</code>), you must immediately define and implement its invalidation trigger. Forgetting invalidation leads to stale data bugs.</p>
+<blockquote>
+<p><em>&quot;Now that you are caching it, we have to think about when to clear the cache. See, <code>_prev</code>, when we insert custom waypoint, <code>_prev</code> is set null. We may have to set <code>_next</code> also to null when you insert a way point. In another scenario, when we are constructing BendSteps and if we used Next in the code, as we are constructing we won't have the complete set of steps, so Next will be computed wrongly and cached.&quot;</em></p>
+</blockquote>
+<p><strong>Checklist when adding a cached field:</strong></p>
+<ul class="contains-task-list">
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> What action invalidates this cache?</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Is there a second code path that modifies related state but doesn't reset the cache?</li>
+<li class="task-list-item"><input disabled="disabled" type="checkbox" /> Is it safer to compute lazily at call site instead of caching (if called rarely)?</li>
+</ul>
+<blockquote>
+<p><em>&quot;As we are only using it in AppendCode, I think it is better getting the next step at the start and use it, instead of caching it.&quot;</em></p>
+</blockquote>
+<h4 id="d003-a-method-that-does-two-things-must-be-split-or-renamed">D003: A Method That Does Two Things Must Be Split or Renamed</h4>
+<p>If a method has two distinct responsibilities, either:</p>
+<ol>
+<li>Split it into two methods with single-purpose names, or</li>
+<li>Rename it to make both responsibilities explicit in the name.</li>
+</ol>
+<blockquote>
+<p><em>&quot;If you look into <code>EndMessage</code>, it does two functions. Either the name should be <code>EndAndSendMessage</code> or split it. Also, I suggest all TrumpfAnalytics methods should return the JSON object which can be used for testing without having to send it.&quot;</em></p>
+</blockquote>
+<p><strong>Pattern to avoid:</strong></p>
+<pre><code class="language-csharp">void EndMessage () {
+    WriteToLog ();      // side effect 1
+    SendToAnalytics (); // side effect 2
+}
+</code></pre>
+<p><strong>Pattern to prefer:</strong></p>
+<pre><code class="language-csharp">string BuildMessage () =&gt; /* returns JSON */;
+void Send (string json) =&gt; /* sends it */;
+</code></pre>
+<h4 id="d004-design-for-testability-methods-should-be-callable-without-side-effects">D004: Design for Testability — Methods Should Be Callable Without Side Effects</h4>
+<p>Methods that write files, send HTTP messages, or modify global state cannot be unit tested cleanly.<br />
+Extract the pure computation into a return value; let the caller decide what to do with it.</p>
+<blockquote>
+<p><em>&quot;Usually, we won't write to text file when called during testing. If we call the function for some other function, it will write to text file even though we don't need it. This calls for change in the logic.&quot;</em><br />
+<em>&quot;We refactored the TrumpfAnalytics code to make it properly testable. Most messages now return the JSON string and a new extension method can be called on top to send it. This allows us to test the messages without having to use FX.Testing.&quot;</em></p>
+</blockquote>
+<p><strong>Pattern:</strong> Return the data; don't send it internally.</p>
+<h4 id="d005-machine-specific-ifelse-must-become-a-named-property">D005: Machine-Specific <code>if</code>/<code>else</code> Must Become a Named Property</h4>
+<p>Never write <code>if (machine is B36)</code> or <code>if (ePost == EPost.L95BC)</code> directly in logic.<br />
+Instead, add a named boolean property to the machine class:</p>
+<blockquote>
+<p><em>&quot;I suspect there will be more series of machines which support this new format. My suggestion is to create a property in BendMachine like <code>LCBV2</code> and use it instead of B36-specific code.&quot;</em></p>
+</blockquote>
+<pre><code class="language-csharp">// ❌ Wrong — brittle, doesn't scale to new machines
+if (mc.IsB36Series || mc.Model == &quot;LCB&quot;) { ... }
+
+// ✅ Correct
+bool IsLCBV2 =&gt; mc.IsB36Series || mc.Model == &quot;LCB&quot;;
+// then in logic:
+if (mc.IsLCBV2) { ... }
+</code></pre>
+<p><strong>Why:</strong> New machine series will be added. Centralising the condition means you update one property, not 10 scattered <code>if</code> blocks.</p>
+<h4 id="d006-apis-must-not-expose-temporary-or-internal-fields">D006: APIs Must Not Expose Temporary or Internal Fields</h4>
+<p>Do not add public properties to interfaces or base classes for fields that are implementation details or transitional.</p>
+<blockquote>
+<p><em>&quot;I think <code>IsStandard</code> should not be exposed. As it is temporary field, I think we need to think of other ways. How about we set <code>UserImport</code> flag to custom grippers and expose only that. As the Flags are serialized, it will be part of fxgrip.&quot;</em></p>
+</blockquote>
+<p><strong>Rule:</strong> If a field is temporary, find a way to express the stable, semantic intent. Expose the intent, not the implementation detail.</p>
+<h4 id="d014-never-encode-machine-names-in-logic-always-abstract-upward">D014: Never Encode Machine Names in Logic — Always Abstract Upward</h4>
+<p>When you write a machine-specific condition, ask: &quot;what is the <em>semantic</em> of this condition, and will other machines share it in the future?&quot;</p>
+<blockquote>
+<p><em>&quot;We use this <code>or</code> combination at least 3 times. Should we make a property reflecting what it means? At least all the comments where <code>|| mc.IsB36Series</code> was added need to be updated, because they only mention LCB laser.&quot;</em></p>
+</blockquote>
+<p>Create a property in the right class (<code>BendMachine</code>, <code>BCellTech</code>, etc.) that encodes the semantic:</p>
+<pre><code class="language-csharp">// In BendMachine:
+/// &lt;summary&gt;True for machines that support the LCB V2 NC format&lt;/summary&gt;
+public bool IsLCBV2 =&gt; IsB36Series || Model.StartsWith (&quot;LCB&quot;);
+</code></pre>
+<h4 id="d017-think-about-what-breaks-when-you-revert-a-change">D017: Think About What Breaks When You Revert a Change</h4>
+<p>When a previous PR added something (an argument, a flag, a workaround) to fix a bug, and your PR removes it, explicitly verify the original bug is fixed.</p>
+<blockquote>
+<p><em>&quot;For Case 44397, you added the <code>-os</code> argument in PR #2976. Now it is removed. Is the original case fixed? Did you check? As the fix is reverted, we should reopen the case and investigate.&quot;</em></p>
+</blockquote>
+<p><strong>Rule:</strong> If your PR undoes a change from a prior PR, reference and verify the original FogBugz case.</p>
+<h4 id="d018-extract-repeated-copy-paste-into-a-shared-function">D018: Extract Repeated Copy-Paste into a Shared Function</h4>
+<blockquote>
+<p><em>&quot;Whenever you're tempted to avoid retyping repetitive code and instead copy/paste a template from somewhere else and tweak the differences, pause for a moment and consider whether something could be factored out and reused.&quot;</em></p>
+</blockquote>
+<p>Duplicated blocks that differ only by parameter values should become a parameterised helper:</p>
+<pre><code class="language-csharp">// ❌ Wrong — same 10-parameter call twice
+NumberPair (prop1, min1, max1, step, ...);
+NumberPair (prop2, min2, max2, step, ...);
+
+// ✅ Correct
+var (propName, min, max) = ...; // select upfront
+NumberPair (propName, min, max, step, ...);
+</code></pre>
+<h4 id="d020-singleton-pattern-should-include-a-key-for-scoped-singletons">D020: Singleton Pattern Should Include a Key for Scoped Singletons</h4>
+<p>When implementing a singleton that may need to be scoped (by name, priority, or configuration), the key should encode all distinguishing attributes.</p>
+<blockquote>
+<p><em>&quot;In anticipating the other cases of Brick, please implement Singleton mechanism. And the key should include name and priority in addition to IFXHook-like interface.&quot;</em></p>
+</blockquote>
+<h4 id="d021-prefer-ienumerablet-return-types-when-caller-decides-materialisation">D021: Prefer <code>IEnumerable&lt;T&gt;</code> Return Types When Caller Decides Materialisation</h4>
+<p>Return <code>IEnumerable&lt;T&gt;</code> from methods when the caller determines whether to materialise the collection. Only return <code>List&lt;T&gt;</code> if you must guarantee multiple enumeration or O(1) count.</p>
+<blockquote>
+<p><em>&quot;Also, see if you could use <code>IEnumerable&lt;string&gt;</code>.&quot;</em></p>
+</blockquote>
+<h4 id="d025-when-fixing-a-regression-prefer-a-targeted-fix-separate-refactor-case">D025: When Fixing a Regression, Prefer a Targeted Fix + Separate Refactor Case</h4>
+<p>If the PR needs to be in the next build urgently, do the minimal safe fix now and create a FogBugz case for the refactor. Don't block the fix on the refactor.</p>
+<blockquote>
+<p><em>&quot;As the pull request is needed in next build because we are trying to fix an exception and refactoring will take more time, I suggest two approaches: 1. Fix only the exception in the pull request and create another issue/case for test addition. 2. Rename the method and create another issue/case for refactoring.&quot;</em></p>
+</blockquote>
+<h2 id="arvinds-additions-mined-from-pr-reviews">🎓 Arvind's additions (mined from PR reviews)</h2>
+<p><em>Ordered by importance (severity, then how often he repeated it). Quotes verbatim; links to the source PR.</em></p>
+<h3 id="keep-the-public-api-surface-minimal-and-members-as-private-as-possible">Keep the public API surface minimal and members as private as possible</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>Default to private; justify each public member ('Why does X have to be public?'). Do not add fields/types to the API you don't need right now. Do not add narrowly-used extension methods to widely-used types (e.g. BendOp) — they become visible project-wide; keep single-use helpers as normal methods in the class that uses them. Don't let each post-processor add convenience functions into Flux.API. External code must depend only on Flux.API.* types — holding an internal implementation object is an abstraction leak. Expose getter-only for identity/immutable values (e.g. UID), and fire change events from the setter itself rather than exposing a separate public method.</p>
+<blockquote>
+<p><em>“making private stuff public is a regressive step and should be done only as needed. It makes code analysis and refactoring more difficult, since I now no longer know if anybody is using some method”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1055#issuecomment-1500243418">PR#1055</a>, <a href="https://github.com/metamation/flux/pull/1258#discussion_r1270637977">PR#1258</a>, <a href="https://github.com/metamation/flux/pull/1176#discussion_r1223803367">PR#1176</a>, <a href="https://github.com/metamation/flux/pull/2541#discussion_r2038810448">PR#2541</a>, <a href="https://github.com/metamation/flux/pull/1685#issuecomment-1972406482">PR#1685</a>, <a href="https://github.com/metamation/flux/pull/1493#discussion_r1402883831">PR#1493</a>, <a href="https://github.com/metamation/flux/pull/2201#discussion_r1818931395">PR#2201</a></sub></p>
+<h3 id="design-with-a-security-and-privacy-mindset">Design with a security and privacy mindset</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>Any in-memory buffer that grows per-event must have a bounded capacity that evicts oldest entries (e.g. cap at ~100 messages). Never trust authoritative-elsewhere data coming from external CAD (e.g. material Density) — remove all read/write of that key everywhere and rely on the internal database. Threat-model IPC auth: assume a malicious process can kill the real server and spoof responses on the same pipe. Do not push customer design data to the cloud without legal sign-off. Conversely, since .NET decompiles readily, don't over-invest in obscurity-based anti-tampering.</p>
+<blockquote>
+<p><em>“This is unbounded ... if there are more than, say, 100 messages, start deleting the oldest ones. Otherwise it is a potential DOS vulnerability.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1294#discussion_r1280836479">PR#1294</a>, <a href="https://github.com/metamation/flux/pull/804#discussion_r1018586054">PR#804</a>, <a href="https://github.com/metamation/flux/pull/1502#issuecomment-1825516677">PR#1502</a>, <a href="https://github.com/metamation/flux/pull/386#issuecomment-1084395458">PR#386</a></sub></p>
+<h3 id="fix-the-root-cause-reject-crude-hacks-and-feature-disabling-patches">Fix the root cause; reject crude hacks and feature-disabling patches</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>When tempted to add a one-off guard (e.g. 'only when there is a single station') or to turn a feature off to make a bug go away, stop and find the real cause. Prefer removing an unwarranted mutation entirely over restricting it. Ask for the exact reproduction workflow before accepting a fix. Duplicated state that drifts out of sync (e.g. IsVisible vs Shading==Off) must be de-duplicated at the source, not kept in sync via setter patches.</p>
+<blockquote>
+<p><em>“Why do this at all? I think we should retain the incoming setup as is without any changes. Otherwise the same bug will be reported later when they try this with a single-station setup.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/74#discussion_r694811029">PR#74</a>, <a href="https://github.com/metamation/flux/pull/1017#discussion_r1128844005">PR#1017</a>, <a href="https://github.com/metamation/flux/pull/284#issuecomment-1007115640">PR#284</a>, <a href="https://github.com/metamation/flux/pull/931#issuecomment-1376891308">PR#931</a></sub></p>
+<h3 id="prevent-invalid-states-by-construction-model-constraints-as-first-class-data">Prevent invalid states by construction; model constraints as first-class data</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>When a position/value could be invalid, narrow the selectable range up front so the invalid choice is impossible — then no warning bit is even needed. Do not rely on delicate implicit dependencies like Meshes[1]/Meshes[2] index conventions; model the constraint explicitly (e.g. a configurable shadow-zone array) and handle it uniformly across auto and manual paths. Detect invalid states through a proper reusable status mechanism (a status bit evaluated for all machines) rather than ad-hoc inspection of internal geometry.</p>
+<blockquote>
+<p><em>“Why do we allow an incorrect position to be selected, and then generate a warning? Instead, we should narrow the X-Span ... and ensure the ACBLaser is never positioned in those areas ... Then, we don't even need a warning bit for this.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1283#issuecomment-1657000857">PR#1283</a></sub></p>
+<h3 id="an-api-or-dialog-must-never-close-or-drive-ui-the-user-may-be-interacting-with">An API or dialog must never close or drive UI the user may be interacting with</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>Never let a child dialog's close implicitly close the main window — remove such code and, if closing is genuinely required, add a separate explicit call. An external/public API must never close or dismiss UI the user is possibly interacting with; redesign the workflow to avoid the API touching UI lifecycle at all.</p>
+<blockquote>
+<p><em>“Why are we ever closing the main window when the MachineDBDlg is closed? That seems like a broken design.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/2550#discussion_r2038808920">PR#2550</a>, <a href="https://github.com/metamation/flux/pull/2291#issuecomment-2544467431">PR#2291</a></sub></p>
+<h3 id="exclude-underscore-prefixed-cached-fields-from-equality-and-follow-the_name-convention">Exclude underscore-prefixed cached fields from equality and follow the _name convention</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>When implementing Equals/comparison, compare only true state fields; skip cached fields like _area or _centerOfGravity. Non-serialized, lazily-computed backing fields should use the underscore-prefix (_nodes) convention rather than the m-prefix, precisely to signal they are cache, not state.</p>
+<blockquote>
+<p>_“Private fields with names that begin with an underscore (like _area or <em>centerOfGravity) are not part of the actual 'state' of the object, but are generally cached fields that are computed on demand. As such, these fields should not be compared when testing two objects for …”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1659#issuecomment-1953391757">PR#1659</a>, <a href="https://github.com/metamation/flux/pull/2267#discussion_r1868727067">PR#2267</a></sub></p>
+<h3 id="design-extension-points-as-dynamically-loaded-plugins-never-rely-on-a-fixed-shared-class-name">Design extension points as dynamically-loaded plugins; never rely on a fixed shared class name</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>Prefer a dynamic-load plugin mechanism so multiple independent variants coexist, rather than a single Flux.ExternalPost.dll the customer swaps out. Avoid any design that assumes exactly one type of a well-known name.</p>
+<blockquote>
+<p><em>“Definitely a dynamic load mechanism is preferred over having a single Flux.ExternalPost.dll that will be 'replaced' by the customer.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1644#discussion_r1485599273">PR#1644</a></sub></p>
+<h3 id="property-getters-must-have-no-write-side-effects">Property getters must have no write side-effects</h3>
+<p>🔴 firm · 🆕 novel</p>
+<p>Keep getters pure. If a read of PostBend.Deduction would update PreBend.Deduction as a side effect, refactor so the computation is explicit and ordering-independent — code generated between the two reads must not depend on which read fired first.</p>
+<blockquote>
+<p><em>“trying to read the deduction of this bend, should not update the deduction of it's pre-bend ... reading the PostBend.Deduction will update the PreBend.Deduction (unexpected!) but the code would have already been generated with the incorrect deduction.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/227#discussion_r755979791">PR#227</a></sub></p>
+<h3 id="keep-everything-strongly-typed-use-enums-and-typed-properties-over-strings-magic-ints-and-dictionaries">Keep everything strongly typed; use enums and typed properties over strings, magic ints, and dictionaries</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Don't initialize a class from a Dictionary&lt;string,string&gt;; set its typed properties directly. Replace magic 0/1/2 return codes and bool-parameter bundles with named enums. Don't branch on human-readable display names (they change and prefixes collide) — use stable IDs and centralize related ID sets in named static properties. Don't introduce a lone const string when analogous keys are inline literals. The codebase direction is to eliminate strings from the public interface.</p>
+<blockquote>
+<p><em>“In the adult world of C# we prefer to keep things strongly typed as far as possible ... the property assignment syntax will catch this at compile time.”</em></p>
+</blockquote>
+<p>Do: <code>enum EJawGripUsage { No, Yes, Manual }</code> as the return type. Don't: return an <code>int</code> documented in a comment as <code>0=No, 1=Yes, 2=Manual</code>.</p>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/45#discussion_r681669701">PR#45</a>, <a href="https://github.com/metamation/flux/pull/1140#discussion_r1207647059">PR#1140</a>, <a href="https://github.com/metamation/flux/pull/2238#discussion_r1841726670">PR#2238</a>, <a href="https://github.com/metamation/flux/pull/2413#discussion_r1996555013">PR#2413</a>, <a href="https://github.com/metamation/flux/pull/255#discussion_r768577095">PR#255</a>, <a href="https://github.com/metamation/flux/pull/1117#discussion_r1193062219">PR#1117</a>, <a href="https://github.com/metamation/flux/pull/82#issuecomment-911525895">PR#82</a></sub></p>
+<h3 id="consolidate-repeated-code-conditions-and-derived-values-into-one-property-or-helper">Consolidate repeated code, conditions, and derived values into one property or helper</h3>
+<p>🟠 consider · ↔ <code>G035</code></p>
+<p>Extract a repeated block into a local function (or a static local helper for parallel event handlers, keeping them perfectly in sync). Evaluate a repeated condition once. Create a single property (e.g. FoldTech.RotorYStroke) and route every call site through it, handling non-applicable machines centrally. Define derived flags off existing flags. When a comparison pattern recurs, add a well-named extension method (e.g. EQAbs) next to its siblings and grep for other sites it simplifies.</p>
+<blockquote>
+<p><em>“This code is repeated twice here. Move this into a local function and call it in both the places to avoid duplication.”</em></p>
+</blockquote>
+<p>Do: <code>public static bool ShopFloor =&gt; B23 || SFDelem;</code> (derive from existing flags). Don't: re-test the underlying enum conditions everywhere ShopFloor is needed.</p>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/783#discussion_r1013729311">PR#783</a>, <a href="https://github.com/metamation/flux/pull/1023#discussion_r1133518592">PR#1023</a>, <a href="https://github.com/metamation/flux/pull/2265#discussion_r1861464701">PR#2265</a>, <a href="https://github.com/metamation/flux/pull/1452#discussion_r1381133125">PR#1452</a>, <a href="https://github.com/metamation/flux/pull/794#discussion_r1014053620">PR#794</a>, <a href="https://github.com/metamation/flux/pull/899#discussion_r1053891763">PR#899</a>, <a href="https://github.com/metamation/flux/pull/1011#issuecomment-1458011794">PR#1011</a></sub></p>
+<h3 id="configserialization-hygiene-emit-only-non-defaults-keep-large-blobs-in-sidecar-files-dont-disturb-shared-formats">Config/serialization hygiene: emit only non-defaults, keep large blobs in sidecar files, don't disturb shared formats</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Give optional settings a sentinel default (e.g. float.NaN) with an [AuDefault]-style attribute so defaults are never serialized and default-valued additions don't force test regeneration. Store large blobs (build plans) in a separate sidecar file (gripper123.plan.html) alongside the .mesh, not inline in a .curl. Prefer designs where each machine carries its own config so real machines adopt new behavior while test machines keep legacy behavior. Before touching a shared writer like GEOWriter, confirm the change is spec-compliant and that no less-invasive path exists.</p>
+<blockquote>
+<p><em>“If DisablePeelingAirBlow defaults to false, can it be omitted? ... We could output it only in the case when it is true.”</em></p>
+</blockquote>
+<p>Do: <code>float TBSAngle = float.NaN;</code> with <code>[AuDefault]</code> so it isn't written for dies at the default. Don't: expose a confusing 'MaxAngle' UI field that is always serialized.</p>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1600#discussion_r1495825143">PR#1600</a>, <a href="https://github.com/metamation/flux/pull/520#issuecomment-1175974761">PR#520</a>, <a href="https://github.com/metamation/flux/pull/1225#issuecomment-1647158301">PR#1225</a>, <a href="https://github.com/metamation/flux/pull/1319#discussion_r1292654777">PR#1319</a>, <a href="https://github.com/metamation/flux/pull/1779#issuecomment-2081812501">PR#1779</a></sub></p>
+<h3 id="apply-flags-settings-and-restrictions-consistently-across-sibling-variants">Apply flags, settings, and restrictions consistently across sibling variants</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>When adding a restriction behind one product flag (e.g. a Trumpf variant), ask whether TecZoneBend and other siblings need it too. Gate new optional output behind the same existing setting that governs comparable outputs (e.g. mTech.NCPictures). A REST API must produce the same side effects as the legacy FXCMD interface — don't introduce a divergent variable to paper over a difference (and don't add a new state variable duplicating an existing one when they're never used simultaneously).</p>
+<blockquote>
+<p><em>“What about TecZoneBend? Shouldn't this limitation be valid for TZB as well?”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/2546#discussion_r2038806096">PR#2546</a>, <a href="https://github.com/metamation/flux/pull/1057#discussion_r1174264564">PR#1057</a>, <a href="https://github.com/metamation/flux/pull/219#discussion_r752828678">PR#219</a></sub></p>
+<h3 id="prefer-configdata-changes-over-new-code-and-defer-dependencies-and-class-hierarchies">Prefer config/data changes over new code, and defer dependencies and class hierarchies</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>If updating a machine.curl Materials list makes the existing generator pick up the behavior, do that instead of adding code plus a TBS dependency 'we'll add when there's something more useful there.' Don't build TBS/TBSBendCalc/TBSFoldCalc up front — add one function (GetFoldMaterials) until the complexity is warranted. Validate designs against concrete edge cases (one install driving old and new machines with different naming; user-defined material aliases through a canonical form) before committing. On non-hot paths (called once per operation) prefer the simpler, more extensible code even if marginally slower.</p>
+<blockquote>
+<p><em>“I am not sure any of this code is even need[ed] ... just update the list of Materials the machine knows about ... We will add this TBS dependency when there is something more useful there.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1225#discussion_r1261911748">PR#1225</a>, <a href="https://github.com/metamation/flux/pull/1459#issuecomment-1794672374">PR#1459</a></sub></p>
+<h3 id="structure-control-flow-so-future-edits-stay-safe">Structure control flow so future edits stay safe</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Use else (not a second specific if) for the last branch so a value is always assigned and a new variant can't leave it unset. Inside a loop, guard optional work with if  rather than continue, so code added later after the block isn't skipped. When most switch cases repeat the same guard, check it once at the top and return early. Collapse verbose conditionals with early returns and ternaries on the computed delta.</p>
+<blockquote>
+<p><em>“just replace this with else so there is always some value ... In future, if we add another flavor under Permit.Trumpf, it will break.”</em></p>
+</blockquote>
+<p>Do: <code>var move = Q.GetRobotPoseAtLie(1.0).WristPt - Q.GetRobotPoseAtLie(0.0).WristPt; if (move.Length &lt; 0.01) return ERobotTrackingType.None;</code></p>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1880#discussion_r1628758021">PR#1880</a>, <a href="https://github.com/metamation/flux/pull/1977#discussion_r1673327307">PR#1977</a>, <a href="https://github.com/metamation/flux/pull/2413#discussion_r1996553683">PR#2413</a>, <a href="https://github.com/metamation/flux/pull/2024#discussion_r1744864473">PR#2024</a></sub></p>
+<h3 id="fix-the-generator-not-the-instance-prefer-generatedreflection-driven-code-over-hand-maintained-parallel-code">Fix the generator, not the instance; prefer generated/reflection-driven code over hand-maintained parallel code</h3>
+<p>🟠 consider · ↔ <code>G026</code></p>
+<p>When a bug comes from a codegen pattern, modify the generator (e.g. emit private constructors for all types that have a Wrap method so instances can't be created incorrectly) and fix every affected site, not just the one. Auto-generate wrapper/API classes via APIGen so source-class updates and documentation carry forward. Add a self-build check (via Bin/version.ini, like FShip.CheckSelfBuild) so nobody runs an outdated generator. Avoid hand-written field-by-field copy methods that break when a field is added — use a type-version-validated reflection copy like FX.CopyFields.</p>
+<blockquote>
+<p><em>“Modify the code generator so it creates private constructors for all types where a Wrap method is being written ... and fix all the places where this same error occurs”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/2504#issuecomment-2763092860">PR#2504</a>, <a href="https://github.com/metamation/flux/pull/1981#issuecomment-2241452049">PR#1981</a>, <a href="https://github.com/metamation/flux/pull/2468#issuecomment-2727914051">PR#2468</a>, <a href="https://github.com/metamation/flux/pull/2577#discussion_r2076712307">PR#2577</a></sub></p>
+<h3 id="make-the-minimal-change-dont-gold-plate-over-extract-or-add-unjustified-guards">Make the minimal change; don't gold-plate, over-extract, or add unjustified guards</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Roll back broad refactors when only a button relabel plus tooltip is needed. Don't split logic into a local function used exactly once when inlining reads more directly. Don't add type/null guards unless a real path can trigger them ('why is this check needed?'). Skip an improbable edge case (e.g. a part moved outside the sheet) when code generation already emits a suitable warning — 'it's not worth the cost.'</p>
+<blockquote>
+<p><em>“Roll back these changes, and just change only the button text ... Add a tooltip explaining what that button would do.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1011#discussion_r1128007305">PR#1011</a>, <a href="https://github.com/metamation/flux/pull/2552#discussion_r2038931677">PR#2552</a>, <a href="https://github.com/metamation/flux/pull/2540#discussion_r2061265407">PR#2540</a>, <a href="https://github.com/metamation/flux/pull/2486#issuecomment-2729662143">PR#2486</a></sub></p>
+<h3 id="derive-values-from-context-and-data-instead-of-hardcoding">Derive values from context and data instead of hardcoding</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Default a field from relevant data (e.g. the machine's OpenHeight, not '340'). Derive counts from domain metadata (e.g. part.Info.QtyInAssy rather than 1). Derive a threshold from the parameter it depends on (e.g. scrap-grid-size − 1, not a hardcoded 1mm) so switching to a 2mm grid doesn't reintroduce the error.</p>
+<blockquote>
+<p><em>“The default for this should be the OpenHeight of the machine, not always &quot;340&quot;”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/954#discussion_r1094672141">PR#954</a>, <a href="https://github.com/metamation/flux/pull/2315#discussion_r1886749922">PR#2315</a>, <a href="https://github.com/metamation/flux/pull/963#discussion_r1096461535">PR#963</a></sub></p>
+<h3 id="reuse-existing-high-level-apis-builders-and-built-in-capabilities-instead-of-hand-rolling">Reuse existing high-level APIs, builders, and built-in capabilities instead of hand-rolling</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Load and save via Flux.API.Part.Load / Dwg.SaveGEO rather than hand-rolled equivalents. Build drawings/debug visualizations with DwgBuilder's add-pline/add-text helpers, not hand-built entities. Express a 'don't care' semantic via the color picker's existing Transparent patch rather than adding a parallel Color32.Nil mechanism and extending the control.</p>
+<blockquote>
+<p><em>“Why not just use this: var part = Flux.API.Part.Load (&quot;c:/etc/demo.fx&quot;); part.Dwg.SaveGEO (&quot;c:/etc/demo.geo&quot;);”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1890#issuecomment-2166031320">PR#1890</a>, <a href="https://github.com/metamation/flux/pull/787#discussion_r1013741342">PR#787</a>, <a href="https://github.com/metamation/flux/pull/1093#discussion_r1182421462">PR#1093</a></sub></p>
+<h3 id="match-parameter-and-return-types-to-actual-usage">Match parameter and return types to actual usage</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>If every call site passes a single Pline, take a Pline, not List<Pline>. If all candidates share the same value, take it once rather than building a List<Collider>. Return a List (natural empty-vs-null) rather than an array from collection-building methods. Also name loop variables for what they iterate (foreach dep in Deposits), not a misleading abbreviation.</p>
+<blockquote>
+<p><em>“You are calling this with a single Pline only, so is it necessary for the first parameter to be a List<Pline>?”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1108#discussion_r1189316834">PR#1108</a>, <a href="https://github.com/metamation/flux/pull/1129#discussion_r1211040385">PR#1129</a>, <a href="https://github.com/metamation/flux/pull/2640#discussion_r2131498817">PR#2640</a></sub></p>
+<h3 id="wrapper-and-api-classes-should-be-thin-general-wrappers-over-their-core-type">Wrapper and API classes should be thin, general wrappers over their core type</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Structure a Flux.API.Mechanism as nothing more than a thin wrapper over Flux.Core.Mechanism: make GetValue/SetValue instance methods (not static name-taking methods) and provide one Find method to locate a sub-mechanism rather than repeated name searches. Add a common (untyped object) property on a shared interface (IFluxDocEditor) so you can close the right editor via the untyped object instead of switching on Part vs Job. Solve with a general, extensible API (expose Layer/Entities on any entity type) rather than special-casing, and mark superseded members [Obsolete] pointing to the new approach.</p>
+<blockquote>
+<p><em>“Restructure this class so it is nothing more than a thin wrapper around Flux.Core.Mechanism ... The static methods like GetValue and SetValue should really be instance methods ... there should be one Find method”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1176#discussion_r1230324704">PR#1176</a>, <a href="https://github.com/metamation/flux/pull/1215#issuecomment-1611336190">PR#1215</a></sub></p>
+<h3 id="model-machinevariant-differences-as-one-general-property-not-per-call-site-type-checks">Model machine/variant differences as one general property, not per-call-site type checks</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Instead of a machine-specific constant plus scattered IsX checks, implement one property (e.g. MaxBends) that evaluates to the right value per machine type, and have every call site consume that property.</p>
+<blockquote>
+<p><em>“Just implement this as a MaxBends property, which evaluates to 99 for IsDelem and 999999 for all other machines.”</em></p>
+</blockquote>
+<p>Do: <code>int MaxBends =&gt; IsDelem ? 99 : 999999;</code> and use <code>machine.MaxBends</code>. Don't: re-check <code>if (machine.IsDelem)</code> at each call site.</p>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1403#discussion_r1346733360">PR#1403</a></sub></p>
+<h3 id="route-co-derived-and-cached-values-through-their-single-owning-property">Route co-derived and cached values through their single owning property</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Don't maintain mXSpans and mUnmergedXSpans in parallel where every reset of one must also null the other — read through the property that recomputes as needed. Instead of scattering defensive null-checks on a raw field, expose a property that lazily computes when null and have all callers use it.</p>
+<blockquote>
+<p><em>“The way you have written it, you have to remember to reset mUnmergedXSpans = null everywhere that mXSpans is being set to null.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/787#discussion_r1013736337">PR#787</a>, <a href="https://github.com/metamation/flux/pull/2267#discussion_r1868727067">PR#2267</a></sub></p>
+<h3 id="compare-sets-by-canonical-normalization-not-by-generating-permutations">Compare sets by canonical normalization, not by generating permutations</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Build a normalized (e.g. alphabetically sorted within a stack) list of names and compare, eliminating any permutation computation. When a fallback must pick among equal candidates, just pick the first (and use the AllSame() extension to test that all items in a sequence are equal) rather than choosing a neutral default worse than any real option.</p>
+<blockquote>
+<p><em>“Generating all permutations generally means we are dealing with a set (where ordering is not important) ... a clean approach would be to have a similar 'normalized' list of names ... sorted alphabetically ... we don't need any permutations computation at all.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1199#discussion_r1263242837">PR#1199</a>, <a href="https://github.com/metamation/flux/pull/48#discussion_r682240526">PR#48</a></sub></p>
+<h3 id="make-components-self-contained-rather-than-relying-on-external-manual-steps">Make components self-contained rather than relying on external manual steps</h3>
+<p>🟠 consider · 🆕 novel</p>
+<p>Have the installer set required registry entries itself instead of relying on a separate manual step. If a required file is missing in the target-language folder, create it automatically rather than reminding users to create an empty placeholder.</p>
+<blockquote>
+<p><em>“Let's make this self-contained and not leave a hole that will keep tripping up testers ... having an obvious hole like this will cause issues in the future when some other team is maintaining this.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/2589#issuecomment-2938295191">PR#2589</a>, <a href="https://github.com/metamation/flux/pull/655#issuecomment-1242607691">PR#655</a></sub></p>
+<h3 id="design-ui-and-inputs-for-the-domain-and-stay-standard-and-consistent">Design UI and inputs for the domain and stay standard and consistent</h3>
+<p>⚪ suggest · 🆕 novel</p>
+<p>Limit numeric precision to what the domain supports (1..6 decimal places, not 1..15). Give numeric input boxes a generous max width because users can type expressions like sqrt(25 * sin(45)). Don't make Close merely hide the window (nonstandard) without a very strong reason, and always leave the user a way to perform the fundamental action. Make controls visually consistent (matching backgrounds), even if it requires editing a control template.</p>
+<blockquote>
+<p><em>“Anything more than 6 decimal places never makes sense in the sheet metal world. Please limit this from 1 .. 6 (and not 1 to 15).”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1340#issuecomment-1698613444">PR#1340</a>, <a href="https://github.com/metamation/flux/pull/2155#discussion_r1810843246">PR#2155</a>, <a href="https://github.com/metamation/flux/pull/2310#issuecomment-2545101271">PR#2310</a>, <a href="https://github.com/metamation/flux/pull/2424#issuecomment-2775553956">PR#2424</a></sub></p>
+<h3 id="keep-developer-only-debug-code-out-of-shipping-paths-and-use-the-standard-debug-paths">Keep developer-only debug code out of shipping paths and use the standard debug paths</h3>
+<p>⚪ suggest · 🆕 novel</p>
+<p>Park rarely-used developer debug code in a dated comment block rather than shipping it behind a runtime EDbg flag/field. Write debug files to a fixed, well-known path (the codebase convention is c:/etc, or c:/temp) so they can be found — never Path.GetTempPath(), whose randomized name makes files unlocatable.</p>
+<blockquote>
+<p><em>“Move this whole block into a comment as shown below, instead of using an EDbg field - we will rarely use this code.”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/787#discussion_r1013740330">PR#787</a>, <a href="https://github.com/metamation/flux/pull/986#discussion_r1119514056">PR#986</a></sub></p>
+<h3 id="remove-dead-stores-and-statements-subsumed-by-later-code">Remove dead stores and statements subsumed by later code</h3>
+<p>⚪ suggest · ↔ <code>G011</code></p>
+<p>Don't assign a field a value that MakeInventoryPanel (or any later code) unconditionally overwrites. When a later ordering/prioritization call supersedes an earlier one, delete the earlier redundant call.</p>
+<blockquote>
+<p><em>“Why are you assigning a value to mInvCanvas here? Anyway that value will get overwritten in MakeInventoryPanel ()”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/390#discussion_r843515801">PR#390</a>, <a href="https://github.com/metamation/flux/pull/978#discussion_r1103543030">PR#978</a></sub></p>
+<h3 id="consolidate-single-purpose-methods-behind-one-invariant-enforcing-entry-point">Consolidate single-purpose methods behind one invariant-enforcing entry point</h3>
+<p>⚪ suggest · 🆕 novel</p>
+<p>Instead of three Clear-style functions, expose one Part.Clear(Part.EClear.FoldTech | Part.EClear.BendTech | ...) that also guarantees you never end up with, e.g., no geometry at all for a part. Also place variables in the class they logically belong to (Flux.DiagnosticMode.TempFiles), not a generic catch-all like FX. Put shared data/logic in the single module where it conceptually belongs rather than duplicating it across related globs.</p>
+<blockquote>
+<p><em>“I removed these 3 functions and implemented a single Part.Clear method ... this function ensures that we don't end up with a situation where there is no geometry at all for a part”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/102#discussion_r706555525">PR#102</a>, <a href="https://github.com/metamation/flux/pull/130#discussion_r718998634">PR#130</a>, <a href="https://github.com/metamation/flux/pull/1011#issuecomment-1458011794">PR#1011</a></sub></p>
+<h3 id="present-a-single-monotonic-0.1-progress-value-to-callers">Present a single monotonic 0..1 progress value to callers</h3>
+<p>⚪ suggest · 🆕 novel</p>
+<p>Flatten multi-stage progress reported by an underlying engine into a single 0..1 value (or expose the stages explicitly). A value that sweeps 0..1 five times confuses users.</p>
+<blockquote>
+<p><em>“it is going to send a progress value that is going to go from 0..1 five times, and that will be confusing for the user ... Flatten the progress reported by the underlying nesting engine into a value from 0..1”</em></p>
+</blockquote>
+<p><sub>— Arvind, <a href="https://github.com/metamation/flux/pull/1171#discussion_r1223786549">PR#1171</a></sub></p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#official-repo-rules-source-of-truth">📘 Official repo rules (source of truth)</a>
+  </li>
+  <li level="3">
+   <a href="#g006-magic-numbers-use-named-constants-58-occurrences">G006: Magic Numbers — Use Named Constants (58 occurrences)</a>
+  </li>
+  <li level="3">
+   <a href="#g011-remove-dead-commented-out-code-24-occurrences">G011: Remove Dead / Commented-Out Code (24 occurrences)</a>
+  </li>
+  <li level="3">
+   <a href="#g023-flat-namespaces-only-r020">G023: Flat Namespaces Only (R020)</a>
+  </li>
+  <li level="3">
+   <a href="#g026-re-run-apigen-after-api-changes-p008">G026: Re-run APIGen After API Changes (P008)</a>
+  </li>
+  <li level="3">
+   <a href="#g027-singleton-pattern-with-lazyt-r018">G027: Singleton Pattern with  (R018)</a>
+  </li>
+  <li level="3">
+   <a href="#g033-duplicate-ids-are-rejected">G033: Duplicate IDs Are Rejected</a>
+  </li>
+  <li level="3">
+   <a href="#g035-repeated-conditions-extract-to-property-or-variable-p001">G035: Repeated Conditions — Extract to Property or Variable (P001)</a>
+  </li>
+  <li level="3">
+   <a href="#d001-prefer-2d-over-3d-when-possible">D001: Prefer 2D Over 3D When Possible</a>
+  </li>
+  <li level="3">
+   <a href="#d002-caching-requires-an-explicit-invalidation-strategy">D002: Caching Requires an Explicit Invalidation Strategy</a>
+  </li>
+  <li level="3">
+   <a href="#d003-a-method-that-does-two-things-must-be-split-or-renamed">D003: A Method That Does Two Things Must Be Split or Renamed</a>
+  </li>
+  <li level="3">
+   <a href="#d004-design-for-testability-methods-should-be-callable-without-side-effects">D004: Design for Testability — Methods Should Be Callable Without Side Effects</a>
+  </li>
+  <li level="3">
+   <a href="#d005-machine-specific-ifelse-must-become-a-named-property">D005: Machine-Specific / Must Become a Named Property</a>
+  </li>
+  <li level="3">
+   <a href="#d006-apis-must-not-expose-temporary-or-internal-fields">D006: APIs Must Not Expose Temporary or Internal Fields</a>
+  </li>
+  <li level="3">
+   <a href="#d014-never-encode-machine-names-in-logic-always-abstract-upward">D014: Never Encode Machine Names in Logic — Always Abstract Upward</a>
+  </li>
+  <li level="3">
+   <a href="#d017-think-about-what-breaks-when-you-revert-a-change">D017: Think About What Breaks When You Revert a Change</a>
+  </li>
+  <li level="3">
+   <a href="#d018-extract-repeated-copy-paste-into-a-shared-function">D018: Extract Repeated Copy-Paste into a Shared Function</a>
+  </li>
+  <li level="3">
+   <a href="#d020-singleton-pattern-should-include-a-key-for-scoped-singletons">D020: Singleton Pattern Should Include a Key for Scoped Singletons</a>
+  </li>
+  <li level="3">
+   <a href="#d021-prefer-ienumerablet-return-types-when-caller-decides-materialisation">D021: Prefer  Return Types When Caller Decides Materialisation</a>
+  </li>
+  <li level="3">
+   <a href="#d025-when-fixing-a-regression-prefer-a-targeted-fix-separate-refactor-case">D025: When Fixing a Regression, Prefer a Targeted Fix + Separate Refactor Case</a>
+  </li>
+  <li level="1">
+   <a href="#arvinds-additions-mined-from-pr-reviews">🎓 Arvind's additions (mined from PR reviews)</a>
+  </li>
+  <li level="2">
+   <a href="#keep-the-public-api-surface-minimal-and-members-as-private-as-possible">Keep the public API surface minimal and members as private as possible</a>
+  </li>
+  <li level="2">
+   <a href="#design-with-a-security-and-privacy-mindset">Design with a security and privacy mindset</a>
+  </li>
+  <li level="2">
+   <a href="#fix-the-root-cause-reject-crude-hacks-and-feature-disabling-patches">Fix the root cause; reject crude hacks and feature-disabling patches</a>
+  </li>
+  <li level="2">
+   <a href="#prevent-invalid-states-by-construction-model-constraints-as-first-class-data">Prevent invalid states by construction; model constraints as first-class data</a>
+  </li>
+  <li level="2">
+   <a href="#an-api-or-dialog-must-never-close-or-drive-ui-the-user-may-be-interacting-with">An API or dialog must never close or drive UI the user may be interacting with</a>
+  </li>
+  <li level="2">
+   <a href="#exclude-underscore-prefixed-cached-fields-from-equality-and-follow-the_name-convention">Exclude underscore-prefixed cached fields from equality and follow the _name convention</a>
+  </li>
+  <li level="2">
+   <a href="#design-extension-points-as-dynamically-loaded-plugins-never-rely-on-a-fixed-shared-class-name">Design extension points as dynamically-loaded plugins; never rely on a fixed shared class name</a>
+  </li>
+  <li level="2">
+   <a href="#property-getters-must-have-no-write-side-effects">Property getters must have no write side-effects</a>
+  </li>
+  <li level="2">
+   <a href="#keep-everything-strongly-typed-use-enums-and-typed-properties-over-strings-magic-ints-and-dictionaries">Keep everything strongly typed; use enums and typed properties over strings, magic ints, and dictionaries</a>
+  </li>
+  <li level="2">
+   <a href="#consolidate-repeated-code-conditions-and-derived-values-into-one-property-or-helper">Consolidate repeated code, conditions, and derived values into one property or helper</a>
+  </li>
+  <li level="2">
+   <a href="#configserialization-hygiene-emit-only-non-defaults-keep-large-blobs-in-sidecar-files-dont-disturb-shared-formats">Config/serialization hygiene: emit only non-defaults, keep large blobs in sidecar files, don't disturb
+   shared formats</a>
+  </li>
+  <li level="2">
+   <a href="#apply-flags-settings-and-restrictions-consistently-across-sibling-variants">Apply flags, settings, and restrictions consistently across sibling variants</a>
+  </li>
+  <li level="2">
+   <a href="#prefer-configdata-changes-over-new-code-and-defer-dependencies-and-class-hierarchies">Prefer config/data changes over new code, and defer dependencies and class hierarchies</a>
+  </li>
+  <li level="2">
+   <a href="#structure-control-flow-so-future-edits-stay-safe">Structure control flow so future edits stay safe</a>
+  </li>
+  <li level="2">
+   <a href="#fix-the-generator-not-the-instance-prefer-generatedreflection-driven-code-over-hand-maintained-parallel-code">Fix the generator, not the instance; prefer generated/reflection-driven code over hand-maintained parallel
+   code</a>
+  </li>
+  <li level="2">
+   <a href="#make-the-minimal-change-dont-gold-plate-over-extract-or-add-unjustified-guards">Make the minimal change; don't gold-plate, over-extract, or add unjustified guards</a>
+  </li>
+  <li level="2">
+   <a href="#derive-values-from-context-and-data-instead-of-hardcoding">Derive values from context and data instead of hardcoding</a>
+  </li>
+  <li level="2">
+   <a href="#reuse-existing-high-level-apis-builders-and-built-in-capabilities-instead-of-hand-rolling">Reuse existing high-level APIs, builders, and built-in capabilities instead of hand-rolling</a>
+  </li>
+  <li level="2">
+   <a href="#match-parameter-and-return-types-to-actual-usage">Match parameter and return types to actual usage</a>
+  </li>
+  <li level="2">
+   <a href="#wrapper-and-api-classes-should-be-thin-general-wrappers-over-their-core-type">Wrapper and API classes should be thin, general wrappers over their core type</a>
+  </li>
+  <li level="2">
+   <a href="#model-machinevariant-differences-as-one-general-property-not-per-call-site-type-checks">Model machine/variant differences as one general property, not per-call-site type checks</a>
+  </li>
+  <li level="2">
+   <a href="#route-co-derived-and-cached-values-through-their-single-owning-property">Route co-derived and cached values through their single owning property</a>
+  </li>
+  <li level="2">
+   <a href="#compare-sets-by-canonical-normalization-not-by-generating-permutations">Compare sets by canonical normalization, not by generating permutations</a>
+  </li>
+  <li level="2">
+   <a href="#make-components-self-contained-rather-than-relying-on-external-manual-steps">Make components self-contained rather than relying on external manual steps</a>
+  </li>
+  <li level="2">
+   <a href="#design-ui-and-inputs-for-the-domain-and-stay-standard-and-consistent">Design UI and inputs for the domain and stay standard and consistent</a>
+  </li>
+  <li level="2">
+   <a href="#keep-developer-only-debug-code-out-of-shipping-paths-and-use-the-standard-debug-paths">Keep developer-only debug code out of shipping paths and use the standard debug paths</a>
+  </li>
+  <li level="2">
+   <a href="#remove-dead-stores-and-statements-subsumed-by-later-code">Remove dead stores and statements subsumed by later code</a>
+  </li>
+  <li level="2">
+   <a href="#consolidate-single-purpose-methods-behind-one-invariant-enforcing-entry-point">Consolidate single-purpose methods behind one invariant-enforcing entry point</a>
+  </li>
+  <li level="2">
+   <a href="#present-a-single-monotonic-0.1-progress-value-to-callers">Present a single monotonic 0..1 progress value to callers</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="correctness.html">Correctness</a></span>
+ <span class="next"><a href="donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

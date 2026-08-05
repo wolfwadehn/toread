@@ -1,0 +1,244 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Translation tables</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">General Notes</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a class="active" href="xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">General Notes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="xlate.html">Translation tables</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Translation tables</h1>
+<p>Translation tables are managed in Flux using online <strong>XLate</strong> tool.</p>
+<p>This can be found <a href="https://xlate.azurewebsites.net/">here</a>.</p>
+<p>Refer <a href="https://xlate.azurewebsites.net/notes/build3/">this</a> for usage of this online translation tool.</p>
+<p>To keep the translations updated, a developer has to:</p>
+<ul>
+<li>Update the remote translation database with the new phrases from a new release which have to be translated.</li>
+<li>Pull the remote translation updates and synchronize the local dictionaries. This will update the .txt files in X:\Wad\Lang.</li>
+</ul>
+<h2 id="steps">Steps</h2>
+<ul>
+<li><p>Refer <a href="https://xlate.azurewebsites.net/notes/build2/">this</a> for installing XL tool and the commands to use.</p>
+</li>
+<li><p>After installing, do CLI sign-in.</p>
+</li>
+<li><p>Now, switch to the product <em>Flux</em> as shown below:
+[source]
+xl sw Flux &quot;X:\Wad\lang&quot; &quot;Y:\Xlate\0&quot;</p>
+</li>
+<li><p>To upload the translation phrases that have to be translated:</p>
+</li>
+</ul>
+<p>.. Use <code>xl out</code> to see the changes going to the remote server
+[source]
+xl out Flux -diff
+.. Use <code>xl put</code> command to seed the translation phrases from the local translation dictionaries
+[source]
+xl put Flux &quot;X:\Wad\lang&quot; &quot;Y:\Xlate\0&quot;</p>
+<ul>
+<li>To download the translated texts for the phrases uploaded earlier:</li>
+</ul>
+<p>.. Use <code>xl in</code> and <code>xl recent</code> commands to check the incoming and recently updated translations
+[source]
+xl in Flux
+.. Use the <code>xl get</code> command to download and apply the remote changes to the local dictionaries
+[source]
+xl get Flux</p>
+<h2 id="handling-translation-case-for-a-flux-version">Handling translation case for a Flux version</h2>
+<ul>
+<li>Use <code>xl get</code> to get the translation from the server.</li>
+<li>If there are any changes in English translation (.txt) files revert them.</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<p>NOTE: There may be some changes we have to do.
+For example, sometimes a string id will be removed from English txt file but not
+in other language files. So we need to remove it from other languages before updating the server.</p>
+<ul>
+<li>Use <code>xl put</code> to update the server with latest English translation</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<h1 id="note">[NOTE]</h1>
+<ul>
+<li>If there are relevant changes like string id being removed, create a branch and commit the changes.</li>
+<li>Other changes like empty lines etc need to be restored in the branch.</li>
+<li>Keep the branch as draft.
+====</li>
+<li>Assign the respective FogBugz case to the case opener to get the translated strings for other languages.</li>
+<li>Once the translation is completed, use <code>xl get</code> and update the other language translation and commit to the repository.</li>
+</ul>
+<ul>
+<li></li>
+</ul>
+<h1 id="note-1">[NOTE]</h1>
+<ul>
+<li>If the respective branch is created then switch to that before <code>xl get</code>.</li>
+<li>While committing make sure only the respective area related changes are committed.
+i.e. if the bend translation has to be updated, push only the .txt files related to bend and not cut files.</li>
+<li>Verify the deletions in .txt files carefully.
+====</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#steps">Steps</a>
+  </li>
+  <li level="1">
+   <a href="#handling-translation-case-for-a-flux-version">Handling translation case for a Flux version</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="curveandsu.html">Curve and Surface Parametrization</a></span>
+ <span class="next"><a href="lts.html">LTS (Long term support mechanism)</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>CLAUDE.md</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../2fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../3iu/index.html">3IU</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">MD for coding</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a class="active" href="pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">MD for coding</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="pix.html">CLAUDE.md</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>CLAUDE.md</h1>
+<p>C:\Work\Pix is a WPF 2D CAD/CAM application for sheet-metal drawings (DXF/GEO import-export,
+bend lines, edge notches, dimensioning, cleanup/QA tooling). It is built entirely on top of
+C:\Work\Nori (see <code>C:\Work\Nori\CLAUDE.md</code>) — Pix contributes no rendering, geometry, or file-format
+code of its own beyond what's listed below; it is a domain application layered on Nori's Core/Lux/Host.
+Pix is meant to become the base of a general 2D CAD tool, so this file also captures where today's
+implementation stops short of that goal (see &quot;Implementation status&quot; at the end).</p>
+<h2 id="relationship-to-nori">Relationship to Nori</h2>
+<p><code>Pix.csproj</code> references <code>Nori.Core</code>, <code>Nori.Host.WPF</code>, <code>Nori.Lux</code> (via the <code>N:</code> drive alias for
+<code>C:\Work\Nori</code>) and takes <code>Nori.Gen</code> as an analyzer, so Pix code can use <code>[Singleton]</code> and
+<code>[EPropClass]</code>/<code>[EPropField]</code> exactly like Nori itself. Pix depends only on Nori's public surface:</p>
+<ul>
+<li><code>Dwg2</code>/<code>Ent2</code>/<code>Layer2</code>/entity subtypes (<code>E2Poly</code>, <code>E2Point</code>, <code>E2Text</code>, <code>E2Spline</code>, <code>E2Bendline</code>,
+<code>E2Dim</code>, <code>E2Leader</code>, <code>E2Insert</code>, <code>E2Solid</code>) from Nori's <code>Core/Drawing</code></li>
+<li><code>Poly</code>/<code>Seg</code>/<code>PolyBuilder</code>/<code>Point2</code>/<code>Bound2</code> from <code>Core/Geom</code></li>
+<li><code>DXFReader</code>/<code>DXFWriter</code>/<code>CurlReader</code>/<code>CurlWriter</code> from <code>Core/IO</code></li>
+<li><code>Model3</code>/<code>Tenkai</code> (<code>PaperFolder</code>) from <code>Core/Model</code> — used for the 3D folded-part preview</li>
+<li><code>UndoStack</code>/<code>UndoStep</code> from <code>Core/Base</code> — all Pix edits are undoable steps</li>
+<li><code>Scene2</code>/<code>Scene3</code>/<code>VNode</code>/<code>Lux</code> drawing calls from <code>Lux</code> — Pix's <code>DwgScene</code> is a <code>Scene2</code> subclass</li>
+<li><code>Hub.Keyboard</code>/<code>Hub.Mouse</code> (Rx observables) from <code>Core/Base</code>/<code>Host.WPF</code> — Pix's <code>DwgHub</code> subscribes
+to these directly rather than re-deriving input handling</li>
+</ul>
+<p>Pix follows the same coding conventions as Nori (space before call parens, 3-space indent, banner
+comments on every file, terse one-line XML summaries, <code>IDE0130</code> disabled) — see Nori's CLAUDE.md for
+the specifics; they are not repeated here.</p>
+<h2 id="project-layout">Project layout</h2>
+<pre><code>Pix/                    the WPF application (net10.0-windows, WinExe)
+  DwgEdit/              editing commands: Widget subclasses + non-interactive DwgCmds methods
+  Widgets/              Widget base class, field-binding attributes, Toolbar, InputBar
+  VModel/               thin ViewModel-like wrappers for table-based dialogs (Layers, Bend props)
+  WPF/                  XAML dialogs (Layers, EditLayer, EditBend), CmdRouter, UIBuilder, MRUList
+  IO/                   GEOReader / GeoWriter (Pix-specific; DXF/Curl come from Nori directly)
+  MainWindow.xaml(.cs)  app shell: menu, toolbar host, InputBar, Lux viewport (WPFHost)
+  DwgScene.cs           Scene2 subclass + grid/snap/widget-feedback VNodes + folded-3D subscene
+Test/                   Pix.Test — reuses Nori's [Fixture]/[Test] reflection test runner
+Tools/Console/          Pix.Con — dev CLI (CLEAN, COVERAGE, COUNT, NEXTID, OPTIMIZE, XMLDOC, PNGCRUSH)
+Tools/Installer/        Inno Setup packaging + VersionInjector
+Wad/Modes/              toolbar icons + manifest.txt (toolbar layout) + cmd-prompt.txt (per-command
+                        name/labels/step prompts, parsed by CmdPrompt)
+Spec/                   format references: DXF-Spec.pdf, GEO.pdf, MText-Codes.pdf, metacam.chm
+TData/                  sample DXF/GEO files + expected outputs, used by tests
+</code></pre>
+<p><code>Pix.slnx</code> groups the Nori projects under a <code>/Nori/</code> solution folder and lists <code>Pix</code>, <code>Pix.Test</code>,
+<code>Pix.Con</code> alongside them.</p>
+<h2 id="core-subsystems">Core subsystems</h2>
+<h3 id="commandwidget-dispatch-dwgeditdwghub.cs-widgetswidget.cs">Command/Widget dispatch (<code>DwgEdit/DwgHub.cs</code>, <code>Widgets/Widget.cs</code>)</h3>
+<p>Every drawing command is an <code>ECmd</code> enum value (<code>DwgEdit/DwgCmds.cs</code>). Two dispatch tables are built
+once via reflection over the loaded assembly:</p>
+<ul>
+<li><code>DwgHub.WidgetMap : Dictionary&lt;ECmd, Type&gt;</code> — every concrete <code>Widget</code> subclass must carry a
+<code>[DwgCmd(ECmd.X)]</code> attribute; missing it is a hard startup exception.</li>
+<li><code>DwgHub.MethodMap : Dictionary&lt;ECmd, Action&lt;Dwg2&gt;&gt;</code> — static methods on <code>DwgCmds</code> tagged
+<code>[DwgCmd(ECmd.X)]</code>, for commands needing no interactive input (<code>Grid</code>, <code>LayerSetup</code>, <code>Cleanup</code>).</li>
+</ul>
+<p><code>Toolbar.cs</code> reads <code>Wad/Modes/manifest.txt</code> (an ordered list of <code>ECmd</code> names, blank lines as
+separators, <code>;</code>-prefixed lines commented out) to build the icon toolbar; each button looks itself up
+in <code>WidgetMap</code>/<code>MethodMap</code> and disables/greys out if neither has an entry for that <code>ECmd</code>.</p>
+<p><code>DwgHub</code> is a static whiteboard (mirrors Nori's own <code>Hub</code> pattern) holding the current <code>Dwg2</code>, the
+active <code>Widget</code>, the <code>DwgSnap</code> instance, and mouse/keyboard mode state. It subscribes directly to
+<code>Hub.Keyboard.Keys</code>/<code>Hub.Mouse.Clicks</code>/<code>Hub.Mouse.Moves</code> (Rx observables) and demuxes into either the
+active <code>Widget</code> or an in-progress <code>DragOp</code> (<code>DwgEdit/DragOp.cs</code>, used for things like rubber-band
+selection).</p>
+<p><code>Widget</code> (<code>Widgets/Widget.cs</code>) is Pix's own multi-phase-input abstraction — distinct from any WPF
+control. A widget declares its input fields via attributes:</p>
+<ul>
+<li><code>[Click(n)]</code> — field set by the n'th mouse click (snapped, unless <code>[Unsnapped]</code>)</li>
+<li><code>[Textbox(n)]</code> — field editable in the input bar (keyboard-mode entry, <code>@</code>/<code>&lt;</code> prefixes for
+relative/polar coordinates)</li>
+<li><code>[Angle]</code>, <code>[NoMouseMove]</code>, <code>[Variant(obj)]</code> — display/behavior modifiers</li>
+<li>Class-level <code>[CanRepeat]</code>, <code>[NoKeyboardMode]</code>, <code>[NoMouseInput]</code>, <code>[AlwaysShowFeedback]</code>, <code>[NoSimMouse]</code></li>
+</ul>
+<p><code>CmdPrompt</code> (<code>DwgEdit/DwgCmds.cs</code>) loads <code>Wad/Modes/cmd-prompt.txt</code> at first use and parses, per
+<code>ECmd</code>, a display name, input-box labels, and the step-by-step status-bar prompts shown while running
+the command.</p>
+<h3 id="editing-operation-base-classes-dwgedit.cs">Editing operation base classes (<code>DwgEdit/*.cs</code>)</h3>
+<ul>
+<li><code>PolyMaker</code> (<code>BaseWidget.cs</code>) — base for single-<code>Poly</code>-producing commands (Line, Arc, Circle, Rect,
+polygon variants); builds incrementally per phase, draws live feedback, pushes one <code>E2Poly</code> on
+completion. Supports <code>Ctrl</code>+click &quot;Repeat&quot; of the last-drawn entity from a new anchor.</li>
+<li><code>PolyEditor</code>/<code>PolyEditor2</code> — one-click corner/edge editors (Chamfer, Fillet, InFillet, CornerStep,
+EdgeRecess, EdgeU, EdgeV, KeySlot): pick a poly, compute a replacement <code>Poly</code> from typed-in
+parameters, <code>Replace()</code> the old entity.
+<code>PolyMaker2</code>-style variants (LineParallel, LinePerp) pick a segment then add new geometry alongside it.</li>
+<li><code>DwgArranger</code>/<code>DwgLayouter</code> (<code>DwgOps.cs</code>) — transform (Move, Rotate, Scale, Mirror) or copy-in-a-pattern
+(RectArray, PolarArray) the current selection; <code>Ctrl</code> toggles copy-vs-move.</li>
+<li><code>DimMaker</code> — dimension-specific widgets (linear, baseline, continue, angle, angle-3P, radius,
+diameter, callout, segment) that build <code>E2Dim</code> entities.</li>
+<li><code>PolyDiff.cs</code> / <code>PolyOverlap.cs</code> / <code>DwgCleanup.cs</code> — geometric analysis/cleanup: <code>DwgCleaner</code>
+stitches touching open polylines into closed ones (<code>StitchReduced</code>/<code>StitchReducedSpl</code>), and the
+Mark*/HighlightOverlaps/RemoveSmallSegs commands flag or fix small segments, overlaps, non-tangent
+corners, and large radii by writing marker geometry to a dedicated &quot;CleanupMarker&quot; layer.</li>
+<li><code>PickMode.cs</code> — <code>PickWidget</code> (selection), <code>MeasureWidget</code> (live distance/angle readout),
+<code>BendWidget</code> (click a line to add a bend, or an existing bend to edit it via <code>EditBend.xaml</code>).</li>
+</ul>
+<p>All entity mutation goes through <code>UndoStep</code> subclasses (<code>ModifyDwgEnts</code>, <code>ModifyEntLayer</code>,
+<code>ClubbedStep</code>) pushed onto <code>UndoStack.Current</code>. <code>BaseWidget.CreateStitchedAction</code> is the common path
+for adding polys: when any added entity is an <code>E2Poly</code>, it re-stitches the full add/remove set against
+the drawing's existing polys per-layer before constructing the final <code>ModifyDwgEnts</code>, so newly drawn
+geometry automatically joins with abutting existing geometry.</p>
+<h3 id="ui-layer-widgets-wpf-vmodel-mainwindow.xaml">UI layer (<code>Widgets/</code>, <code>WPF/</code>, <code>VModel/</code>, <code>MainWindow.xaml*</code>)</h3>
+<p>Pix's UI is ad-hoc/imperative, not classic MVVM/bindings. <code>MainWindow</code> hosts a <code>DockPanel</code> with a
+declarative <code>Menu</code>, a programmatically populated <code>Toolbar</code>, an <code>InputBar</code> for the active widget's
+fields/prompts, and a central <code>Border</code> whose <code>Child</code> is <code>WPFHost.Init(this, OnLuxReady)</code> — Nori's WPF
+OpenGL host. Once ready, <code>Lux.UIScene = new DwgScene(dwg)</code> puts the Lux scene graph in that panel.</p>
+<ul>
+<li><code>CmdRouter.cs</code> reflects over <code>[CmdSink]</code>-tagged <code>MainWindow</code> methods, wires <code>MenuItem.Click</code>
+handlers, and derives <code>KeyGesture</code>s from the XAML — menu items with no matching sink are disabled.</li>
+<li><code>InputBar.cs</code> dynamically builds <code>TextBox</code>/<code>CheckBox</code>/<code>ComboBox</code> controls per active <code>Widget</code> field
+(via <code>WField</code>), routes typed text to <code>DwgHub.OnTypeIn</code>, and toggles keyboard-mode vs. mouse-mode.</li>
+<li><code>UIBuilder.cs</code>'s <code>TableEdit</code> is a hand-built <code>Grid</code>-based table control (no <code>DataGrid</code>) driving the
+Layers dialog and bend-property table; <code>VModel/TableVM.cs</code> supplies rows/columns/cell get-set for it.</li>
+<li>Dialog XAML files (<code>LayersDlg.xaml</code>, <code>EditLayerDlg.xaml</code>, <code>EditBend.xaml</code>) are near-empty skeletons;
+content is built in code-behind after <code>Loaded</code>.</li>
+</ul>
+<h3 id="rendering-dwgscene.cs">Rendering (<code>DwgScene.cs</code>)</h3>
+<p><code>DwgScene : Scene2</code> composes <code>Dwg2VN</code> (the drawing itself) with several auxiliary <code>[Singleton]</code>
+<code>VNode</code>s: <code>WidgetVN</code> (current widget's feedback), <code>ActiveDraggersVN</code> (in-progress drag operations),
+<code>DwgGridVN</code> ×2 (major/minor graph-paper grid, fading out when zoomed out), <code>DwgSnapVN</code>/<code>DwgConsLineVN</code>
+(snap markers and alignment construction lines, driven by <code>DwgHub.Snap</code>/<code>DwgSnap</code>). <code>EditBend</code> also
+opens a <strong>3D folded-part preview</strong>: <code>FoldedPartScene : Scene3</code> runs Nori's <code>Tenkai.PaperFolder</code> over
+the current <code>Dwg2</code> to build a folded <code>Model3</code>, rendered in a picture-in-picture sub-scene
+(<code>Lux.AddSubScene</code>) — this is Pix's bridge from flat-pattern 2D editing to 3D sheet-metal simulation.</p>
+<h3 id="file-io-iogeoreader.cs-iogeowriter.cs">File I/O (<code>IO/GEOReader.cs</code>, <code>IO/GeoWriter.cs</code>)</h3>
+<p>Pix relies on <strong>Nori's own <code>DXFReader</code>/<code>DXFWriter</code>/<code>CurlReader</code>/<code>CurlWriter</code></strong> for <code>.dxf</code>/<code>.curl</code> —
+it implements no DXF parsing itself. <code>.geo</code> is Pix-specific: a text, section-tagged
+(<code>#~1</code>, <code>#~31</code>, <code>#~33</code>/<code>#~331</code>, <code>#~37</code>/<code>#~371</code>, ...) sheet-metal interchange format (see
+<code>Spec/GEO.pdf</code>, likely tied to TRUMPF/MetaCam-family CAM tooling — <code>Spec/metacam.chm</code> is bundled)
+carrying flat-pattern contours plus bend-line metadata (angle, radius, deduction). <code>GEOReader.Load</code>
+parses sections into indexed points → <code>PolyBuilder</code>-constructed polys → <code>E2Poly</code>/<code>E2Text</code>/<code>E2Point</code>/
+<code>E2Bendline</code> entities in a <code>Dwg2</code>; <code>GeoWriter</code> does the inverse, and unconditionally explodes any
+<code>E2Insert</code> blocks before serializing (GEO has no block/insert concept).</p>
+<p><code>MainWindow.LoadDwg</code> sanitizes every loaded drawing regardless of source format: a lone top-level
+<code>E2Insert</code> (or a drawing that is otherwise &quot;effectively&quot; one non-empty top-level insert plus empty
+ones) is auto-exploded into its constituent entities, and <code>E2Poly</code> entities with non-finite bounds are
+dropped. This is currently the <em>only</em> place Insert/Block entities are manipulated in Pix — see gaps
+below.</p>
+<h3 id="testing-test-and-dev-tooling-toolsconsole">Testing (<code>Test/</code>) and dev tooling (<code>Tools/Console/</code>)</h3>
+<p><code>Pix.Test</code> reuses Nori's own <code>[Fixture]</code>/<code>[Test]</code>/<code>TestRunner</code> reflection-based framework rather than
+xUnit/NUnit — same attribute style, same runner, same <code>Nori.Con COVERAGE</code>-compatible instrumentation.
+<code>Widget/WidgetTest.cs</code> drives widgets through simulated clicks/typed input via <code>DwgHub.OnClick</code>/
+<code>OnTypeIn</code> (the same entry points real mouse/keyboard events use), so widget tests exercise the full
+phase state machine, not just the geometry math. <code>IO/GEOReaderTest.cs</code>/<code>GEOWriterTest.cs</code>/
+<code>TPixDwg.cs</code> round-trip DXF → <code>Dwg2</code> → GEO/Curl and diff against <code>TData/</code> fixtures.
+<code>Tools/Console/Pix.Con</code> mirrors <code>Nori.Con</code>: <code>CLEAN</code> (banner/summary normalization), <code>COVERAGE</code>,
+<code>COUNT</code>, <code>NEXTID</code> (test-ID allocation), <code>OPTIMIZE</code>/<code>XMLDOC</code> (csproj flag toggles), plus a
+Pix-only <code>PNGCRUSH</code> for the toolbar icon set.</p>
+<h2 id="implementation-status-commands-with-icons-vs.commands-with-code">Implementation status — commands with icons vs. commands with code</h2>
+<p><code>Wad/Modes/manifest.txt</code> (toolbar layout) and the <code>ECmd</code> enum together list <strong>90 commands</strong>.
+Cross-referencing against <code>[DwgCmd(ECmd.X)]</code> usage on <code>Widget</code> subclasses and <code>DwgCmds</code> methods shows
+roughly 55 have a real handler; the remainder have an icon, a name, and step-prompts in
+<code>cmd-prompt.txt</code>, but no <code>Widget</code>/<code>DwgCmds</code> entry — the toolbar button exists but is disabled at
+runtime. This gap is the clearest map of what &quot;finishing the CAD tool&quot; requires:</p>
+<ul>
+<li><strong>Boolean ops — <code>Union</code>, <code>Intersect</code>, <code>Subtract</code>, <code>Divide</code></strong>: no polygon-boolean/clipping engine
+exists in Nori's <code>Core/Geom</code> (<code>Poly</code>/<code>ConvexHull</code>/<code>FastTess2D</code> today, but no general polygon
+clip). This is the single largest missing subsystem for a general-purpose 2D CAD tool.</li>
+<li><strong>Notch identity — <code>CopyCornerNotch</code>, <code>CopyEdgeNotch</code>, <code>CopyToOtherEdge</code>, <code>CopyArcNotch</code>,
+<code>MirrorNotch</code>, <code>DeleteNotch</code></strong>: today's <code>EdgeU</code>/<code>EdgeV</code>/<code>EdgeRecess</code>/<code>CornerStep</code>/<code>KeySlot</code>
+commands bake a one-off geometric edit into the poly with no retained &quot;this is a notch&quot; identity,
+so there is nothing to copy, mirror, or delete afterwards. Needs a first-class notch/feature
+concept (or at least a marker/metadata layer) before these commands are implementable.</li>
+<li><strong>Spline/curve authoring — <code>CreateSpline</code>, <code>PlineToSpline</code>, <code>EditSpline</code>, <code>FitArc</code>, <code>Decurve</code></strong>:
+<code>E2Spline</code> is already a renderable entity (see <code>BaseWidget.DrawFeedback</code>), but no widget creates or
+edits one interactively.</li>
+<li><strong>Dimension completeness — <code>DimHorzOrdinate</code>, <code>DimVertOrdinate</code>, <code>AutoDim</code>, <code>DimSettings</code></strong>:
+ordinate dimensioning, an automatic dimension-placement command, and a dimension-style/defaults
+dialog are all absent even though the core <code>DimMaker</code> framework and most dimension types exist.</li>
+<li><strong>Block authoring — <code>CreateBlock</code>, <code>InsertBlock</code>, <code>ExplodeBlock</code></strong>: <code>E2Insert</code>/block data model and
+round-trip support already exist (<code>GeoWriter.ExplodeBlock</code>, <code>MainWindow.SanitizeDwg</code>), but purely as
+automatic load/save behavior — there is no interactive command to define a block from a selection,
+insert an existing block, or explode one on demand.</li>
+<li><strong>Construction variants — <code>LineFillet</code>, <code>LineTangent</code>, <code>CircleTTR</code>, <code>CircleTTT</code>, <code>Fillet3T</code>,
+<code>Offset</code>, <code>OffsetSeg</code>, <code>RoughTrim</code>, <code>Join</code></strong>: near-miss siblings of implemented commands
+(<code>LineParallel</code>/<code>LinePerp</code> exist, <code>LineFillet</code>/<code>LineTangent</code> don't; <code>Trim</code>/<code>Extend</code> exist, <code>Join</code>
+doesn't); relatively small, self-contained widgets to add given the existing <code>PolyMaker</code>/
+<code>PolyMaker2</code> base classes.</li>
+<li><strong>Text — <code>TruetypeText</code>, <code>MarkText</code></strong>: <code>E2Text</code> is fully rendered (grid/dim labels, GEO import), but
+there's no interactive text-placement command.</li>
+<li><strong>Domain-specific — <code>ParametricDucts</code>, <code>CommonShapes</code>, <code>IrregularArray</code>, <code>ShiftOrigin</code></strong>: each implies
+its own small subsystem (a duct-fitting parametric library, a shape-template picker, a
+non-uniform-pitch array, and a drawing-origin-shift utility) with no current infrastructure to build
+on beyond the generic <code>PolyMaker</code>/<code>DwgLayouter</code> bases.</li>
+</ul>
+<p>Beyond command coverage, functional gaps to weigh against &quot;base of a 2D CAD tool&quot;:</p>
+<ul>
+<li>No multi-part layout/nesting concept — Pix edits one <code>Dwg2</code> (one part) at a time; sheet
+nesting/material-utilization is out of scope today.</li>
+<li>No dimension-style management (<code>DimSettings</code> absent) — dimension appearance is effectively
+hardcoded per dimension type.</li>
+<li>No plugin/scripting/extensibility surface — every command is a compiled <code>Widget</code>/<code>DwgCmds</code> method
+discovered via reflection over the Pix assembly itself, not an open registration API.</li>
+<li>Layer management (<code>LayersDlg</code>, <code>EditLayerDlg</code>) and undo/redo are solid and reusable as-is.</li>
+<li>The 3D fold preview (<code>FoldedPartScene</code>/<code>PaperFolder</code>) is a notable head start toward flat-pattern ↔
+folded-model round-tripping that a generic 2D-only CAD tool would otherwise lack.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#relationship-to-nori">Relationship to Nori</a>
+  </li>
+  <li level="1">
+   <a href="#project-layout">Project layout</a>
+  </li>
+  <li level="1">
+   <a href="#core-subsystems">Core subsystems</a>
+  </li>
+  <li level="2">
+   <a href="#commandwidget-dispatch-dwgeditdwghub.cs-widgetswidget.cs">Command/Widget dispatch (, )</a>
+  </li>
+  <li level="2">
+   <a href="#editing-operation-base-classes-dwgedit.cs">Editing operation base classes ()</a>
+  </li>
+  <li level="2">
+   <a href="#ui-layer-widgets-wpf-vmodel-mainwindow.xaml">UI layer (, , , )</a>
+  </li>
+  <li level="2">
+   <a href="#rendering-dwgscene.cs">Rendering ()</a>
+  </li>
+  <li level="2">
+   <a href="#file-io-iogeoreader.cs-iogeowriter.cs">File I/O (, )</a>
+  </li>
+  <li level="2">
+   <a href="#testing-test-and-dev-tooling-toolsconsole">Testing () and dev tooling ()</a>
+  </li>
+  <li level="1">
+   <a href="#implementation-status-commands-with-icons-vs.commands-with-code">Implementation status — commands with icons vs. commands with code</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="nori.html">CLAUDE.md</a></span>
+ <span class="next"><a href="flux.html">CLAUDE.md</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

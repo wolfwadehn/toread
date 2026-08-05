@@ -1,0 +1,663 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Assignments</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a class="active" href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">3IU</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="09_find_and_explain_exercises.html">Assignments</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Assignments</h1>
+<p>___*
+<strong>Goal:</strong> twelve read-only exercises (15--45 minutes each) that train the four core skills: <strong>finding</strong> an API, <strong>tracing</strong> a data flow, <strong>explaining</strong> a control flow, and <strong>localizing</strong> a real bug. Each exercise has a model answer outline and a four-stage rubric. Use this for self-assessment or as the basis for mentor check-ins.</p>
+<p><strong>All exercises are read-only.</strong> Don't try to fix anything. Train your reading muscles.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="how-to-use-this-chapter">How to use this chapter</h2>
+<p>** Pick one exercise per day in the first month.
+** Time-box at the suggested length. If you go over, stop and read the model answer.
+** Write your answer in your own words (1--2 paragraphs or a small diagram).
+** Rate yourself against the rubric -- not as a grade, as a way to see what you missed.</p>
+<p>'''</p>
+<h2 id="exercise-1-locate-bendsetup-15-min-level-1">Exercise 1 -- Locate <code>BendSetup</code> (15 min, level 1)</h2>
+<p><strong>Task.</strong> Find the <code>BendSetup</code> class. Tell me, in five lines:</p>
+<p>. Which file?
+. Which assembly?
+. What does its <code>Dump</code> method do?
+. Which interfaces does it implement?
+. How is a new instance constructed?</p>
+<p><strong>Tools.</strong> <code>Grep</code>, file open.</p>
+<p><strong>Model answer.</strong> <code>Src\Core\Bend\BendSetup.cs</code> in <code>Flux.Core</code>. <code>Dump (TextWriter)</code> writes a per-line text representation of mounts (and clamp positions) used as the test contract. Implements <code>INotifyPropChanged</code>. Constructed via <code>new BendSetup (BendTech owner)</code> inside the bend-tooler -- the parameterless constructor is for serialization.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Finds the file and one of: assembly / interfaces / construction</td>
+</tr>
+<tr>
+<td>2</td>
+<td>All five facts correct</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: explains why <code>Dump</code> matters for tests</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: identifies the <code>[PostLoad]</code> migration logic and what it does</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-2-trace-a-hem-bend-30-min-level-2">Exercise 2 -- Trace a hem bend (30 min, level 2)</h2>
+<p><strong>Task.</strong> Explain in half a page how a hem bend flows from geometry to the emitted <code>Dump</code> line.</p>
+<p><strong>Approach.</strong></p>
+<p>. <code>BendCore.cs</code>: which <code>EBendKind</code> values belong to hems?
+. <code>BendTech.cs</code> lines 32--46: how is a hem flex split into two <code>BendOp</code>s?
+. <code>BendOp</code> constructor (lines 36--54): how is <code>mKind</code> set for hem bends? What is <code>OpenHemLimit</code>?
+. <code>BendSetup.Dump</code> lines 46--62: which fields end up in the text output?</p>
+<p><strong>Model answer.</strong></p>
+<p>** Four hem kinds: <code>OpenHem</code>, <code>ClosedHem</code>, <code>OpenHemPrebend</code>, <code>ClosedHemPrebend</code>.
+** A hem flex gets <code>PhaseSplits = [1 - hemPrebend / 180]</code>. The bend is then created twice (one per phase).
+** In the constructor, <code>IsHem</code> triggers a switch on <code>Phases[0]</code> and <code>Radius &lt; OpenHemLimit</code> to assign one of the four <code>EBendKind</code> values.
+** The dump emits per-mount tool name, piece composition, X position, optional Z, flip flag, and sensor pair.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Lists hem kinds and points at the phase split</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Connects the phase split to two <code>BendOp</code>s</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: explains the <code>mKind</code> decision tree</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: identifies the prebend-locked edge case (<code>BendTech.cs</code> lines 81--88)</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-3-find-every-place-a-setting-cascade-is-used-30-min-level-2">Exercise 3 -- Find every place a setting cascade is used (30 min, level 2)</h2>
+<p><strong>Task.</strong> Find at least three properties on <code>BendOp</code> whose value resolves through the <code>Sheaf</code> cascade. For each: which <code>SH</code> key, and where is the parent dictionary?</p>
+<p><strong>Approach.</strong> Grep <code>BendOp.cs</code> for <code>Settings.</code> and <code>Sheaf.</code> accesses. Cross-reference with <code>Sheaf.cs</code> for the <code>SH</code> enum.</p>
+<p><strong>Model answer.</strong> Examples:</p>
+<p>** <code>BendSpeed</code> resolves <code>Settings.RamVBend</code> (cascades from <code>BendOp</code> → <code>BendTech</code> → <code>BendMachine</code>).
+** <code>BGTransition</code> resolves <code>Sheaf.EBGTransition.BGTransition</code> (cascades similarly).
+** <code>BumpSteps</code> and many others.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Identifies one property and its <code>SH</code> key</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Three properties; can name the cascade direction</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: identifies a property that <em>writes</em> into the cascade and where it writes</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: contrasts with a property that bypasses the cascade -- and explains why</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-4-explain-bendtooler-in-twelve-sentences-30-min-level-2">Exercise 4 -- Explain <code>BendTooler</code> in twelve sentences (30 min, level 2)</h2>
+<p><strong>Task.</strong> Read <code>BendTooler.cs</code> lines 16--80 and explain the auto-tooler's pipeline in <strong>exactly</strong> 12 sentences. One sentence per phase, plus the inputs and outputs.</p>
+<p><strong>Approach.</strong> The pipeline is named in the comments next to the calls in <code>DoTooling</code>.</p>
+<p><strong>Model answer (skeleton).</strong> Inputs: a <code>BendTech</code>, plus <code>EDoFlags</code> and optional auxiliary setups. (1) <code>PrepareForTooling</code> resets state. (2) <code>SetupBasicSequence</code> does dead-reckoning. (3) <code>TurnOnBumpBending</code> switches large radii without tools to bump-bends. (4) <code>DemoteCrashingTools</code> downscores tools that collide in 2D. (5) <code>UpdateToolScores</code> favors broadly-liked tools. (6) <code>DoToolerCore</code> is the heart: final sequence + setups + BG. (7) Outputs: <code>BendTech</code> is now populated with <code>Setups</code>, per-<code>BendOp</code> tools, BG positions, and bending-aid states. (8--12) Notes on robotic-cell handling, manual-list extraction, validity ordering, and the success/failure return path.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Names 3+ phases correctly</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Names all six phases in order</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: names inputs/outputs accurately</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: identifies one branch (e.g. <code>mRobotic</code>) that changes the pipeline</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-5-localize-a-real-bug-45-min-level-3">Exercise 5 -- Localize a real bug (45 min, level 3)</h2>
+<p><strong>Task.</strong> Look at commit <code>4a5119dcb</code>: <em>&quot;Case 45728: Changing the suction cup state no longer deletes adjusted waypoints.&quot;</em></p>
+<p>Answer:</p>
+<p>. Which classes were touched?
+. Which subsystem (Bend root, <code>Ops\</code>, UI, BCell)?
+. What was the trigger of the bug (which property setter)?
+. Which test covers the case?
+. What was the smallest possible alternative fix?</p>
+<p><strong>Tools.</strong> <code>git show 4a5119dcb</code>, <code>Grep</code>.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Identifies the touched files</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Names the subsystem and the property setter</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: identifies the test and the assertion</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: proposes a defensible alternative fix and discusses trade-offs</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-6-map-the-dual-crash-engines-30-min-level-3">Exercise 6 -- Map the dual crash engines (30 min, level 3)</h2>
+<p><strong>Task.</strong> Compare <code>BendOpCrash.cs</code> and <code>NBendCrash.cs</code>. Specifically:</p>
+<p>. Which routine is the entry point of each?
+. What is the input contract -- the same?
+. Which one is selected at runtime, and how?
+. Where do they diverge in their output?</p>
+<p><strong>Approach.</strong> Open both, look at their public methods. Search <code>BendOpCrash</code> and <code>NBendCrash</code> callers.</p>
+<p><strong>Model answer (sketch).</strong> Both expose check entry points called from <code>BendOp</code> validation. The selection is by a settings flag (look in <code>BendOp.cs</code> and <code>Sheaf.cs</code> for the relevant <code>SH</code> key). Outputs may differ in how they report partial failures.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Names the entry points</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identifies the selection mechanism</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: documents two output differences</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: writes a recommendation: which one is the migration target, and what blocks the cutover</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-7-trace-a-feature-bit-through-the-codebase-30-min-level-2">Exercise 7 -- Trace a feature bit through the codebase (30 min, level 2)</h2>
+<p><strong>Task.</strong> Pick the <code>Bend</code> feature bit (from <code>Notes\Tech\2013.FluxFlavors.ftx</code>). Find:</p>
+<p>. Where the feature is declared.
+. Three places in the code where the feature is checked.
+. What changes (UI, logic, both) when the bit is off.</p>
+<p><strong>Tools.</strong> <code>Grep &quot;EFeature&quot;</code> or whatever the actual enum is -- discover its name.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Finds the enum</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Three call sites</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: classifies them (UI vs. logic)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: explains how the <code>B23</code> flavor is special re. this bit</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-8-read-a-golden-file-30-min-level-2">Exercise 8 -- Read a golden file (30 min, level 2)</h2>
+<p><strong>Task.</strong> Open <code>X:\TData\Bend\Auto\Bend*04.geo</code> and <code>Bend*04.txt</code>. For each non-empty line in the <code>.txt</code>:</p>
+<p>. Which property of which class produces this line?
+. Which test verifies it?</p>
+<p><strong>Approach.</strong> Match the <code>Dump</code> methods in <code>BendSetup.cs</code> and <code>BendTech.cs</code> to lines in the golden.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Maps three lines</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Maps every line in the file</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: identifies one line that is conditional and explains the condition</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: predicts what would change in the golden if <code>Settings.RamVBend</code> were halved</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-9-discover-a-static-singleton-15-min-level-1">Exercise 9 -- Discover a static singleton (15 min, level 1)</h2>
+<p><strong>Task.</strong> Find three places where Flux uses the <code>.It</code> singleton convention. Are any of them stateful?</p>
+<p><strong>Approach.</strong> <code>Grep &quot;\.It\b&quot;</code> (with caution -- this matches plenty of unrelated text; refine the regex).</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Finds three <code>.It</code>s</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Identifies the type and the use case</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: confirms statelessness</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: finds one <code>.It</code> whose statelessness is questionable and discusses it</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-10-migration-in-real-life-30-min-level-3">Exercise 10 -- Migration in real life (30 min, level 3)</h2>
+<p><strong>Task.</strong> Pick three classes with <code>[PostLoad]</code> methods. For each:</p>
+<p>. What did the <em>old</em> shape look like? (Inferred from the migration code.)
+. Why was the change made? (Inferred from comments / commit log.)
+. What's the highest <code>ObjVersion</code> checked?</p>
+<p><strong>Approach.</strong> <code>Grep &quot;[PostLoad]&quot;</code>. Pick three. Read.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Identifies three <code>[PostLoad]</code> methods</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Reconstructs the old shape for each</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: traces the responsible commit for one of them</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: predicts what would happen if the migration were removed (i.e. if old files were loaded as-is)</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-11-locate-a-ui-flow-30-min-level-2">Exercise 11 -- Locate a UI flow (30 min, level 2)</h2>
+<p><strong>Task.</strong> Trace what happens when the user clicks &quot;Add Regrip&quot; on a selected bend in the UI. Specifically:</p>
+<p>. Which glob receives the click?
+. Which method is invoked?
+. Which method on the model is mutated?
+. Where is the rendering refreshed?</p>
+<p><strong>Approach.</strong> Start at <code>Src\UI\Bend\BendOpUI.cs</code> line 22 (the <code>AddRegrip</code> method).</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Names the glob and the method</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Traces to a model-side mutation</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: identifies the render refresh trigger</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: explains how the same flow behaves in the composite (multi-select) case</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="exercise-12-read-your-tour-and-explain-45-min-level-3">Exercise 12 -- Read your tour and explain (45 min, level 3)</h2>
+<p><strong>Task.</strong> Pick one tour from chapter 07 you haven't done yet. Walk it. Then write a 200-word brief that another new joiner could read instead of doing the tour themselves.</p>
+<p><strong>Goal.</strong> This exercise tests <em>teaching</em>, not just understanding.</p>
+<p><strong>Rubric.</strong></p>
+<table>
+<thead>
+<tr>
+<th>Level</th>
+<th>Criterion</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Brief is correct in fact</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Brief is teachable: a peer can follow it</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Plus: brief includes one &quot;watch out for&quot;</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Plus: brief is short enough to read in 90 seconds</td>
+</tr>
+</tbody>
+</table>
+<p>'''</p>
+<h2 id="a-learning-calendar-months-1-6">A learning calendar (months 1--6)</h2>
+<p>The original concept proposes a six-month pacing. Here is one way to phase the exercises.</p>
+<p>|===
+| Month | Focus | Exercises</p>
+<p>| <strong>1</strong>
+| Navigation, vocabulary, build mental model
+| 1, 7, 9</p>
+<p>| <strong>2</strong>
+| Data flow, control flow
+| 2, 3, 4</p>
+<p>| <strong>3</strong>
+| Real bugs, dual systems
+| 5, 6</p>
+<p>| <strong>4</strong>
+| Tests, persistence
+| 8, 10</p>
+<p>| <strong>5</strong>
+| UI flows, full traces
+| 11</p>
+<p>| *<em>6</em>
+| Synthesis &amp; teaching
+| 12 + a 30-minute tech talk
+|===</p>
+<p>By the end of month 6, you've earned the right to a small first PR -- typically a test addition or a documentation fix. The reading muscles you've trained are the foundation for everything you'll do thereafter.</p>
+<p>'''</p>
+<h2 id="self-assessment-heat-map">Self-assessment heat-map</h2>
+<p>After working through the exercises, you should be able to fill in this matrix yourself:</p>
+<p>|===
+| Skill | Where I am (1--4)</p>
+<p>| Find an API by name
+|</p>
+<p>| Find an API by behavior
+|</p>
+<p>| Trace a data flow
+|</p>
+<p>| Trace a control flow
+|</p>
+<p>| Localize a bug from an issue number
+|</p>
+<p>| Read a test as a contract
+|</p>
+<p>| Read a golden file as a spec
+|</p>
+<p>| Recognize the architecture's intentional asymmetries
+|</p>
+<p>| Distinguish stable from in-flight code
+|</p>
+<p>| Teach a tour to a peer
+|
+|===</p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. Exercises are pinned to current code paths; if a file moves, update or retire the exercise._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#how-to-use-this-chapter">How to use this chapter</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-1-locate-bendsetup-15-min-level-1">Exercise 1 -- Locate  (15 min, level 1)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-2-trace-a-hem-bend-30-min-level-2">Exercise 2 -- Trace a hem bend (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-3-find-every-place-a-setting-cascade-is-used-30-min-level-2">Exercise 3 -- Find every place a setting cascade is used (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-4-explain-bendtooler-in-twelve-sentences-30-min-level-2">Exercise 4 -- Explain  in twelve sentences (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-5-localize-a-real-bug-45-min-level-3">Exercise 5 -- Localize a real bug (45 min, level 3)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-6-map-the-dual-crash-engines-30-min-level-3">Exercise 6 -- Map the dual crash engines (30 min, level 3)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-7-trace-a-feature-bit-through-the-codebase-30-min-level-2">Exercise 7 -- Trace a feature bit through the codebase (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-8-read-a-golden-file-30-min-level-2">Exercise 8 -- Read a golden file (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-9-discover-a-static-singleton-15-min-level-1">Exercise 9 -- Discover a static singleton (15 min, level 1)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-10-migration-in-real-life-30-min-level-3">Exercise 10 -- Migration in real life (30 min, level 3)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-11-locate-a-ui-flow-30-min-level-2">Exercise 11 -- Locate a UI flow (30 min, level 2)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-12-read-your-tour-and-explain-45-min-level-3">Exercise 12 -- Read your tour and explain (45 min, level 3)</a>
+  </li>
+  <li level="1">
+   <a href="#a-learning-calendar-months-1-6">A learning calendar (months 1--6)</a>
+  </li>
+  <li level="1">
+   <a href="#self-assessment-heat-map">Self-assessment heat-map</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></span>
+ <span class="next"><a href="readme.html">Flux Onboarding Handbook</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

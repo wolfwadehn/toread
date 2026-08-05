@@ -1,0 +1,1027 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>TRUMPF UX UI Community Design System — Quick Skill</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">IU design</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a class="active" href="skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8_aiko/index.html">8_Aiko</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8_aiko/home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../8_aiko/readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">IU design</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="skill.html">TRUMPF UX UI Community Design System — Quick Skill</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>TRUMPF UX UI Community Design System — Quick Skill</h1>
+<hr />
+<h2 id="name-trumpf-ux-styleguide-description-use-this-skill-whenever-building-reviewing-or-documenting-ui-for-trumpf-software-products-mes-oseon-cadcam-hmis-machine-dashboards-that-must-follow-the-trumpf-ux-ui-community-design-system-trumpfux.ui-community-also-called-uic.triggers-on-trumpf-ui-uic-uic-theme-responsive-touchpoint-design-system-tr-blue-open-sans-tr-grey-requests-to-create-trumpf-styled-screens-or-when-checking-a-screen-against-the-trumpf-style-guide.provides-the-9-canonical-design-rules-atomic-design-1313-mm-touch-areas-88-px-grid-54-ratio-the-8-layer-layout-model-the-responsive-pattern-catalog-column-drop-revealhide-expand-divide-transform-401-design-tokens-colors-typography-spacing-shadows-the-full-atomic-design-component-catalog-76-components-atoms-molecules-organisms-with-figma-canonical-taxonomies-page-level-templates-error-pages-filter-dialog-list-with-search-non-modal-dialog-hierarchy-visualisation-and-a-gap-filled-file-browser-pattern">name: trumpf-ux-styleguide
+description: Use this skill whenever building, reviewing, or documenting UI for TRUMPF software products (MES, OSEON, CAD/CAM, HMIs, machine dashboards) that must follow the TRUMPF UX UI Community Design System (@trumpf/ux.ui-community, also called &quot;UIC&quot;). Triggers on &quot;TRUMPF UI&quot;, &quot;UIC&quot;, &quot;uic-theme-responsive&quot;, &quot;Touchpoint Design System&quot;, &quot;tr-blue&quot;, &quot;Open Sans&quot;, &quot;tr-grey&quot;, requests to create Trumpf-styled screens, or when checking a screen against the Trumpf style guide. Provides: the 9 canonical design rules (atomic design, 13×13 mm touch areas, 8×8 px grid, 5:4 ratio), the 8-layer layout model, the responsive-pattern catalog (Column Drop, Reveal/Hide, Expand, Divide, Transform), 401 design tokens (colors, typography, spacing, shadows), the full Atomic-Design component catalog (76 components: Atoms, Molecules, Organisms) with Figma-canonical taxonomies, page-level templates (Error pages, Filter dialog, List with Search, Non-modal dialog, Hierarchy visualisation) and a gap-filled File Browser pattern.</h2>
+<h1 id="trumpf-ux-ui-community-design-system-quick-skill">TRUMPF UX UI Community Design System — Quick Skill</h1>
+<blockquote>
+<p>Sources combined:</p>
+<ul>
+<li>Storybook build <code>master</code> (https://trumpf-ux.ui-community-storybook…) — Web Components code library, extracted 2026-04-24.</li>
+<li>Figma library <code>Lib_Software Styleguide_*</code> (Design Principles · Basics · Atoms · Molecules · Organisms · Templates) — canonical design rules, extracted 2026-05-19.</li>
+</ul>
+<p>Combined coverage: 401 CSS tokens · 76 Web Components · 9 design rules · 8 layout layers · 5 responsive patterns · 6 templates.</p>
+</blockquote>
+<h2 id="identity-philosophy">1. Identity &amp; philosophy</h2>
+<ul>
+<li><strong>Name</strong>: TRUMPF UX UI Community Design System (shortform <strong>UIC</strong>).</li>
+<li><strong>Philosophy</strong>: Atomic Design (Atoms → Molecules → Organisms), touch-first HMI, responsive.</li>
+<li><strong>Contacts</strong> (design management &amp; UX engineering):
+Dina Gallo (Design Mgmt), Manuel Radziwill (UXE Laser), Sebastian Heidfeld (UXE Werkzeugmaschinen).</li>
+<li><strong>Deliverables</strong>: Figma libraries (primary), Web Components (this library), React wrapper package. Sketch &amp; Axure are <em>deprecated</em>.</li>
+</ul>
+<h2 id="the-only-theme-class-you-need">2. The only theme class you need</h2>
+<p>Every page <strong>must</strong> be wrapped in a container that carries the theme class:</p>
+<pre><code class="language-html">&lt;body class=&quot;uic-theme-responsive&quot;&gt;
+  &lt;!-- all uic-* components live in here --&gt;
+&lt;/body&gt;
+</code></pre>
+<p>That one class drives all 401 CSS custom properties. Without it, components are unstyled.</p>
+<h2 id="responsive-rules-touch-first">3. Responsive rules (touch-first)</h2>
+<p><code>--uic-dim-height</code> (the canonical row / field / button height) changes by breakpoint:</p>
+<table>
+<thead>
+<tr>
+<th>Breakpoint</th>
+<th>Media query</th>
+<th><code>--uic-dim-height</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Desktop (default)</td>
+<td>≥ 1600px</td>
+<td><strong>48 px</strong> (touch)</td>
+</tr>
+<tr>
+<td>Tablet</td>
+<td>≤ 1599px</td>
+<td>40 px</td>
+</tr>
+<tr>
+<td>Tablet-small / handheld</td>
+<td>≤ 1023px</td>
+<td>30 px</td>
+</tr>
+</tbody>
+</table>
+<blockquote>
+<p><strong>Never</strong> hard-code heights on interactive elements — always use <code>var(--uic-dim-height)</code> (or the component-specific token). Minimum touch target on a HMI screen is <strong>48 px</strong>.</p>
+</blockquote>
+<h2 id="core-tokens-at-a-glance">4. Core tokens at a glance</h2>
+<h3 id="colours-palette-roles">Colours (palette roles)</h3>
+<p>Full table in <code>references/tokens.md</code>. The most-used roles:</p>
+<table>
+<thead>
+<tr>
+<th>Token</th>
+<th>Value</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>--uic-color-blue2</code></td>
+<td><code>#51a7eb</code></td>
+<td><strong>Primary accent / interactive</strong> — hover, focus, selected borders</td>
+</tr>
+<tr>
+<td><code>--uic-color-blue3</code></td>
+<td><code>#177ac9</code></td>
+<td>Active / pressed, important links</td>
+</tr>
+<tr>
+<td><code>--uic-color-blue4</code></td>
+<td><code>#285172</code></td>
+<td>Dark brand navy (headings on light)</td>
+</tr>
+<tr>
+<td><code>--uic-color-blue5</code></td>
+<td><code>#142939</code></td>
+<td>Deepest navy — app shell backgrounds</td>
+</tr>
+<tr>
+<td><code>--uic-color-grey1</code></td>
+<td><code>#e7ecf0</code></td>
+<td>Light surface / divider</td>
+</tr>
+<tr>
+<td><code>--uic-color-grey2</code></td>
+<td><code>#a1a1a1</code></td>
+<td>Default border</td>
+</tr>
+<tr>
+<td><code>--uic-color-grey3</code></td>
+<td><code>#363636</code></td>
+<td>Default text</td>
+</tr>
+<tr>
+<td><code>--uic-color-grey7</code></td>
+<td><code>#f7f7f7</code></td>
+<td>App background (light)</td>
+</tr>
+<tr>
+<td><code>--uic-color-white</code></td>
+<td><code>#fff</code></td>
+<td>Card surface</td>
+</tr>
+<tr>
+<td><code>--uic-color-red1</code></td>
+<td><code>#ff1e00</code></td>
+<td>Error / critical</td>
+</tr>
+<tr>
+<td><code>--uic-color-red2</code></td>
+<td><code>#cc292d</code></td>
+<td>Danger button</td>
+</tr>
+<tr>
+<td><code>--uic-color-green1</code></td>
+<td><code>#348e30</code></td>
+<td>Success / running</td>
+</tr>
+<tr>
+<td><code>--uic-color-green2</code> / <code>-3</code></td>
+<td><code>#a1c049</code> / <code>#a5c049</code></td>
+<td>Positive status</td>
+</tr>
+<tr>
+<td><code>--uic-color-light-orange</code></td>
+<td><code>#f27b26</code></td>
+<td>Warning</td>
+</tr>
+</tbody>
+</table>
+<p>Accent / category colours (for tags, status dots, charts): <code>light-purple</code>, <code>light-violet</code>, <code>light-pink</code>, <code>limone</code>, <code>light-brown</code> plus <code>dark-*</code> variants for dark-theme contexts.</p>
+<p>Alpha tints exist with suffix <code>a##</code>, e.g. <code>--uic-color-blue2a10</code> = <code>rgba(116,185,239,0.1)</code> — used for subtle hover / selected backgrounds.</p>
+<h3 id="typography">Typography</h3>
+<ul>
+<li><strong>Font family</strong>: <code>&quot;Open Sans&quot;, sans-serif</code> (the ONLY allowed face — Regular 400, Semibold 600, Bold 700). Do <strong>not</strong> use Nunito Sans (that is the Storybook chrome only).</li>
+<li><strong>Sizes</strong> (rem, root = 16 px): <code>extrasmall 0.625</code> · <code>small 0.8</code> · <code>normal 1</code> · <code>medium 1.5</code> · <code>large 2</code>.</li>
+<li><strong>Weights</strong>: <code>light 300</code> · <code>normal 400</code> · <code>semibold 600</code> · <code>bold 700</code> · <code>extrabold 800</code>.</li>
+<li><strong>Line heights</strong>: <code>extrasmall 1rem</code> · <code>small 1.2</code> · <code>normal 1.3</code> · <code>medium 1.8</code> · <code>large 2.2</code>.</li>
+</ul>
+<h3 id="spacing-sizing-component-level">Spacing / sizing (component-level)</h3>
+<p>Trumpf does <strong>not</strong> publish a generic <code>--uic-space-*</code> scale. Spacing lives inside component tokens. Common primitives:</p>
+<ul>
+<li>Button height <code>48 px</code>, min-width <code>159 px</code>; icon-button 60×48; stretched 77×48.</li>
+<li>Header / menu height <code>68 px</code>; icon height <code>36 px</code>.</li>
+<li>Checkbox box 24×20 px; radio outer 24 px; switch thumb 60×48.</li>
+<li>Table cell height <code>64 px</code>.</li>
+<li>List item default height <code>77 px</code>.</li>
+<li>Scrollpanel track width <code>8 px</code>, spacing <code>4 px</code>.</li>
+</ul>
+<h3 id="shadows">Shadows</h3>
+<pre><code>--uic-button-shadow:  0 2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(161,161,161,.4);
+--uic-flyout-shadow:  0 4px 4px rgba(0,0,0,.05), 0 8px 8px rgba(161,161,161,.4);
+--uic-list-box-shadow:0 2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(161,161,161,.4);
+--uic-tile-box-shadow:0 2px 4px rgba(0,0,0,.05), 0 2px 8px rgba(161,161,161,.4);
+</code></pre>
+<p>Shadow colours live in <code>--uic-atom-shadow-color-primary</code> / <code>-secondary</code> / <code>-error</code>.</p>
+<h3 id="z-index-scale">Z-index scale</h3>
+<p><code>header 400 → popover 1000 → tooltip 1000 → dialog 2000 → footer-menu-button 3001</code>.</p>
+<h2 id="component-catalogue-76-components">5. Component catalogue (76 components)</h2>
+<p>Full names &amp; Storybook links in <code>references/components.md</code>. Headline structure:</p>
+<ul>
+<li><strong>Atoms (27)</strong>: Accordion · Badge · Button (Content / Footer / Icon-Only) · Checkbox · Icon · IconSet · Image · Input Field (Value / Number / Multiline) · Loader · Output · Popover · Profile · Progress Bar · Radio · Scroll Panel · Scroll Picker · Sidebar Footer · Switch · Tab · Tag · Text · Textlink · Thumbnail Item · Tree Item · Virtual Scroll.</li>
+<li><strong>Molecules (23)</strong>: Breadcrumb · CheckList · ComboBox · Dropdown · Empty State · Filter · Flyout · Footer Menu · Function Menu · List · Menu (root + Item) · Minimap · Pagination · Search Field · Segmented Control · Sidebar · Slider · Stepper · Thumbnail · Tile · Tooltip · Tree · Wizard Header Step.</li>
+<li><strong>Organisms (12)</strong>: App Header (+ Integration) · Dialog · Footer · Header (Root / Menu / Menu Item) · Horizontal Flyout Menu · Message List · Message Toast · Table (+ Lazy rendering variants) · Tabs.</li>
+<li><strong>API</strong>: I-HUB Access Token.</li>
+</ul>
+<p><strong>Naming</strong>: every Web Component tag is <code>&lt;uic-*&gt;</code>. There are 287 tokens and 42 tag prefixes: <code>uic-accordion</code>, <code>uic-button</code>, <code>uic-list</code>, … (see references/components.md).</p>
+<h2 id="layout-arrangement-rule">6. Layout / arrangement rule</h2>
+<p>The design-system docs state: <em>&quot;Components are prepared for complex arrangements … when put together on a page they flow horizontally.&quot;</em> The default layout primitive is:</p>
+<pre><code class="language-css">display: flex;
+flex-flow: row wrap;
+gap: 8px;   /* or a component-specific token */
+</code></pre>
+<p>Do <strong>not</strong> invent a grid system. Compose with <code>uic-sidebar</code>, <code>uic-header</code>, <code>uic-footer-menu</code>, <code>uic-list</code>, <code>uic-tile</code> and flex-row-wrap.</p>
+<h2 id="framework-integration-quick-snippets">7. Framework integration (quick snippets)</h2>
+<h3 id="angular">Angular</h3>
+<pre><code class="language-ts">// angular.json assets
+{ &quot;glob&quot;: &quot;**/*&quot;, &quot;input&quot;: &quot;node_modules/@trumpf/ux.ui-community/dist/ux-ui-community/svg&quot;, &quot;output&quot;: &quot;svg&quot; }
+
+// main.ts
+import { defineCustomElements } from '@trumpf/ux.ui-community/loader';
+defineCustomElements(window);
+
+// styles.css
+@import &quot;@trumpf/ux.ui-community/dist/ux-ui-community/ux-ui-community.css&quot;;
+</code></pre>
+<p>Add <code>CUSTOM_ELEMENTS_SCHEMA</code> to every NgModule using <code>&lt;uic-*&gt;</code>.</p>
+<h3 id="react">React</h3>
+<pre><code class="language-bash">npm install @trumpf/ux.ui-community-react
+</code></pre>
+<p>Sample app: <a href="https://gitlab.com/com.trumpf.ux/examples/react">https://gitlab.com/com.trumpf.ux/examples/react</a></p>
+<h3 id="vue">Vue</h3>
+<p>Vue cannot use camelCase events; wrap event names to lowercase:</p>
+<pre><code class="language-js">app.config.compilerOptions.isCustomElement = tag =&gt; tag.startsWith('uic-');
+</code></pre>
+<h3 id="plain-html-useful-for-mocks">Plain HTML (useful for mocks)</h3>
+<pre><code class="language-html">&lt;script type=&quot;module&quot; src=&quot;https://cdn/.../ux-ui-community.esm.js&quot;&gt;&lt;/script&gt;
+&lt;link  rel=&quot;stylesheet&quot; href=&quot;https://cdn/.../ux-ui-community.css&quot;&gt;
+&lt;body class=&quot;uic-theme-responsive&quot;&gt;
+  &lt;uic-button variant=&quot;primary-content&quot;&gt;Save&lt;/uic-button&gt;
+&lt;/body&gt;
+</code></pre>
+<h2 id="when-coding-a-new-screen-the-pre-flight-checklist">8. When coding a new screen — the pre-flight checklist</h2>
+<ol>
+<li>Wrap the root container in <code>uic-theme-responsive</code>.</li>
+<li>Pick components from the Atomic catalogue before inventing new ones.</li>
+<li>Reference colours / sizes via CSS custom properties, never hex literals.</li>
+<li>Verify touch targets ≥ <code>var(--uic-dim-height)</code> (48/40/30 px).</li>
+<li>Use <code>flex-flow: row wrap</code> for arrangements.</li>
+<li>Use the documented <code>uic-color-*</code> roles for state (hover = blue2, active = blue3, error = red1, success = green1).</li>
+<li>Respect z-index scale (dialog 2000, popover 1000, header 400).</li>
+<li>Font = Open Sans (Regular / Semibold / Bold) only.</li>
+<li>Shadows only via the <code>--uic-*-shadow</code> tokens — no custom <code>box-shadow: 0 10px 20px black</code>.</li>
+<li><strong><code>border-radius: 0</code> on every surface</strong> (buttons, inputs, panels, dialogs, tags, cards, tiles). Only exceptions: switch/pill thumb (≥20 px pill) and avatar/profile (50 %).</li>
+<li>Run the results past <code>references/conformance-checklist.md</code> before declaring &quot;Trumpf style&quot;.</li>
+</ol>
+<h2 id="the-9-canonical-design-rules-always-check">9. The 9 canonical design rules (always check)</h2>
+<p>The Figma master <code>1.2 Rules to Design a TRUMPF GUI</code> lists exactly nine rules. Treat them as non-negotiable:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Rule</th>
+<th>Verification</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>01</td>
+<td>The system is built on <strong>Atomic Design</strong>.</td>
+<td>Components compose from published atoms only.</td>
+</tr>
+<tr>
+<td>02</td>
+<td>Use the <strong>font, colors and controls as defined</strong>.</td>
+<td><code>npm run lint:tokens</code> and the conformance checklist.</td>
+</tr>
+<tr>
+<td>03</td>
+<td>Touch areas are <strong>≥ 13 × 13 mm</strong>.</td>
+<td><code>--uic-dim-height</code> × pixel size ≥ 13 mm.</td>
+</tr>
+<tr>
+<td>04</td>
+<td>Build on an <strong>8 × 8 px grid</strong> (icons/typography on 4 × 4).</td>
+<td>gaps and paddings are multiples of 8.</td>
+</tr>
+<tr>
+<td>05</td>
+<td>UI is derived from <strong>TRUMPF machine product design</strong>.</td>
+<td>Either Touchpoint or Website pattern, applied consistently.</td>
+</tr>
+<tr>
+<td>06</td>
+<td>Keep <strong>5 : 4</strong> proportion for icon-style controls.</td>
+<td>50 × 40 px = Tablet &quot;Base&quot;.</td>
+</tr>
+<tr>
+<td>07</td>
+<td><strong>Calculate</strong> control sizes against your screen via the scaling factor.</td>
+<td>§1.5 formula in <code>design-principles.md</code>.</td>
+</tr>
+<tr>
+<td>08</td>
+<td>High contrast + minimum touch sizes = accessible baseline.</td>
+<td>WCAG AA at minimum, AAA for <code>:default</code>.</td>
+</tr>
+<tr>
+<td>09</td>
+<td><strong>Share new use-cases / GUIs back</strong> to the styleguide team.</td>
+<td>PR description references the gap filled.</td>
+</tr>
+</tbody>
+</table>
+<p>Full details: <code>references/design-principles.md</code> (§1.x), <code>references/basics.md</code> (§2.x).</p>
+<h2 id="the-8-layer-layout-model">10. The 8-layer layout model</h2>
+<p>Every TRUMPF GUI is a stack of these layers (<code>tr-*</code> are color names):</p>
+<pre><code>1. Background           tr-white
+2. TRUMPF Design element (5:4 brand marker, optional)
+3. Main navigation       tr-blue5 (#142939) — Organism 5.01 App Header
+4. Sub navigation +
+   content area          tr-white
+5. Nested content areas  tr-white + outer shadow
+6. Footer bar            tr-blue4 (#285172) — Organism 5.08 Footer (64 px, never 52 px)
+7. Overlay               tr-white + outer shadow (tooltip, popover)
+8. Popups / modals       tr-white + outer shadow + backdrop blur (fallback ≈ 80–90 % white)
+</code></pre>
+<p>Two integration variants exist: <strong>GUI integrated in Touchpoint</strong> (lighter chrome) and <strong>stand-alone GUI</strong> (full chrome).</p>
+<h2 id="references-load-on-demand">11. References (load on demand)</h2>
+<ul>
+<li><code>references/design-principles.md</code> — the 9 rules, 8-layer model, grid (8 px), touch areas (13×13 mm), screen-size scaling formula, gesture-replacement table, responsive patterns (Column Drop · Reveal/Hide · Expand · Divide · Transform), Drag &amp; Drop.</li>
+<li><code>references/basics.md</code> — <code>tr-*</code> color naming, Basic vs Additional palette, color-usage order, color-blindness checks, WCAG AA/AAA contrast rules, Open Sans typography matrix (Desktop and Tablet, Sizes 1–4), the <strong>8 universal states</strong> every interactive component must implement, App-icon construction.</li>
+<li><code>references/tokens.md</code> — all 401 CSS custom properties grouped by role (full ramp <code>blue0…blue7</code>, <code>grey1…grey14</code>, accents, alpha tints, dimensions, shadows, z-index scale).</li>
+<li><code>references/components.md</code> — full Storybook story index plus the Figma-canonical taxonomies: 5 button kinds, 3 tag variants, Table cell variants (basic / highlight / symbols / controls / organizer), Dialog double-coded close, Footer rules (64 px), Toast 4 categories + behaviours, App Header layouts.</li>
+<li><code>references/templates.md</code> — the 6 page-level templates (Error Pages, Expiring License, Filter Dialog <code>Tbd.</code>, List with Search <code>Tbd.</code>, Non-modal dialog, Hierarchy visualisation).</li>
+<li><code>references/file-browser.md</code> — <strong>fills the canonical <code>tbd.</code> gap</strong> for <code>5.06 File Browser</code> and <code>6.04 List with Search</code>. Documents the proven composition from this repository's TRUMPF Program Manager mock.</li>
+<li><code>references/integration.md</code> — expanded Angular / React / Vue setup and the mock-friendly HTML CDN pattern.</li>
+<li><code>references/conformance-checklist.md</code> — pass/fail checklist for a screen review (Foundations · Components · Layout · States · Content · A11y · Stewardship).</li>
+</ul>
+<h2 id="fast-recall-how-to-use-this-skill">12. Fast recall (how to use this skill)</h2>
+<ul>
+<li>&quot;Check X against TRUMPF style guide&quot; → §9 + <code>conformance-checklist.md</code>.</li>
+<li>&quot;What are the TRUMPF design rules?&quot; → §9 (the 9 rules) + load <code>design-principles.md</code>.</li>
+<li>&quot;How do I lay out a TRUMPF screen?&quot; → §10 (8-layer model) + <code>design-principles.md</code> §1.4 + <code>file-browser.md</code> if listing/files.</li>
+<li>&quot;Give me the TRUMPF primary button colour&quot; → <strong>fill = <code>blue4 #285172</code></strong>, <strong>hover = <code>blue3 #177ac9</code></strong>, text white (<code>components.md §3.05</code>). The interactive <em>accent/border</em> colour (hover border, focus) is <code>blue2 #51a7eb</code>; <code>blue3</code> = active text/links. Never use <code>blue2</code> as a fill.</li>
+<li>&quot;What's the border-radius?&quot; → <strong><code>0</code> everywhere.</strong> Only switch/pill thumb (≥20 px pill) and avatar/profile (50 %) are rounded (<code>tokens.md §5</code>).</li>
+<li>&quot;Switch ON/OFF colours?&quot; → ON = <code>blue2</code> track+border, white thumb right; OFF = white track, <code>grey2</code> border+thumb left (<code>basics.md §2.3</code>).</li>
+<li>&quot;Status tag colours?&quot; → released=green1, draft=grey1, in-progress=orange, archived=grey1/grey2, error=red1 — always + icon + label (<code>components.md §3.20</code>).</li>
+<li>&quot;Which focus colour?&quot; → standard <strong><code>blue2</code></strong> 2 px outline; Tile is the only exception (<code>blue1</code>).</li>
+<li>&quot;What component for a file list?&quot; → load <code>file-browser.md</code> (uses <code>uic-list</code>, <code>uic-table</code>, <code>uic-tile</code>, <code>uic-app-header</code>, <code>uic-sidebar</code>, <code>uic-dialog</code>, <code>uic-message-toast</code>).</li>
+<li>&quot;How do I render a TRUMPF header?&quot; → <code>uic-app-header</code> (Organism 5.01), horizontal or vertical layout, with <code>uic-header-menu</code> items slotted; height 68 px, <code>tr-blue5</code> background.</li>
+<li>&quot;Minimum touch target?&quot; → ≥ <strong>13 × 13 mm</strong>. On Tablet Base ≈ <strong>64 × 64 px</strong>, visual ≈ 48–50 px (button height <code>var(--uic-dim-height)</code>).</li>
+<li>&quot;How many button kinds exist?&quot; → 5: <strong>Applauncher · Content · Icon Only · Footer · Button with Menu</strong> (<code>components.md</code> extension).</li>
+<li>&quot;Footer height?&quot; → <strong>64 px</strong>. The old 52 px is deprecated; never use it.</li>
+<li>&quot;What states does an interactive control need?&quot; → 8: <code>:default</code>, <code>:disabled</code>, <code>:focus</code>, <code>:hover</code>, <code>:active</code>, <code>:selected</code>, <code>:selected-focus</code>, <code>:selected-hover</code> (<code>basics.md</code> §2.3).</li>
+<li>&quot;What responsive pattern should I use?&quot; → pick from Column Drop · Reveal/Hide · Expand · Divide · Transform (<code>design-principles.md</code> §1.9).</li>
+<li>&quot;Single-touch HMI?&quot; → pair every gesture with a Gesture-Replacement icon button (<code>design-principles.md</code> §1.8).</li>
+<li>&quot;How do I render a hierarchy in a table?&quot; → <code>templates.md</code> §6.06: column-1 indent 8 px / level, parent row <code>tr-grey1 @ 20 %</code>, divider <code>white</code>.</li>
+<li>&quot;What about Smartphone?&quot; → all the rules apply; the styleguide marks Smartphone as <strong>in progress</strong>, so use the documented sizes as a starting point and document any deviation back to the team (Rule 09).</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#name-trumpf-ux-styleguide-description-use-this-skill-whenever-building-reviewing-or-documenting-ui-for-trumpf-software-products-mes-oseon-cadcam-hmis-machine-dashboards-that-must-follow-the-trumpf-ux-ui-community-design-system-trumpfux.ui-community-also-called-uic.triggers-on-trumpf-ui-uic-uic-theme-responsive-touchpoint-design-system-tr-blue-open-sans-tr-grey-requests-to-create-trumpf-styled-screens-or-when-checking-a-screen-against-the-trumpf-style-guide.provides-the-9-canonical-design-rules-atomic-design-1313-mm-touch-areas-88-px-grid-54-ratio-the-8-layer-layout-model-the-responsive-pattern-catalog-column-drop-revealhide-expand-divide-transform-401-design-tokens-colors-typography-spacing-shadows-the-full-atomic-design-component-catalog-76-components-atoms-molecules-organisms-with-figma-canonical-taxonomies-page-level-templates-error-pages-filter-dialog-list-with-search-non-modal-dialog-hierarchy-visualisation-and-a-gap-filled-file-browser-pattern">name: trumpf-ux-styleguide
+description: Use this skill whenever building, reviewing, or documenting UI for TRUMPF software products (MES, OSEON, CAD/CAM, HMIs, machine dashboards) that must follow the TRUMPF UX UI Community Design System (@trumpf/ux.ui-community, also called "UIC"). Triggers on "TRUMPF UI", "UIC", "uic-theme-responsive", "Touchpoint Design System", "tr-blue", "Open Sans", "tr-grey", requests to create Trumpf-styled screens, or when checking a screen against the Trumpf style guide. Provides: the 9 canonical design rules (atomic design, 13×13 mm touch areas, 8×8 px grid, 5:4 ratio), the 8-layer layout model, the responsive-pattern catalog (Column Drop, Reveal/Hide, Expand, Divide, Transform), 401 design tokens (colors, typography, spacing, shadows), the full Atomic-Design component catalog (76 components: Atoms, Molecules, Organisms) with Figma-canonical taxonomies, page-level templates (Error pages, Filter dialog, List with Search, Non-modal dialog, Hierarchy visualisation) and a gap-filled File Browser pattern.</a>
+  </li>
+  <li level="1">
+   <a href="#identity-philosophy">1. Identity & philosophy</a>
+  </li>
+  <li level="1">
+   <a href="#the-only-theme-class-you-need">2. The only theme class you need</a>
+  </li>
+  <li level="1">
+   <a href="#responsive-rules-touch-first">3. Responsive rules (touch-first)</a>
+  </li>
+  <li level="1">
+   <a href="#core-tokens-at-a-glance">4. Core tokens at a glance</a>
+  </li>
+  <li level="2">
+   <a href="#colours-palette-roles">Colours (palette roles)</a>
+  </li>
+  <li level="2">
+   <a href="#typography">Typography</a>
+  </li>
+  <li level="2">
+   <a href="#spacing-sizing-component-level">Spacing / sizing (component-level)</a>
+  </li>
+  <li level="2">
+   <a href="#shadows">Shadows</a>
+  </li>
+  <li level="2">
+   <a href="#z-index-scale">Z-index scale</a>
+  </li>
+  <li level="1">
+   <a href="#component-catalogue-76-components">5. Component catalogue (76 components)</a>
+  </li>
+  <li level="1">
+   <a href="#layout-arrangement-rule">6. Layout / arrangement rule</a>
+  </li>
+  <li level="1">
+   <a href="#framework-integration-quick-snippets">7. Framework integration (quick snippets)</a>
+  </li>
+  <li level="2">
+   <a href="#angular">Angular</a>
+  </li>
+  <li level="2">
+   <a href="#react">React</a>
+  </li>
+  <li level="2">
+   <a href="#vue">Vue</a>
+  </li>
+  <li level="2">
+   <a href="#plain-html-useful-for-mocks">Plain HTML (useful for mocks)</a>
+  </li>
+  <li level="1">
+   <a href="#when-coding-a-new-screen-the-pre-flight-checklist">8. When coding a new screen — the pre-flight checklist</a>
+  </li>
+  <li level="1">
+   <a href="#the-9-canonical-design-rules-always-check">9. The 9 canonical design rules (always check)</a>
+  </li>
+  <li level="1">
+   <a href="#the-8-layer-layout-model">10. The 8-layer layout model</a>
+  </li>
+  <li level="1">
+   <a href="#references-load-on-demand">11. References (load on demand)</a>
+  </li>
+  <li level="1">
+   <a href="#fast-recall-how-to-use-this-skill">12. Fast recall (how to use this skill)</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></span>
+ <span class="next"><a href="../4cra/index.html">CRA</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

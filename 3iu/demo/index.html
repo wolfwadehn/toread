@@ -1,0 +1,921 @@
+<!--
+  TRUMPF Program Manager — small demo HMI
+  Built from ../SKILL.md + ../references/*.md (TRUMPF UX UI Community Design System / "UIC").
+
+  Deviation note (Rule 09 — stewardship, see conformance-checklist.md item 33):
+  This is a standalone, dependency-free mock. The real `@trumpf/ux.ui-community`
+  Web Components live behind TRUMPF's internal JFrog registry (references/integration.md),
+  so they cannot be loaded from a public CDN for a portable demo. Every surface below is
+  hand-built CSS/HTML that reproduces the published tokens, proportions and states 1:1
+  (see references/tokens.md, components.md, file-browser.md) so swapping in the real
+  <uic-*> elements later is a drop-in replacement, not a redesign.
+
+  Screen composition follows the canonical "File Browser" pattern from
+  references/file-browser.md: App Header -> Sidebar + Toolbar -> Table/Tile content
+  -> Footer Menu, with a Dialog and Message Toast overlay.
+-->
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TRUMPF Program Manager — UIC demo HMI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700;800&display=swap">
+<style>
+/* =========================================================================
+   1. TOKENS — subset of references/tokens.md, scoped to .uic-theme-responsive
+   ========================================================================= */
+.uic-theme-responsive{
+  --uic-color-blue0:#b9dcf7;
+  --uic-color-blue1:#74b9ef;
+  --uic-color-blue2:#51a7eb;
+  --uic-color-blue3:#177ac9;
+  --uic-color-blue4:#285172;
+  --uic-color-blue5:#142939;
+  --uic-color-blue6:#899fb2;
+  --uic-color-blue7:#2a3d4b;
+  --uic-color-grey1:#e7ecf0;
+  --uic-color-grey2:#a1a1a1;
+  --uic-color-grey3:#363636;
+  --uic-color-grey5:#9a9a9a;
+  --uic-color-grey7:#f7f7f7;
+  --uic-color-white:#fff;
+  --uic-color-red1:#ff1e00;
+  --uic-color-red2:#cc292d;
+  --uic-color-green1:#348e30;
+  --uic-color-light-orange:#f27b26;
+  --uic-color-blue2a10:rgba(81,167,235,.10);
+  --uic-color-blue2a25:rgba(81,167,235,.25);
+  --uic-color-green1a12:rgba(52,142,48,.12);
+  --uic-color-light-orangea12:rgba(242,123,38,.12);
+  --uic-color-red1a12:rgba(255,30,0,.12);
+
+  --uic-atom-shadow-color-primary:rgba(0,0,0,.05);
+  --uic-atom-shadow-color-secondary:rgba(161,161,161,.4);
+  --uic-atom-shadow-color-error:rgba(255,30,0,.5);
+  --uic-button-shadow:0 2px 4px var(--uic-atom-shadow-color-primary),0 2px 8px var(--uic-atom-shadow-color-secondary);
+  --uic-list-box-shadow:0 2px 4px var(--uic-atom-shadow-color-primary),0 2px 8px var(--uic-atom-shadow-color-secondary);
+  --uic-tile-box-shadow:0 2px 4px var(--uic-atom-shadow-color-primary),0 2px 8px var(--uic-atom-shadow-color-secondary);
+  --uic-flyout-shadow:0 4px 4px var(--uic-atom-shadow-color-primary),0 8px 8px var(--uic-atom-shadow-color-secondary);
+
+  --uic-font-family:"Open Sans",sans-serif;
+  --uic-font-size-extrasmall:.625rem;
+  --uic-font-size-small:.8rem;
+  --uic-font-size-normal:1rem;
+  --uic-font-size-medium:1.5rem;
+  --uic-font-size-large:2rem;
+  --uic-font-weight-normal:400;
+  --uic-font-weight-semibold:600;
+  --uic-font-weight-bold:700;
+  --uic-line-height-normal:1.3rem;
+  --uic-line-height-small:1.2rem;
+
+  /* responsive root — Desktop default, see SKILL.md §3 */
+  --uic-dim-height:48px;
+  --uic-button-height:48px;
+  --uic-button-min-width:159px;
+  --uic-icon-button-width:60px;
+  --uic-icon-button-height:48px;
+  --uic-header-height:68px;
+  --uic-header-icon-size:36px;
+  --uic-table-cell-height:64px;
+  --uic-footer-menu-height:64px;
+
+  --uic-focus-outline:2px solid var(--uic-color-blue2);
+  --uic-tile-focus-outline:2px solid var(--uic-color-blue1);
+
+  --uic-header-z-index:400;
+  --uic-z-index-popover:1000;
+  --uic-dialog-z-index:2000;
+  --uic-footer-menu-button-z-index:3001;
+
+  --uic-dialog-backdrop-filter:blur(3px);
+}
+@media (max-width:1599px){ .uic-theme-responsive{ --uic-dim-height:40px; } }
+@media (max-width:1023px){ .uic-theme-responsive{ --uic-dim-height:30px; } }
+
+/* =========================================================================
+   2. RESET / BASE
+   ========================================================================= */
+*{box-sizing:border-box;}
+html,body{margin:0;height:100%;}
+body.uic-theme-responsive{
+  font-family:var(--uic-font-family);
+  font-size:var(--uic-font-size-normal);
+  line-height:var(--uic-line-height-normal);
+  color:var(--uic-color-grey3);
+  background:var(--uic-color-grey7);
+  -webkit-font-smoothing:antialiased;
+}
+button,input{font-family:inherit;font-size:inherit;color:inherit;}
+:focus-visible{outline:var(--uic-focus-outline);outline-offset:1px;}
+svg.icon{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round;flex:none;}
+
+/* Rule: everything square-cornered (tokens.md §5). Exceptions: switch pill + profile circle. */
+.uic-app-header,.uic-sidebar,.uic-toolbar,.content-surface,.uic-table,.uic-footer-menu,
+.uic-button,.uic-tag,.uic-search-field,.uic-segmented-control__option,.uic-dialog,
+.uic-tile,.uic-message-toast,.uic-checkbox,.uic-badge,.uic-dropdown{
+  border-radius:0;
+}
+
+/* =========================================================================
+   3. APP HEADER — Organism 5.01, 68px, tr-blue5, layer 3
+   ========================================================================= */
+.uic-app-header{
+  display:flex;align-items:center;
+  height:var(--uic-header-height);
+  background:var(--uic-color-blue5);
+  color:var(--uic-color-white);
+  position:sticky;top:0;z-index:var(--uic-header-z-index);
+  padding:0 8px;
+  gap:8px;
+}
+.applauncher-btn{
+  width:50px;height:40px; /* 5:4 */
+  display:flex;align-items:center;justify-content:center;
+  background:transparent;border:none;color:var(--uic-color-white);cursor:pointer;
+}
+.applauncher-btn:hover{background:rgba(255,255,255,.08);}
+.app-logo{font-weight:var(--uic-font-weight-bold);font-size:var(--uic-font-size-normal);letter-spacing:.5px;white-space:nowrap;}
+.app-logo small{display:block;font-weight:var(--uic-font-weight-normal);font-size:var(--uic-font-size-extrasmall);color:var(--uic-color-blue6);letter-spacing:.5px;}
+.header-divider{width:1px;height:32px;background:var(--uic-color-blue6);opacity:.5;margin:0 4px;}
+.uic-header-menu{display:flex;align-items:center;height:100%;gap:24px;margin-left:8px;}
+.uic-header-menu-item{
+  height:100%;display:flex;align-items:center;
+  background:none;border:none;border-bottom:2px solid transparent;
+  color:var(--uic-color-blue6);font-weight:var(--uic-font-weight-semibold);
+  cursor:pointer;padding:0 2px;
+}
+.uic-header-menu-item:hover{color:var(--uic-color-white);}
+.uic-header-menu-item[aria-current="page"]{color:var(--uic-color-white);border-bottom-color:var(--uic-color-blue1);}
+.header-spacer{flex:1;}
+.header-icon-btn{
+  position:relative;width:var(--uic-icon-button-width);height:var(--uic-icon-button-height);
+  display:flex;align-items:center;justify-content:center;
+  background:none;border:none;color:var(--uic-color-white);cursor:pointer;
+}
+.header-icon-btn svg.icon{width:var(--uic-header-icon-size);height:var(--uic-header-icon-size);}
+.header-icon-btn:hover{background:rgba(255,255,255,.08);}
+.header-badge{
+  position:absolute;top:8px;right:12px;
+  min-width:16px;height:16px;padding:0 3px;
+  background:var(--uic-color-red2);color:var(--uic-color-white);
+  font-size:var(--uic-font-size-extrasmall);font-weight:var(--uic-font-weight-bold);
+  display:flex;align-items:center;justify-content:center;line-height:1;
+}
+.uic-profile{
+  width:34px;height:34px;border-radius:50%; /* exception: profile circle */
+  background:var(--uic-color-blue2);color:var(--uic-color-blue5);
+  display:flex;align-items:center;justify-content:center;
+  font-weight:var(--uic-font-weight-bold);font-size:var(--uic-font-size-small);
+  margin-left:4px;cursor:pointer;border:none;
+}
+
+/* =========================================================================
+   4. SHELL LAYOUT
+   ========================================================================= */
+.app-shell{display:flex;flex-flow:row wrap;align-items:stretch;min-height:calc(100vh - var(--uic-header-height) - var(--uic-footer-menu-height));}
+
+/* ---- Sidebar (nav sidebar sizes to content, NOT the 296px flyout token — tokens.md §3.1) ---- */
+.uic-sidebar{
+  width:248px;flex:none;
+  background:var(--uic-color-white);
+  border-right:1px solid var(--uic-color-grey1);
+  display:flex;flex-direction:column;
+  padding:16px 0;
+}
+.uic-menu{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;}
+.uic-menu-item{
+  display:flex;align-items:center;gap:12px;
+  height:var(--uic-dim-height);min-height:48px;
+  padding:0 24px;margin:0 0 0 0;
+  border:none;border-left:3px solid transparent;background:none;
+  color:var(--uic-color-grey3);font-weight:var(--uic-font-weight-semibold);
+  cursor:pointer;width:100%;text-align:left;
+}
+.uic-menu-item:hover{background:var(--uic-color-grey7);}
+.uic-menu-item[aria-pressed="true"]{
+  background:var(--uic-color-blue2a10);
+  color:var(--uic-color-blue3);
+  border-left-color:var(--uic-color-blue3);
+}
+.uic-menu-item svg.icon{width:20px;height:20px;color:var(--uic-color-blue4);}
+.uic-menu-item[aria-pressed="true"] svg.icon{color:var(--uic-color-blue3);}
+.menu-item-count{margin-left:auto;font-weight:var(--uic-font-weight-normal);color:var(--uic-color-grey5);font-size:var(--uic-font-size-small);}
+.uic-sidebar-footer{margin-top:auto;padding:16px 24px 0;border-top:1px solid var(--uic-color-grey1);}
+
+/* ---- Main column ---- */
+.app-main{flex:1;min-width:0;display:flex;flex-direction:column;}
+
+/* ---- Toolbar (sub-navigation, layer 4) ---- */
+.uic-toolbar{
+  background:var(--uic-color-white);
+  border-bottom:1px solid var(--uic-color-grey1);
+  padding:16px 24px;
+  display:flex;flex-flow:row wrap;align-items:center;gap:16px;
+}
+.uic-breadcrumb{display:flex;align-items:center;gap:6px;flex:1 0 100%;font-size:var(--uic-font-size-small);font-weight:var(--uic-font-weight-bold);color:var(--uic-color-grey5);}
+.uic-breadcrumb-item{color:var(--uic-color-grey5);}
+.uic-breadcrumb-item[aria-current="page"]{color:var(--uic-color-grey3);}
+.toolbar-row{display:flex;flex-flow:row wrap;align-items:center;gap:16px;flex:1;}
+
+.uic-search-field{
+  display:flex;align-items:center;gap:8px;
+  height:var(--uic-dim-height);min-height:40px;
+  border:1px solid var(--uic-color-grey2);
+  padding:0 12px;min-width:240px;background:var(--uic-color-white);
+}
+.uic-search-field:focus-within{border-color:var(--uic-color-blue2);}
+.uic-search-field svg.icon{width:20px;height:20px;color:var(--uic-color-grey5);}
+.uic-search-field input{border:none;outline:none;flex:1;background:none;}
+.uic-search-field .clear-btn{background:none;border:none;cursor:pointer;color:var(--uic-color-grey5);display:flex;padding:0;}
+
+.uic-segmented-control{display:flex;border:1px solid var(--uic-color-grey2);}
+.uic-segmented-control__option{
+  height:var(--uic-dim-height);min-height:40px;
+  padding:0 16px;background:var(--uic-color-white);border:none;
+  border-right:1px solid var(--uic-color-grey2);
+  color:var(--uic-color-grey3);font-weight:var(--uic-font-weight-semibold);
+  cursor:pointer;display:flex;align-items:center;gap:6px;
+}
+.uic-segmented-control__option:last-child{border-right:none;}
+.uic-segmented-control__option[aria-pressed="true"]{background:var(--uic-color-blue4);color:var(--uic-color-white);}
+.uic-segmented-control__option:hover:not([aria-pressed="true"]){background:var(--uic-color-grey7);}
+.uic-segmented-control__option svg.icon{width:18px;height:18px;}
+
+/* ---- Content surface (nested content area, layer 5) ---- */
+.content-surface{
+  margin:16px 24px 24px;
+  background:var(--uic-color-white);
+  box-shadow:var(--uic-list-box-shadow);
+  flex:1;display:flex;flex-direction:column;overflow:hidden;
+}
+
+/* =========================================================================
+   5. TABLE — Organism 5.18
+   ========================================================================= */
+.uic-table{width:100%;border-collapse:collapse;font-size:var(--uic-font-size-normal);}
+.uic-table thead th{
+  height:48px;text-align:left;padding:0 16px;
+  background:var(--uic-color-grey7);
+  border-bottom:1px solid var(--uic-color-grey1);
+  color:var(--uic-color-grey3);font-weight:var(--uic-font-weight-bold);
+  font-size:var(--uic-font-size-small);white-space:nowrap;
+}
+.uic-table tbody tr{height:var(--uic-table-cell-height);border-bottom:1px solid var(--uic-color-grey1);cursor:pointer;}
+.uic-table tbody tr:hover{background:var(--uic-color-grey7);}
+.uic-table tbody tr[aria-selected="true"]{background:var(--uic-color-blue2a10);}
+.uic-table td{padding:0 16px;vertical-align:middle;}
+.cell-name{font-weight:var(--uic-font-weight-semibold);}
+.cell-sub{display:block;font-size:var(--uic-font-size-small);color:var(--uic-color-grey5);font-weight:var(--uic-font-weight-normal);}
+.uic-checkbox{
+  width:24px;height:20px;border:1px solid var(--uic-color-grey2);background:var(--uic-color-white);
+  display:inline-flex;align-items:center;justify-content:center;cursor:pointer;flex:none;
+}
+.uic-checkbox svg.icon{width:16px;height:16px;color:var(--uic-color-white);stroke-width:3;display:none;}
+.uic-checkbox[aria-checked="true"]{background:var(--uic-color-blue4);border-color:var(--uic-color-blue4);}
+.uic-checkbox[aria-checked="true"] svg.icon{display:block;}
+.row-actions{display:flex;gap:4px;}
+.icon-only-btn{
+  width:40px;height:40px;display:flex;align-items:center;justify-content:center;
+  background:none;border:none;color:var(--uic-color-blue4);cursor:pointer;
+}
+.icon-only-btn:hover{background:var(--uic-color-grey1);}
+.icon-only-btn svg.icon{width:20px;height:20px;}
+
+/* ---- Status tag — Atom 3.20 / P2.3 mapping ---- */
+.uic-tag{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 10px;font-size:var(--uic-font-size-small);font-weight:var(--uic-font-weight-semibold);white-space:nowrap;}
+.uic-tag svg.icon{width:14px;height:14px;}
+.uic-tag--released{background:var(--uic-color-green1a12);color:var(--uic-color-green1);}
+.uic-tag--draft{background:var(--uic-color-grey1);color:var(--uic-color-grey3);}
+.uic-tag--in-progress{background:var(--uic-color-light-orangea12);color:var(--uic-color-light-orange);}
+.uic-tag--archived{background:var(--uic-color-grey1);color:var(--uic-color-grey2);}
+.uic-tag--error{background:var(--uic-color-red1a12);color:var(--uic-color-red1);}
+
+/* ---- Tile grid (alt content view) ---- */
+.tile-grid{display:flex;flex-flow:row wrap;gap:16px;padding:24px;overflow:auto;}
+.uic-tile{
+  width:220px;padding:16px;border:1px solid var(--uic-color-grey1);
+  box-shadow:var(--uic-tile-box-shadow);cursor:pointer;
+  display:flex;flex-direction:column;gap:8px;background:var(--uic-color-white);
+}
+.uic-tile:hover{box-shadow:var(--uic-flyout-shadow);}
+.uic-tile:focus-visible{outline:var(--uic-tile-focus-outline);}
+.uic-tile[aria-selected="true"]{border-color:var(--uic-color-blue2);background:var(--uic-color-blue2a10);}
+.tile-header{display:flex;justify-content:space-between;align-items:flex-start;font-weight:var(--uic-font-weight-semibold);gap:8px;}
+.tile-meta{font-size:var(--uic-font-size-small);color:var(--uic-color-grey5);}
+
+.empty-state{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--uic-color-grey5);padding:48px;}
+.empty-state svg.icon{width:48px;height:48px;color:var(--uic-color-grey2);}
+
+/* =========================================================================
+   6. BUTTONS — Atom 3.05, five kinds (only the ones this demo needs)
+   ========================================================================= */
+.uic-button{
+  height:var(--uic-button-height);min-height:40px;min-width:var(--uic-button-min-width);
+  padding:0 20px;border:1px solid transparent;cursor:pointer;
+  font-weight:var(--uic-font-weight-semibold);font-size:var(--uic-font-size-normal);
+  display:inline-flex;align-items:center;justify-content:center;gap:8px;
+  box-shadow:var(--uic-button-shadow);
+}
+.uic-button--primary{background:var(--uic-color-blue4);color:var(--uic-color-white);}
+.uic-button--primary:hover{background:var(--uic-color-blue3);}
+.uic-button--secondary{background:var(--uic-color-white);color:var(--uic-color-blue4);border-color:var(--uic-color-grey2);}
+.uic-button--secondary:hover{border-color:var(--uic-color-blue2);}
+.uic-button--secondary:active{background:var(--uic-color-blue2a10);color:var(--uic-color-blue3);}
+.uic-button:disabled{background:var(--uic-color-grey1);color:var(--uic-color-grey2);border-color:var(--uic-color-grey1);box-shadow:none;cursor:not-allowed;}
+
+/* =========================================================================
+   7. FOOTER MENU — Organism 5.08, 64px, tr-blue4, layer 6
+   ========================================================================= */
+.uic-footer-menu{
+  height:var(--uic-footer-menu-height);
+  background:var(--uic-color-blue4);
+  display:flex;align-items:center;gap:8px;
+  padding:0 24px;position:sticky;bottom:0;z-index:var(--uic-footer-menu-button-z-index);
+}
+.footer-selection-info{color:var(--uic-color-white);font-size:var(--uic-font-size-small);font-weight:var(--uic-font-weight-semibold);}
+.footer-spacer{flex:1;}
+.uic-footer-menu .uic-button--secondary{background:transparent;color:var(--uic-color-white);border-color:var(--uic-color-blue6);}
+.uic-footer-menu .uic-button--secondary:hover{border-color:var(--uic-color-white);}
+.uic-footer-menu .uic-button--secondary:disabled{background:transparent;color:var(--uic-color-blue6);border-color:var(--uic-color-blue7);}
+.uic-footer-menu .uic-button--primary:disabled{background:var(--uic-color-blue7);color:var(--uic-color-blue6);}
+
+/* =========================================================================
+   8. DIALOG — Organism 5.05, layer 8, modal
+   ========================================================================= */
+dialog.uic-dialog{
+  z-index:var(--uic-dialog-z-index);
+  width:520px;max-width:calc(100vw - 32px);padding:0;
+  border:none;box-shadow:var(--uic-flyout-shadow);
+}
+dialog.uic-dialog::backdrop{backdrop-filter:var(--uic-dialog-backdrop-filter);background:rgba(20,41,57,.25);}
+.dialog-header{display:flex;align-items:center;justify-content:space-between;padding:20px 16px 20px 24px;border-bottom:1px solid var(--uic-color-grey1);}
+.dialog-header h2{margin:0;font-size:var(--uic-font-size-medium);font-weight:var(--uic-font-weight-bold);color:var(--uic-color-grey3);}
+.dialog-content{padding:24px;display:flex;flex-direction:column;gap:16px;max-height:60vh;overflow:auto;}
+.uic-output{display:flex;flex-direction:column;gap:2px;}
+.uic-output label{font-size:var(--uic-font-size-small);font-weight:var(--uic-font-weight-bold);color:var(--uic-color-grey5);}
+.uic-output output{font-weight:var(--uic-font-weight-semibold);}
+.output-grid{display:flex;flex-flow:row wrap;gap:16px;}
+.output-grid .uic-output{flex:1 1 160px;}
+.status-picker{display:flex;flex-flow:row wrap;gap:8px;}
+.status-picker button{border:1px solid var(--uic-color-grey2);padding:6px 12px;background:var(--uic-color-white);cursor:pointer;font-weight:var(--uic-font-weight-semibold);font-size:var(--uic-font-size-small);display:inline-flex;align-items:center;gap:6px;}
+.status-picker button[aria-pressed="true"]{border-color:var(--uic-color-blue2);background:var(--uic-color-blue2a10);color:var(--uic-color-blue3);}
+
+.uic-switch-row{display:flex;align-items:center;justify-content:space-between;gap:16px;}
+.uic-switch{width:60px;height:32px;border:1px solid var(--uic-color-grey2);background:var(--uic-color-white);position:relative;cursor:pointer;border-radius:16px;flex:none;}
+.uic-switch .thumb{position:absolute;top:2px;left:2px;width:26px;height:26px;border-radius:50%;background:var(--uic-color-grey2);transition:left .15s ease-out,background .15s ease-out;}
+.uic-switch[aria-checked="true"]{background:var(--uic-color-white);border-color:var(--uic-color-blue2);}
+.uic-switch[aria-checked="true"] .thumb{left:30px;background:var(--uic-color-blue2);}
+
+.dialog-footer{display:flex;align-items:center;gap:8px;padding:16px 24px;border-top:1px solid var(--uic-color-grey1);}
+.dialog-footer .footer-spacer{flex:1;}
+.dialog-footer .uic-button{min-width:120px;height:40px;}
+
+/* =========================================================================
+   9. MESSAGE TOAST — Organism 5.13, top-right, layer 7
+   ========================================================================= */
+.uic-toast-stack{position:fixed;top:84px;right:24px;z-index:var(--uic-z-index-popover);display:flex;flex-direction:column;gap:8px;width:340px;}
+.uic-message-toast{
+  display:flex;gap:12px;padding:12px 16px;background:var(--uic-color-white);
+  box-shadow:var(--uic-flyout-shadow);border-left:4px solid var(--uic-color-grey2);
+  animation:toast-in .2s ease-out;
+}
+.uic-message-toast--success{border-left-color:var(--uic-color-green1);}
+.uic-message-toast--warning{border-left-color:var(--uic-color-light-orange);}
+.uic-message-toast--error{border-left-color:var(--uic-color-red1);}
+.uic-message-toast--information{border-left-color:var(--uic-color-blue2);}
+.uic-message-toast svg.icon{width:20px;height:20px;flex:none;margin-top:2px;}
+.uic-message-toast--success svg.icon{color:var(--uic-color-green1);}
+.uic-message-toast--warning svg.icon{color:var(--uic-color-light-orange);}
+.uic-message-toast--error svg.icon{color:var(--uic-color-red1);}
+.uic-message-toast--information svg.icon{color:var(--uic-color-blue2);}
+.toast-body{flex:1;}
+.toast-headline{font-weight:var(--uic-font-weight-bold);font-size:var(--uic-font-size-small);}
+.toast-text{font-size:var(--uic-font-size-small);color:var(--uic-color-grey5);}
+.toast-close{background:none;border:none;color:var(--uic-color-grey5);cursor:pointer;padding:0;flex:none;}
+.toast-close svg.icon{width:16px;height:16px;}
+@keyframes toast-in{from{opacity:0;transform:translateX(16px);}to{opacity:1;transform:translateX(0);}}
+
+.visually-hidden{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);}
+</style>
+</head>
+<body class="uic-theme-responsive">
+
+<!-- icon sprite (deviation: inline SVG instead of uic-icon, see header comment) -->
+<svg class="visually-hidden" aria-hidden="true">
+  <defs>
+    <symbol id="ic-grid" viewBox="0 0 24 24"><circle cx="6" cy="6" r="1.6"/><circle cx="12" cy="6" r="1.6"/><circle cx="18" cy="6" r="1.6"/><circle cx="6" cy="12" r="1.6"/><circle cx="12" cy="12" r="1.6"/><circle cx="18" cy="12" r="1.6"/><circle cx="6" cy="18" r="1.6"/><circle cx="12" cy="18" r="1.6"/><circle cx="18" cy="18" r="1.6"/></symbol>
+    <symbol id="ic-bell" viewBox="0 0 24 24"><path d="M6 10a6 6 0 1 1 12 0c0 3 1 5 2 6H4c1-1 2-3 2-6Z"/><path d="M10 19a2 2 0 0 0 4 0"/></symbol>
+    <symbol id="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.2"/><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></symbol>
+    <symbol id="ic-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.3-4.3"/></symbol>
+    <symbol id="ic-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+    <symbol id="ic-check" viewBox="0 0 24 24"><path d="M5 13l4 4 10-10"/></symbol>
+    <symbol id="ic-clock" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3.5 2"/></symbol>
+    <symbol id="ic-archive" viewBox="0 0 24 24"><rect x="4" y="4" width="16" height="4"/><path d="M5 8v11h14V8"/><path d="M10 13h4"/></symbol>
+    <symbol id="ic-upload" viewBox="0 0 24 24"><path d="M12 16V4M7 9l5-5 5 5"/><path d="M4 17v3h16v-3"/></symbol>
+    <symbol id="ic-send" viewBox="0 0 24 24"><path d="M4 12L20 4 13 20l-2-7-7-1Z"/></symbol>
+    <symbol id="ic-download" viewBox="0 0 24 24"><path d="M12 4v12M7 12l5 5 5-5"/><path d="M4 20h16"/></symbol>
+    <symbol id="ic-eye" viewBox="0 0 24 24"><path d="M2 12s4-7 10-7 10 7 10 7-4 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="2.6"/></symbol>
+    <symbol id="ic-warning" viewBox="0 0 24 24"><path d="M12 3 2 20h20L12 3Z"/><path d="M12 10v4"/><circle cx="12" cy="17" r=".4" fill="currentColor"/></symbol>
+    <symbol id="ic-edit" viewBox="0 0 24 24"><path d="M4 20l1-4 11-11 3 3-11 11-4 1Z"/></symbol>
+    <symbol id="ic-list" viewBox="0 0 24 24"><path d="M8 6h13M8 12h13M8 18h13"/><circle cx="3.5" cy="6" r="1"/><circle cx="3.5" cy="12" r="1"/><circle cx="3.5" cy="18" r="1"/></symbol>
+    <symbol id="ic-tiles" viewBox="0 0 24 24"><rect x="4" y="4" width="7" height="7"/><rect x="13" y="4" width="7" height="7"/><rect x="4" y="13" width="7" height="7"/><rect x="13" y="13" width="7" height="7"/></symbol>
+    <symbol id="ic-folder" viewBox="0 0 24 24"><path d="M4 6h5l2 2h9v11H4Z"/></symbol>
+    <symbol id="ic-chevron" viewBox="0 0 24 24"><path d="M9 6l6 6-6 6"/></symbol>
+    <symbol id="ic-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5"/><path d="M12 8v.01M12 11v5"/></symbol>
+    <symbol id="ic-cut" viewBox="0 0 24 24"><circle cx="6" cy="6" r="2.2"/><circle cx="6" cy="18" r="2.2"/><path d="M8 7.5L20 20M8 16.5L20 4M9 12h2"/></symbol>
+    <symbol id="ic-bend" viewBox="0 0 24 24"><path d="M4 18V9a5 5 0 0 1 5-5h11"/><path d="M17 1l3 3-3 3"/></symbol>
+    <symbol id="ic-punch" viewBox="0 0 24 24"><path d="M12 3v8"/><rect x="6" y="13" width="12" height="8"/><path d="M9 13v-2M15 13v-2"/></symbol>
+    <symbol id="ic-tube" viewBox="0 0 24 24"><ellipse cx="12" cy="6" rx="7" ry="3"/><path d="M5 6v9a7 3 0 0 0 14 0V6"/></symbol>
+  </defs>
+</svg>
+
+<!-- =========================== APP HEADER =========================== -->
+<header class="uic-app-header">
+  <button class="applauncher-btn" title="App switcher / dashboard" aria-label="App switcher">
+    <svg class="icon" width="20" height="20"><use href="#ic-grid"/></svg>
+  </button>
+  <div class="app-logo">TRUMPF<small>Program Manager</small></div>
+  <div class="header-divider"></div>
+  <nav class="uic-header-menu" aria-label="Main navigation">
+    <button class="uic-header-menu-item" aria-current="page">Dashboard</button>
+    <button class="uic-header-menu-item">Programs</button>
+    <button class="uic-header-menu-item">Machines</button>
+  </nav>
+  <div class="header-spacer"></div>
+  <button class="header-icon-btn" aria-label="Notifications">
+    <svg class="icon"><use href="#ic-bell"/></svg>
+    <span class="header-badge">3</span>
+  </button>
+  <button class="header-icon-btn" aria-label="Settings">
+    <svg class="icon"><use href="#ic-gear"/></svg>
+  </button>
+  <button class="uic-profile" aria-label="User profile">WW</button>
+</header>
+
+<div class="app-shell">
+
+  <!-- =========================== SIDEBAR =========================== -->
+  <aside class="uic-sidebar" aria-label="Program categories">
+    <ul class="uic-menu" id="categoryMenu">
+      <li><button class="uic-menu-item" data-category="all" aria-pressed="true">
+        <svg class="icon"><use href="#ic-folder"/></svg>
+        <span>All Programs</span><span class="menu-item-count" data-count="all"></span>
+      </button></li>
+      <li><button class="uic-menu-item" data-category="Laser Cutting">
+        <svg class="icon"><use href="#ic-cut"/></svg>
+        <span>Laser Cutting</span><span class="menu-item-count" data-count="Laser Cutting"></span>
+      </button></li>
+      <li><button class="uic-menu-item" data-category="Bending">
+        <svg class="icon"><use href="#ic-bend"/></svg>
+        <span>Bending</span><span class="menu-item-count" data-count="Bending"></span>
+      </button></li>
+      <li><button class="uic-menu-item" data-category="Punching">
+        <svg class="icon"><use href="#ic-punch"/></svg>
+        <span>Punching</span><span class="menu-item-count" data-count="Punching"></span>
+      </button></li>
+      <li><button class="uic-menu-item" data-category="Tube Processing">
+        <svg class="icon"><use href="#ic-tube"/></svg>
+        <span>Tube Processing</span><span class="menu-item-count" data-count="Tube Processing"></span>
+      </button></li>
+    </ul>
+    <div class="uic-sidebar-footer">
+      <button class="uic-button uic-button--secondary" id="newProgramBtn" style="width:100%;min-width:0;">
+        <svg class="icon" width="18" height="18"><use href="#ic-upload"/></svg>
+        Upload Program
+      </button>
+    </div>
+  </aside>
+
+  <!-- =========================== MAIN ============================== -->
+  <main class="app-main">
+
+    <div class="uic-toolbar">
+      <nav class="uic-breadcrumb" aria-label="Breadcrumb">
+        <span class="uic-breadcrumb-item">Program Manager</span>
+        <svg class="icon" width="14" height="14"><use href="#ic-chevron"/></svg>
+        <span class="uic-breadcrumb-item" aria-current="page" id="breadcrumbCurrent">All Programs</span>
+      </nav>
+
+      <div class="toolbar-row">
+        <div class="uic-search-field">
+          <svg class="icon"><use href="#ic-search"/></svg>
+          <input type="search" id="searchInput" placeholder="Search programs, machines…" aria-label="Search programs">
+          <button class="clear-btn" id="clearSearch" aria-label="Clear search" hidden>
+            <svg class="icon" width="16" height="16"><use href="#ic-close"/></svg>
+          </button>
+        </div>
+
+        <div class="uic-segmented-control" role="group" aria-label="Filter by status" id="statusFilter">
+          <button class="uic-segmented-control__option" data-status="all" aria-pressed="true">All</button>
+          <button class="uic-segmented-control__option" data-status="released">Released</button>
+          <button class="uic-segmented-control__option" data-status="in-progress">In&nbsp;progress</button>
+          <button class="uic-segmented-control__option" data-status="draft">Draft</button>
+          <button class="uic-segmented-control__option" data-status="error">Error</button>
+        </div>
+
+        <div class="uic-segmented-control" role="group" aria-label="Switch view" id="viewToggle" style="margin-left:auto;">
+          <button class="uic-segmented-control__option" data-view="table" aria-pressed="true" aria-label="Table view">
+            <svg class="icon"><use href="#ic-list"/></svg>
+          </button>
+          <button class="uic-segmented-control__option" data-view="tile" aria-label="Tile view">
+            <svg class="icon"><use href="#ic-tiles"/></svg>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <div class="content-surface">
+      <!-- table view -->
+      <div style="overflow:auto;flex:1;" id="tableViewWrap">
+        <table class="uic-table" id="programTable">
+          <thead>
+            <tr>
+              <th style="width:56px;">
+                <button class="uic-checkbox" id="selectAll" role="checkbox" aria-checked="false" aria-label="Select all">
+                  <svg class="icon"><use href="#ic-check"/></svg>
+                </button>
+              </th>
+              <th>Program</th>
+              <th>Category</th>
+              <th>Machine</th>
+              <th>Status</th>
+              <th>Updated</th>
+              <th style="width:96px;">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="programTableBody"></tbody>
+        </table>
+      </div>
+      <!-- tile view -->
+      <div class="tile-grid" id="tileViewWrap" hidden></div>
+      <!-- empty state -->
+      <div class="empty-state" id="emptyState" hidden>
+        <svg class="icon"><use href="#ic-search"/></svg>
+        <div><strong>No programs match your filters.</strong></div>
+        <div>Try clearing the search or selecting a different category.</div>
+      </div>
+    </div>
+  </main>
+</div>
+
+<!-- =========================== FOOTER MENU =========================== -->
+<footer class="uic-footer-menu">
+  <span class="footer-selection-info" id="selectionInfo">No programs selected</span>
+  <div class="footer-spacer"></div>
+  <button class="uic-button uic-button--secondary" id="btnArchive" disabled>
+    <svg class="icon" width="18" height="18"><use href="#ic-archive"/></svg>
+    Archive
+  </button>
+  <button class="uic-button uic-button--secondary" id="btnRelease" disabled>
+    <svg class="icon" width="18" height="18"><use href="#ic-check"/></svg>
+    Release
+  </button>
+  <button class="uic-button uic-button--primary" id="btnSend" disabled>
+    <svg class="icon" width="18" height="18"><use href="#ic-send"/></svg>
+    Send to Machine
+  </button>
+</footer>
+
+<!-- =========================== DIALOG (5.05) =========================== -->
+<dialog class="uic-dialog" id="programDialog">
+  <div class="dialog-header">
+    <h2 id="dialogTitle">Program details</h2>
+    <button class="icon-only-btn" id="dialogCloseX" aria-label="Close dialog">
+      <svg class="icon"><use href="#ic-close"/></svg>
+    </button>
+  </div>
+  <div class="dialog-content">
+    <div class="output-grid">
+      <div class="uic-output"><label>Program</label><output id="dlgName">—</output></div>
+      <div class="uic-output"><label>Machine</label><output id="dlgMachine">—</output></div>
+      <div class="uic-output"><label>Category</label><output id="dlgCategory">—</output></div>
+      <div class="uic-output"><label>Last updated</label><output id="dlgUpdated">—</output></div>
+    </div>
+    <div class="uic-output">
+      <label>Status</label>
+      <div class="status-picker" id="dlgStatusPicker"></div>
+    </div>
+    <div class="uic-switch-row">
+      <div class="uic-output"><label style="font-size:var(--uic-font-size-normal);color:var(--uic-color-grey3);">Notify operator on completion</label></div>
+      <button class="uic-switch" id="dlgNotifySwitch" role="switch" aria-checked="true"><span class="thumb"></span></button>
+    </div>
+  </div>
+  <div class="dialog-footer">
+    <button class="uic-button uic-button--secondary" id="dialogCancel" style="min-width:0;padding:0 16px;">Cancel</button>
+    <div class="footer-spacer"></div>
+    <button class="uic-button uic-button--primary" id="dialogSave" style="min-width:0;padding:0 16px;">Save changes</button>
+  </div>
+</dialog>
+
+<!-- =========================== TOASTS (5.13) =========================== -->
+<div class="uic-toast-stack" id="toastStack" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------------------------------------------------------------------
+     Seed data — NC programs (see references/file-browser.md recipe step 2)
+  --------------------------------------------------------------------- */
+  var CATEGORY_ICON = {
+    "Laser Cutting":"ic-cut", "Bending":"ic-bend", "Punching":"ic-punch", "Tube Processing":"ic-tube"
+  };
+  var STATUS_LABEL = {released:"Released", draft:"Draft", "in-progress":"In progress", archived:"Archived", error:"Error"};
+  var STATUS_ICON  = {released:"ic-check", draft:"ic-edit", "in-progress":"ic-clock", archived:"ic-archive", error:"ic-warning"};
+
+  var programs = [
+    {id:1,  name:"TruLaser_5030_Bracket.nc",        category:"Laser Cutting",  machine:"TruLaser 5030",      status:"released",    updated:"2026-07-28"},
+    {id:2,  name:"TruBend_7036_SidePanel.nc",        category:"Bending",        machine:"TruBend 7036",       status:"in-progress", updated:"2026-07-30"},
+    {id:3,  name:"TruPunch_5000_BaseFrame.nc",       category:"Punching",       machine:"TruPunch 5000",      status:"draft",       updated:"2026-07-29"},
+    {id:4,  name:"TruLaser_3030_CoverPlate.nc",      category:"Laser Cutting",  machine:"TruLaser 3030",      status:"released",    updated:"2026-07-25"},
+    {id:5,  name:"TruBend_5170_Bracket.nc",          category:"Bending",        machine:"TruBend 5170",       status:"error",       updated:"2026-07-31"},
+    {id:6,  name:"TruPunch_3000_Mount.nc",           category:"Punching",       machine:"TruPunch 3000",      status:"archived",    updated:"2026-06-14"},
+    {id:7,  name:"TruLaser_8000_HousingTop.nc",      category:"Laser Cutting",  machine:"TruLaser 8000",      status:"in-progress", updated:"2026-07-30"},
+    {id:8,  name:"TruTube_7000_Frame.nc",            category:"Tube Processing",machine:"TruLaser Tube 7000", status:"released",    updated:"2026-07-22"},
+    {id:9,  name:"TruBend_7036_EndCap.nc",           category:"Bending",        machine:"TruBend 7036",       status:"draft",       updated:"2026-07-31"},
+    {id:10, name:"TruPunch_5000_Reinforcement.nc",   category:"Punching",       machine:"TruPunch 5000",      status:"released",    updated:"2026-07-18"},
+    {id:11, name:"TruLaser_5030_SidePanel.nc",       category:"Laser Cutting",  machine:"TruLaser 5030",      status:"error",       updated:"2026-07-29"},
+    {id:12, name:"TruTube_7000_Support.nc",          category:"Tube Processing",machine:"TruLaser Tube 7000", status:"draft",       updated:"2026-07-27"}
+  ];
+
+  var state = { category:"all", status:"all", query:"", view:"table", selection:new Set() };
+
+  /* ---------------------------------------------------------------------
+     Helpers
+  --------------------------------------------------------------------- */
+  function icon(name, cls){ return '<svg class="icon'+(cls?' '+cls:'')+'"><use href="#'+name+'"/></svg>'; }
+
+  function filterItems(){
+    return programs.filter(function(p){
+      if (state.category !== "all" && p.category !== state.category) return false;
+      if (state.status !== "all" && p.status !== state.status) return false;
+      if (state.query){
+        var q = state.query.toLowerCase();
+        if (p.name.toLowerCase().indexOf(q) === -1 && p.machine.toLowerCase().indexOf(q) === -1) return false;
+      }
+      return true;
+    });
+  }
+
+  function updateCounts(){
+    document.querySelectorAll(".menu-item-count").forEach(function(el){
+      var key = el.getAttribute("data-count");
+      var n = key === "all" ? programs.length : programs.filter(function(p){ return p.category === key; }).length;
+      el.textContent = n;
+    });
+  }
+
+  function statusTag(status){
+    return '<span class="uic-tag uic-tag--'+status+'">'+icon(STATUS_ICON[status])+STATUS_LABEL[status]+'</span>';
+  }
+
+  /* ---------------------------------------------------------------------
+     Rendering
+  --------------------------------------------------------------------- */
+  function render(){
+    var items = filterItems();
+    document.getElementById("emptyState").hidden = items.length > 0;
+    document.getElementById("tableViewWrap").hidden = !(state.view === "table" && items.length);
+    document.getElementById("tileViewWrap").hidden = !(state.view === "tile" && items.length);
+
+    if (state.view === "table") renderTable(items);
+    else renderTiles(items);
+
+    updateFooter();
+  }
+
+  function renderTable(items){
+    var body = document.getElementById("programTableBody");
+    body.innerHTML = items.map(function(p){
+      var selected = state.selection.has(p.id);
+      return (
+        '<tr data-id="'+p.id+'" aria-selected="'+selected+'">' +
+          '<td><button class="uic-checkbox" role="checkbox" aria-checked="'+selected+'" data-action="select" aria-label="Select '+p.name+'">'+icon("ic-check")+'</button></td>' +
+          '<td class="cell-name">'+p.name+'</td>' +
+          '<td>'+icon(CATEGORY_ICON[p.category])+' '+p.category+'</td>' +
+          '<td>'+p.machine+'</td>' +
+          '<td>'+statusTag(p.status)+'</td>' +
+          '<td><span class="cell-sub">'+p.updated+'</span></td>' +
+          '<td><div class="row-actions">' +
+            '<button class="icon-only-btn" data-action="view" aria-label="View '+p.name+'">'+icon("ic-eye")+'</button>' +
+            '<button class="icon-only-btn" data-action="download" aria-label="Download '+p.name+'">'+icon("ic-download")+'</button>' +
+          '</div></td>' +
+        '</tr>'
+      );
+    }).join("");
+  }
+
+  function renderTiles(items){
+    var wrap = document.getElementById("tileViewWrap");
+    wrap.innerHTML = items.map(function(p){
+      var selected = state.selection.has(p.id);
+      return (
+        '<div class="uic-tile" tabindex="0" role="button" data-id="'+p.id+'" aria-selected="'+selected+'">' +
+          '<div class="tile-header"><span>'+p.name+'</span>' +
+          '<button class="uic-checkbox" role="checkbox" aria-checked="'+selected+'" data-action="select" aria-label="Select '+p.name+'">'+icon("ic-check")+'</button></div>' +
+          '<div class="tile-meta">'+icon(CATEGORY_ICON[p.category])+' '+p.category+' · '+p.machine+'</div>' +
+          statusTag(p.status) +
+          '<div class="tile-meta">Updated '+p.updated+'</div>' +
+        '</div>'
+      );
+    }).join("");
+  }
+
+  function updateFooter(){
+    var n = state.selection.size;
+    document.getElementById("selectionInfo").textContent =
+      n === 0 ? "No programs selected" : n + " program" + (n > 1 ? "s" : "") + " selected";
+    document.getElementById("btnArchive").disabled = n === 0;
+    document.getElementById("btnRelease").disabled = n === 0;
+    document.getElementById("btnSend").disabled = n === 0;
+
+    var selectAllBtn = document.getElementById("selectAll");
+    var visible = filterItems();
+    var allSelected = visible.length > 0 && visible.every(function(p){ return state.selection.has(p.id); });
+    selectAllBtn.setAttribute("aria-checked", allSelected);
+  }
+
+  function toggleSelection(id){
+    if (state.selection.has(id)) state.selection.delete(id);
+    else state.selection.add(id);
+  }
+
+  /* ---------------------------------------------------------------------
+     Toasts — Organism 5.13 (top-right, default 10s lifetime, dismissible)
+  --------------------------------------------------------------------- */
+  var TOAST_ICON = {success:"ic-check", warning:"ic-warning", error:"ic-warning", information:"ic-info"};
+  function showToast(headline, text, tone, sticky){
+    var stack = document.getElementById("toastStack");
+    var el = document.createElement("div");
+    el.className = "uic-message-toast uic-message-toast--" + tone;
+    el.setAttribute("role", "status");
+    el.innerHTML =
+      icon(TOAST_ICON[tone] || "ic-info") +
+      '<div class="toast-body"><div class="toast-headline">'+headline+'</div><div class="toast-text">'+text+'</div></div>' +
+      '<button class="toast-close" aria-label="Dismiss">'+icon("ic-close")+'</button>';
+    stack.appendChild(el);
+    function dismiss(){ if (el.parentNode) el.parentNode.removeChild(el); }
+    el.querySelector(".toast-close").addEventListener("click", dismiss);
+    if (!sticky) setTimeout(dismiss, 10000);
+  }
+
+  /* ---------------------------------------------------------------------
+     Dialog
+  --------------------------------------------------------------------- */
+  var dialogEl = document.getElementById("programDialog");
+  var activeId = null;
+
+  function openDialog(id){
+    var p = programs.filter(function(x){ return x.id === id; })[0];
+    if (!p) return;
+    activeId = id;
+    document.getElementById("dialogTitle").textContent = p.name;
+    document.getElementById("dlgName").textContent = p.name;
+    document.getElementById("dlgMachine").textContent = p.machine;
+    document.getElementById("dlgCategory").textContent = p.category;
+    document.getElementById("dlgUpdated").textContent = p.updated;
+
+    var picker = document.getElementById("dlgStatusPicker");
+    picker.innerHTML = Object.keys(STATUS_LABEL).map(function(s){
+      return '<button data-status="'+s+'" aria-pressed="'+(s === p.status)+'">'+icon(STATUS_ICON[s])+STATUS_LABEL[s]+'</button>';
+    }).join("");
+
+    dialogEl.showModal();
+  }
+
+  function closeDialog(){ dialogEl.close(); activeId = null; }
+
+  /* ---------------------------------------------------------------------
+     Event wiring
+  --------------------------------------------------------------------- */
+  document.getElementById("categoryMenu").addEventListener("click", function(e){
+    var btn = e.target.closest(".uic-menu-item");
+    if (!btn) return;
+    document.querySelectorAll("#categoryMenu .uic-menu-item").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+    state.category = btn.getAttribute("data-category");
+    document.getElementById("breadcrumbCurrent").textContent =
+      state.category === "all" ? "All Programs" : state.category;
+    render();
+  });
+
+  document.getElementById("statusFilter").addEventListener("click", function(e){
+    var btn = e.target.closest(".uic-segmented-control__option");
+    if (!btn) return;
+    this.querySelectorAll(".uic-segmented-control__option").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+    state.status = btn.getAttribute("data-status");
+    render();
+  });
+
+  document.getElementById("viewToggle").addEventListener("click", function(e){
+    var btn = e.target.closest(".uic-segmented-control__option");
+    if (!btn) return;
+    this.querySelectorAll(".uic-segmented-control__option").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+    state.view = btn.getAttribute("data-view");
+    render();
+  });
+
+  var searchInput = document.getElementById("searchInput");
+  var clearSearch = document.getElementById("clearSearch");
+  searchInput.addEventListener("input", function(){
+    state.query = searchInput.value.trim();
+    clearSearch.hidden = state.query.length === 0;
+    render();
+  });
+  clearSearch.addEventListener("click", function(){
+    searchInput.value = ""; state.query = ""; clearSearch.hidden = true; searchInput.focus(); render();
+  });
+
+  document.getElementById("selectAll").addEventListener("click", function(){
+    var visible = filterItems();
+    var allSelected = this.getAttribute("aria-checked") === "true";
+    visible.forEach(function(p){
+      if (allSelected) state.selection.delete(p.id); else state.selection.add(p.id);
+    });
+    render();
+  });
+
+  document.getElementById("programTableBody").addEventListener("click", function(e){
+    var tr = e.target.closest("tr");
+    if (!tr) return;
+    var id = Number(tr.getAttribute("data-id"));
+    var action = e.target.closest("[data-action]");
+    if (action && action.getAttribute("data-action") === "select"){
+      toggleSelection(id); render(); return;
+    }
+    if (action && action.getAttribute("data-action") === "download"){
+      showToast("Download started", tr.querySelector(".cell-name").textContent, "information");
+      return;
+    }
+    openDialog(id);
+  });
+
+  document.getElementById("tileViewWrap").addEventListener("click", function(e){
+    var tile = e.target.closest(".uic-tile");
+    if (!tile) return;
+    var id = Number(tile.getAttribute("data-id"));
+    var action = e.target.closest("[data-action]");
+    if (action && action.getAttribute("data-action") === "select"){
+      toggleSelection(id); render(); return;
+    }
+    openDialog(id);
+  });
+
+  document.getElementById("dlgStatusPicker").addEventListener("click", function(e){
+    var btn = e.target.closest("button");
+    if (!btn) return;
+    this.querySelectorAll("button").forEach(function(b){ b.setAttribute("aria-pressed", "false"); });
+    btn.setAttribute("aria-pressed", "true");
+  });
+
+  var notifySwitch = document.getElementById("dlgNotifySwitch");
+  notifySwitch.addEventListener("click", function(){
+    var on = this.getAttribute("aria-checked") === "true";
+    this.setAttribute("aria-checked", String(!on));
+  });
+
+  document.getElementById("dialogCloseX").addEventListener("click", closeDialog);
+  document.getElementById("dialogCancel").addEventListener("click", closeDialog);
+  document.getElementById("dialogSave").addEventListener("click", function(){
+    var p = programs.filter(function(x){ return x.id === activeId; })[0];
+    var chosen = document.querySelector("#dlgStatusPicker button[aria-pressed='true']");
+    if (p && chosen){ p.status = chosen.getAttribute("data-status"); }
+    closeDialog();
+    render();
+    showToast("Changes saved", p ? p.name + " updated." : "", "success");
+  });
+
+  document.getElementById("newProgramBtn").addEventListener("click", function(){
+    showToast("Upload", "Program upload is not wired up in this demo.", "information");
+  });
+
+  document.getElementById("btnRelease").addEventListener("click", function(){
+    var n = state.selection.size;
+    programs.forEach(function(p){ if (state.selection.has(p.id)) p.status = "released"; });
+    showToast("Released", n + " program(s) released for production.", "success");
+    render();
+  });
+  document.getElementById("btnArchive").addEventListener("click", function(){
+    var n = state.selection.size;
+    programs.forEach(function(p){ if (state.selection.has(p.id)) p.status = "archived"; });
+    showToast("Archived", n + " program(s) moved to archive.", "warning");
+    render();
+  });
+  document.getElementById("btnSend").addEventListener("click", function(){
+    var n = state.selection.size;
+    showToast("Sent to machine", n + " program(s) queued for transfer.", "success");
+    state.selection.clear();
+    render();
+  });
+
+  updateCounts();
+  render();
+})();
+</script>
+</body>
+</html>

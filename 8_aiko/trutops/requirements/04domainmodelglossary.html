@@ -1,0 +1,2069 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>04DomainModelGlossary</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a class="active" href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="04domainmodelglossary.html">04DomainModelGlossary</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>04DomainModelGlossary</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-domain-model-glossary-doc-04-domain-model-glossary-id-prefix-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-10-fr-cad-geometry-drawing-editing-12-fr-part-data-management-19-fr-tools-machines-materials-technology-60-requirements-traceability-index-tags-requirements-trutops-glossary">product: trutopscad
+org: trumpf
+title: &quot;Domain Model &amp; Glossary&quot;
+doc: &quot;04 - Domain Model &amp; Glossary&quot;
+id-prefix: &quot;-&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[03 - System Context &amp; Architecture Overview]]&quot;, &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[12 - FR - Part &amp; Data Management]]&quot;, &quot;[[19 - FR - Tools, Machines, Materials &amp; Technology]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, glossary]</h2>
+<h1 id="domain-model-glossary">Domain Model &amp; Glossary</h1>
+<p>This document defines the shared <strong>ubiquitous language</strong> of the reverse-engineered TruTops CAD/CAM suite: the core business/engineering entities, how they relate, and a consolidated glossary. It is the vocabulary reference for every functional-area SRS ([[10 - FR - CAD Geometry &amp; Drawing Editing]] through [[23 - FR - Automation, Scripting &amp; Integration]]) and should be read alongside [[03 - System Context &amp; Architecture Overview]]. Domain terms are German in the source; each is given with its German original and an English definition in <a href="#3-glossary">Section 3</a>.</p>
+<p>The model was recovered by static analysis of the C/C++ modules (<code>tc_dbase</code>, <code>tc_cad</code>, <code>tc_stz</code>, <code>tc_las</code>, <code>tc_rohr</code>, <code>tc_nest</code>, ...), the GRIT <code>.gritx</code> masks, and the <code>Databases/</code> SQL Server schema (510 table definitions across the <code>Common</code>, <code>Punch</code>, <code>Laser</code>, <code>Bend</code>, <code>Nest</code>, <code>Tube</code>, <code>CAD</code>, <code>Text</code> and <code>DATADICT</code> schemas, each with a parallel <code>_inch</code> variant).</p>
+<hr />
+<h2 id="core-domain-entities-relationships">1. Core Domain Entities &amp; Relationships</h2>
+<p>The domain divides into three loosely coupled clusters:</p>
+<ol>
+<li><strong>Geometry / CAD</strong> — the in-memory drawing model (<code>Drawing → Part → Contour → Element → Point</code>) plus annotations, bends and per-element technology. Persisted as native geometry files (GEO/MI/TAF). Owned by [[10 - FR - CAD Geometry &amp; Drawing Editing]] and [[12 - FR - Part &amp; Data Management]].</li>
+<li><strong>Master data / Technology</strong> — machines, tools, materials and technology tables held in the relational database. Owned by [[19 - FR - Tools, Machines, Materials &amp; Technology]].</li>
+<li><strong>Production / Planning</strong> — orders, nesting jobs, nested sheets, programming projects, NC programs and production plans. Owned by [[17 - FR - Nesting &amp; Palletizing]], [[18 - FR - NC Generation &amp; Motion Optimization]] and [[20 - FR - Production Planning &amp; Projects]].</li>
+</ol>
+<h3 id="entityrelationship-diagram">1.1 Entity–relationship diagram</h3>
+<pre class="mermaid">erDiagram
+    DRAWING          ||--o{ PART             : contains
+    PART             ||--o{ CONTOUR          : groups
+    CONTOUR          ||--o{ GEOMETRY_ELEMENT : chains
+    GEOMETRY_ELEMENT ||--o{ POINT            : "bounded by"
+    PART             ||--o{ DIMENSION        : "annotated by"
+    PART             ||--o{ VARIANT          : "parametrised by"
+
+    CONTOUR          ||--o{ TECHNOLOGY       : "carries (Bearbeitung)"
+    TECHNOLOGY       }o--|| TOOL             : uses
+    TECHNOLOGY       ||--o{ MICRO_JOINT      : includes
+    TECHNOLOGY       }o--|| LTT              : "laser params from"
+
+    PART             ||--o{ BEND             : "has (ToPs 600)"
+    BEND             }o--|| BEND_TOOL        : "upper/lower tool"
+    BEND             }o--|| BEND_FACTOR      : "flat length via"
+
+    TUBE             }o--|| PROFILE          : "cross-section"
+    TUBE             }o--|| TUBE_TECH        : "technology from"
+    TUBE             ||--o{ CONTOUR          : "penetration contours"
+
+    ORDER            ||--o{ PART             : "captures (TEILE_ERFASSEN)"
+    NESTING_JOB      }o--|| ORDER            : nests
+    NESTING_JOB      ||--o{ NEST_RESULT      : produces
+    NEST_RESULT      ||--o{ RESULT_SHEET     : "nested sheets"
+    RESULT_SHEET     }o--|| SHEET            : instantiates
+    RESULT_SHEET     ||--o{ PART             : places
+
+    SHEET            }o--|| RAW_MATERIAL     : "of"
+    RAW_MATERIAL     }o--|| MATERIAL         : "material + thickness"
+    MATERIAL         }o--|| MATERIAL_GROUP   : "grouped in"
+    STOCK_SHEET      }o--|| RAW_MATERIAL     : "instance of"
+    LTT              }o--|| RAW_MATERIAL     : "per material+thickness"
+
+    MACHINE          ||--|| CONTROLLER       : "identified with"
+    MACHINE          ||--o{ RULESET          : "constrained by"
+    MACHINE          ||--o{ TOOL             : "loaded tools"
+    MACHINE          ||--o{ LTT              : "per machine"
+    LTT              }o--|| MACHINE          : "keyed by"
+
+    PROGRAMMING_PROJECT }o--|| ORDER         : binds
+    PROGRAMMING_PROJECT }o--|| MACHINE       : "bound to"
+    PROGRAMMING_PROJECT }o--|| MATERIAL      : "bound to"
+    PROGRAMMING_PROJECT ||--o{ RESULT_SHEET  : "manages (Rohling)"
+    RESULT_SHEET     ||--o| NC_PROGRAM       : "NC generated for"
+    PRODUCTION_PLAN  ||--o{ NC_PROGRAM       : "sequences (Fertigungsauftrag)"
+    NC_PROGRAM       }o--|| MACHINE          : "runs on"
+</pre>
+<h3 id="entity-descriptions">1.2 Entity descriptions</h3>
+<p><strong>Geometry / CAD cluster</strong> (see [[10 - FR - CAD Geometry &amp; Drawing Editing]])</p>
+<ul>
+<li><strong>Drawing (<code>Zeichnung</code>, <code>S_draw</code>)</strong> — the top-level 2D geometry document and the unit saved to a geometry file. Contains parts, contours, elements, dimensions and variants. Confirmed as <code>struct S_draw</code> in <code>tc_dbase</code>.</li>
+<li><strong>Part (<code>Teil</code> / <code>Einzelteil</code>, <code>S_teil</code>)</strong> — a logically grouped set of contours/elements within a drawing; carries a transformation matrix and an identity/text-info number. A sheet drawing (nest) contains many parts; a single fabricated item is an <em>Einzelteil</em>.</li>
+<li><strong>Contour (<code>Kontur</code>, <code>S_kontur</code>)</strong> — an ordered, connected chain of geometry elements; open or closed, outer or inner (an inner contour = a hole/island usable for [[17 - FR - Nesting &amp; Palletizing]] part-in-part).</li>
+<li><strong>Geometry element (<code>Element</code>, <code>S_element</code>)</strong> — the atomic geometry unit: line, arc, circle, point, text, spline or bend line, each with colour and line-style attributes (there is <strong>no named-layer object</strong>; DXF layers are mapped to colour/line-style on import — see [[11 - FR - Import, Export &amp; File Formats]]).</li>
+<li><strong>Point (<code>Punkt</code>)</strong> — a coordinate node: element endpoint, catch/snap point or construction point.</li>
+<li><strong>Dimension (<code>Bemassung</code>)</strong> — a linear, angular, radial, diameter, arc-length or ordinate annotation with text and tolerance.</li>
+<li><strong>Variant (<code>Variante</code>)</strong> — a parametric definition (variables, references, changes, loops) driving geometry variation, evaluated via the embedded Python interpreter (see [[23 - FR - Automation, Scripting &amp; Integration]]).</li>
+<li><strong>Technology (<code>Bearbeitung</code>)</strong> — the machining assigned to a geometry element/contour (punch hit, cut, mark, notch, forming). The join between geometry and the technology domain; typed by <code>E_tb_art</code>. Consumed by [[18 - FR - NC Generation &amp; Motion Optimization]].</li>
+<li><strong>Micro-joint (<code>Mikrosteg</code> / <code>Steg</code>)</strong> — a small uncut bridge keeping a cut part attached to the skeleton until removal.</li>
+<li><strong>Bend (<code>Biegung</code>)</strong> — a single fold on a part carrying kind (<code>Biegeart</code>), method (<code>Biegemethode</code>), technique (<code>Biegetechnik</code>), angle, radii, deduction factor and assigned upper/lower tools. Owned by [[16 - FR - Bending (ToPs 600)]].</li>
+</ul>
+<p><strong>Master-data / Technology cluster</strong> (see [[19 - FR - Tools, Machines, Materials &amp; Technology]])</p>
+<ul>
+<li><strong>Material (<code>Werkstoff</code>, <code>MAT_MATERIAL</code>)</strong> — a material grade with physical/technological properties (tensile strength, specific weight, E-modulus, thermal conductivity, hardness) and international designations (DIN/EN/ASTM/JIS). Keyed by <code>WS_ID</code>.</li>
+<li><strong>Raw material (<code>Rohmaterial</code>, <code>MAT_RAWMATERIAL</code>)</strong> — a material + thickness variant (keyed by <code>RM_NAME</code>), adding foil/coating, tool-clearance and load tolerances.</li>
+<li><strong>Sheet / stock (<code>Tafel</code> / <code>Lagergut</code>, <code>MAT_SHEET</code>)</strong> — a concrete storable sheet (or remnant) of a raw material with X/Y dimensions, quantity, storage location and a geometry-file reference; lockable (<code>MAT_LOCKSTATE</code>) when consumed by an order.</li>
+<li><strong>Material group (<code>Werkstoffgruppe</code>, <code>MAT_GRP</code>)</strong> — a grouping of materials with abbreviation and price-per-kg for costing.</li>
+<li><strong>Machine (<code>Maschine</code>, <code>MASCHINE</code>)</strong> — a machine type identified by a 4-part <strong>machine key</strong> (<code>MA_NAME</code>, <code>MA_TYP</code>, <code>MA_STEUERUNG</code>, <code>MA_ST_VERSION</code>); carries work area, traverse/overrun area, sheet capacity, per-axis dynamics and peripheral equipment.</li>
+<li><strong>Controller (<code>Steuerung</code>)</strong> — the machine control (e.g. Siemens SIN840D) with a version; part of the machine key and the lookup key for NC cycles/formats and control-version gating (<code>STEUERUNGSVERSIONEN</code>).</li>
+<li><strong>Tool (<code>Werkzeug</code>)</strong> — a punch/laser/die element machining the sheet. Punch tools are stored in <code>WZG3_DATEN</code> with a rich type taxonomy (single tool, multi-tool, thread former); dies in <code>DIE</code>/<code>LASERMATRIZE</code>; bend tools in the <code>Bend.WZG_*</code> family.</li>
+<li><strong>Ruleset (<code>Regelwerk</code>)</strong> — machine/technology rules governing automatic assignment. Two flavours: the key/value system configuration (<code>REGEL_ALLG</code>, per technology schema) and the punch/laser assignment rules (<code>STANZ_REGELN</code>, <code>REGEL10..201</code>).</li>
+<li><strong>Laser technology table (<code>Lasertechnologietabelle</code>, LTT, <code>LASERTECHNO</code>)</strong> — a machine-/material-/thickness-dependent cutting, piercing and marking parameter set, with small/medium/large contour-size and normal/reduced variants.</li>
+<li><strong>Tube technology (<code>TUBETECH</code>)</strong> and <strong>profile (<code>PROFILTAB</code> / <code>Profil</code>)</strong> — the tube cross-section catalogue and the master record binding cross-section + material + dimensions to a technology dataset. Owned by [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]].</li>
+<li><strong>Bend factor (<code>Abkantfaktor</code>, <code>AKF_BENDFACTORS</code>)</strong> — the bend-deduction/allowance factor for flat-length calculation, keyed by material, thickness, tool group, angle and radius. Sourced from the ToPs 600 bend database.</li>
+</ul>
+<p><strong>Production / Planning cluster</strong> (see [[17 - FR - Nesting &amp; Palletizing]], [[18 - FR - NC Generation &amp; Motion Optimization]], [[20 - FR - Production Planning &amp; Projects]])</p>
+<ul>
+<li><strong>Order (<code>Auftrag</code>)</strong> — a production order grouping parts with target/min/max quantities and priorities; order parts are captured in <code>TEILE_ERFASSEN</code> (each row = a part with quantities, rotation/mirror, grain constraint, GTS-suitability, due date <code>TEIL_TERMIN</code>).</li>
+<li><strong>Nesting job (<code>Schachtelauftrag</code>)</strong> — parts + raw sheets + parameters submitted to the nester; its result is the set of nested sheets.</li>
+<li><strong>Nest result / result sheet (<code>Ergebnistafel</code>, <code>Tafel</code>)</strong> — a single nested-sheet layout (<code>*.taf</code>) with placed parts, clamps and dead zones; the sheet-format variant is <code>TAFEL_VARIANT</code> (dimensions + material + optional stock link).</li>
+<li><strong>Programming project (<code>Programmierprojekt</code> / PPJ / <code>Arbeitsmappe</code>)</strong> — a versioned XML <code>.ppj</code> workbook binding one order to a machine, material, sheets (<code>Rohling</code>) and parts. The organisational hub of [[20 - FR - Production Planning &amp; Projects]].</li>
+<li><strong>NC program &amp; production plan (<code>Fertigungsauftrag</code> / <code>Produktionsplan</code>)</strong> — the controller-specific NC output generated per sheet, and the sequenced set of NC programs (the <code>NcListe</code>) assembled and formatted by the external NcLink tool for the machine control.</li>
+</ul>
+<hr />
+<h2 id="persistent-data-model-notes">2. Persistent Data Model Notes</h2>
+<p>Evidence from <code>Databases/SQLServerDatabase</code> (510 table definitions). See [[12 - FR - Part &amp; Data Management]] for the persistence requirements and [[30 - External Interface Requirements]] for the ODBC/PDM interfaces.</p>
+<h3 id="two-storage-worlds">2.1 Two storage worlds</h3>
+<p>TruTops persists across <strong>two distinct stores</strong>:</p>
+<ul>
+<li><strong>Native geometry files</strong> — GEO/GEO_102/MI/TAF/GMT text files holding the <code>Drawing → Part → Contour → Element</code> model, accessed transparently over the local file system or a PDM/TRUMPF.NET vault via the <code>OmAdapter</code> facade. The in-memory structs (<code>S_draw</code>, <code>S_teil</code>, <code>S_kontur</code>, <code>S_element</code>) were confirmed in <code>tc_dbase</code>.</li>
+<li><strong>Relational database</strong> — SQL Server (or a locally attached Access/MDF) reached over ODBC, holding all technology, master data, order/stock inventory, the system rule set and multilingual text.</li>
+</ul>
+<h3 id="schema-organisation">2.2 Schema organisation</h3>
+<p>Tables are grouped into <strong>technology schemas</strong> — <code>Common</code>, <code>Punch</code>, <code>Laser</code>, <code>Bend</code>, <code>Nest</code>, <code>Tube</code>, <code>CAD</code>, <code>Text</code>, <code>DATADICT</code> — each mirrored by a parallel <strong><code>_inch</code></strong> schema (120 <code>_inch.</code> table files observed), giving the <strong>metric/inch database duality</strong>. Cross-technology master data lives in <code>Common</code> (materials, sheets, bend factors, rule set, text); per-technology tables (e.g. <code>Punch.STANZ_REGELN</code>, <code>Laser.LASERTECHNO</code>, <code>Tube.TUBETECH</code>) sit in their own schema.</p>
+<h3 id="key-tables-and-relationships-confirmed-from-fk-constraints">2.3 Key tables and relationships (confirmed from FK constraints)</h3>
+<table>
+<thead>
+<tr>
+<th>Table</th>
+<th>Role</th>
+<th>Key relationships</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>Common.MAT_MATERIAL</code></td>
+<td>Material grade (<code>WS_ID</code>)</td>
+<td>self-FK to <code>WS_NAME</code> for LTT/thread/bend aliases; FK <code>WS_MGRP_ID → MAT_GRP</code></td>
+</tr>
+<tr>
+<td><code>Common.MAT_RAWMATERIAL</code></td>
+<td>Material + thickness (<code>RM_NAME</code>)</td>
+<td>FK <code>RM_WS_ID → MAT_MATERIAL.WS_ID</code></td>
+</tr>
+<tr>
+<td><code>Common.MAT_SHEET</code></td>
+<td>Stock/remnant sheet (<code>MAT_LAGERGUTID</code>)</td>
+<td>FK <code>MAT_RM_NAME → MAT_RAWMATERIAL.RM_NAME</code>; <code>MAT_GEO_DIRECTORY/NAME</code> link to geometry file; <code>MAT_LOCKSTATE</code></td>
+</tr>
+<tr>
+<td><code>Common.MAT_GRP</code></td>
+<td>Material group</td>
+<td>price-per-kg for costing</td>
+</tr>
+<tr>
+<td><code>Common.AKF_BENDFACTORS</code></td>
+<td>Bend-deduction factors</td>
+<td>FK <code>AKF_WS_ID → MAT_MATERIAL</code>; keyed by thickness, tool group, angle, radius</td>
+</tr>
+<tr>
+<td><code>Punch.MASCHINE</code></td>
+<td>Machine definition</td>
+<td><strong>PK = (<code>MA_NAME</code>,<code>MA_TYP</code>,<code>MA_STEUERUNG</code>,<code>MA_ST_VERSION</code>)</strong> — the machine key; work area / overrun / max-sheet columns</td>
+</tr>
+<tr>
+<td><code>Punch.WZG3_DATEN</code></td>
+<td>Punch-tool record</td>
+<td>FK <code>WZG3_TYPE → WZG1_TYP</code></td>
+</tr>
+<tr>
+<td><code>Punch.STANZ_REGELN</code></td>
+<td>Punch rules</td>
+<td>keyed by processing case (<code>STZ_BEARB_FALL</code>) + priority</td>
+</tr>
+<tr>
+<td><code>Laser.LASERTECHNO</code></td>
+<td>Laser technology table</td>
+<td>FK <code>LT_ALL_MATERIAL → MAT_RAWMATERIAL.RM_NAME</code>; keyed by machine type + laser power</td>
+</tr>
+<tr>
+<td><code>Nest.TEILE_ERFASSEN</code></td>
+<td>Order-part capture (<code>TEIL_INDEX</code>)</td>
+<td><code>TEIL_AUFTRAG</code> = order; <code>TEIL_IST/MIN/MAX</code>, <code>TEIL_PRIORITAET</code>, <code>TEIL_DREHEN</code>, <code>TEIL_SPIEGELN</code>, <code>TEIL_WALZRICHTUNG_XY</code>, <code>TEIL_GTS_TAUGLICH</code>, <code>TEIL_TERMIN</code></td>
+</tr>
+<tr>
+<td><code>Nest.TAFEL_VARIANT</code></td>
+<td>Sheet-format variant</td>
+<td>FK <code>VAR_WS_INDEX → MAT_MATERIAL.WS_ID</code>; <code>VAR_LAGERGUTID</code> stock link; <code>VAR_BENUTZT_VON_AUFTRAG</code> + <code>VAR_EINTRAG_GESPERRT</code> locking</td>
+</tr>
+<tr>
+<td><code>Tube.PROFILTAB</code> / <code>Tube.TUBETECH</code> / <code>Tube.MAT_ROHR</code></td>
+<td>Tube cross-section, tube technology, tube raw material</td>
+<td><code>MAT_ROHR</code> carries X/Y/Z/R1/R2/D/L dimensions + tensile strength</td>
+</tr>
+<tr>
+<td><code>&lt;schema&gt;.REGEL_ALLG</code></td>
+<td>System rule set (key/value)</td>
+<td>present per technology schema (CAD, Laser, Nest, Punch, Tube)</td>
+</tr>
+<tr>
+<td><code>&lt;schema&gt;.STEUERUNGSVERSIONEN</code></td>
+<td>Control-version compatibility</td>
+<td>min/max NC and MMC version per machine + control + function</td>
+</tr>
+<tr>
+<td><code>DATADICT.DATADICT</code> (+ <code>_SPALTEN</code>, <code>_RELATIONS</code>, <code>_INDEX</code>)</td>
+<td>Data dictionary</td>
+<td>rows define tables/columns/relations/indexes and drive schema creation, validation and migration</td>
+</tr>
+<tr>
+<td><code>&lt;schema&gt;.DB_VERSION</code></td>
+<td>Per-schema version marker</td>
+<td>drives migration/upgrade</td>
+</tr>
+<tr>
+<td><code>Text.COMMON_TEXT</code> / <code>SPRACHEN</code></td>
+<td>Multilingual text</td>
+<td><code>*_TEXTNR</code> columns reference localized strings</td>
+</tr>
+</tbody>
+</table>
+<h3 id="cross-cutting-governance-columns">2.4 Cross-cutting governance columns</h3>
+<p>Master records widely carry <code>*_VISIBLE</code> (soft-hide), <code>*_LOCKSTATE</code> / <code>*_GESPERRT</code> (read-only / in-use locking) and <code>*_TRUMPF_FLAG</code> (TRUMPF-supplied vs. customer data) columns. The exact semantics of the governance flags and of multi-user concurrency (SQL engine vs. lock flags vs. PDM check-out) were not fully resolved — see the open questions in [[12 - FR - Part &amp; Data Management]].</p>
+<hr />
+<h2 id="glossary">3. Glossary</h2>
+<p>Consolidated, de-duplicated and alphabetised from all functional-area documents plus terms derived from the <code>Databases/</code> SQL. The <strong>German</strong> column gives the source-language original; where a term is inherently English (e.g. AutoCut, GTS, LTT) the German column repeats it or notes the German equivalent.</p>
+<table>
+<thead>
+<tr>
+<th>Term</th>
+<th>German</th>
+<th>Definition</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Abbuchen (stock deduction)</td>
+<td>Abbuchen</td>
+<td>Booking consumed sheets/remnants off the material stock inventory.</td>
+</tr>
+<tr>
+<td>Abfall (scrap)</td>
+<td>Abfall</td>
+<td>Waste material to be disposed of via palletizing or ejection.</td>
+</tr>
+<tr>
+<td>Abfallzerschnitt (scrap dicing)</td>
+<td>Abfallzerschnitt</td>
+<td>Cutting the residual skeleton into small removable pieces. See [[14 - FR - Laser Cutting (ToPs 100)]].</td>
+</tr>
+<tr>
+<td>Abkantfaktor (bend-deduction factor)</td>
+<td>Abkantfaktor</td>
+<td>Correction factor for flat-length calculation across a bend; looked up from the ToPs 600 <code>AKF_BENDFACTORS</code> table by material, thickness, tool group, angle and radius.</td>
+</tr>
+<tr>
+<td>Abdampfen (de-foiling)</td>
+<td>Abdampfen</td>
+<td>A laser step that vaporizes/burns off protective foil before cutting.</td>
+</tr>
+<tr>
+<td>Abwicklung (unfolding / flat pattern)</td>
+<td>Abwicklung</td>
+<td>The flat 2D development of a bent part, profile or tube surface; opposite of the folded/3D representation.</td>
+</tr>
+<tr>
+<td>Abstapeln (unstacking)</td>
+<td>Abstapeln</td>
+<td>Removing/placing parts from the sheet onto a stack during palletizing.</td>
+</tr>
+<tr>
+<td>Abstreifen (scrap stripping)</td>
+<td>Abstreifen</td>
+<td>Machine operation removing scrap/skeleton after processing.</td>
+</tr>
+<tr>
+<td>Aequidistante (equidistant / offset)</td>
+<td>Aequidistante</td>
+<td>Offset contour generated at a fixed distance from a source contour, on a chosen side.</td>
+</tr>
+<tr>
+<td>Anfahren / Wegfahren (lead-in / lead-out)</td>
+<td>Anfahren / Wegfahren</td>
+<td>Approach/retract path added before/after a cut contour so the pierce lies off the finished edge.</td>
+</tr>
+<tr>
+<td>Anlegen (apply cutting edge)</td>
+<td>Anlegen</td>
+<td>Applying a tool cutting edge along an element/contour (single-hit, full-nibble, partial-nibble or single-hit-at-two-elements mode).</td>
+</tr>
+<tr>
+<td>Anschnitt / Anfahrfahne (lead-in)</td>
+<td>Anschnitt / Anfahrfahne</td>
+<td>The approach-cut segment; considered in part spacing during nesting.</td>
+</tr>
+<tr>
+<td>AppState (application state)</td>
+<td>App-Zustand</td>
+<td>A named checkable UI state exposed by <code>tc_guiAdapter</code> to synchronise legacy GRIT dialogs with the Qt GUI. See [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]].</td>
+</tr>
+<tr>
+<td>Arbeitsbereich (working area)</td>
+<td>Arbeitsbereich</td>
+<td>A machine's addressable processing extents.</td>
+</tr>
+<tr>
+<td>Arbeitsmappe (workbook)</td>
+<td>Arbeitsmappe</td>
+<td>In-memory/XML representation of a programming project (class <code>TcArbeitsMappe</code>).</td>
+</tr>
+<tr>
+<td>ASM (application state machine)</td>
+<td>Anwendungs-Zustandsautomat</td>
+<td>A yacc/lex command interpreter that parses command strings and executes state transitions; driven interactively and via scripted <code>asmCall()</code>. See [[23 - FR - Automation, Scripting &amp; Integration]].</td>
+</tr>
+<tr>
+<td>Aufsetzen / Aufsatz (mount)</td>
+<td>Aufsetzen</td>
+<td>Tube machining case where a tube sits on/against another surface.</td>
+</tr>
+<tr>
+<td>Aufspannung (setup / clamping)</td>
+<td>Aufspannung</td>
+<td>One sheet position between repositioning moves.</td>
+</tr>
+<tr>
+<td>Auflager (support)</td>
+<td>Auflager</td>
+<td>Fixed/movable rest supporting the tube on the machine bed.</td>
+</tr>
+<tr>
+<td>Auftrag (order)</td>
+<td>Auftrag</td>
+<td>A production order grouping parts with target/min/max quantities and priorities; the key of a programming project.</td>
+</tr>
+<tr>
+<td>Ausnutzung (utilization)</td>
+<td>Ausnutzung</td>
+<td>Fraction of sheet area occupied by usable parts after nesting.</td>
+</tr>
+<tr>
+<td>Ausschleusen (ejection / discharge)</td>
+<td>Ausschleusen</td>
+<td>Removing finished parts/scrap via ejector, flap/chute, suction, lift or gripper.</td>
+</tr>
+<tr>
+<td>Ausduennen (thinning)</td>
+<td>Ausduennen</td>
+<td>Reduction of element/point density during conversion (rough/middle/fine levels). See [[11 - FR - Import, Export &amp; File Formats]].</td>
+</tr>
+<tr>
+<td>AutoCut / Gemeinsames Trennen (common cutting)</td>
+<td>AutoCut / Gemeinsames Trennen</td>
+<td>The shared automatic-processing engine (<code>tec_acut</code>) and, in nesting/punch, one separating cut shared by two adjacent parts, driven by named configurations.</td>
+</tr>
+<tr>
+<td>Auto-TMT</td>
+<td>Auto-TMT</td>
+<td>Automatically generated TMT created for a sheet lacking one by adopting machining from the part overview.</td>
+</tr>
+<tr>
+<td>Bahnkorrektur / Kreiskorrektur (kerf / circle correction)</td>
+<td>Bahnkorrektur / Kreiskorrektur</td>
+<td>Kerf/path compensation of the tool path (and dedicated circle correction for holes) to reach nominal dimensions.</td>
+</tr>
+<tr>
+<td>Bearbeitung (machining operation)</td>
+<td>Bearbeitung</td>
+<td>A single technology operation applied to geometry (punch hit, cut, mark, notch); the join between geometry and technology, typed by <code>E_tb_art</code>.</td>
+</tr>
+<tr>
+<td>Bearbeitungsmuster (processing pattern)</td>
+<td>Bearbeitungsmuster</td>
+<td>A stored parametric processing reusable on matching geometry (<code>BEARBMUSTER</code>, <code>muster.gritx</code>).</td>
+</tr>
+<tr>
+<td>Bearbeitungszeit / Wegzeit (cycle time)</td>
+<td>Bearbeitungszeit / Wegzeit</td>
+<td>Estimated machine movement time computed from jerk-limited acceleration ramps for linear and circular segments.</td>
+</tr>
+<tr>
+<td>Belegung (sheet layout / occupancy)</td>
+<td>Belegung</td>
+<td>Sheet layout/occupancy context; one of the view-settings contexts (<code>c_beleg</code>).</td>
+</tr>
+<tr>
+<td>Beladestrategie (loading strategy)</td>
+<td>Beladestrategie</td>
+<td>Algorithm computing a sheet's loading position on the machine (fixed, centered, at grip/clamp, from table, SheetMaster-Compact).</td>
+</tr>
+<tr>
+<td>Bemassung (dimensioning)</td>
+<td>Bemassung</td>
+<td>Linear, angular, radial, diameter, arc-length or ordinate annotation with text and tolerance.</td>
+</tr>
+<tr>
+<td>Beschriftungstext / Signieren (marking text)</td>
+<td>Beschriftungstext / Signieren</td>
+<td>Marking/scribe text applied by punch or marking tools.</td>
+</tr>
+<tr>
+<td>Besaeumen (trimming)</td>
+<td>Besäumen</td>
+<td>Cutting the outer sheet edges to the required format.</td>
+</tr>
+<tr>
+<td>Biegeart (bend kind)</td>
+<td>Biegeart</td>
+<td>Bend classification: normal bend, hemming, wave, conical, flat, Z-bend, die-bend, double, swivel or auxiliary.</td>
+</tr>
+<tr>
+<td>Biegemethode (bend method)</td>
+<td>Biegemethode</td>
+<td>Forming method: air bending (Freibiegen), coining (Prägen), seam-with-gap, closing (Zudrücken) or swivel bending.</td>
+</tr>
+<tr>
+<td>Biegetechnik (bend technique)</td>
+<td>Biegetechnik</td>
+<td>Execution technique: normal, pre/post, bumping, U/V/round die, coining, joining or forming.</td>
+</tr>
+<tr>
+<td>Biegewerkzeugassistent (bend tool assistant)</td>
+<td>Biegewerkzeugassistent</td>
+<td>A wizard for creating/editing standard bend-tool geometry (punch, die, Z-tool, adapter).</td>
+</tr>
+<tr>
+<td>Blechdicke (sheet thickness)</td>
+<td>Blechdicke</td>
+<td>Sheet/material thickness; combined with a material to form a raw material.</td>
+</tr>
+<tr>
+<td>Blechfabrik (sheet-metal factory)</td>
+<td>Blechfabrik</td>
+<td>The sheet-metal factory workflow where the GMT drawing number is the through-going part identifier.</td>
+</tr>
+<tr>
+<td>Blechvermessung (sheet measurement)</td>
+<td>Blechvermessung</td>
+<td>Probing the actual sheet position/edges before cutting to compensate loading inaccuracy.</td>
+</tr>
+<tr>
+<td>Bombieren (ram crowning)</td>
+<td>Bombieren</td>
+<td>Ram-crowning compensation for press-brake deflection; values held in the ToPs 600 database (<code>BOMBWERTE</code>).</td>
+</tr>
+<tr>
+<td>Bruecke (bridge, guiding element)</td>
+<td>Brücke</td>
+<td>A guiding element (Tubematic) supporting the tube during machining.</td>
+</tr>
+<tr>
+<td>Bumping</td>
+<td>Bumping</td>
+<td>A rounded/large-radius bend realised as several parallel small bends formed together.</td>
+</tr>
+<tr>
+<td>CAPT</td>
+<td>CAPT</td>
+<td>An MI import mode that also converts punch single-stroke (Einzelhub) technology into Dbase attributes.</td>
+</tr>
+<tr>
+<td>Constrained TSP</td>
+<td>Constrained TSP</td>
+<td>Travelling-Salesman-style sequencing over a dependency graph, solved with nearest-neighbour + Ant-Colony + post-optimization heuristics. See [[18 - FR - NC Generation &amp; Motion Optimization]].</td>
+</tr>
+<tr>
+<td>DATADICT (data dictionary)</td>
+<td>Datenverzeichnis</td>
+<td>The data-dictionary schema whose rows define tables/columns/relations/indexes and whose triggers auto-create the physical tables per technology schema.</td>
+</tr>
+<tr>
+<td>Darstellung (display / rendering)</td>
+<td>Darstellung</td>
+<td>Display/rendering of geometry on a device. See [[21 - FR - Visualization, Viewing &amp; Plotting]].</td>
+</tr>
+<tr>
+<td>Dehnen (stretch)</td>
+<td>Dehnen</td>
+<td>Moving a defining point to resize connected geometry.</td>
+</tr>
+<tr>
+<td>dialog_neu</td>
+<td>dialog neu</td>
+<td>MMK command that clears/rebuilds a dialog (e.g. before repopulating a finder list).</td>
+</tr>
+<tr>
+<td>Dongle / Wibu (licensing)</td>
+<td>Dongle / Wibu</td>
+<td>Hardware/software licence protecting each edition and each import/export format.</td>
+</tr>
+<tr>
+<td>Doppelwagen (double wagon)</td>
+<td>Doppelwagen</td>
+<td>Dual disposal-wagon configuration in palletizing.</td>
+</tr>
+<tr>
+<td>Drawing</td>
+<td>Zeichnung (<code>S_draw</code>)</td>
+<td>Top-level 2D geometry document containing parts, contours, elements, dimensions and variants; the unit saved to a geometry file.</td>
+</tr>
+<tr>
+<td>Drehbarkeit (rotatability)</td>
+<td>Drehbarkeit</td>
+<td>Constraint on how a part may be rotated when nesting: not rotatable, freely, 90°, 180°, or grain-direction.</td>
+</tr>
+<tr>
+<td>DSTV</td>
+<td>Deutscher Stahlbau-Verband</td>
+<td>German steel-construction NC standard; only its 2D geometry is imported.</td>
+</tr>
+<tr>
+<td>Durchdringung (penetration)</td>
+<td>Durchdringung</td>
+<td>Intersection of a cutting body with the tube surface, yielding a cut (penetration) contour (DD-Kontur).</td>
+</tr>
+<tr>
+<td>Durchstecken (through-penetration)</td>
+<td>Durchstecken</td>
+<td>Tube machining case producing a through opening for another tube.</td>
+</tr>
+<tr>
+<td>Ebener Schnitt (planar cut)</td>
+<td>Ebener Schnitt</td>
+<td>A planar cut of the tube.</td>
+</tr>
+<tr>
+<td>Echo-Modus (echo mode)</td>
+<td>Echo-Modus</td>
+<td>A reversible XOR drawing mode for interactive rubber-band feedback.</td>
+</tr>
+<tr>
+<td>Eckenbehandlung (corner treatment)</td>
+<td>Eckenbehandlung</td>
+<td>Corner treatment — loop-out, cooling dwell, rounding, radii or lead-in/out applied at contour/profile corners.</td>
+</tr>
+<tr>
+<td>ecopy</td>
+<td>ecopy</td>
+<td>An MMK built-in command that assigns/expands a value into a variable (contrasted with <code>copy</code>).</td>
+</tr>
+<tr>
+<td>Eingabefeld (input field)</td>
+<td>Eingabe-Button</td>
+<td>A data-entry widget with prompt, suffix, format, type and decimal-place attributes; validated by plausibility rules.</td>
+</tr>
+<tr>
+<td>Einrichteplan (setup plan)</td>
+<td>Einrichteplan</td>
+<td>Operator document with sheet/part graphics and tool/technology lists accompanying the NC program (HTML/PDF).</td>
+</tr>
+<tr>
+<td>Einsatz (insert)</td>
+<td>Einsatz</td>
+<td>Tube machining case where one tube is fitted into another.</td>
+</tr>
+<tr>
+<td>Einstechen (piercing)</td>
+<td>Einstechen</td>
+<td>Initial beam penetration of the sheet before cutting; typed with its own parameters (<code>LT_EINST_*</code>).</td>
+</tr>
+<tr>
+<td>Eintrag (entry)</td>
+<td>Eintrag</td>
+<td>A workbook item, typically a sheet, with processing state and repeat count (<code>TcEintrag</code>).</td>
+</tr>
+<tr>
+<td>Einzelhub (single stroke)</td>
+<td>Einzelhub</td>
+<td>An individual punch stroke; its technology is carried in MI/CAPT files.</td>
+</tr>
+<tr>
+<td>Einzelteil (single part)</td>
+<td>Einzelteil</td>
+<td>A single fabricated sheet-metal item extracted from a drawing and stored as a geometry file.</td>
+</tr>
+<tr>
+<td>Einzugsradius (feed / insertion radius)</td>
+<td>Einzugsradius</td>
+<td>Feed/insertion radius at the die edge.</td>
+</tr>
+<tr>
+<td>Entfolierung (foil removal)</td>
+<td>Entfolierung / Entfolieren</td>
+<td>Stripping protective-foil geometry from elements/contours.</td>
+</tr>
+<tr>
+<td>Entladen (unloading)</td>
+<td>Entladen</td>
+<td>Programmed removal of good parts and scrap by holding devices, managed with pluggable strategies.</td>
+</tr>
+<tr>
+<td>Entsorgungszone (disposal zone)</td>
+<td>Entsorgungszone</td>
+<td>Pallet/unit area for scrap and skeleton disposal.</td>
+</tr>
+<tr>
+<td>FabConnector / PPS plugin</td>
+<td>PPS-Plugin</td>
+<td>A registry-discovered, licence-checked .NET assembly (implementing <code>TiPlugin</code>) that supplies orders and receives job-state feedback for TruTops Fab.</td>
+</tr>
+<tr>
+<td>Falzung (hemming)</td>
+<td>Falzung</td>
+<td>A hemming bend (closed or nearly closed fold), with up/down variants and its own deduction factor.</td>
+</tr>
+<tr>
+<td>Fangen (snapping)</td>
+<td>Fangen</td>
+<td>Rule-based attachment of a picked point to nearby geometry (what/how/where/radius).</td>
+</tr>
+<tr>
+<td>Fase (chamfer)</td>
+<td>Fase</td>
+<td>A straight bevel created between two adjacent elements at a corner.</td>
+</tr>
+<tr>
+<td>feld_umschalten</td>
+<td>feld umschalten</td>
+<td>MMK command that switches the active input field within a dialog.</td>
+</tr>
+<tr>
+<td>Fertigteilunterstuetzung (finished-part support, FUS)</td>
+<td>Fertigteilunterstützung</td>
+<td>Movable support holding the cut-off finished tube section; modes none/preset/with-lift-lower/moving-along.</td>
+</tr>
+<tr>
+<td>Fertigungsauftrag (production job)</td>
+<td>Fertigungsauftrag</td>
+<td>An NC program plus target count and technology data; an element of the production plan (<code>NcListe</code>).</td>
+</tr>
+<tr>
+<td>FINDER</td>
+<td>Finder</td>
+<td>A scrollable list widget target (<code>FINDER_1..FINDER_6</code>) filled by a mini_sql query.</td>
+</tr>
+<tr>
+<td>Flycut (fly-cut)</td>
+<td>Flycut</td>
+<td>Fly-cut positioning — moving between grid cuts without stopping, reducing non-productive time.</td>
+</tr>
+<tr>
+<td>Fourierbeschreibung (Fourier description)</td>
+<td>Fourierbeschreibung</td>
+<td>Fourier description of a closed contour used to test similarity and derive relationship parameters (rotation, scale, translation).</td>
+</tr>
+<tr>
+<td>Freibiegen (air bending)</td>
+<td>Freibiegen</td>
+<td>Air-bending forming method (part bridges the die opening without touching the die bottom).</td>
+</tr>
+<tr>
+<td>Freistich (relief groove)</td>
+<td>Freistich</td>
+<td>A relief groove created at a corner/edge.</td>
+</tr>
+<tr>
+<td>Frozen / off layer</td>
+<td>eingefrorener / ausgeschalteter Layer</td>
+<td>DXF layer states ignored by default during import.</td>
+</tr>
+<tr>
+<td>Fuellkontur / Fuellmuster (fill contour / pattern)</td>
+<td>Füllkontur / Füllmuster</td>
+<td>A closed contour marked for fill and the fill pattern (hollow, solid, hatch, cross-hatch).</td>
+</tr>
+<tr>
+<td>Füllteil (filler part)</td>
+<td>Füllteil</td>
+<td>A production order flagged as a filler part used to fill remaining sheet area during nesting.</td>
+</tr>
+<tr>
+<td>Genauhalt (exact stop)</td>
+<td>Genauhalt</td>
+<td>A motion ramp where velocity is zero at both start and end of a path segment.</td>
+</tr>
+<tr>
+<td>GEO / GEO_102</td>
+<td>GEO</td>
+<td>TRUMPF native geometry file format (two versions) used as internal storage/exchange.</td>
+</tr>
+<tr>
+<td>Gesenk / Unterwerkzeug (die / lower tool)</td>
+<td>Gesenk / Unterwerkzeug</td>
+<td>The lower press-brake tool (die) (<code>WZG_GESENK</code>).</td>
+</tr>
+<tr>
+<td>Gesenkweite (die width)</td>
+<td>Gesenkweite</td>
+<td>The V-opening width of the die, quoted with or without the feed/insertion radius.</td>
+</tr>
+<tr>
+<td>Gewindeformen (thread forming)</td>
+<td>Gewindeformen</td>
+<td>In-machine forming of a threaded/extruded feature using extrusion and forming tools.</td>
+</tr>
+<tr>
+<td>Gewindeformer (thread former)</td>
+<td>Gewindeformer</td>
+<td>A tool forming/cutting a thread with pitch/ratio/direction, assigned to material and thickness (<code>GEWINDEFORMER</code>).</td>
+</tr>
+<tr>
+<td>Gitterfertigung (grid production)</td>
+<td>Gitterfertigung</td>
+<td>Nesting that retains a supporting skeleton/grid between parts.</td>
+</tr>
+<tr>
+<td>GMT</td>
+<td>GMT</td>
+<td>ToPs 1000 geometry format; the converter can stamp its drawing/part number.</td>
+</tr>
+<tr>
+<td>Grafik-Button (canvas / draw button)</td>
+<td>Grafik-Button (Grafb)</td>
+<td>GRIT widget hosting the on-screen graphics canvas and its display context.</td>
+</tr>
+<tr>
+<td>GRIT</td>
+<td>GRIT (Graphics Interactive Tool)</td>
+<td>The legacy C++ UI framework providing masks, buttons, menus, the MMK interpreter and interaction handling across all TruTops editions. See [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]].</td>
+</tr>
+<tr>
+<td>GTS (common cut / cut simulation)</td>
+<td>GTS (Gemeinsame Trennschnitte)</td>
+<td>In nesting/punch, nesting parts to share separating cuts (common cut); in laser, also used loosely for graphical cut simulation. Exact acronym unconfirmed.</td>
+</tr>
+<tr>
+<td>Gutteil (good part)</td>
+<td>Gutteil</td>
+<td>A finished usable part to be palletized.</td>
+</tr>
+<tr>
+<td>H2O / Wasserstrahl (water-jet)</td>
+<td>Wasserstrahlschneiden</td>
+<td>Water-jet cutting variant present inside the laser module (<code>WASSER01..05</code>, control type <code>c_H2o</code>).</td>
+</tr>
+<tr>
+<td>Hardcopy</td>
+<td>Hardcopy</td>
+<td>Raster screenshot of a screen region/viewport written to an image file (BMP/TIFF).</td>
+</tr>
+<tr>
+<td>Huellkreisdurchmesser (envelope-circle diameter)</td>
+<td>Hüllkreisdurchmesser</td>
+<td>Envelope-circle diameter bounding a profile, used for guide/support sizing.</td>
+</tr>
+<tr>
+<td>Innenkontur (inner contour)</td>
+<td>Innenkontur</td>
+<td>A hole/island in a part, usable for part-in-part filling.</td>
+</tr>
+<tr>
+<td>ITM / SW06 (central tool management)</td>
+<td>Integrierte Werkzeugverwaltung</td>
+<td>Integrated/central networked tool management, connected via the SW06 business-model wrapper for live tool availability.</td>
+</tr>
+<tr>
+<td>Kacheln (tile nesting)</td>
+<td>Kacheln</td>
+<td>Regular row/column matrix arrangement of a single part type.</td>
+</tr>
+<tr>
+<td>Kassette (cassette)</td>
+<td>Kassette</td>
+<td>A tool-holder cassette (steel/RTC/size-5) (<code>KASSETTE</code>).</td>
+</tr>
+<tr>
+<td>Kennzeichnen (marking / engraving)</td>
+<td>Kennzeichnen</td>
+<td>Non-cutting laser marking of text, labels and DataMatrix codes.</td>
+</tr>
+<tr>
+<td>Kleinteile (small parts)</td>
+<td>Kleinteile</td>
+<td>Small cut parts ejected via flap/chute or suction to a sorting unit.</td>
+</tr>
+<tr>
+<td>Klinkung (notch / corner relief)</td>
+<td>Klinkung</td>
+<td>A material cut-out at a corner/edge; in bending, a relief cut at bend-line intersections to avoid material collision during folding.</td>
+</tr>
+<tr>
+<td>Kontur (contour)</td>
+<td>Kontur</td>
+<td>An ordered, connected chain of geometry elements; open or closed, outer or inner.</td>
+</tr>
+<tr>
+<td>Konturaufbereitung (contour preparation)</td>
+<td>Konturaufbereitung</td>
+<td>Offset/equidistant-oriented geometry cleanup applied before writing certain formats.</td>
+</tr>
+<tr>
+<td>Körnen (centre-punching / marking)</td>
+<td>Körnen</td>
+<td>A laser or punch step marking a point on the sheet.</td>
+</tr>
+<tr>
+<td>Lagergut (stock item)</td>
+<td>Lagergut</td>
+<td>A storable sheet/remnant inventory item, a concrete physical sheet of a raw material (<code>MAT_SHEET</code>, keyed by <code>MAT_LAGERGUTID</code>); lockable when in use.</td>
+</tr>
+<tr>
+<td>Langloch (oblong hole)</td>
+<td>Langloch</td>
+<td>An oblong/slotted-hole macro.</td>
+</tr>
+<tr>
+<td>Lasertechnologietabelle (LTT)</td>
+<td>Lasertechnologietabelle</td>
+<td>Cutting technology table — machine-/material-/thickness-dependent parameter set for cutting, piercing and marking (<code>LASERTECHNO</code>).</td>
+</tr>
+<tr>
+<td>Leerweg (idle stroke)</td>
+<td>Leerweg</td>
+<td>A non-cutting head move, e.g. lifting over a raised/formed feature.</td>
+</tr>
+<tr>
+<td>Linienart / Linienfarbe (line style / colour)</td>
+<td>Linienart / Linienfarbe</td>
+<td>Line style and colour (index 0–15) classifying an element; serves as a layer surrogate (no named-layer object exists).</td>
+</tr>
+<tr>
+<td>Lochgitter (hole grid)</td>
+<td>Lochgitter</td>
+<td>A 2D array pattern of holes.</td>
+</tr>
+<tr>
+<td>Lochkreis (hole circle)</td>
+<td>Lochkreis</td>
+<td>A pattern of holes arranged on a circle (bolt-hole circle).</td>
+</tr>
+<tr>
+<td>Lochreihe (hole row)</td>
+<td>Lochreihe</td>
+<td>A linear pattern of holes.</td>
+</tr>
+<tr>
+<td>Maschinenschlüssel (machine key)</td>
+<td>Maschinenschlüssel</td>
+<td>The 4-part identity (name, type, control, control-version) uniquely selecting a machine + control (<code>TcMaschinenSchluessel</code>, PK of <code>MASCHINE</code>).</td>
+</tr>
+<tr>
+<td>Maske (mask / dialog)</td>
+<td>Maske</td>
+<td>A GRIT screen form/dialog, the fundamental UI unit; stored as <code>.gritx</code> XML, <code>.olb</code> binary or <code>.a26</code> ASCII.</td>
+</tr>
+<tr>
+<td>Matrize (die)</td>
+<td>Matrize</td>
+<td>The lower cutting die opposite the punch (<code>DIE</code>, <code>LASERMATRIZE</code>).</td>
+</tr>
+<tr>
+<td>Mehrfachnutzen (multiple-up, MFN)</td>
+<td>Mehrfachnutzen (MFN)</td>
+<td>A block of identical parts processed together to shorten the NC program and enable block-wise unloading.</td>
+</tr>
+<tr>
+<td>MI (Macro Interchange)</td>
+<td>MI</td>
+<td>HP ME10 macro interchange CAD exchange format; TRUMPF's native versioned text geometry file (versions 2.21 and 2.4).</td>
+</tr>
+<tr>
+<td>MI-Interpreter</td>
+<td>MI-Interpreter</td>
+<td>The reader/writer (<code>tc_mi</code>) for TRUMPF's native text geometry file format, versioned via <code>MI_Version_Nr</code>.</td>
+</tr>
+<tr>
+<td>Microweld (micro-weld)</td>
+<td>Microweld</td>
+<td>A re-welded connection retaining a part after laser cutting.</td>
+</tr>
+<tr>
+<td>Mikrosteg / Steg (micro-joint / bridge)</td>
+<td>Mikrosteg / Steg</td>
+<td>A small uncut bridge/web that keeps a cut part attached to the skeleton until removal (<code>MAS_STEGE</code>, <code>STEG_TYP</code>).</td>
+</tr>
+<tr>
+<td>mini_sql</td>
+<td>mini_sql</td>
+<td>The SQL-like subset in MMK used to bind database rows into finder lists/fields (SELECT INTO) and write edits back (INSERT/UPDATE/DELETE).</td>
+</tr>
+<tr>
+<td>MImpl / NImpl (managed / native impl.)</td>
+<td>Managed-/Native-Implementierung</td>
+<td>The Xidl-toolkit managed (.NET) and native (C++) implementation halves of an API.</td>
+</tr>
+<tr>
+<td>MMK (interpreter)</td>
+<td>MMK-Interpreter</td>
+<td>The embedded lex/yacc scripting language run from mask/button CDATA that drives dialog behaviour, data binding and control flow.</td>
+</tr>
+<tr>
+<td>Multitool (multi-tool)</td>
+<td>Multitool</td>
+<td>A multi-tool station holding 2–12 stamps selectable by index and rotation.</td>
+</tr>
+<tr>
+<td>Musterteil (sample / master part)</td>
+<td>Musterteil</td>
+<td>A test part placed before quantity-driven nesting to validate the layout.</td>
+</tr>
+<tr>
+<td>Nachschachteln (re-nesting)</td>
+<td>Nachschachteln</td>
+<td>Re-running nesting on selected or already-nested parts.</td>
+</tr>
+<tr>
+<td>Nachsetzen (repositioning)</td>
+<td>Nachsetzen</td>
+<td>Automatic re-gripping/moving of the sheet so out-of-range areas become reachable, splitting a program into setups (Aufspannungen).</td>
+</tr>
+<tr>
+<td>Nahtlage (weld-seam position)</td>
+<td>Nahtlage</td>
+<td>The weld-seam position of a welded tube, used to orient/reorder the contour.</td>
+</tr>
+<tr>
+<td>NcLink</td>
+<td>NcLink</td>
+<td>External TRUMPF tool that sequences NC programs and formats the production plan for the machine control.</td>
+</tr>
+<tr>
+<td>NC cycle (Zyklus)</td>
+<td>Zyklus</td>
+<td>Controller subroutine/macro text emitted for a machine function; standard (NC) and customer cycles (Kundenzyklen) both supported (<code>NCZYKLEN</code>).</td>
+</tr>
+<tr>
+<td>NC generation (NC-Erzeugung)</td>
+<td>NC-Erzeugung</td>
+<td>Emission of an executable, controller-specific NC program from a finished CAM layout. See [[18 - FR - NC Generation &amp; Motion Optimization]].</td>
+</tr>
+<tr>
+<td>NC-Kopf-Tabellen (NC head tables)</td>
+<td>NC-Kopf-Tabellen</td>
+<td>Header/format masks (<code>NC_KOPF_TABELLEN</code>, <code>AUS_FORMAT</code>) used to render NC blocks per controller.</td>
+</tr>
+<tr>
+<td>Nesting (Schachteln)</td>
+<td>Schachteln</td>
+<td>Automatic or interactive arrangement of parts onto sheets to maximise material use. See [[17 - FR - Nesting &amp; Palletizing]].</td>
+</tr>
+<tr>
+<td>Neuzeichnen (redraw)</td>
+<td>Neuzeichnen</td>
+<td>Repaint of the viewport contents, bracketed by start/end redraw and guarded by a redraw-in-progress flag.</td>
+</tr>
+<tr>
+<td>Nibbeln (nibbling)</td>
+<td>Nibbeln</td>
+<td>Producing a contour by many overlapping strokes of a smaller tool; linear (<code>nibb_lin</code>) or circular (<code>nibb_cir</code>).</td>
+</tr>
+<tr>
+<td>Nutgrundradius (groove-ground radius)</td>
+<td>Nutgrundradius</td>
+<td>Groove-ground radius of the die.</td>
+</tr>
+<tr>
+<td>Oberfläche (surface)</td>
+<td>Oberfläche (Oberfl)</td>
+<td>The base &quot;surface&quot; class from which masks and popups derive.</td>
+</tr>
+<tr>
+<td>Oberwerkzeug / Stempel (upper tool / punch)</td>
+<td>Oberwerkzeug / Stempel</td>
+<td>The upper press-brake tool (punch) (<code>WZG_OW</code>).</td>
+</tr>
+<tr>
+<td>Öffnungswinkel (opening angle)</td>
+<td>Öffnungswinkel</td>
+<td>Opening angle of a bend tool (punch tip or die V).</td>
+</tr>
+<tr>
+<td>OmAdapter</td>
+<td>OmAdapter</td>
+<td>Object-manager adapter facade abstracting file access over the local file system or a PDM vault via <code>TiPdmFacet</code>.</td>
+</tr>
+<tr>
+<td>Palettierung (palletizing)</td>
+<td>Palettierung</td>
+<td>Arranging finished parts, scrap and skeleton onto pallets/stacks for unloading.</td>
+</tr>
+<tr>
+<td>Plausi (plausibility validation)</td>
+<td>Plausibilität</td>
+<td>Input validation against interval, set, alphanumeric, constant or free-form rules.</td>
+</tr>
+<tr>
+<td>Plotten (plotting)</td>
+<td>Plotten</td>
+<td>Output of a drawing to a pen plotter using HPGL/HPGL2.</td>
+</tr>
+<tr>
+<td>Portierung (porting)</td>
+<td>Portierung</td>
+<td>Porting/conversion of database content, notably between metric and inch representations, logged in <code>Logging.PortierungLog</code>.</td>
+</tr>
+<tr>
+<td>Positionierwege (positioning paths)</td>
+<td>Positionierwege</td>
+<td>Rapid/repositioning traverse moves of the machine head; a toggleable display class.</td>
+</tr>
+<tr>
+<td>Pratze (clamp)</td>
+<td>Pratze</td>
+<td>A sheet-holding clamp on the machine table; clamp positions create dead zones avoided by processing.</td>
+</tr>
+<tr>
+<td>Prägen (coining)</td>
+<td>Prägen</td>
+<td>Coining bend method — pressing the material fully into the die for a precise angle.</td>
+</tr>
+<tr>
+<td>Produktionsplan (production plan)</td>
+<td>Produktionsplan</td>
+<td>The sequenced set of production jobs sent to the machine control, generated by NcLink.</td>
+</tr>
+<tr>
+<td>Produktionsauftrag / ProdOrder (production order)</td>
+<td>Produktionsauftrag</td>
+<td>An order imported from a PPS/MES system (part, material, quantity, due date, machine, rotatability) fed into nesting.</td>
+</tr>
+<tr>
+<td>Profil (profile / cross-section)</td>
+<td>Profil / Querschnitt</td>
+<td>A bent cross-section (bending) or tube section shape: round, rectangular, flat-oval, custom, open L/U/C or flat material.</td>
+</tr>
+<tr>
+<td>Programmierprojekt (programming project, PPJ)</td>
+<td>Programmierprojekt</td>
+<td>A workbook binding machine, material, sheets, parts and tools for one order; persisted as versioned <code>.ppj</code> XML.</td>
+</tr>
+<tr>
+<td>Prozessoption (process option)</td>
+<td>Prozessoption</td>
+<td>A named strategy bundle for part support/separation (falling/tilting/hooking/stable), APS mode and micro-joint type (<code>PROZESSOPTIONEN</code>).</td>
+</tr>
+<tr>
+<td>Punkt (point)</td>
+<td>Punkt</td>
+<td>A coordinate node: element endpoint, catch/snap point or construction point.</td>
+</tr>
+<tr>
+<td>Raum (3D space)</td>
+<td>Raum</td>
+<td>The 3D &quot;space&quot; representation of the tube (as opposed to the unrolled 2D view).</td>
+</tr>
+<tr>
+<td>Regelwerk (rule set)</td>
+<td>Regelwerk</td>
+<td>System configuration variables (<code>REGEL_ALLG</code>) and/or the machine/technology assignment rules governing automatic tool/technology assignment.</td>
+</tr>
+<tr>
+<td>Reproduktion (reproduction)</td>
+<td>Reproduktion</td>
+<td>Headless batch re-nesting of parts (<code>tc_reproduction</code>) for regression or server-side use.</td>
+</tr>
+<tr>
+<td>Restgitter (residual grid / skeleton)</td>
+<td>Restgitter</td>
+<td>The remaining skeleton lattice of a cut sheet; a toggleable display class.</td>
+</tr>
+<tr>
+<td>Reststreifen (residual strip)</td>
+<td>Reststreifen</td>
+<td>A remnant skeleton strip cut into disposable pieces.</td>
+</tr>
+<tr>
+<td>Resttafel (remnant sheet / offcut)</td>
+<td>Resttafel</td>
+<td>A usable leftover sheet area saved as <code>*.trg</code> geometry for reuse (also created by a laser dividing cut).</td>
+</tr>
+<tr>
+<td>RMT</td>
+<td>RMT</td>
+<td>Raw-material tube file carrying material, wall thickness and section dimensions.</td>
+</tr>
+<tr>
+<td>Rohr (tube)</td>
+<td>Rohr</td>
+<td>Tube/pipe; the longitudinal workpiece machined on a rotary laser. See [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]].</td>
+</tr>
+<tr>
+<td>Rohrende (tube end)</td>
+<td>Rohrende</td>
+<td>The tube end; site of end/miter cuts (left/right).</td>
+</tr>
+<tr>
+<td>Rohrfuehrung (tube guide)</td>
+<td>Rohrführung</td>
+<td>A tube-guide element on the machine.</td>
+</tr>
+<tr>
+<td>Rohrfutter (chuck)</td>
+<td>Rohrfutter</td>
+<td>The chuck that clamps and rotates the tube.</td>
+</tr>
+<tr>
+<td>Rohling (blank / sheet entry)</td>
+<td>Rohling</td>
+<td>A blank/sheet entry within an order (<code>TcPpjRohling</code>), carrying repeat count, state and TAF/TMT/NC references.</td>
+</tr>
+<tr>
+<td>Rohroptimierer (tube optimizer)</td>
+<td>Rohroptimierer</td>
+<td>Configuration controlling machining sequence over the unrolled tube (sectors, directions, strategies, chuck area).</td>
+</tr>
+<tr>
+<td>ROT</td>
+<td>ROT</td>
+<td>Stream/file describing the tube's 3D surface, triangulated for display.</td>
+</tr>
+<tr>
+<td>RPF</td>
+<td>RPF</td>
+<td>Profile geometry file describing an open or closed cross-section.</td>
+</tr>
+<tr>
+<td>Rundung (fillet)</td>
+<td>Rundung</td>
+<td>A tangential arc created between two adjacent elements at a corner.</td>
+</tr>
+<tr>
+<td>Sauger (suction cup)</td>
+<td>Sauger</td>
+<td>A suction cup (carry/peel/pivot/coupling/programmable) — a holding device on a lift frame for part unloading.</td>
+</tr>
+<tr>
+<td>Schachtelauftrag (nesting order / job)</td>
+<td>Schachtelauftrag</td>
+<td>An order created by the nester and stored in a job file; the source of a programming project, and the nest job + result exchanged with Fab.</td>
+</tr>
+<tr>
+<td>Schaltfunktion (switching function / cycle)</td>
+<td>Schaltfunktion</td>
+<td>Auxiliary machine functions (lubrication, suction, flap, punch-head position, tool-change position, calibration, customer cycle).</td>
+</tr>
+<tr>
+<td>Schildchen-Attribut (bend tag)</td>
+<td>Schildchen-Attribut</td>
+<td>A free-text tag/label attribute attached to a bend line for annotation.</td>
+</tr>
+<tr>
+<td>Schraffur (hatch)</td>
+<td>Schraffur</td>
+<td>A fill pattern inside a closed contour.</td>
+</tr>
+<tr>
+<td>Senkrechtschnitt (perpendicular cut)</td>
+<td>Senkrechtschnitt</td>
+<td>A perpendicular cut of the tube.</td>
+</tr>
+<tr>
+<td>Shop-floor programming (SFP)</td>
+<td>Werkstatt-Programmierung</td>
+<td>Headless programming of a laser job (convert, nest, GMT, NC list) via the TruTopsLaser C DLL, without the interactive editor.</td>
+</tr>
+<tr>
+<td>Skalierungsfaktor (scale factor)</td>
+<td>Skalierungsfaktor</td>
+<td>Scale factor between world units and device/paper units for print/plot output.</td>
+</tr>
+<tr>
+<td>SortMaster</td>
+<td>SortMaster</td>
+<td>TRUMPF automated sorting system distributing unloaded parts to defined pallet compartments (<code>SORT_FACH</code>/<code>SORT_PALETTE</code>).</td>
+</tr>
+<tr>
+<td>Spalten (columns)</td>
+<td>Spalten</td>
+<td>Data-dictionary column definitions (<code>DATADICT_SPALTEN</code>): type, units, min/max, regex and uniqueness per column.</td>
+</tr>
+<tr>
+<td>Sperren (locking)</td>
+<td>gesperrt / Lockstate</td>
+<td>Locking of a stock/nesting record (<code>VAR_EINTRAG_GESPERRT</code>, <code>MAT_LOCKSTATE</code>) to prevent conflicting use.</td>
+</tr>
+<tr>
+<td>Stack (Stapel)</td>
+<td>Stapel</td>
+<td>A pile of stacked goods on a pallet built by palletizing.</td>
+</tr>
+<tr>
+<td>Stack good (Stapelgut)</td>
+<td>Stapelgut</td>
+<td>An item to be stacked: good part, scrap or residual grid.</td>
+</tr>
+<tr>
+<td>Stack variable</td>
+<td>Stack-Variable</td>
+<td>A named value on the MMK interpreter variable stack — the data-exchange channel between scripts, masks and the ASM.</td>
+</tr>
+<tr>
+<td>Stanzen (punching)</td>
+<td>Stanzen</td>
+<td>Producing geometry by discrete tool strokes (hits) on a punch press. See [[13 - FR - Punching (ToPs 300)]].</td>
+</tr>
+<tr>
+<td>Startecke (start corner)</td>
+<td>Startecke</td>
+<td>The corner of the sheet at which meander/standard processing begins.</td>
+</tr>
+<tr>
+<td>Steg / Stegbelegung (bridge / web)</td>
+<td>Steg / Stegbelegung</td>
+<td>An uncut web (and its named layout) in scrap-dicing/grid patterns; also the minimum spacing kept between adjacent nested parts.</td>
+</tr>
+<tr>
+<td>Stegfrei (gridless)</td>
+<td>Stegfrei</td>
+<td>Nesting without micro-joint webs, common for laser cutting.</td>
+</tr>
+<tr>
+<td>Stempel (stamp / punch)</td>
+<td>Stempel</td>
+<td>A single punching element; multi-tools hold several.</td>
+</tr>
+<tr>
+<td>Steuerung (controller)</td>
+<td>Steuerung</td>
+<td>The machine control (e.g. Sinumerik 840D) identified with a version; part of the machine key.</td>
+</tr>
+<tr>
+<td>Steuerungsversion (control version)</td>
+<td>Steuerungsversion</td>
+<td>Control firmware version; gates NC output and feature availability via <code>STEUERUNGSVERSIONEN</code>.</td>
+</tr>
+<tr>
+<td>TAF / TMT</td>
+<td>TAF / TMT</td>
+<td>Sheet geometry file (TAF) versus sheet geometry with machining (TMT); their consistency/currency is tracked per sheet.</td>
+</tr>
+<tr>
+<td>TAF (archive/table format)</td>
+<td>TAF</td>
+<td>TRUMPF archive/table format accepted as a converter input (needs a TAF→DXF special export path).</td>
+</tr>
+<tr>
+<td>Tafel (sheet)</td>
+<td>Tafel</td>
+<td>The raw stock or nested sheet onto which parts are nested; the physical metal sheet.</td>
+</tr>
+<tr>
+<td>Tafelinfo (sheet info)</td>
+<td>Tafelinfo</td>
+<td>A sheet-info annotation block for a nest/sheet.</td>
+</tr>
+<tr>
+<td>Tafelschnitt (sheet dividing cut)</td>
+<td>Tafelschnitt</td>
+<td>A separating cut that divides the raw sheet or detaches a remainder sheet.</td>
+</tr>
+<tr>
+<td>Teil (part)</td>
+<td>Teil</td>
+<td>A logically grouped set of contours/elements within a drawing; the fabricated sheet-metal item.</td>
+</tr>
+<tr>
+<td>Teilegruppe (part group)</td>
+<td>Teilegruppe</td>
+<td>A part group enabling common cut, where adjacent parts share a single cutting line.</td>
+</tr>
+<tr>
+<td>Teileuebersicht / Mustertafel (part overview / master sheet)</td>
+<td>Teileübersicht / Mustertafel</td>
+<td>A grid of representative parts machined once and propagated to identical parts.</td>
+</tr>
+<tr>
+<td>Teil-in-Teil (part-in-part)</td>
+<td>Teil-in-Teil</td>
+<td>A situation where a part is nested inside a cut-out of another part; tracked per sheet.</td>
+</tr>
+<tr>
+<td>TEO</td>
+<td>TEO</td>
+<td>Tube-exchange object file of grouped contours passed via PDM.</td>
+</tr>
+<tr>
+<td>Termin (due date)</td>
+<td>Termin</td>
+<td>The date by which a part must be finished (<code>Nest.TEILE_ERFASSEN.TEIL_TERMIN</code>).</td>
+</tr>
+<tr>
+<td>ToPs module</td>
+<td>ToPs-Modul</td>
+<td>A Python module (<code>import ToPs</code>) exposing application services — environment, DB texts, language, stack vars, console, file/password checks, hooks.</td>
+</tr>
+<tr>
+<td>TraceMode / trace file</td>
+<td>Trace-Modus / Trace-Datei (.taf)</td>
+<td>A mode recording the interactive command trace so a session can be reproduced (feeds reproduction/regression).</td>
+</tr>
+<tr>
+<td>TUBETECH</td>
+<td>TUBETECH</td>
+<td>Tube technology master record keyed on cross-section, material and dimensions.</td>
+</tr>
+<tr>
+<td>TwinLine / 2-Kopf (two-head)</td>
+<td>TwinLine / Zweikopfbearbeitung</td>
+<td>Multi-head processing on machines with two cutting heads, programmed with a head offset and active-head selection.</td>
+</tr>
+<tr>
+<td>Überfahrbereich (overrun / traverse area)</td>
+<td>Überfahrbereich</td>
+<td>Region the tool head may traverse beyond the work area.</td>
+</tr>
+<tr>
+<td>Unterwerkzeug / Gesenk (lower tool / die)</td>
+<td>Unterwerkzeug / Gesenk</td>
+<td>The lower press-brake tool (die).</td>
+</tr>
+<tr>
+<td>Variante (parametric variant)</td>
+<td>Variante</td>
+<td>Named variables, references, changes and loops producing geometry variations, evaluated via embedded Python.</td>
+</tr>
+<tr>
+<td>Vektorisierung (vectorization)</td>
+<td>Vektorisierung</td>
+<td>Conversion of a raster image into vector geometry, performed by the external ToPsVectorize tool.</td>
+</tr>
+<tr>
+<td>Verschnitt (waste / offcut)</td>
+<td>Verschnitt</td>
+<td>Unusable scrap material of a nested layout.</td>
+</tr>
+<tr>
+<td>Verwaltung (management)</td>
+<td>Verwaltung</td>
+<td>Management; <code>tc_verw</code> provides file-attribute reading (<code>TcGeoInfos</code>) and part-property checking.</td>
+</tr>
+<tr>
+<td>Viewport (Zeichenfenster)</td>
+<td>Zeichenfenster / Viewport</td>
+<td>An opaque drawing surface (<code>TC_Viewport</code>) with its own world window, attributes and device mapping.</td>
+</tr>
+<tr>
+<td>Walzrichtung (grain / rolling direction)</td>
+<td>Walzrichtung</td>
+<td>Material-texture axis constraining part orientation during nesting.</td>
+</tr>
+<tr>
+<td>Wandstaerke (wall thickness)</td>
+<td>Wandstärke</td>
+<td>Wall thickness of the tube/profile.</td>
+</tr>
+<tr>
+<td>Werkstoff (material)</td>
+<td>Werkstoff</td>
+<td>A material grade with physical/technological properties and international designations (<code>MAT_MATERIAL</code>).</td>
+</tr>
+<tr>
+<td>Werkstoffgruppe (material group)</td>
+<td>Werkstoffgruppe</td>
+<td>A grouping of materials with abbreviation and price-per-kg for costing (<code>MAT_GRP</code>).</td>
+</tr>
+<tr>
+<td>Werkzeug (tool)</td>
+<td>Werkzeug</td>
+<td>A punch tool, laser head or die used to machine the sheet.</td>
+</tr>
+<tr>
+<td>Werkzeugliste (tool list)</td>
+<td>Werkzeugliste</td>
+<td>A named collection of tools (e.g. a machine's loaded tool set / magazine).</td>
+</tr>
+<tr>
+<td>Wiederholzahl / Sollzahl (repeat / target count)</td>
+<td>Wiederholzahl / Sollzahl</td>
+<td>How often a sheet or NC program is to be produced.</td>
+</tr>
+<tr>
+<td>Xidl remote factory</td>
+<td>Remote-Factory</td>
+<td>An Xidl-toolkit object registry addressed by URI + plugin name for cross-process / managed access to the per-edition component API.</td>
+</tr>
+<tr>
+<td>Zerstanzen (destruction punching)</td>
+<td>Zerstanzen</td>
+<td>Breaking scrap into small removable pieces for disposal.</td>
+</tr>
+<tr>
+<td>Zwangsfolge (forced sequence)</td>
+<td>Zwangsfolge</td>
+<td>A user-mandated processing order that optimization must not reorder.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="related-documents">Related documents</h2>
+<ul>
+<li>[[00 - Index &amp; Reading Guide]] — reading order and document map.</li>
+<li>[[03 - System Context &amp; Architecture Overview]] — how these entities flow through the system.</li>
+<li>[[10 - FR - CAD Geometry &amp; Drawing Editing]] — geometry model (Drawing/Part/Contour/Element).</li>
+<li>[[12 - FR - Part &amp; Data Management]] — persistence of geometry files and the relational database.</li>
+<li>[[19 - FR - Tools, Machines, Materials &amp; Technology]] — master-data entities.</li>
+<li>[[30 - External Interface Requirements]] — file formats and external systems named here.</li>
+<li>[[40 - Non-Functional Requirements]] · [[50 - Constraints &amp; Assumptions]] · [[60 - Requirements Traceability Index]].</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-domain-model-glossary-doc-04-domain-model-glossary-id-prefix-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-10-fr-cad-geometry-drawing-editing-12-fr-part-data-management-19-fr-tools-machines-materials-technology-60-requirements-traceability-index-tags-requirements-trutops-glossary">product: trutopscad
+org: trumpf
+title: "Domain Model & Glossary"
+doc: "04 - Domain Model & Glossary"
+id-prefix: "-"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[03 - System Context & Architecture Overview]]", "[[10 - FR - CAD Geometry & Drawing Editing]]", "[[12 - FR - Part & Data Management]]", "[[19 - FR - Tools, Machines, Materials & Technology]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, glossary]</a>
+  </li>
+  <li level="1">
+   <a href="#core-domain-entities-relationships">1. Core Domain Entities & Relationships</a>
+  </li>
+  <li level="2">
+   <a href="#entityrelationship-diagram">1.1 Entity–relationship diagram</a>
+  </li>
+  <li level="2">
+   <a href="#entity-descriptions">1.2 Entity descriptions</a>
+  </li>
+  <li level="1">
+   <a href="#persistent-data-model-notes">2. Persistent Data Model Notes</a>
+  </li>
+  <li level="2">
+   <a href="#two-storage-worlds">2.1 Two storage worlds</a>
+  </li>
+  <li level="2">
+   <a href="#schema-organisation">2.2 Schema organisation</a>
+  </li>
+  <li level="2">
+   <a href="#key-tables-and-relationships-confirmed-from-fk-constraints">2.3 Key tables and relationships (confirmed from FK constraints)</a>
+  </li>
+  <li level="2">
+   <a href="#cross-cutting-governance-columns">2.4 Cross-cutting governance columns</a>
+  </li>
+  <li level="1">
+   <a href="#glossary">3. Glossary</a>
+  </li>
+  <li level="1">
+   <a href="#related-documents">Related documents</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></span>
+ <span class="next"><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

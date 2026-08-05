@@ -1,0 +1,2080 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>105CADDetailParametricVariantsScripting</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a class="active" href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>105CADDetailParametricVariantsScripting</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-parametric-variants-scripting-doc-10.5-cad-detail-parametric-variants-scripting-id-prefix-fr-cad-var-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Parametric Variants &amp; Scripting&quot;
+doc: &quot;10.5 - CAD Detail - Parametric Variants &amp; Scripting&quot;
+id-prefix: &quot;FR-CAD-VAR&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-parametric-variants-scripting">CAD Detail — Parametric Variants &amp; Scripting</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Reconstructed intent from static source analysis, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document specifies, at the command and algorithm level, the <strong>parametric-variant (Varianten) subsystem</strong> of the TruTops CAD editor. A variant geometry is an ordinary CAD drawing augmented with (a) a list of <strong>named expression variables</strong> and <strong>references</strong> to geometry, (b) an ordered list of <strong>parametric changes</strong> (transformations, deletions, property/dimension changes, template insertions, loops and conditions), and (c) machinery to <strong>execute / undo</strong> those changes and to <strong>persist</strong> them. Expressions are evaluated through an <strong>embedded Python interpreter</strong>.</p>
+<p>It refines the system-level parent [[10 - FR - CAD Geometry &amp; Drawing Editing]] — specifically the parent requirements covering parametric/variant behaviour (FR-CAD-030..035 in the parent overview) — and complements the sibling detail documents:</p>
+<ul>
+<li>[[10.1 - CAD Detail - Geometry Creation Commands]]</li>
+<li>[[10.2 - CAD Detail - Editing &amp; Transformation Commands]] (the non-parametric equivalents of Move/Rotate/Mirror/Stretch/Delete)</li>
+<li>[[10.3 - CAD Detail - Dimensioning Commands]]</li>
+<li>[[10.4 - CAD Detail - Attributes, Snapping, Selection &amp; Lifecycle]]</li>
+<li>[[10.6 - CAD Detail - Geometry Kernel Algorithms]] (the kernel transforms invoked by variant changes)</li>
+<li>[[10.7 - CAD Detail - Contour Arithmetic Algorithms]] (close-contour, offset)</li>
+<li>[[10.8 - CAD Detail - Curve Approximation &amp; Fourier Analysis]]</li>
+</ul>
+<p><strong>Primary evidence.</strong> UI/command masks: <code>tc_bof/cad_var.gritx</code> (31 masks) and the variant action functions in <code>tc_bof/aCadFunc.gritx</code> (16 masks). The changes are created/persisted/executed by the singleton engine <code>tc_dbase/dbase_cad/TcDbaseVarManager.{h,cpp}</code> (interface <code>TiDbaseVarManager</code>). Expressions run on <code>tc_python/TcPythonInterpreter.{h,cpp}</code>. The MMK masks talk to the engine through the ASM bridge command <code>asm_call( variant … )</code>; the ASM verbs seen are <code>on/off/close/read/working/refresh/field/check/last/next/back/fetch/count/create/multi create/multi remove/copy/remove/move next|back/set …/reference …/name …/liste …</code> plus positional forms <code>variant &lt;id&gt; current|copy|remove|fetch|set …</code>.</p>
+<p>Domain terms (German → English, original kept): <em>Variante</em>=variant, <em>Änderung</em>=change, <em>Bewegen</em>=move, <em>Rotieren</em>=rotate, <em>Spiegeln</em>=mirror, <em>Dehnen</em>=stretch, <em>Löschen</em>=delete, <em>Kopie</em>=copy, <em>Schleife</em>=loop, <em>Bedingung</em>=condition, <em>Ausdruck</em>=expression, <em>Referenz</em>=reference, <em>Kontur schließen</em>=close contour, <em>Rundung</em>=fillet/rounding, <em>Biegewinkel</em>=bend angle, <em>Durchmesser</em>=diameter, <em>Vorlage (Vlg)</em>=template, <em>Eigenschaft</em>=(file) property, <em>Bezeichnung</em>=label/description. See [[04 - Domain Model &amp; Glossary]].</p>
+<p><strong>Change-type enumeration</strong> (<code>TcDbaseVarManager::TeVarType</code>, header lines 827–849), the backbone of this document:</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>enum</th>
+<th>meaning</th>
+<th>mask</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>e_varMove</td>
+<td>move</td>
+<td>F_CadVarBewegen</td>
+</tr>
+<tr>
+<td>2</td>
+<td>e_varRotate</td>
+<td>rotate</td>
+<td>F_CadVarRotieren</td>
+</tr>
+<tr>
+<td>3</td>
+<td>e_varMirror</td>
+<td>mirror</td>
+<td>F_CadVarSpiegeln</td>
+</tr>
+<tr>
+<td>4</td>
+<td>e_varMoveCopy</td>
+<td>copy along vector</td>
+<td>F_CadVarKopieBewegen</td>
+</tr>
+<tr>
+<td>5</td>
+<td>e_varRotateCopy</td>
+<td>copy around centre</td>
+<td>F_CadVarKopieRotieren</td>
+</tr>
+<tr>
+<td>6</td>
+<td>e_varMirrorCopy</td>
+<td>copy by mirroring</td>
+<td>F_CadVarKopieSpiegeln</td>
+</tr>
+<tr>
+<td>7</td>
+<td>e_varStretch</td>
+<td>stretch/scale</td>
+<td>F_CadVarDehnen</td>
+</tr>
+<tr>
+<td>8</td>
+<td>e_varDelete</td>
+<td>delete referenced</td>
+<td>F_CadVarLoeschen</td>
+</tr>
+<tr>
+<td>9</td>
+<td>e_varDeleteSelection</td>
+<td>delete by filter</td>
+<td>F_CadVarAuswLoeschen</td>
+</tr>
+<tr>
+<td>10</td>
+<td>e_varChangeCircle</td>
+<td>change circle <strong>radius</strong></td>
+<td>F_CadVarKreisRadiusAendern</td>
+</tr>
+<tr>
+<td>11</td>
+<td>e_varChangeText</td>
+<td>change text</td>
+<td>F_CadVarTextAendern</td>
+</tr>
+<tr>
+<td>12</td>
+<td>e_varChangeBending</td>
+<td>change bend angle</td>
+<td>F_CadVarBiegewinkelAendern</td>
+</tr>
+<tr>
+<td>13</td>
+<td>e_varChangeRounding</td>
+<td>change fillet radius</td>
+<td>F_CadVarRundungsRadiusAendern</td>
+</tr>
+<tr>
+<td>14</td>
+<td>e_varChangeDiameter</td>
+<td>change circle <strong>diameter</strong></td>
+<td>F_CadVarKreisAendern</td>
+</tr>
+<tr>
+<td>15</td>
+<td>e_varSetValue</td>
+<td>set variable</td>
+<td>F_CadVarVariableSetzen</td>
+</tr>
+<tr>
+<td>16</td>
+<td>e_varSetProperty</td>
+<td>set file property</td>
+<td>F_CadVarEigenschaftSetzen</td>
+</tr>
+<tr>
+<td>17</td>
+<td>e_varBreak</td>
+<td>break + message box</td>
+<td>F_CadVarAbbruch</td>
+</tr>
+<tr>
+<td>18</td>
+<td>e_varLoop</td>
+<td>loop</td>
+<td>F_CadVarSchleife</td>
+</tr>
+<tr>
+<td>19</td>
+<td>e_varSingleVlgHole</td>
+<td>single hole from template</td>
+<td>F_CadVarVlgSetzen</td>
+</tr>
+<tr>
+<td>20</td>
+<td>e_varCloseContour</td>
+<td>close contour</td>
+<td>F_CadVarKonturSchliessen</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<p><strong>Lifecycle / mode &amp; scripting engine</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>German / plain meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aCadVariantEnter</td>
+<td>Enter variant mode</td>
+<td>FR-CAD-VAR-001</td>
+</tr>
+<tr>
+<td>aCadVariantExit</td>
+<td>Leave variant mode</td>
+<td>FR-CAD-VAR-002</td>
+</tr>
+<tr>
+<td>(isInUse / <code>variant working</code>)</td>
+<td>GMV-only save when changes defined</td>
+<td>FR-CAD-VAR-003</td>
+</tr>
+<tr>
+<td>aCadVariantExport</td>
+<td>Save drawing without variant data</td>
+<td>FR-CAD-VAR-004</td>
+</tr>
+<tr>
+<td>aCadLoadVariant / M_CadVarVariantenListe</td>
+<td>Load / select a variant</td>
+<td>FR-CAD-VAR-005</td>
+</tr>
+<tr>
+<td>TcPythonInterpreter</td>
+<td>Embedded Python interpreter instance</td>
+<td>FR-CAD-VAR-010</td>
+</tr>
+<tr>
+<td>MMK vs Python script buttons</td>
+<td>Relationship to Python scripting</td>
+<td>FR-CAD-VAR-065</td>
+</tr>
+<tr>
+<td>prepareElementStorage / prepareVariantClose</td>
+<td>Persistent element/bending IDs</td>
+<td>FR-CAD-VAR-066</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variables &amp; expressions</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_CadVarVariablen / aCadManageVariantVariables / defineExpression</td>
+<td>Define/name expression variable</td>
+<td>FR-CAD-VAR-006</td>
+</tr>
+<tr>
+<td>isValidName</td>
+<td>Variable-name validity</td>
+<td>FR-CAD-VAR-007</td>
+</tr>
+<tr>
+<td>isKeyName</td>
+<td>Reserved keyword/function set</td>
+<td>FR-CAD-VAR-008</td>
+</tr>
+<tr>
+<td>evaluateExpression / Double / Bool / String</td>
+<td>Expression evaluation pipeline</td>
+<td>FR-CAD-VAR-009</td>
+</tr>
+<tr>
+<td>evaluateDouble/Bool/String numeric rules</td>
+<td>int→float, near-zero snap, exception safety</td>
+<td>FR-CAD-VAR-011</td>
+</tr>
+<tr>
+<td>M_CadVarVariablen (move next/back)</td>
+<td>Reorder variable</td>
+<td>FR-CAD-VAR-012</td>
+</tr>
+<tr>
+<td>M_CadVarVariablen (remove)</td>
+<td>Delete variable</td>
+<td>FR-CAD-VAR-013</td>
+</tr>
+<tr>
+<td>reevaluateList</td>
+<td>Reevaluate dependents</td>
+<td>FR-CAD-VAR-014</td>
+</tr>
+<tr>
+<td>writeValueList / <code>variant name … write</code></td>
+<td>Export value list</td>
+<td>FR-CAD-VAR-015</td>
+</tr>
+<tr>
+<td>readValueList / <code>variant name … read</code></td>
+<td>Import value list</td>
+<td>FR-CAD-VAR-016</td>
+</tr>
+<tr>
+<td>evaluateString / getTextString</td>
+<td>String expressions &amp; quoting</td>
+<td>FR-CAD-VAR-017</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_CadVarReferenzName / aCadSetVariantReferenceElem / defineReference</td>
+<td>Name a reference element</td>
+<td>FR-CAD-VAR-018</td>
+</tr>
+<tr>
+<td>M_CadVarReferenzWert</td>
+<td>Reference value accessors (.cx/.cy/.sx/.sy/.ex/.ey/.r/.d/.l)</td>
+<td>FR-CAD-VAR-019</td>
+</tr>
+<tr>
+<td>defineReference(S_biegung)</td>
+<td>Reference bendings</td>
+<td>FR-CAD-VAR-020</td>
+</tr>
+<tr>
+<td>M_CadVarReferenzListe</td>
+<td>List references</td>
+<td>FR-CAD-VAR-021</td>
+</tr>
+<tr>
+<td>aCadDeleteVariantReferenceElem</td>
+<td>Delete a reference</td>
+<td>FR-CAD-VAR-022</td>
+</tr>
+<tr>
+<td>aCadShowVariantReferenceElem</td>
+<td>Highlight/show references</td>
+<td>FR-CAD-VAR-023</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Change element selection</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aCadSelectVariantElem</td>
+<td>Set active change's element set</td>
+<td>FR-CAD-VAR-024</td>
+</tr>
+<tr>
+<td>aCadCopyVariantElem / M_CadVarElementAuswahl</td>
+<td>Inherit elements from predecessor</td>
+<td>FR-CAD-VAR-025</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Parametric change commands (masks)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Type</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_CadVarBewegen</td>
+<td>1</td>
+<td>Move</td>
+<td>FR-CAD-VAR-026</td>
+</tr>
+<tr>
+<td>F_CadVarRotieren</td>
+<td>2</td>
+<td>Rotate</td>
+<td>FR-CAD-VAR-027</td>
+</tr>
+<tr>
+<td>F_CadVarSpiegeln</td>
+<td>3</td>
+<td>Mirror</td>
+<td>FR-CAD-VAR-028</td>
+</tr>
+<tr>
+<td>F_CadVarKopieBewegen</td>
+<td>4</td>
+<td>Copy along vector</td>
+<td>FR-CAD-VAR-029</td>
+</tr>
+<tr>
+<td>F_CadVarKopieRotieren</td>
+<td>5</td>
+<td>Copy around centre</td>
+<td>FR-CAD-VAR-030</td>
+</tr>
+<tr>
+<td>F_CadVarKopieSpiegeln</td>
+<td>6</td>
+<td>Copy by mirroring</td>
+<td>FR-CAD-VAR-031</td>
+</tr>
+<tr>
+<td>F_CadVarDehnen</td>
+<td>7</td>
+<td>Stretch/scale</td>
+<td>FR-CAD-VAR-032</td>
+</tr>
+<tr>
+<td>F_CadVarLoeschen</td>
+<td>8</td>
+<td>Delete referenced</td>
+<td>FR-CAD-VAR-033</td>
+</tr>
+<tr>
+<td>F_CadVarAuswLoeschen</td>
+<td>9</td>
+<td>Delete by filter</td>
+<td>FR-CAD-VAR-034</td>
+</tr>
+<tr>
+<td>F_CadVarKreisRadiusAendern</td>
+<td>10</td>
+<td>Change circle radius</td>
+<td>FR-CAD-VAR-035</td>
+</tr>
+<tr>
+<td>F_CadVarKreisAendern</td>
+<td>14</td>
+<td>Change diameter</td>
+<td>FR-CAD-VAR-036</td>
+</tr>
+<tr>
+<td>F_CadVarRundungsRadiusAendern</td>
+<td>13</td>
+<td>Change fillet radius</td>
+<td>FR-CAD-VAR-037</td>
+</tr>
+<tr>
+<td>F_CadVarBiegewinkelAendern</td>
+<td>12</td>
+<td>Change bend angle</td>
+<td>FR-CAD-VAR-038</td>
+</tr>
+<tr>
+<td>F_CadVarTextAendern</td>
+<td>11</td>
+<td>Change text</td>
+<td>FR-CAD-VAR-039</td>
+</tr>
+<tr>
+<td>F_CadVarKonturSchliessen</td>
+<td>20</td>
+<td>Close contour</td>
+<td>FR-CAD-VAR-040</td>
+</tr>
+<tr>
+<td>F_CadVarVariableSetzen</td>
+<td>15</td>
+<td>Set variable</td>
+<td>FR-CAD-VAR-041</td>
+</tr>
+<tr>
+<td>F_CadVarEigenschaftSetzen</td>
+<td>16</td>
+<td>Set file property</td>
+<td>FR-CAD-VAR-042</td>
+</tr>
+<tr>
+<td>F_CadVarAbbruch</td>
+<td>17</td>
+<td>Break + message</td>
+<td>FR-CAD-VAR-043</td>
+</tr>
+<tr>
+<td>F_CadVarVlgSetzen</td>
+<td>19</td>
+<td>Insert template hole</td>
+<td>FR-CAD-VAR-044</td>
+</tr>
+<tr>
+<td>F_CadVarSchleife</td>
+<td>18</td>
+<td>Loop</td>
+<td>FR-CAD-VAR-045</td>
+</tr>
+<tr>
+<td>(setCondition / O_Bedingung)</td>
+<td>—</td>
+<td>Per-change condition</td>
+<td>FR-CAD-VAR-046</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Variant management &amp; execution</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>M_CadVarVariante</td>
+<td>Variant editor (type/condition/parameters)</td>
+<td>FR-CAD-VAR-047</td>
+</tr>
+<tr>
+<td>M_CadVarVariantenVerwaltung + <code>variant create</code></td>
+<td>Create variant</td>
+<td>FR-CAD-VAR-048</td>
+</tr>
+<tr>
+<td>M_CadVarVariantenVerwaltung (fetch/set)</td>
+<td>Edit variant</td>
+<td>FR-CAD-VAR-049</td>
+</tr>
+<tr>
+<td><code>variant &lt;id&gt; copy</code></td>
+<td>Copy variant</td>
+<td>FR-CAD-VAR-050</td>
+</tr>
+<tr>
+<td><code>variant &lt;id&gt; remove</code></td>
+<td>Delete variant</td>
+<td>FR-CAD-VAR-051</td>
+</tr>
+<tr>
+<td><code>variant &lt;id&gt; move next/back</code></td>
+<td>Reorder variant</td>
+<td>FR-CAD-VAR-052</td>
+</tr>
+<tr>
+<td><code>variant multi create/remove</code></td>
+<td>Create / dissolve loop</td>
+<td>FR-CAD-VAR-053</td>
+</tr>
+<tr>
+<td>aCadExecuteVariant</td>
+<td>Execute next change</td>
+<td>FR-CAD-VAR-054</td>
+</tr>
+<tr>
+<td>aCadUndoVariant</td>
+<td>Undo last change</td>
+<td>FR-CAD-VAR-055</td>
+</tr>
+<tr>
+<td>aCadExecuteAllVariants</td>
+<td>Execute all changes</td>
+<td>FR-CAD-VAR-056</td>
+</tr>
+<tr>
+<td>aCadUndoAllVariants</td>
+<td>Undo all changes</td>
+<td>FR-CAD-VAR-057</td>
+</tr>
+<tr>
+<td>setCurrentChange / renumberChanges</td>
+<td>Jump to a change / renumber</td>
+<td>FR-CAD-VAR-058</td>
+</tr>
+<tr>
+<td>aCadManageVariants</td>
+<td>Open management dialog</td>
+<td>FR-CAD-VAR-059</td>
+</tr>
+<tr>
+<td>getCurrentDescription</td>
+<td>Default change description</td>
+<td>FR-CAD-VAR-060</td>
+</tr>
+<tr>
+<td>executeChange (missing params / break)</td>
+<td>Missing-parameter &amp; break reporting</td>
+<td>FR-CAD-VAR-061</td>
+</tr>
+<tr>
+<td>writeChanges / readChanges</td>
+<td>Persist change list (+versioning, loops)</td>
+<td>FR-CAD-VAR-062</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Menu / control surfaces</strong></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>F_MenueZeichnungVarianten</td>
+<td>Variants menu + measuring helpers</td>
+<td>FR-CAD-VAR-063</td>
+</tr>
+<tr>
+<td>F_SteuerVarianten</td>
+<td>Variants control (mode) panel</td>
+<td>FR-CAD-VAR-064</td>
+</tr>
+<tr>
+<td>F_VarMenueZeichnungZeileRest</td>
+<td>Execute/undo toolbar row</td>
+<td>(covered by 054–057)</td>
+</tr>
+</tbody>
+</table>
+<p><em>Out of scope:</em> <code>aCadCompareDeleteReference</code> and the <code>aCadCompare*</code> family belong to the drawing-comparison subsystem, not variants; <code>aCadCreateVariant</code> (defined in <code>aCadCreateFunc.gritx</code>, not in this slice) is the create-a-change entry point mirrored by FR-CAD-VAR-048.</p>
+<hr />
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="fr-cad-var-001-enter-variant-mode">FR-CAD-VAR-001 — Enter variant mode</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user activates <em>Variants</em>, the system SHALL enter variant mode by (a) swapping the control field to <code>F_SteuerVarianten</code>, the menu field to <code>#ST_MenueVarianten</code>, and the toolbar row to <code>F_VarMenueZeichnungZeileRest</code>; (b) setting <code>ST_ZeichnungVariantenModus = 1</code>; (c) issuing <code>asm_call( variant on )</code>, binding the file-name field via <code>variant field 'O_MenueZeichnungDateiname'</code>, and <code>variant read</code>; and (d) disabling the ordinary Undo/Redo and line-colour scroll controls and clearing the undo stack (<code>undo clear</code>).</li>
+<li><strong>Parameters &amp; options:</strong> none (toggle). Side effect: <code>TcDbaseVarManager::activate()</code> marks the manager active (<code>isActive()==true</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Variant editing needs a dedicated modal context because ordinary undo/redo is replaced by variant execute/undo.</li>
+<li><strong>Source:</strong> <code>aCadFunc.gritx</code> mask <code>aCadVariantEnter</code> (L36865–36887); <code>TcDbaseVarManager::activate</code> (header L69–89).</li>
+<li><strong>Verification:</strong> Demonstration — enter mode; confirm control/menu swap, disabled Undo/Redo, active manager.</li>
+</ul>
+<h3 id="fr-cad-var-002-leave-variant-mode">FR-CAD-VAR-002 — Leave variant mode</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user exits <em>Variants</em>, the system SHALL restore the standard control/menu/toolbar fields, issue <code>variant off</code>, then <code>variant close</code>, clear the undo stack, re-enable the standard scroll/attribute/Undo/Redo controls, and set <code>ST_ZeichnungVariantenModus = 0</code>.</li>
+<li><strong>Parameters &amp; options:</strong> none. See FR-CAD-VAR-003 for the file-name reset it performs.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Clean teardown of the modal context; variants remain defined on the geometry (<code>prepareVariantClose</code>).</li>
+<li><strong>Source:</strong> <code>aCadVariantExit</code> (L37122–37160); <code>TcDbaseVarManager::deactivate</code>, <code>prepareVariantClose</code> (header L76–81, 149–158).</li>
+<li><strong>Verification:</strong> Demonstration — exit mode; confirm standard UI restored and variants preserved.</li>
+</ul>
+<h3 id="fr-cad-var-003-gmv-only-persistence-when-changes-are-defined">FR-CAD-VAR-003 — GMV-only persistence when changes are defined</h3>
+<ul>
+<li><strong>Requirement:</strong> While any change is defined, the geometry SHALL be persistable only in the GMV format; on exit, if the current file name is not of type GMV (<code>tmp_FUNC_FileType != c_gmv</code>) and <code>variant working</code> reports defined changes (<code>ST_ERROR == 1</code>), the system SHALL clear the proposed file name so the user must choose a GMV name.</li>
+<li><strong>Parameters &amp; options:</strong> <code>isInUse()</code> returns true whenever changes are defined <strong>or</strong> the manager is active.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Only GMV round-trips variable definitions, references and the change list; other formats would silently drop them.</li>
+<li><strong>Source:</strong> <code>aCadVariantExit</code> (L37124–37150, <code>variant working</code>); <code>TcDbaseVarManager::isInUse</code> doc (header L91–102).</li>
+<li><strong>Verification:</strong> Test — define a change, try to save as DXF; expect the name to be blanked/GMV enforced.</li>
+</ul>
+<h3 id="fr-cad-var-004-export-geometry-without-variant-data">FR-CAD-VAR-004 — Export geometry without variant data</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>Export variant</em>, the system SHALL invoke Save-As on the drawing with the <code>c_NoVariants</code> flag so the exported file contains only the current geometry state, without variable definitions, references or the change list.</li>
+<li><strong>Parameters &amp; options:</strong> flag <code>c_NoVariants</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Downstream consumers (nesting, NC) need a plain part, not the variant program.</li>
+<li><strong>Source:</strong> <code>aCadVariantExport</code> (L37398–37400 → <code>aCadSaveAsDrawing, c_NoVariants</code>).</li>
+<li><strong>Verification:</strong> Test — export; reload exported file; expect no variants present.</li>
+</ul>
+<h3 id="fr-cad-var-005-load-select-a-variant-value-set">FR-CAD-VAR-005 — Load / select a variant value set</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user loads a variant, the system SHALL present the variant list <code>M_CadVarVariantenListe</code> (populated via <code>variant liste @file default</code>) and, on selection, set the chosen change as current via <code>variant #tmp_varVariantenId current</code> followed by <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> picks a variant id from a finder scroll (format <code>%5.5s%1.1s %-100.100s</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Lets the user jump directly to a named end-state.</li>
+<li><strong>Source:</strong> <code>aCadLoadVariant</code> (L16226–16240); <code>M_CadVarVariantenListe</code> (L60342–60420).</li>
+<li><strong>Verification:</strong> Demonstration — load a variant and confirm the geometry reflects that state.</li>
+</ul>
+<h3 id="fr-cad-var-006-define-name-an-expression-variable">FR-CAD-VAR-006 — Define / name an expression variable</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL allow the user to create a named expression variable via <code>M_CadVarVariablen</code> by entering a name (<code>O_Name</code>) and an expression (<code>O_Ausdruck</code>) and issuing <code>asm_call( variant name @O_Name @O_Ausdruck )</code>, which calls <code>TcDbaseVarManager::defineExpression(name, expression, reevaluate=true)</code>. If the name equals a reserved keyword the system SHALL show message 10895; if the variable cannot otherwise be created it SHALL show 10894; an empty expression SHALL show 10868 and an empty name SHALL show 10867.</li>
+<li><strong>Parameters &amp; options:</strong> name (string), expression (string, may reference other variables/references and use math functions). New expressions are appended at the list end (finder set to position 999). An expression may be typed directly, built with the calculator (<code>aTcoOpenCalculator</code>), or appended from a reference value (see FR-CAD-VAR-019).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Named variables/expressions are the core of parametric drive.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariablen</code> OK handler (L55794–55840); <code>defineExpression</code> (header L240–251); ASM verb <code>variant name @name @expr</code>.</li>
+<li><strong>Verification:</strong> Test — define <code>w=10</code>, <code>l=2*w</code>; confirm <code>l</code> evaluates to 20.</li>
+</ul>
+<h3 id="fr-cad-var-007-variable-name-validity">FR-CAD-VAR-007 — Variable-name validity</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL reject a variable name that is a reserved keyword (per FR-CAD-VAR-008) or that begins with a digit; <code>isValidName</code> returns false for such names, and <code>defineExpression</code> SHALL fail (ST_ERROR set) accordingly.</li>
+<li><strong>Parameters &amp; options:</strong> name string; validity = not <code>isKeyName</code> AND not starting <code>0–9</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Names must be safe Python identifiers and must not shadow built-in functions/constants.</li>
+<li><strong>Source:</strong> <code>isValidName</code> (cpp L1557 uses <code>isKeyName</code>; header L229–238).</li>
+<li><strong>Verification:</strong> Test — attempt <code>sin=3</code> and <code>2x=1</code>; expect rejection.</li>
+</ul>
+<h3 id="fr-cad-var-008-reserved-keyword-function-set">FR-CAD-VAR-008 — Reserved keyword / function set</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL treat the following identifiers as reserved (usable in expressions but not as variable names): <code>abs, acos, acosh, and, asin, asinh, atan, atan2, cos, cosh, degrees, e, exp, fabs, false, float, floor, fmod, hypot, int, log, log10, max, min, not, or, pow, radians, round, sin, sinh, pi, sqrt, tan, tanh, find, rfind, true</code>. The identifiers <code>e</code>, <code>pi</code>, <code>true</code>, <code>false</code> SHALL be flagged as value keywords (<code>t_isValue</code>). Matching SHALL be case-insensitive (uppercase accepted although Python is lower-case).</li>
+<li><strong>Parameters &amp; options:</strong> <code>find</code>/<code>rfind</code> are string methods; <code>and/or/not</code> are boolean operators; the rest are <code>math</code>/builtin functions.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Defines the exact expression vocabulary and prevents collisions.</li>
+<li><strong>Source:</strong> <code>isKeyName</code> (cpp L1339–1532).</li>
+<li><strong>Verification:</strong> Inspection — cross-check the list against <code>isKeyName</code>; Test that <code>pi*r*r</code> evaluates.</li>
+</ul>
+<h3 id="fr-cad-var-009-expression-evaluation-pipeline">FR-CAD-VAR-009 — Expression evaluation pipeline</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL evaluate an expression by: (1) scanning it left-to-right, extracting identifier tokens and substituting each via <code>resolveName</code> — a named value/reference becomes <code>float(&lt;%12.6f value&gt;)</code>, a named string becomes a double-quoted literal (with a trailing accessor suffix if any), and reserved value keywords <code>true/false</code> become <code>1/0</code>; (2) requiring at least one numeric literal or defined expression (else &quot;undefined&quot;); (3) prepending <code>a_value = </code> and running the result through the embedded Python interpreter (<code>executeString</code>); (4) reading <code>a_value</code> back as double/long/string. Unresolved identifiers SHALL be recorded in a &quot;missing&quot; list and auto-created as undefined value expressions.</li>
+<li><strong>Parameters &amp; options:</strong> three typed variants — <code>evaluateDouble</code>, <code>evaluateBool</code> (nonzero long → true), <code>evaluateString</code>; each accepts an optional missing-names accumulator.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This is the evaluation core that turns text expressions into driving values.</li>
+<li><strong>Source:</strong> <code>evaluateExpression</code> (cpp L8019–8184), <code>resolveName</code> (L7868–7990), <code>evaluateDouble/Bool/String</code> (L8199–8356).</li>
+<li><strong>Verification:</strong> Test — evaluate <code>sqrt(w*w+h*h)</code> with w=3,h=4 → 5.0; <code>w&gt;0 and h&gt;0</code> → true.</li>
+</ul>
+<h3 id="fr-cad-var-010-embedded-python-interpreter-instance">FR-CAD-VAR-010 — Embedded Python interpreter instance</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL evaluate variant expressions on a <code>TcPythonInterpreter</code> instance that (a) shares a single process-wide <code>Py_Initialize()</code>/<code>Py_Finalize()</code> lifecycle reference-counted across instances, (b) owns a private interpreter stack (a Python dict) so variables persist between calls within one instance, and (c) is created for variants with the math module available. The manager SHALL hold one interpreter (<code>m_interpreterPtr</code>) to avoid repeated instantiation.</li>
+<li><strong>Parameters &amp; options:</strong> module-load flags <code>e_math</code>/<code>e_mathWithoutNamespace</code>/<code>e_tops</code>/<code>e_topsWithoutNamespace</code>; Python home taken from <code>TOPS_PYTHON_PATH</code>. Read-back helpers: <code>getValueAsString/Long/Double</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A persistent per-instance stack lets successively assigned variables be reused; a shared interpreter avoids re-init cost.</li>
+<li><strong>Source:</strong> <code>TcPythonInterpreter</code> ctor/dtor (cpp L74–228), <code>getValueAs*</code> (L508–673); <code>TcDbaseVarManager</code> member <code>m_interpreterPtr</code> (header L1161–1162).</li>
+<li><strong>Verification:</strong> Analysis — confirm single Py_Initialize; Test — assign then read back a stacked variable.</li>
+</ul>
+<h3 id="fr-cad-var-011-numeric-evaluation-rules-float-promotion-near-zero-snap-crash-safety">FR-CAD-VAR-011 — Numeric evaluation rules (float promotion, near-zero snap, crash safety)</h3>
+<ul>
+<li><strong>Requirement:</strong> When building an expression string, the system SHALL append <code>.0</code> to any integer literal that has no decimal point, to prevent Python integer (truncating) arithmetic. After evaluation, an absolute double result below <code>1e-8</code> SHALL be snapped to exactly 0. Any exception raised inside the Python evaluation (e.g. mismatched parentheses) SHALL be caught and reported as &quot;undefined&quot; rather than crashing.</li>
+<li><strong>Parameters &amp; options:</strong> null tolerance <code>a_nullToleranz = 0.00000001</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Legacy Python 2 integer division and floating dust would otherwise corrupt geometry values.</li>
+<li><strong>Source:</strong> <code>evaluateExpression</code> int→float (cpp L8057–8062); near-zero snap (L8226–8232); <code>try/catch</code> (L8218–8239, 8278–8295, 8334–8351).</li>
+<li><strong>Verification:</strong> Test — <code>1/2</code> → 0.5 (not 0); <code>sin(pi)</code> → 0.0; unbalanced <code>(</code> → undefined, no crash.</li>
+</ul>
+<h3 id="fr-cad-var-012-reorder-a-variable-in-the-list">FR-CAD-VAR-012 — Reorder a variable in the list</h3>
+<ul>
+<li><strong>Requirement:</strong> When a variable is selected, the system SHALL move it earlier or later in the evaluation order via <code>variant name @O_Name move back</code> / <code>move next</code> (<code>TcDbaseVarManager::moveExpression(name, up, reevaluate)</code>), keeping the finder cursor on the moved entry; if no variable is selected it SHALL show message 10867.</li>
+<li><strong>Parameters &amp; options:</strong> direction up/down; reevaluation triggered afterwards.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Evaluation order matters when one expression depends on another defined later.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariablen</code> move handlers (L56251–56420); <code>moveExpression</code> (header L765–774).</li>
+<li><strong>Verification:</strong> Test — reorder so a dependency precedes its user; confirm re-evaluation succeeds.</li>
+</ul>
+<h3 id="fr-cad-var-013-delete-a-variable">FR-CAD-VAR-013 — Delete a variable</h3>
+<ul>
+<li><strong>Requirement:</strong> When a variable is selected, the system SHALL delete it via <code>variant name @O_Name remove</code> (<code>deleteExpression</code>); if none is selected it SHALL show message 10867.</li>
+<li><strong>Parameters &amp; options:</strong> name string.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Housekeeping of the variable list.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariablen</code> remove handler (L55963–55985); <code>deleteExpression</code> (header L272–279).</li>
+<li><strong>Verification:</strong> Test — delete a variable; confirm removed from list.</li>
+</ul>
+<h3 id="fr-cad-var-014-re-evaluate-dependent-expressions">FR-CAD-VAR-014 — Re-evaluate dependent expressions</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL re-evaluate expression values whenever a definition changes or is reordered, and SHALL always re-evaluate the whole expression list at the start of executing a change (because reference values and dependent expressions may have changed).</li>
+<li><strong>Parameters &amp; options:</strong> <code>reevaluateList(firstPtr)</code> walks from a given node; <code>defineExpression</code>/<code>moveExpression</code> accept a <code>reevaluate</code> flag (default true).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Keeps derived values consistent before geometry is transformed.</li>
+<li><strong>Source:</strong> <code>reevaluateList</code> (cpp L8368+); <code>executeChange</code> calls <code>reevaluateList(m_namesPtr)</code> first (L4250).</li>
+<li><strong>Verification:</strong> Test — change a base variable, execute a change, confirm derived values updated.</li>
+</ul>
+<h3 id="fr-cad-var-015-export-the-value-list-to-a-file">FR-CAD-VAR-015 — Export the value list to a file</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user saves the value list, the system SHALL write every non-reference expression as one <code>name=expression</code> line to the chosen file (<code>writeValueList</code>), invoked from the UI by <code>variant name @file write</code> after a file browser (<code>pdm_browser filesystem add_file_type 'ALL' save</code>).</li>
+<li><strong>Parameters &amp; options:</strong> references (<code>e_varReference</code>, <code>e_varBendReference</code>) are excluded; default directory from <code>TOPS_PWD</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Allows a value set to be archived / reused across parts.</li>
+<li><strong>Source:</strong> <code>writeValueList</code> (cpp L893–924); <code>M_CadVarVariablen</code> write handler (L57188–57210).</li>
+<li><strong>Verification:</strong> Inspection — open the file, confirm <code>name=expr</code> lines and absence of references.</li>
+</ul>
+<h3 id="fr-cad-var-016-import-a-value-list-from-a-file">FR-CAD-VAR-016 — Import a value list from a file</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user reads a value list, the system SHALL parse the file line-by-line (<code>readValueList</code>): trim whitespace, skip lines beginning <code>#</code>, split on the first <code>=</code>, and <code>defineExpression(name, expr, reevaluate=false)</code> for each; imported entries are appended and the whole list is re-evaluated afterward. Invoked by <code>variant name @file read</code>.</li>
+<li><strong>Parameters &amp; options:</strong> comment prefix <code>#</code>; missing <code>=</code> → line ignored.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Batch/programmatic setting of variable values.</li>
+<li><strong>Source:</strong> <code>readValueList</code> (cpp L1240–1300); <code>M_CadVarVariablen</code> read handler (L57340–57360).</li>
+<li><strong>Verification:</strong> Test — import a file with <code>w=25</code> and a comment; confirm <code>w</code> set, comment ignored.</li>
+</ul>
+<h3 id="fr-cad-var-017-string-expressions-and-quoting">FR-CAD-VAR-017 — String expressions and quoting</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL support string-typed expressions: in an expression a <code>&quot;…&quot;</code> literal is passed through verbatim (with backslashes doubled so they survive Python), string variables are substituted as quoted literals, and <code>getTextString</code> SHALL strip surrounding quotes and un-double doubled quotes when materialising a final text value; concatenation and the <code>find</code>/<code>rfind</code> methods are available.</li>
+<li><strong>Parameters &amp; options:</strong> <code>getTextString(expr, avoidDigitTrail)</code> optionally suppresses long decimal trails.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Needed for the change-text and set-property changes whose value is textual.</li>
+<li><strong>Source:</strong> <code>evaluateExpression</code> string handling (cpp L8069–8085, 8128–8143), <code>resolveName</code> string branch (L7910–7943), <code>getTextString</code> (header L1254–1265).</li>
+<li><strong>Verification:</strong> Test — expression <code>&quot;Part-&quot; find(&quot;x&quot;)</code>; change-text uses evaluated string.</li>
+</ul>
+<h3 id="fr-cad-var-018-name-a-reference-element">FR-CAD-VAR-018 — Name a reference element</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user picks a geometry element as a reference, the system SHALL prompt for a name (<code>M_CadVarReferenzName</code>) and register it via <code>asm_call( variant reference @O_elementName )</code> → <code>TcDbaseVarManager::defineReference(name, S_element*)</code>; if the name is already used it SHALL show message 10896 (ST_ERROR==4), and if the name is an invalid/reserved keyword it SHALL show 10895. A reference element SHALL be highlighted by a reference attribute (no other function).</li>
+<li><strong>Parameters &amp; options:</strong> name string; optional &quot;as auxiliary geometry&quot; toggle (<code>O_AlsHilfsgeo</code>). Entry point <code>aCadSetVariantReferenceElem</code> opens the dialog.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> References let expressions read live geometry values (see FR-CAD-VAR-019).</li>
+<li><strong>Source:</strong> <code>M_CadVarReferenzName</code> OK (L48942–48980); <code>aCadSetVariantReferenceElem</code> (L32360–32362); <code>defineReference</code>/<code>setReference</code> (header L281–289, 1768–1779).</li>
+<li><strong>Verification:</strong> Test — name a circle <code>hole1</code>; attempt a duplicate name; expect 10896.</li>
+</ul>
+<h3 id="fr-cad-var-019-reference-value-accessors">FR-CAD-VAR-019 — Reference value accessors</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL allow an expression to read a geometric value from a named reference by suffixing the reference name with one of: <code>.cx</code>,<code>.cy</code> (centre X/Y), <code>.sx</code>,<code>.sy</code> (start X/Y), <code>.ex</code>,<code>.ey</code> (end X/Y), <code>.r</code> (radius), <code>.d</code> (diameter), <code>.l</code> (length). The <code>M_CadVarReferenzWert</code> dialog SHALL build the suffixed token (<code>name.&lt;suffix&gt;</code>) from a radio selection (<code>O_WertArt</code> 1–9) and return it via <code>tmp_varWert</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_WertArt</code>: 1=.cx 2=.cy 3=.sx 4=.sy 5=.ex 6=.ey 7=.r 8=.d 9=.l.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> This is the mechanism linking variables to geometry (&quot;references from variables to geometry elements&quot;).</li>
+<li><strong>Source:</strong> <code>M_CadVarReferenzWert</code> OK (L49580–49760); consumed by <code>M_CadVarVariablen</code>/condition builders (L56107, L60205).</li>
+<li><strong>Verification:</strong> Test — <code>gap = hole1.cx - hole2.cx</code>; move a reference and confirm <code>gap</code> updates on execute.</li>
+</ul>
+<h3 id="fr-cad-var-020-reference-to-a-bending">FR-CAD-VAR-020 — Reference to a bending</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL support naming a <strong>bending</strong> as a reference (<code>defineReference(name, S_biegung*)</code>) so its parameters (e.g. angle) can be read in expressions, with the reference id held persistently through a bend attribute.</li>
+<li><strong>Parameters &amp; options:</strong> parallel to element references; expression type <code>e_varBendReference</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Needed to parametrise on existing bend geometry.</li>
+<li><strong>Source:</strong> <code>TcDbaseVarManager::defineReference(S_biegung*)</code> and bend reference getters (header L352–421); <code>setReference(S_biegung*)</code> (L1802–1812).</li>
+<li><strong>Verification:</strong> Test — reference a bending; use its value in an expression.</li>
+</ul>
+<h3 id="fr-cad-var-021-list-references">FR-CAD-VAR-021 — List references</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL provide a picker <code>M_CadVarReferenzListe</code> listing all defined references (populated by <code>variant liste @file reference</code>), returning the selected name in <code>tmp_varName</code>.</li>
+<li><strong>Parameters &amp; options:</strong> finder format <code>%-40.40s</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Lets the user browse/select existing references when building expressions.</li>
+<li><strong>Source:</strong> <code>M_CadVarReferenzListe</code> (L47493–47720); <code>getReferenceList</code> (header L787–796).</li>
+<li><strong>Verification:</strong> Demonstration — open list; confirm all references shown.</li>
+</ul>
+<h3 id="fr-cad-var-022-delete-a-reference">FR-CAD-VAR-022 — Delete a reference</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user deletes a reference, the system SHALL issue <code>asm_call( variant reference remove )</code> (<code>deleteReference</code>), removing the name binding and its highlight attribute.</li>
+<li><strong>Parameters &amp; options:</strong> optional attribute-only removal (used before copying so copies do not inherit reference attributes).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Reference housekeeping.</li>
+<li><strong>Source:</strong> <code>aCadDeleteVariantReferenceElem</code> (L10834–10836); <code>deleteReference</code> (header L339–350).</li>
+<li><strong>Verification:</strong> Test — delete a reference; confirm expressions using it become undefined.</li>
+</ul>
+<h3 id="fr-cad-var-023-show-highlight-references">FR-CAD-VAR-023 — Show / highlight references</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>show references</em>, the system SHALL issue <code>asm_call( variant reference name )</code> to display the names of all reference elements/bendings.</li>
+<li><strong>Parameters &amp; options:</strong> none.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Visual audit of which elements are referenced.</li>
+<li><strong>Source:</strong> <code>aCadShowVariantReferenceElem</code> (L33812–33818).</li>
+<li><strong>Verification:</strong> Demonstration — invoke; confirm names shown on referenced elements.</li>
+</ul>
+<h3 id="fr-cad-var-024-set-the-active-changes-element-set">FR-CAD-VAR-024 — Set the active change's element set</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>select elements</em> for the active change, the system SHALL first verify a change is active (<code>variant check</code>; if not, message 10865), then set the current change's operated-on elements to the current selection via <code>variant 0 set element</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>0</code> = current change.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Each transformation/delete change acts on an explicit element set that the user assigns.</li>
+<li><strong>Source:</strong> <code>aCadSelectVariantElem</code> (L31381–31405).</li>
+<li><strong>Verification:</strong> Test — select elements, assign; confirm the change operates on exactly those.</li>
+</ul>
+<h3 id="fr-cad-var-025-inherit-elements-from-the-predecessor-change">FR-CAD-VAR-025 — Inherit elements from the predecessor change</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>take over elements</em>, the system SHALL check a change is active (else 10865) and that a predecessor exists (else 10866 for the first change). If the predecessor produced copies, it SHALL prompt <code>M_CadVarElementAuswahl</code> to inherit <strong>originals</strong> (<code>variant 0 set element last control</code>, <code>tmp_auswahl==1</code>), <strong>copies</strong> (<code>… last copy</code>, <code>==2</code>), or <strong>both</strong> (<code>… last all</code>), otherwise inherit originals directly; then <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> selection flags <code>originale</code>/<code>kopien</code> → <code>tmp_auswahl</code> = 1/2/3.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Chained transformations must be able to act on the output of a previous copy step.</li>
+<li><strong>Source:</strong> <code>aCadCopyVariantElem</code> (L8605–8663); <code>M_CadVarElementAuswahl</code> (L45846–46330); <code>copyLastSelection</code> (header L575–584).</li>
+<li><strong>Verification:</strong> Test — after a copy-move, inherit copies into a rotate; confirm rotate acts on the copies.</li>
+</ul>
+<h3 id="fr-cad-var-026-change-move-bewegen">FR-CAD-VAR-026 — Change: Move (Bewegen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Move change SHALL translate its assigned elements/bendings by the vector (<code>param1</code>=x-displacement, <code>param2</code>=y-displacement); type=1, parameter count=2. Both parameters are expressions (calculator-editable).</li>
+<li><strong>Parameters &amp; options:</strong> <code>tmp_varParam1=O_TransX</code> (&quot;x-Verschiebung&quot;), <code>tmp_varParam2=O_TransY</code> (&quot;y-Verschiebung&quot;). Units: drawing units (mm).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric translation.</li>
+<li><strong>Source:</strong> <code>F_CadVarBewegen</code> (L11784–11795); engine <code>executeTransformation(type=1,count=2,…)</code> (header L1541–1564).</li>
+<li><strong>Verification:</strong> Test — Move by (x=w, y=0), vary w; confirm elements shift.</li>
+</ul>
+<h3 id="fr-cad-var-027-change-rotate-rotieren">FR-CAD-VAR-027 — Change: Rotate (Rotieren)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Rotate change SHALL rotate its assigned elements about a centre (<code>param1</code>=centre X, <code>param2</code>=centre Y) by <code>param3</code>=angle; type=2, count=3.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_MitteX</code>, <code>O_MitteY</code>, <code>O_Winkel</code>. Angle unit: degrees (drawing convention).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric rotation.</li>
+<li><strong>Source:</strong> <code>F_CadVarRotieren</code> (L28362–28375).</li>
+<li><strong>Verification:</strong> Test — rotate 90° about (0,0); confirm orientation.</li>
+</ul>
+<h3 id="fr-cad-var-028-change-mirror-spiegeln">FR-CAD-VAR-028 — Change: Mirror (Spiegeln)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Mirror change (type=3) SHALL mirror its assigned elements in one of four modes selected by <code>O_Typ</code>, encoding the mode in <code>param1</code>: mode 0 &quot;horizontal&quot; → axis position <code>param2</code>=x1 (count 2); mode 1 &quot;vertikal&quot; → axis position <code>param2</code>=y1 (count 2); mode 2 &quot;Punkt&quot;(point) → centre (<code>param2</code>=x1, <code>param3</code>=y1) (count 3); mode 3 &quot;zwei Punkte&quot;(two points) → mirror line through (<code>param2</code>=x1,<code>param3</code>=y1)–(<code>param4</code>=x2,<code>param5</code>=y2) (count 5).</li>
+<li><strong>Parameters &amp; options:</strong> mode int in param1 (0/1/2/3), coordinates in subsequent params; all expressions.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric mirroring across an axis, a point, or a free line.</li>
+<li><strong>Source:</strong> <code>F_CadVarSpiegeln</code> ExitFunction (L31765–31798).</li>
+<li><strong>Verification:</strong> Test — each of the four modes; confirm mirrored geometry.</li>
+</ul>
+<h3 id="fr-cad-var-029-change-copy-along-vector-kopie-bewegen">FR-CAD-VAR-029 — Change: Copy along vector (Kopie Bewegen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Copy-Move change (type=4, count=3) SHALL create <code>param1</code>=count copies of its assigned elements, each offset from the previous by (<code>param2</code>=x-displacement, <code>param3</code>=y-displacement).</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Anzahl</code> (integer count), <code>O_TransX</code>, <code>O_TransY</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric linear array.</li>
+<li><strong>Source:</strong> <code>F_CadVarKopieBewegen</code> (L19699–19711); engine <code>executeCopy(type,count,…)</code> (header L1566–1591).</li>
+<li><strong>Verification:</strong> Test — 5 copies at pitch (x=p,y=0); vary p; confirm array.</li>
+</ul>
+<h3 id="fr-cad-var-030-change-copy-around-centre-kopie-rotieren">FR-CAD-VAR-030 — Change: Copy around centre (Kopie Rotieren)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Copy-Rotate change (type=5, count=4) SHALL create <code>param1</code>=count copies rotated about (<code>param2</code>=centre X, <code>param3</code>=centre Y) by <code>param4</code>=angle increment each.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Anzahl</code>, <code>O_MitteX</code>, <code>O_MitteY</code>, <code>O_Winkel</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric circular/polar array.</li>
+<li><strong>Source:</strong> <code>F_CadVarKopieRotieren</code> (L21396–21410).</li>
+<li><strong>Verification:</strong> Test — 6 copies, 60° increment about origin; confirm ring.</li>
+</ul>
+<h3 id="fr-cad-var-031-change-copy-by-mirroring-kopie-spiegeln">FR-CAD-VAR-031 — Change: Copy by mirroring (Kopie Spiegeln)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Copy-Mirror change (type=6) SHALL create <code>param1</code>=count mirrored copies, with the mirror mode in <code>param2</code> (0/1/2/3 as in FR-CAD-VAR-028) and the axis/point/line coordinates in the following parameters; counts: mode 0/1 → 3, mode 2 → 4, mode 3 → 6.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Anzahl</code> then mode + coordinates (<code>O_x1,O_y1,O_x2,O_y2</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric mirrored duplication.</li>
+<li><strong>Source:</strong> <code>F_CadVarKopieSpiegeln</code> ExitFunction (L23663–23699).</li>
+<li><strong>Verification:</strong> Test — mirror-copy across a two-point line; confirm copy placement.</li>
+</ul>
+<h3 id="fr-cad-var-032-change-stretch-scale-dehnen">FR-CAD-VAR-032 — Change: Stretch / scale (Dehnen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Stretch change (type=7, count=2) SHALL scale its assigned elements by (<code>param1</code>=x-factor, <code>param2</code>=y-factor) in one of three modes selected by <code>O_Typ</code>: 1 horizontal → (FaktX, 0); 2 vertical → (0, FaktY); 3 both → (FaktX, FaktY).</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_FaktX</code>, <code>O_FaktY</code> (scale factors); a zero factor on an axis leaves that axis unchanged.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric one-/two-axis stretching.</li>
+<li><strong>Source:</strong> <code>F_CadVarDehnen</code> ExitFunction (L13614–13640); engine <code>executeStretch</code> (header L1593–1610).</li>
+<li><strong>Verification:</strong> Test — stretch x by 2.0 only; confirm width doubles, height unchanged.</li>
+</ul>
+<h3 id="fr-cad-var-033-change-delete-referenced-elements-loschen">FR-CAD-VAR-033 — Change: Delete referenced elements (Löschen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Delete change (type=8, count=0) SHALL delete its assigned elements/bendings (no parameters).</li>
+<li><strong>Parameters &amp; options:</strong> none; operates on the change's element set.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Conditional removal of geometry as part of a variant.</li>
+<li><strong>Source:</strong> <code>F_CadVarLoeschen</code> (L28255–28261); engine <code>executeDeletion</code> (header L1612–1631).</li>
+<li><strong>Verification:</strong> Test — delete a hole when a condition is met; confirm removal.</li>
+</ul>
+<h3 id="fr-cad-var-034-change-delete-by-filter-auswahl-loschen">FR-CAD-VAR-034 — Change: Delete by filter (Auswahl Löschen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Delete-by-filter change (type=9, count=3) SHALL delete elements matching three OR-combined bitmask filters: <code>param1</code>=colour mask (bit0 blue,1 cyan,2 magenta,3 red,4 black,5 green,6 yellow,7 white; 255=all/any), <code>param2</code>=line-type mask (bit0 dash,1 dot,2 dash-dot,3 solid,4 other; 31=all), <code>param3</code>=element-type mask (bit0 Cline,1 Ccircle,2 line,3 chamfer,4 arc,5 fillet,6 circle,7 text,8 point,9 bending,10 open; 2047=all). An empty/complete mask SHALL mean &quot;all&quot;. Applying this change SHALL require a confirm step (<code>asm_call( confirm )</code>).</li>
+<li><strong>Parameters &amp; options:</strong> three integer bitmasks assembled from checkbox groups in <code>F_CadVarAuswLoeschen</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Rule-based bulk deletion by attribute rather than explicit selection.</li>
+<li><strong>Source:</strong> <code>F_CadVarAuswLoeschen</code> Enter/Exit (L520–990, type at L724); confirm on type-9 edit (Verwaltung L62730).</li>
+<li><strong>Verification:</strong> Test — delete all red construction lines; confirm only those removed.</li>
+</ul>
+<h3 id="fr-cad-var-035-change-circle-radius-kreisradius-andern">FR-CAD-VAR-035 — Change: Circle radius (Kreisradius ändern)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Change-circle-radius change (type=10, count=1) SHALL set the radius of its assigned circles to <code>param1</code>=radius.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Radius</code> (expression, mm).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric hole/circle sizing by radius.</li>
+<li><strong>Source:</strong> <code>F_CadVarKreisRadiusAendern</code> (L27618–27626); engine <code>executeCircleChange</code> (header L1633–1646).</li>
+<li><strong>Verification:</strong> Test — drive a circle radius from a variable; confirm resize.</li>
+</ul>
+<h3 id="fr-cad-var-036-change-circle-diameter-kreisdurchmesser-andern">FR-CAD-VAR-036 — Change: Circle diameter (Kreis/Durchmesser ändern)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Change-diameter change (type=14, count=1) SHALL set the diameter of its assigned circles to <code>param1</code>=diameter. On load, the obsolete legacy type <code>e_varChangeCircle</code> SHALL be migrated to a diameter change (per the enum note).</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Durchmesser</code> (expression, mm).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Parametric hole sizing by diameter (the preferred/newer form).</li>
+<li><strong>Source:</strong> <code>F_CadVarKreisAendern</code> (L26981–26989); enum note (header L838).</li>
+<li><strong>Verification:</strong> Test — drive diameter; confirm; load a legacy file with a circle-change and confirm it behaves as a diameter change.</li>
+</ul>
+<h3 id="fr-cad-var-037-change-fillet-radius-rundungsradius-andern">FR-CAD-VAR-037 — Change: Fillet radius (Rundungsradius ändern)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Change-fillet-radius change (type=13, count=1) SHALL set the radius of its assigned fillets (Rundungen) to <code>param1</code>=radius.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Radius</code> (expression, mm).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric fillet sizing.</li>
+<li><strong>Source:</strong> <code>F_CadVarRundungsRadiusAendern</code> (L30059–30067); engine <code>executeRoundingChange</code> (header L1673–1686).</li>
+<li><strong>Verification:</strong> Test — drive a fillet radius; confirm.</li>
+</ul>
+<h3 id="fr-cad-var-038-change-bend-angle-biegewinkel-andern">FR-CAD-VAR-038 — Change: Bend angle (Biegewinkel ändern)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Change-bend-angle change (type=12, count=1) SHALL set the bend angle of its assigned bendings to <code>param1</code>=angle.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Winkel</code> (expression, degrees).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric bend-angle control for sheet-metal parts.</li>
+<li><strong>Source:</strong> <code>F_CadVarBiegewinkelAendern</code> (L12951–12959); engine <code>executeBendingChange</code> (header L1648–1661).</li>
+<li><strong>Verification:</strong> Test — drive a bend angle; confirm the bending updates.</li>
+</ul>
+<h3 id="fr-cad-var-039-change-text-text-andern">FR-CAD-VAR-039 — Change: Text (Text ändern)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Change-text change (type=11, count=1) SHALL set the string of its assigned text elements to the evaluated string of <code>param1</code> (via <code>evaluateString</code> + <code>getTextString</code>).</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Text</code> (string expression).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric labelling / part marking.</li>
+<li><strong>Source:</strong> <code>F_CadVarTextAendern</code> (L34646–34654); <code>executeTextChange</code>/<code>executeChange</code> text branch (header L1663–1671; cpp L4267–4288).</li>
+<li><strong>Verification:</strong> Test — text driven by <code>&quot;L=&quot; + str(len)</code>; confirm text updates.</li>
+</ul>
+<h3 id="fr-cad-var-040-change-close-contour-kontur-schliessen">FR-CAD-VAR-040 — Change: Close contour (Kontur schließen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Close-contour change (type=20, count=1) SHALL close open contours among its assigned elements where the gap does not exceed <code>param1</code>=distance.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Abstand</code> (max gap distance, mm).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric contour closing (see [[10.7 - CAD Detail - Contour Arithmetic Algorithms]]).</li>
+<li><strong>Source:</strong> <code>F_CadVarKonturSchliessen</code> (L19062–19070); engine <code>executeCloseContour</code> (header L1688–1701); type name db-text 11095.</li>
+<li><strong>Verification:</strong> Test — close a contour with a 0.1 mm gap threshold; confirm closure.</li>
+</ul>
+<h3 id="fr-cad-var-041-change-set-variable-variable-setzen">FR-CAD-VAR-041 — Change: Set variable (Variable setzen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Set-variable change (type=15, count=2) SHALL assign <code>param2</code>=value to the variable named <code>param1</code>, during execution, recording the previous value for undo.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Name</code> (target variable), <code>O_Wert</code> (value expression).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> In-sequence assignment (e.g. incrementing a counter, staged computation) as a scriptable step.</li>
+<li><strong>Source:</strong> <code>F_CadVarVariableSetzen</code> (L35283–35293); <code>executeValueChange</code>/<code>setValue</code> (header L1703–1755; cpp ~L10164, 10222).</li>
+<li><strong>Verification:</strong> Test — set <code>n = n+1</code> in a change; execute repeatedly; confirm increments.</li>
+</ul>
+<h3 id="fr-cad-var-042-change-set-file-property-eigenschaft-setzen">FR-CAD-VAR-042 — Change: Set file property (Eigenschaft setzen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Set-property change (type=16, count=2) SHALL set a drawing/file property named by <code>param1</code> to the evaluated string <code>param2</code>. Supported property keys are: <code>:id:</code>, <code>:note:</code>, <code>:programmer:</code>, <code>:machine:</code>, <code>:material:</code>, <code>:thickness:</code>, <code>:min:</code>, <code>:max:</code>.</li>
+<li><strong>Parameters &amp; options:</strong> property key (<code>O_Wert</code> selects one of the eight <code>:key:</code> tokens), value expression.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Lets a variant drive metadata (material, thickness, min/max) alongside geometry.</li>
+<li><strong>Source:</strong> <code>F_CadVarEigenschaftSetzen</code> (L15511–15592); <code>executePropertyChange</code>/<code>setProperty</code> (header L1711–1766; cpp L4307–4328).</li>
+<li><strong>Verification:</strong> Test — set <code>:thickness:</code> from a variable; confirm file property updated.</li>
+</ul>
+<h3 id="fr-cad-var-043-change-break-with-message-abbruch">FR-CAD-VAR-043 — Change: Break with message (Abbruch)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Break change (type=17, count=1) SHALL, when its condition evaluates true during execution, abort the execution run and surface the message text <code>param1</code> (or &quot;-&quot; if empty) as a break reason returned by <code>executeChange</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Meldung</code> (message string expression).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Guard rail — stop a parametric run on an invalid parameter combination and tell the user why.</li>
+<li><strong>Source:</strong> <code>F_CadVarAbbruch</code> (L16–24, type 17); <code>executeChange</code> break branch (cpp L4331–4350, break reason via <code>t_breakPtr</code>).</li>
+<li><strong>Verification:</strong> Test — break &quot;value too large&quot; when <code>w&gt;200</code>; set w=300, execute-all; confirm run stops with message.</li>
+</ul>
+<h3 id="fr-cad-var-044-change-insert-single-hole-from-template-vorlage-setzen">FR-CAD-VAR-044 — Change: Insert single hole from template (Vorlage setzen)</h3>
+<ul>
+<li><strong>Requirement:</strong> The Set-template-hole change (type=19, count=5) SHALL insert a single hole from a named template (Vorlage/Vlg) at a position and angle: <code>param1</code>=path, <code>param2</code>=name, <code>param3</code>=position X, <code>param4</code>=position Y, <code>param5</code>=angle. Execution SHALL use a single-hole command that loads the model, sets the offset angle, and places it at the position.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Pfad</code>, <code>O_Name</code>, <code>O_PositionX</code>, <code>O_PositionY</code>, <code>O_Winkel</code>; template chosen via VLG file browser.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Parametric placement of a library punch/hole macro.</li>
+<li><strong>Source:</strong> <code>F_CadVarVlgSetzen</code> (L36450–36471); <code>executeSetSingleVlgHole</code> (cpp L10185–10208, <code>TcDbaseSingleHoleCommand</code>).</li>
+<li><strong>Verification:</strong> Test — place a template hole at a computed position; confirm insertion and angle.</li>
+</ul>
+<h3 id="fr-cad-var-045-change-loop-schleife">FR-CAD-VAR-045 — Change: Loop (Schleife)</h3>
+<ul>
+<li><strong>Requirement:</strong> A Loop change (type=18) SHALL group the changes nested under it and repeat them <code>param1</code>=count times; on each pass it SHALL set the loop-counter variable named <code>param2</code> to the current pass index (0-based <code>m_index</code>), recording the prior value for undo, so nested changes can use the counter in their expressions. Loop parameter count is captured as 2 at creation (count, counter-name) but stored as 0 in the child-list form.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Count</code> (iterations, expression), <code>O_VarName</code> (counter variable name). Loops are created from the management dialog, not the type popup, and the type selector is disabled while editing a loop.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Enables repeated parametric arrays/steps driven by an index.</li>
+<li><strong>Source:</strong> <code>F_CadVarSchleife</code> (L30696–30706); <code>executeLoop</code> (cpp L10133–10170); <code>defineLoop</code>/<code>dissolveLoop</code> (header L481–489, 692–701); loop creation via <code>variant multi create</code> (Verwaltung L63524–63560).</li>
+<li><strong>Verification:</strong> Test — loop 5× moving by <code>i*10</code> with counter <code>i</code>; confirm five stepped positions.</li>
+</ul>
+<h3 id="fr-cad-var-046-per-change-condition">FR-CAD-VAR-046 — Per-change condition</h3>
+<ul>
+<li><strong>Requirement:</strong> Each change SHALL carry a boolean condition (default <code>true</code>); at execution time the condition SHALL be evaluated (<code>evaluateBool</code>) and, if false, the change SHALL be <strong>skipped</strong> (marked as a successful no-op) rather than applied; if true, the geometric/property/variable action SHALL be performed. The condition is set/changed via <code>setCondition(id, text)</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>O_Bedingung</code> (boolean expression, may use references, variables, <code>and/or/not</code>, comparisons); an empty condition defaults to <code>true</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Conditions are how variants make features appear/disappear based on parameters.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariante</code> default <code>O_Bedingung='true'</code> (L57623); <code>setCondition</code> (header L510–518); <code>executeChange</code> gate <code>if(a_condition) … else success no-op</code> (cpp L4252, 4275–4283 etc.).</li>
+<li><strong>Verification:</strong> Test — a hole-delete gated on <code>w&lt;50</code>; toggle w; confirm hole appears/disappears.</li>
+</ul>
+<h3 id="fr-cad-var-047-variant-editor-dialog">FR-CAD-VAR-047 — Variant editor dialog</h3>
+<ul>
+<li><strong>Requirement:</strong> The variant editor <code>M_CadVarVariante</code> SHALL let the user pick a change type from a popup (<code>P_CadVarArt</code>), display the localized type name (<code>db_get_text</code> ids 10871–10889, 11095), embed the matching parameter sub-mask via <code>feld_umschalten(O_Parameter, F_CadVar…)</code>, and capture a label (<code>O_Bezeichnung</code>→<code>tmp_varBezeichnung</code>) and condition (<code>O_Bedingung</code>→<code>tmp_varBedingung</code>). The type popup SHALL offer types 1–17,19,20 (loop type 18 excluded — created via management), and SHALL block OK when no type/<code>O_Art</code> is chosen.</li>
+<li><strong>Parameters &amp; options:</strong> outputs <code>tmp_varArt</code>, <code>tmp_varParamCount</code>, <code>tmp_varParam1..7</code>, <code>tmp_varBedingung</code>, <code>tmp_varBezeichnung</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Single reusable editor for creating and editing every change type.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariante</code> (L57488–60210, type dispatch L57500–57628, popup L59316–59520).</li>
+<li><strong>Verification:</strong> Demonstration — open editor, pick each type, confirm correct parameter sub-mask loads.</li>
+</ul>
+<h3 id="fr-cad-var-048-create-a-variantchange">FR-CAD-VAR-048 — Create a variant/change</h3>
+<ul>
+<li><strong>Requirement:</strong> On creating a change, the system SHALL run <code>M_CadVarVariante</code>, then <code>asm_call( variant create #tmp_varArt @tmp_varBedingung )</code> (<code>defineChange</code>+<code>setChangeType</code>+<code>setCondition</code>), push each parameter <code>tmp_varParam1..N</code> (N=<code>tmp_varParamCount</code>) via <code>asm_call(@tmp_varParamK)</code> (<code>addChangeParameter</code>), issue <code>asm_call( confirm )</code>, and, if a label was given, <code>asm_call( variant 0 @tmp_varBezeichnung )</code> (<code>setDescription</code>). The variant list SHALL then be refreshed and the new change fetched as current.</li>
+<li><strong>Parameters &amp; options:</strong> type, condition, up to 7 parameters, optional label.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The canonical create sequence used by both <code>aCadCreateVariant</code> and the management dialog.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> create button (L62472–62540); manager <code>defineChange/setChangeType/setCondition/addChangeParameter/setDescription</code> (header L474–594).</li>
+<li><strong>Verification:</strong> Test — create a Move change with a label; confirm it appears in the list with the label.</li>
+</ul>
+<h3 id="fr-cad-var-049-edit-an-existing-variantchange">FR-CAD-VAR-049 — Edit an existing variant/change</h3>
+<ul>
+<li><strong>Requirement:</strong> On editing a selected change, the system SHALL <code>variant #id fetch</code> (loading its type/condition/parameters into <code>tmp_var*</code>), reopen <code>M_CadVarVariante</code>, and on OK apply <code>variant #id @label</code>, <code>variant #id set #type</code>, <code>variant #id set @condition</code>, <code>variant #id set control</code>, re-push parameters, and (for type 9) <code>confirm</code>. If no change is selected it SHALL show message 10892.</li>
+<li><strong>Parameters &amp; options:</strong> same parameter set as create.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> In-place modification of a defined change.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> edit button (L62671–62748).</li>
+<li><strong>Verification:</strong> Test — edit a change's parameter and condition; confirm persisted.</li>
+</ul>
+<h3 id="fr-cad-var-050-copy-a-variantchange">FR-CAD-VAR-050 — Copy a variant/change</h3>
+<ul>
+<li><strong>Requirement:</strong> When a change is selected, the system SHALL duplicate it via <code>variant #O_Id copy</code> (<code>copyChange</code>), refresh the list, and fetch the copy as current; if none selected, show 10892.</li>
+<li><strong>Parameters &amp; options:</strong> id (0 = current).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Fast reuse of a configured change.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> copy button (L62175–62200); <code>copyChange</code> (header L490–498).</li>
+<li><strong>Verification:</strong> Test — copy a change; confirm a duplicate is inserted.</li>
+</ul>
+<h3 id="fr-cad-var-051-delete-a-variantchange">FR-CAD-VAR-051 — Delete a variant/change</h3>
+<ul>
+<li><strong>Requirement:</strong> When a change is selected, the system SHALL delete it via <code>variant #O_Id remove</code> (<code>deleteChange</code>), clearing the selection and refreshing the list; deleting a loop SHALL also delete its children; if none selected, show 10892.</li>
+<li><strong>Parameters &amp; options:</strong> id; children cascade for loops.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Remove an unwanted change.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> delete button (L62325–62347); <code>deleteChange</code> (header L681–690).</li>
+<li><strong>Verification:</strong> Test — delete a loop; confirm children removed too.</li>
+</ul>
+<h3 id="fr-cad-var-052-reorder-a-variantchange">FR-CAD-VAR-052 — Reorder a variant/change</h3>
+<ul>
+<li><strong>Requirement:</strong> When a change is selected, the system SHALL move it earlier/later via <code>variant #O_Id move back</code> / <code>move next</code> (<code>moveChange(id, up)</code>), refresh the list and keep the finder cursor on it; if none selected, show 10892.</li>
+<li><strong>Parameters &amp; options:</strong> direction up/down.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Change execution order (order is semantically significant).</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> move handlers (L63033–63200); <code>moveChange</code> (header L703–711).</li>
+<li><strong>Verification:</strong> Test — reorder two changes; confirm new execution order.</li>
+</ul>
+<h3 id="fr-cad-var-053-create-and-dissolve-a-loop">FR-CAD-VAR-053 — Create and dissolve a loop</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL create a loop by selecting an anchor change and issuing <code>variant multi create #O_Id @condition</code> (or <code>variant multi create 0 @condition</code> when none selected) with type=18 (<code>defineLoop</code>), then pushing parameters and <code>confirm</code>. The system SHALL dissolve a loop by <code>variant multi remove #O_Id</code> (<code>dissolveLoop</code>), re-integrating its children; if the selected item is not a loop it SHALL show message 11094 (&quot;choose loop first&quot;).</li>
+<li><strong>Parameters &amp; options:</strong> anchor id, condition; loop parameters count+counter-name.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Grouping consecutive changes into a repeated block.</li>
+<li><strong>Source:</strong> <code>M_CadVarVariantenVerwaltung</code> loop-create (L63524–63560) and dissolve (L63368–63400); <code>defineLoop</code>/<code>dissolveLoop</code> (header L481–701).</li>
+<li><strong>Verification:</strong> Test — wrap two changes in a loop, then dissolve; confirm children restored in order.</li>
+</ul>
+<h3 id="fr-cad-var-054-execute-the-next-change">FR-CAD-VAR-054 — Execute the next change</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>execute variant</em>, the system SHALL verify the end-state is not already reached (<code>variant check</code>; if reached, message 10893), then execute the next change via <code>variant next</code> followed by <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> none; advances one step (steps into loop iterations).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Step-wise forward execution for authoring/debugging.</li>
+<li><strong>Source:</strong> <code>aCadExecuteVariant</code> (L12275–12295); engine <code>executeChange</code>, <code>getNextChange</code> (header L713–721, 1835–1844).</li>
+<li><strong>Verification:</strong> Test — step through several changes; confirm one applied per click.</li>
+</ul>
+<h3 id="fr-cad-var-055-undo-the-last-change">FR-CAD-VAR-055 — Undo the last change</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>undo variant</em>, the system SHALL verify a predecessor exists (<code>variant last</code>; if not, message 10890), then undo the last change via <code>variant back</code> + <code>variant refresh</code> (<code>unexecuteChange</code>).</li>
+<li><strong>Parameters &amp; options:</strong> none; reverses one step.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Step-wise backward execution.</li>
+<li><strong>Source:</strong> <code>aCadUndoVariant</code> (L36366–36390); <code>unexecuteChange</code> (header L723–729).</li>
+<li><strong>Verification:</strong> Test — undo a step; confirm geometry reverts exactly.</li>
+</ul>
+<h3 id="fr-cad-var-056-execute-all-changes">FR-CAD-VAR-056 — Execute all changes</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>execute all</em>, the system SHALL verify not already at end-state (<code>variant check</code>; else 10893) and execute forward to the last change via <code>variant 999 current</code> (<code>setCurrentChange(S_lastId=999)</code>) + <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> special id 999 = execute to end.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Materialise the final variant state in one action.</li>
+<li><strong>Source:</strong> <code>aCadExecuteAllVariants</code> (L12021–12040); <code>setCurrentChange</code> doc (header L731–744).</li>
+<li><strong>Verification:</strong> Test — from initial state, execute-all; confirm final geometry.</li>
+</ul>
+<h3 id="fr-cad-var-057-undo-all-changes">FR-CAD-VAR-057 — Undo all changes</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>undo all</em>, the system SHALL verify a predecessor exists (<code>variant last</code>; else 10890) and revert to the initial state via <code>variant 0 current</code> (<code>setCurrentChange(0)</code>) + <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> special id 0 = revert to initial.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Return to the un-transformed base geometry.</li>
+<li><strong>Source:</strong> <code>aCadUndoAllVariants</code> (L36112–36135).</li>
+<li><strong>Verification:</strong> Test — after execute-all, undo-all; confirm base geometry restored.</li>
+</ul>
+<h3 id="fr-cad-var-058-set-current-change-renumber">FR-CAD-VAR-058 — Set current change / renumber</h3>
+<ul>
+<li><strong>Requirement:</strong> <code>setCurrentChange(id)</code> SHALL bring the geometry to the state after change <code>id</code> by executing or un-executing all intervening changes as needed (id 0 = all undone, id 999 = all executed). After structural edits the system SHALL renumber changes (<code>renumberChanges</code>) reporting whether ids actually changed.</li>
+<li><strong>Parameters &amp; options:</strong> target id; missing-parameter/break outputs propagate (FR-CAD-VAR-061).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Random-access navigation of the change list and stable numbering.</li>
+<li><strong>Source:</strong> <code>setCurrentChange</code>/<code>renumberChanges</code> (header L731–753); used by <code>aCadLoadVariant</code>, <code>aCadManageVariants</code>.</li>
+<li><strong>Verification:</strong> Test — jump from state 5 to state 2; confirm three undos executed.</li>
+</ul>
+<h3 id="fr-cad-var-059-open-the-variant-management-dialog">FR-CAD-VAR-059 — Open the variant management dialog</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user chooses <em>manage variants</em>, the system SHALL save the current change id, reset to initial (<code>variant 0 current</code>), open <code>M_CadVarVariantenVerwaltung</code>, and on close restore either the user-selected change (<code>variant #tmp_varId current</code>) or the previously active one (<code>variant #tmp_varIdSave current</code>), then <code>variant refresh</code>.</li>
+<li><strong>Parameters &amp; options:</strong> none.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Central hub for create/edit/copy/delete/move/loop and browsing changes.</li>
+<li><strong>Source:</strong> <code>aCadManageVariants</code> (L17037–17060); <code>M_CadVarVariantenVerwaltung</code> (L60961+).</li>
+<li><strong>Verification:</strong> Demonstration — open management, make edits, confirm restore of active state.</li>
+</ul>
+<h3 id="fr-cad-var-060-default-change-description">FR-CAD-VAR-060 — Default change description</h3>
+<ul>
+<li><strong>Requirement:</strong> When a change has no explicit label, the system SHALL generate a default description from the change type and its leading parameters (<code>getCurrentDescription</code>/<code>getChangeDescription</code>); an explicit label (<code>getDefinedChangeDescription</code>) SHALL be used verbatim when present.</li>
+<li><strong>Parameters &amp; options:</strong> description string shown in the variant list.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Human-readable list entries even without manual labels.</li>
+<li><strong>Source:</strong> <code>getCurrentDescription</code>/<code>getDefinedChangeDescription</code>/<code>getChangeDescription</code> (header L656–679, 1909–1930).</li>
+<li><strong>Verification:</strong> Demonstration — create an unlabeled Move; confirm a sensible default label in the list.</li>
+</ul>
+<h3 id="fr-cad-var-061-missing-parameter-and-break-reporting-on-execute">FR-CAD-VAR-061 — Missing-parameter and break reporting on execute</h3>
+<ul>
+<li><strong>Requirement:</strong> When executing a change, the system SHALL collect the names of any expressions/references that could not be resolved into a &quot;missing&quot; list and return it (<code>t_missingPtr</code>); and, for a Break change with a true condition, SHALL return the break reason (<code>t_breakPtr</code>). Execution SHALL be treated as failed/blocked in these cases so the UI can inform the user.</li>
+<li><strong>Parameters &amp; options:</strong> outputs: missing-parameter list, break message.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Deterministic, explainable failure when a variant is under-specified or guarded.</li>
+<li><strong>Source:</strong> <code>executeChange</code> (cpp L4231–4350, <code>a_missing</code>, <code>t_breakPtr</code>); doc (header L713–721).</li>
+<li><strong>Verification:</strong> Test — execute a change referencing an undefined variable; confirm the missing name is reported and geometry unchanged.</li>
+</ul>
+<h3 id="fr-cad-var-062-persist-the-change-list-versioned-loop-aware">FR-CAD-VAR-062 — Persist the change list (versioned, loop-aware)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL serialize expressions and the change list (<code>writeExpressions</code>/<code>writeChanges</code>) and read them back (<code>readExpressions</code>/<code>readChanges</code>), including a version number and terminated by <code>#~END</code>. On read, loops written in linear form (with a child-count parameter) SHALL be reconstructed (<code>adjustLoops</code>), and copy ids from before version 1.2 SHALL be upgraded to include a pass counter (<code>adjustAllIds</code>/<code>adjustId</code>). Element and bending references SHALL be re-bound to their original ids on load.</li>
+<li><strong>Parameters &amp; options:</strong> version field (e.g. &gt;1.0 adds per-change description; ≥1.2 adds copy pass counter).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Round-trips the entire variant program within the GMV file.</li>
+<li><strong>Source:</strong> <code>readChanges</code> (cpp L936–1012), <code>writeChanges</code>/<code>readExpressions</code>/<code>writeExpressions</code> (header L160–205); <code>adjustLoops</code>/<code>adjustAllIds</code>/<code>adjustId</code> (header L1875–1907).</li>
+<li><strong>Verification:</strong> Test — save then reload a variant with loops and copies; confirm identical structure and ids.</li>
+</ul>
+<h3 id="fr-cad-var-063-variants-menu-and-measuring-helpers">FR-CAD-VAR-063 — Variants menu and measuring helpers</h3>
+<ul>
+<li><strong>Requirement:</strong> The variants menu <code>F_MenueZeichnungVarianten</code> SHALL provide entry points to: create a change (<code>aCadCreateVariant</code>), manage variants (<code>aCadManageVariants</code>), select/copy change elements (<code>aCadSelectVariantElem</code>/<code>aCadCopyVariantElem</code>), manage variables (<code>aCadManageVariantVariables</code>), start the profile builder, and set/delete/show references. It SHALL also offer measuring helpers that feed values into expressions: two-points, point, vertical, horizontal, angle, circle, and length (<code>asm_call( measure … )</code>, each wrapped in getsomethingchanged/somethingchanged).</li>
+<li><strong>Parameters &amp; options:</strong> measure verbs: <code>two_pts</code>, <code>point</code>, <code>vertical</code>, <code>horizontal</code>, <code>angle</code>, <code>me_circle</code>, <code>length</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Discoverable grouping of variant authoring tools with on-canvas measuring.</li>
+<li><strong>Source:</strong> <code>F_MenueZeichnungVarianten</code> (L39320–42700).</li>
+<li><strong>Verification:</strong> Demonstration — invoke each menu item; confirm the corresponding function launches.</li>
+</ul>
+<h3 id="fr-cad-var-064-variants-control-mode-panel">FR-CAD-VAR-064 — Variants control (mode) panel</h3>
+<ul>
+<li><strong>Requirement:</strong> The control field <code>F_SteuerVarianten</code> SHALL present the mode-selector buttons (draw / modify / macros / create / bend, etc.) with highlight of the active mode (<code>ST_SteuerVarianten</code>, default 11), and on selection swap the associated menu field (<code>feld_umschalten(MenueFeld, …)</code>) while keeping the variants context.</li>
+<li><strong>Parameters &amp; options:</strong> button matrix <code>O_SteuerButtonRC</code>; active button highlighted with select colours.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Navigation shell for the variant editing session.</li>
+<li><strong>Source:</strong> <code>F_SteuerVarianten</code> (L42797–45080).</li>
+<li><strong>Verification:</strong> Demonstration — switch modes; confirm menu field swaps and highlight tracks selection.</li>
+</ul>
+<h3 id="fr-cad-var-065-relationship-to-python-script-buttons">FR-CAD-VAR-065 — Relationship to Python script buttons</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL distinguish two Python usages: (a) <strong>variant expression evaluation</strong>, where the CAD MMK masks call the C++ engine which internally uses <code>TcPythonInterpreter::executeString</code> to evaluate short expressions on a persistent stack (FR-CAD-VAR-009/010); and (b) <strong>standalone Python scripting</strong>, where <code>TcPythonInterpreter</code> executes whole <code>.py</code> files (<code>executeFile</code>) — including a start-up <code>runCustomizationScript(&quot;TruTops_customize.py&quot;)</code> from the app-utils <code>Python</code> sub-directory — exposing the <code>ToPs</code> and <code>ToPsGraphics</code> modules and ASM/MMK callbacks (<code>mmkDebugHook</code>, <code>asmWheel/Int/Float/PointCallback</code>). Script buttons therefore invoke the same interpreter class but via file/script execution rather than the variant change list.</li>
+<li><strong>Parameters &amp; options:</strong> modules <code>import math</code>/<code>from math import *</code>/<code>import ToPs</code>/<code>from ToPs import *</code>; env <code>TOPS_PYTHON_PATH</code>, <code>TOPS_APP_UTILS_PATH</code>; error text via <code>getErrorState</code> and optional <code>TruTops_exceptionHook</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Clarifies that parametric variants and Python &quot;script buttons&quot; share the interpreter but are separate mechanisms.</li>
+<li><strong>Source:</strong> <code>TcPythonInterpreter</code> <code>executeFile</code>/<code>executeString</code>/<code>runCustomizationScript</code> (cpp L244–427), module init (L122–187), callbacks (L864–1117); ToPs module includes (L46–47).</li>
+<li><strong>Verification:</strong> Inspection — confirm both paths use <code>TcPythonInterpreter</code>; Test — run a customization script and a variant expression in one session.</li>
+</ul>
+<h3 id="fr-cad-var-066-persistent-elementbending-identity">FR-CAD-VAR-066 — Persistent element/bending identity</h3>
+<ul>
+<li><strong>Requirement:</strong> To keep references and change-target sets valid across save/load, the system SHALL, on storage preparation (<code>prepareElementStorage</code>/<code>prepareVariantClose</code>), revert to the initial state and tag every original element/bending that is transformed or used as a reference with an attribute carrying its current id, and SHALL restore those original ids on reload; the preparation SHALL be reversible (<code>unprepareElementStorage</code>).</li>
+<li><strong>Parameters &amp; options:</strong> temporary attribute/link lists; ids mapped via <code>m_elementMap</code>/<code>m_bendingMap</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Change parameters and references address elements by id; ids must survive a GMV round-trip.</li>
+<li><strong>Source:</strong> <code>prepareElementStorage</code>/<code>unprepareElementStorage</code>/<code>prepareVariantClose</code> (header L128–158); <code>setElementId</code>/<code>getElementId</code> (header L1291–1347).</li>
+<li><strong>Verification:</strong> Test — save/reload a variant; confirm references and change targets still resolve to the same elements.</li>
+</ul>
+<hr />
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>Radius vs. diameter type mapping.</strong> The enum comments mark <code>e_varChangeCircle=10</code> as obsolete (&quot;replaced by ChangeDiameter on load&quot;), yet <code>F_CadVarKreisRadiusAendern</code> actively writes type 10 (radius) while <code>F_CadVarKreisAendern</code> writes type 14 (diameter). It is unclear whether a freshly authored <em>radius</em> change is silently migrated to a diameter change on save/load, or whether type 10 remains a live &quot;radius&quot; change distinct from 14. Needs runtime confirmation. (FR-CAD-VAR-035/036)</li>
+<li><strong>Mirror axis semantics.</strong> Mirror mode 0 is labelled &quot;horizontal&quot; but stores an x-coordinate (x1), and mode 1 &quot;vertikal&quot; stores y1. Whether &quot;horizontal&quot; means &quot;mirror across a vertical axis at x=x1&quot; (left-right flip) or the literal axis orientation is inferred, not proven, from the coordinate used. (FR-CAD-VAR-028/031)</li>
+<li><strong>Loop parameter count discrepancy.</strong> <code>F_CadVarSchleife</code> sets <code>tmp_varParamCount=2</code> (count, counter-name) but the management loop-create path sets count 0 and <code>executeLoop</code> reads two parameters; the exact serialized parameter arrangement for loops (and the child-count parameter added at write time) should be confirmed against a saved GMV. (FR-CAD-VAR-045/062)</li>
+<li><strong><code>variant count</code> / execute-all messaging.</strong> One management button issues <code>variant count</code> and shows messages 11151/11152 (NO_CHANGE). Its precise role (recount/re-evaluate vs. execute) versus the toolbar <code>aCadExecuteAllVariants</code> was not fully disambiguated. (FR-CAD-VAR-056/059)</li>
+<li><strong>Property key set completeness.</strong> The eight <code>:key:</code> property tokens (<code>:id: :note: :programmer: :machine: :material: :thickness: :min: :max:</code>) come from the UI mask; whether the engine (<code>setProperty</code>) accepts additional keys is unverified. (FR-CAD-VAR-042)</li>
+<li><strong>Units and angle sign conventions</strong> for rotate/mirror/bend-angle are assumed to follow the general CAD drawing convention (mm, degrees, CCW-positive) but are not asserted in the variant code inspected; confirm against [[10.6 - CAD Detail - Geometry Kernel Algorithms]].</li>
+<li><strong><code>aCadCreateVariant</code></strong> lives in <code>aCadCreateFunc.gritx</code> (outside this slice). It mirrors the management create sequence (FR-CAD-VAR-048); its full behaviour (e.g. initial element selection) was only partially inspected.</li>
+<li><strong>ToPs Python module surface.</strong> <code>import ToPs</code> exposes an API to scripts (FR-CAD-VAR-065) whose functions are defined in <code>pythonModules/moduleToPs*</code> — not analysed here; the scripting capability beyond the variant expression subset is out of scope for this document.</li>
+<li><strong>Concurrency / singleton.</strong> <code>TcDbaseVarManager</code> and the Python environment are process singletons; behaviour with multiple open drawings/variants simultaneously was not examined.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-parametric-variants-scripting-doc-10.5-cad-detail-parametric-variants-scripting-id-prefix-fr-cad-var-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Parametric Variants & Scripting"
+doc: "10.5 - CAD Detail - Parametric Variants & Scripting"
+id-prefix: "FR-CAD-VAR"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-001-enter-variant-mode">FR-CAD-VAR-001 — Enter variant mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-002-leave-variant-mode">FR-CAD-VAR-002 — Leave variant mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-003-gmv-only-persistence-when-changes-are-defined">FR-CAD-VAR-003 — GMV-only persistence when changes are defined</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-004-export-geometry-without-variant-data">FR-CAD-VAR-004 — Export geometry without variant data</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-005-load-select-a-variant-value-set">FR-CAD-VAR-005 — Load / select a variant value set</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-006-define-name-an-expression-variable">FR-CAD-VAR-006 — Define / name an expression variable</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-007-variable-name-validity">FR-CAD-VAR-007 — Variable-name validity</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-008-reserved-keyword-function-set">FR-CAD-VAR-008 — Reserved keyword / function set</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-009-expression-evaluation-pipeline">FR-CAD-VAR-009 — Expression evaluation pipeline</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-010-embedded-python-interpreter-instance">FR-CAD-VAR-010 — Embedded Python interpreter instance</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-011-numeric-evaluation-rules-float-promotion-near-zero-snap-crash-safety">FR-CAD-VAR-011 — Numeric evaluation rules (float promotion, near-zero snap, crash safety)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-012-reorder-a-variable-in-the-list">FR-CAD-VAR-012 — Reorder a variable in the list</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-013-delete-a-variable">FR-CAD-VAR-013 — Delete a variable</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-014-re-evaluate-dependent-expressions">FR-CAD-VAR-014 — Re-evaluate dependent expressions</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-015-export-the-value-list-to-a-file">FR-CAD-VAR-015 — Export the value list to a file</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-016-import-a-value-list-from-a-file">FR-CAD-VAR-016 — Import a value list from a file</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-017-string-expressions-and-quoting">FR-CAD-VAR-017 — String expressions and quoting</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-018-name-a-reference-element">FR-CAD-VAR-018 — Name a reference element</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-019-reference-value-accessors">FR-CAD-VAR-019 — Reference value accessors</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-020-reference-to-a-bending">FR-CAD-VAR-020 — Reference to a bending</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-021-list-references">FR-CAD-VAR-021 — List references</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-022-delete-a-reference">FR-CAD-VAR-022 — Delete a reference</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-023-show-highlight-references">FR-CAD-VAR-023 — Show / highlight references</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-024-set-the-active-changes-element-set">FR-CAD-VAR-024 — Set the active change's element set</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-025-inherit-elements-from-the-predecessor-change">FR-CAD-VAR-025 — Inherit elements from the predecessor change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-026-change-move-bewegen">FR-CAD-VAR-026 — Change: Move (Bewegen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-027-change-rotate-rotieren">FR-CAD-VAR-027 — Change: Rotate (Rotieren)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-028-change-mirror-spiegeln">FR-CAD-VAR-028 — Change: Mirror (Spiegeln)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-029-change-copy-along-vector-kopie-bewegen">FR-CAD-VAR-029 — Change: Copy along vector (Kopie Bewegen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-030-change-copy-around-centre-kopie-rotieren">FR-CAD-VAR-030 — Change: Copy around centre (Kopie Rotieren)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-031-change-copy-by-mirroring-kopie-spiegeln">FR-CAD-VAR-031 — Change: Copy by mirroring (Kopie Spiegeln)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-032-change-stretch-scale-dehnen">FR-CAD-VAR-032 — Change: Stretch / scale (Dehnen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-033-change-delete-referenced-elements-loschen">FR-CAD-VAR-033 — Change: Delete referenced elements (Löschen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-034-change-delete-by-filter-auswahl-loschen">FR-CAD-VAR-034 — Change: Delete by filter (Auswahl Löschen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-035-change-circle-radius-kreisradius-andern">FR-CAD-VAR-035 — Change: Circle radius (Kreisradius ändern)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-036-change-circle-diameter-kreisdurchmesser-andern">FR-CAD-VAR-036 — Change: Circle diameter (Kreis/Durchmesser ändern)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-037-change-fillet-radius-rundungsradius-andern">FR-CAD-VAR-037 — Change: Fillet radius (Rundungsradius ändern)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-038-change-bend-angle-biegewinkel-andern">FR-CAD-VAR-038 — Change: Bend angle (Biegewinkel ändern)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-039-change-text-text-andern">FR-CAD-VAR-039 — Change: Text (Text ändern)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-040-change-close-contour-kontur-schliessen">FR-CAD-VAR-040 — Change: Close contour (Kontur schließen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-041-change-set-variable-variable-setzen">FR-CAD-VAR-041 — Change: Set variable (Variable setzen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-042-change-set-file-property-eigenschaft-setzen">FR-CAD-VAR-042 — Change: Set file property (Eigenschaft setzen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-043-change-break-with-message-abbruch">FR-CAD-VAR-043 — Change: Break with message (Abbruch)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-044-change-insert-single-hole-from-template-vorlage-setzen">FR-CAD-VAR-044 — Change: Insert single hole from template (Vorlage setzen)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-045-change-loop-schleife">FR-CAD-VAR-045 — Change: Loop (Schleife)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-046-per-change-condition">FR-CAD-VAR-046 — Per-change condition</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-047-variant-editor-dialog">FR-CAD-VAR-047 — Variant editor dialog</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-048-create-a-variantchange">FR-CAD-VAR-048 — Create a variant/change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-049-edit-an-existing-variantchange">FR-CAD-VAR-049 — Edit an existing variant/change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-050-copy-a-variantchange">FR-CAD-VAR-050 — Copy a variant/change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-051-delete-a-variantchange">FR-CAD-VAR-051 — Delete a variant/change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-052-reorder-a-variantchange">FR-CAD-VAR-052 — Reorder a variant/change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-053-create-and-dissolve-a-loop">FR-CAD-VAR-053 — Create and dissolve a loop</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-054-execute-the-next-change">FR-CAD-VAR-054 — Execute the next change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-055-undo-the-last-change">FR-CAD-VAR-055 — Undo the last change</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-056-execute-all-changes">FR-CAD-VAR-056 — Execute all changes</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-057-undo-all-changes">FR-CAD-VAR-057 — Undo all changes</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-058-set-current-change-renumber">FR-CAD-VAR-058 — Set current change / renumber</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-059-open-the-variant-management-dialog">FR-CAD-VAR-059 — Open the variant management dialog</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-060-default-change-description">FR-CAD-VAR-060 — Default change description</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-061-missing-parameter-and-break-reporting-on-execute">FR-CAD-VAR-061 — Missing-parameter and break reporting on execute</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-062-persist-the-change-list-versioned-loop-aware">FR-CAD-VAR-062 — Persist the change list (versioned, loop-aware)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-063-variants-menu-and-measuring-helpers">FR-CAD-VAR-063 — Variants menu and measuring helpers</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-064-variants-control-mode-panel">FR-CAD-VAR-064 — Variants control (mode) panel</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-065-relationship-to-python-script-buttons">FR-CAD-VAR-065 — Relationship to Python script buttons</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-var-066-persistent-elementbending-identity">FR-CAD-VAR-066 — Persistent element/bending identity</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></span>
+ <span class="next"><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

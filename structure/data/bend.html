@@ -1,0 +1,647 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Bend Technology</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Data & Process</a>
+     <ul>
+      <li>
+       <button class="tree closed"></button>
+       <a href="part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a class="active" href="bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Data & Process</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="bend.html">Bend Technology</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Bend Technology</h1>
+<h2 id="from-drawing2-to-nc-output">From Drawing2 to NC Output</h2>
+<p>This document explains how Flux turns a 2D flat drawing with bend marks into a fully
+tooled press-brake program. The pipeline has four distinct stages:</p>
+<ol>
+<li><em><strong>Drawing2</strong></em>* — the flat part drawing, storing <code>E2Bendline</code> entities for every bend</li>
+<li><strong><strong>Model3</strong></strong> — the folded 3D model, storing <code>E3Flex</code> entities paired to those bend lines</li>
+<li><strong><strong>BendTech</strong></strong> — tool assignment and sequencing, producing <code>BendOp</code> / <code>BendSetup</code> objects</li>
+<li><strong><strong>Output</strong></strong> — NC code and setup-sheet report files written to disk</li>
+</ol>
+<p><strong>Entry point:</strong> <code>Core/Part/Part.cs:327</code> — <code>Part.DoBendTooling()</code></p>
+<h2 id="stage-1-the-e2bendline-in-drawing2">Stage 1 — The E2Bendline in Drawing2</h2>
+<h3 id="what-a-bend-line-is">What a bend line is</h3>
+<p>A bend line is represented by the class <code>E2Bendline</code> (<code>Core/Drawing/2DEntity.cs:156</code>).
+It derives from <code>Entity2</code> and lives in the <code>Drawing2</code> alongside the cut contour plines.</p>
+<p>Each <code>E2Bendline</code> stores the complete physical description of one bend:</p>
+<p>[cols=&quot;2,1,5&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Pts</code>            | <code>Point2[]</code> | Fragment endpoints — always an even count, each pair defines one collinear span. Points are sorted along the dominant axis at construction.
+| <code>Angle</code>          | <code>float</code> (rad) | Exterior turn angle. +ve = valley (bend up), -ve = mountain (bend down). A hem has <code>\|Angle\| = π</code>.
+| <code>InteriorAngle</code>  | <code>double</code> (rad) | Interior angle: <code>(π − \|Angle\|) × sign(Angle)</code>
+| <code>Radius</code>         | <code>double</code> (mm) | Bend radius. If stored as NaN, defaults to <code>Thickness × 1.5</code>.
+| <code>KFactor</code>        | <code>double</code> | Ratio of neutral-axis shift (default 0.35). Controls <code>FlatWidth</code>.
+| <code>FlatWidth</code>      | <code>double</code> (mm) | Width of the deformation zone: <code>\|Angle\| × (Radius + KFactor × Thickness)</code>
+| <code>Deduction</code>      | <code>double</code> (mm) | Bend deduction (bend allowance subtracted from flanges): <code>2 × (tan(\|Angle\|/2) × (Radius + Thickness)) − FlatWidth</code>. For obtuse bends tan is capped at 1.
+| <code>VWidth</code>         | <code>double</code> (mm) | V-opening width of the die (NaN if not set)
+| <code>PunchName</code>      | <code>string</code> | Recommended punch tool name (may be null)
+| <code>DieName</code>        | <code>string</code> | Recommended die tool name (may be null)
+| <code>SeqNo</code>          | <code>short</code>  | Bend sequence number (1-based, set during sequencing)
+| <code>PrebendAngle</code>   | <code>double</code> (rad) | Pre-bend angle for two-phase bending (0 if none)
+| <code>BumpCount</code>      | <code>short</code>  | Number of bumping steps for step-bends
+| <code>Kind</code>           | <code>EKind</code>  | <code>Std</code>, <code>Coining</code>, <code>DoubleSheetBendHalf</code>, <code>FlatBend</code>
+| <code>Airgap</code>         | <code>float</code> (mm) | Air gap (set only when used on a panel bender)
+|===</p>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs:159</code></p>
+<p>[source,csharp]</p>
+<pre><code>public E2Bendline (IEnumerable&lt;Point2&gt; pts, double angle, double thickness,
+                   double radius = double.NaN, double deduction = double.NaN)
+</code></pre>
+<h3 id="fragmented-bend-lines">Fragmented bend lines</h3>
+<p>A single logical bend line can have gaps — for example where a cutout interrupts the
+bend. The <code>Pts</code> array stores multiple contiguous fragment pairs: <code>[A₀, B₀, A₁, B₁, …]</code>.
+Each pair <code>(Aᵢ, Bᵢ)</code> is one span of the same bend line. All fragments are collinear;
+if not, the <code>IllFormed</code> flag is set and the bend is rejected.</p>
+<h3 id="e2flags">E2Flags</h3>
+<p>[cols=&quot;2,1,5&quot;, options=&quot;header&quot;]
+|===
+| Flag | Value | Meaning</p>
+<p>| <code>Error</code>          | 0x04 | Bend cannot be processed
+| <code>IllFormed</code>      | 0x10 | Odd point count or non-collinear fragments
+| <code>PreBent</code>        | 0x20 | Already bent by punch press — skip in press-brake tech
+| <code>BendOnBaseplane</code>| 0x80 | Connected to the base plane (structural constraint)
+| <code>PostBent</code>       | 0x100 | Will be bent after this tech finishes
+| <code>FoldTooled</code>     | 0x200 | Processed on a panel bender
+| <code>RadiusLocked</code>   | 0x400 | Radius must not be changed by tooler
+| <code>ZCoining</code>       | 0x800 | Coining Z-bend
+|===</p>
+<h3 id="layers">Layers</h3>
+<p>Bend lines are placed on dedicated layers in <code>Drawing2</code>:</p>
+<p>[cols=&quot;2,5&quot;, options=&quot;header&quot;]
+|===
+| Layer use (<code>EUse</code>) | Meaning</p>
+<p>| <code>VBend</code> | Valley bend (fold up — punch presses from above)
+| <code>MBend</code> | Mountain bend (fold down — punch pushes through)
+|===</p>
+<p>The layer use is determined from the sign of <code>E2Bendline.Angle</code>: positive → <code>VBend</code>,
+negative → <code>MBend</code>.</p>
+<h2 id="stage-2-the-e3flex-in-model3">Stage 2 — The E3Flex in Model3</h2>
+<h3 id="pairing-e2bendline-e3flex">Pairing: E2Bendline ↔ E3Flex</h3>
+<p>When a 3D model is created from the flat drawing, each <code>E2Bendline</code> gets a paired
+<code>E3Flex</code> in <code>Model3</code>. The link is the integer <code>UID</code>:</p>
+<p><strong>File:</strong> <code>Core/Model/E3Flex.cs</code></p>
+<p>[source,csharp]</p>
+<pre><code>
+public int BendlineUID { get; }
+
+public E3Flex PairedBendline
+    =&gt; Dwg?.Owner?.Model?.Flexes.FirstOrDefault(a =&gt; a.BendlineUID == UID);
+</code></pre>
+<p>Similarly, <code>E2Bendline</code> navigates back:</p>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs:409</code></p>
+<p>[source,csharp]</p>
+<pre><code>public E3Flex PairedFlex
+    =&gt; Dwg?.Owner?.Model?.Flexes.FirstOrDefault(a =&gt; a.BendlineUID == UID);
+</code></pre>
+<h3 id="what-e3flex-adds">What E3Flex adds</h3>
+<p><code>E3Flex</code> is the 3D representation of a bend: it contains the spine geometry (the actual
+curve along which the sheet deforms), collision geometry, windward/leeward face
+assignments, and phase information for multi-phase bends.</p>
+<p>** <code>Spine</code> — describes the shape of the bend zone (e.g. <code>FlatBendSpine</code> for hemming)
+** <code>PhaseCount</code> — 1 for simple bends, 2 for hems (pre-bend + flatten) or pre-bent bends
+** <code>PhaseSplits[]</code> — fraction of total angle completed at end of each phase
+** <code>IsPreBent</code>, <code>IsPostBent</code> — flags synchronized from the paired <code>E2Bendline</code>
+** <code>IsCoining</code> — synchronized from the paired <code>E2Bendline</code></p>
+<h3 id="sequence-synchronization">Sequence synchronization</h3>
+<p>When the user sets bend sequence numbers on <code>E2Bendline</code>, the drawing propagates them
+to the paired flexes.</p>
+<p><strong>File:</strong> <code>Core/Drawing/Drawing.cs</code></p>
+<p>[source,csharp]</p>
+<pre><code>
+Owner.BendTech = null;
+Owner.FoldTech = null;
+</code></pre>
+<p>Setting <code>BendTech = null</code> forces a full re-tooling on the next call to
+<code>DoBendTooling()</code>.</p>
+<h2 id="stage-3-bendtech-tool-assignment-and-sequencing">Stage 3 — BendTech: Tool Assignment and Sequencing</h2>
+<h3 id="construction">Construction</h3>
+<p><code>BendTech</code> is constructed once per part per machine. Its constructor
+(<code>Core/Bend/BendTech.cs:19</code>) does the following:</p>
+<ol>
+<li>Collects all <code>E3Flex</code> objects from <code>Model3</code> (reversed so they are processed
+outward-to-inward).</li>
+<li>Handles hem bends — splits them into two phases (pre-bend at <code>HemPrebendAngle</code>,
+then flattening).</li>
+<li><em><strong>Groups simultaneous bends</strong></em>*: flexes whose silhouettes overlap in the X-direction
+(parallel bends that can be done in one stroke) are gathered into a <code>todo</code> list via
+<code>flex.CanGroupWith(flex2, pose)</code>.</li>
+<li>Also groups double-sheet bends with <code>CanGroupDoubleSheet</code>.</li>
+<li>Creates one <code>BendOp</code> per group per phase: <code>new BendOp(this, todo, phases)</code>.</li>
+<li>Calls <code>ops.ValidOrder()</code> to establish the initial collision-free bend order.</li>
+<li>Detects Z-bend pairs (<code>AnyZBendTools</code>) and groups those into single
+<code>EBendKind.ZBendAirBend</code> or <code>EBendKind.ZBendCoining</code> operations.</li>
+<li>Selects a tool inventory: first tries a <code>.btools</code> file with the same root name as
+the part, then falls back to <code>BToolLists.SelectFor(owner, machine)</code>.</li>
+</ol>
+<p><strong>File:</strong> <code>Core/Bend/BendTech.cs:19</code></p>
+<h3 id="dobendtooling">DoBendTooling</h3>
+<p><strong>File:</strong> <code>Core/Part/Part.cs:327</code></p>
+<p>[source,csharp]</p>
+<pre><code>public EResult DoBendTooling (EDoFlags flags = EDoFlags.Default) {
+    if (BendTech == null) return EResult.NeedBendTech;
+    if (BendTech.IsSequenceLocked) flags |= EDoFlags.KeepSequence;
+    if (flags.Has (EDoFlags.Incremental)) flags |= EDoFlags.KeepSequence;
+    var res = BendTooler.Process (BendTech, flags);
+    if (res.IsBad ()) { BendTech = null; return res; }
+    BendTech.CodeDirty = true;
+    return EResult.OK;
+}
+</code></pre>
+<p><code>BendTooler.Process</code> (<code>Core/Bend/Ops/BendTooler.cs</code>) is the core tool-assignment engine.
+It iterates over all <code>BendOp</code> objects, computes which tools physically fit each bend
+(based on angle, radius, part geometry), and populates the <code>BendSetup</code> / <code>BendMount</code>
+structures.</p>
+<p>Key <code>EDoFlags</code>:</p>
+<p>[cols=&quot;2,5&quot;, options=&quot;header&quot;]
+|===
+| Flag | Effect</p>
+<p>| <code>Default</code>       | Full re-tooling: sequence may change, setups may be reorganized
+| <code>KeepSequence</code>  | Preserve existing <code>SeqNo</code> order; only re-assign tools
+| <code>Incremental</code>   | Implies <code>KeepSequence</code>; only process bends whose tools changed
+| <code>DropAllTooling</code>| Remove all existing tool assignments before re-tooling
+| <code>NoGAPAdjust</code>   | Skip GAP (gripper avoidance) back-gauge adjustment
+| <code>NoZBend</code>       | Do not detect or form Z-bend pairs
+|===</p>
+<h3 id="bendop-one-bend-operation">BendOp — one bend operation</h3>
+<p><strong>File:</strong> <code>API/Bend/BendOp.cs</code></p>
+<p>A <code>BendOp</code> is one press stroke (potentially covering multiple simultaneous bends):</p>
+<p>[cols=&quot;2,5&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>SeqNo</code>        | Zero-based position in the bend sequence
+| <code>Flexes</code>       | The <code>E3Flex</code> entities processed in this operation
+| <code>XSpans</code>       | X-axis spans of the bend fragments (used to find which mounts engage)
+| <code>XFullSpan</code>    | Bounding X-span covering all fragments
+| <code>IntAngle</code>     | Interior angle in radians
+| <code>Mounts</code>       | <code>BendMount[]</code> — upper and lower mounts that physically overlap the bend
+| <code>PunchMounts</code>  | Indices into the setup's mount list for the punch(es)
+| <code>DieMounts</code>    | Indices for the die(s)
+| <code>Setup</code>        | The <code>BendSetup</code> active during this operation
+| <code>Kind</code>         | <code>AirBend</code>, <code>Coining</code>, <code>ZBendAirBend</code>, <code>ZBendCoining</code>, <code>DoubleSheet</code>, <code>FlatPrebend</code>
+| <code>IsMountain</code>   | <code>true</code> when <code>Angle &lt; 0</code> (fold down)
+| <code>IsPrebendLocked</code> | Pre-bend angle fixed (set from a <code>.geo</code> file or by the user)
+|===</p>
+<h3 id="bendsetup-and-bendmount">BendSetup and BendMount</h3>
+<p><strong>File:</strong> <code>API/Bend/BendSetup.cs</code></p>
+<p>A <code>BendSetup</code> is one machine configuration — a specific arrangement of tools clamped on
+the press-brake beam for a group of bends. When the required tooling changes between
+bends, a new setup is created, and a separate NC program segment (or a separate NC file,
+depending on the machine) is generated for it.</p>
+<p>Each <code>BendSetup</code> has a list of <code>BendMount</code> objects:</p>
+<p>[cols=&quot;2,5&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>XSpan</code>   | The X-axis interval on the machine beam this mount occupies
+| <code>Tool</code>    | The <code>BTool</code> (punch, die, adapter, holder) in this position
+| <code>IsUpper</code> | <code>true</code> for punch-side mounts, <code>false</code> for die-side mounts
+|===</p>
+<p>A <code>BendOp</code> engages a subset of mounts: those whose <code>XSpan</code> overlaps the bend's
+<code>XFullSpan</code>.</p>
+<h3 id="setups-and-nccount">Setups and NCCount</h3>
+<p>The number of distinct setups determines how many NC program files are produced. Bends
+that can be done without changing the tool arrangement share one setup; each tool change
+creates a new setup.</p>
+<p><strong>File:</strong> <code>Core/Bend/BendTech.cs</code></p>
+<p>[source,csharp]</p>
+<pre><code>
+public int NCCount { get; }
+
+public int NCIndex { get; set; }
+</code></pre>
+<p>When <code>BendMachine.OneNCForAllSetups</code> is true, all setups are written into a single file
+and <code>NCCount</code> is treated as 1 for output purposes.</p>
+<h3 id="sequence-management">Sequence management</h3>
+<p>The bend sequence is stored as a string of operation signs (e.g. <code>&quot;3,1+2,4&quot;</code> means
+bend 3 first, then bends 1 and 2 simultaneously, then bend 4).</p>
+<p>[source,csharp]</p>
+<pre><code>
+BendTech.IsSequenceLocked = true;
+
+BendTech.SetSequence(&quot;3,1,2,4&quot;);
+</code></pre>
+<p>When <code>AreBendsSequenced</code> is set on <code>Drawing2</code>, the sequence numbers from <code>E2Bendline</code>
+flow through to the paired <code>E3Flex</code> objects and into the <code>BendTech</code> constructor.</p>
+<h2 id="stage-4-output-generation">Stage 4 — Output Generation</h2>
+<h3 id="triggering-output">Triggering output</h3>
+<p><strong>File:</strong> <code>Core/Bend/BendTech.cs:1106</code></p>
+<p>Output is generated in <code>BendTech.GenAllOutputs(forceGen)</code>. This is called:</p>
+<p>** Automatically when saving a part (if <code>BendCodeAutogen</code> or <code>BendRepAutogen</code> is enabled)
+** Manually when the user clicks the generate button
+** From <code>ProgOutput.GenBendCode</code> directly for batch/API use</p>
+<p>[source,csharp]</p>
+<pre><code>public void GenAllOutputs (bool forceGen) {
+    if ((*outputs == null || CodeDirty || forceGen) &amp;&amp; BMachine.IsNCAllowed) {
+        var bos = Settings.Outputs;
+        Setups.ForEach (a =&gt; a.SortMounts ());
+        StopSequencing ();
+
+        // 1. Generate setup sheet report (HTML or PDF)
+        if ((bos.BendRepAutogen || forceGen) &amp;&amp; !bos.BendRepDestination.IsBlank ()) {
+            for (int i = 0; i &lt; NCCount; i++) {
+                NCIndex = NCCount &lt;= 1 ? -1 : i;
+                *outputs.Add (ProgOutput.GenBendReport (Owner, NCIndex));
+            }
+        }
+
+        // 2. Generate NC code file(s)
+        if ((bos.BendCodeAutogen || forceGen) &amp;&amp; !bos.BendCodeDestination.IsBlank ()) {
+            *outputs.AddRange (ProgOutput.GenBendCode (Owner, BMachine.Id, bos.BendCodeDestination));
+        }
+    }
+}
+</code></pre>
+<h3 id="setup-sheet-report">Setup sheet report</h3>
+<p><strong>File:</strong> <code>Core/Part/PartAux.cs:403</code></p>
+<p><code>ProgOutput.GenBendReport(part, ncIndex)</code> renders a setup sheet:</p>
+<ol>
+<li>Calls <code>part.DoUnfold()</code> to ensure the 3D model is current.</li>
+<li>Sets <code>BendTech.NCIndex</code> to select the right setup segment.</li>
+<li>Computes the NC code filename so the report can reference it.</li>
+<li>Loads the report template (<code>bos.BendRepTemplate</code>, e.g.
+<code>wad:Report/trumpf.bend-bm.ftrep</code>). Tries a language-specific variant first
+(<code>trumpf.bend-bm.de.ftrep</code>).</li>
+<li>Passes <code>{ &quot;Part&quot; → part }</code> as the data source and calls <code>Report.Render()</code>.</li>
+<li>Writes the output as HTML (default) or PDF depending on <code>bos.BendRepFormat</code>.</li>
+</ol>
+<p>The report template has access to the entire <code>Part</code> object — bend ops, mounts,
+back-gauge positions, part dimensions, tool names — everything needed for a printable
+setup sheet.</p>
+<h3 id="nc-code-generation">NC code generation</h3>
+<p><strong>File:</strong> <code>Core/Part/PartAux.cs:494</code></p>
+<p><code>ProgOutput.GenBendCode(part, mcid, outdir)</code> writes the actual machine program:</p>
+<ol>
+<li><p><em><strong>Tandem split</strong></em>*: if the machine is a tandem press (<code>BendMachine.IsTandem</code>), the
+part is split into two halves (<code>tech.SplitTandems()</code>), each producing a separate
+program named <code>&lt;name&gt;-L.&lt;ext&gt;</code> / <code>&lt;name&gt;-R.&lt;ext&gt;</code>.</p>
+</li>
+<li><p><strong><strong>Per-setup loop</strong></strong>: iterates from <code>0</code> to <code>NCCount-1</code> (or just once if
+<code>OneNCForAllSetups</code>).</p>
+</li>
+<li><p><strong><strong>Filename computation</strong></strong> (<code>ComputeNCFileName</code>):</p>
+<ul>
+<li>Applies machine-specific naming rules (Trumpf DLD → <code>prd.</code> prefix, DLC → <code>X</code>
+prefix, program-number machines use <code>Part.Info.ProgNo</code> as the filename).</li>
+<li>Multi-setup programs append <code>-1</code>, <code>-2</code>, etc.</li>
+<li>Special post-processors (Cincinnati, ESA, Accurpress) rewrite the suffix further.</li>
+</ul>
+</li>
+<li><p><strong><strong>Code generation</strong></strong>: calls <code>tech.GenerateNCCode(setupIndex)</code> which dispatches to the
+machine-specific writer class.</p>
+</li>
+<li><p><strong><strong>Write to disk</strong></strong>: <code>File.WriteAllText</code> for text formats, <code>File.WriteAllBytes</code> for
+binary. Delem DLD additionally signs the content with <code>DelemSign.Sign()</code>.</p>
+</li>
+<li><p><strong><strong>BM5000 extra file</strong></strong>: for BendMaster 5000 machines, writes a companion <code>.ein</code> file
+(<code>BCellTech.EINWriter(part)</code>).</p>
+</li>
+<li><p><strong><strong>Flat DXF/GEO</strong></strong>: optionally saves the flat pattern in the format configured in
+<code>bos.BendFlatFormat</code>.</p>
+</li>
+<li><p><strong><strong>FX file</strong></strong>: optionally saves a copy of the part as <code>.fx</code> (<code>BendFXWithNC</code> setting).</p>
+</li>
+<li><p><strong><strong>Post-processor</strong></strong>: if <code>bos.BendCodeProcessor</code> points to an executable, runs it with
+the code filename as argument.</p>
+</li>
+<li><p><strong><strong>Trumpf Analytics</strong></strong>: reports <code>BendProcess</code> and <code>BendCodeGenerated</code> events.</p>
+</li>
+</ol>
+<h3 id="post-processors-and-nc-writers">Post-processors and NC writers</h3>
+<p>The machine-specific code is generated by writer classes under <code>API/Bend/Post/</code>:</p>
+<p>[cols=&quot;2,2,4&quot;, options=&quot;header&quot;]
+|===
+| Writer class | Extension | Machines</p>
+<p>| <code>BNCWriter</code>      | <code>.bnc</code>  | Trumpf standard (Cell5K, BendMaster, TrumaBend)
+| <code>BNCXWriter</code>     | <code>.bnc</code>  | Extended BNC (BM7000, BM8000)
+| <code>DLDWriter</code>      | <code>.dld</code>  | Delem DA controllers
+| <code>CybelecWriter</code>  | <code>.nc</code>   | Cybelec controllers
+| <code>BystroniWriter</code> | <code>.nc</code>   | Bystronic press-brakes
+| <code>CincinnatiWriter</code> | <code>.pgm</code> | Cincinnati press-brakes
+| <code>AccupressWriter</code>  | <code>.xml</code> | Accurpress
+| <code>EsaWriter</code>      | <code>.prn</code>  | ESA controllers
+| <code>MCBWriter</code>      | various | Komatsu MCB
+|===</p>
+<p>A BNC program is structured as:</p>
+<p>[source]</p>
+<pre><code>BD SET*METRIC C        ← metric mode
+[config block]         ← machine-specific configuration
+[order/part info]      ← part name, order number, quantity
+[tool pieces]          ← punch and die geometry definitions
+[mounts]               ← tool positions on beam
+[back-gauge positions] ← gauging positions for each bend
+[bend parameters]      ← angle, radius, force, material
+[bend steps]           ← per-bend stroke instructions
+ED                     ← end of data
+</code></pre>
+<h3 id="panel-bender-output-foldtech">Panel-bender output (FoldTech)</h3>
+<p>For panel-benders (<code>FoldTech</code>), the output path is separate:</p>
+<p><strong>File:</strong> <code>Core/Part/PartAux.cs:689</code></p>
+<p>[source,csharp]</p>
+<pre><code>public static ProgOutput GenFoldCode (Part part, string outdir, ...) {
+    FoldCodeGenerator fcg = new (part.FoldTech);
+    var xdoc = fcg.Generate ();
+    // writes &lt;partname&gt;.xml to outdir
+}
+</code></pre>
+<p>The panel-bender program is an XML file describing:</p>
+<p>** Blank holding positions (<code>BlankHolding</code> phase)
+** Blade-down and blade-up phases
+** Fold phases (from flat to final angle)
+** Back-gauge and gripper positions at each phase (<code>BGaugePos</code>, <code>GripperPos</code>)
+** Section-by-section ordering (four sides: L1, L2, R1, R2 for a fully enclosed box)</p>
+<p>A setup-sheet report is generated by <code>GenFoldReport</code> using the template
+<code>bos.FoldRepTemplate</code>.</p>
+<h2 id="complete-pipeline">Complete Pipeline</h2>
+<p>[source]</p>
+<pre><code>Drawing2
+  ├── E2Bendline (one per bend)
+  │     Pts[], Angle, Radius, KFactor → FlatWidth, Deduction
+  │     PunchName, DieName (hints), SeqNo, PrebendAngle
+  │     Flags: PreBent, PostBent, FoldTooled, ZCoining, ...
+  │     Layer: VBend (valley) or MBend (mountain)
+  │
+  ↓  Part.DoUnfold() / 3D modelling
+  │
+Model3
+  ├── E3Flex (paired to E2Bendline via UID)
+  │     Spine, PhaseCount, PhaseSplits
+  │     IsPreBent, IsPostBent, IsCoining (synced from E2Bendline)
+  │
+  ↓  Part.DoBendTooling()
+  │     BendTech constructor: groups simultaneous bends, detects Z-bends
+  │     BendTooler.Process(): assigns tools from inventory
+  │
+BendTech
+  ├── BendOp[] (one per press stroke)
+  │     Flexes[], XSpans, IntAngle, Kind
+  │     PunchMounts[], DieMounts[], Setup
+  ├── BendSetup[] (one per tool-change boundary)
+  │     BendMount[] (tool + X-position on beam)
+  ├── NCCount  (= number of setups that require separate NC segments)
+  │
+  ↓  BendTech.GenAllOutputs()
+  │
+Output files
+  ├── Setup sheet (.html or .pdf)   ← ProgOutput.GenBendReport()
+  │     Template: wad:Report/*.ftrep
+  │     Source: { &quot;Part&quot; → part }
+  │
+  └── NC program(s)                 ← ProgOutput.GenBendCode()
+        .bnc  Trumpf BNC
+        .dld  Delem DLD (signed)
+        .pgm  Cincinnati
+        .xml  Accurpress / panel-bender (FoldTech)
+        .nc   generic
+        (optional companion: .ein for BM5000, flat DXF, .fx copy)
+</code></pre>
+<h2 id="key-files">Key Files</h2>
+<p>[cols=&quot;3,5&quot;, options=&quot;header&quot;]
+|===
+| File | Responsibility</p>
+<p>| <code>Core/Drawing/2DEntity.cs:156</code>     | <code>E2Bendline</code> — bend mark in the flat drawing: geometry, angle, radius, deduction, flags
+| <code>Core/Model/E3Flex.cs</code>             | <code>E3Flex</code> — 3D bend entity, paired to <code>E2Bendline</code> via UID
+| <code>Core/Drawing/Drawing.cs</code>          | <code>Drawing2.Bendlines</code> — collection of all <code>E2Bendline</code> in the drawing; sequence synchronization
+| <code>Core/Bend/BendTech.cs</code>            | <code>BendTech</code> — constructs <code>BendOp[]</code>, manages sequence, drives <code>GenAllOutputs()</code>
+| <code>Core/Bend/Ops/BendTooler.cs</code>      | <code>BendTooler.Process()</code> — core tool-assignment engine
+| <code>API/Bend/BendOp.cs</code>               | <code>BendOp</code> — one press stroke (flex group + phases + tool assignments)
+| <code>API/Bend/BendSetup.cs</code>            | <code>BendSetup</code>, <code>BendMount</code> — machine configuration for a group of bends
+| <code>Core/Part/Part.cs:327</code>            | <code>Part.DoBendTooling()</code> — outer entry point, delegates to <code>BendTooler</code>
+| <code>Core/Part/PartAux.cs:355</code>         | <code>ProgOutput</code> — report and NC code generation
+| <code>Core/Fold/FoldTech.cs</code>            | <code>FoldTech</code> — panel-bender technology (parallel pipeline for non-press-brake machines)
+| <code>Core/Fold/FoldStep.cs</code>            | <code>FoldStep</code> — individual motion phase of a fold operation
+| <code>API/Bend/Post/BNCWriter.cs</code>       | Trumpf BNC post-processor
+| <code>API/Bend/Post/DLDWriter.cs</code>       | Delem DLD post-processor
+|===</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#from-drawing2-to-nc-output">From Drawing2 to NC Output</a>
+  </li>
+  <li level="1">
+   <a href="#stage-1-the-e2bendline-in-drawing2">Stage 1 — The E2Bendline in Drawing2</a>
+  </li>
+  <li level="2">
+   <a href="#what-a-bend-line-is">What a bend line is</a>
+  </li>
+  <li level="2">
+   <a href="#fragmented-bend-lines">Fragmented bend lines</a>
+  </li>
+  <li level="2">
+   <a href="#e2flags">E2Flags</a>
+  </li>
+  <li level="2">
+   <a href="#layers">Layers</a>
+  </li>
+  <li level="1">
+   <a href="#stage-2-the-e3flex-in-model3">Stage 2 — The E3Flex in Model3</a>
+  </li>
+  <li level="2">
+   <a href="#pairing-e2bendline-e3flex">Pairing: E2Bendline ↔ E3Flex</a>
+  </li>
+  <li level="2">
+   <a href="#what-e3flex-adds">What E3Flex adds</a>
+  </li>
+  <li level="2">
+   <a href="#sequence-synchronization">Sequence synchronization</a>
+  </li>
+  <li level="1">
+   <a href="#stage-3-bendtech-tool-assignment-and-sequencing">Stage 3 — BendTech: Tool Assignment and Sequencing</a>
+  </li>
+  <li level="2">
+   <a href="#construction">Construction</a>
+  </li>
+  <li level="2">
+   <a href="#dobendtooling">DoBendTooling</a>
+  </li>
+  <li level="2">
+   <a href="#bendop-one-bend-operation">BendOp — one bend operation</a>
+  </li>
+  <li level="2">
+   <a href="#bendsetup-and-bendmount">BendSetup and BendMount</a>
+  </li>
+  <li level="2">
+   <a href="#setups-and-nccount">Setups and NCCount</a>
+  </li>
+  <li level="2">
+   <a href="#sequence-management">Sequence management</a>
+  </li>
+  <li level="1">
+   <a href="#stage-4-output-generation">Stage 4 — Output Generation</a>
+  </li>
+  <li level="2">
+   <a href="#triggering-output">Triggering output</a>
+  </li>
+  <li level="2">
+   <a href="#setup-sheet-report">Setup sheet report</a>
+  </li>
+  <li level="2">
+   <a href="#nc-code-generation">NC code generation</a>
+  </li>
+  <li level="2">
+   <a href="#post-processors-and-nc-writers">Post-processors and NC writers</a>
+  </li>
+  <li level="2">
+   <a href="#panel-bender-output-foldtech">Panel-bender output (FoldTech)</a>
+  </li>
+  <li level="1">
+   <a href="#complete-pipeline">Complete Pipeline</a>
+  </li>
+  <li level="1">
+   <a href="#key-files">Key Files</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="bendtech.html">BendTech.cs</a></span>
+ <span class="next"><a href="lasertech.html">Laser Cutting Technology</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

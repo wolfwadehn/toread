@@ -1,0 +1,708 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>API Maps</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a class="active" href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="03_api_maps.html">API Maps</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>API Maps</h1>
+<p>___*
+<strong>Goal:</strong> locate the central interfaces and abstract classes you will encounter while reading any Flux subsystem, understand who calls them, and know how stable each one is. Reading time: 45--60 minutes.
+<strong>Audience.</strong> You have read chapter 00 and 01. You can find a file by name and run <code>Grep</code> over <code>Src\</code>.
+<strong>Stability legend.</strong></p>
+<p>** 🟢 <strong>Stable</strong> -- public, well-known, edits are rare and reviewed carefully.
+** 🟡 <strong>Internal</strong> -- used widely inside Flux but not part of any 3rd-party contract; changes happen but with care.
+** 🔴 <strong>Experimental / in flight</strong> -- actively being migrated; expect inconsistency.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="how-to-read-this-chapter">1. How to read this chapter</h2>
+<p>Each entry below answers four questions:</p>
+<p>. <strong>What is it?</strong> -- the contract in plain English.
+. <strong>Who implements it?</strong> -- the concrete classes you will encounter.
+. <strong>Who calls it?</strong> -- the boundaries the interface mediates.
+. <strong>Stability</strong> -- should you treat it as a fixed contract or as in-flight code?</p>
+<p>This chapter does <em>not</em> repeat the C# signatures -- read them in the source. It exists so that a name in a stack trace or PR diff is recognizable in a glance.</p>
+<p>'''</p>
+<h2 id="cross-cutting-infrastructure">2. Cross-cutting infrastructure</h2>
+<h3 id="isheafsite">2.1 <code>ISheafSite</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Settings\Sheaf.cs</code>.
+<strong>What:</strong> any object whose settings cascade up to a parent. Members: <code>SHName</code>, <code>SHDict</code>, <code>SHParent</code>.
+<strong>Implementers:</strong> <code>Part</code>, <code>BendTech</code>, <code>BendOp</code>, <code>BendMachine</code>, many more.
+<strong>Callers:</strong> the <code>Sheaf</code> resolution helpers -- <code>site.Get&lt;T&gt;(SH key)</code>, <code>site.Set(SH key, value)</code>. Pervasive.
+<strong>Stability:</strong> stable contract; this is the single mechanism for hierarchical settings.</p>
+<h3 id="inotifypropchanged">2.2 <code>INotifyPropChanged</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Base\</code> (Flux's own variant of <code>INotifyPropertyChanged</code>).
+<strong>What:</strong> broadcast of property changes, used to drive UI updates and undo registration.
+<strong>Implementers:</strong> <code>Part</code>, <code>BendSetup</code>, <code>BendMount</code>, plus most domain models.
+<strong>Callers:</strong> Globs and the <code>BA.Set</code> change-tracking helper.
+<strong>Stability:</strong> stable; the dual-channel &quot;notify + undo&quot; routing is core to the editing experience.</p>
+<h3 id="hub-static-class">2.3 <code>Hub</code> (static class) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Hub.cs</code>.
+<strong>What:</strong> the official replacement for the legacy &quot;Hub whiteboard&quot;. A grab-bag of <code>static Func&lt;&gt;</code>/<code>Action&lt;&gt;</code> slots wired up at startup.
+<strong>Implementers:</strong> <code>Flux.App</code> and (sometimes) <code>Flux.API</code> populate the slots.
+<strong>Callers:</strong> any Core / UI code that needs to call back into the App layer without a project reference. Examples: <code>Hub.BigChooser</code>, <code>Hub.ClosePartByJobID</code>, <code>Hub.APIWrapper</code>.
+<strong>Stability:</strong> internal; new slots get added regularly. <strong>Never throw on a null slot -- it's a valid headless state.</strong></p>
+<h3 id="itrigger-and-etrigger">2.4 <code>ITrigger</code> and <code>ETrigger</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Hub.cs</code> (enum) plus an event-broker interface.
+<strong>What:</strong> notification points for external integrations (e.g. <code>PartSaved</code>, <code>JobSaved</code>, <code>PartInJobSaved</code>).
+<strong>Callers:</strong> Boost integration, Praxis embedding.
+<strong>Stability:</strong> stable but small; expect additions, no removals.</p>
+<h3 id="eresult">2.5 <code>EResult</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Flux.Base</code>.
+<strong>What:</strong> the standard return enum for operations that can succeed or fail predictably (<code>OK</code> plus a fixed set of failure modes).
+<strong>Used by:</strong> <code>BendTech.Make</code>, <code>BendTooler.Process</code>, <code>Part.DoFoldTo3D</code>, etc.
+<strong>Stability:</strong> stable; new failure modes get added carefully because callers exhaustive-switch on them.</p>
+<p>'''</p>
+<h2 id="the-tech-family-domain-projections-of-a-part">3. The <code>Tech</code> family -- domain projections of a <code>Part</code></h2>
+<p>A <code>Part</code> aggregates several optional projections. Each is a &quot;tech&quot; -- a domain-specific model rooted at the part. They are not formal interfaces but they share a clear contract.</p>
+<h3 id="tech-base-class">3.1 <code>Tech</code> (base class) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Part\</code> or sibling.
+**What:** the shared root for the projections below.
+**Concrete subclasses:**</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>File</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong><code>BendTech</code></strong></td>
+<td><code>Src\Core\Bend\BendTech.cs</code></td>
+<td>Press-brake projection (chapter 02).</td>
+</tr>
+<tr>
+<td><strong><code>FoldTech</code></strong></td>
+<td><code>Src\Core\Fold\</code></td>
+<td>Panel-bender projection.</td>
+</tr>
+<tr>
+<td><strong><code>FlatTech</code></strong> (a.k.a. <code>CutTech</code>)</td>
+<td><code>Src\Core\Laser\</code> &amp; <code>Punch\</code></td>
+<td>Flat-cutting projection (laser, punch, combo).</td>
+</tr>
+<tr>
+<td><strong><code>PunchTech</code></strong></td>
+<td><code>Src\Core\Punch\</code></td>
+<td>Punching specialization.</td>
+</tr>
+<tr>
+<td><strong><code>LayoutTech</code></strong></td>
+<td><code>Src\Core\Layout\</code></td>
+<td>Layout / setup.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Pattern:</strong> each tech is constructed via a <code>+static Make (Part p, Machine m, ...)+</code> factory returning <code>EResult</code>. The constructor is private and contains the heavy initialization.
+<strong>Stability:</strong> internal -- frequent extension. The factory pattern is stable.</p>
+<h3 id="the-part-aggregate">3.2 The <code>Part</code> aggregate 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Part\Part.cs</code> (sealed class, ~77 KB).
+<strong>What:</strong> the top-level &quot;job&quot; object. Implements <code>ISheafSite</code>, <code>INotifyPropChanged</code>. Holds <code>BendTech</code>, <code>FoldTech</code>, <code>CutTech</code>, <code>Dwg</code>, <code>Model</code>, machine references, and a static list of all open parts (<code>Part.Active</code>) with <code>Part.Current</code> as the active one.
+<strong>Lifecycle:</strong> load → optional <code>DoFoldTo3D</code> for unfolded inputs → tech construction → editing/auto-tooling → save (FX) or NC export.
+<strong>Stability:</strong> stable shape, but adding a tech requires touching <code>Part</code>.</p>
+<p>'''</p>
+<h2 id="geometry-the-entity3-e3-family">4. Geometry -- the <code>Entity3</code> / <code>E3**</code> family</h2>
+<h3 id="entity3-base-class">4.1 <code>Entity3</code> (base class) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Model\Entity3.cs</code>.
+<strong>What:</strong> base class for all 3D entities in a part model.
+<strong>Concrete subclasses:</strong>
+| Class | Role |
+|--|--|
+| <code>E3Plane</code> | A flat region of sheet metal. |
+| <code>E3Flex</code> | A bend zone (flex). |
+| <code>E3Patch</code> | A non-developable patch (rare). |
+| <code>E3Thick</code> | Thick-plate entity. |
+<strong>Callers:</strong> every domain that walks a 3D model -- Bend, Fold, Sim.
+<strong>Stability:</strong> internal; the type hierarchy is mature but VModel rendering changes regularly.</p>
+<h3 id="iflexspine">4.2 <code>IFlexSpine</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Model\BendSpine.cs</code> (and <code>E3Flex.cs</code>).
+<strong>What:</strong> abstract description of a bend cross-section -- <code>GetSpine(double bendLie)</code> returns the polyline at a given bend &quot;lie&quot; (0 = flat, 1 = fully folded), plus <code>Thickness</code>.
+<strong>Implementers:</strong> <code>FlatBendSpine</code>, <code>BendSpine</code>, hem variants, Z-bend variants.
+<strong>Callers:</strong> rendering (VModels), bend area modeling, simulation.
+<strong>Stability:</strong> stable contract; documented in <code>Notes\Dev\1005.BendAreaModeling.ftx</code>.</p>
+<h3 id="pline-polyline">4.3 <code>Pline</code> (polyline) 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Base\Geo\</code> and <code>Src\Base\Pline\</code>.
+<strong>What:</strong> the workhorse 2D polyline. Used everywhere from CAD entities to bend spines and tool cross-sections.
+<strong>Stability:</strong> stable; the most heavily used type in <code>Flux.Base</code>.</p>
+<h3 id="mesh3">4.4 <code>Mesh3</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Base\Mesh\</code>.
+<strong>What:</strong> triangle mesh.
+<strong>Used by:</strong> machine <code>.mech</code> files, tool meshes, render.
+<strong>Stability:</strong> stable.</p>
+<p>'''</p>
+<h2 id="rendering-vmodel-and-lux">5. Rendering -- <code>VModel</code> and <code>Lux</code></h2>
+<h3 id="vmodel-abstract-class">5.1 <code>VModel</code> (abstract class) 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Base\Lux\VModel.cs</code>.
+<strong>What:</strong> the base class for everything renderable. Holds <code>Obj</code> (the underlying domain object), <code>Id</code> (unique once live), <code>Nodes</code> (linked list of <code>SGNode</code>), and <code>Scene</code>.
+<strong>Subclasses (selection):</strong>
+| Class | Renders |
+|--|--|
+| <code>BendMountVM</code> | A tool mount on the press brake. |
+| <code>BendNoVM</code> | The bend number labels. |
+| <code>BendTechVM</code> | Top-level bend view. |
+| <code>Entity3VM</code> | Generic 3D entity. |
+| <code>LaserCutVM</code> | A laser cut. |
+<strong>Override:</strong> <code>Draw()</code> -- does the actual scene-graph emission via <code>Lux.DrawMesh</code>, <code>Lux.Layer</code>, <code>Lux.Mood</code>.
+<strong>Stability:</strong> stable; <code>Draw()</code> is the single override almost everyone uses.</p>
+<h3 id="lux-static-class">5.2 <code>Lux</code> (static class) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Base\Lux\Lux.cs</code>.
+<strong>What:</strong> the rendering &quot;API&quot; itself -- <code>Lux.DrawMesh</code>, <code>Lux.Layer = ELayer.BendMount</code>, <code>Lux.Mood = EMood.Selected</code>, <code>LuxShading</code>, <code>Lux.DrawCS</code>, <code>Lux.Redraw</code>.
+<strong>Stability:</strong> internal; new draw primitives added regularly, none removed without coordination.</p>
+<h3 id="scene-and-sgnode">5.3 <code>Scene</code> and <code>SGNode</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Base\Lux\Scene.cs</code>.
+<strong>What:</strong> the scene graph. A live <code>VModel</code> owns a chain of <code>SGNode</code>s (geometry, transform, mood override).
+<strong>Stability:</strong> internal; treat as black-box from domain code.</p>
+<p>'''</p>
+<h2 id="bend-domain-public-surface">6. Bend domain -- public surface</h2>
+<h3 id="bendtech-entry-point">6.1 <code>BendTech</code> 🟢 -- entry point</h3>
+<p><strong>Constructor:</strong> <code>BendTech.Make (Part owner, BendMachine bmc, EDoFlags flags = 0) → EResult</code>.
+<strong>Members of interest:</strong></p>
+<p>** <code>Ops : List&lt;BendOp&gt;</code>
+** <code>Setups : List&lt;BendSetup&gt;</code>
+** <code>BMachine : BendMachine</code>
+** <code>Inventory : BToolList</code>
+** <code>Dump (TextWriter)</code> -- golden-file source.</p>
+<h3 id="bendop-sealed-partial">6.2 <code>BendOp</code> (sealed partial) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\BendOp.cs</code> (210 KB).
+<strong>What:</strong> <em>one</em> bending operation. Implements <code>ISheafSite</code>, <code>IBSimStage</code>. Holds Flexes, Phases, Kind, BG state, BA state, etc. ~200 properties.
+<strong>Stability:</strong> internal; large surface area, edits common.</p>
+<h3 id="bendsetup-and-bendmount">6.3 <code>BendSetup</code> and <code>BendMount</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\BendSetup.cs</code>, <code>BendMount.cs</code>.
+<strong>Stable contract:</strong> <code>Dump (TextWriter)</code> is the test contract; <code>ComputeHash</code> is the equality contract.</p>
+<h3 id="ibendcalc">6.4 <code>IBendCalc</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\BendCalc.cs</code>.
+<strong>What:</strong> the bend-physics interface -- <code>GetDieVRange</code>, <code>SuggestDieWidth</code>, <code>SuggestPunchRadius</code>, <code>GetBendRadiusFactor</code>, <code>GetBendStaples</code>.
+<strong>Implementers:</strong> <code>StdBendCalc</code>, <code>TBSBendCalc</code> (Trumpf).
+<strong>Selection:</strong> by <code>BendMachine.BendCalc</code> switching on <code>IsTrumpf</code>.
+<strong>Stability:</strong> stable; the <code>BendStaples</code> struct is also stable.</p>
+<h3 id="bendtooler">6.5 <code>BendTooler</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\Ops\BendTooler.cs</code>.
+<strong>What:</strong> the auto-tooling engine. Public entry: <code>BendTooler.Process (BendTech, EDoFlags)</code>.
+<strong>Stability:</strong> internal but the entry signature is stable.</p>
+<h3 id="btool-bpunch-bdie-bholder">6.6 <code>BTool</code>, <code>BPunch</code>, <code>BDie</code>, <code>BHolder</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\BendTool.cs</code>.
+<strong>Stability:</strong> internal; new tool kinds and properties added per machine.</p>
+<h3 id="btoollibrary-and-btoollist">6.7 <code>BToolLibrary</code> and <code>BToolList</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\BendToolLib.cs</code>.
+<strong>Stability:</strong> internal; library format is stable, in-memory list grows.</p>
+<p>'''</p>
+<h2 id="laser-punch-flat-domain-public-surface">7. Laser / Punch / Flat domain -- public surface</h2>
+<p><em>__</em>
+The flat-cutting projection (laser + punch + combo) is unified under <code>FlatTech</code> (a.k.a. <code>CutTech</code>). The dedicated entry points:
+<em>__</em></p>
+<h3 id="lasercore-lasercut-laserauto">7.1 <code>LaserCore</code>, <code>LaserCut</code>, <code>LaserAuto</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Laser\</code>.
+<strong>Highlights:</strong></p>
+<p>** <code>LaserCut</code> -- a single cut (the model).
+** <code>LaserCutVM</code> -- its renderer (in Core, beside the model).
+** <code>LaserAuto</code> / <code>AutoRouter</code> -- auto-routing of cut sequence.
+** <code>StitchCutter</code>, <code>Bevel3DTooler</code>, <code>TraceCut</code>, <code>SliceCut</code>, <code>ScrapCut</code>, <code>PlineCut</code> -- specialized cut variants.
+<strong>Stability:</strong> internal; large.</p>
+<h3 id="punchcore-and-friends">7.2 <code>PunchCore</code> and friends 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Punch\</code> (13 files).
+<strong>Stability:</strong> internal.</p>
+<h3 id="lasermachine-punchmachine">7.3 <code>LaserMachine</code>, <code>PunchMachine</code> 🟢</h3>
+<p><strong>Where:</strong> in their respective domain folders.
+<strong>Pattern:</strong> subclass of <code>Machine</code> (mirrors <code>BendMachine</code>).
+<strong>Stability:</strong> stable shape.</p>
+<p>'''</p>
+<h2 id="fold-domain-panel-bender">8. Fold domain (panel bender) 🟡</h2>
+<h3 id="foldtech-and-friends">8.1 <code>FoldTech</code> and friends</h3>
+<p><strong>Where:</strong> <code>Src\Core\Fold\</code> (42 files).
+<strong>Pattern:</strong> mirrors <code>BendTech</code> but with panel-bender specifics -- clamping beam, blade, gripper. Uses an air-gap table (<code>Notes\Tech\2018.AirGapTables.ftx</code>).
+<strong>Stability:</strong> internal; active development for TecZoneFold.</p>
+<p>'''</p>
+<h2 id="bend-cell-automation-bcell">9. Bend-cell automation (BCell) 🟡</h2>
+<h3 id="bcregrip-gripper-waypoint-family">9.1 <code>BCRegrip</code>, gripper / waypoint family</h3>
+<p><strong>Where:</strong> <code>Src\Core\BCell\</code> (34 files).
+<strong>What:</strong> robot cell, gripper, suction cups, regrip stations.
+<strong>Coupling:</strong> orchestrated by <code>BendOp</code>'s robotic properties (chapter 02 §7.4).
+<strong>UI:</strong> <code>Src\UI\BCell\</code> (<code>BCellUI</code>, <code>BWaypointUI</code>, <code>BRegripUI</code>, <code>BPickupUI</code>, <code>BDepositUI</code>, <code>BGripperToolUI</code>, <code>BJawPickupUI</code>, <code>BGripperUI</code>).
+<strong>Stability:</strong> internal; very active (recent commits).</p>
+<p>'''</p>
+<h2 id="machine-model">10. Machine model</h2>
+<h3 id="machine-base">10.1 <code>Machine</code> (base) 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\Model\</code> or <code>Src\Core\</code> (search <code>class Machine</code>).
+<strong>Pattern:</strong> abstract per-domain configuration. Loaded from <code>X:\Data\Machine\&lt;id&gt;\Machine.curl</code>.
+<strong>Subclasses:</strong> <code>BendMachine</code>, <code>LaserMachine</code>, <code>PunchMachine</code>, panel-bender machines.
+<strong>Members:</strong> <code>Get(int id)</code> factory, <code>Default</code> per domain, <code>NCName</code>, post-processor reference, <code>Settings</code> (a Sheaf), capability bits.</p>
+<h3 id="nc-post-processor-press-brake">10.2 NC post-processor (press brake) 🟢</h3>
+<p><strong>Implementation:</strong> all dialects are <strong>C# classes</strong> under <code>Src\API\Bend\Post\</code> -- <code>AccurpressWriter</code>, <code>Bystronic</code>, <code>BNCWriter</code> (Cell5K / TrumpfB23), <code>CinCinnatiWriter</code>, <code>CybelecWriter</code>, <code>DLCWriter</code>, <code>TrumpfDLD</code>, <code>NonTrumpfDLD</code> (Delem), <code>ESAWriter</code>, <code>Euromac</code>, <code>GeccoWriter</code>, <code>JupiduWriter</code>, <code>LVDWriter</code>, <code>MCBWriter</code> (Komatsu), <code>MuratecWriter</code>, <code>SafanWriter</code>, <code>SafanPBPWriter</code>, <code>PlatformBendWriter</code> (Lua), <code>BNCXWriter</code>, <code>External</code>.
+<strong>Dispatcher:</strong> <code>Src\API\Basis\Basis.cs::GenerateNC</code> (line 138). Wired into <code>Hub.GenerateNC</code> at startup. Dispatch key is the basename of <code>BMachine.Post</code> (e.g. <code>TrumpfDLD</code>).
+<strong>Routing token:</strong> <code>BMachine.Post</code> may end with <code>.hx</code> for legacy reasons (e.g. <code>wad:Post/Bend/TrumpfB23.hx</code>). The extension is <strong>ignored</strong>; only the basename matters.
+<strong>Stability:</strong> stable; new dialects are added by adding a new C# writer and a switch arm in <code>Basis.GenerateNC</code>.</p>
+<p>'''</p>
+<h2 id="io-surface">11. IO surface</h2>
+<h3 id="dxfreader-dxfwriter">11.1 <code>DXFReader</code> / <code>DXFWriter</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\IO\DXFReader.cs</code> (57 KB), <code>DXFWriter.cs</code> (25 KB).
+<strong>What:</strong> the most heavily used drawing-exchange format.
+<strong>Stability:</strong> internal; dialect-specific quirks fixed regularly.</p>
+<h3 id="georeader-geowriter">11.2 <code>GeoReader</code> / <code>GeoWriter</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\IO\GeoReader.cs</code> (33 KB), <code>GeoWriter.cs</code> (17 KB).
+<strong>Stability:</strong> internal; <code>.geo</code> is the dominant test-input format.</p>
+<h3 id="hoopsreader-file-is-hxreader.cs">11.3 <code>HoopsReader</code> (file is <code>HXReader.cs</code>) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\IO\HXReader.cs</code> (39 KB).
+<strong>What:</strong> <strong>HOOPS-based 3D model loader</strong> despite the misleading filename. Uses <code>Flux.Hula.dll</code> to read CATIA / Parasolid / ACIS / Pro-E / STEP via the HOOPS library. Validates the HOOPS version on construction.
+<strong>Stability:</strong> internal; track HOOPS version updates.</p>
+<h3 id="lwmodelreader-stlmodel-meshio">11.4 <code>LWModelReader</code>, <code>STLModel</code>, <code>MeshIO</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Src\Core\IO\</code>.
+<strong>Stability:</strong> stable.</p>
+<h3 id="bmc-dld-trumpf">11.5 BMC / DLD (Trumpf) 🟡</h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\Ops\ImportBMC.cs</code>, <code>ExportBMC.cs</code>, <code>DLDExporter.cs</code>.
+<strong>Stability:</strong> internal; track machine firmware updates.</p>
+<p>'''</p>
+<h2 id="persistence-au-curl-fx">12. Persistence (Au / Curl / FX)</h2>
+<h3 id="postload-attribute">12.1 <code>[PostLoad]</code> attribute 🟢</h3>
+<p><strong>Where:</strong> Au-deserializer infrastructure in <code>Flux.Base</code>.
+<strong>What:</strong> a method marked <code>[PostLoad]</code> runs after Au-deserialization, and gets <code>AuType.ObjVersion</code> for forward migration.
+<strong>Stability:</strong> stable contract; the per-class migration list grows.</p>
+<h3 id="curl-readwrite">12.2 Curl read/write 🟢</h3>
+<p><strong>Where:</strong> <code>Notes\Tech\2007.CurlFiles.ftx</code> describes the format.
+<strong>What:</strong> text-based serialization for machines, tool catalogs, settings.</p>
+<h3 id="au-binary">12.3 Au binary 🟢</h3>
+<p><strong>Where:</strong> <code>Notes\Dev\1003.AuGoldEncoding.ftx</code>.
+<strong>What:</strong> compact binary format for <code>Part</code>, <code>BendTech</code>, etc.</p>
+<h3 id="fx-file">12.4 FX file 🟢</h3>
+<p><strong>What:</strong> a packaged native-Flux file (Curl + Au + thumbnail). Uses <code>System.IO.Compression</code>.</p>
+<p>'''</p>
+<h2 id="globs-ui-controllers">13. Globs (UI controllers)</h2>
+<h3 id="glob-base">13.1 <code>Glob</code> (base) 🟢</h3>
+<p><strong>Where:</strong> <code>Src\UI\Glob.cs</code>.
+<strong>What:</strong> the controller base class. Constructed around a domain object.
+<strong>Decoration:</strong> <code>[Glob (Draw = true, Mouse = EMouse.LDown)]</code>.
+<strong>Composite:</strong> when multiple objects are selected, the system constructs a <em>composite glob</em> showing shared properties. Multi-selection support is automatic if your individual glob exposes cooperating properties.</p>
+<h3 id="concrete-globs-selection">13.2 Concrete globs (selection)</h3>
+<table>
+<thead>
+<tr>
+<th>Glob</th>
+<th>Wraps</th>
+<th>File</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>BendOpGlob</code></td>
+<td><code>BendOp</code></td>
+<td><code>Src\UI\Bend\BendOpUI.cs</code></td>
+</tr>
+<tr>
+<td><code>BendOpsGlob</code></td>
+<td>composite</td>
+<td><code>Src\UI\Bend\BendOpUI.cs</code> line 661</td>
+</tr>
+<tr>
+<td><code>LaserCutGlob</code></td>
+<td><code>LaserCut</code></td>
+<td><code>Src\UI\Laser\LaserUI.cs</code></td>
+</tr>
+<tr>
+<td><code>BCellGlob</code></td>
+<td><code>BCell</code>-related types</td>
+<td><code>Src\UI\BCell\BCellUI.cs</code></td>
+</tr>
+<tr>
+<td>Many more in <code>Src\UI\</code></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gelement">13.3 <code>GElement</code> 🟡</h3>
+<p><strong>Where:</strong> <code>Src\UI\</code>.
+<strong>What:</strong> abstract description of a property (label, value editor, validation). Translated to WPF by <code>PanelMaker</code>.
+<strong>Stability:</strong> internal; widely subclassed.</p>
+<p>'''</p>
+<h2 id="helpers-youll-bump-into-often">14. Helpers you'll bump into often</h2>
+<h3 id="fx-static">14.1 <code>FX</code> (static) 🟡</h3>
+<p><strong>Where:</strong> <code>Flux.Base</code>.
+<strong>Highlights:</strong></p>
+<p>** <code>FX.Out (EOut.Info, msgId, args)</code> -- logging.
+** <code>FX.Notes</code> -- persistent key-value store.
+** <code>FX.Testing</code> -- global flag for the Flit fixtures.
+** <code>FX.LoadTestPart</code>, <code>FX.TestFile</code>, <code>FX.TmpTestFile</code> -- test helpers.
+** <code>FX.CopyFields</code> -- reflection-based shallow copy used in shallow-copy constructors.
+<strong>Stability:</strong> internal; growing.</p>
+<h3 id="ba-static">14.2 <code>BA</code> (static) 🟡</h3>
+<p><strong>Where:</strong> <code>Flux.Base</code>.
+<strong>What:</strong> &quot;Boilerplate Assist&quot; -- most importantly <code>BA.Set&lt;T&gt;(ref field, value, …)</code> which combines value compare, change notification, and undo registration in one call.
+<strong>Stability:</strong> internal; rarely-changed implementation, ubiquitous call sites.</p>
+<h3 id="codingerror">14.3 <code>CodingError</code> 🟢</h3>
+<p><strong>Where:</strong> <code>Flux.Base</code>.
+<strong>What:</strong> internal-invariant exception; carries a numeric ID. Should never fire in production.
+<strong>Stability:</strong> stable.</p>
+<p>'''</p>
+<h2 id="stability-summary-at-a-glance">15. Stability summary at a glance</h2>
+<p>|===
+| 🟢 Stable | 🟡 Internal | 🔴 In-flight</p>
+<p>| <code>ISheafSite</code>, <code>INotifyPropChanged</code>, <code>EResult</code>
+| <code>Hub</code>, <code>FX</code>, <code>BA</code>, <code>Lux</code>
+| Crash engines (<code>BendOpCrash</code> ⇄ <code>NBendCrash</code>)</p>
+<p>| <code>IBendCalc</code>, <code>BendStaples</code>, <code>BendSetup.Dump</code> contract
+| <code>BendTech</code>, <code>BendOp</code>, <code>BendTooler</code> (large surfaces, internal use)
+| Some MetaCAM-import pathways</p>
+<p>| <code>IFlexSpine</code>, <code>Pline</code>, <code>Mesh3</code>
+| <code>Glob</code>, <code>GElement</code>
+| Praxis (Engine flavor) wiring</p>
+<p>| <code>Machine</code>, post-processor selection
+| All <code>**Tech</code> projections
+| Trumpf license-engine swap (TLM ↔ TLE)</p>
+<p>| <code>[PostLoad]</code> migration contract
+| All IO readers/writers
+| Notes refresh (chapter 00 §8)
+|===</p>
+<p>'''</p>
+<h2 id="how-to-use-this-map">16. How to use this map</h2>
+<p>** <strong>Reading a stack trace:</strong> look up class names here for two-line context.
+** <strong>Starting a bug investigation:</strong> identify the entry point (<code>**Tech.Make</code>, <code>BendTooler.Process</code>, an IO reader) and walk inward.
+** <strong>Reviewing a PR:</strong> the stability legend tells you how much scrutiny to apply.
+** <strong>Adding a new feature:</strong> prefer extending implementers of stable interfaces over adding new abstractions.</p>
+<p>'''</p>
+<h2 id="self-check">17. Self-check</h2>
+<p>. Where do you find the cascaded-settings contract? <em>(§2.1)</em>
+. Why does <code>BendCalc</code> have two implementations? <em>(§6.4 + chapter 02 §7.5)</em>
+. What runs after Au deserialization to migrate older shapes? <em>(§12.1)</em>
+. Where is the auto-tooler entry point? <em>(§6.5)</em>
+. Which interface mediates between Core and the App layer? <em>(§2.3)</em>
+. What is the test-contract method on <code>BendTech</code>? <em>(§6.1)</em></p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. The interfaces and classes named here are verified to exist in the current <code>Src\</code> tree. Stability ratings reflect a snapshot -- when you find drift, update it._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#how-to-read-this-chapter">1. How to read this chapter</a>
+  </li>
+  <li level="1">
+   <a href="#cross-cutting-infrastructure">2. Cross-cutting infrastructure</a>
+  </li>
+  <li level="2">
+   <a href="#isheafsite">2.1  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#inotifypropchanged">2.2  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#hub-static-class">2.3  (static class) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#itrigger-and-etrigger">2.4  and  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#eresult">2.5  🟢</a>
+  </li>
+  <li level="1">
+   <a href="#the-tech-family-domain-projections-of-a-part">3. The  family -- domain projections of a </a>
+  </li>
+  <li level="2">
+   <a href="#tech-base-class">3.1  (base class) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#the-part-aggregate">3.2 The  aggregate 🟢</a>
+  </li>
+  <li level="1">
+   <a href="#geometry-the-entity3-e3-family">4. Geometry -- the  /  family</a>
+  </li>
+  <li level="2">
+   <a href="#entity3-base-class">4.1  (base class) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#iflexspine">4.2  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#pline-polyline">4.3  (polyline) 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#mesh3">4.4  🟢</a>
+  </li>
+  <li level="1">
+   <a href="#rendering-vmodel-and-lux">5. Rendering --  and </a>
+  </li>
+  <li level="2">
+   <a href="#vmodel-abstract-class">5.1  (abstract class) 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#lux-static-class">5.2  (static class) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#scene-and-sgnode">5.3  and  🟡</a>
+  </li>
+  <li level="1">
+   <a href="#bend-domain-public-surface">6. Bend domain -- public surface</a>
+  </li>
+  <li level="2">
+   <a href="#bendtech-entry-point">6.1  🟢 -- entry point</a>
+  </li>
+  <li level="2">
+   <a href="#bendop-sealed-partial">6.2  (sealed partial) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#bendsetup-and-bendmount">6.3  and  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#ibendcalc">6.4  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#bendtooler">6.5  🟡</a>
+  </li>
+  <li level="2">
+   <a href="#btool-bpunch-bdie-bholder">6.6 , , ,  🟡</a>
+  </li>
+  <li level="2">
+   <a href="#btoollibrary-and-btoollist">6.7  and  🟡</a>
+  </li>
+  <li level="1">
+   <a href="#laser-punch-flat-domain-public-surface">7. Laser / Punch / Flat domain -- public surface</a>
+  </li>
+  <li level="2">
+   <a href="#lasercore-lasercut-laserauto">7.1 , ,  🟡</a>
+  </li>
+  <li level="2">
+   <a href="#punchcore-and-friends">7.2  and friends 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#lasermachine-punchmachine">7.3 ,  🟢</a>
+  </li>
+  <li level="1">
+   <a href="#fold-domain-panel-bender">8. Fold domain (panel bender) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#foldtech-and-friends">8.1  and friends</a>
+  </li>
+  <li level="1">
+   <a href="#bend-cell-automation-bcell">9. Bend-cell automation (BCell) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#bcregrip-gripper-waypoint-family">9.1 , gripper / waypoint family</a>
+  </li>
+  <li level="1">
+   <a href="#machine-model">10. Machine model</a>
+  </li>
+  <li level="2">
+   <a href="#machine-base">10.1  (base) 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#nc-post-processor-press-brake">10.2 NC post-processor (press brake) 🟢</a>
+  </li>
+  <li level="1">
+   <a href="#io-surface">11. IO surface</a>
+  </li>
+  <li level="2">
+   <a href="#dxfreader-dxfwriter">11.1  /  🟡</a>
+  </li>
+  <li level="2">
+   <a href="#georeader-geowriter">11.2  /  🟡</a>
+  </li>
+  <li level="2">
+   <a href="#hoopsreader-file-is-hxreader.cs">11.3  (file is ) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#lwmodelreader-stlmodel-meshio">11.4 , ,  🟢</a>
+  </li>
+  <li level="2">
+   <a href="#bmc-dld-trumpf">11.5 BMC / DLD (Trumpf) 🟡</a>
+  </li>
+  <li level="1">
+   <a href="#persistence-au-curl-fx">12. Persistence (Au / Curl / FX)</a>
+  </li>
+  <li level="2">
+   <a href="#postload-attribute">12.1  attribute 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#curl-readwrite">12.2 Curl read/write 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#au-binary">12.3 Au binary 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#fx-file">12.4 FX file 🟢</a>
+  </li>
+  <li level="1">
+   <a href="#globs-ui-controllers">13. Globs (UI controllers)</a>
+  </li>
+  <li level="2">
+   <a href="#glob-base">13.1  (base) 🟢</a>
+  </li>
+  <li level="2">
+   <a href="#concrete-globs-selection">13.2 Concrete globs (selection)</a>
+  </li>
+  <li level="2">
+   <a href="#gelement">13.3  🟡</a>
+  </li>
+  <li level="1">
+   <a href="#helpers-youll-bump-into-often">14. Helpers you'll bump into often</a>
+  </li>
+  <li level="2">
+   <a href="#fx-static">14.1  (static) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#ba-static">14.2  (static) 🟡</a>
+  </li>
+  <li level="2">
+   <a href="#codingerror">14.3  🟢</a>
+  </li>
+  <li level="1">
+   <a href="#stability-summary-at-a-glance">15. Stability summary at a glance</a>
+  </li>
+  <li level="1">
+   <a href="#how-to-use-this-map">16. How to use this map</a>
+  </li>
+  <li level="1">
+   <a href="#self-check">17. Self-check</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></span>
+ <span class="next"><a href="04_data_model_catalog.html">Data Model Catalog</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

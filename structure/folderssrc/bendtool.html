@@ -1,0 +1,232 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Data\Bendtools</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">Folders Src</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Folders Src</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="bendtool.html">Data\Bendtools</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Data\Bendtools</h1>
+<p>This document explains the layout of the Flux Data folder. This folder contains two kinds of data: immutable, read-only data, and data that is modified as Flux runs. Here we look at the various sub-folders inside the Data folder, and how common operations like installing machines and bend-tool catalogs are carried out.</p>
+<h2 id="bend-tool-catalogs">Bend tool catalogs</h2>
+<p>Flux ships with a few dozen bend-tool catalogs, mostly mapped to actual catalogs published by various manufacturers. Some are machine manufacturers like Trumpf or Amada, while others are specialist companies that only make bend tools, such as Wila or Rolleri.</p>
+<p>Like a lot of data in Flux, the representation of bend tools on developer machines is different from the representation in customer Flux installations. On developer machines, there is usually an unpacked version that is friendlier for editing and revision control, so text files are preferred over binary.</p>
+<p>On end-user installations, compact representation is more important, so the data is usually zipped. This also prevents casual inspection or inadvertent editing by end-users.</p>
+<h3 id="on-developer-machines">On developer machines</h3>
+<p>On developer machines, each bend-tool catalog is stored in a sub-folder under <code>Data/Archive/BendTools</code>, and these folders are named by catalog ID.</p>
+<p>Within each numbered folder there is a single <code>BendTools.curl</code> file that contains one <code>BToolLibrary</code> object. In addition to the individual catalogs, there is a <code>manifest.txt</code> file in the root folder.</p>
+<p>This manifest lists the catalog name, tool count, and revision number, and is used to quickly populate the Bend Tool Catalog editor without loading all <code>BToolLibrary</code> objects.</p>
+<h3 id="in-flux-installations">In Flux installations</h3>
+<p>The entire <code>BendTools</code> folder is zipped into a single <code>BendTools.wad</code> file, which includes <code>manifest.txt</code>. This is the only file installed, and it is in the <code>Bin</code> folder alongside <code>Flux.exe</code>.</p>
+<h3 id="installing-a-bend-tool-catalog">Installing a bend-tool catalog</h3>
+<p>The <code>Data/Archive/BendTools</code> folder, or <code>BendTools.wad</code>, contains many bend-tool catalogs. However, only a few are usually installed in a customer installation. Flux ships with only the Trumpf catalog installed by default, but users can install additional catalogs, or uninstall installed ones, using the Database icon.</p>
+<p>Installed catalogs are stored in <code>Data/BendTools</code>, with one sub-folder per installed catalog, named by catalog ID. Within that folder, Flux does not copy <code>BendTools.curl</code> from the wad because that would duplicate immutable data. Instead, it places a marker.</p>
+<p>image:image56.png[BendTools,width=505,height=235]</p>
+<p>image:image57.png[BendManifest,width=422,height=156]</p>
+<p>This marker indicates that Bend Tools catalog 1 is installed. The actual data is always fetched from the archive, <code>Data/Archive/BendTools</code> on developer machines and <code>BendTools.wad</code> on customer installations. So installing a bend-tool catalog is as simple as creating a sub-folder in <code>Data/BendTools</code> and placing <code>marker.bin</code> in it.</p>
+<p>A sub-folder is still needed because users often modify the inventory of the catalog, specifying actual punches and dies they own and segmentation quantities. This information is stored there in <code>inventory.curl</code>, which is read-write, unlike <code>BendTools.curl</code>.</p>
+<h3 id="machines">Machines</h3>
+<p>Machine data is stored analogously. On developer machines, each potential machine is stored in a sub-folder of <code>Data/Archive/Machines</code>, and that sub-folder has the machine ID as its name. On customer installations, the entire set of machines is packed into a single <code>Machines.wad</code> file stored alongside <code>Flux.exe</code>.</p>
+<p>When a machine is installed, Flux creates a folder with the machine ID inside <code>Data/Machine</code> and places <code>marker.bin</code> there. Other files are added over time in that same folder. For example, if the user edits machine settings, <code>settings.curl</code> is created there. If the user edits available options for that machine, like bend-guard or support-table options, those are stored in files such as <code>options.ini</code>. The actual machine data is still always fetched from <code>Data/Archive/Machines</code> or <code>Machines.wad</code>, so there is no data duplication.</p>
+<h4 id="the-redirect.map-file">The redirect.map file</h4>
+<p>There are over 200 machines in Flux, and more are added over time. Across machine models there is substantial duplicated data. For example, <code>BG1.Mesh</code> is the 3D model of the left back-gauge for most Trumpf 6-axis machines. The same file appears in many machine model folders. Similar duplication exists throughout <code>Data/Archive/Machines</code>.</p>
+<p>A redirection mechanism removes these duplicates. It is invoked with this command:</p>
+<p>[source,text]</p>
+<pre><code>flux.console streamlinewad x:\data\archive\machines
+</code></pre>
+<p>image:image58.png[BendMarker,width=495,height=122]</p>
+<p>image:image59.png[image59,width=282,height=162]</p>
+<p>This analyzes all files in the specified location, finds duplicates, deletes duplicate copies, and creates a redirection map stored in the root folder as <code>redirect.map</code>. Example entries:</p>
+<p>[source,text]</p>
+<pre><code>120021/settings.curl | 120000/settings.curl
+120021/Model/Beam.mesh | 120020/Model/Beam.mesh
+120021/Model/BedCrash.dxf | 120010/Model/BedCrash.dxf
+120021/Model/BendAidCarriage.geo | 120000/Model/BendAidCarriage.geo
+120021/Model/BG.geo | 120000/Model/BG.geo
+</code></pre>
+<p>The first line means that if <code>120021/settings.curl</code> is requested, <code>120000/settings.curl</code> should be used instead because both are identical. After this entry is created, <code>120021/settings.curl</code> is deleted.</p>
+<p>At runtime, redirection is automatic because all file access goes through the <code>IStmLocator</code> interface. Any time Flux opens configuration or database files, it uses <code>FX.OpenRead</code> or <code>FX.OpenWrite</code>. A typical read call is:</p>
+<p>[source,text]</p>
+<pre><code>FX.OpenRead(&quot;mc:120021/settings.curl&quot;)
+</code></pre>
+<p>This gets mapped to either <code>FileStmLocator</code> or <code>ZipStmLocator</code> depending on whether the environment is a developer machine or an end-user installation. In both cases, <code>redirect.map</code> is used to resolve equivalent files, and the rest of Flux remains unaware of the optimization.</p>
+<p>This redirection keeps machine database size very small. With 220 machines, the database is about 7.7 MB, averaging about 35 KB per machine. As a contrast, the TruTops database averages around 7 MB per machine, and their full machine database is about 1.6 GB. In short, Flux stores 220 machines in roughly the space TruTops uses for one machine.</p>
+<p>NOTE: The term wad denotes a read-only data folder. It is just a ZIP file with a different extension, and because it is not written to, it can be installed in locations where Flux does not have write permissions. Factoid: WAD is an acronym coined by John Carmack and stands for Where's All the Data.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#bend-tool-catalogs">Bend tool catalogs</a>
+  </li>
+  <li level="2">
+   <a href="#on-developer-machines">On developer machines</a>
+  </li>
+  <li level="2">
+   <a href="#in-flux-installations">In Flux installations</a>
+  </li>
+  <li level="2">
+   <a href="#installing-a-bend-tool-catalog">Installing a bend-tool catalog</a>
+  </li>
+  <li level="2">
+   <a href="#machines">Machines</a>
+  </li>
+  <li level="3">
+   <a href="#the-redirect.map-file">The redirect.map file</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Folders Src</a></span>
+ <span class="next"><a href="machines.html">Data\Machines</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,657 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Part.Dwg</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../../folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Data & Process</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Part</a>
+       <ul>
+        <li><button class="tree blank"></button><a class="active" href="partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Data & Process</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Part</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partinformation.html">Part.Dwg</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Part.Dwg</h1>
+<p><code>Part.Dwg</code> holds the complete 2D representation of a sheet-metal part after it has been
+unfolded from its 3D model (or imported directly from a flat format such as DXF).
+It is an instance of <code>Drawing2</code> — a container that stores every geometric and semantic
+element of the flat blank.</p>
+<p><strong>File:</strong> <code>Core/Drawing/Drawing.cs</code> — class <code>Drawing2</code></p>
+<h2 id="the-big-picture">The Big Picture</h2>
+<p>[source]</p>
+<pre><code>Drawing2
+ ├── AList&lt;Layer2&gt;     Layers      ← named groups with display and semantic roles
+ ├── AList&lt;Entity2&gt;    Entities    ← all geometry and annotation
+ │    ├── E2Pline[]               ← contours  (blank outline, holes, slots …)
+ │    ├── E2Bendline[]            ← bend marks (where to fold, at what angle)
+ │    ├── E2Point[]               ← pierce points, forming centres, approach markers
+ │    ├── E2Text[]                ← text labels, part numbers, engrave text
+ │    ├── E2Insert[]              ← block references (DXF blocks / sub-assemblies)
+ │    ├── E2Spline[]              ← free-form spline curves (from DXF)
+ │    └── E2Dimension[]           ← dimension annotations
+ ├── List&lt;Block2&gt;      Blocks      ← reusable block definitions (referenced by E2Insert)
+ └── List&lt;FormInfo&gt;    FormInfos   ← 3D press-form metadata (from .geo import)
+</code></pre>
+<p>Every entity knows which <code>Layer2</code> it lives on.
+The layer carries both display information (colour, line type, visibility) and a semantic
+role (<code>EUse</code>) that tells the rest of the system how to treat the entity — whether to cut
+it, mark it, skip it for nesting, etc.</p>
+<h2 id="drawing2-top-level-properties">Drawing2 — Top-Level Properties</h2>
+<p><strong>File:</strong> <code>Core/Drawing/Drawing.cs</code></p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Entities</code>      | <code>AList&lt;Entity2&gt;</code>  | All geometry and annotation in the drawing
+| <code>Layers</code>        | <code>AList&lt;Layer2&gt;</code>   | All layers; every entity belongs to one
+| <code>Blocks</code>        | <code>List&lt;Block2&gt;</code>    | Reusable block definitions (referenced by E2Insert)
+| <code>FormInfos</code>     | <code>List&lt;FormInfo&gt;</code>  | Press-form metadata from imported .geo files
+| <code>Owner</code>         | <code>Part</code>            | Back-reference to the owning Part
+| <code>Bound</code>         | <code>Bound2</code>          | Bounding box of all non-auxiliary entities
+| <code>Area</code>          | <code>double</code>          | Net enclosed area (outer minus holes), in mm²
+| <code>Centroid</code>      | <code>Point2</code>          | Centre of gravity of the flat blank
+| <code>AreBendsSequenced</code> | <code>bool</code>        | Whether bend-lines have been put in processing order
+| <code>BaseTileMarker</code>| <code>Point2</code>          | Hint used to keep the base plane stable across fold operations
+|===</p>
+<h3 id="computed-shape-properties">Computed Shape Properties</h3>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>OuterPline</code>    | The single outer boundary contour (throws if there is more than one)
+| <code>OuterPlines</code>   | All outer boundary contours (for multi-body drawings)
+| <code>OuterPlinesStd</code>| Outer contours relevant to CAM (excludes auxiliary layers)
+| <code>ClosedPlines</code>  | All closed <code>E2Pline</code> entities (outer + holes)
+| <code>OpenPlines</code>    | All open <code>E2Pline</code> entities (approach paths, etch lines)
+| <code>Bendlines</code>     | All <code>E2Bendline</code> entities
+| <code>NarrowestFlange</code>| Width of the narrowest flange (used for tool selection)
+| <code>Size</code>          | Width × height of the pline bounding box
+|===</p>
+<h2 id="layers-layer2">Layers — Layer2</h2>
+<p><strong>File:</strong> <code>Core/Drawing/DwgAux.cs</code> — class <code>Layer2</code></p>
+<p>A <code>Layer2</code> is a named group. Every entity in the drawing belongs to exactly one layer.
+Layers serve two purposes: display (colour, line style) and semantics (what this entity
+is used for).</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Name</code>     | <code>string</code>    | Layer name, e.g. <code>&quot;Cut&quot;</code>, <code>&quot;Bend&quot;</code>, <code>&quot;Mark&quot;</code>, <code>&quot;Footprint&quot;</code>
+| <code>Color</code>    | <code>Color32</code>   | Default display colour for entities on this layer
+| <code>LineType</code> | <code>ELType</code>    | Line style: <code>Continuous</code>, <code>Dot</code>, <code>Dash</code>, <code>DashDot</code> …
+| <code>Use</code>      | <code>EUse</code>      | Semantic role (see table below)
+| <code>Visible</code>  | <code>bool</code>      | Whether entities on this layer are shown
+| <code>Locked</code>   | <code>bool</code>      | Prevents accidental editing
+|===</p>
+<h3 id="layer2.euse-semantic-roles">Layer2.EUse — Semantic Roles</h3>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| EUse | Meaning</p>
+<p>| <code>Std</code>            | Normal layer — geometry here is cut by laser or punch
+| <code>Aux</code>            | Auxiliary / construction — ignored by CAM and nesting
+| <code>MBend</code>          | Mountain (upward) bend lines
+| <code>VBend</code>          | Valley (downward) bend lines
+| <code>Inner</code>          | Used for inside/outside classification only — not tooled
+| <code>Outer</code>          | Used for inside/outside classification only — not tooled
+| <code>Mark</code>           | Engrave / mark — not cut through; becomes a laser marking path
+| <code>ApproachMarker</code> | User-placed point that locks where the laser enters the contour
+| <code>SequenceMarker</code> | Text marker that forces a specific cutting order
+| <code>FormCenter</code>     | Centre point or small L-mark of a press-form feature
+| <code>FormFootprint</code>  | Outline (footprint) of a press-form feature; moved to auxiliary during CAM
+| <code>CutTooling</code>     | Approach and exit paths generated by laser tooling; not rendered in the 2D view
+| <code>Evaporate</code>      | Path to be evaporated (very light laser pass, no kerf)
+| <code>DotMarking</code>     | Path to be dot-punched (Trumpf marking method)
+| <code>Info</code>           | Informational — shown in reports but not tooled
+| <code>Tooling</code>        | Tooling outlines created by Flux or MetaCAM
+|===</p>
+<p>NOTE: <code>Auxiliary</code> is a computed property that returns <code>true</code> for <code>Aux</code>, <code>ApproachMarker</code>,
+<code>SequenceMarker</code>, <code>FormCenter</code>, and <code>Info</code>. Auxiliary entities are excluded from
+bounding-box computation, nesting outlines, and most CAM operations.</p>
+<h2 id="the-entity-hierarchy">The Entity Hierarchy</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>Entity2</code> (abstract base)</p>
+<p>Every object in <code>Drawing2.Entities</code> inherits from <code>Entity2</code>.
+The base class provides:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property / Method | Type | Meaning</p>
+<p>| <code>UID</code>      | <code>int</code>       | Stable numeric identity assigned when added to the drawing
+| <code>Layer</code>    | <code>Layer2</code>    | The layer this entity belongs to
+| <code>Color</code>    | <code>Color32</code>   | Per-entity colour override (<code>Nil</code> means use the layer colour)
+| <code>Flags</code>    | <code>E2Flags</code>   | Bitfield of entity-level state (see below)
+| <code>Dwg</code>      | <code>Drawing2</code>  | Back-reference to the owning drawing
+| <code>Bound</code>    | <code>Bound2</code>    | Axis-aligned bounding box (abstract — each subtype computes its own)
+| <code>XForm(m)</code> | —           | Transform the entity by a <code>Matrix2</code> (rotate, translate, scale)
+|===</p>
+<h3 id="e2flags-per-entity-state-bits">E2Flags — Per-Entity State Bits</h3>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Flag | Meaning</p>
+<p>| <code>Selected</code>         | Entity is currently selected in the editor
+| <code>Error</code>            | This entity has a problem (e.g. a bend-line with non-collinear points)
+| <code>IllFormed</code>        | Structural defect: odd number of bend-line points, or degenerate geometry
+| <code>PreBent</code>          | Bend-line was already bent by a punch press before this operation
+| <code>PostBent</code>         | Bend-line is processed after the current bend sequence
+| <code>FoldTooled</code>       | Bend-line has been assigned to a panel-bender operation
+| <code>BendOnBaseplane</code>  | Bend-line connects directly to the base plane
+| <code>RadiusLocked</code>     | Bend radius was set explicitly and must not be auto-adjusted
+| <code>ZCoining</code>         | This is a Z-bend with coining
+| <code>BevelCut</code>         | Contour has a chamfered (bevel) edge from a .geo import
+| <code>SkipLaserTooling</code> | Contour is on the back face and must not receive laser tooling
+|===</p>
+<h2 id="e2pline-contours">E2Pline — Contours</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>E2Pline</code></p>
+<p><code>E2Pline</code> is by far the most common entity. It wraps a <code>Pline</code> — a 2D polyline made of
+line and arc segments.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Pline</code>              | <code>Pline</code>      | The underlying geometric contour
+| <code>HighQualitySegments</code>| <code>List&lt;int&gt;?</code> | Indexes of segments that must not be simplified during cleanup
+|===</p>
+<p>The <code>Pline</code> itself carries the geometry:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Segs</code>     | <code>Segment[]</code> | Line and arc segments that make up the contour
+| <code>IsClosed</code> | <code>bool</code>      | Whether the contour is a closed loop
+| <code>IsOuter</code>  | <code>bool</code>      | Outer boundary (<code>true</code>) vs. hole (<code>false</code>) — set by <code>PrepareForCAM</code>
+| <code>Bound</code>    | <code>Bound2</code>    | Axis-aligned bounding box
+| <code>Area</code>     | <code>double</code>    | Enclosed area (positive; holes subtract from the part area)
+|===</p>
+<h3 id="how-inner-and-outer-is-determined">How Inner and Outer Is Determined</h3>
+<p><code>Drawing2.PrepareForCAM()</code> calls <code>DoQuickMarkInOut()</code> (or <code>DoSlowMarkInOut()</code> for
+complex drawings). The algorithm sorts all closed plines by descending area and marks a
+pline as <code>IsOuter = true</code> if it is not contained inside any other outer pline.</p>
+<p>The largest closed pline that is not contained inside another closed pline becomes the
+outer blank boundary. Every closed pline that lies inside the outer boundary is a hole
+(<code>IsOuter = false</code>).</p>
+<h3 id="what-contours-are-in-the-drawing">What Contours Are in the Drawing</h3>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Contour | Origin</p>
+<p>| Outer blank boundary          | Unfolded from <code>E3Plane.Contours</code> via <code>Unfolder.AddPlaneLoops</code>
+| Holes and cutouts             | Unfolded from inner contours of <code>E3Plane</code> faces, or imported from DXF
+| Open paths (slots, etch)      | Imported from DXF, or from markings on the 3D model
+| Approach paths                | Added by <code>LaserAutotooler</code> on layer <code>CutTooling</code>
+|===</p>
+<h2 id="e2bendline-bend-marks">E2Bendline — Bend Marks</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>E2Bendline</code></p>
+<p>An <code>E2Bendline</code> marks where the part will be bent. It stores all the parameters a
+press-brake or panel-bender needs to reproduce the bend from the flat blank.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Pts</code>           | <code>Point2[]</code>  | The bend-line path as pairs of points (always an even count)
+| <code>Angle</code>         | <code>double</code>    | Exterior bend angle in radians (+ve = valley / up, −ve = mountain / down)
+| <code>InteriorAngle</code> | <code>double</code>    | Interior angle (π − |Angle|) — what most operators measure
+| <code>Radius</code>        | <code>double</code>    | Inner bend radius in mm
+| <code>Thickness</code>     | <code>double</code>    | Sheet thickness (copied from <code>Part.Thickness</code>)
+| <code>KFactor</code>       | <code>double</code>    | Neutral fibre ratio (default 0.35; affects flat-width calculation)
+| <code>FlatWidth</code>     | <code>double</code>    | Width of the deformed zone in the flat blank
+| <code>Deduction</code>     | <code>double</code>    | Bend deduction (how much shorter the flat is vs. the unfolded length)
+| <code>SeqNo</code>         | <code>short</code>     | Bend sequence number (1 = first bend, set after sequencing)
+| <code>Kind</code>          | <code>EKind</code>     | Type of bend (see below)
+| <code>PunchName</code>     | <code>string?</code>   | Name of the assigned punch tool (filled after bend tooling)
+| <code>DieName</code>       | <code>string?</code>   | Name of the assigned die (filled after bend tooling)
+| <code>Airgap</code>        | <code>float</code>     | Air gap used by the panel-bender (filled after fold tooling)
+| <code>PrebendAngle</code>  | <code>double</code>    | Angle of first phase in a two-phase bend (0 = single phase)
+| <code>BumpCount</code>     | <code>short</code>     | Number of bumps for a step-bend (&gt; 1 = bump-bend)
+| <code>Moniker</code>       | <code>string?</code>   | Tag name from CAD system (used by Boost / MetaCAM)
+| <code>IsPreBent</code>     | <code>bool</code>      | Already bent by a punch press — skip in press-brake sequence
+| <code>IsPostBent</code>    | <code>bool</code>      | Processed after the current sequence
+| <code>PairedFlex</code>    | <code>E3Flex?</code>   | The matching 3D bend element (looked up by <code>UID</code>)
+|===</p>
+<h3 id="e2bendline.ekind-bend-types-in-the-drawing">E2Bendline.EKind — Bend Types in the Drawing</h3>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Kind | Meaning</p>
+<p>| <code>Std</code>                   | Normal air bend (most common)
+| <code>Coining</code>               | High-pressure coining bend
+| <code>OpenHem</code>               | Fold back with a gap
+| <code>ClosedHem</code>             | Fold flat onto itself
+| <code>FlatBend</code>              | Two-phase helper bend to avoid tool collision
+| <code>ZBendHalf</code>             | One half of a Z-bend pair
+| <code>ZBend</code>                 | Synthesised Z-bend (two parallel <code>ZBendHalf</code> merged together)
+| <code>DoubleSheetBendHalf</code>   | One half of a double-sheet bend
+|===</p>
+<h3 id="how-bend-line-points-work">How Bend-Line Points Work</h3>
+<p><code>Pts</code> always has an even number of entries. Each pair <code>[i, i+1]</code> is one contiguous
+segment of the bend line. A bend line that is interrupted by a hole will have multiple
+segments (4 or 6 points). The segments are always collinear — they all lie on the same
+straight line.</p>
+<p>[source,csharp]</p>
+<pre><code>
+for (int i = 0; i &lt; bendline.Pts.Length; i += 2) {
+    Point2 start = bendline.Pts[i];
+    Point2 end   = bendline.Pts[i + 1];
+    // draw or process this segment
+}
+</code></pre>
+<h3 id="connection-back-to-the-3d-model">Connection Back to the 3D Model</h3>
+<p>Every <code>E2Bendline</code> has the same <code>UID</code> as the <code>E3Flex</code> that produced it during unfolding.
+This lets the system navigate in both directions:</p>
+<p>[source,csharp]</p>
+<pre><code>
+E3Flex flex = bendline.PairedFlex;     // looks up by UID in Part.Model
+
+E2Bendline bl = drawing.Bendlines
+    .FirstOrDefault(b =&gt; b.UID == flex.BendlineUID);
+</code></pre>
+<h2 id="e2point-points">E2Point — Points</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>E2Point</code></p>
+<p>A single 2D point. Its meaning depends on its layer:</p>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Layer use | Meaning</p>
+<p>| <code>Std</code>            | Generic point (forming centre, pierce reference)
+| <code>ApproachMarker</code> | User-locked laser entry point for the nearest contour
+| <code>FormCenter</code>     | Centre of a press-form feature
+| <code>CutTooling</code>     | Pierce point generated by laser tooling (a <code>PointCut</code> step)
+|===</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Pt</code>   | <code>Point2</code>   | The 2D coordinate
+| <code>Mode</code> | <code>EPDMode</code>  | Display mode override (cross, circle, etc.)
+| <code>Tag</code>  | <code>object?</code>  | Arbitrary user data attached by tooling algorithms
+|===</p>
+<h2 id="e2text-text-labels">E2Text — Text Labels</h2>
+<p><strong>File:</strong> <code>Core/Drawing/E2Text.cs</code> — class <code>E2Text</code></p>
+<p>Text labels are stored as <code>E2Text</code> entities. During <code>PrepareForCAM</code>, text on non-auxiliary
+layers is converted to <code>E2Pline</code> contours so it can be laser-engraved or marked.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Text</code>     | <code>string</code>   | The text content
+| <code>Pt</code>       | <code>Point2</code>   | Insertion point
+| <code>Height</code>   | <code>double</code>   | Character height in mm
+| <code>Fontname</code> | <code>string</code>   | Vector font name
+| <code>Angle</code>    | <code>double</code>   | Text rotation in radians
+| <code>Alignment</code>| <code>ETextAlign</code> | Horizontal and vertical alignment
+|===</p>
+<p>A common use is embedding part metadata that <code>ExplodeDrawing</code> can read back:</p>
+<p>[source,csharp]</p>
+<pre><code>
+&quot;PN: MyPartNumber&quot;       // sets Part.Info.Name
+&quot;THICKNESS: 2.0&quot;         // sets a custom property in Part.Info.Dict
+</code></pre>
+<h2 id="e2insert-block-references">E2Insert — Block References</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>E2Insert</code></p>
+<p><code>E2Insert</code> is an instance of a reusable <code>Block2</code>. Blocks come from DXF imports or from
+assembly drawings. An insert stores a position, rotation, and scale; the actual geometry
+lives in the block definition.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Block</code>    | <code>Block2</code>   | The block definition (looked up by name from <code>Drawing2.Blocks</code>)
+| <code>Pt</code>       | <code>Point2</code>   | Insertion point
+| <code>Angle</code>    | <code>double</code>   | Rotation angle in radians
+| <code>XScale</code>   | <code>double</code>   | Horizontal scale factor (negative = mirrored)
+| <code>YScale</code>   | <code>double</code>   | Vertical scale factor
+| <code>Xfm</code>      | <code>Matrix2</code>  | Computed combined transform matrix
+|===</p>
+<p><code>E2Insert.Explode()</code> replaces the insert with copies of the block's entities transformed
+into drawing space. <code>Drawing2.ExplodeDrawing()</code> uses this to split an assembly drawing
+into individual parts.</p>
+<h2 id="e2spline-spline-curves">E2Spline — Spline Curves</h2>
+<p><strong>File:</strong> <code>Core/Drawing/2DEntity.cs</code> — class <code>E2Spline</code></p>
+<p>Wraps a <code>Spline2</code> (B-spline or NURBS curve) imported from DXF. Splines are discretised
+to line segments when needed for nesting or tooling.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Spline</code>   | <code>Spline2</code>   | The underlying spline curve
+|===</p>
+<h2 id="block2-reusable-geometry-definitions">Block2 — Reusable Geometry Definitions</h2>
+<p><strong>File:</strong> <code>Core/Drawing/DwgAux.cs</code> — class <code>Block2</code></p>
+<p>A <code>Block2</code> is a named, reusable group of entities — the same concept as a DXF block or
+AutoCAD block reference.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Name</code>     | <code>string</code>        | Block name (used to look it up from <code>Drawing2.Blocks</code>)
+| <code>Base</code>     | <code>Point2</code>        | Origin point of the block
+| <code>Entities</code> | <code>List&lt;Entity2&gt;</code> | The geometry inside the block
+|===</p>
+<h2 id="forminfo-press-form-metadata">FormInfo — Press-Form Metadata</h2>
+<p><strong>File:</strong> <code>Core/Drawing/Drawing.cs</code> — class <code>FormInfo</code></p>
+<p>When a part is imported from a <code>.geo</code> file that contains press-form features,
+their 3D metadata is stored in <code>Drawing2.FormInfos</code>.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Position</code>    | <code>Point3</code>  | 3D position of the form feature on the part
+| <code>Angle</code>       | <code>double</code>  | Rotation angle of the form punch
+| <code>Mesh</code>        | <code>Mesh3</code>   | 3D mesh of the formed shape (for visualisation)
+| <code>OnBackFace</code>  | <code>bool</code>    | Whether the form is applied from the underside
+| <code>PunchName</code>   | <code>string</code>  | Name of the punch tool that creates this form
+| <code>DieName</code>     | <code>string</code>  | Name of the die
+| <code>DuringBending</code>| <code>bool</code>   | Whether this form is applied at the same time as bending
+|===</p>
+<h2 id="internal-state-flags-eflags">Internal State Flags (EFlags)</h2>
+<p><code>Drawing2</code> tracks its own preparation state with an internal <code>EFlags</code> bitfield.
+These flags prevent redundant work when CAM algorithms call <code>PrepareForCAM</code> multiple
+times:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Flag | Meaning</p>
+<p>| <code>OrientedCCW</code>      | All closed plines have been oriented counter-clockwise
+| <code>InOutMarked</code>      | <code>IsOuter</code> has been computed for all plines
+| <code>CleanedPlines</code>    | Duplicate nodes and collinear segments have been removed
+| <code>SingleOuter</code>      | There is exactly one outer pline (fast path for tooling)
+| <code>BendSequenced</code>    | Bend-lines carry a valid <code>SeqNo</code> processing order
+| <code>BendAnnotated</code>    | Bend-lines have been updated with punch/die names from <code>BendTech</code>
+| <code>FoldAnnotated</code>    | Bend-lines have been updated with air-gap from <code>FoldTech</code>
+| <code>PreprocessForCAM</code> | Counter-sinks identified, text converted to plines
+|===</p>
+<h2 id="prepareforcam-making-the-drawing-ready-for-tooling">PrepareForCAM — Making the Drawing Ready for Tooling</h2>
+<p>Before laser tooling (or any CAM operation) reads the drawing, <code>PrepareForCAM()</code> is
+called. It runs a sequence of normalisation steps, each guarded by a flag so it only
+runs once:</p>
+<p>[source]</p>
+<pre><code>PrepareForCAM()
+ ├── DoCleanupPlines()         — remove degenerate segments, collinear nodes
+ ├── SplitCircleToArcInOpenPlines() — convert full circles in open plines to two arcs
+ ├── DoOrientCCW()             — ensure all closed plines wind counter-clockwise
+ ├── DoQuickMarkInOut()        — mark IsOuter for simple drawings (one outer pline)
+ │    └─ DoSlowMarkInOut()     — fallback for multi-outer drawings
+ └── DoCAMPreprocessing()
+      ├── Identify counter-sinks (concentric circles) → move outer to FormFootprint layer
+      └── Convert E2Text on cut layers → E2Pline (so they can be laser-engraved)
+</code></pre>
+<h2 id="complete-memory-layout">Complete Memory Layout</h2>
+<p>[source]</p>
+<pre><code>Drawing2
+ │
+ ├── Layers: [Layer2, Layer2, …]
+ │    each: Name, Color, LineType, EUse (Std/Aux/Mark/CutTooling/…), Visible, Locked
+ │
+ ├── Entities: [Entity2, Entity2, …]
+ │
+ │   ┌─ E2Pline ──────────────────────────────────────────────────────────┐
+ │   │  Layer → Layer2 (e.g. Std = to be cut)                             │
+ │   │  Flags → E2Flags.BevelCut, SkipLaserTooling, …                    │
+ │   │  UID   → stable int used by tooling to find its cut steps          │
+ │   │  Pline → Segment[] (lines + arcs)                                  │
+ │   │           IsOuter, IsClosed, Bound, Area                           │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ │   ┌─ E2Bendline ───────────────────────────────────────────────────────┐
+ │   │  Pts[]    → pairs of Point2 (each pair = one bend fragment)        │
+ │   │  Angle    → exterior bend angle (radians, ± = valley/mountain)     │
+ │   │  Radius   → inner bend radius (mm)                                 │
+ │   │  Thickness → sheet thickness                                       │
+ │   │  KFactor  → neutral-fibre ratio (default 0.35)                     │
+ │   │  FlatWidth → developed width of bent zone                          │
+ │   │  Deduction → bend deduction                                        │
+ │   │  SeqNo    → processing order (1 = first)                           │
+ │   │  Kind     → Std / Coining / Hem / ZBend / …                        │
+ │   │  PunchName, DieName → set by BendTech after tooling                │
+ │   │  Airgap   → set by FoldTech after tooling                          │
+ │   │  UID      → same as paired E3Flex.BendlineUID in the 3D model      │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ │   ┌─ E2Point ──────────────────────────────────────────────────────────┐
+ │   │  Pt    → Point2 coordinate                                         │
+ │   │  Layer → ApproachMarker / FormCenter / CutTooling / …              │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ │   ┌─ E2Text ───────────────────────────────────────────────────────────┐
+ │   │  Text, Pt, Height, Fontname, Angle, Alignment                      │
+ │   │  Converted to E2Pline during PrepareForCAM if on a cut layer       │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ │   ┌─ E2Insert ─────────────────────────────────────────────────────────┐
+ │   │  Block → Block2 (look up by name from Drawing2.Blocks)             │
+ │   │  Pt, Angle, XScale, YScale → placement transform                   │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ │   ┌─ E2Spline ─────────────────────────────────────────────────────────┐
+ │   │  Spline → Spline2 (NURBS / B-spline from DXF)                      │
+ │   └────────────────────────────────────────────────────────────────────┘
+ │
+ ├── Blocks: [Block2, …]
+ │    each: Name, Base (Point2), Entities (List&lt;Entity2&gt;)
+ │
+ └── FormInfos: [FormInfo, …]
+      each: Position, Angle, Mesh, PunchName, DieName, OnBackFace, DuringBending
+</code></pre>
+<h2 id="key-files">Key Files</h2>
+<p>[cols=&quot;3,5&quot;, options=&quot;header&quot;]
+|===
+| File | Responsibility</p>
+<p>| <code>Core/Drawing/Drawing.cs</code>   | <code>Drawing2</code> class — container, <code>PrepareForCAM</code>, in/out marking
+| <code>Core/Drawing/2DEntity.cs</code>  | <code>Entity2</code> base, <code>E2Pline</code>, <code>E2Bendline</code>, <code>E2Point</code>, <code>E2Insert</code>, <code>E2Spline</code>, <code>E2Solid</code>
+| <code>Core/Drawing/E2Text.cs</code>    | <code>E2Text</code> — text labels
+| <code>Core/Drawing/DwgAux.cs</code>    | <code>Layer2</code>, <code>Block2</code>, <code>Layer2.EUse</code> — layers and block definitions
+| <code>Core/Drawing/Dimension.cs</code> | <code>E2Dimension</code> — dimension annotations
+| <code>Core/Model/Ops/Unfolder.cs</code>| Produces the drawing from a 3D model
+|===</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#the-big-picture">The Big Picture</a>
+  </li>
+  <li level="1">
+   <a href="#drawing2-top-level-properties">Drawing2 — Top-Level Properties</a>
+  </li>
+  <li level="2">
+   <a href="#computed-shape-properties">Computed Shape Properties</a>
+  </li>
+  <li level="1">
+   <a href="#layers-layer2">Layers — Layer2</a>
+  </li>
+  <li level="2">
+   <a href="#layer2.euse-semantic-roles">Layer2.EUse — Semantic Roles</a>
+  </li>
+  <li level="1">
+   <a href="#the-entity-hierarchy">The Entity Hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#e2flags-per-entity-state-bits">E2Flags — Per-Entity State Bits</a>
+  </li>
+  <li level="1">
+   <a href="#e2pline-contours">E2Pline — Contours</a>
+  </li>
+  <li level="2">
+   <a href="#how-inner-and-outer-is-determined">How Inner and Outer Is Determined</a>
+  </li>
+  <li level="2">
+   <a href="#what-contours-are-in-the-drawing">What Contours Are in the Drawing</a>
+  </li>
+  <li level="1">
+   <a href="#e2bendline-bend-marks">E2Bendline — Bend Marks</a>
+  </li>
+  <li level="2">
+   <a href="#e2bendline.ekind-bend-types-in-the-drawing">E2Bendline.EKind — Bend Types in the Drawing</a>
+  </li>
+  <li level="2">
+   <a href="#how-bend-line-points-work">How Bend-Line Points Work</a>
+  </li>
+  <li level="2">
+   <a href="#connection-back-to-the-3d-model">Connection Back to the 3D Model</a>
+  </li>
+  <li level="1">
+   <a href="#e2point-points">E2Point — Points</a>
+  </li>
+  <li level="1">
+   <a href="#e2text-text-labels">E2Text — Text Labels</a>
+  </li>
+  <li level="1">
+   <a href="#e2insert-block-references">E2Insert — Block References</a>
+  </li>
+  <li level="1">
+   <a href="#e2spline-spline-curves">E2Spline — Spline Curves</a>
+  </li>
+  <li level="1">
+   <a href="#block2-reusable-geometry-definitions">Block2 — Reusable Geometry Definitions</a>
+  </li>
+  <li level="1">
+   <a href="#forminfo-press-form-metadata">FormInfo — Press-Form Metadata</a>
+  </li>
+  <li level="1">
+   <a href="#internal-state-flags-eflags">Internal State Flags (EFlags)</a>
+  </li>
+  <li level="1">
+   <a href="#prepareforcam-making-the-drawing-ready-for-tooling">PrepareForCAM — Making the Drawing Ready for Tooling</a>
+  </li>
+  <li level="1">
+   <a href="#complete-memory-layout">Complete Memory Layout</a>
+  </li>
+  <li level="1">
+   <a href="#key-files">Key Files</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Part</a></span>
+ <span class="next"><a href="partload.html">Part.Load</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

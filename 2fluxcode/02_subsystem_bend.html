@@ -1,0 +1,783 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Subsystem **Bend** (Press Brake)</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a class="active" href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">3IU</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Subsystem **Bend** (Press Brake)</h1>
+<p>_<strong>*
+<strong>Prerequisite:</strong> Chapter 00 (repo map) and Chapter 01 (architecture, M/V/Glob, Sheaf, Hub).
+<strong>Goal:</strong> Bend is the canonical subsystem. After this chapter you can localize any bug from the press-brake area to the right code and test entry point -- <em>without</em> writing a fix. Reading time: 60--90 minutes.
+<strong>Template note:</strong> this chapter doubles as the <strong>template</strong> for future per-subsystem chapters (Fold, Laser, Punch, Nest, BCell). The same 14-section structure should be followed.
+*</strong>*</p>
+<p>'''</p>
+<h2 id="tldr-bend-in-twelve-lines">1. TL;DR -- Bend in twelve lines</h2>
+<p>** <strong>Domain:</strong> press-brake CAM (classical bending machine: punch + die). The <em>separate</em> domain <em>Fold</em> is the panel bender (TecZoneFold) -- don't confuse them.
+** <strong>Code root:</strong> <code>Src\Core\Bend\</code> (47 files, ~1.7 MB of source).
+** <strong>Top-level model:</strong> <code>Part</code> → <code>BendTech</code> → many <code>BendOp</code> (one bending operation each) and one or more <code>BendSetup</code> (one tool layout on the machine).
+** <strong>Auto-tooler:</strong> <code>Ops\BendTooler.cs</code> (139 KB) -- the central engine that turns a 3D part into a sequence of bends + tool setups + back-gauge positions.
+** <strong>Machine:</strong> <code>BendMachine</code> (subclass of <code>Machine</code>) -- loaded from <code>X:\Data\Machine\&lt;id&gt;\</code>.
+** <strong>Tools:</strong> <code>BTool</code> (punch / die / holder), per-tech <code>Inventory : BToolList</code>, per-catalog <code>BToolLibrary</code>.
+** <strong>Collision:</strong> two modules side by side -- <code>BendOpCrash.cs</code> (classic) and <code>NBendCrash.cs</code> (new). Both exist <em>simultaneously</em>. Care needed.
+** <strong>UI hooks:</strong> <code>Src\UI\Bend\BendOpUI.cs</code> (<code>BendOpGlob</code>, <code>BendOpsGlob</code>) and siblings.
+** <strong>Tests:</strong> <code>Test\Bend\</code> -- one file per year (<code>Bend2017.cs</code> through <code>Bend2025.cs</code>) plus thematic files (<code>BendACB.cs</code>, <code>BendAid.cs</code>, <code>BGPath.cs</code>, <code>BendShuffle.cs</code>, ...).
+** <strong>Golden-file pattern:</strong> auto-tooler runs, <code>tech.Dump (sw)</code> writes a setup text, <code>Assert.AreTextFilesEqual</code> compares against a <code>.txt</code> reference next to the <code>.geo</code> input.
+** <strong>Robotic bend:</strong> the logic is <em>not</em> in <code>BCell\</code> -- <code>BendOp</code> itself knows about <code>Robotic</code> cases (regrip, cell stages). <code>BCell</code> models the robot cell, but Bend orchestrates.
+** <strong>Important non-obvious:</strong> models and VModels (rendering) live <em>together</em> in Core. UI controllers (Glob) live separately in <code>Flux.UI</code>.</p>
+<p>'''</p>
+<h2 id="the-domain-in-two-minutes-vocabulary-of-the-machine-world">2. The domain in two minutes -- vocabulary of the machine world</h2>
+<p>Before you read code, learn these 22 terms. They appear in every other class:</p>
+<p>|===
+| Term | Meaning | Where in code</p>
+<p>| <strong>Press brake</strong>
+| Bending machine: punch (top) presses sheet into die (bottom)
+| <code>BendMachine.cs</code></p>
+<p>| <strong>Punch / Die</strong>
+| Top tool / bottom tool
+| <code>BTool</code> with <code>IsUpper</code> / <code>IsLower</code></p>
+<p>| <strong>Tool piece</strong>
+| One segment of a tool (tools are segmented)
+| <code>BTool.Piece</code></p>
+<p>| <strong>Mount</strong>
+| A specific tool placement at an X position on the table
+| <code>BendMount</code></p>
+<p>| <strong>Setup</strong>
+| A complete set of mounts on the machine
+| <code>BendSetup</code></p>
+<p>| <strong>Stage / Station</strong>
+| An X region of the table with its own tools
+| inside <code>BendSetup</code></p>
+<p>| <strong>Bend / Flex</strong>
+| A bending operation. <em>Flex</em> = geometry entity, <em>Bend</em> = operation
+| <code>E3Flex</code> (geometry) vs. <code>BendOp</code> (CAM)</p>
+<p>| <strong>Phase</strong>
+| Hem and pre-bend operations split a flex into multiple phases
+| <code>BendOp.Phases</code></p>
+<p>| <strong>Spine</strong>
+| Center line through the cross-section of a bending zone
+| <code>IFlexSpine</code> (Note 1005)</p>
+<p>| <strong>Flat length / bend deduction</strong>
+| Unfolded length / shrinkage when bending
+| <code>BendStaples.Deduction</code></p>
+<p>| <strong>V-width</strong>
+| Width of the die V-groove
+| <code>BTool</code> property + <code>BendCalc.SuggestDieWidth</code></p>
+<p>| <strong>Open / closed height</strong>
+| Machine stroke parameters
+| <code>BendMachine.OpenHeight</code> / <code>.ClosedHeight</code></p>
+<p>| <strong>BG (back gauge)</strong>
+| Rear stop the operator pushes the sheet against
+| <code>BendBG.cs</code>, <code>BGPath.cs</code>, <code>BGPlacer.cs</code></p>
+<p>| <strong>ACB</strong>
+| Adjustable Crowning Beam -- <em>not</em> the ACB <em>laser sensor</em> (different concept)
+| <code>BendACB.cs</code></p>
+<p>| <strong>Bending aid</strong>
+| Helper that supports the sheet during the bend
+| <code>BendAid.cs</code>, <code>BAPlacer</code></p>
+<p>| <strong>Hem</strong>
+| Hemming: closed/open seam bend
+| <code>EBendKind.OpenHem</code> / <code>.ClosedHem</code></p>
+<p>| <strong>Bump-bend</strong>
+| Many small bends to produce a large radius
+| <code>EBendKind.BumpBend</code>, <code>BumpSteps</code></p>
+<p>| <strong>Z-bend</strong>
+| Offset bend with two close opposing flexes
+| <code>EBendKind.ZBend**</code>, <code>ZBendTool.png</code></p>
+<p>| <strong>Coining</strong>
+| Coining bend (higher force, less springback)
+| <code>EBendKind.Coining</code></p>
+<p>| <strong>TBS</strong>
+| Trumpf Bend Solution (Trumpf's own bend calculator)
+| <code>TBSBendCalc.cs</code>, <code>TBSCustomDB.cs</code></p>
+<p>| <strong>Springback</strong>
+| Material rebound after bending
+| <code>BendStaples.SpringbackD</code></p>
+<p>| <strong>Robotic bend</strong>
+| Bend-cell automation (robot, gripper)
+| <code>BendOp.Robotic</code>, <code>BCRegrip</code></p>
+<p>| <strong>Regrip</strong>
+| Gripper repositions the part mid-job
+| <code>BCRegrip</code>
+|===</p>
+<p><em>__</em>
+<strong>Visuals for the vocabulary</strong> are at <code>X:\Doc\Img\Bend\</code> -- e.g. <code>VWidthType.png</code>, <code>OverbendCrash.png</code>, <code>ZBendTool.png</code>, <code>BumpBendSpine.png</code>. If a term remains unclear, there is usually a picture.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="the-data-model-class-hierarchy">3. The data model -- class hierarchy</h2>
+<pre><code>Part
+ └─ BendTech                                      [Src\Core\Bend\BendTech.cs]
+     ├─ BMachine : BendMachine                    [BendMachine.cs]
+     ├─ Inventory : BToolList                     [BendToolLib.cs]
+     ├─ Settings : Sheaf (Bend-specific settings)
+     ├─ Ops : List&lt;BendOp&gt;                        [BendOp.cs] — the sequence
+     │   ├─ Flexes : E3Flex[]                     (1..n, m:n mapping to flexes)
+     │   ├─ Phases : int[]                        (one per flex)
+     │   ├─ Kind : EBendKind                      (AirBend / Hem / Coining / BumpBend / ...)
+     │   ├─ UsedDie, UsedPunch : BTool
+     │   ├─ Setup : BendSetup
+     │   ├─ BAPos : BendAidPos[]                  (bending-aid positions)
+     │   ├─ BGTransition : Sheaf.EBGTransition    (how does the BG move?)
+     │   ├─ BumpSteps : int                       (only for bump-bends)
+     │   └─ (~200 more properties — file is 210 KB)
+     └─ Setups : List&lt;BendSetup&gt;                  [BendSetup.cs]
+         └─ Mounts : List&lt;BendMount&gt;              [BendMount.cs]
+             ├─ Tool : BTool
+             ├─ Pieces : Piece[]                  (segmentation)
+             ├─ MountPt : Point3                  (X/Z position on the table)
+             └─ IsFlipped : bool
+</code></pre>
+<p><strong>Three subtleties that trip up newcomers:</strong></p>
+<p>. <strong>m:n between flex and BendOp.</strong> A hem bend is <em>two</em> phases that exist as two <code>BendOp</code> objects on the same flex. A group bend bundles parallel flexes into <em>one</em> <code>BendOp</code>. See <code>BendOp.cs</code> lines 22--32.
+. <strong><code>BendTech</code> is the root, not <code>Part</code>.</strong> <code>Part</code> is a generic component that may be laser/punch/fold too. The bend-specific data lives in <code>Part.BendTech</code>.
+. <strong>A <code>BendSetup</code> references <code>Mounts</code>, not <code>Tools</code>.</strong> Tool identity is not the unit of granularity for mounts -- the same <code>BTool</code> may be mounted at multiple X positions.</p>
+<p>'''</p>
+<h2 id="module-map-the-47-files-grouped">4. Module map -- the 47 files grouped</h2>
+<h3 id="root-srccorebend-24-files">4.1 Root <code>Src\Core\Bend\</code> (24 files)</h3>
+<p>[cols=&quot;&gt;,,&quot;]
+|===
+| Size | File | Contents</p>
+<p>| 6 KB
+| <strong><code>BendCore.cs</code></strong>
+| Enums (<code>EBendKind</code>, <code>EBATIssue</code>, <code>EHandlingFlip</code>), small shared types. <strong>Read this first</strong> -- everything else references these enums.</p>
+<p>| 13 KB
+| <strong><code>BendCalc.cs</code></strong>
+| Interface <code>IBendCalc</code> + data classes <code>BendStaples</code>, <code>Workpiece</code>, <code>ToolSet</code>. Central calculation abstraction (force, deduction, stroke, springback).</p>
+<p>| 23 KB
+| <code>TBSBendCalc.cs</code>
+| Trumpf-specific <code>IBendCalc</code> implementation.</p>
+<p>| 41 KB
+| <code>TBSCustomDB.cs</code>
+| Trumpf custom database.</p>
+<p>| 17 KB
+| <code>TSOBatch.cs</code>
+| Tool-Setup-Optimizer batch mode.</p>
+<p>| 11 KB
+| <code>BendAid.cs</code>
+| Bending-aid model.</p>
+<p>| 21 KB
+| <code>BendBG.cs</code>
+| Back-gauge model.</p>
+<p>| 14 KB
+| <code>BGPath.cs</code>
+| BG motion path between bends.</p>
+<p>| 60 KB
+| <code>BendACB.cs</code>
+| Adjustable Crowning Beam.</p>
+<p>| 16 KB
+| <code>BendExtensions.cs</code>
+| Extension methods on the core types.</p>
+<p>| 11 KB
+| <code>Clamp.cs</code>
+| Punch-clamp model.</p>
+<p>| 7 KB
+| <code>FlexCell.cs</code>
+| Flex bend-cell special case.</p>
+<p>| <strong>107 KB</strong>
+| <strong><code>BendTech.cs</code></strong>
+| <strong>Main facade.</strong> Constructor reads the model, groups flexes, builds the initial <code>BendOp</code> sequence. Read lines 19--120 for the constructor logic.</p>
+<p>| <strong>210 KB</strong>
+| <strong><code>BendOp.cs</code></strong>
+| <strong>The operation.</strong> Sealed partial class with ~200 properties. Represents <em>one</em> bending operation. Single source of truth for bend state.</p>
+<p>| 95 KB
+| <code>BendOpStatus.cs</code>
+| Status / validation logic for an op.</p>
+<p>| 68 KB
+| <code>BendOpCrash.cs</code>
+| Classical collision check.</p>
+<p>| 78 KB
+| <code>NBendCrash.cs</code>
+| &quot;New&quot; collision check. <strong>Both are alive</strong> -- a runtime branch picks one.</p>
+<p>| 101 KB
+| <code>BendSetup.cs</code>
+| Tool layout on the machine.</p>
+<p>| 76 KB
+| <code>BendMount.cs</code>
+| Single tool mount.</p>
+<p>| 103 KB
+| <code>BendMachine.cs</code>
+| Press-brake machine definition.</p>
+<p>| 119 KB
+| <code>BendTool.cs</code>
+| Tool model (<code>BTool</code>, <code>BPunch</code>, <code>BDie</code>, <code>BHolder</code>, ...).</p>
+<p>| 42 KB
+| <code>BendToolLib.cs</code>
+| Tool library (<code>BToolLibrary</code>, <code>BToolList</code>).</p>
+<p>| 23 KB
+| <code>BTParametric.cs</code>
+| Parametric tools.</p>
+<p>| 59 KB
+| <code>BendVM.cs</code>
+| View-models: <code>BendMountVM</code>, <code>BendNoVM</code>, <code>BendTechVM</code> (render via <code>Lux</code>).</p>
+<p>| 3 KB
+| <code>BC7000TestVM.cs</code>
+| Test VM for a specific machine class.
+|===</p>
+<h3 id="srccorebendops-17-files-toolpath-sequencing">4.2 <code>Src\Core\Bend\Ops\</code> (17 files -- toolpath / sequencing)</h3>
+<p>This is the <em>algorithmic</em> heart. The root holds model + validation; <code>Ops\</code> holds computation.</p>
+<p>[cols=&quot;&gt;,,&quot;]
+|===
+| Size | File | Contents</p>
+<p>| <strong>139 KB</strong>
+| <strong><code>BendTooler.cs</code></strong>
+| <strong>Auto-tooler.</strong> Central engine. Constructor + <code>DoTooling</code> orchestrates: sequence → tool score → setup generation → BG placement. Read lines 16--80 for the main pipeline.</p>
+<p>| 15 KB
+| <code>BendToolerCore.cs</code>
+| Shared data types for the tooler.</p>
+<p>| 9 KB
+| <code>BendToolerACB.cs</code>
+| ACB-specific tool scoring.</p>
+<p>| 14 KB
+| <code>BendToolerAux.cs</code>
+| Helpers.</p>
+<p>| 23 KB
+| <code>BendToolerRefine.cs</code>
+| Refinement pass after initial sequencing.</p>
+<p>| 35 KB
+| <code>BendToolHint.cs</code>
+| Tool suggestions / constraints.</p>
+<p>| 50 KB
+| <code>BAPlacer.cs</code>
+| Bending-aid placer.</p>
+<p>| <strong>101 KB</strong>
+| <strong><code>BGPlacer.cs</code></strong>
+| <strong>BG placer</strong> -- where does the back gauge position the sheet? Very complex (stability, collision, rotation).</p>
+<p>| 16 KB
+| <code>BGPlacer2X.cs</code>
+| Special case with two BG axes.</p>
+<p>| 47 KB
+| <code>BendGAPAdjust.cs</code>
+| GAP-adjust pass (tool spacing).</p>
+<p>| 41 KB
+| <code>BendOpStep.cs</code>
+| Single steps of an op.</p>
+<p>| 11 KB
+| <code>BendOpSim.cs</code>
+| Op-level simulation.</p>
+<p>| 37 KB
+| <code>BSimulate.cs</code>
+| Simulation pipeline.</p>
+<p>| 21 KB
+| <code>BOptimizer.cs</code>
+| Sequence optimizer.</p>
+<p>| 11 KB
+| <code>BendTechMemo.cs</code>
+| Memo structures.</p>
+<p>| 15 KB
+| <code>BNCReader.cs</code>
+| NC-code reader (re-import).</p>
+<p>| 16 KB
+| <code>DLDExporter.cs</code>
+| DLD-format export (Trumpf NC format).</p>
+<p>| 20 KB / 43 KB
+| <code>ExportBMC.cs</code> / <code>ImportBMC.cs</code>
+| BMC format I/O (Trumpf machine format, see Note 2016).</p>
+<p>| 9 KB
+| <code>JupiduReader.cs</code>
+| Legacy reader.</p>
+<p>| 30 KB / 64 KB
+| <code>TBendLibExport.cs</code> / <code>TBendLibImport.cs</code>
+| Tool library exchange.</p>
+<p>| 28 KB
+| <code>BToolDXF.cs</code>
+| DXF tool I/O.
+|===</p>
+<h3 id="ui-hooks-srcuibend-8-files">4.3 UI hooks <code>Src\UI\Bend\</code> (8 files)</h3>
+<p>|===
+| File | Exposes</p>
+<p>| <code>BendOpUI.cs</code>
+| <code>BendOpGlob</code> (single-select controller), <code>BendOpsGlob</code> (multi-select). Starts with <code>[Glob (Draw = true, Mouse = EMouse.LDown)]</code>.</p>
+<p>| <code>BendSetupUI.cs</code>
+| Setup-editor controller.</p>
+<p>| <code>BendMountUI.cs</code>
+| Single-mount controller.</p>
+<p>| <code>BendACBUI.cs</code>
+| ACB editor.</p>
+<p>| <code>BendAidUI.cs</code>
+| Bending-aid editor.</p>
+<p>| <code>BendClampUI.cs</code>
+| Clamp editor.</p>
+<p>| <code>BendAgent.cs</code>
+| Bend agent (mouse / keyboard handler).</p>
+<p>| <code>BendSheet.cs</code>
+| &quot;Sheet&quot; view of the bend sequence.
+|===</p>
+<h3 id="notes-ftex">4.4 Notes (FTex)</h3>
+<p>|===
+| Note | Content</p>
+<p>| <code>Notes\Dev\1005.BendAreaModeling.ftx</code>
+| <strong>Required reading.</strong> How Flux models bend geometry (<code>E3Plane</code> ↔ <code>E3Flex</code>, <code>IFlexSpine</code>).</p>
+<p>| <code>Notes\Dev\1008.BendTools.ftx</code>
+| Tool-import conventions.</p>
+<p>| <code>Notes\Tech\2006.BendInfoInDXF.ftx</code>
+| Bend information in DXF files.</p>
+<p>| <code>Notes\Tech\2016.ImportBMC.ftx</code>
+| BMC-format import.</p>
+<p>| <code>Notes\Tech\2017.CupGripperInfoInDwg.ftx</code>
+| Cup-gripper info embedded in drawings (for robotic).
+|===</p>
+<p>'''</p>
+<h2 id="lifecycle-of-a-part-sequence-diagram-in-words">5. Lifecycle of a part -- sequence diagram in words</h2>
+<p>What happens <em>internally</em> when a user opens a 3D part and clicks &quot;Bend Auto-Tool&quot;?</p>
+<pre><code>1. Part loads (CAD import or .fx file).
+   └─ Part.Model contains E3Plane + E3Flex entities.
+
+2. BendTech.Make (part, machine) is called.
+   └─ BendTech constructor (BendTech.cs lines 19–120):
+       a. RefineColliders() on the model
+       b. Split hem phases (one hem → 2 phases)
+       c. Identify groupable flexes (CanGroupWith / CanGroupDoubleSheet)
+       d. Per group + phase: create one BendOp
+       e. ValidOrder() on the list — topological sequence sort
+       f. Assign SeqNo
+       g. Decouple &quot;flange-in-hole&quot; multi-span bends into a manual list
+
+3. BendTooler.Process (tech, flags) starts the auto-tooler.
+   └─ Pipeline (BendTooler.cs lines 48–80):
+       a. PrepareForTooling – drop setups, reset sequence
+       b. SetupBasicSequence – dead-reckoning order
+       c. TurnOnBumpBending – large radii without tools → bump-bends
+       d. DemoteCrashingTools – 2D cross-section collisions
+       e. UpdateToolScores – favor tools every bend likes
+       f. DoToolerCore – final sequence + setup + BG placement
+
+4. Per BendOp: BAPlacer + BGPlacer
+   └─ Bending-aid position
+   └─ Back-gauge position per op + BG motion path between ops
+
+5. Validation — BendOpStatus + BendOpCrash (or NBendCrash)
+   └─ Per-op issues collected as EBATIssue flags.
+
+6. NC code generation runs through `BendTech.GenerateNCCode` → `Hub.GenerateNC`.
+   └─ Dispatched by `Src\API\Basis\Basis.cs::GenerateNC` (line 138) to a C# writer
+     in `Src\API\Bend\Post\` (TrumpfDLD, Bystronic, LVD, ...) based on the post
+     name token in `BMachine.Post`. The XML doc literally says
+     **&quot;Generate NC code directly for a part (without using Hex)&quot;**.
+</code></pre>
+<p>'''</p>
+<h2 id="three-canonical-reading-tours-15-min-each">6. Three canonical reading tours (15 min each)</h2>
+<h3 id="tour-a-how-does-a-3d-model-become-a-bend-sequence">Tour A -- &quot;How does a 3D model become a bend sequence?&quot;</h3>
+<p>. <code>Src\Core\Bend\BendCore.cs</code> -- all enums (5 min).
+. <code>Src\Core\Bend\BendTech.cs</code> lines 19--120 -- constructor (5 min).
+. <code>Src\Core\Bend\Ops\BendTooler.cs</code> lines 16--80 -- constructor + <code>DoTooling</code> skeleton (5 min).</p>
+<p><strong>You should be able to answer:</strong></p>
+<p>** Why does a hem bend produce two <code>BendOp</code>s?
+** What is a &quot;group bend&quot;?
+** What are the six phases of the auto-tooler?</p>
+<h3 id="tour-b-what-does-a-tool-setup-look-like-internally">Tour B -- &quot;What does a tool setup look like internally?&quot;</h3>
+<p>. <code>Src\Core\Bend\BendSetup.cs</code> lines 14--80 -- class + <code>Dump</code> (very revealing because <code>Dump</code> is exactly the format compared in tests) (5 min).
+. <code>Src\Core\Bend\BendMount.cs</code> -- the <code>BendMount</code> data structure (5 min).
+. <code>Src\Core\Bend\BendTool.cs</code> -- search <code>class BTool</code> and its subclasses <code>BPunch</code>, <code>BDie</code>, <code>BHolder</code> (5 min).</p>
+<p><strong>You should be able to answer:</strong></p>
+<p>** What is the difference between <code>BTool</code> and <code>BTool.Piece</code>?
+** How is a setup serialized? (Hint: <code>Dump</code> and <code>ComputeHash</code>.)
+** Where does a <code>Mount</code> X position originate?</p>
+<h3 id="tour-c-what-does-a-test-look-like-and-what-is-a-golden-file">Tour C -- &quot;What does a test look like, and what is a golden file?&quot;</h3>
+<p>. <code>Test\Bend\BasicBendAuto.cs</code> lines 11--84 -- class <code>BasicBendAuto</code> and the <code>Test</code> helper (5 min).
+. Open <code>X:\TData\Bend\Auto\Bend*04.geo</code> (binary -- just confirm it exists).
+. Open <code>X:\TData\Bend\Auto\Bend*04.txt</code> -- <strong>the golden file</strong> that <code>tech.Dump (sw)</code> produces (5 min).
+. Mentally walk through it: test 82 loads <code>Bend*04.geo</code>, calls <code>BendTech.Make</code> + <code>BendTooler.Process</code>, dumps → compared to <code>Bend*04.txt</code>. Any change to the auto-tooler requires regenerating <code>Bend*04.txt</code> (5 min).</p>
+<p><strong>You should be able to answer:</strong></p>
+<p>** How is a Bend bug typically frozen as a test?
+** Why do we have files <code>Bend2017.cs</code> ... <code>Bend2025.cs</code>?
+** How would you redirect a test to a <em>different</em> machine? (Hint: <code>idMachine = 13</code>.)</p>
+<p>'''</p>
+<h2 id="common-stumbling-blocks-observations-from-the-code">7. Common stumbling blocks (observations from the code)</h2>
+<h3 id="two-crash-engines-side-by-side">7.1 Two crash engines side by side</h3>
+<p><code>BendOpCrash.cs</code> (old) and <code>NBendCrash.cs</code> (new) live <em>together</em>. Both are large (68 + 78 KB). When working on collision logic:</p>
+<p>** Find out which one is <em>active</em> first (settings/flag).
+** Never modify only one without knowing what the other does.
+** This duplication is presumably an in-flight migration.</p>
+<h3 id="the-bendtech-constructor-is-the-logic">7.2 The <code>BendTech</code> constructor <em>is</em> the logic</h3>
+<p><code>BendTech.Make</code> is a thin wrapper -- the real sequence creation lives in the <strong>constructor</strong> (private, ~250 lines). Unusual but consistent: in Flux, constructors often contain &quot;real&quot; logic because they guarantee a fully constructed object.</p>
+<h3 id="bendop-is-a-partial-class">7.3 <code>BendOp</code> is a <code>partial class</code></h3>
+<p><code>BendOp.cs</code> (210 KB) holds <em>one</em> part. <code>Grep &quot;partial.**BendOp&quot;</code> finds others (e.g. test-related auto-generated parts). <strong>When editing: search the whole solution, not just one file.</strong></p>
+<h3 id="robotic-bend-lives-in-bendop-not-separately">7.4 Robotic bend lives <em>in</em> <code>BendOp</code>, not separately</h3>
+<p>For a bug from the BCell / robotics context (e.g. &quot;regrip at the wrong point&quot;), the logic is <em>in <code>BendOp</code></em> (properties <code>Robotic</code>, <code>RegripDuringBend</code>, <code>IsFirstOp</code>/<code>IsLastOp</code> with cell-stage logic) and in the UI glob (<code>BendOpGlob.AddRegrip</code> in <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55). Don't only search under <code>BCell\</code>.</p>
+<h3 id="trumpf-specific-paths">7.5 Trumpf-specific paths</h3>
+<p><code>BendCalc</code> has two implementations: <code>StdBendCalc</code> (default) and <code>TBSBendCalc</code> (Trumpf). The selection happens in <code>BendMachine.BendCalc</code>:</p>
+<p>[,csharp]</p>
+<pre><code>public IBendCalc BendCalc =&gt; Settings.BendCalc switch {
+   Sheaf.EBendCalc.Default =&gt; IsTrumpf ? TBSBendCalc.It : StdBendCalc.It,
+   * =&gt; StdBendCalc.It,
+};
+</code></pre>
+<p>If a bug only reproduces on Trumpf machines: look at <code>TBSBendCalc.cs</code> and <code>TBSCustomDB.cs</code>.</p>
+<h3 id="dump-format-test-contract">7.6 Dump format = test contract</h3>
+<p>If you change <code>BendSetup.Dump</code> or <code>BendTech.Dump</code>, <strong>you break every Bend test at once</strong>. That's by design -- the dump format is the contract between auto-tooler and tests. Changes here must come with a full golden-file regeneration.</p>
+<p>'''</p>
+<h2 id="tests-how-they-are-organized">8. Tests -- how they are organized</h2>
+<h3 id="inventory-xtestbend-25-files">Inventory (<code>X:\Test\Bend\</code>, 25 files)</h3>
+<p>|===
+| Category | Files</p>
+<p>| <strong>Auto-tooler basics</strong>
+| <code>BasicBendAuto.cs</code>, <code>BendAutoGeneric.cs</code>, <code>BendAutoIGS.cs</code>, <code>BendAutoV2.cs</code></p>
+<p>| <strong>Yearly regression bundles</strong>
+| <code>Bend2017.cs</code> ... <code>Bend2025.cs</code> (one per year)</p>
+<p>| <strong>Topical</strong>
+| <code>BendACB.cs</code>, <code>BendAid.cs</code>, <code>BendShuffle.cs</code>, <code>BGPath.cs</code>, <code>Bend9AxisBG.cs</code></p>
+<p>| <strong>Tweaks / crash</strong>
+| <code>BendTweak.cs</code>, <code>BendSelfCrashTest.cs</code>, <code>BendMisc.cs</code></p>
+<p>| <strong>Bug-fix suite</strong>
+| <code>BugFixes.cs</code></p>
+<p>| <strong>I/O</strong>
+| <code>BToolIO.cs</code></p>
+<p>| <strong>TSO</strong>
+| <code>TSOTest.cs</code></p>
+<p>| <strong>Other</strong>
+| <code>MCTypes.cs</code>
+|===</p>
+<h3 id="the-standard-test-pattern">The standard test pattern</h3>
+<p>[,csharp]</p>
+<pre><code>[TestFixture (4, &quot;Basic bend auto-tooler tests&quot;, Module = &quot;Bend&quot;, Subsystem = &quot;AutoTool&quot;)]
+class BasicBendAuto {
+   [Test (82, &quot;Tooling basic part: Bend*04.geo&quot;)]
+   void Test1 () =&gt; Test (&quot;Bend/Auto/Bend*04.geo&quot;);
+
+   public static Part Test (string file, int idMachine = 13, /** ... **/) {
+      Part part = FX.LoadTestPart (file);
+      if (part.Model == null) part.DoFoldTo3D ().Is (EResult.OK);
+      BendTech.Make (part, BendMachine.Get (idMachine)).Is (EResult.OK);
+      var tech = part.BendTech;
+      // ...
+      BendTooler.Process (part.BendTech, flags);
+      CheckDump (tech, outfile);   // ← golden-file compare
+      return part;
+   }
+
+   public static void CheckDump (BendTech tech, string refFile) {
+      string file = FX.TmpTestFile;
+      using (StreamWriter sw = new (file)) tech.Dump (sw);
+      Assert.AreTextFilesEqual (refFile, file);
+   }
+}
+</code></pre>
+<p><strong>Three takeaways:</strong></p>
+<p>** <strong>Test IDs are globally unique</strong> (82, 84, 85, ...) and stable. An ID conflict is a merge problem.
+** <strong>Golden-file path mirrors the input</strong> -- <code>Bend*04.geo</code> ↔ <code>Bend*04.txt</code>.
+** <strong>Machine 13</strong> is the default test machine. <code>X:\Data\Machine\13\</code> holds its definition.</p>
+<p>'''</p>
+<h2 id="the-two-productively-important-machine-paths">9. The two productively important machine paths</h2>
+<p>When you want to understand machine behavior:</p>
+<pre><code>X:\Data\Machine\13\         ← default test BendMachine
+X:\Data\Machine\99\         ← BendMachine.Default in BA.Testing mode
+X:\Data\Machine\&lt;custom&gt;\   ← customer machines (delivered with installation)
+</code></pre>
+<p>Per machine:</p>
+<p>** <code>Machine.curl</code> -- machine definition (mandatory)
+** <code>Machine.mech</code> -- 3D mechanism (animatable)
+** <code>Model\**.iges</code> -- 3D parts of the machine
+** <code>BMachine.Post</code> (a string in <code>Machine.curl</code> such as <code>wad:Post/Bend/TrumpfB23.hx</code>) -- <strong>only a routing token</strong>. The basename selects a C# writer in <code>Src\API\Bend\Post\</code> via <code>Hub.GenerateNC</code>. The legacy <code>.hx</code> extension is preserved for backward compatibility; the file content is not interpreted as Hex.</p>
+<p>NOTE: <code>BendMachine</code> inherits from <code>Machine</code> (in <code>Src\Core\Model\</code> or similar). A bend machine is therefore a <em>specialization</em>. The pattern repeats for <code>LaserMachine</code>, <code>PunchMachine</code>, etc.</p>
+<p>'''</p>
+<h2 id="when-a-bend-bug-arrives-60-second-triage">10. When a Bend bug arrives -- 60-second triage</h2>
+<p>|===
+| Symptom | Likely code area | First file</p>
+<p>| &quot;Wrong tool selection&quot;
+| Auto-tooler scoring
+| <code>Ops\BendTooler.cs</code> + <code>Ops\BendToolHint.cs</code></p>
+<p>| &quot;Wrong bend order&quot;
+| Sequence optimizer or <code>BendTech</code> constructor
+| <code>Ops\BOptimizer.cs</code>, <code>BendTech.cs</code></p>
+<p>| &quot;Hem detected wrong / not at all&quot;
+| Phase splitting
+| <code>BendTech.cs</code> lines 32--46</p>
+<p>| &quot;Tool mounted in wrong spot&quot;
+| Mount generation
+| <code>BendMount.cs</code>, <code>Ops\BendTooler.cs</code></p>
+<p>| &quot;Back-gauge position wrong&quot;
+| BG placer
+| <code>Ops\BGPlacer.cs</code> (or <code>BGPlacer2X.cs</code>)</p>
+<p>| &quot;Bending aid placed wrong&quot;
+| BA placer
+| <code>Ops\BAPlacer.cs</code></p>
+<p>| &quot;Spurious collision warning&quot;
+| Crash engine
+| <code>BendOpCrash.cs</code> <em>or</em> <code>NBendCrash.cs</code> (which is active?)</p>
+<p>| &quot;Force/deduction value off&quot;
+| Bend calc
+| <code>BendCalc.cs</code> (Std) or <code>TBSBendCalc.cs</code> (Trumpf)</p>
+<p>| &quot;Robotic regrip in wrong place&quot;
+| UI glob + BendOp
+| <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55</p>
+<p>| &quot;GAP between tools wrong&quot;
+| GAP-adjust pass
+| <code>Ops\BendGAPAdjust.cs</code></p>
+<p>| &quot;NC code wrong&quot;
+| Post-processor (C# writer per dialect)
+| <code>Src\API\Bend\Post\&lt;Dialect&gt;.cs</code> (TrumpfDLD, Bystronic, LVD, ...); dispatcher in <code>Src\API\Basis\Basis.cs:138</code></p>
+<p>| &quot;BMC/DLD export wrong&quot;
+| Format exporter
+| <code>Ops\ExportBMC.cs</code> / <code>DLDExporter.cs</code></p>
+<p>| &quot;ACB sensor positioned wrong&quot;
+| ACB
+| <code>BendACB.cs</code></p>
+<p>| &quot;TBS custom data not picked up&quot;
+| Trumpf DB
+| <code>TBSCustomDB.cs</code>
+|===</p>
+<p>'''</p>
+<h2 id="exercise-1-find-explain-30-min-read-only">11. Exercise 1 -- &quot;Find &amp; Explain&quot; (30 min, read-only)</h2>
+<p><strong>Task:</strong> in half a page, explain how a hem bend flows from geometry to the emitted <code>Dump</code> line.</p>
+<p><strong>Approach:</strong></p>
+<p>. <code>BendCore.cs</code>: which <code>EBendKind</code> values belong to hems? (Hint: 4 of them.)
+. <code>BendTech.cs</code> lines 32--46: how is a hem flex split into two <code>BendOp</code>s?
+. <code>BendOp</code> constructor (lines 36--54): how is <code>mKind</code> set for hem bends? What is <code>OpenHemLimit</code>?
+. <code>BendSetup.Dump</code> lines 46--62: which fields of a <code>BendMount</code> end up in the output?
+. <strong>Bonus:</strong> which test in <code>Test\Bend\</code> covers the hem path? (Hint: <code>BasicBendAuto2.Test6</code> is a clue.)</p>
+<p><strong>Rubric:</strong></p>
+<p>|===
+| Level | Criterion</p>
+<p>| 1
+| Finds <code>EBendKind.OpenHem</code> / <code>.ClosedHem</code> and <code>BendTech.cs</code> with the hem-phase logic</p>
+<p>| 2
+| Can explain why a hem yields two <code>BendOp</code>s</p>
+<p>| 3
+| Connects this to the <code>Dump</code> format and a test</p>
+<p>| 4
+| Identifies the &quot;hem prebend with pre-angle&quot; edge case and locates the code path (<code>BendTech.cs</code> lines 81--88)
+|===</p>
+<p>'''</p>
+<h2 id="exercise-2-localize-a-real-bug-45-min-read-only">12. Exercise 2 -- &quot;Localize a real bug&quot; (45 min, read-only)</h2>
+<p><strong>Task:</strong> look at commit <code>4a5119dcb</code>: <em>&quot;Case 45728: Changing the suction cup state no longer deletes adjusted waypoints.&quot;</em> Answer:</p>
+<p>. Which classes were touched?
+. Which subsystem (Bend root, <code>Ops\</code>, UI, BCell)?
+. What was the trigger (which property setter)?
+. Which test covers the case?</p>
+<p><strong>Allowed tools:</strong> <code>git show 4a5119dcb</code> and <code>Grep</code>. Do not write any code.</p>
+<p><em>__</em>
+This exercise trains the most important reading skill in a repo this size: derive a code path backwards from an issue number.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="what-this-chapter-does-not-cover">13. What this chapter does <em>not</em> cover</h2>
+<p>** <strong>Fold domain</strong> (panel bender / TecZoneFold) -- separate chapter, similar model but different machine kinematics (clamping beam vs. press beam).
+** <strong>BCell</strong> (robot cell) -- separate chapter, own vocabulary (gripper, suction cups, regrip stations).
+** <strong>NC writers per dialect</strong> (<code>Src\API\Bend\Post\</code>) -- each is a substantial subsystem of its own and a candidate for a dedicated chapter. Note 2004 (Hex) is <strong>historical</strong> -- the postprocessors have all been rewritten in C#.
+** <strong><code>E3Plane</code> / <code>E3Flex</code> geometry model</strong> -- see Note 1005, separate chapter for <code>Flux.Core\Model</code>.
+** <strong>Tool-Setup-Optimizer (TSO)</strong> in detail -- separate special topic (<code>TSOBatch.cs</code>, <code>Ops\BOptimizer.cs</code>).</p>
+<p>'''</p>
+<h2 id="if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</h2>
+<p><em>__</em>
+*<em>Bend is not <em>one</em> operation but a <em>sequence</em>. The sequence is produced jointly by the <code>BendTech</code> constructor and the <code>BendTooler</code>. If a bug is about ordering, tool choice, or setup partitioning, the answer is almost always in <code>Src\Core\Bend\Ops\</code> -- not in the root. The root holds state, <code>Ops\</code> holds algorithms.</em>
+<em>__</em></p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. Code paths verified against <code>Src\Core\Bend\</code> and <code>Test\Bend\</code>. When this document disagrees with the repo, the repo wins._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#tldr-bend-in-twelve-lines">1. TL;DR -- Bend in twelve lines</a>
+  </li>
+  <li level="1">
+   <a href="#the-domain-in-two-minutes-vocabulary-of-the-machine-world">2. The domain in two minutes -- vocabulary of the machine world</a>
+  </li>
+  <li level="1">
+   <a href="#the-data-model-class-hierarchy">3. The data model -- class hierarchy</a>
+  </li>
+  <li level="1">
+   <a href="#module-map-the-47-files-grouped">4. Module map -- the 47 files grouped</a>
+  </li>
+  <li level="2">
+   <a href="#root-srccorebend-24-files">4.1 Root  (24 files)</a>
+  </li>
+  <li level="2">
+   <a href="#srccorebendops-17-files-toolpath-sequencing">4.2  (17 files -- toolpath / sequencing)</a>
+  </li>
+  <li level="2">
+   <a href="#ui-hooks-srcuibend-8-files">4.3 UI hooks  (8 files)</a>
+  </li>
+  <li level="2">
+   <a href="#notes-ftex">4.4 Notes (FTex)</a>
+  </li>
+  <li level="1">
+   <a href="#lifecycle-of-a-part-sequence-diagram-in-words">5. Lifecycle of a part -- sequence diagram in words</a>
+  </li>
+  <li level="1">
+   <a href="#three-canonical-reading-tours-15-min-each">6. Three canonical reading tours (15 min each)</a>
+  </li>
+  <li level="2">
+   <a href="#tour-a-how-does-a-3d-model-become-a-bend-sequence">Tour A -- "How does a 3D model become a bend sequence?"</a>
+  </li>
+  <li level="2">
+   <a href="#tour-b-what-does-a-tool-setup-look-like-internally">Tour B -- "What does a tool setup look like internally?"</a>
+  </li>
+  <li level="2">
+   <a href="#tour-c-what-does-a-test-look-like-and-what-is-a-golden-file">Tour C -- "What does a test look like, and what is a golden file?"</a>
+  </li>
+  <li level="1">
+   <a href="#common-stumbling-blocks-observations-from-the-code">7. Common stumbling blocks (observations from the code)</a>
+  </li>
+  <li level="2">
+   <a href="#two-crash-engines-side-by-side">7.1 Two crash engines side by side</a>
+  </li>
+  <li level="2">
+   <a href="#the-bendtech-constructor-is-the-logic">7.2 The  constructor is the logic</a>
+  </li>
+  <li level="2">
+   <a href="#bendop-is-a-partial-class">7.3  is a </a>
+  </li>
+  <li level="2">
+   <a href="#robotic-bend-lives-in-bendop-not-separately">7.4 Robotic bend lives in , not separately</a>
+  </li>
+  <li level="2">
+   <a href="#trumpf-specific-paths">7.5 Trumpf-specific paths</a>
+  </li>
+  <li level="2">
+   <a href="#dump-format-test-contract">7.6 Dump format = test contract</a>
+  </li>
+  <li level="1">
+   <a href="#tests-how-they-are-organized">8. Tests -- how they are organized</a>
+  </li>
+  <li level="2">
+   <a href="#inventory-xtestbend-25-files">Inventory (, 25 files)</a>
+  </li>
+  <li level="2">
+   <a href="#the-standard-test-pattern">The standard test pattern</a>
+  </li>
+  <li level="1">
+   <a href="#the-two-productively-important-machine-paths">9. The two productively important machine paths</a>
+  </li>
+  <li level="1">
+   <a href="#when-a-bend-bug-arrives-60-second-triage">10. When a Bend bug arrives -- 60-second triage</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-1-find-explain-30-min-read-only">11. Exercise 1 -- "Find & Explain" (30 min, read-only)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-2-localize-a-real-bug-45-min-read-only">12. Exercise 2 -- "Localize a real bug" (45 min, read-only)</a>
+  </li>
+  <li level="1">
+   <a href="#what-this-chapter-does-not-cover">13. What this chapter does not cover</a>
+  </li>
+  <li level="1">
+   <a href="#if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></span>
+ <span class="next"><a href="03_api_maps.html">API Maps</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

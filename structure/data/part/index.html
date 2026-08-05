@@ -1,0 +1,611 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Part</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../../folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Data & Process</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a class="active" href="index.html">Part</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Data & Process</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Part</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Part</h1>
+<p>Everything in Flux revolves around a single central concept: the
+<em><strong>Part</strong></em>*.
+A Part is the digital twin of a physical sheet-metal component — it holds the 3D geometry, the 2D flat drawing, and all the manufacturing instructions needed to produce that component on real machines.</p>
+<p>Every other major object either <em>belongs to</em> a Part or <em>organises</em> Parts for production.</p>
+<p>[source]</p>
+<pre><code>Part                       ← one sheet-metal component
+ ├── Model3                ← its 3D folded shape
+ ├── Drawing2              ← its unfolded flat shape
+ ├── BendTech              ← instructions for a press-brake
+ ├── FoldTech              ← instructions for a panel-bending machine
+ ├── FlatTech (CutTech)   ← instructions for laser / punch cutting
+ ├── Layout                ← single-part arrangement on one sheet
+ └── TrimJob / TrimTech   ← instructions for 5-axis trimming
+</code></pre>
+<p>At a higher level, many Parts can be grouped together for production:</p>
+<p>[source]</p>
+<pre><code>NestJob                    ← one production batch
+ ├── NestPart[]            ← which parts, how many
+ ├── NestSheet[]           ← which raw-material sheets are available
+ └── NestPattern[]         ← calculated sheet arrangements (results)
+</code></pre>
+<h2 id="the-part">The Part</h2>
+<p><strong>Namespace:</strong> <code>Flux.Core</code> — <strong>File:</strong> <code>Core/Part/Part.cs</code></p>
+<p><code>Part</code> is the root domain object.
+It is a container that links together every representation of the same physical component.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Info</code>        | <code>PartInfo</code>   | Name, material, thickness, and other metadata
+| <code>Model</code>       | <code>Model3</code>     | The 3D folded shape of the part
+| <code>Dwg</code>         | <code>Drawing2</code>   | The 2D unfolded (flat) drawing
+| <code>BendTech</code>    | <code>BendTech</code>   | Press-brake processing data
+| <code>FoldTech</code>    | <code>FoldTech</code>   | Panel-bender processing data
+| <code>CutTech</code>     | <code>FlatTech</code>   | Laser / punch cutting data
+| <code>Layout</code>      | <code>Layout</code>     | Quick single-part sheet arrangement
+| <code>TrimJob</code>     | <code>TrimJob</code>    | 5-axis trim / pipe-cutting job
+| <code>TrimTech</code>    | <code>TrimTech</code>   | 5-axis CAM processing data
+| <code>Flags</code>       | <code>EFlags</code>     | Bitfield of part-state switches
+|===</p>
+<h3 id="active-part">Active Part</h3>
+<p><code>Part.Current</code> is the static property that holds whichever Part the user is currently working on.
+This is the application's global selection state — think of it as &quot;the open document&quot;.</p>
+<p>[source,csharp]</p>
+<pre><code>Part active = Part.Current;   // the part currently open in the editor
+</code></pre>
+<h2 id="d-geometry-model3">3D Geometry — Model3</h2>
+<p><strong>File:</strong> <code>Core/Model/Model3.cs</code></p>
+<p><code>Model3</code> represents the part in its <em>folded</em>, three-dimensional state — what you would hold in your hands.</p>
+<p>It stores a tree of connected planar faces and bends:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Entities</code>      | <code>AList&lt;Entity3&gt;</code>  | All geometric elements (faces, bends, meshes)
+| <code>Baseplane</code>     | <code>E3Plane</code>         | The reference face — root of the geometry tree
+| <code>Flexes</code>        | <code>IEnumerable&lt;E3Flex&gt;</code> | All bend lines in the model
+| <code>FlatMesh</code>      | <code>CMesh</code>           | Triangle mesh in the fully flat state
+| <code>FoldedMesh</code>    | <code>CMesh</code>           | Triangle mesh in the folded state
+| <code>Category</code>      | <code>ECategory</code>       | Classification (sheet metal, laser, assembly …)
+| <code>MassProps</code>     | <code>MassProps</code>       | Centre of gravity, volume, weight
+|===</p>
+<h3 id="entity-hierarchy">Entity Hierarchy</h3>
+<p><code>Entity3</code> is the base class for all geometric elements inside a model:</p>
+<p>[source]</p>
+<pre><code>Entity3                 ← abstract base (has a name, transform)
+ ├── E3Thick            ← has a material thickness
+ │    ├── E3Plane       ← a flat face (most common element)
+ │    └── E3Flex        ← a bend connecting two faces
+ ├── E3Surface          ← imported freeform surface
+ ├── E3Insert           ← assembly sub-component
+ └── E3Mesh             ← arbitrary triangle mesh
+</code></pre>
+<p><code>E3Plane</code> objects are the faces of the part.
+<code>E3Flex</code> objects are the bends that connect those faces.
+Together they form a directed acyclic graph (DAG) rooted at <code>Baseplane</code>:</p>
+<p>[source]</p>
+<pre><code>Baseplane (E3Plane)
+ └── [via E3Flex &quot;bend A&quot;]
+      └── Side face (E3Plane)
+           └── [via E3Flex &quot;bend B&quot;]
+                └── Flange (E3Plane)
+</code></pre>
+<p>Every <code>E3Thick</code> has <code>Windward</code> (parent) and <code>Leeward</code> (child) pointers to navigate this tree.</p>
+<h2 id="d-flat-drawing-drawing2">2D Flat Drawing — Drawing2</h2>
+<p><strong>File:</strong> <code>Core/Model/Drawing2.cs</code></p>
+<p><code>Drawing2</code> is the unfolded, two-dimensional representation — the flat blank that will be cut from a sheet.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Entities</code>  | <code>Entity2[]</code>    | All 2D elements
+| <code>Plines</code>    | <code>E2Pline[]</code>    | Contours (outer edge, holes, internal features)
+| <code>Bendlines</code> | <code>E2Bendline[]</code> | Lines where the part will be bent
+|===</p>
+<p>The most important element is <code>E2Pline</code> — a 2D polyline that describes a contour.
+The outer boundary of the flat part is one <code>E2Pline</code>; every hole or cutout is another.</p>
+<h2 id="geometry-primitives">Geometry Primitives</h2>
+<p>These types live in <code>Flux.Base</code> and are used throughout the entire codebase.</p>
+<h3 id="points-and-vectors">Points and Vectors</h3>
+<p>[cols=&quot;1,3&quot;, options=&quot;header&quot;]
+|===
+| Type | Description</p>
+<p>| <code>Point2</code>    | 2D position (x, y) as <code>double</code>
+| <code>Point3</code>    | 3D position (x, y, z) as <code>double</code>
+| <code>Point2f</code>   | 2D position as <code>float</code> (used in rendering)
+| <code>Point3f</code>   | 3D position as <code>float</code> (used in rendering)
+| <code>Vector2</code>   | 2D direction with length
+| <code>Vector3</code>   | 3D direction; supports dot product, cross product, normalisation
+|===</p>
+<h3 id="transforms">Transforms</h3>
+<p>[cols=&quot;1,3&quot;, options=&quot;header&quot;]
+|===
+| Type | Description</p>
+<p>| <code>Matrix2</code>      | 2D affine transform — rotation, translation, scaling
+| <code>Matrix3</code>      | 3D affine transform
+| <code>CoordSystem</code>  | An oriented coordinate frame: one origin point and three perpendicular axes
+|===</p>
+<h3 id="polylines-pline">Polylines — Pline</h3>
+<p><strong>File:</strong> <code>Base/Pline/Pline.cs</code></p>
+<p><code>Pline</code> is one of the most frequently used types in the codebase.
+It represents a 2D contour made of straight lines and arcs.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Segs</code>     | <code>Segment[]</code> | The individual line or arc segments
+| <code>IsClosed</code> | <code>bool</code>      | Whether the contour is closed (a loop)
+| <code>IsOuter</code>  | <code>bool</code>      | Whether this is an outer boundary (vs. a hole)
+| <code>Bound</code>    | <code>Bound2</code>    | Axis-aligned bounding box
+| <code>Area</code>     | <code>double</code>    | Enclosed area
+|===</p>
+<p>Think of <code>Pline</code> as the 2D equivalent of a shape — it can be the outline of the whole part, a rectangular hole, or an arc slot.</p>
+<h2 id="press-brake-data-bendtech">Press-Brake Data — BendTech</h2>
+<p><strong>File:</strong> <code>Core/Bend/BendTech.cs</code></p>
+<p><code>BendTech</code> stores everything needed to produce the part's bends on a press-brake machine.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>BMachine</code>  | <code>BendMachine</code>     | The target machine
+| <code>Ops</code>       | <code>AList&lt;BendOp&gt;</code>   | Ordered list of bend operations
+| <code>Cell</code>      | <code>BCellTech</code>       | Robotic cell configuration (optional)
+| <code>Robotic</code>   | <code>bool</code>            | Whether a robot handles the part
+|===</p>
+<h3 id="bend-operations-bendop">Bend Operations — BendOp</h3>
+<p>Each <code>BendOp</code> is one individual bend, in sequence:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Flex</code>       | <code>E3Flex</code>        | The model element being bent
+| <code>Kind</code>       | <code>EBendKind</code>     | What kind of bend (air bend, hem, coin …)
+| <code>Angle</code>      | <code>double</code>        | Target bend angle in degrees
+| <code>Handling</code>   | <code>EHandlingFlip</code> | How the operator re-orients the part after this step
+| <code>Tools</code>      | <code>BendToolSet</code>   | Punch and die selected for this step
+|===</p>
+<h3 id="ebendkind-bend-types">EBendKind — Bend Types</h3>
+<p>[source,csharp]</p>
+<pre><code>enum EBendKind {
+    AirBend,        // most common: punch doesn't reach die bottom
+    Coining,        // high-pressure: punch presses all the way
+    ClosedHem,      // folds flat onto itself
+    OpenHem,        // folds back but leaves a gap
+    BumpBend,       // multiple small hits to form a curve
+    FormBend,       // uses a special forming tool
+    // … and several pre-bend variants
+}
+</code></pre>
+<h3 id="ehandlingflip-part-re-orientation">EHandlingFlip — Part Re-orientation</h3>
+<p>After each bend the operator (or robot) may need to turn the part:</p>
+<p>[source,csharp]</p>
+<pre><code>enum EHandlingFlip {
+    None,       // keep orientation
+    Bump,       // push forward along the machine
+    RotateL,    // rotate left 90°
+    RotateR,    // rotate right 90°
+    Rotate180,  // rotate 180°
+    Flip,       // flip over (turn upside down)
+}
+</code></pre>
+<h2 id="panel-bender-data-foldtech">Panel-Bender Data — FoldTech</h2>
+<p><strong>File:</strong> <code>Core/Fold/FoldTech.cs</code></p>
+<p><code>FoldTech</code> covers panel-bending and bump-bending machines — different from press-brakes in that the sheet stays mostly still and the machine's bending beam moves.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>FMachine</code>             | <code>FoldMachine</code>         | Target machine
+| <code>Sections</code>             | <code>IList&lt;FoldSection&gt;</code>  | Segments of the part processed together
+| <code>Material</code>             | <code>Material</code>            | Resolved material (may differ from the request)
+| <code>CanOptimizeSequence</code>  | <code>bool</code>                | Whether bend order can be reordered freely
+|===</p>
+<h3 id="foldsection-foldstep">FoldSection → FoldStep</h3>
+<p>[source]</p>
+<pre><code>FoldTech
+ └── FoldSection[]     ← one group of bends processed without re-gripping
+      └── FoldStep[]   ← each individual machine movement
+</code></pre>
+<h2 id="cutting-data-flattech-cuttech">Cutting Data — FlatTech (CutTech)</h2>
+<p><strong>File:</strong> <code>Core/Cut/FlatTech.cs</code></p>
+<p><code>FlatTech</code> holds everything for cutting the flat blank from a raw sheet, either by laser or by punch.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Dwg</code>            | <code>Drawing2</code>          | The flat drawing being cut
+| <code>Config</code>         | <code>CutConfig</code>         | Machine, material, thickness, film/treatment settings
+| <code>AllSteps</code>       | <code>List&lt;CutStep&gt;</code>     | Ordered cutting operations
+| <code>Entities</code>       | <code>AList&lt;CutEntity&gt;</code>  | Contours being processed
+| <code>HasUncutSegs</code>   | <code>bool</code>              | Warning: some contours have no tooling yet
+|===</p>
+<p><code>CutStep</code> subtypes include <code>LaserCut</code>, <code>PunchStep</code>, <code>CommonLineCut</code>, and <code>ScrapCut</code>.</p>
+<h2 id="sheet-layout-layout">Sheet Layout — Layout</h2>
+<p><strong>File:</strong> <code>Core/Layout/Layout.cs</code></p>
+<p>A <code>Layout</code> arranges one or more part instances on a single physical sheet, ready for cutting.</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>SheetSize</code>     | <code>Size2</code>                  | Physical sheet dimensions (width × height)
+| <code>SheetMargin</code>   | <code>Margin2</code>                | Unusable margins at the sheet edges
+| <code>SheetGrain</code>    | <code>EGrain</code>                 | Rolling direction of the material
+| <code>Children</code>      | <code>AList&lt;Placement&gt;</code>       | Each positioned part instance
+| <code>Config</code>        | <code>CutConfig</code>              | Machine and material settings
+| <code>Estimate</code>      | <code>Estimates</code>              | Calculated machining time
+|===</p>
+<h3 id="placement">Placement</h3>
+<p>Each <code>Placement</code> is one instance of a part on the sheet:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Tech</code>         | <code>FlatTech</code>  | Cutting data for this part
+| <code>Pt</code>           | <code>Point2</code>    | Position of the part on the sheet
+| <code>Angle</code>        | <code>double</code>    | Rotation in radians
+| <code>Mirrored</code>     | <code>bool</code>      | Whether the part is flipped on the X axis
+| <code>IsColliding</code>  | <code>bool</code>      | Validation: overlaps with another placement
+| <code>GrainMismatch</code>| <code>bool</code>      | Validation: rolling direction is wrong
+|===</p>
+<p>A single <code>Part</code> can appear as many <code>Placement</code> objects on the same sheet.</p>
+<h2 id="nesting-nestjob">Nesting — NestJob</h2>
+<p><strong>File:</strong> <code>Core/Nest/NestJob.cs</code></p>
+<p>When multiple different part types must be cut from a batch of sheets, a <code>NestJob</code> manages the optimisation.</p>
+<p>[source]</p>
+<pre><code>NestJob
+ ├── NestPart[]       ← which parts are required and how many
+ ├── NestSheet[]      ← raw sheets available (size, grain, quantity)
+ └── NestPattern[]    ← one result sheet per used sheet
+      └── NestElement[] ← each part instance with its position
+</code></pre>
+<h3 id="nestpart">NestPart</h3>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Part</code>      | <code>Part</code>  | The part to nest
+| <code>Min</code>       | <code>int</code>   | Minimum quantity required
+| <code>Max</code>       | <code>int</code>   | Maximum allowed
+| <code>Complete</code>  | <code>int</code>   | How many have been placed so far
+|===</p>
+<h3 id="nestsheet">NestSheet</h3>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Size</code>   | <code>Size2</code>   | Sheet dimensions
+| <code>Margin</code> | <code>Margin2</code> | Unusable edge margins
+| <code>Qty</code>    | <code>int</code>     | Number of sheets available
+| <code>Grain</code>  | <code>EGrain</code>  | Rolling direction
+|===</p>
+<h3 id="nestpattern">NestPattern</h3>
+<p>A <code>NestPattern</code> is one filled sheet — the output for a single raw sheet after nesting:</p>
+<p>[cols=&quot;2,1,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Type | Meaning</p>
+<p>| <code>Job</code>      | <code>NestJob</code>           | Parent job
+| <code>Sheet</code>    | <code>NestSheet</code>         | Which sheet type was used
+| <code>Elements</code> | <code>List&lt;NestElement&gt;</code> | All placed part instances
+|===</p>
+<h2 id="robotic-bend-cell-bcelltech">Robotic Bend Cell — BCellTech</h2>
+<p><strong>File:</strong> <code>Core/BCell/</code></p>
+<p>When a press-brake is combined with a robot for automated material handling, the robotic cell configuration is stored in <code>BCellTech</code>.</p>
+<p>The cell is composed of typed equipment items:</p>
+<p>[source]</p>
+<pre><code>BCellItem               ← abstract: has a name, size, and position
+ ├── BStorage           ← pallet, basket, conveyor (where parts wait)
+ ├── BGripper           ← end-of-arm tool (vacuum cups or jaw gripper)
+ ├── BLightBox          ← vision reference target
+ ├── BFurniture         ← passive collision geometry (tables, fences)
+ └── BEquipment         ← active conveyors
+</code></pre>
+<p>Key planning objects:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Type | Meaning</p>
+<p>| <code>BRobotPose</code>    | A robot TCP (tool-centre-point) position and orientation
+| <code>BPickupPlan</code>   | How and from where the robot picks up a part
+| <code>BDepositPlan</code>  | Where and how the robot places a finished part
+| <code>BRegrip</code>       | A robot manoeuvre to re-orient the part mid-sequence
+|===</p>
+<h2 id="axis-trimming-trimjob-trimtech">5-Axis Trimming — TrimJob / TrimTech</h2>
+<p><strong>Files:</strong> <code>Core/Trim/</code></p>
+<p>For parts that need 5-axis cutting (e.g. pipes or complex 3D profiles), <code>TrimJob</code> and <code>TrimTech</code> fill the same role as <code>NestJob</code> and <code>FlatTech</code> do for flat cutting.</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Type | Meaning</p>
+<p>| <code>TrimJob</code>   | The production job: which machine, which parts, quantities
+| <code>TrimTech</code>  | CAM data for a single part: tool paths, lead-ins, sequences
+|===</p>
+<h2 id="global-state-fx">Global State — FX</h2>
+<p><strong>File:</strong> <code>Core/FX.cs</code></p>
+<p><code>FX</code> is a large static class that acts as the application's global state and service locator.
+A few key properties beginners will encounter frequently:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Property | Meaning</p>
+<p>| <code>FX.Part.Current</code>    | The Part currently open in the editor
+| <code>FX.Settings</code>        | Application-wide user settings
+| <code>FX.DefaultUnit</code>     | Whether the app uses millimetres or inches
+| <code>FX.DataDir</code>         | Path to the installation data directory
+| <code>FX.AdminMode</code>       | Whether admin-only features are enabled
+|===</p>
+<p>NOTE: <code>FX</code> extends <code>BA</code> (the Base utility module), which means all low-level helpers (logging, geometry, colours) are also accessible through <code>FX</code>.</p>
+<h2 id="change-notifications">Change Notifications</h2>
+<p>The data model uses a lightweight property-watching system instead of (or alongside) standard .NET <code>INotifyPropertyChanged</code>.</p>
+<p>Classes that participate implement <code>ISheafSite</code> and expose <code>PWatch</code> / <code>PUnwatch</code> methods.
+Change events are identified by the <code>EProp</code> enum:</p>
+<p>[source,csharp]</p>
+<pre><code>
+part.PWatch(EProp.DwgChanged, OnDwgChanged);
+
+part.PUnwatch(EProp.DwgChanged, OnDwgChanged);
+</code></pre>
+<p>Common <code>EProp</code> values: <code>DwgChanged</code>, <code>Bendlines</code>, <code>Visual</code>, <code>SheetSize</code>, <code>SheetGrain</code>.</p>
+<h2 id="complete-relationship-diagram">Complete Relationship Diagram</h2>
+<p>[source]</p>
+<pre><code>                     NestJob
+                    /   |    \
+          NestPart[]  NestSheet[]  NestPattern[]
+              |                        |
+            Part**              NestElement[]
+            /|\\ \\                   /  \
+           / | \\ \\          NestPart   Point2
+          /  |  \\  \\
+    Model3 Dwg  BendTech  FoldTech  FlatTech(CutTech)  TrimJob
+      |    |       |          |          |
+  E3Plane  E2Pline  BendOp[]  FoldSection[]  CutStep[]
+  E3Flex   E2Bendline            FoldStep[]
+  E3Mesh
+
+Layout
+  └── Placement[]
+        ├── FlatTech (ref to Part's CutTech)
+        ├── Point2  (position on sheet)
+        └── double  (rotation angle)
+
+* A Layout also belongs to a Part (Part.Layout = quick single-part layout)
+</code></pre>
+<h2 id="key-enumerations-summary">Key Enumerations Summary</h2>
+<p>[cols=&quot;1,3&quot;, options=&quot;header&quot;]
+|===
+| Enum | Values (selection)</p>
+<p>| <code>EBendKind</code>     | <code>AirBend</code>, <code>Coining</code>, <code>ClosedHem</code>, <code>OpenHem</code>, <code>BumpBend</code>, <code>FormBend</code>
+| <code>EHandlingFlip</code> | <code>None</code>, <code>Bump</code>, <code>RotateL</code>, <code>RotateR</code>, <code>Rotate180</code>, <code>Flip</code>
+| <code>ECategory</code>     | <code>SheetMetal</code>, <code>Laser</code>, <code>Assembly</code>, <code>Surface</code>, <code>Tube</code>, <code>MultiBody</code>
+| <code>EGrain</code>        | Describes the rolling direction of sheet material
+| <code>ECutStatus</code>    | <code>PartOverlap</code>, <code>UntooledPlines</code>, <code>GrainMismatch</code>, <code>OutOfMachineStroke</code> …
+| <code>EProp</code>         | <code>DwgChanged</code>, <code>Bendlines</code>, <code>Visual</code>, <code>SheetSize</code>, <code>SheetGrain</code> …
+|===</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#the-part">The Part</a>
+  </li>
+  <li level="2">
+   <a href="#active-part">Active Part</a>
+  </li>
+  <li level="1">
+   <a href="#d-geometry-model3">3D Geometry — Model3</a>
+  </li>
+  <li level="2">
+   <a href="#entity-hierarchy">Entity Hierarchy</a>
+  </li>
+  <li level="1">
+   <a href="#d-flat-drawing-drawing2">2D Flat Drawing — Drawing2</a>
+  </li>
+  <li level="1">
+   <a href="#geometry-primitives">Geometry Primitives</a>
+  </li>
+  <li level="2">
+   <a href="#points-and-vectors">Points and Vectors</a>
+  </li>
+  <li level="2">
+   <a href="#transforms">Transforms</a>
+  </li>
+  <li level="2">
+   <a href="#polylines-pline">Polylines — Pline</a>
+  </li>
+  <li level="1">
+   <a href="#press-brake-data-bendtech">Press-Brake Data — BendTech</a>
+  </li>
+  <li level="2">
+   <a href="#bend-operations-bendop">Bend Operations — BendOp</a>
+  </li>
+  <li level="2">
+   <a href="#ebendkind-bend-types">EBendKind — Bend Types</a>
+  </li>
+  <li level="2">
+   <a href="#ehandlingflip-part-re-orientation">EHandlingFlip — Part Re-orientation</a>
+  </li>
+  <li level="1">
+   <a href="#panel-bender-data-foldtech">Panel-Bender Data — FoldTech</a>
+  </li>
+  <li level="2">
+   <a href="#foldsection-foldstep">FoldSection → FoldStep</a>
+  </li>
+  <li level="1">
+   <a href="#cutting-data-flattech-cuttech">Cutting Data — FlatTech (CutTech)</a>
+  </li>
+  <li level="1">
+   <a href="#sheet-layout-layout">Sheet Layout — Layout</a>
+  </li>
+  <li level="2">
+   <a href="#placement">Placement</a>
+  </li>
+  <li level="1">
+   <a href="#nesting-nestjob">Nesting — NestJob</a>
+  </li>
+  <li level="2">
+   <a href="#nestpart">NestPart</a>
+  </li>
+  <li level="2">
+   <a href="#nestsheet">NestSheet</a>
+  </li>
+  <li level="2">
+   <a href="#nestpattern">NestPattern</a>
+  </li>
+  <li level="1">
+   <a href="#robotic-bend-cell-bcelltech">Robotic Bend Cell — BCellTech</a>
+  </li>
+  <li level="1">
+   <a href="#axis-trimming-trimjob-trimtech">5-Axis Trimming — TrimJob / TrimTech</a>
+  </li>
+  <li level="1">
+   <a href="#global-state-fx">Global State — FX</a>
+  </li>
+  <li level="1">
+   <a href="#change-notifications">Change Notifications</a>
+  </li>
+  <li level="1">
+   <a href="#complete-relationship-diagram">Complete Relationship Diagram</a>
+  </li>
+  <li level="1">
+   <a href="#key-enumerations-summary">Key Enumerations Summary</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../index.html">Data & Process</a></span>
+ <span class="next"><a href="partinformation.html">Part.Dwg</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

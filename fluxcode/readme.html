@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Flux Onboarding Handbook</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a class="active" href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="readme.html">Flux Onboarding Handbook</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Flux Onboarding Handbook</h1>
+<p>___*
+<strong>For new engineers joining Flux development.</strong> This is the index. Every chapter stands on its own; the recommended path is below.</p>
+<p><strong>Philosophy.</strong> First six months: read, navigate, understand, ask. Productive code commits come <em>after</em> mental scaffolding is in place. These chapters teach the scaffolding.</p>
+<p><strong>Language.</strong> All chapters in English. Quoting code, paths, and FTex notes verbatim.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="at-a-glance">At a glance</h2>
+<p>[cols=&quot;,,,&gt;&quot;]
+|===
+| Ch | Title | What you get | Length</p>
+<p>| <strong>00</strong>
+| link:ac:Flux Onboarding 00 - Welcome and Repo Map[Welcome &amp; Repo Map]
+| What Flux is, repo layout, modules, flavors, build caveats, code conventions
+| ~270 lines</p>
+<p>| <strong>01</strong>
+| link:ac:Flux Onboarding 01 - Architecture and System Context[Architecture &amp; System Context]
+| Five layers, M/V/Glob, Sheaf, Hub, Lux, persistence, threading, undo, errors
+| ~290 lines</p>
+<p>| <strong>02</strong>
+| link:ac:Flux Onboarding 02 - Subsystem Bend (Press Brake)[Subsystem: Bend (Press Brake)]
+| Canonical subsystem walk-through. <strong>Template</strong> for future per-subsystem chapters.
+| ~330 lines</p>
+<p>| <strong>02.1</strong>
+| link:ac:Flux Onboarding 02.1 - Subsystem BCell (Bend Cell Automation)[Subsystem: BCell (Bend Cell Automation)]
+| Robot-cell automation layered on top of Bend. Pickup / regrip / deposit, grippers, routing.
+| ~290 lines</p>
+<p>| <strong>03</strong>
+| link:ac:Flux Onboarding 03 - API Maps[API Maps]
+| Central interfaces, abstract classes, callers/callees, stability legend
+| ~270 lines</p>
+<p>| <strong>04</strong>
+| link:ac:Flux Onboarding 04 - Data Model Catalog[Data Model Catalog]
+| Five layers of data (Geo → Drawing → 3D → Tech → Part), persistence, migration
+| ~250 lines</p>
+<p>| <strong>05</strong>
+| link:ac:Flux Onboarding 05 - Design Patterns[Design Patterns -- A Reader's Guide]
+| Patterns Flux actually uses, with file references and pitfalls
+| ~210 lines</p>
+<p>| <strong>06</strong>
+| link:ac:Flux Onboarding 06 - Tests and Golden Paths[Tests &amp; Golden Paths]
+| Flit framework, golden-file pattern, debug tips for read-only debugging
+| ~180 lines</p>
+<p>| <strong>07</strong>
+| link:ac:Flux Onboarding 07 - Guided Code Tours[Guided Code Tours]
+| Eight 10--20 min walks, each with named stops and a self-check
+| ~190 lines</p>
+<p>| <strong>08</strong>
+| link:ac:Flux Onboarding 08 - CAM Glossary[CAM Glossary with Code Mapping]
+| Alphabetized lookup of every term you'll meet
+| ~270 lines</p>
+<p>| <strong>09</strong>
+| link:ac:Flux Onboarding 09 - Find and Explain Exercises[Find &amp; Explain Exercises]
+| 12 read-only exercises with rubrics and a 6-month calendar
+| ~210 lines
+|===</p>
+<p>Total: ~2500 lines (≈ 60 printed pages).</p>
+<p>'''</p>
+<h2 id="recommended-reading-paths">Recommended reading paths</h2>
+<h3 id="path-a-im-starting-monday-5-days-10-hours">Path A -- &quot;I'm starting Monday&quot; (5 days, ~10 hours)</h3>
+<p>|===
+| Day | Read</p>
+<p>| <strong>1</strong>
+| Chapter 00 in full + skim 08 (glossary).</p>
+<p>| <strong>2</strong>
+| Chapter 01 in full + tour A and tour D from chapter 07.</p>
+<p>| <strong>3</strong>
+| Chapter 02 in full (Bend).</p>
+<p>| <strong>4</strong>
+| Chapter 06 (tests) + tour C (rendering) + tour E (persistence).</p>
+<p>| <strong>5</strong>
+| Chapter 09 -- exercise 1 and exercise 2.
+|===</p>
+<p>By Friday you have a vocabulary, a mental model, an understanding of one subsystem, and a sense of how tests work. That's the right foundation.</p>
+<h3 id="path-b-tell-me-where-to-find-x-lookup-mode">Path B -- &quot;Tell me where to find X&quot; (lookup mode)</h3>
+<p>You're triaging a question or a stack trace and need a fast lookup.</p>
+<p>|===
+| Need | Go to</p>
+<p>| What does <em>this term</em> mean?
+| Chapter 08 (Glossary)</p>
+<p>| Where is <em>this class</em> defined?
+| Chapter 08 cross-find table</p>
+<p>| What is the public surface of subsystem X?
+| Chapter 03 (API Maps)</p>
+<p>| How does data flow through the system?
+| Chapter 04 (Data Model)</p>
+<p>| What pattern is this code?
+| Chapter 05 (Patterns)</p>
+<p>| How do tests work?
+| Chapter 06</p>
+<p>| Walk me through <em>this flow</em>
+| Chapter 07 (the relevant tour)
+|===</p>
+<h3 id="path-c-six-month-curriculum">Path C -- &quot;Six-month curriculum&quot;</h3>
+<p>Use the calendar in chapter 09 §&quot;A learning calendar&quot;. One exercise per week, paced to internalize the content.</p>
+<p>|===
+| Month | Focus</p>
+<p>| 1
+| Navigate. Vocabulary. Mental model.</p>
+<p>| 2
+| Data flow. Control flow.</p>
+<p>| 3
+| Real bugs. Dual systems.</p>
+<p>| 4
+| Tests. Persistence.</p>
+<p>| 5
+| UI flows. Full traces.</p>
+<p>| 6
+| Synthesis. Teach a 30-minute tech talk.
+|===</p>
+<p>'''</p>
+<h2 id="what-this-handbook-is-not">What this handbook is <em>not</em></h2>
+<p>** <strong>Not a replacement for <code>Notes\Dev\…</code> and <code>Notes\Tech\…</code>.</strong> Those are the source of truth for low-level facts. This handbook orients you so you can read those notes effectively.
+** <strong>Not a build guide.</strong> Build is in <code>Notes\Dev\1002.BuildingFlux.ftx</code> (with the caveats in chapter 00 §8). On day 1, ask your buddy.
+** <strong>Not a feature spec.</strong> Specs live in design tickets and PR descriptions.
+** <strong>Not API reference docs.</strong> Doxygen-style reference does not exist for Flux. Read code; chapter 03 gives orientation.</p>
+<p>'''</p>
+<h2 id="conventions-used-in-these-chapters">Conventions used in these chapters</h2>
+<p>** <strong>File paths</strong> are absolute against the repo root (<code>X:\…</code>) or relative under <code>Src\</code> / <code>Notes\</code> / <code>Doc\</code> / <code>Test\</code>.
+** <strong>Code excerpts</strong> are quoted verbatim from the current tree. If you spot drift, file an issue.
+** <strong>Cross-references</strong> link by chapter (e.g. &quot;see chapter 02 §7.5&quot;). When section numbers move, update them.
+** <strong>Stability badges</strong> in chapter 03: 🟢 stable, 🟡 internal, 🔴 in-flight.
+** <strong>Single-line callouts</strong> (<code>+&gt; ⚠️ ...+</code>) flag pitfalls and intentional rough edges.</p>
+<p>'''</p>
+<h2 id="how-to-keep-this-handbook-honest">How to keep this handbook honest</h2>
+<p>These docs degrade fastest at three specific seams. Watch them:</p>
+<p>. <strong>The §8 of chapter 00</strong> (&quot;1002 says vs. today&quot;). Refresh whenever the build toolchain changes.
+. <strong>Stability ratings</strong> in chapter 03. Move ratings between green/yellow/red as code matures or refactors.
+. <strong>Real-bug exercises</strong> in chapter 09 (especially exercise 5). Replace with newer fixes once a year.</p>
+<p>A small ritual: each new joiner files one issue or PR against this handbook reflecting one inaccuracy or one lesson learned. That's how documentation stays alive.</p>
+<p>'''</p>
+<h2 id="companion-resources-inside-the-repo">Companion resources inside the repo</h2>
+<p>** <code>Notes\Dev\</code> -- developer notes (FTex). Most important: 1001, 1002, 1003, 1005, 1009, 1011, 1013.
+** <code>Notes\Tech\</code> -- technical notes (FTex). Most useful: 2007 (Curl), 2013 (Flavors), 2015 (Message IDs).
+** <code>Doc\Img\</code> -- domain-specific image galleries. Open <code>Doc\Img\Bend\</code>, <code>Doc\Img\BCell\</code>, <code>Doc\Img\Fold\</code>, <code>Doc\Img\Laser\</code> to recognize machine vocabulary visually.
+** <code>Help\</code> -- end-user manual (FTex). Sometimes the clearest definition of a feature lives here.</p>
+<p>'''</p>
+<h2 id="where-to-ask">Where to ask</h2>
+<p>** <strong>Onboarding buddy.</strong> Your first day, ask for one. Use them.
+** <strong>Issues / PR comments.</strong> Public, searchable, durable.
+** <strong>Chat (Slack / Teams).</strong> Fast but volatile -- for high-value answers, repost to the issue tracker.</p>
+<p>'''</p>
+<h2 id="contributing-to-this-handbook">Contributing to this handbook</h2>
+<p>The chapters are markdown -- edit them like any other source file.</p>
+<p>** Keep prose tight; one idea per paragraph.
+** Don't repeat content that already lives in <code>Notes\</code> or <code>Help\</code> -- link to it.
+** Verify every code path you cite -- paths and line numbers drift fast.
+** File-scoped ownership: chapter 00 has the broadest reach, so changes there get extra review. Per-subsystem chapters belong to the subsystem owner.</p>
+<ul>
+<li>All chapters are in English, regardless of contributor language. The codebase is global.</li>
+</ul>
+<p>'''</p>
+<h2 id="maintenance-ledger">Maintenance ledger</h2>
+<p>|===
+| Chapter | Last full audit | Notes</p>
+<p>| 00 Welcome
+| 2026-05-04
+| Postprocessor section corrected (no longer Hex).</p>
+<p>| 01 Architecture
+| 2026-05-04
+| Diagram and HX entry corrected.</p>
+<p>| 02 Bend
+| 2026-05-04
+| NC generation section corrected.</p>
+<p>| 02.1 BCell
+| 2026-05-04
+| Output-stage NC reference corrected.</p>
+<p>| 03 API Maps
+| 2026-05-04
+| §10.2 (post-processor) and §11.3 (HXReader = HoopsReader) corrected.</p>
+<p>| 04 Data Model
+| 2026-05-04
+| §9.4 IO table corrected.</p>
+<p>| 05 Design Patterns
+| 2026-05-04
+|</p>
+<p>| 06 Tests
+| 2026-05-04
+|</p>
+<p>| 07 Tours
+| 2026-05-04
+|</p>
+<p>| 08 Glossary
+| 2026-05-04
+| Hex / PDL / NC code entries corrected; Post writer entry added.</p>
+<p>| 09 Exercises
+| 2026-05-04
+|
+|===</p>
+<p>Next audit target: when major refactors land in <code>Src\Core\Bend\Ops\</code>, or when the dual crash engines converge.</p>
+<p>'''</p>
+<p>*Welcome aboard. Read carefully. Ask early._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#at-a-glance">At a glance</a>
+  </li>
+  <li level="1">
+   <a href="#recommended-reading-paths">Recommended reading paths</a>
+  </li>
+  <li level="2">
+   <a href="#path-a-im-starting-monday-5-days-10-hours">Path A -- "I'm starting Monday" (5 days, ~10 hours)</a>
+  </li>
+  <li level="2">
+   <a href="#path-b-tell-me-where-to-find-x-lookup-mode">Path B -- "Tell me where to find X" (lookup mode)</a>
+  </li>
+  <li level="2">
+   <a href="#path-c-six-month-curriculum">Path C -- "Six-month curriculum"</a>
+  </li>
+  <li level="1">
+   <a href="#what-this-handbook-is-not">What this handbook is not</a>
+  </li>
+  <li level="1">
+   <a href="#conventions-used-in-these-chapters">Conventions used in these chapters</a>
+  </li>
+  <li level="1">
+   <a href="#how-to-keep-this-handbook-honest">How to keep this handbook honest</a>
+  </li>
+  <li level="1">
+   <a href="#companion-resources-inside-the-repo">Companion resources inside the repo</a>
+  </li>
+  <li level="1">
+   <a href="#where-to-ask">Where to ask</a>
+  </li>
+  <li level="1">
+   <a href="#contributing-to-this-handbook">Contributing to this handbook</a>
+  </li>
+  <li level="1">
+   <a href="#maintenance-ledger">Maintenance ledger</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="09_find_and_explain_exercises.html">Assignments</a></span>
+ <span class="next"><a href="../flux/index.html">General Notes</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

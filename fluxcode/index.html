@@ -1,0 +1,247 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>FluxCode</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a class="active" href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>FluxCode</h1>
+<p>Welcome to the Metamation Technical Notes.
+<a href="https://trumpf.atlassian.net/wiki/spaces/tzb/pages/1836253265/flux+onboarding+handbook">https://trumpf.atlassian.net/wiki/spaces/TZB/pages/1836253265/Flux+Onboarding+Handbook</a></p>
+<h2 id="code-structure-of-flux">Code structure of Flux</h2>
+<p>The picture below shows the major components of Flux and their dependencies.</p>
+<p>image::FluxStruc.png[]</p>
+<p>** Ellipses are Flux DLLs, with names such as Flux.Core.dll and Flux.UI.dll.
+** Rectangles are Flux executables, with names such as Flux.Test.exe and Flux.exe.
+** Flux.exe is the final Flux executable that end-users run.
+** Other nodes in the graph are components above and below Flux.</p>
+<p>The sections below give a brief explanation of each component.</p>
+<h3 id="core">Core</h3>
+<p>This is essentially the Flux engine. It contains everything in Flux except the user interface used to manipulate Flux objects with keyboard and mouse.</p>
+<p>If we use a Model-View-Controller lens, Flux.Core contains both models and views. It includes model classes such as E3Plane, E2Spline, and LaserCut, and corresponding view-model classes such as E3PlaneVM, E2SplineVM, and LaserCutVM.</p>
+<p>These view-model classes know how to render through OpenGL. Rendering goes through a small set of entry points, so swapping render backends in the future is still feasible.</p>
+<p>Earlier architecture kept VM classes outside Core. That separation proved difficult because Flux is not a typical business application with loosely coupled models and presentation. Flux objects are CAD/CAM objects that are tightly coupled to visual representation.</p>
+<p>For example, even a basic operation like generating NC code requires rendering 2D or 3D views of the part/model for inclusion in output. Rendering bend setup sheets, clearly a Core operation, can require thumbnails or 3D-PDF data.</p>
+<p>With strict Core/UI separation, even a call like BendTech.GenerateCode became complex. Core had to use artificial, type-unsafe bridging patterns, such as the Hub whiteboard, to access upstream capabilities. Core could not even save a Flux-native FX file cleanly, because thumbnail rendering lived in higher layers.</p>
+<p>So while modularity is valuable, Flux moved toward a more integrated architecture after practical experience.</p>
+<h4 id="core-module-map">Core module map</h4>
+<p>** Layout: layout and nesting related code and NC post generators.
+** Layout/Post: NC code generators for different machines.
+** Part: part objects.
+** Model: geometric model representation and operations.
+** Trim: 3D/E2 geometry and trimming/formation.
+** CAM: CAM process, tooling, and cut sequencing.
+** Laser: laser-specific processing and operations.
+** Bend: press-brake bending logic and tooling.
+** Fold: folding features and machine-specific fold tooling.
+** BCell: robotic/cell automation helpers such as grippers, pickup/placement, and Unloader integration.
+** Nest: nesting algorithms and job handling such as NestJob, NestJobFiller, OnePartNest, and pixel/outline helpers.
+** Punch: punching operations and helpers.
+** IO: import/export for formats such as DXF, IGS, STL, Geo, MetaCAM, and BTD.
+** Sim: simulation helpers and kinematics, including mechanism and IK solver.
+** Report: reporting and picture helpers.
+** Settings: configuration, sheaf definitions, and layout settings.
+** OEM: OEM-specific initialization by machine vendor, such as Delem, Fanuc, Plb, and Touchpoint.
+** WPF: small helpers used by the WPF application.</p>
+<h3 id="ui">UI</h3>
+<p>Continuing the MVC paradigm, this layer contains controllers for Flux objects. It includes classes such as E3PlaneGlob, E2SplineGlob, and LaserCutGlob, all derived from Glob, that implement operations available on those objects.</p>
+<p>Globs expose editable properties and executable operations. The Glob system also supports composite globs for multi-selection scenarios.</p>
+<p>Glob properties and operations are represented as GElement-derived objects, then translated into concrete UI by classes such as PanelMaker, which convert abstract GElements into WPF controls. This abstraction also makes alternate UI renderers possible, such as HTML-based renderers.</p>
+<p>Beyond the Glob hierarchy, this layer also contains many WPF dialogs and windows, such as TurretEditor, SheafEditor, and LaserDBEditor.</p>
+<h3 id="app">App</h3>
+<p>Flux.App is a thin layer implementing the main window for Flux. It manages global UI concerns such as selection state, Glob panel creation, and undo state management.</p>
+<p>It also maintains multiple Flux documents and a tabbed editor for switching between them. Flux.App is relatively small compared with Flux.Core and Flux.UI.</p>
+<p>In a typical end-user installation, Flux.exe is the only visible code-bearing file. Flux.Core.dll and Flux.UI.dll are bundled as resources inside Flux.exe.</p>
+<h3 id="api">API</h3>
+<p>This DLL is a thin wrapper around Core that provides controlled access to Flux classes. For many classes, this layer exposes wrapper types that provide a subset of functionality.</p>
+<p>Third-party tooling, including automation integrations, should be built on this layer. When Flux.API.dll is shipped to third parties, dependencies such as Core are bundled and not exposed for direct use.</p>
+<h3 id="migrate">Migrate</h3>
+<p>Flux.Migrate is a command-line application used to migrate configuration information from MetaCAM and other legacy systems, notably TOPS.</p>
+<p>It provides commands such as converting a bend-tool library from TOPS format to Flux format, or importing a punch-machine definition from MetaCAM.</p>
+<p>This tool is intended for system integrators and Metamation support staff, not end-users.</p>
+<h3 id="console">Console</h3>
+<p>Flux.Console is a developer-facing command-line application. It supports system-level operations such as rebuilding Flux metadata and other internal utilities.</p>
+<p>This tool is for use within Metamation.</p>
+<h3 id="test">Test</h3>
+<p>Flux.Test.exe contains Flux test suites and acts as a console-mode test runner.</p>
+<p>There is also a GUI-based test runner that provides test coverage functionality.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#code-structure-of-flux">Code structure of Flux</a>
+  </li>
+  <li level="2">
+   <a href="#core">Core</a>
+  </li>
+  <li level="3">
+   <a href="#core-module-map">Core module map</a>
+  </li>
+  <li level="2">
+   <a href="#ui">UI</a>
+  </li>
+  <li level="2">
+   <a href="#app">App</a>
+  </li>
+  <li level="2">
+   <a href="#api">API</a>
+  </li>
+  <li level="2">
+   <a href="#migrate">Migrate</a>
+  </li>
+  <li level="2">
+   <a href="#console">Console</a>
+  </li>
+  <li level="2">
+   <a href="#test">Test</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../structure/data/machineids.html">Machine ID Scheme</a></span>
+ <span class="next"><a href="00_welcome.html">Welcome & Repo Map</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

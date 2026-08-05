@@ -1,0 +1,618 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Welcome & Repo Map</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">3IU</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="00_welcome.html">Welcome & Repo Map</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Welcome & Repo Map</h1>
+<p><strong>Goal of this chapter.</strong> After 60 minutes you understand <strong>what Flux is, where the code lives, how the modules fit together, and where to read next</strong> -- without writing a single line of code.</p>
+<p><strong>Audience.</strong> New engineers joining Flux development. No prior CAM knowledge assumed.</p>
+<h2 id="flux-in-ten-lines">Flux in ten lines</h2>
+<p pp="">** <strong>Flux</strong> is a sheet-metal CAD/CAM application from the Metamation/Trumpf family.
+** Business domains: <strong>laser cutting, punching, press-brake bending, panel-bender folding, nesting, bend-cell automation (robot)</strong>.
+** Stack: <strong>C# on .NET 10 (Windows, x64-only)</strong>, UI in <strong>WPF</strong> (with WinForms residue), 3D import via <strong>HOOPS</strong> through a C/CLI wrapper (<code>Flux.Hula64</code>).
+** One solution: <code>X:\Src\Flux.sln</code> with eight projects (Base, Core, UI, App, API, Console, Migrate, Test).
+** Architecture: <strong>Model → View → Glob</strong> (Glob ≈ controller). Models and views sit <em>together</em> in <code>Flux.Core</code>; controllers live in <code>Flux.UI</code>.
+** Data formats: geometry/settings as <strong>Curl</strong> (text) or <strong>Au/Gold</strong> (binary); read-only assets bundled into <strong>Flux.wad</strong>. Press-brake NC post-processors are <strong>C# classes</strong> in <code>Src\API\Bend\Post\</code> (one per dialect -- Trumpf DLD, Bystronic, LVD, Cybelec, Safan, ...); the <code>.hx</code> extension still appears in machine config but is only a routing token now.
+** One executable (<code>Flux.exe</code>), but <strong>eight flavors</strong> (Dev, Flux, Trumpf, Boost, Engine, B23, Fold, Tech) -- selected at runtime via a <code>Flux.flavor</code> text file next to the EXE.
+** Tests: a custom framework called <strong>Flit</strong>, with <code>[TestFixture]</code> / <code>[Test]</code> attributes. ~169 test files, inputs under <code>X:\TData</code>.
+** Docs: built-in tech notes live in <code>X:\Notes</code> in the proprietary <strong>FTex</strong> format. Excellent in spirit -- and partially outdated (see §8).
+** You don't have to commit anything productive in the first six months. Read, navigate, understand, ask. That's what this chapter is for.</p>
+<p>'''</p>
+<h2 id="what-is-flux">1. What is Flux?</h2>
+<p>Flux is the next-generation CAM stack from Metamation, replacing the older MetaCAM system step by step. It ships under multiple brand names (see §7 <em>Flavors</em>). The header in every source file states:</p>
+<pre><code>
+</code></pre>
+<p>The <strong>value chain</strong> Flux models in code, for a typical part:</p>
+<pre><code>CAD import (STEP / IGES / DXF / DWG / ...)
+        │
+        ▼
+Geometry model (B-Rep, mesh, polylines)        ←  Flux.Base + Flux.Core/Model
+        │
+        ▼
+Feature &amp; operation detection                  ←  Flux.Core/Bend, /Laser, /Punch, /Fold
+        │
+        ▼
+Toolpath / NC generation                       ←  Flux.Core/Bend, /Laser, /Punch
+        │
+        ▼
+Simulation &amp; collision                         ←  Flux.Core/Sim, /BCell
+        │
+        ▼
+Post-processor → NC code (G/M-code, BCC, DLD, ...)  ←  C# writers in Src\API\Bend\Post\ (dispatched via Hub.GenerateNC by post name)
+</code></pre>
+<p><strong>Important consequence:</strong> Flux is <em>not</em> a CRUD business application. &quot;Model&quot; and &quot;view&quot; are often <em>the same object</em> -- for example, an <code>E3Plane</code> knows how to render itself in OpenGL. This point is laid out at length in <code>Notes\Dev\1002.BuildingFlux.ftx</code> lines 31--61: the original MVC separation was rolled back because it forced ugly workarounds (the so-called <em>Hub whiteboard</em>).</p>
+<p>So if it surprises you that a class like <code>LaserCutVM</code> lives in the Core layer -- that's intentional.</p>
+<p>'''</p>
+<h2 id="repo-map-top-level">2. Repo map (top-level)</h2>
+<pre><code>X:\
+├── Src\          C# source code (single solution: Flux.sln)
+│   ├── Base\     Foundation: geometry, mesh, polylines, IO primitives, rendering layer (Lux)
+│   ├── Core\     &quot;Engine&quot;: domain models + their views (VModel hierarchy)
+│   ├── UI\       Controllers (Glob hierarchy) + WPF dialogs
+│   ├── App\      Main window, tabs, shell — this is what gets compiled into Flux.exe
+│   ├── API\      Narrow wrapper for 3rd-party automation
+│   ├── Console\  Developer CLI (metadata rebuild and other utilities)
+│   ├── Migrate\  CLI migration from MetaCAM / TOPS legacy data
+│   ├── Hula\     C++/CLI wrapper around HOOPS (3D import) — built separately
+│   ├── Lib\      External NuPkgs / DLLs (Aegis, Trumpf-Licensing, ...)
+│   ├── Publish\  Publish profiles / setup scripts
+│   ├── bin\      Build output (all DLLs end up here)
+│   └── obj\      Intermediate output
+├── Test\         Test project (Flux.Test.csproj — framework is &quot;Flit&quot;)
+├── TData\        Test input data (.geo, .vdwg, ...) organized by domain
+├── Data\         Runtime data: machines, tools, materials
+├── Doc\          Images and concept diagrams (with a `.png` gallery per domain)
+├── Help\         End-user manual (FTex)
+├── Notes\        DEVELOPER notes (FTex) — see §8, well worth reading
+├── Resources\    Fonts, HOOPS binaries, icons
+├── Tools\        Helper utilities
+├── Wad\          Read-only resources packed into Flux.wad
+├── SDK\          SDK artifacts for API consumers
+└── .github\      CI/CD
+</code></pre>
+<h3 id="code-volume-rough-current">Code volume (rough, current)</h3>
+<p>[cols=&quot;,&gt;&quot;]
+|===
+| Module | C# files</p>
+<p>| Flux.App
+| 301</p>
+<p>| Flux.Core
+| 278</p>
+<p>| Flux.Test
+| 169</p>
+<p>| Flux.UI
+| 117</p>
+<p>| Flux.Base
+| 109</p>
+<p>| Flux.API
+| 98
+|===</p>
+<p pp="">Plus a handful of C files in <code>Src\Hula\</code> (<code>Hula.cpp</code> ≈ 40 KB is the main one). Total: <strong>~938 .cs files</strong> under <code>Src\</code>.</p>
+<p>'''</p>
+<h2 id="the-eight-projects-in-the-solution">3. The eight projects in the solution</h2>
+<p>|===
+| Project | Type | Purpose | Read here</p>
+<p>| <strong>Flux.Base</strong>
+| C#
+| Geometry primitives, mesh, polyline, GL context, IO helpers, undo system, <strong>Lux</strong> rendering layer
+| <code>Src\Base\Geo\</code>, <code>Src\Base\Mesh\</code>, <code>Src\Base\Lux\</code></p>
+<p>| <strong>Flux.Core</strong>
+| C#
+| Domain engine: Bend, Fold, Laser, Punch, Nest, BCell, Sim, Drawing, Layout, Trim, IO, Settings, Model, OEM, Part, Report
+| <code>Src\Core\Bend\BendCore.cs</code>, <code>Src\Core\Laser\LaserCore.cs</code>, <code>Src\Core\Part\Part.cs</code></p>
+<p>| <strong>Flux.UI</strong>
+| C#
+| Per-domain Glob controllers + WPF editors (TurretEditor, SheafEditor, LaserDBEditor, ...)
+| <code>Src\UI\Editor\</code>, <code>Src\UI\&lt;domain&gt;\**UI.cs</code></p>
+<p>| <strong>Flux.App</strong>
+| C#
+| Main window, tab management, global UI state, selection, undo lifecycle. This DLL is the bulk of <code>Flux.exe</code>.
+| --</p>
+<p>| <strong>Flux.API</strong>
+| C#
+| Restricted, hardened wrapper for 3rd parties -- <em>no</em> direct Core exposure
+| <code>Src\API\Job\</code>, <code>Src\API\Cut\</code></p>
+<p>| <strong>Flux.Console</strong>
+| C#
+| Developer CLI (metadata rebuild, internal maintenance)
+| Mostly for in-house Metamation use</p>
+<p>| <strong>Flux.Migrate</strong>
+| C#
+| One-shot CLI migration: tool libraries from TOPS, machine definitions from MetaCAM
+| Run once at the customer site</p>
+<p>| <strong>Flux.Test</strong>
+| C#
+| Test suites (Flit framework) + GUI test runner
+| <code>Test\Bend\BasicBendAuto.cs</code> is the canonical example
+|===</p>
+<p pp="">_<strong>*
+Outside the solution but required at runtime: <strong><code>Flux.Hula64.dll</code></strong> (C/CLI). The build process is described in <code>Notes\Dev\1002.BuildingFlux.ftx</code> lines 129--187 -- <em>do not</em> compile it yourself, copy it from <code>X:\Resources\Hoops</code> to <code>bin</code>.
+*</strong>*</p>
+<h3 id="dependency-direction">Dependency direction</h3>
+<pre><code>Flux.Base   ◄── Flux.Core   ◄── Flux.UI   ◄── Flux.App
+                  ▲                 ▲           │
+                  │                 └───────────┘
+                  └── Flux.API    (facade over Core)
+                  └── Flux.Test   (references Core directly)
+                  └── Flux.Migrate, Flux.Console (console front-ends)
+                  └── Flux.Hula64.dll (HOOPS wrapper, native reference)
+</code></pre>
+<p>Source: <code>Src\Flux.sln</code> and the explicit <code>&lt;ProjectReference&gt;</code> / <code>&lt;Reference&gt;</code> entries in each <code>.csproj</code>.</p>
+<p>'''</p>
+<h2 id="domains-under-flux.core">4. Domains under <code>Flux.Core</code></h2>
+<p><code>Flux.Core</code> is internally split into domain packages. Each folder under <code>Src\Core\</code> is a topic of its own:</p>
+<p>|===
+| Folder | Domain | Reading entry point</p>
+<p>| <code>Bend</code> (47 files)
+| Press-brake CAM (folding with stamp/die)
+| <code>BendCore.cs</code>, <code>BendOp.cs</code>, <code>BendTech.cs</code>, <code>BendMachine.cs</code></p>
+<p>| <code>Fold</code> (42 files)
+| Panel-bender CAM (TecZoneFold)
+| search <code>Grep &quot;class FoldOp&quot;</code></p>
+<p>| <code>Laser</code>
+| Laser cutting
+| <code>LaserCore.cs</code>, <code>LaserCut.cs</code>, <code>LaserAuto.cs</code>, <code>AutoRouter.cs</code></p>
+<p>| <code>Punch</code> (13 files)
+| Punching
+| <code>PunchCore.cs</code></p>
+<p>| <code>Nest</code> (10 files)
+| Nesting multiple parts on a sheet
+| <code>Src\Core\Nest\</code></p>
+<p>| <code>BCell</code> (34 files)
+| Bend-cell automation (robot, gripper, suction cups)
+| image gallery at <code>Doc\Img\BCell\</code> for vocab</p>
+<p>| <code>Sim</code> (5 files)
+| Simulation &amp; collision
+| <code>Src\Core\Sim\</code></p>
+<p>| <code>Drawing</code> (7 files)
+| 2D drawing / sketch mode
+| --</p>
+<p>| <code>Layout</code> (14 files)
+| Machine / setup layouts
+| --</p>
+<p>| <code>Trim</code>
+| Trim / edge processing
+| --</p>
+<p>| <code>Part</code>
+| Part model (links domains)
+| <code>Part.cs</code> (the canonical &quot;job&quot;)</p>
+<p>| <code>IO</code>
+| File import/export per format
+| <code>DXFReader.cs</code>, <code>GeoReader.cs</code>, <code>HXReader.cs</code> (the HOOPS reader, despite the misleading name), ...</p>
+<p>| <code>Model</code>
+| Shared 2D / 3D model classes (E2**, E3**)
+| <code>E3Plane.cs</code>, <code>E3Flex.cs</code>, <code>Entity3.cs</code></p>
+<p>| <code>Settings</code>
+| Settings / configuration
+| <code>Sheaf.cs</code> (cascaded settings dictionary)</p>
+<p>| <code>Report</code>
+| Setup sheets, PDF reports
+| --</p>
+<p>| <code>OEM</code>
+| OEM-specific customizations
+| --
+|===</p>
+<p><em>__</em>
+<strong>Reading heuristic.</strong> A class name like <code>BendOp</code> is the <em>operation</em>, <code>BendCalc</code> is the <em>pure calculation</em>, <code>BendVM</code> is the <em>view aspect</em> (rendering), <code>BendTech</code> is the <em>high-level facade</em> (&quot;generate NC code&quot;). <code>BendCore</code> typically holds central, shared types for the domain.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="architecture-pattern-model-view-glob">5. Architecture pattern: Model → View → Glob</h2>
+<p>Flux follows an opinionated but consistent MVC variant. The terms appear everywhere -- internalize them early:</p>
+<p>|===
+| Layer | What | Where in code | Example classes</p>
+<p>| <strong>Model</strong>
+| Pure domain data
+| <code>Flux.Core\&lt;domain&gt;\</code>
+| <code>E3Plane</code>, <code>E2Spline</code>, <code>LaserCut</code>, <code>BendOp</code></p>
+<p>| <strong>VModel</strong> (view)
+| Knows how to render the model (OpenGL via Lux)
+| <code>Flux.Core\&lt;domain&gt;\</code> (same folder!)
+| <code>E3PlaneVM</code>, <code>E2SplineVM</code>, <code>LaserCutVM</code>, <code>BendMountVM</code></p>
+<p>| <strong>Glob</strong> (controller)
+| UI shell exposing properties + commands
+| <code>Flux.UI\&lt;domain&gt;\</code>
+| <code>BendOpGlob</code>, <code>BendOpsGlob</code></p>
+<p>| <strong>GElement</strong>
+| Abstract UI description of glob properties
+| <code>Flux.UI\</code>
+| --</p>
+<p>| <strong>PanelMaker</strong>
+| Translates <code>GElement</code> → real WPF controls
+| <code>Flux.UI\</code>
+| --
+|===</p>
+<p><strong>Multi-selection.</strong> When the user selects multiple objects, the glob system builds a <em>composite glob</em> showing the shared properties and applying commands to all selections. This is the only clean way to implement bulk edits -- don't iterate selections by hand.</p>
+<p><strong>Why this matters.</strong> When you add a new domain feature, you almost always touch <em>three</em> places: the model, its VM, and a glob. Miss one, and the UI hook is broken.</p>
+<p><strong>Rendering layer.</strong> The OpenGL drawing primitives live in <code>Src\Base\Lux\</code>. <code>VModel.Draw()</code> is the common entry; rendering goes through <code>Lux.DrawMesh</code>, <code>Lux.Layer</code>, <code>LuxShading</code>, etc. Each <code>VModel</code> registers a chain of scene-graph nodes (<code>SGNode</code>) and gets a process-wide unique <code>Id</code> once it is &quot;live&quot; on a screen.</p>
+<p>'''</p>
+<h2 id="data-and-language-building-blocks">6. Data and language building blocks</h2>
+<p>|===
+| Term | Meaning | Defined / documented in</p>
+<p>| <strong>Curl</strong>
+| Text format for serializing config / data
+| <code>Notes\Tech\2007.CurlFiles.ftx</code> (very thorough)</p>
+<p>| <strong>Au / Gold</strong>
+| Binary format (compact)
+| <code>Notes\Dev\1003.AuGoldEncoding.ftx</code></p>
+<p>| <strong>VDwg</strong>
+| Format for rendering geometric images
+| <code>Notes\Dev\1013.TheVdwgFileFormat.ftx</code></p>
+<p>| <strong>NC post writers</strong>
+| One C# class per NC dialect (TrumpfDLD, Bystronic, LVD, ...)
+| <code>Src\API\Bend\Post\</code> -- dispatched via <code>Hub.GenerateNC</code> (see <code>Src\API\Basis\Basis.cs:138</code>)</p>
+<p>| <strong>Hex</strong>
+| Originally planned post-processor language (Note 2004, 2016). Postprocessors have since been <strong>rewritten in C#</strong>. Hex may survive only as a legacy / scripting artifact.
+| <code>Src\Base\HexLib.cs</code>; historical context in <code>Notes\Tech\2004.TheHexLanguage.ftx</code></p>
+<p>| <strong>PDL</strong>
+| Legacy post-processor language. Effectively deprecated.
+| historical</p>
+<p>| <strong>CMD files</strong>
+| Batch processing
+| <code>Notes\Tech\2005.FluxCommandFiles.ftx</code></p>
+<p>| <strong>FX file</strong>
+| Native Flux file (with thumbnail)
+| mentioned in <code>1002.BuildingFlux.ftx</code> line 56</p>
+<p>| <strong>Wad</strong>
+| ZIP of read-only resources (shaders, metadata)
+| <code>Notes\Dev\1002.BuildingFlux.ftx</code> lines 223--238</p>
+<p>| <strong>Mech</strong>
+| 3D machine model (animatable)
+| <code>X:\Data\Machine\&lt;id&gt;\Machine.mech</code></p>
+<p>| <strong>TDATA</strong>
+| Test data root
+| <code>X:\TData</code></p>
+<p>| <strong>Sheaf</strong>
+| Cascaded settings dictionary (parent-child fallback)
+| <code>Src\Core\Settings\Sheaf.cs</code></p>
+<p>| <strong>Hub</strong>
+| Static glue-point wiring components across layers
+| <code>Src\Core\Hub.cs</code>
+|===</p>
+<p>'''</p>
+<h2 id="flavors-one-binary-many-products">7. Flavors -- one binary, many products</h2>
+<p>Flux ships under different brands. <strong>The binaries are identical</strong>; a <code>Flux.flavor</code> file next to <code>Flux.exe</code> decides at runtime which flavor is active:</p>
+<p>|===
+| Flavor | Branding | Licensing | Where</p>
+<p>| <code>Dev</code>
+| developer build
+| whitelist (developer PCs)
+| your local machine</p>
+<p>| <code>Flux</code>
+| MetaCAM
+| Aegis (online soft-locking)
+| US-Metamation, FA-Services</p>
+<p>| <code>Trumpf</code>
+| TecZoneBend
+| Trumpf WIBU
+| Trumpf standalone</p>
+<p>| <code>Boost</code>
+| TecZoneBend (Boost)
+| Trumpf WIBU
+| inside Boost</p>
+<p>| <code>Engine</code>
+| (no UI)
+| --
+| embedded in Praxis</p>
+<p>| <code>B23</code>
+| TecZoneBend (B23)
+| B23-APC identification
+| on TruBend HMI</p>
+<p>| <code>Fold</code>
+| TecZoneFold
+| Trumpf Sentinel
+| on TruBendCenter HMI</p>
+<p>| <code>Tech</code>
+| Flux-Tech demo
+| time-limited
+| partners (USMM/FAS)
+|===</p>
+<p>Which <strong>features</strong> are active in which flavor is a feature-bit table in <code>Notes\Tech\2013.FluxFlavors.ftx</code> lines 38--57. If a bug reproduces only in one flavor, it's almost always a feature bit.</p>
+<p>'''</p>
+<h2 id="build-run-what-you-actually-need-to-know-current">8. Build &amp; run -- what you actually need to know (current)</h2>
+<p><em>__</em>
+⚠️ <strong>Important caveat about the tech notes.</strong> <code>Notes\Dev\1002.BuildingFlux.ftx</code> is the official build doc, but <strong>several sections are outdated</strong>. For build / toolchain, trust the current <code>.csproj</code> files and the onboarding-buddy conversation, <em>not</em> 1002 verbatim.
+<em>__</em></p>
+<p><strong>What 1002 says (2017)</strong> vs. <strong>what holds today:</strong></p>
+<p>|===
+| 1002 says | today</p>
+<p>| .NET 4.6.1, C# 6
+| <strong>.NET 10</strong>, file-scoped namespaces, <code>#nullable enable</code> (see <code>Src\Core\Flux.Core.csproj</code>)</p>
+<p>| Mercurial / Kiln (<code>metamation.kilnhg.com</code>)
+| <strong>Git</strong> (branch <code>main</code>, GitHub-style PR numbers in <code>git log</code>)</p>
+<p>| Visual Studio 2015
+| recent Visual Studio (Solution format version 16, platform <code>x64</code>)</p>
+<p>| Any-CPU build with 32/64-bit Hula trick
+| <strong>x64-only</strong> (see <code>&lt;PlatformTarget&gt;x64&lt;/PlatformTarget&gt;</code> in every csproj)</p>
+<p>| <code>FluxPreSetup.2017.A.exe</code>
+| newer pre-setup variant (ask internally)
+|===</p>
+<p><strong>What still holds:</strong></p>
+<p>** Three subst drives are standard: <code>X:</code> (code/data), <code>W:</code> and <code>N:</code> (Trek). Paths in scripts often hard-code <code>X:\…</code>.
+** Environment variables: <code>FLUXDATA=X:\Data</code>, <code>FLUXTESTDATA=X:\TDATA</code>, <code>FLUXDEVELOPER=1</code>, <code>FLUXWAD=X:\Wad</code>, <code>TREKPATH=N:\Bin</code> (for post-processors / code-finishers from the Trek stack).
+** A separate solution (<code>Hula64.sln</code> in <code>Src\Hula\</code>) for the HOOPS wrapper -- <strong>don't</strong> build it, copy the binary from <code>Resources\Hoops\</code>.</p>
+<p><strong>Concrete first build attempt:</strong></p>
+<p blank="">. <code>X:</code> set up as a subst (<code>subst X: C:\Work\Flux</code> or similar)?
+. Environment variables set?
+. HOOPS DLLs copied to <code>Src\bin\hoops\</code>?
+. +
+[cols=2**]
+|===
+| Open <code>Src\Flux.sln</code>, build <strong>Release
+| x64</strong>.
+|===</p>
+<p>. Run <code>Flux.exe</code> from <code>Src\bin\</code> (should detect <code>Dev</code> flavor because no <code>Flux.flavor</code> file is present).</p>
+<p>If something breaks: <strong>ask buddy first, then read 1002, then search internal issues</strong> -- in that order.</p>
+<p>'''</p>
+<h2 id="code-conventions-what-youll-see-while-reading">9. Code conventions (what you'll see while reading)</h2>
+<p>From <code>Notes\Dev\1001.FluxDevStyleGuide.ftx</code> and observation of current code:</p>
+<p>** <strong>3 spaces</strong> for indentation (no tabs). Yes, three. &quot;Goldilocks number.&quot;
+** <strong>K&amp;R style with brace omission for single statements</strong>:
++
+[,csharp]</p>
+<pre><code>if (nLevel &gt; 0 &amp;&amp; !mLevelStack.IsEmpty)
+   PopLevel ();
+</code></pre>
+<p>** <strong>Spaces</strong> before <code>(</code> and <code>{</code>, no space before <code>[</code>, no space inside <code>()</code>.
+** <strong>File header</strong> in every <code>.cs</code> file (the stylized ASCII hammer at the right margin is the internal logo -- <em>please keep it</em> when adding new files).
+** <strong>Modern C# 10+</strong> in new files: <code>namespace Flux;</code> (file-scoped), <code>#nullable enable</code>.
+** Class / file headers span the full width (column 100); region headers per top-level class.</p>
+<p>Real example (<code>Test\Bend\BasicBendAuto.cs</code>):</p>
+<p>[,csharp]</p>
+<pre><code>namespace Flit;
+#nullable enable
+
+[TestFixture (4, &quot;Basic bend auto-tooler tests&quot;, Module = &quot;Bend&quot;, Subsystem = &quot;AutoTool&quot;)]
+class BasicBendAuto {
+   [Test (82, &quot;Tooling basic part: Bend*04.geo&quot;)]
+   void Test1 () =&gt; Test (&quot;Bend/Auto/Bend*04.geo&quot;);
+   ...
+}
+</code></pre>
+<p>'''</p>
+<h2 id="tests-what-they-look-like">10. Tests -- what they look like</h2>
+<p>** <strong>Framework:</strong> Flit (custom-built, <em>not</em> NUnit/xUnit). Attributes: <code>+[TestFixture(id, description, Module=..., Subsystem=...)]+</code> and <code>[Test(id, description)]</code>.
+** <strong>Inputs:</strong> <code>.geo</code> files under <code>X:\TData\&lt;domain&gt;\…</code>.
+** <strong>Organization:</strong> one directory per domain under <code>Test\</code> (e.g. <code>Test\Bend\</code>, <code>Test\Laser\</code>). Inside that, often <strong>per-year</strong> regression bundles: <code>Bend2017.cs</code>, <code>Bend2018.cs</code>, ..., <code>Bend2025.cs</code>. Each year-file is a layer of historically collected bugs.
+** <strong>Reading tip:</strong> to find a recent feature in Bend, look at <code>Test\Bend\Bend&lt;currentYear&gt;.cs</code> first -- that's where regression tests for PR-described issues land.</p>
+<p>A 15-minute reading tour is described in detail in chapter 06.</p>
+<p>'''</p>
+<h2 id="recommended-reading-order-the-first-five-days">11. Recommended reading order -- the first five days</h2>
+<p>|===
+| Day | Read | Goal</p>
+<p>| <strong>1</strong>
+| This document + <code>Notes\DevIndex.ftx</code> + <code>Notes\Dev\1002.BuildingFlux.ftx</code> (with §8 caveats)
+| Build a mental model</p>
+<p>| <strong>2</strong>
+| <code>Src\Flux.sln</code> + all 8 <code>.csproj</code>, trace dependencies. Then <code>Notes\Tech\2013.FluxFlavors.ftx</code>
+| Modules + delivery model</p>
+<p>| <strong>3</strong>
+| Pick a domain (recommended: <strong>Bend</strong> -- best-documented with images at <code>Doc\Img\Bend\</code>). Read chapter 02.
+| Understand one domain in depth</p>
+<p>| <strong>4</strong>
+| Walk through <code>Test\Bend\BasicBendAuto.cs</code>, open a <code>.geo</code> file in <code>TData\Bend\Auto\</code>, step through a test in read-only debug mode
+| See how tests drive the code</p>
+<p>| <strong>5</strong>
+| <code>Notes\Dev\1005.BendAreaModeling.ftx</code> + <code>Notes\Tech\2007.CurlFiles.ftx</code>
+| Domain depth + data model
+|===</p>
+<p>'''</p>
+<h2 id="first-reading-exercise-30-min">12. First reading exercise (~30 min)</h2>
+<p><strong>Task:</strong> in at most half a page, explain what happens when the user edits a Bend setup through the UI.</p>
+<p><strong>Approach (read-only, no code change):</strong></p>
+<p>. <code>Grep</code> for <code>class BendSetup</code> -- <em>where</em> does the class live?
+. Find the matching glob in the UI layer.
+. Trace one <code>BendSetup</code> property edit: what methods get called?
+. Where is the change <em>persisted</em>? (Hint: Curl, Au, FX.)
+. Is undo registered? Where?</p>
+<p><strong>Rubric (for your mentor):</strong></p>
+<p>|===
+| Level | Criterion</p>
+<p>| 1
+| Finds <code>BendSetup</code>, knows roughly which domain it lives in</p>
+<p>| 2
+| Also finds the UI controller, can sketch UI → model data flow</p>
+<p>| 3
+| Plus: locates persistence and undo, can explain VModel's role</p>
+<p>| 4
+| Spots an edge case (e.g. multi-selection: how does the composite glob behave?) and backs the answer up with code/tests
+|===</p>
+<p>More exercises in chapter 09.</p>
+<p>'''</p>
+<h2 id="what-this-chapter-is-not">13. What this chapter is <em>not</em></h2>
+<p>** Not a complete architecture reference (that's chapter 01).
+** Not a build step-by-step (Notes/1002 owns that -- even though ~30 % of it needs a refresh).
+** Not a domain deep-dive (chapter 02 covers Bend; companion chapters can be added per domain).
+** Not a fitness assessment (chapter 09 covers exercises and rubrics).</p>
+<p>'''</p>
+<h2 id="if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</h2>
+<p><em>__</em>
+*<em>Flux is intentionally not pure MVC. Models, views (VModel), and controllers (Glob) live in different assemblies, but model + view sit <em>together</em> in <code>Flux.Core</code>. If that surprises you, read <code>Notes\Dev\1002.BuildingFlux.ftx</code> lines 31--61 -- it was a deliberate decision against the previous architecture.</em>
+<em>__</em></p>
+<p>The rest you can look up.</p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04 -- when this document disagrees with the repo, the repo wins. Chapter 00 is refreshed roughly quarterly. Report drift via PR or the onboarding maintainer._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#flux-in-ten-lines">Flux in ten lines</a>
+  </li>
+  <li level="1">
+   <a href="#what-is-flux">1. What is Flux?</a>
+  </li>
+  <li level="1">
+   <a href="#repo-map-top-level">2. Repo map (top-level)</a>
+  </li>
+  <li level="2">
+   <a href="#code-volume-rough-current">Code volume (rough, current)</a>
+  </li>
+  <li level="1">
+   <a href="#the-eight-projects-in-the-solution">3. The eight projects in the solution</a>
+  </li>
+  <li level="2">
+   <a href="#dependency-direction">Dependency direction</a>
+  </li>
+  <li level="1">
+   <a href="#domains-under-flux.core">4. Domains under </a>
+  </li>
+  <li level="1">
+   <a href="#architecture-pattern-model-view-glob">5. Architecture pattern: Model → View → Glob</a>
+  </li>
+  <li level="1">
+   <a href="#data-and-language-building-blocks">6. Data and language building blocks</a>
+  </li>
+  <li level="1">
+   <a href="#flavors-one-binary-many-products">7. Flavors -- one binary, many products</a>
+  </li>
+  <li level="1">
+   <a href="#build-run-what-you-actually-need-to-know-current">8. Build & run -- what you actually need to know (current)</a>
+  </li>
+  <li level="1">
+   <a href="#code-conventions-what-youll-see-while-reading">9. Code conventions (what you'll see while reading)</a>
+  </li>
+  <li level="1">
+   <a href="#tests-what-they-look-like">10. Tests -- what they look like</a>
+  </li>
+  <li level="1">
+   <a href="#recommended-reading-order-the-first-five-days">11. Recommended reading order -- the first five days</a>
+  </li>
+  <li level="1">
+   <a href="#first-reading-exercise-30-min">12. First reading exercise (~30 min)</a>
+  </li>
+  <li level="1">
+   <a href="#what-this-chapter-is-not">13. What this chapter is not</a>
+  </li>
+  <li level="1">
+   <a href="#if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">FluxCode</a></span>
+ <span class="next"><a href="01_architecture.html">Architecture & System Context</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

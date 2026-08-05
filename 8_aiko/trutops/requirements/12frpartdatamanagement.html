@@ -1,0 +1,1136 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>12FRPartDataManagement</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a class="active" href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="12frpartdatamanagement.html">12FRPartDataManagement</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>12FRPartDataManagement</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-fr-part-data-management-doc-12-fr-part-data-management-id-prefix-fr-data-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-04-domain-model-glossary-11-fr-import-export-file-formats-19-fr-tools-machines-materials-technology-30-external-interface-requirements-tags-requirements-trutops-functional-requirements">product: trutopscad
+org: trumpf
+title: &quot;FR — Part &amp; Data Management&quot;
+doc: &quot;12 - FR - Part &amp; Data Management&quot;
+id-prefix: &quot;FR-DATA&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[03 - System Context &amp; Architecture Overview]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[11 - FR - Import, Export &amp; File Formats]]&quot;, &quot;[[19 - FR - Tools, Machines, Materials &amp; Technology]]&quot;, &quot;[[30 - External Interface Requirements]]&quot;]
+tags: [requirements, trutops, functional-requirements]</h2>
+<h1 id="fr-part-data-management">FR — Part &amp; Data Management</h1>
+<blockquote>
+<p>Reverse-engineered requirement draft — derived from static analysis of legacy source, NOT an authoritative specification. Treat SHALL statements as reconstructed intent.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document specifies the functional requirements for the <strong>persistence and management layer</strong> of the TruTops CAD/CAM suite: how parts, drawings, sheets and order data are stored and retrieved, and the relational database infrastructure that underpins the whole product family.</p>
+<p>The area spans two complementary storage worlds that the code deliberately keeps separate:</p>
+<ol>
+<li><strong>Geometry/document files</strong> — the actual parts and drawings are stored as TRUMPF-native geometry files (the <em>MI</em> text format and its <code>.geo</code>/<code>.taf</code> relatives) on the file system or in a <strong>PDM (TRUMPF PDM / TRUMPF.NET) vault</strong>, abstracted behind an <em>OmAdapter</em> facade. The in-memory model, the file readers/writers and the binary/<code>.NET</code> geometry interface live in <code>tc_dbase</code>, <code>tc_mi</code> and <code>tc_verw</code>.</li>
+<li><strong>The relational database</strong> — a set of <strong>SQL Server</strong> databases (deployable as locally attached MDF/&quot;MDB&quot; files) reached through <strong>ODBC</strong>, holding the technology/configuration data, the system rule-set (Regelwerk), order/part lists, stock/sheet inventory, multilingual text and — via the <strong>DATADICT data dictionary</strong> — the definition of the schema itself. The DB access layer is <code>tc_dbif</code>; the schema, versioning and migration machinery is in <code>Databases/</code> and <code>tc_tab</code>.</li>
+</ol>
+<p>Scope covered here: geometry file I/O and versioning, the part/drawing/sheet catalog and attribute query, PDM integration, the ODBC/SQL-Server/local-MDB layer, the data dictionary and auto-provisioning of tables, DB versioning &amp; migration, metric/inch database duality, rule-set configuration caching and validation, order/part-list and stock persistence, record locking, referential integrity, DB access roles, XML I/O, and table/list infrastructure.</p>
+<p><strong>Editions served:</strong> all. The database is partitioned per technology/edition (schemas <code>CAD</code>, <code>Laser</code>≈T100, <code>Punch</code>≈T300, <code>Tube</code>≈T400, <code>Bend</code>≈T600, <code>Nest</code>, <code>Common</code>, <code>Text</code>, <code>DATADICT</code>), and each edition ships metric and inch (<code>*_inch</code>) database variants. Parts and drawings are common across all CAD-capable editions.</p>
+<p>The technology <em>content</em> of those tables (tool/machine/material/laser/punch/bend parameters) is owned by [[19 - FR - Tools, Machines, Materials &amp; Technology]] and the per-technology FR documents; this document owns the <em>persistence, schema and access</em> mechanics. File-format import/export to foreign formats (DXF, IGES, STEP, …) is owned by [[11 - FR - Import, Export &amp; File Formats]].</p>
+<h2 id="capability-overview">2. Capability Overview</h2>
+<ul>
+<li>Save and load parts, drawings and nested sheets to/from TRUMPF-native geometry files, with a versioned file format.</li>
+<li>Store an individual part (Einzelteil) extracted from a drawing as its own file.</li>
+<li>Provide a C/<code>.NET</code>-callable geometry interface DLL (<code>TruTopsGeoInterface</code>) with binary object serialization for external components.</li>
+<li>Access files transparently from the local file system or from a PDM/TRUMPF.NET vault through a single abstraction, plus a PDM browser.</li>
+<li>Query file attributes (material, thickness, …) as a lightweight catalog lookup without fully loading the file — directly from the PDM server when in PDM mode.</li>
+<li>Check whether a part matches the active material and machine before loading.</li>
+<li>Reach the relational databases through ODBC against SQL Server / locally attached MDF files.</li>
+<li>Maintain parallel metric and inch databases and provide unit-aware configuration access with automatic metric↔inch conversion.</li>
+<li>Cache and validate the system rule-set (Regelwerk) configuration key/value store.</li>
+<li>Describe the entire schema (tables, columns, data types, units, constraints, relations, indexes) in the DATADICT data dictionary and auto-provision physical tables from it.</li>
+<li>Track schema version per schema/product, and migrate/upgrade older databases with defined update scripts.</li>
+<li>Port data between metric and inch representations.</li>
+<li>Audit-log structural, data-transfer, porting and check operations.</li>
+<li>Persist order part-lists, stock/sheet inventory (with geometry-file references) and lock in-use entries.</li>
+<li>Enforce foreign-key referential integrity and role-based access rights.</li>
+<li>Read/write XML documents; generate tabular reports of technology tables.</li>
+<li>Store multilingual UI/domain text keyed by language.</li>
+</ul>
+<h2 id="domain-entities">3. Domain Entities</h2>
+<p>Full definitions and cross-references live in [[04 - Domain Model &amp; Glossary]].</p>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>German</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Part</td>
+<td>Teil / Einzelteil</td>
+<td>A single fabricated sheet-metal part; stored as a geometry file and referenced by order/nesting records.</td>
+</tr>
+<tr>
+<td>Drawing</td>
+<td>Zeichnung (Draw)</td>
+<td>The CAD document containing geometry elements, contours, parts and bends; the top-level saved unit.</td>
+</tr>
+<tr>
+<td>Geometry element</td>
+<td>Element</td>
+<td>Line, arc, circle, spline, point, construction line, chamfer (Fase), fillet (Rundung), rectangle, arrow, text — the primitives serialized in a geometry file.</td>
+</tr>
+<tr>
+<td>Contour</td>
+<td>Kontur</td>
+<td>An ordered chain of elements forming a closed/open boundary within a part.</td>
+</tr>
+<tr>
+<td>Sheet / stock</td>
+<td>Tafel / Blech</td>
+<td>A raw or remnant sheet onto which parts are nested; persisted with dimensions, material and geometry reference.</td>
+</tr>
+<tr>
+<td>Order</td>
+<td>Auftrag</td>
+<td>A production order that groups parts with target quantities and priorities.</td>
+</tr>
+<tr>
+<td>System rule set</td>
+<td>Regelwerk (REGEL_ALLG / SRObj)</td>
+<td>Key/value configuration variables with unit, min/max and check metadata, cached by the DB interface.</td>
+</tr>
+<tr>
+<td>Data dictionary</td>
+<td>Datenverzeichnis (DATADICT)</td>
+<td>Metadata describing tables, columns, relations and indexes that drive schema creation and migration.</td>
+</tr>
+<tr>
+<td>Geometry info</td>
+<td>GeoInfo</td>
+<td>An attribute/value view (material, thickness, …) read from any supported file type or the PDM server.</td>
+</tr>
+<tr>
+<td>MI file</td>
+<td>MI-Datei</td>
+<td>TRUMPF-native text geometry file format interpreted by the MI-Interpreter, carrying a format version.</td>
+</tr>
+<tr>
+<td>Material / sheet material</td>
+<td>Werkstoff / Material</td>
+<td>Material master and sheet-stock records; the sheet record links to a geometry file directory/name.</td>
+</tr>
+<tr>
+<td>Language text</td>
+<td>Sprache / Text</td>
+<td>Translatable UI and domain texts stored per language/culture.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functional-requirements">4. Functional Requirements</h2>
+<h3 id="fr-data-001-persist-drawing-to-native-geometry-file">FR-DATA-001 — Persist drawing to native geometry file</h3>
+<ul>
+<li><strong>Requirement:</strong> When a user saves a drawing, the system shall write all geometry elements of the active drawing (lines, arcs, circles, splines, text, contours and bending information) to a TRUMPF-native geometry file.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Storing the part/drawing is the fundamental persistence act of a CAD/CAM system.</li>
+<li><strong>Source:</strong> <code>tc_dbase/store.h</code> (<code>db_schreibe_file</code>); <code>tc_dbase/db_def.h</code> element type codes (<code>LINIE</code>, <code>BOGEN</code>, <code>KREIS</code>, <code>SPLINE</code>, <code>DB_TEXT</code>, <code>FASE</code>, <code>RUNDUNG</code>, <code>VIERECK</code>, …); <code>tc_mi/mi_write.cpp</code> (MI-Interpreter writer).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-002-load-drawingpart-from-native-geometry-file">FR-DATA-002 — Load drawing/part from native geometry file</h3>
+<ul>
+<li><strong>Requirement:</strong> When a user opens a geometry file, the system shall reconstruct the in-memory drawing/part model from the file contents.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A stored part is useless unless it can be reloaded and edited/processed.</li>
+<li><strong>Source:</strong> <code>tc_dbase/lese_teil.h</code> (<code>lese_teil</code>); <code>tc_dbase/lesen.h</code>; <code>tc_mi/mi_lese.cpp</code> (&quot;CONTENTS: MI-Interpreter&quot;).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-003-store-an-individual-part-einzelteil">FR-DATA-003 — Store an individual part (Einzelteil)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall be able to store an individual part extracted from a drawing to its own geometry file, optionally translating the part geometry to the coordinate origin.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Nesting and re-use require single parts to be saved independently of the drawing they were authored in.</li>
+<li><strong>Source:</strong> <code>tc_dbase/store.h</code> (<code>db_schreibe_einzelteil</code>, parameter <code>t_verschieben</code> = translate-to-origin flag).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-004-persist-and-load-nesting-sheets-tafel">FR-DATA-004 — Persist and load nesting sheets (Tafel)</h3>
+<ul>
+<li><strong>Requirement:</strong> Where nesting is available, the system shall store and load nesting-sheet layouts (Tafel), including nested part instances and their placement/transformation matrices.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Nesting layouts must round-trip so that a job can be re-opened, edited and re-posted. Feature depends on the nesting edition (see [[17 - FR - Nesting &amp; Palletizing]]).</li>
+<li><strong>Source:</strong> <code>tc_dbase/lese_taf.h</code> (<code>db_lese_tafel</code>, includes <code>TcTransformationMatrix.h</code>, <code>TcDBNestTyp.h</code>); <code>tc_dbase/store_taf.h</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-005-versioned-geometry-file-format">FR-DATA-005 — Versioned geometry file format</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall stamp each saved geometry file with a format-version identifier and shall correctly interpret files written under earlier format versions on read.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A decades-old format must stay backward-compatible so legacy parts remain openable.</li>
+<li><strong>Source:</strong> <code>tc_mi/tc_mi.h</code> (<code>MI_Version_Nr</code>, <code>MI_RELEASE_1 2.21</code>, <code>MI_RELEASE_2 2.4</code>); <code>tc_dbase/db_def.h</code> (<code>DB_FILE_VERSION &quot;1.03&quot;</code>); <code>tc_dbase/store.h</code> (<code>version</code> parameter).</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-006-binary-geometry-interface-trutopsgeointerface-dll">FR-DATA-006 — Binary geometry interface (TruTopsGeoInterface DLL)</h3>
+<ul>
+<li><strong>Requirement:</strong> Where an external or <code>.NET</code> component requires geometry exchange, the system shall expose a C-callable import/export interface (<code>TruTopsGeoInterface.dll</code>) to transfer geometry, strokes, marks and bend meta-information via a binary object representation.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Downstream <code>.NET</code> applications and services consume geometry through this stable DLL boundary rather than the internal C++ model.</li>
+<li><strong>Source:</strong> <code>tc_dbase/GeoInterface/GeoInterfaceFunctions.h</code> (<code>extern &quot;C&quot;</code> import/export functions, <code>GEO_DLL_DECLSPEC</code>); <code>TcObjectBin.h/.cpp</code>; <code>GeoInterfaceDotNet/</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-007-transparent-pdm-file-system-access">FR-DATA-007 — Transparent PDM / file-system access</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall access part, drawing and technology files either from the local file system or from a PDM (TRUMPF PDM / TRUMPF.NET) vault through a single abstraction, transparently to calling code.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The same product runs standalone (file system) or integrated into PDM; callers must not branch on the storage backend.</li>
+<li><strong>Source:</strong> <code>tc_util/pdmUtilities/</code> (<code>TcInputFileStream</code>, <code>TcOutputFileStream</code> wrapping <code>TyOmAdapterFileStreamSmp</code>; <code>pdmFunctions.h</code> <code>pdmLocator</code>, <code>normalizePathname</code>, <code>getFileType</code>); includes <code>TiPdmFacet.h</code>, <code>OmAdapterIncludes.h</code>; <code>tc_viewer/viewerdll/{filesystemImplementation,pdmImplementation}/TcPdmBootStrap</code>.</li>
+<li><strong>Verification:</strong> Demonstration</li>
+</ul>
+<h3 id="fr-data-008-pdm-browser">FR-DATA-008 — PDM browser</h3>
+<ul>
+<li><strong>Requirement:</strong> Where PDM is active, the system shall provide a browser to navigate and select parts/drawings held in the PDM vault.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Users need to locate and open PDM-managed documents from within the application.</li>
+<li><strong>Source:</strong> <code>tc_cad/allg_asm/pdmBrowser.cpp</code> (&quot;Automat zum Einstellen und Anzeigen des PDM Browsers&quot;).</li>
+<li><strong>Verification:</strong> Demonstration</li>
+</ul>
+<h3 id="fr-data-009-lightweight-file-attribute-catalog-query">FR-DATA-009 — Lightweight file-attribute (catalog) query</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall read attribute/value pairs (e.g. material, raw material, sheet thickness) from any supported file type without fully loading the file, querying the PDM server directly when in PDM mode.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Catalog listing, filtering and compatibility checks must be fast and must not require a full geometry load.</li>
+<li><strong>Source:</strong> <code>tc_verw/geoinfo.h</code> (<code>TcGeoInfos</code>, <code>TeGeoInfoType</code> covering Geo, Gmt100/300, Tmt100/300, Taf, Mtl, Vlg, Wzg, Rot/Rmt/Rpf, Dat, Lst, Ein, Dxf, Xml, Trg; &quot;Im PDM-Betrieb werden die Informationen direkt beim PDM-Server abgefragt&quot;).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-010-check-part-compatibility-with-active-material-and-machine">FR-DATA-010 — Check part compatibility with active material and machine</h3>
+<ul>
+<li><strong>Requirement:</strong> When a part file is opened, the system shall determine whether the part's material and machine match the active configuration and shall report whether a change is not needed, possible, or impossible because the material/machine is absent from the database.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Prevents processing a part against an incompatible or unknown material/machine.</li>
+<li><strong>Source:</strong> <code>tc_verw/TcCheckPartProperties.h</code> (&quot;Klasse zum Pruefen, ob Datei zu aktivem Material und Maschine passt&quot;; <code>TeChangeModus</code> = <code>e_change_no</code>/<code>e_change_yes</code>/<code>e_change_cancel</code>).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-011-relational-database-access-via-odbc">FR-DATA-011 — Relational database access via ODBC</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall access its relational databases (SQL Server, or locally attached MDF/&quot;MDB&quot; files) through an ODBC data source.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> All technology, configuration and production tables are reached over ODBC; the DSN is provisioned at install/deploy time.</li>
+<li><strong>Source:</strong> <code>Databases/createSqlServerOdbcEntry.bat</code> (imports an ODBC registry template per database); <code>Databases/AttachSqlServerLocalMdb.bat</code>, <code>createSqlServerLocalMdb.bat</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-012-parallel-metric-and-inch-databases">FR-DATA-012 — Parallel metric and inch databases</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall maintain parallel metric and inch (imperial) database variants and shall select the applicable unit system per application/edition.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> North-American and metric markets run the same product against unit-appropriate data.</li>
+<li><strong>Source:</strong> <code>*_inch</code> table schemas (<code>CAD_inch</code>, <code>Common_inch</code>, <code>Laser_inch</code>, <code>Punch_inch</code>, <code>Tube_inch</code>, <code>Nest_inch</code>, <code>Text_inch</code>); <code>DATADICT.DATADICT_DATABASES.DDDB_UNITSYSTEM</code>; <code>InchPort.*</code> schema; <code>ini_files/*Inch.*</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-013-unit-aware-configuration-value-access">FR-DATA-013 — Unit-aware configuration value access</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide typed (long, double, string) and unit-aware read/write access to system rule-set configuration values, converting between metric and inch target units according to the active unit system.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Configuration must be consumed with correct units regardless of the machine's unit system, using metric-defined defaults with an inch fallback.</li>
+<li><strong>Source:</strong> <code>tc_dbif/dbif.hpp</code> (<code>DBInterface::GetValue</code> long/double/char overloads with <code>t_DefMetricValue</code>/<code>t_InchTargetUnit</code>; <code>DBInterface::SetValue</code>).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-014-cache-the-system-rule-set-regelwerk">FR-DATA-014 — Cache the system rule set (Regelwerk)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall cache the system rule-set variables read from the <code>REGEL_ALLG</code> table so that repeated configuration lookups are served from memory.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Rule-set values are read pervasively; per-lookup DB round-trips would be prohibitive.</li>
+<li><strong>Source:</strong> <code>tc_dbif/dbif.hpp</code> (&quot;Klasse cacht die Systemregelwerksvariablen aus Tabelle regel_allg&quot;); <code>CAD.REGEL_ALLG</code> (<code>REGEL_NAME</code>, <code>REGEL_WERT</code>, <code>REGEL_WERT_MIN/MAX</code>, <code>REGEL_EINHEIT</code>, …); <code>tc_dbif/srobj.hpp</code> (<code>SRObj</code>).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-015-validate-configuration-values-against-constraints">FR-DATA-015 — Validate configuration values against constraints</h3>
+<ul>
+<li><strong>Requirement:</strong> When a configuration value is set, the system shall validate it against the value's defined minimum, maximum, regular expression and unit, and shall reject values that violate these constraints.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Guards the rule set against out-of-range or malformed entries that would corrupt downstream processing.</li>
+<li><strong>Source:</strong> <code>tc_dbif/srobj.hpp</code> (<code>SRObj::TeValueError</code> = too-small/too-large/illegal-chars/illegal-unit/illegal-RE/invalid-chars; <code>tCheckLimits</code>); <code>REGEL_ALLG</code> columns <code>REGEL_WERT_MIN/MAX</code>, <code>REGEL_PRUEF_INFO</code>, <code>REGEL_FORMAT</code>, <code>REGEL_EINHEIT</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-016-data-dictionary-defines-the-schema">FR-DATA-016 — Data dictionary defines the schema</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall define its database tables, columns, data types, units, value constraints, relationships and indexes in a central data dictionary.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A single metadata source drives schema creation, unit handling, validation and migration consistently across all schemas.</li>
+<li><strong>Source:</strong> <code>Databases/SQLServerDatabase/Tables/DATADICT.DATADICT.sql</code>; <code>DATADICT.DATADICT_SPALTEN</code> (per-column <code>DD_SPALTEN_METRIC_UNIT</code>/<code>_INCH_UNIT</code>, <code>_MIN_VALUE</code>/<code>_MAX_VALUE</code>, <code>_REG_EXPR</code>, <code>_IS_UNIQUE</code>, <code>_CHECK</code>); <code>DATADICT.DATADICT_RELATIONS</code>; <code>DATADICT.DATADICT_INDEX</code>, <code>DATADICT.DATADICT_INDEX_COLUMNS</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-017-auto-provision-tables-from-the-data-dictionary">FR-DATA-017 — Auto-provision tables from the data dictionary</h3>
+<ul>
+<li><strong>Requirement:</strong> When a table definition is inserted into the data dictionary, the system shall automatically create the corresponding physical table in each technology schema flagged for that table.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Keeps the physical schema in lock-step with the dictionary and its per-technology partitioning without hand-written DDL.</li>
+<li><strong>Source:</strong> <code>DATADICT.DATADICT</code> trigger <code>ttr_createTableFromDATADICT</code> (AFTER INSERT; branches on <code>MASTERTABT100</code>→<code>Laser</code>, <code>MASTERTABT300</code>→<code>Punch</code>, <code>MASTERTABT400</code>→<code>Tube</code>, <code>MASTERTABT600</code>→<code>Bend</code>, <code>MASTERTABTCAD</code>, <code>MASTERTABTNEST</code>, <code>MASTERTABTCOMMON</code>, …).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-018-track-database-schema-version">FR-DATA-018 — Track database schema version</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall record the schema version for each database schema and product edition, and shall expose the minimum table version and maximum compatible product version.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The application must detect version mismatch between its binaries and the attached database.</li>
+<li><strong>Source:</strong> Per-schema <code>DB_VERSION</code> tables (<code>CAD.DB_VERSION</code>, <code>Common.DB_VERSION</code>, <code>Punch.DB_VERSION</code>, …, PK <code>VERSION_BEMERKUNG</code>); <code>DATADICT.DATADICT_DATABASES.DDDB_DBVERSION</code>; <code>DATADICT.DATADICT_ProductVersion</code> (<code>DDPV_MinTableVersion</code>, <code>DDPV_MaxProductVersion</code>).</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-019-migrateupgrade-an-outdated-database">FR-DATA-019 — Migrate/upgrade an outdated database</h3>
+<ul>
+<li><strong>Requirement:</strong> If the application detects a database older than the version it requires, then the system shall apply the defined schema-update and data-migration steps to bring the database up to the required version.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Installing a new product build over an existing database must upgrade the data in place without loss.</li>
+<li><strong>Source:</strong> <code>Common._DB_MODIFY</code> (<code>DBM_VERSION</code>, <code>DBM_TABELLE</code>, <code>DBM_SPALTEN</code>, <code>DBM_UPDATE</code>); <code>Common.DB_UPDATE_SPECIAL</code> (<code>DB_SQL</code>); <code>tc_tab/tab_dbup</code> (<code>tabellen_db_update</code>); <code>DATADICT.DATADICT_SPALTEN.DD_SPALTEN_PATCH_UPGRADEVALUEEXPR</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-020-port-data-between-metric-and-inch">FR-DATA-020 — Port data between metric and inch</h3>
+<ul>
+<li><strong>Requirement:</strong> Where the inch product variant is built, the system shall port/convert database content between metric and inch representations using the per-column conversion metadata (unit, factor, direction).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The inch databases are generated from the metric masters; conversion must be metadata-driven and repeatable.</li>
+<li><strong>Source:</strong> <code>Databases/DB_Port_SqlSrv.ps1</code>, <code>DB_Port_SqlSrv_InchRefresh_ExecuteOnlyAtNight_legacy.ps1</code>; <code>InchPort.*</code> (<code>KONFIG</code>, <code>NiceMetricValues</code>, <code>RoundIs3</code>); <code>DATADICT.DATADICT_SPALTEN.DD_SPALTEN_FAKTOR</code>/<code>_INCH_ADDITIV_DIRECTION</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-021-audit-log-structural-and-data-operations">FR-DATA-021 — Audit-log structural and data operations</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall log database structural changes, data-transfer, porting and integrity-check operations with a timestamp, criticality, schema name and message.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Schema/data changes made by triggers and migration scripts must be traceable for support and diagnosis.</li>
+<li><strong>Source:</strong> <code>Logging.StructureLog</code>, <code>Logging.PortierungLog</code>, <code>Logging.DataTransferLog</code>, <code>Logging.DatabaseCheckLog</code>, <code>Logging.InchDataUpdateLog</code>, <code>Logging.LdmImportLog</code> (columns <code>DateAndTime</code>, <code>Criticality</code>, <code>SchemaName</code>, <code>Message</code>, <code>TaskName</code>); stored procedure <code>tsp_logging</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-022-persist-an-orders-part-list">FR-DATA-022 — Persist an order's part list</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall persist the parts belonging to an order, including each part's file path and name, target/minimum/maximum quantities, priority, material and processing status.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Production planning and nesting operate on stored order/part lists rather than loose files. Present in nesting/order-capable editions (see [[20 - FR - Production Planning &amp; Projects]], [[17 - FR - Nesting &amp; Palletizing]]).</li>
+<li><strong>Source:</strong> <code>Nest.TEILE_ERFASSEN</code> (<code>TEIL_AUFTRAG</code> = order, <code>TEIL_PFAD_NAME</code>, <code>TEIL_NAME</code>, <code>TEIL_IST</code>/<code>_MIN</code>/<code>_MAX</code>, <code>TEIL_PRIORITAET</code>, <code>TEIL_MTL</code>, <code>TEIL_STATUS</code>, <code>TEIL_DATUM</code>).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-023-persist-sheetstock-inventory-with-geometry-reference">FR-DATA-023 — Persist sheet/stock inventory with geometry reference</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall persist sheet and remnant-stock entries, each carrying its dimensions and material and referencing the associated geometry file by directory and name.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Stock records must link inventory to the geometry that represents the physical sheet/remnant.</li>
+<li><strong>Source:</strong> <code>Common.MAT_SHEET</code> (<code>MAT_LAGERGUTID</code>, <code>MAT_ABMESS_X/Y</code>, <code>MAT_GEO_DIRECTORY</code>, <code>MAT_GEO_NAME</code>, <code>MAT_IS_REMAINDER_SHEET</code>); <code>Nest.TAFEL_VARIANT</code> (<code>VAR_ABMESS_X/Y/Z</code>, <code>VAR_LAGERGUTID</code>, <code>VAR_WS_INDEX</code>).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-024-lock-in-use-stocknesting-records">FR-DATA-024 — Lock in-use stock/nesting records</h3>
+<ul>
+<li><strong>Requirement:</strong> While a stock or nesting-sheet entry is in use by an order, the system shall mark the entry locked to prevent conflicting modification or reuse.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Prevents two jobs from consuming or editing the same physical sheet/remnant concurrently.</li>
+<li><strong>Source:</strong> <code>Nest.TAFEL_VARIANT.VAR_EINTRAG_GESPERRT</code>, <code>VAR_BENUTZT_VON_AUFTRAG</code>; <code>Common.MAT_SHEET.MAT_LOCKSTATE</code>.</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-025-enforce-referential-integrity">FR-DATA-025 — Enforce referential integrity</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall enforce the foreign-key relationships defined in the data dictionary, applying the specified update and delete referential actions.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Cross-table consistency (e.g. between machine, tool and parameter tables) must be guaranteed by the database.</li>
+<li><strong>Source:</strong> <code>DATADICT.DATADICT_RELATIONS</code> (<code>DD_REL_FK_*</code>/<code>DD_REL_REF_*</code>, <code>DD_REL_FK_DELETE_REFERENTIAL_ACTION</code>, <code>DD_REL_FK_UPDATE_REFERENTIAL_ACTION</code>).</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-026-role-based-database-access-rights">FR-DATA-026 — Role-based database access rights</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall restrict access to database objects according to defined roles and rights groups.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Multi-user installations restrict who may read/modify technology and configuration data.</li>
+<li><strong>Source:</strong> <code>DATADICT.DATADICT_ROLES</code>, <code>DATADICT.DATADICT_ROLE_MEMBERS</code>, <code>DATADICT.DATADICT_SECURABLES</code>; <code>Databases/SQLServerDatabase/Security/{Roles,Users,Schemas}</code>; <code>DATADICT.DATADICT.RECHTEGRUPPE</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-027-xml-document-persistence">FR-DATA-027 — XML document persistence</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall read and write structured data as XML documents through a common persistence interface.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Certain settings, exchange payloads and document data are stored as XML rather than in the native geometry format or the RDBMS.</li>
+<li><strong>Source:</strong> <code>tc_xml/xml_io/</code> (<code>TcXmlGenerator</code>, <code>TcXmlParser</code>, <code>TiDateiPersistenz</code> strategy interface, <code>TcDateiPersistenzStream</code>; Xerces DOM).</li>
+<li><strong>Verification:</strong> Test</li>
+</ul>
+<h3 id="fr-data-028-store-multilingual-text-keyed-by-language">FR-DATA-028 — Store multilingual text keyed by language</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall store UI and domain texts together with their translations in the database, keyed by language/culture.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> The suite is localized; text is data-driven per installed language. (Rendering/selection of language is owned by [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]].)</li>
+<li><strong>Source:</strong> <code>Text.COMMON_TEXT</code>, <code>Text.SPRACHEN</code> (<code>SP_SPRACHNR</code>, <code>SP_DBSPRACHE</code>, <code>SP_DOTNET_CULTURE</code>, <code>SP_CODEPAGE</code>), <code>Text.CONST_TRANSLAT</code>, <code>Text.COL_TRANSLAT</code>.</li>
+<li><strong>Verification:</strong> Inspection</li>
+</ul>
+<h3 id="fr-data-029-generate-tabular-listings-of-technology-tables">FR-DATA-029 — Generate tabular listings of technology tables</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall generate printable tabular listings of stored technology tables and rule sets.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Operators and service staff need human-readable dumps of parameter and rule tables.</li>
+<li><strong>Source:</strong> <code>tc_tab/tab_prnt/</code> (<code>db_tabel.cpp</code> <code>verarbeite_db_las_tabelle</code>, <code>verarbeite_db_wasser_tabelle</code>; <code>tabellen.cpp</code>); <code>tc_tab/tab_rewe/</code> (<code>tabellen_druck_regel</code>).</li>
+<li><strong>Verification:</strong> Demonstration</li>
+</ul>
+<h2 id="external-interfaces-area-specific">5. External Interfaces (area-specific)</h2>
+<p>Consolidated interface requirements are in [[30 - External Interface Requirements]].</p>
+<ul>
+<li><strong>Native geometry files</strong> — MI text format (<code>.geo</code> and relatives) with a format version; sheet (<code>.taf</code>) files. Producer/consumer: <code>tc_mi</code>, <code>tc_dbase</code>. See [[11 - FR - Import, Export &amp; File Formats]].</li>
+<li><strong>TruTopsGeoInterface.dll</strong> — <code>extern &quot;C&quot;</code> / <code>.NET</code> import-export API and binary object bin for external geometry exchange (<code>tc_dbase/GeoInterface</code>).</li>
+<li><strong>ODBC → SQL Server</strong> — DSN-based access; databases deployable as locally attached MDF files (<code>Databases/*.bat</code>).</li>
+<li><strong>PDM / TRUMPF.NET vault</strong> — file access via the OmAdapter/<code>TiPdmFacet</code> facade; PDM browser (<code>tc_util/pdmUtilities</code>, <code>tc_cad/allg_asm/pdmBrowser.cpp</code>).</li>
+<li><strong>XML</strong> — Xerces DOM read/write (<code>tc_xml</code>).</li>
+<li><strong>Foreign file types read for attributes</strong> — Dxf, Igs, Pdf, Html, plus TRUMPF Gmt/Tmt/Rot/Rmt/Rpf/Wzg/Mtl (<code>tc_verw/geoinfo.h</code>).</li>
+</ul>
+<h2 id="assumptions-constraints">6. Assumptions &amp; Constraints</h2>
+<p>Cross-cutting items are tracked in [[50 - Constraints &amp; Assumptions]].</p>
+<ul>
+<li><strong>Split persistence model.</strong> Parts/drawings live in geometry files (file system or PDM); the RDBMS holds technology/configuration, rule-set, order/stock and text data, and only <em>references</em> geometry files (e.g. <code>MAT_SHEET.MAT_GEO_DIRECTORY</code>). There is no single &quot;parts&quot; table — the part catalog is the file store plus lightweight <code>TcGeoInfos</code> attribute reads.</li>
+<li><strong>SQL Server is the current RDBMS.</strong> The &quot;local Access MDB&quot; heritage now manifests as locally attached SQL Server MDF files reached over ODBC; DDL and triggers are T-SQL specific.</li>
+<li><strong>Metadata-driven schema.</strong> Physical tables, columns, constraints and even table creation derive from the DATADICT dictionary; hand-editing physical tables outside the dictionary is out of contract.</li>
+<li><strong>Metric/inch duality is pervasive.</strong> Almost every requirement has a unit dimension; inch databases are generated from metric masters (see FR-DATA-012, FR-DATA-020).</li>
+<li><strong>Legacy code constraints.</strong> German-language identifiers/comments; C-style and <code>Tw*</code>/<code>Om*</code> framework types; the MI format must remain backward-compatible indefinitely.</li>
+<li><strong>Editions.</strong> Per-technology schemas mean many tables are only populated for the relevant edition; the DATADICT <code>MASTERTAB*</code> flags encode which schemas a table belongs to.</li>
+</ul>
+<h2 id="open-questions-ambiguities">7. Open Questions &amp; Ambiguities</h2>
+<ul>
+<li><strong>Ownership of technology-table <em>content</em>.</strong> The vast majority of SQL tables (<code>Bend.*</code>, <code>Laser.*</code>, <code>Punch.*</code>, <code>Tube.*</code>, <code>WZG_*</code>, <code>MAS_*</code>, <code>REGEL*</code>, <code>MAT_*</code>) hold tool/machine/material/technology data whose semantics belong to [[19 - FR - Tools, Machines, Materials &amp; Technology]] and the per-technology FR docs. This document only claims their <em>persistence/schema</em> aspects.</li>
+<li><strong>Exact MI/GEO file grammar.</strong> The full record grammar of the MI format was not reverse-engineered line by line (<code>mi_lese.cpp</code>/<code>mi_write.cpp</code> are ~60k/112k lines of interpreter); the format-version boundaries (2.21, 2.4) and what each release changed are only partially evidenced.</li>
+<li><strong>PDM server contract.</strong> The OmAdapter/<code>TiPdmFacet</code> API surface (check-in/check-out, versioning, locking semantics against the PDM vault) is referenced but its detailed operations live in framework code (<code>OmAdapter.dll</code>) not present in this snapshot; PDM record-locking vs. DB <code>LOCKSTATE</code> may be distinct mechanisms.</li>
+<li><strong>Concurrency model.</strong> Whether multi-user conflict handling relies solely on the SQL Server engine, on the <code>*_GESPERRT</code>/<code>LOCKSTATE</code> flags, or on PDM check-out could not be fully determined.</li>
+<li><strong><code>CAD.TEMP_RECORD</code> / <code>*.TEMP_RECORD</code>.</strong> Generic scratch tables (5×long/float/char columns) appear per schema; their exact role as an app↔DB exchange buffer is inferred, not confirmed. <em>(inferred)</em></li>
+<li><strong><code>Calc.LttOrgValuesOfEncrypted</code> / <code>Updates.LASERTECHNO_Blacklist</code>.</strong> Encryption/blacklisting of certain technology values is hinted at but the mechanism and scope are unclear.</li>
+<li><strong>Bend gripper configuration store (<code>BendGripperConf.*</code>).</strong> A separate object store with <code>LOCK</code>/<code>OWNER</code>/<code>CHANGES</code> tables suggesting its own versioning/locking — likely owned by [[16 - FR - Bending (ToPs 600)]] but its persistence pattern overlaps this area.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-fr-part-data-management-doc-12-fr-part-data-management-id-prefix-fr-data-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-04-domain-model-glossary-11-fr-import-export-file-formats-19-fr-tools-machines-materials-technology-30-external-interface-requirements-tags-requirements-trutops-functional-requirements">product: trutopscad
+org: trumpf
+title: "FR — Part & Data Management"
+doc: "12 - FR - Part & Data Management"
+id-prefix: "FR-DATA"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[03 - System Context & Architecture Overview]]", "[[04 - Domain Model & Glossary]]", "[[11 - FR - Import, Export & File Formats]]", "[[19 - FR - Tools, Machines, Materials & Technology]]", "[[30 - External Interface Requirements]]"]
+tags: [requirements, trutops, functional-requirements]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#capability-overview">2. Capability Overview</a>
+  </li>
+  <li level="1">
+   <a href="#domain-entities">3. Domain Entities</a>
+  </li>
+  <li level="1">
+   <a href="#functional-requirements">4. Functional Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-001-persist-drawing-to-native-geometry-file">FR-DATA-001 — Persist drawing to native geometry file</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-002-load-drawingpart-from-native-geometry-file">FR-DATA-002 — Load drawing/part from native geometry file</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-003-store-an-individual-part-einzelteil">FR-DATA-003 — Store an individual part (Einzelteil)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-004-persist-and-load-nesting-sheets-tafel">FR-DATA-004 — Persist and load nesting sheets (Tafel)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-005-versioned-geometry-file-format">FR-DATA-005 — Versioned geometry file format</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-006-binary-geometry-interface-trutopsgeointerface-dll">FR-DATA-006 — Binary geometry interface (TruTopsGeoInterface DLL)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-007-transparent-pdm-file-system-access">FR-DATA-007 — Transparent PDM / file-system access</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-008-pdm-browser">FR-DATA-008 — PDM browser</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-009-lightweight-file-attribute-catalog-query">FR-DATA-009 — Lightweight file-attribute (catalog) query</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-010-check-part-compatibility-with-active-material-and-machine">FR-DATA-010 — Check part compatibility with active material and machine</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-011-relational-database-access-via-odbc">FR-DATA-011 — Relational database access via ODBC</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-012-parallel-metric-and-inch-databases">FR-DATA-012 — Parallel metric and inch databases</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-013-unit-aware-configuration-value-access">FR-DATA-013 — Unit-aware configuration value access</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-014-cache-the-system-rule-set-regelwerk">FR-DATA-014 — Cache the system rule set (Regelwerk)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-015-validate-configuration-values-against-constraints">FR-DATA-015 — Validate configuration values against constraints</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-016-data-dictionary-defines-the-schema">FR-DATA-016 — Data dictionary defines the schema</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-017-auto-provision-tables-from-the-data-dictionary">FR-DATA-017 — Auto-provision tables from the data dictionary</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-018-track-database-schema-version">FR-DATA-018 — Track database schema version</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-019-migrateupgrade-an-outdated-database">FR-DATA-019 — Migrate/upgrade an outdated database</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-020-port-data-between-metric-and-inch">FR-DATA-020 — Port data between metric and inch</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-021-audit-log-structural-and-data-operations">FR-DATA-021 — Audit-log structural and data operations</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-022-persist-an-orders-part-list">FR-DATA-022 — Persist an order's part list</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-023-persist-sheetstock-inventory-with-geometry-reference">FR-DATA-023 — Persist sheet/stock inventory with geometry reference</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-024-lock-in-use-stocknesting-records">FR-DATA-024 — Lock in-use stock/nesting records</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-025-enforce-referential-integrity">FR-DATA-025 — Enforce referential integrity</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-026-role-based-database-access-rights">FR-DATA-026 — Role-based database access rights</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-027-xml-document-persistence">FR-DATA-027 — XML document persistence</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-028-store-multilingual-text-keyed-by-language">FR-DATA-028 — Store multilingual text keyed by language</a>
+  </li>
+  <li level="2">
+   <a href="#fr-data-029-generate-tabular-listings-of-technology-tables">FR-DATA-029 — Generate tabular listings of technology tables</a>
+  </li>
+  <li level="1">
+   <a href="#external-interfaces-area-specific">5. External Interfaces (area-specific)</a>
+  </li>
+  <li level="1">
+   <a href="#assumptions-constraints">6. Assumptions & Constraints</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">7. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></span>
+ <span class="next"><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

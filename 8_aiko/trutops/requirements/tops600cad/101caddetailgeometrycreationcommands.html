@@ -1,0 +1,1818 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>101CADDetailGeometryCreationCommands</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a class="active" href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>101CADDetailGeometryCreationCommands</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-geometry-creation-commands-doc-10.1-cad-detail-geometry-creation-commands-id-prefix-fr-cad-cre-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Geometry Creation Commands&quot;
+doc: &quot;10.1 - CAD Detail - Geometry Creation Commands&quot;
+id-prefix: &quot;FR-CAD-CRE&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-geometry-creation-commands">CAD Detail — Geometry Creation Commands</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Reconstructed intent from static source analysis, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document is the command/algorithm-level refinement of the <em>geometry-creation</em> slice of the
+TruTops CAD editor. It sits beneath the system-level summary
+[[10 - FR - CAD Geometry &amp; Drawing Editing]] and gives every interactive GRIT <em>creation</em> mask and
+its supporting geometry-kernel command its own verifiable SHALL requirement, together with modes,
+parameters, defaults, units and degenerate-case behaviour.</p>
+<p>It refines the following parent requirements: <strong>FR-CAD-001</strong> (basic primitives — points, lines,
+circles, arcs, rectangles), <strong>FR-CAD-002</strong> (rectangles with configurable corners and tabs),
+<strong>FR-CAD-003</strong> (parametric hole/pattern macros) and <strong>FR-CAD-004</strong> (TrueType text). Profile and
+bend-geometry creation additionally support the bending area ([[16 - FR - Bending (ToPs 600)]]) and
+the tube/profile area ([[15 - FR - Tube &amp; Profile Machining (ToPs 400)]]).</p>
+<p><strong>Overlap note.</strong> The corner/edge feature commands <em>fillet (Rundung)</em>, <em>chamfer (Fase)</em>, <em>notch
+(Klinkung)</em>, <em>relief groove (Freistich)</em> and <em>equidistant (Äquidistante)</em> are geometry-creation
+commands but are also editing operations that consume existing elements; the parent suite assigns
+their editing facet to [[10.2 - CAD Detail - Editing &amp; Transformation Commands]] (FR-CAD-EDT-030..037).
+This document specifies them from the <strong>creation</strong> angle (the <code>aCadCreate…</code> masks in
+<code>aCadCreateFunc.gritx</code> and the shapes/parameters they add) and cross-references 10.2 for the
+editing/selection facet rather than restating it.</p>
+<p><strong>Architecture note (applies throughout).</strong> Each creation command is a GRIT dialog <em>mask</em>
+(<code>tc_bof/aCadCreateFunc.gritx</code>, <code>tc_bof/cad_assi.gritx</code>) whose <code>EnterFunction</code> runs the MMK
+interpreter and issues one or more <code>asm_call( &lt;module&gt; &lt;sub-command&gt; … )</code> strings to the <code>cad</code>
+automat in <code>tc_cad/cad_asm</code>. The automat is a token state machine: <code>init_&lt;module&gt;_befehl()</code> builds
+states with <code>ASM_new_state</code>/<code>ASM_set_data</code>, where <code>ASM_POINT</code> consumes a picked/typed coordinate,
+<code>ASM_REAL</code> a numeric value (length/angle/distance/radius/diameter), <code>ASM_INTEGER</code> a count and
+<code>ASM_TEXT</code> a string; leading <code>YACC_*</code> tokens select the sub-command. Geometry work is delegated to a
+<em>database command</em> object in <code>tc_dbase/dbase_command</code> (<code>TcDbase…Command</code>), which is the transactional
+unit for undo/redo (<code>TcDbaseActionManager</code>/<code>TcDbaseActionFactory</code>). Coordinate input passes through
+the snapping engine (Fangen, see [[10.4 - CAD Detail - Attributes, Snapping, Selection &amp; Lifecycle]]).
+Units follow environment variable <code>GRITUNIT</code> (<code>0</code> = metric/mm, <code>1</code> = inch); angles are in <strong>degrees</strong>
+unless stated. German domain terms are linked to [[04 - Domain Model &amp; Glossary]].</p>
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>Mask / algorithm</th>
+<th>German / plain meaning</th>
+<th>asm_call → kernel</th>
+<th>Requirement</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aCadCreatePoint</code></td>
+<td>Punkt (point)</td>
+<td><code>cad_point</code> → <code>bilde_punkt</code></td>
+<td>FR-CAD-CRE-001</td>
+</tr>
+<tr>
+<td><code>aCadCreateLine2Points</code></td>
+<td>Linie über 2 Punkte</td>
+<td><code>line two_pts</code></td>
+<td>FR-CAD-CRE-002</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineHorizontal</code></td>
+<td>waagrechte Linie</td>
+<td><code>line horizontal</code></td>
+<td>FR-CAD-CRE-003</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineVertical</code></td>
+<td>senkrechte Linie</td>
+<td><code>line vertical</code></td>
+<td>FR-CAD-CRE-004</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineAngle</code></td>
+<td>Linie über Punkt + Winkel</td>
+<td><code>line pt_ang</code></td>
+<td>FR-CAD-CRE-005</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineParallel</code></td>
+<td>Parallele</td>
+<td><code>line parallel</code></td>
+<td>FR-CAD-CRE-006</td>
+</tr>
+<tr>
+<td><code>aCadCreateLinePerpendicular</code></td>
+<td>Senkrechte auf Element</td>
+<td><code>line perpendic</code></td>
+<td>FR-CAD-CRE-007</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineTangentPoint</code></td>
+<td>Tangente durch Punkt</td>
+<td><code>line tan_pt</code></td>
+<td>FR-CAD-CRE-008</td>
+</tr>
+<tr>
+<td><code>aCadCreateLineTangentTangent</code></td>
+<td>Tangente an 2 Elemente</td>
+<td><code>line tan2</code></td>
+<td>FR-CAD-CRE-009</td>
+</tr>
+<tr>
+<td><code>aCadCreateLinePolygon</code></td>
+<td>Linienzug (polygon)</td>
+<td><code>line polygon</code></td>
+<td>FR-CAD-CRE-010</td>
+</tr>
+<tr>
+<td><code>aCadCreateLinePolygonConstruct</code></td>
+<td>Nachzeichnen (trace)</td>
+<td><code>line polygon construct</code></td>
+<td>FR-CAD-CRE-011</td>
+</tr>
+<tr>
+<td><code>aCadCreateRectangle</code></td>
+<td>Rechteck (2 Punkte)</td>
+<td><code>line rectangle</code></td>
+<td>FR-CAD-CRE-012</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircleCenterRadius</code></td>
+<td>Kreis Mitte + Radius</td>
+<td><code>circle center</code> → <code>TcDbaseCircleCommand</code></td>
+<td>FR-CAD-CRE-013</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircleCenterDiameter</code></td>
+<td>Kreis Mitte + Durchmesser</td>
+<td><code>circle center diameter</code></td>
+<td>FR-CAD-CRE-014</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircle3Points</code></td>
+<td>Kreis über 3 Punkte</td>
+<td><code>circle three_pts</code></td>
+<td>FR-CAD-CRE-015</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircle2TangentPoint</code></td>
+<td>Kreis an 2 Tangenten</td>
+<td><code>circle tan2_pt</code></td>
+<td>FR-CAD-CRE-016</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircleConcentric</code></td>
+<td>konzentrischer Kreis</td>
+<td><code>circle parallel</code></td>
+<td>FR-CAD-CRE-017</td>
+</tr>
+<tr>
+<td><code>aCadCreateCircleDiameter</code></td>
+<td>Kreis über Durchmesser (2 Pkt)</td>
+<td><code>circle diameter</code></td>
+<td>FR-CAD-CRE-018</td>
+</tr>
+<tr>
+<td><code>aCadCreateArc3Points</code></td>
+<td>Bogen über 3 Punkte</td>
+<td><code>arc three_pts</code></td>
+<td>FR-CAD-CRE-019</td>
+</tr>
+<tr>
+<td><code>aCadCreateArcCenterBeginEnd</code></td>
+<td>Bogen Mitte-Anfang-Ende</td>
+<td><code>arc cen_beg_end</code></td>
+<td>FR-CAD-CRE-020</td>
+</tr>
+<tr>
+<td><code>aCadCreateArcCenterRadiusAngle</code></td>
+<td>Bogen Mitte-Radius-Winkel</td>
+<td><code>arc cen_rad_ang</code></td>
+<td>FR-CAD-CRE-021</td>
+</tr>
+<tr>
+<td><code>aCadCreateArcConcentric</code></td>
+<td>konzentrischer Bogen</td>
+<td><code>arc parallel</code></td>
+<td>FR-CAD-CRE-022</td>
+</tr>
+<tr>
+<td><code>aCadCreateArcDiameter</code></td>
+<td>Bogen über Durchmesser</td>
+<td><code>arc diameter</code></td>
+<td>FR-CAD-CRE-023</td>
+</tr>
+<tr>
+<td><code>aCadCreateArcSmooth</code></td>
+<td>tangentialer Anschlussbogen</td>
+<td><code>arc smooth</code></td>
+<td>FR-CAD-CRE-024</td>
+</tr>
+<tr>
+<td>(kernel) ellipse arc</td>
+<td>Ellipsenbogen</td>
+<td><code>arc ellipse</code></td>
+<td>FR-CAD-CRE-025</td>
+</tr>
+<tr>
+<td><code>aCadCreateChamferRectangle</code></td>
+<td>Fase über 2 Elemente</td>
+<td><code>chamfer two_elem</code> → <code>TcDbaseChamferCommand</code></td>
+<td>FR-CAD-CRE-026</td>
+</tr>
+<tr>
+<td><code>aCadCreateChamferSquare</code></td>
+<td>Fase am Scheitel</td>
+<td><code>chamfer vertex</code></td>
+<td>FR-CAD-CRE-027</td>
+</tr>
+<tr>
+<td><code>aCadCreateCornerNotchRectangle</code></td>
+<td>Klinkung über 2 Elemente</td>
+<td><code>cad_klinkung two_elem</code> → <code>TcDbaseNotchCommand</code></td>
+<td>FR-CAD-CRE-028</td>
+</tr>
+<tr>
+<td><code>aCadCreateCornerNotchSquare</code></td>
+<td>Klinkung am Scheitel</td>
+<td><code>cad_klinkung vertex</code></td>
+<td>FR-CAD-CRE-029</td>
+</tr>
+<tr>
+<td><code>aCadCreateElemNotchTriangle</code></td>
+<td>Element-Klinkung dreieckig</td>
+<td><code>cad_klinkung element [part]</code></td>
+<td>FR-CAD-CRE-030</td>
+</tr>
+<tr>
+<td><code>aCadCreateElemNotchRectangle</code></td>
+<td>Element-Klinkung rechteckig</td>
+<td><code>cad_klinkung element rectangle [part]</code></td>
+<td>FR-CAD-CRE-031</td>
+</tr>
+<tr>
+<td>(element notch shapes)</td>
+<td>Langloch/Kreis-Elementklinkung</td>
+<td><code>… element oblong/round</code></td>
+<td>FR-CAD-CRE-032</td>
+</tr>
+<tr>
+<td><code>aCadCreateFreistich</code></td>
+<td>Freistich (relief groove)</td>
+<td><code>cad_klinkung round [part]</code></td>
+<td>FR-CAD-CRE-033</td>
+</tr>
+<tr>
+<td><code>aCadCreateFillet</code></td>
+<td>Rundung (fillet)</td>
+<td><code>fillet</code> → <code>TcDbaseRoundingCommand</code></td>
+<td>FR-CAD-CRE-034</td>
+</tr>
+<tr>
+<td><code>aCadCreateEquidistant</code></td>
+<td>Äquidistante (offset)</td>
+<td><code>equidistant &lt;d&gt;</code> → <code>TcDbaseEquidistantCommand</code></td>
+<td>FR-CAD-CRE-035</td>
+</tr>
+<tr>
+<td><code>aCadCreateText</code></td>
+<td>Text (TrueType)</td>
+<td><code>cad_text create …</code></td>
+<td>FR-CAD-CRE-036</td>
+</tr>
+<tr>
+<td><code>aCadCreateText</code> modifiers</td>
+<td>Radius/Signieren/Auto/Drehung</td>
+<td><code>radius/on/back/auto</code></td>
+<td>FR-CAD-CRE-037</td>
+</tr>
+<tr>
+<td>TTF engine</td>
+<td>Glyph → Linien/Bögen</td>
+<td><code>tc_cad/cad_ttf</code> (<code>TcTTFString</code>/<code>TcContour</code>)</td>
+<td>FR-CAD-CRE-038</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> shape</td>
+<td>Werkzeug-/Formauswahl</td>
+<td><code>macro rectangle/oblong/round/ellipse/point/sample/tool/form</code></td>
+<td>FR-CAD-CRE-039</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> single</td>
+<td>Einzelloch</td>
+<td><code>macro single</code> → <code>TcDbaseSingleHoleCommand</code></td>
+<td>FR-CAD-CRE-040</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> row</td>
+<td>Lochreihe</td>
+<td><code>macro row</code> → <code>TcDbaseHoleRowCommand</code></td>
+<td>FR-CAD-CRE-041</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> grid</td>
+<td>Lochgitter</td>
+<td><code>macro grid</code> → <code>TcDbaseHoleRowCommand</code></td>
+<td>FR-CAD-CRE-042</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> circle</td>
+<td>Lochkreis (Mitte/Punkte/Winkel)</td>
+<td><code>macro hole_circle</code> → <code>TcDbaseHoleCircleCommand</code></td>
+<td>FR-CAD-CRE-043</td>
+</tr>
+<tr>
+<td><code>F_CadMacro*</code> assistant</td>
+<td>Macro-Assistent</td>
+<td><code>macro new/on/off/unit/…</code></td>
+<td>FR-CAD-CRE-044</td>
+</tr>
+<tr>
+<td><code>tCadCreateHole</code> bool</td>
+<td>Einzelloch verschmelzen</td>
+<td><code>macro single fit</code></td>
+<td>FR-CAD-CRE-045</td>
+</tr>
+<tr>
+<td><code>F_CadRechteck*</code> new</td>
+<td>Rechteckassistent (Fläche)</td>
+<td><code>init_rect_befehl</code> → <code>TcDbaseRectangleAssistant</code></td>
+<td>FR-CAD-CRE-046</td>
+</tr>
+<tr>
+<td><code>F_CadRechteckZeileEcke*</code></td>
+<td>Eckbehandlung pro Ecke</td>
+<td><code>rect set/change</code></td>
+<td>FR-CAD-CRE-047</td>
+</tr>
+<tr>
+<td><code>F_CadRechteckZeileElem*</code></td>
+<td>Element-Klinkung pro Kante</td>
+<td><code>rect element …</code></td>
+<td>FR-CAD-CRE-048</td>
+</tr>
+<tr>
+<td><code>F_CadRechteckZeileKollision</code></td>
+<td>Überschneidung/Kollision</td>
+<td><code>rect form …</code></td>
+<td>FR-CAD-CRE-049</td>
+</tr>
+<tr>
+<td><code>F_CadRechteckZeileLasche*</code></td>
+<td>Lasche (tab)</td>
+<td><code>rect …</code> (setBendData)</td>
+<td>FR-CAD-CRE-050</td>
+</tr>
+<tr>
+<td><code>F_CadVerwalten*</code></td>
+<td>Faktor-/Werkzeugverwaltung</td>
+<td>factor/tool tables</td>
+<td>FR-CAD-CRE-051</td>
+</tr>
+<tr>
+<td><code>aCadCreateGroup</code></td>
+<td>Gruppe (block)</td>
+<td><code>attribute block</code> → <code>createGroup</code></td>
+<td>FR-CAD-CRE-052</td>
+</tr>
+<tr>
+<td><code>aCadCreateProfile</code></td>
+<td>Profilerstellung (Editor)</td>
+<td><code>profile</code> (<code>M_ProfilErstellung</code>)</td>
+<td>FR-CAD-CRE-053</td>
+</tr>
+<tr>
+<td><code>aCadCreateProfileBumping</code></td>
+<td>Profil-Bumping</td>
+<td><code>profilebumping</code></td>
+<td>FR-CAD-CRE-054</td>
+</tr>
+<tr>
+<td><code>aCadCreateProfileFalzung</code></td>
+<td>Profil-Falzung (hemming)</td>
+<td><code>hemming</code></td>
+<td>FR-CAD-CRE-055</td>
+</tr>
+<tr>
+<td><code>aCadCreateProfileXY</code></td>
+<td>Profil XY-Segment</td>
+<td><code>xy</code></td>
+<td>FR-CAD-CRE-056</td>
+</tr>
+<tr>
+<td><code>aCadCreateBending</code></td>
+<td>Biegelinie erzeugen</td>
+<td><code>bend … create_bend_line</code> → <code>TcDbaseCreateBendingCommand</code></td>
+<td>FR-CAD-CRE-057</td>
+</tr>
+<tr>
+<td><code>aCadCreateBendNotch</code></td>
+<td>Auto-Klinkung an Biegung</td>
+<td><code>bend round</code> (autoKlinkung)</td>
+<td>FR-CAD-CRE-058</td>
+</tr>
+<tr>
+<td><code>aCadCreateBendtool</code></td>
+<td>Biegewerkzeug erzeugen</td>
+<td><code>bendtool</code> (<code>M_CadBendToolCreateAssistant</code>)</td>
+<td>FR-CAD-CRE-059</td>
+</tr>
+<tr>
+<td><code>aCadCreateVariant</code></td>
+<td>Variante anlegen</td>
+<td><code>variant create …</code></td>
+<td>FR-CAD-CRE-060</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="fr-cad-cre-001-create-point">FR-CAD-CRE-001 — Create point</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL provide a point-creation command (<code>aCadCreatePoint</code> → <code>asm_call(cad_point)</code>) that, when the user picks or types a position, snaps the position through the selection controller (<code>e_selectSingle</code>/<code>e_selectPick</code>) and creates a point element at the snapped coordinate; the command SHALL remain active for repeated point entry until the user exits.</li>
+<li><strong>Parameters &amp; options</strong>: one position per point (X, Y in current unit); position optionally snapped to existing geometry via the position selector (<code>e_position</code>). No further parameters.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Points are the simplest construction primitive and a snapping/reference target for later commands.</li>
+<li><strong>Source</strong>: <code>aCadCreateFunc.gritx</code> mask <code>aCadCreatePoint</code>; <code>tc_cad/cad_asm/point.cpp</code> (<code>store_point</code> → <code>bilde_punkt</code>, undo via <code>TcDbaseActionFactory::createdElements</code>).</li>
+<li><strong>Verification</strong>: Test — enter a point at a typed coordinate and at a snapped intersection; assert a point element exists at the expected position.</li>
+</ul>
+<h3 id="fr-cad-cre-002-line-by-two-points">FR-CAD-CRE-002 — Line by two points</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a straight line segment between two entered points (<code>aCadCreateLine2Points</code> → <code>asm_call(line two_pts)</code>), chaining so that the end point of one segment MAY start the next.</li>
+<li><strong>Parameters &amp; options</strong>: start point <code>p1</code>, end point <code>p2</code> (both snappable). Repeated <code>ASM_POINT</code> entries continue a connected chain.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Two-point line is the fundamental linear element.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLine2Points</code>; <code>line.cpp</code> <code>init_line_befehl</code> state <code>YACC_TWO_PTS</code> (<code>store_geo_p1</code> → <code>store_line</code>).</li>
+<li><strong>Verification</strong>: Test — draw a line between two coordinates; assert endpoints.</li>
+</ul>
+<h3 id="fr-cad-cre-003-horizontal-line">FR-CAD-CRE-003 — Horizontal line</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a horizontal (X-axis-parallel) line from a start point (<code>aCadCreateLineHorizontal</code> → <code>asm_call(line horizontal)</code>), where the second definition is EITHER a typed <strong>length</strong> (<code>ASM_REAL</code>, <code>line_hor_laenge</code>) OR a picked <strong>end point</strong> (<code>ASM_POINT</code>, <code>line_hor</code>) whose Y is forced to the start Y.</li>
+<li><strong>Parameters &amp; options</strong>: start point; then length (signed, current unit) or end point.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Constrained horizontal entry avoids accidental slope and supports numeric length entry.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineHorizontal</code>; <code>line.cpp</code> <code>YACC_HORIZONTAL</code> (<code>store_geo_p1</code>, <code>line_hor_laenge</code>, <code>line_hor</code>).</li>
+<li><strong>Verification</strong>: Test — create by length and by point; assert the line is horizontal and of the requested length.</li>
+</ul>
+<h3 id="fr-cad-cre-004-vertical-line-incl.perpendicular-onto-a-round-element">FR-CAD-CRE-004 — Vertical line (incl. perpendicular onto a round element)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a vertical (Y-axis-parallel) line from a start point (<code>aCadCreateLineVertical</code> → <code>asm_call(line vertical)</code>), the second definition being a typed <strong>length</strong> or a picked <strong>end point</strong> (X forced to start X). Where the user first selects a round element (circle/arc, token <code>YACC_ROUND</code>), the command SHALL instead create a line <strong>perpendicular from that round element</strong> through a picked point, optionally to a typed length (<code>store_rundung</code>/<code>store_punkt</code>/<code>create_vert_line[_pt]</code>).</li>
+<li><strong>Parameters &amp; options</strong>: start point; length or end point; alternative round-element pick + point (+ optional length).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Vertical constraint plus the radial-line-from-circle variant covers both drafting and radial construction.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineVertical</code>; <code>line.cpp</code> <code>YACC_VERTICAL</code>, <code>YACC_ROUND</code> branch.</li>
+<li><strong>Verification</strong>: Test — vertical by length/point; and perpendicular line from a circle; assert geometry.</li>
+</ul>
+<h3 id="fr-cad-cre-005-line-by-point-and-angle">FR-CAD-CRE-005 — Line by point and angle</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a line from a start point at a defined angle (<code>aCadCreateLineAngle</code> → <code>asm_call(line pt_ang)</code>). The direction SHALL be given EITHER as a typed <strong>angle</strong> (degrees, <code>store_winkel</code>) followed by a typed <strong>length</strong> (<code>line_ang_laenge</code>) or picked <strong>through-point</strong> (<code>line_ang_pkt</code>), OR by a second point that itself defines the angle (<code>store_geo_p2</code>) followed by a length/point (<code>line_pkt_laenge</code>/<code>line_pkt_pkt</code>).</li>
+<li><strong>Parameters &amp; options</strong>: start point; angle (deg) or defining second point; length (current unit) or destination point.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Angular line entry supports both numeric-angle and geometric (point-derived) workflows.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineAngle</code>; <code>line.cpp</code> <code>YACC_PT_ANG</code> state graph (<code>store_winkel</code>, <code>line_ang_laenge</code>, <code>line_ang_pkt</code>, <code>line_pkt_laenge</code>, <code>line_pkt_pkt</code>).</li>
+<li><strong>Verification</strong>: Test — create at 30° with a length, and via two points; assert slope and length.</li>
+</ul>
+<h3 id="fr-cad-cre-006-parallel-line-multiple-offsets">FR-CAD-CRE-006 — Parallel line (multiple offsets)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create lines parallel to a selected linear element (<code>aCadCreateLineParallel</code> → <code>asm_call(line parallel)</code>). The offset SHALL be given by a picked side/point (<code>line_parallel</code>) or by one or more typed <strong>distances</strong>; the command SHALL accept up to <code>MAX_LINE_ABST</code> = <strong>10</strong> distances entered in sequence and create a parallel at each (<code>store_abstand</code> fills <code>abstand[0..9]</code>).</li>
+<li><strong>Parameters &amp; options</strong>: reference element; side (pick) or 1..10 signed distances (current unit); parallels created relative to the reference on the picked side.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Batch-offset (up to 10) supports laying out stiffener/rib patterns without repeating the command.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineParallel</code>; <code>line.hpp</code> <code>#define MAX_LINE_ABST 10</code>; <code>line.cpp</code> <code>YACC_PARALLEL</code> (<code>store_abstand</code>, <code>line_parallel_abst</code>, <code>line_parallel_elem</code>).</li>
+<li><strong>Verification</strong>: Test — enter 3 distances against a reference line; assert 3 parallels at the correct offsets and side.</li>
+</ul>
+<h3 id="fr-cad-cre-007-perpendicular-line-onto-an-element">FR-CAD-CRE-007 — Perpendicular line onto an element</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a line perpendicular to a selected element (<code>aCadCreateLinePerpendicular</code> → <code>asm_call(line perpendic)</code>): the user identifies the reference element, picks the foot/through point, and gives the line either by a destination point or by a typed length (<code>line_perpendic</code>/<code>line_perpendic_laenge</code>).</li>
+<li><strong>Parameters &amp; options</strong>: reference element; base point on/near the element; destination point or length.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Perpendicular construction is a standard drafting aid.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLinePerpendicular</code>; <code>line.cpp</code> <code>YACC_PERPENDIC</code> (<code>ident_rechtw_elem</code>, <code>store_geo_p_rechtw</code>, <code>line_perpendic[_laenge]</code>).</li>
+<li><strong>Verification</strong>: Test — drop a perpendicular from a point to a line; assert 90° and foot point.</li>
+</ul>
+<h3 id="fr-cad-cre-008-tangent-line-through-a-point">FR-CAD-CRE-008 — Tangent line through a point</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a line tangent to a selected round element (circle/arc) passing through a picked point (<code>aCadCreateLineTangentPoint</code> → <code>asm_call(line tan_pt)</code>): identify the round element, then pick the point/side to resolve the tangent (<code>ident_elem_rund_pos</code> → <code>line_tan_pt</code>).</li>
+<li><strong>Parameters &amp; options</strong>: round element; through-point (also disambiguates which of the two tangents).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Tangent-through-point is required for laser lead-ins and tangential connections.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineTangentPoint</code>; <code>line.cpp</code> <code>YACC_TAN_PT</code>.</li>
+<li><strong>Verification</strong>: Test — tangent from an external point to a circle; assert tangency (distance from centre = radius at the touch point).</li>
+</ul>
+<h3 id="fr-cad-cre-009-tangent-line-to-two-round-elements">FR-CAD-CRE-009 — Tangent line to two round elements</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a common tangent line to two selected round elements (<code>aCadCreateLineTangentTangent</code> → <code>asm_call(line tan2)</code>): identify the first round element, then the second (<code>ident_elem_rund_rnd</code> → <code>line_tan2</code>), with the picks selecting inner/outer tangent branch.</li>
+<li><strong>Parameters &amp; options</strong>: two round elements; pick positions select the tangent branch.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Two-circle common tangents build slot/racetrack outlines and belt-like geometry.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLineTangentTangent</code>; <code>line.cpp</code> <code>YACC_TAN2</code>.</li>
+<li><strong>Verification</strong>: Test — build the outer common tangent of two circles; assert tangency to both.</li>
+</ul>
+<h3 id="fr-cad-cre-010-polygon-connected-line-chain">FR-CAD-CRE-010 — Polygon (connected line chain)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a connected chain of line segments (<code>aCadCreateLinePolygon</code> → <code>asm_call(line polygon)</code>): after the first point, each further <strong>point</strong> appends a segment; alternatively the user MAY type an <strong>angle</strong> then a <strong>distance</strong> (<code>store_winkel</code> → <code>poly_wink_abst</code>) or an <strong>angle</strong> then a <strong>through-point</strong> (<code>poly_wink_pkt</code>) to append a segment by polar input.</li>
+<li><strong>Parameters &amp; options</strong>: start point; subsequent points, or (angle deg + distance) / (angle + point) pairs; open or closed chain.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Polyline entry is the primary way to draft open/closed contours quickly.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLinePolygon</code>; <code>line.cpp</code> <code>YACC_POLYGON</code> (<code>cad_line_polygon</code>, <code>store_winkel</code>, <code>poly_wink_abst</code>, <code>poly_wink_pkt</code>).</li>
+<li><strong>Verification</strong>: Test — draw a 4-segment polygon mixing point and polar entry; assert vertices.</li>
+</ul>
+<h3 id="fr-cad-cre-011-polygon-by-tracing-existing-geometry-nachzeichnen-construct">FR-CAD-CRE-011 — Polygon by tracing existing geometry (Nachzeichnen / construct)</h3>
+<ul>
+<li><strong>Requirement</strong>: Where the polygon command is in construct mode (<code>aCadCreateLinePolygonConstruct</code> → <code>asm_call(line polygon construct)</code>, token <code>YACC_CONSTRUCT</code>), the CAD editor SHALL let the user trace along existing (help) geometry by picking a start and successive points, generating polyline segments that follow the traced elements (<code>store_construct_p1</code> → <code>cad_line_construct</code>, <code>TcCadTraceConElemSelector</code>).</li>
+<li><strong>Parameters &amp; options</strong>: start point on traced geometry; successive points; trace-connection element selector.</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: &quot;Nachzeichnen&quot; converts construction/help geometry into real contour lines without re-measuring.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateLinePolygonConstruct</code>; <code>line.cpp</code> <code>YACC_CONSTRUCT</code> branch, <code>line_trace_selector</code>/<code>TcCadTraceConElemSelector</code>.</li>
+<li><strong>Verification</strong>: Demonstration — trace a chain over reference geometry; assert generated polyline follows it.</li>
+</ul>
+<h3 id="fr-cad-cre-012-rectangle-by-two-diagonal-points">FR-CAD-CRE-012 — Rectangle by two diagonal points</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an axis-aligned rectangle (four line segments) from two opposite corner points (<code>aCadCreateRectangle</code> → <code>asm_call(line rectangle)</code>): the first point sets one corner and the second the diagonally opposite corner (<code>store_geo_p1</code> → <code>rectangle</code>).</li>
+<li><strong>Parameters &amp; options</strong>: corner point <code>p1</code>; opposite corner point <code>p2</code>; result is a closed 4-line contour.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: The quick rectangle is the most common blank/window primitive; the corner-treated rectangle is FR-CAD-CRE-046ff.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateRectangle</code>; <code>line.cpp</code> <code>YACC_RECTANGLE</code> (<code>rectangle</code>).</li>
+<li><strong>Verification</strong>: Test — draw a rectangle from two corners; assert four axis-aligned edges.</li>
+</ul>
+<h3 id="fr-cad-cre-013-circle-by-centre-and-radius">FR-CAD-CRE-013 — Circle by centre and radius</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle from a centre point plus a radius (<code>aCadCreateCircleCenterRadius</code> → <code>asm_call(circle center)</code>), the radius being a typed value (<code>store_cir_rad</code>) or a picked point on the circumference (<code>store_circle</code>); further picks MAY create additional concentric circles in the same invocation (<code>store_cir_new</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre; radius (current unit) or circumference point.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Centre+radius is the canonical hole/circle definition.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircleCenterRadius</code>; <code>circle.cpp</code> <code>YACC_CENTER</code> (<code>store_geo_pm</code>, <code>store_cir_rad</code>, <code>store_circle</code>).</li>
+<li><strong>Verification</strong>: Test — circle at centre with radius 5; assert centre and radius.</li>
+</ul>
+<h3 id="fr-cad-cre-014-circle-by-centre-and-diameter">FR-CAD-CRE-014 — Circle by centre and diameter</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle from a centre point plus a <strong>diameter</strong> (<code>aCadCreateCircleCenterDiameter</code> → <code>asm_call(circle center diameter)</code>), the diameter being a typed value (<code>store_cir_dia</code>) or a picked circumference point (<code>store_circle</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre; diameter (current unit) or circumference point.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Diameter entry matches drawing callouts (⌀) directly.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircleCenterDiameter</code>; <code>circle.cpp</code> <code>YACC_CENTER</code>+<code>YACC_DIAMETER</code> (<code>store_cir_dia</code>).</li>
+<li><strong>Verification</strong>: Test — circle by centre + diameter 10; assert radius 5.</li>
+</ul>
+<h3 id="fr-cad-cre-015-circle-through-three-points">FR-CAD-CRE-015 — Circle through three points</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle through three points (<code>aCadCreateCircle3Points</code> → <code>asm_call(circle three_pts)</code>): after two points a third <strong>point</strong> (<code>store_cir_three_pts</code>) or a typed <strong>radius</strong> (<code>store_cir_three_pts_radius</code>) completes the circle.</li>
+<li><strong>Parameters &amp; options</strong>: <code>p1</code>, <code>p2</code>, then third point or radius. Degenerate case: three collinear points cannot define a finite circle and SHALL be rejected. <em>(rejection inferred)</em></li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Three-point construction fits a circle to measured features.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircle3Points</code>; <code>circle.cpp</code> <code>YACC_THREE_PTS</code>.</li>
+<li><strong>Verification</strong>: Test — three non-collinear points; assert the unique circle. Test — collinear points rejected.</li>
+</ul>
+<h3 id="fr-cad-cre-016-circle-tangent-to-two-elements">FR-CAD-CRE-016 — Circle tangent to two elements</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle tangent to two selected elements (<code>aCadCreateCircle2TangentPoint</code> → <code>asm_call(circle tan2_pt)</code>): identify tangent element 1 and element 2, then complete by a typed <strong>radius</strong> (<code>store_cir_tan2_pt_rad</code>) or a picked <strong>position</strong> (<code>store_cir_tan2_pt_pos</code>) that selects the solution.</li>
+<li><strong>Parameters &amp; options</strong>: tangent element 1, tangent element 2; radius or resolving position.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Two-tangent circles create fillet-like blends and inscribed circles.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircle2TangentPoint</code>; <code>circle.cpp</code> <code>YACC_TAN2_PT</code> (<code>store_geo_tp1</code>, <code>store_geo_tp2</code>).</li>
+<li><strong>Verification</strong>: Test — circle of radius r tangent to two lines; assert tangency to both.</li>
+</ul>
+<h3 id="fr-cad-cre-017-concentric-circle">FR-CAD-CRE-017 — Concentric circle</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle concentric to a selected round element (<code>aCadCreateCircleConcentric</code> → <code>asm_call(circle parallel)</code>): identify the reference circle/arc, then give the new radius by a picked point (<code>store_cir_parallel_pkt</code>) or a typed <strong>radial distance</strong> (<code>store_cir_parallel_abs</code>).</li>
+<li><strong>Parameters &amp; options</strong>: reference round element; new circumference point or radial offset (current unit).</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Concentric circles create annular features/counterbores.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircleConcentric</code>; <code>circle.cpp</code> <code>YACC_PARALLEL</code>.</li>
+<li><strong>Verification</strong>: Test — concentric circle offset by 3 from a reference; assert same centre, radius±3.</li>
+</ul>
+<h3 id="fr-cad-cre-018-circle-by-diameter-two-points">FR-CAD-CRE-018 — Circle by diameter (two points)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a circle whose diameter is the segment between two picked points (<code>aCadCreateCircleDiameter</code> → <code>asm_call(circle diameter)</code>): the two points are the diameter endpoints, so the centre is their midpoint and the radius is half their distance (<code>store_geo_p1</code> → <code>store_cir_diameter</code>).</li>
+<li><strong>Parameters &amp; options</strong>: diameter endpoint <code>p1</code>, endpoint <code>p2</code>.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Two-point diameter fits a circle across a measured gap/bore.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCircleDiameter</code>; <code>circle.cpp</code> <code>YACC_DIAMETER</code>.</li>
+<li><strong>Verification</strong>: Test — two points 10 apart; assert centre at midpoint and radius 5.</li>
+</ul>
+<h3 id="fr-cad-cre-019-arc-through-three-points">FR-CAD-CRE-019 — Arc through three points</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an arc through three points (<code>aCadCreateArc3Points</code> → <code>asm_call(arc three_pts)</code>): start point, a second (intermediate) point, and an end point define the arc (<code>store_geo_p1</code>, <code>store_geo_p2</code>, <code>store_arc_three_pts</code>).</li>
+<li><strong>Parameters &amp; options</strong>: <code>p1</code> (start), <code>p2</code> (on arc), <code>p3</code> (end). Collinear points SHALL be rejected. <em>(rejection inferred)</em></li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Three-point arc is the primary free arc primitive.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArc3Points</code>; <code>arc.cpp</code> <code>YACC_THREE_PTS</code>.</li>
+<li><strong>Verification</strong>: Test — three points; assert the arc passes through all three.</li>
+</ul>
+<h3 id="fr-cad-cre-020-arc-by-centre-begin-and-end">FR-CAD-CRE-020 — Arc by centre, begin and end</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an arc from a centre point, a begin point and an end point (<code>aCadCreateArcCenterBeginEnd</code> → <code>asm_call(arc cen_beg_end)</code>): the radius is the centre-to-begin distance; the arc sweeps from begin to end in the implied direction (<code>store_geo_pm</code>, <code>store_geo_p2</code>, <code>store_arc_cen_beg_end</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre, begin point (sets radius + start angle), end point (sets sweep).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Centre-begin-end matches CAM arc conventions and lets the begin point set the radius exactly.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArcCenterBeginEnd</code>; <code>arc.cpp</code> <code>YACC_CEN_BEG_END</code>.</li>
+<li><strong>Verification</strong>: Test — centre + begin + end; assert radius and sweep.</li>
+</ul>
+<h3 id="fr-cad-cre-021-arc-by-centre-radius-and-angle">FR-CAD-CRE-021 — Arc by centre, radius and angle</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an arc from a centre plus a radius plus a start and end angle (<code>aCadCreateArcCenterRadiusAngle</code> → <code>asm_call(arc cen_rad_ang)</code>). Radius SHALL be entered as a value (<code>store_radius_cen</code>) or a point (<code>store_radius_pkt_cen</code>); start angle as a value (<code>store_awin_cen</code>) or a point (<code>store_geo_p2_cen</code>); end angle as a value or a point (<code>store_rad_awin_ewin</code>/<code>store_rad_awin_pkt</code>/<code>store_rad_pkt_ewin</code>/<code>store_rad_pkt_pkt</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre; radius (value/point); start angle (deg/point); end angle (deg/point).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Numeric radius+angle entry is required for precise machined arcs.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArcCenterRadiusAngle</code>; <code>arc.cpp</code> <code>YACC_CEN_RAD_ANG</code> graph.</li>
+<li><strong>Verification</strong>: Test — centre, r=8, 0°→90°; assert quarter arc of radius 8.</li>
+</ul>
+<h3 id="fr-cad-cre-022-concentric-arc">FR-CAD-CRE-022 — Concentric arc</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an arc concentric to a selected round element (<code>aCadCreateArcConcentric</code> → <code>asm_call(arc parallel)</code>): identify the reference arc/circle, then give the concentric arc by a picked point (<code>store_arc_parallel</code>) or a typed radial distance (<code>store_arc_parallel_abst</code>).</li>
+<li><strong>Parameters &amp; options</strong>: reference round element; circumference point or radial offset.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Concentric arcs build slotted/curved ribs and offsets of curved edges.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArcConcentric</code>; <code>arc.cpp</code> <code>YACC_PARALLEL</code>.</li>
+<li><strong>Verification</strong>: Test — arc offset by 5 from a reference arc; assert same centre, offset radius, matching angular extent.</li>
+</ul>
+<h3 id="fr-cad-cre-023-arc-by-diameter">FR-CAD-CRE-023 — Arc by diameter</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a semicircular arc whose diameter is the segment between two picked points (<code>aCadCreateArcDiameter</code> → <code>asm_call(arc diameter)</code>): centre at the midpoint, radius half the distance (<code>store_geo_p1</code> → <code>store_arc_diameter</code>).</li>
+<li><strong>Parameters &amp; options</strong>: diameter endpoints <code>p1</code>, <code>p2</code>.</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: Diameter arc caps slots and rounded ends.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArcDiameter</code>; <code>arc.cpp</code> <code>YACC_DIAMETER</code>.</li>
+<li><strong>Verification</strong>: Test — two points; assert a 180° arc across them.</li>
+</ul>
+<h3 id="fr-cad-cre-024-smooth-tangential-connecting-arc">FR-CAD-CRE-024 — Smooth (tangential) connecting arc</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an arc that connects tangentially (smoothly) to the end of a selected arc/line element (<code>aCadCreateArcSmooth</code> → <code>asm_call(arc smooth)</code>): the user selects the element whose free end is the connection point (<code>arc_element_anschluss</code>), then picks successive points to extend a tangent-continuous arc chain (<code>store_arc_smooth</code>), each new arc joining C1-continuously to the previous.</li>
+<li><strong>Parameters &amp; options</strong>: seed element + free end point; successive target points; tangency enforced at each junction.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Tangent-continuous arc chains produce smooth, kink-free contours for cutting.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateArcSmooth</code>; <code>arc.cpp</code> <code>YACC_SMOOTH</code> (<code>ident_elem_smooth</code>, <code>store_arc_smooth</code>, <code>arc_element_anschluss</code>, <code>TcArcSmoothPointSelector</code>).</li>
+<li><strong>Verification</strong>: Test — extend a line with a smooth arc; assert tangency (equal tangent direction) at the junction.</li>
+</ul>
+<h3 id="fr-cad-cre-025-elliptical-arc-kernel">FR-CAD-CRE-025 — Elliptical arc (kernel)</h3>
+<ul>
+<li><strong>Requirement</strong>: The arc automat SHALL support creation of an elliptical arc (<code>asm_call(arc ellipse)</code>) from a centre, two half-axes, an orientation angle and a per-quadrant arc count, approximating the ellipse by that number of arc segments per quadrant (<code>store_arc_ell_mitte</code>, <code>store_arc_ell_halbmess1/2</code>, <code>store_arc_ell_winkel</code>, <code>store_arc_ell_anzpkt</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre; half-axis 1 (value or defining end point); half-axis 2 (value); rotation angle (deg); integer arc count per quadrant.</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: Ellipses are needed for oval cut-outs; the segment count trades accuracy against element count. This capability exists in the automat although not wired to a dedicated <code>aCadCreate…</code> mask in this file.</li>
+<li><strong>Source</strong>: <code>arc.cpp</code> <code>init_arc_befehl</code> <code>YACC_ELLIPSE</code> branch (<code>store_arc_ell_*</code>, <code>ASM_INTEGER</code> count); related ellipse macro in FR-CAD-CRE-039.</li>
+<li><strong>Verification</strong>: Analysis/Test — create an ellipse with axes 20×10, 4 arcs/quadrant; assert 16 arc segments approximating the ellipse.</li>
+</ul>
+<h3 id="fr-cad-cre-026-chamfer-fase-across-two-elements">FR-CAD-CRE-026 — Chamfer (Fase) across two elements</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a chamfer between two selected elements (<code>aCadCreateChamferRectangle</code> → <code>asm_call(chamfer two_elem)</code>) using two independent setback <strong>distances</strong>: the user enters distance 1 (<code>store_abst1</code>) and distance 2 (<code>store_abst2</code>), then picks the corner (<code>store_fase</code>); the kernel replaces the corner with a straight chamfer edge (<code>TcDbaseChamferCommand::setDistances(d1,d2)</code>).</li>
+<li><strong>Parameters &amp; options</strong>: distance 1, distance 2 (current unit); corner pick (repeatable). Asymmetric chamfers allowed (d1≠d2).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Two-distance chamfers cut lead-in bevels and asymmetric corner breaks.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateChamferRectangle</code>; <code>fase.cpp</code> <code>YACC_TWO_ELEM</code>; <code>TcDbaseChamferCommand::setDistances</code>. Editing facet: FR-CAD-EDT-032.</li>
+<li><strong>Verification</strong>: Test — chamfer a corner with d1=3, d2=5; assert the two setbacks.</li>
+</ul>
+<h3 id="fr-cad-cre-027-chamfer-at-a-vertex-squaresymmetric">FR-CAD-CRE-027 — Chamfer at a vertex (square/symmetric)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a chamfer at a picked vertex (<code>aCadCreateChamferSquare</code> → <code>asm_call(chamfer vertex)</code>) from a single <strong>distance</strong> applied equally to both adjoining elements (<code>store_abst1_corner</code>), then the vertex pick.</li>
+<li><strong>Parameters &amp; options</strong>: single setback distance; vertex pick.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Single-distance vertex chamfer is the common symmetric 45°-style corner break.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateChamferSquare</code>; <code>fase.cpp</code> <code>YACC_VERTEX</code> (<code>store_abst1_corner</code>).</li>
+<li><strong>Verification</strong>: Test — vertex chamfer distance 4; assert equal setbacks on both edges.</li>
+</ul>
+<h3 id="fr-cad-cre-028-corner-notch-klinkung-across-two-elements">FR-CAD-CRE-028 — Corner notch (Klinkung) across two elements</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a rectangular corner notch between two selected elements (<code>aCadCreateCornerNotchRectangle</code> → <code>asm_call(cad_klinkung two_elem)</code>) from two <strong>distances</strong> (<code>store_abst1</code>, <code>store_abst2_corner</code>) then a corner pick (<code>store_klinkung</code>); the notch MAY be pre-punched with a round tool by supplying a round-tool radius (<code>store_klinkung_rund</code>) and MAY be inverted (<code>YACC_INVERT</code>). The kernel builds the notch via <code>TcDbaseNotchCommand::createTwoElementNotch</code> with <code>setDistances(d1,d2)</code>.</li>
+<li><strong>Parameters &amp; options</strong>: distance 1, distance 2; corner pick; optional round-tool radius; invert flag.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Corner notches relieve corners for bending/assembly; the round-tool option models punched relief.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCornerNotchRectangle</code>; <code>klinkung.cpp</code> <code>YACC_TWO_ELEM</code>; <code>TcDbaseNotchCommand</code>. Editing facet: FR-CAD-EDT-033.</li>
+<li><strong>Verification</strong>: Test — two-element notch d1=6, d2=4; assert the rectangular cut-out.</li>
+</ul>
+<h3 id="fr-cad-cre-029-corner-notch-at-a-vertex">FR-CAD-CRE-029 — Corner notch at a vertex</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a corner notch at a picked vertex (<code>aCadCreateCornerNotchSquare</code> → <code>asm_call(cad_klinkung vertex)</code>) from a single <strong>distance</strong> applied at the vertex (<code>store_abst1_corner</code>) via <code>TcDbaseNotchCommand::createCornerNotch</code>.</li>
+<li><strong>Parameters &amp; options</strong>: single distance; vertex pick.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Symmetric vertex notch is the quick corner-relief entry.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateCornerNotchSquare</code>; <code>klinkung.cpp</code> <code>YACC_VERTEX</code>. Editing facet: FR-CAD-EDT-034.</li>
+<li><strong>Verification</strong>: Test — vertex notch distance 5; assert square relief.</li>
+</ul>
+<h3 id="fr-cad-cre-030-element-notch-triangular">FR-CAD-CRE-030 — Element notch, triangular</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a triangular notch on a single element (<code>aCadCreateElemNotchTriangle</code> → <code>asm_call(cad_klinkung element)</code>, or <code>element part</code> when <code>APPLIC_NUMMER == 400</code>, i.e. laser/ToPs 400) defined by a <strong>height</strong> (<code>store_abst1</code>) and an <strong>angle</strong> (<code>store_abst2_elem</code>), placed at a picked element point with a reference point for open contours (<code>store_klink_element</code>/<code>store_klink_refpkt</code>), via <code>TcDbaseNotchCommand::createTriangularNotch</code>. The notch MAY be inverted (<code>YACC_INVERT</code>).</li>
+<li><strong>Parameters &amp; options</strong>: height, angle (deg); element point; reference point (open contours); invert flag; ToPs-400 &quot;part&quot; restriction to the active part.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Triangular element notches mark V-relief and pointer features.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateElemNotchTriangle</code>; <code>klinkung.cpp</code> <code>YACC_ELEMENT</code> default branch; <code>TcDbaseNotchCommand::createTriangularNotch</code>.</li>
+<li><strong>Verification</strong>: Test — triangular element notch height 5, angle 60°; assert shape and placement.</li>
+</ul>
+<h3 id="fr-cad-cre-031-element-notch-rectangular">FR-CAD-CRE-031 — Element notch, rectangular</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a rectangular notch on a single element (<code>aCadCreateElemNotchRectangle</code> → <code>asm_call(cad_klinkung element rectangle)</code>, or <code>element part rectangle</code> for ToPs 400) defined by a <strong>height</strong> and a <strong>width</strong> (<code>store_klink_art</code> then <code>store_abst1</code>/<code>store_abst2_elem</code>), placed at a picked element point with reference point, via <code>TcDbaseNotchCommand::createRectangularNotch</code>; invert supported.</li>
+<li><strong>Parameters &amp; options</strong>: height, width; element point; reference point; invert flag; ToPs-400 &quot;part&quot; restriction.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Rectangular element notches create slots/keyways on an edge.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateElemNotchRectangle</code>; <code>klinkung.cpp</code> <code>YACC_ELEMENT</code>+<code>YACC_RECTANGLE</code>; <code>TcDbaseNotchCommand::createRectangularNotch</code>.</li>
+<li><strong>Verification</strong>: Test — rectangular element notch 6×3; assert cut-out.</li>
+</ul>
+<h3 id="fr-cad-cre-032-element-notch-oblong-langloch-and-circular">FR-CAD-CRE-032 — Element notch, oblong (Langloch) and circular</h3>
+<ul>
+<li><strong>Requirement</strong>: The element-notch command SHALL additionally support <strong>oblong</strong> (Langloch, token <code>YACC_OBLONG</code> → <code>store_oblong</code> → <code>createOblongNotch</code>) and <strong>circular</strong> (token <code>YACC_ROUND</code> → <code>store_circular</code>, diameter via <code>store_abst1_circle</code> → <code>createCircularNotch</code>) element-notch shapes on a picked element, with the same element-point/reference-point placement as the rectangular/triangular variants.</li>
+<li><strong>Parameters &amp; options</strong>: oblong: height + width; circular: diameter; element point; reference point.</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: Oblong and circular edge notches round out the element-notch shape set exposed by the notch automat.</li>
+<li><strong>Source</strong>: <code>klinkung.cpp</code> <code>YACC_OBLONG</code>/<code>YACC_ROUND</code> element branches; <code>TcDbaseNotchCommand::createOblongNotch</code>/<code>createCircularNotch</code>.</li>
+<li><strong>Verification</strong>: Test — oblong and circular element notches; assert shapes.</li>
+</ul>
+<h3 id="fr-cad-cre-033-relief-groove-freistich-undercut">FR-CAD-CRE-033 — Relief groove (Freistich / undercut)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a relief groove (Freistich) at a picked vertex (<code>aCadCreateFreistich</code> → <code>asm_call(cad_klinkung round)</code>, or <code>round part</code> for ToPs 400) from a groove <strong>diameter</strong> (<code>store_freistich_durchmesser</code> → <code>setUndercutDiameter</code>) then a vertex pick (<code>store_freistich</code>), via <code>TcDbaseNotchCommand::createUndercut</code>.</li>
+<li><strong>Parameters &amp; options</strong>: undercut diameter; vertex pick; ToPs-400 &quot;part&quot; restriction.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Relief grooves prevent stress risers at inside corners before bending/machining.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateFreistich</code>; <code>klinkung.cpp</code> <code>YACC_ROUND</code> branch; <code>TcDbaseNotchCommand::createUndercut</code>. Editing facet: FR-CAD-EDT-035.</li>
+<li><strong>Verification</strong>: Test — Freistich diameter 3 at an inside corner; assert the round relief.</li>
+</ul>
+<h3 id="fr-cad-cre-034-fillet-rundung-at-a-corner">FR-CAD-CRE-034 — Fillet (Rundung) at a corner</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a fillet (rounding arc) at a corner (<code>aCadCreateFillet</code> → <code>asm_call(fillet)</code>) from a <strong>radius</strong> (<code>store_radius_corner</code> → <code>TcDbaseRoundingCommand::setRadius</code>) followed by corner picks (<code>store_fillet</code>, repeatable). The command SHALL provide an intelligent corner-snap mode toggle between <strong>single</strong> and <strong>multi</strong> corner selection (<code>YACC_SELECT</code> → <code>corner_single</code>/<code>corner_multi</code>), and SHALL provide a CREATE option to convert a selected arc into a fillet (<code>YACC_CREATE</code> → <code>fillet_create</code>).</li>
+<li><strong>Parameters &amp; options</strong>: radius (current unit); corner pick(s); corner-snap single/multi; arc→fillet conversion.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Fillets are the most common corner treatment; the single/multi snap accelerates rounding many corners at one radius.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateFillet</code>; <code>fillet.cpp</code> <code>init_fillet_befehl</code> (<code>store_radius_corner</code>, <code>store_fillet</code>, <code>YACC_SELECT</code>, <code>YACC_CREATE</code>); <code>TcDbaseRoundingCommand::setRadius</code>. Editing facet: FR-CAD-EDT-030.</li>
+<li><strong>Verification</strong>: Test — fillet a corner at r=4; assert tangent arc. Test — multi mode rounds several corners with one radius.</li>
+</ul>
+<h3 id="fr-cad-cre-035-equidistant-offset-contour">FR-CAD-CRE-035 — Equidistant (offset) contour</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create an equidistant (offset / Äquidistante) of a selected contour at a signed <strong>distance</strong> (<code>aCadCreateEquidistant</code> → dialog <code>M_ZeichnungAequidistanten</code> → <code>asm_call(equidistant &lt;d&gt;)</code>), remembering the last distance in <code>ST_ZeichnungAequidistanteAbstand</code>. The user enters the distance (<code>equi_set_distance</code>), identifies the source contour (<code>equi_ident_contour</code>) and picks the side/orientation (<code>equi_set_orientation</code>); the kernel <code>TcDbaseEquidistantCommand::createEquidistant(element, distance)</code> builds the offset relative to a reference point (<code>t_referenceX</code>, <code>t_referenceY</code>). A FIT sub-mode (<code>YACC_FIT</code>) trims/adjusts the offset against bounding elements in ALL or SINGLE mode (<code>equi_trim_all</code>/<code>equi_trim_single</code>).</li>
+<li><strong>Parameters &amp; options</strong>: offset distance (current unit, persisted default); source contour; side/orientation pick; FIT trim mode (all/single) with two bounding-element picks.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Offsetting is used for kerf compensation and margin contours; FIT closes/trims the offset cleanly against neighbours.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateEquidistant</code>; <code>equidist.cpp</code> <code>init_cad_equidistant_befehl</code>; <code>TcDbaseEquidistantCommand</code>. Editing facet: FR-CAD-EDT-037; offset algorithm cross-refs [[10.7 - CAD Detail - Contour Arithmetic Algorithms]].</li>
+<li><strong>Verification</strong>: Test — offset a contour by 2 outward; assert every offset element is 2 from its source on the chosen side.</li>
+</ul>
+<h3 id="fr-cad-cre-036-create-truetype-text">FR-CAD-CRE-036 — Create TrueType text</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create text as vector geometry (<code>aCadCreateText</code> → dialog <code>M_MenueZeichnungText</code> → <code>asm_call(cad_text create @Fontname #Hoehe #HoeheBreite #Neigungswinkel #Zeilenabstand #RefPunkt #Schreibrichtung @Eingabe)</code>). The command SHALL accept: font name, text height, height/width ratio, slant (italic) angle, line spacing, reference/anchor point, writing direction and the text string, and SHALL place the resulting glyph contours at the selected position.</li>
+<li><strong>Parameters &amp; options</strong>: font name (string); height (current unit); height/width ratio; slant angle (deg); line spacing; reference-point code (<code>ST_TextRefPunkt</code>, 9-anchor grid); writing direction (<code>ST_TextSchreibrichtung</code>); multi-line text input.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Engraved/marked text (part numbers, labels) is a first-class geometry object for signing/marking.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateText</code>; MMK body <code>asm_call(cad_text create …)</code>; <code>tc_cad/cad_asm/cad_text.cpp</code> (<code>YACC_CAD_TEXT</code>, <code>startText</code>). Parent FR-CAD-004.</li>
+<li><strong>Verification</strong>: Test — create &quot;ABC&quot; at height 5, ratio 0.8, 15° slant; assert glyph geometry and placement.</li>
+</ul>
+<h3 id="fr-cad-cre-037-text-placement-modifiers-arc-radius-signing-auto-part-number-rotation">FR-CAD-CRE-037 — Text placement modifiers: arc radius, signing, auto part-number, rotation</h3>
+<ul>
+<li><strong>Requirement</strong>: When creating text, the CAD editor SHALL support: (a) <strong>arced text</strong> on a radius — <code>asm_call(radius #Radius)</code> or, inverted (text on inside), <code>asm_call(radius invert #Radius)</code> selected by <code>ST_TextRadiusDir</code>; (b) <strong>signing/marking</strong> orientation — normal <code>asm_call(on)</code> or from below <code>asm_call(back)</code> selected by <code>ST_TextSignieren</code>; (c) <strong>automatic part-number text</strong> — <code>asm_call(auto)</code> making the text track the part number and clearing the manual string; and (d) <strong>rotation</strong> — a rotation angle <code>asm_call(#Drehwinkel)</code> unless rotation is defined by picked points (<code>ST_TextDrehwinkelEingabe == c_punkte</code>).</li>
+<li><strong>Parameters &amp; options</strong>: radius (current unit) + direction (none/normal/invert); signing (off/normal/from-below); auto-part-number flag; rotation angle (deg) or two-point rotation.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Arced/signed/auto-numbered text covers nameplate and traceability marking without manual updates.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateText</code> MMK body (<code>radius</code>, <code>radius invert</code>, <code>on</code>, <code>back</code>, <code>auto</code>, <code>#ST_TextDrehwinkel</code>).</li>
+<li><strong>Verification</strong>: Test — arced text on r=50; auto part-number text; assert curvature and auto-linking.</li>
+</ul>
+<h3 id="fr-cad-cre-038-truetype-glyph-linearc-contour-approximation-algorithm">FR-CAD-CRE-038 — TrueType glyph → line/arc contour approximation (algorithm)</h3>
+<ul>
+<li><strong>Requirement</strong>: The TrueType text engine SHALL render each glyph as one or more closed contours by approximating the font's B-spline/quadratic outlines with line and arc segments (<code>TcContour::approximateSpline</code>), bounded by a <strong>minimum segment length</strong> and a <strong>maximum approximation error</strong> where the max error is specified for a 1 mm font size and SHALL be scaled with the rendering size (<code>TcFontAuxProperties::getMinSegmentLength</code>, <code>getMaxApproximationError</code>, <code>getScaleFactor</code>), and SHALL emit the segments either to the database (creating elements) or for display only.</li>
+<li><strong>Inputs/Outputs &amp; tolerances</strong>: input — glyph outline (FreeType face), font size, aux properties; output — line/arc contour segments; tolerances — min segment length (size-independent) and max chord deviation (per-mm, scaled by font size).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Vector text must be cuttable/markable: outlines are reduced to machine-friendly line/arc contours at a controlled accuracy.</li>
+<li><strong>Source</strong>: <code>tc_cad/cad_ttf/TcTTFString.{h,cpp}</code>, <code>TcContour.{h,cpp}</code> (<code>approximateSpline</code>, <code>TcFontAuxProperties</code>), <code>TcSegments</code>, <code>TcLetter</code>.</li>
+<li><strong>Verification</strong>: Analysis/Test — render a glyph at two sizes; assert chord deviation scales with size and segments respect the minimum length.</li>
+</ul>
+<h3 id="fr-cad-cre-039-macro-shapetool-definition-round-square-rectangle-oblong-ellipse-korner-vorlage-tool-form">FR-CAD-CRE-039 — Macro shape/tool definition (round, square, rectangle, oblong, ellipse, Körner, Vorlage, tool, form)</h3>
+<ul>
+<li><strong>Requirement</strong>: The parametric-macro command SHALL let the user define the punched/cut shape before arranging it, via <code>asm_call(macro …)</code>: <strong>round/circle</strong> (<code>round</code> + diameter), <strong>square/rectangle</strong> (<code>rectangle</code> + length, width, tool radius), <strong>oblong/Langloch</strong> (<code>oblong</code> + length, width), <strong>ellipse</strong> (<code>ellipse</code> + half-axis 1, half-axis 2, optional arcs-per-quadrant via <code>TcDbaseHoleCommand::setEllipse</code>), <strong>Körner/centre-punch point</strong> (<code>point</code> → <code>setMarkPoint</code>), <strong>Vorlage/template drawing</strong> (<code>sample</code> + filename → <code>setModel</code>), <strong>named tool</strong> (<code>tool</code> + ident/stamp-number/type/values/remark/display → <code>setTool</code>) and <strong>form tool</strong> (<code>form</code> + form number + up to 10 values → <code>setFormTool</code>).</li>
+<li><strong>Parameters &amp; options</strong>: shape selector + shape-specific dimensions; tool key/type/8 values/filename/display mode (<code>e_grafik</code>/<code>e_punkt</code>/<code>e_textId</code>/<code>e_textBemerk</code>); form number + 10 values; ellipse half-axes + arc count.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: A single macro engine parameterises every hole geometry so patterns reuse one shape definition.</li>
+<li><strong>Source</strong>: <code>tc_bof/cad_assi.gritx</code> masks <code>F_CadMacroDatenRund/Quadrat/Rechteck/Langloch/Ellipse/…</code>; <code>macro.cpp</code> <code>init_macro_befehl</code> (<code>f_round</code>, <code>f_rectangle</code>, <code>f_oblong</code>, <code>f_ellipse</code>, <code>f_point</code>, <code>f_sample</code>, <code>f_tool</code>, <code>f_formWzg</code>); <code>TcDbaseHoleCommand::setTool/setEllipse/setMarkPoint/setModel/setFormTool</code>.</li>
+<li><strong>Verification</strong>: Test — define each shape and place one hole; assert generated geometry per shape.</li>
+</ul>
+<h3 id="fr-cad-cre-040-single-hole-einzelloch">FR-CAD-CRE-040 — Single hole (Einzelloch)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL place a single hole of the current macro shape at a picked position (<code>tCadCreateHole</code> with <code>c_single</code> → <code>asm_call(macro single)</code> → <code>TcDbaseSingleHoleCommand::execute(position)</code>), supporting a per-hole rotation angle (<code>f_wzg_win</code>) and interactive tool rotation by mouse wheel (<code>YACC_WHEEL_UP</code>/<code>WHEEL_DOWN</code> → <code>f_drehWzg</code>); the command SHALL first require a macro geometry to be selected (dialog <code>M_MenueZeichnungMacros</code>).</li>
+<li><strong>Parameters &amp; options</strong>: position; rotation angle (deg); offset angle (<code>setOffsetAngle</code>); punch colour (<code>setPunchColor</code>).</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: The single hole is the atomic placement operation and the building block of all patterns.</li>
+<li><strong>Source</strong>: mask <code>tCadCreateHole</code>; <code>macro.cpp</code> <code>YACC_SINGLE</code> (<code>f_single_pos</code>, <code>f_end_single</code>, <code>f_wzg_win</code>); <code>TcDbaseSingleHoleCommand</code>. Parent FR-CAD-003.</li>
+<li><strong>Verification</strong>: Test — place a Ø10 hole at a coordinate rotated 30°; assert position and angle.</li>
+</ul>
+<h3 id="fr-cad-cre-041-hole-row-lochreihe">FR-CAD-CRE-041 — Hole row (Lochreihe)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a hole row (<code>tCadCreateHole</code> with <code>c_row</code> → <code>asm_call(macro row …)</code> → <code>TcDbaseHoleRowCommand</code>) from a start point, a <strong>count</strong> and a <strong>per-hole increment</strong> (Δx, Δy via <code>setRowIncrement</code>) — the increment defined by a second point/distance or by a count-and-spacing — with an option to <strong>align</strong> each hole to the row direction (<code>setAlignment</code>, tokens <code>YACC_YES</code>/<code>YACC_NO</code>) and a row <strong>angle</strong>.</li>
+<li><strong>Parameters &amp; options</strong>: start point; hole count (integer); increment (x,y) or defining point; row angle (deg); align-holes flag; tool-rotate flag from <code>ST_MenueZeichnungMacroAktWzgDrehen</code>.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Rows of identical holes are a core sheet-metal feature (vent slots, bolt rows).</li>
+<li><strong>Source</strong>: mask <code>tCadCreateHole</code>; <code>macro.cpp</code> <code>YACC_ROW</code> (<code>f_row</code>, <code>f_anzahl</code>, <code>f_abstand_*</code>, <code>f_row_win*</code>, <code>f_richten_yes/no</code>); <code>TcDbaseHoleRowCommand::setHoleCount/setRowIncrement/setAlignment</code>.</li>
+<li><strong>Verification</strong>: Test — 5 holes at 20 mm pitch along 0°; assert 5 holes at correct spacing.</li>
+</ul>
+<h3 id="fr-cad-cre-042-hole-grid-lochgitter">FR-CAD-CRE-042 — Hole grid (Lochgitter)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a 2-D hole grid (<code>tCadCreateHole</code> with <code>c_grid</code> → <code>asm_call(macro grid …)</code> → <code>TcDbaseHoleRowCommand</code>) extending a hole row into multiple rows: after the row parameters the user gives a <strong>row count</strong> (<code>setRowCount</code>, <code>f_row_count</code>) and a <strong>row distance</strong> (<code>setRowDistance</code>, <code>f_row_distance</code>); the grid MAY be inverted/offset per assistant (<code>f_gridInvert</code>).</li>
+<li><strong>Parameters &amp; options</strong>: row parameters (per FR-CAD-CRE-041); number of rows (integer); distance between rows; alignment flag; invert flag.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Grids of holes model perforated panels and mounting arrays.</li>
+<li><strong>Source</strong>: mask <code>tCadCreateHole</code>; <code>macro.cpp</code> <code>YACC_GRID</code> (<code>f_grid</code>, <code>f_row_count</code>, <code>f_row_distance</code>); <code>TcDbaseHoleRowCommand::setRowCount/setRowDistance</code>.</li>
+<li><strong>Verification</strong>: Test — 4×3 grid; assert 12 holes at the row/column spacings.</li>
+</ul>
+<h3 id="fr-cad-cre-043-hole-circle-lochkreis-by-centre-points-angle">FR-CAD-CRE-043 — Hole circle (Lochkreis) by centre / points / angle</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create a hole circle (<code>tCadCreateHole</code> with <code>c_circle</code> → <code>asm_call(macro hole_circle …)</code> → <code>TcDbaseHoleCircleCommand</code>) from a centre, a hole <strong>count</strong> (<code>setHoleCount</code>), a <strong>radius</strong> (<code>setCircleRadius</code>) and a <strong>start angle + angle increment</strong> (<code>setCircleAngles</code>). The angular layout SHALL be definable three ways corresponding to the assistant masks: by <strong>centre</strong> (<code>…LochkreisMitte</code>), by <strong>points</strong> (<code>…LochkreisPunkte</code> — start/end points derive angles) and by <strong>angle</strong> (<code>…LochkreisWinkel</code> — explicit angles). Holes MAY be <strong>aligned</strong> (rotated to follow the circle, <code>setAlignment</code>, tokens <code>YACC_YES</code>/<code>YACC_NO</code>).</li>
+<li><strong>Parameters &amp; options</strong>: centre; hole count; radius (value or point); start angle + increment (or end angle, or defining points); align-holes flag; tool-rotate flag.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Bolt-circle patterns are ubiquitous; the three definition modes match how a user knows the geometry (count, points, or angles).</li>
+<li><strong>Source</strong>: masks <code>tCadCreateHole</code>, <code>F_CadMacroDatenLochkreisMitte/Punkte/Winkel</code>; <code>macro.cpp</code> <code>YACC_HOLE_CIRCLE</code> (<code>f_circle</code>, <code>f_anzahl</code>, <code>f_anf_win*</code>, <code>f_end_win*</code>, <code>f_radius*</code>, <code>f_rotate_yes/no</code>); <code>TcDbaseHoleCircleCommand::setHoleCount/setCircleRadius/setCircleAngles/setAlignment</code>.</li>
+<li><strong>Verification</strong>: Test — 8 holes on r=50 from 0° every 45°; assert positions; repeat via points and via angle mode.</li>
+</ul>
+<h3 id="fr-cad-cre-044-macro-assistant-interactive-pattern-editor-with-local-coordinate-systems">FR-CAD-CRE-044 — Macro assistant (interactive pattern editor with local coordinate systems)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL provide an interactive macro assistant (<code>F_CadMacro*</code> masks + <code>asm_call(macro new/on/off/…)</code>) that maintains a pattern of holes with support for: activating/deactivating the assistant (<code>YACC_ON</code>/<code>YACC_OFF</code>), defining one or more <strong>local coordinate systems / origins</strong> (<code>YACC_UNIT</code> with origin point, absolute vs. reference-shift, X/Y inversion, and iterate/reset/suspend/remove of origins), <strong>rotating</strong> holes by an offset (<code>YACC_ROTATE</code>), previewing/creating (<code>YACC_CREATE</code>), highlighting and iterating over placed holes (last/previous/remove/restore), and editing single/row/grid/circle sub-patterns in place.</li>
+<li><strong>Parameters &amp; options</strong>: origin point(s); absolute/relative; invert X, invert Y; rotate offset + on/off; per-pattern parameters (single point, row start/end/count/step/angle, grid count/distance, circle …).</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: The assistant lets users build and adjust complex multi-origin hole layouts before committing them.</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>F_CadMacro*</code>, <code>FUNC_CadMacro*</code>; <code>macro.cpp</code> <code>init_macro_befehl</code> assistant section (<code>f_assistentNew/On/Off/Copy</code>, <code>f_unit</code>, <code>f_origin</code>, <code>f_invertX/Y</code>, <code>f_reference*</code>, <code>f_rotate*</code>, <code>f_highlight*</code>, <code>f_single/row/grid/circle</code> editor states).</li>
+<li><strong>Verification</strong>: Demonstration — build a two-origin pattern, rotate, preview and create; assert holes match the assistant preview.</li>
+</ul>
+<h3 id="fr-cad-cre-045-single-hole-with-boolean-merge-into-a-contour">FR-CAD-CRE-045 — Single hole with boolean merge into a contour</h3>
+<ul>
+<li><strong>Requirement</strong>: Where the single-hole command is invoked in boolean mode (<code>tCadCreateHole</code> with <code>c_bool</code> → <code>asm_call(macro single fit)</code>), the CAD editor SHALL merge the hole shape into the contour it touches (<code>TcDbaseSingleHoleCommand::joinSingleHole</code>), optionally keeping only the largest result contour; if the hole touches no contour, no hole SHALL be created; and the invocation SHALL require the parameter drawing to consist of exactly one closed contour, otherwise error 11100 SHALL be raised.</li>
+<li><strong>Parameters &amp; options</strong>: position; single-mode (largest-result-only) flag; precondition: one closed macro contour.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Boolean-merging a punch into an edge creates open notches/cut-ins rather than isolated holes.</li>
+<li><strong>Source</strong>: mask <code>tCadCreateHole</code> (<code>c_bool</code>, <code>macro single fit</code>, meldebox 11100); <code>TcDbaseSingleHoleCommand::joinSingleHole</code>/<code>findJoinContour</code>.</li>
+<li><strong>Verification</strong>: Test — merge a circle into an edge; assert the edge is cut. Test — invalid multi-contour parameter drawing → error 11100.</li>
+</ul>
+<h3 id="fr-cad-cre-046-rectangle-assistant-new-base-rectangle-length-width-type">FR-CAD-CRE-046 — Rectangle assistant: new base rectangle (length, width, type)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL provide a rectangle assistant (<code>F_CadRechteck*</code> + <code>init_rect_befehl</code>, <code>asm_call(… rect …)</code>, <code>TcDbaseRectangleAssistant</code>) that creates a rectangle/face from a <strong>length</strong>, a <strong>width</strong> and a base <strong>type</strong> (<code>YACC_NEW</code> → <code>rectLength</code>/<code>rectWidth</code>/<code>rectType</code>), and SHALL be activatable/deactivatable (<code>YACC_ON</code>/<code>YACC_OFF</code>), confirmable (<code>YACC_CONFIRM</code>/<code>rectConfirm</code>) and closable (<code>YACC_CLOSE</code>).</li>
+<li><strong>Parameters &amp; options</strong>: length, width (current unit); base type (integer); assistant on/off; confirm/close.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: The assistant is the entry point for corner-treated, tabbed rectangles (blanks and bent-part blanks).</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> masks <code>M_CadRechteckAssistent</code>, <code>F_CadRechteckZeileFormat/Flaeche/Typ</code>; <code>rect.cpp</code> <code>init_rect_befehl</code> <code>YACC_NEW</code> (<code>rectLength</code>, <code>rectWidth</code>, <code>rectType</code>). Parent FR-CAD-002.</li>
+<li><strong>Verification</strong>: Test — create a 100×60 rectangle via the assistant; assert dimensions.</li>
+</ul>
+<h3 id="fr-cad-cre-047-rectangle-assistant-per-corner-treatment">FR-CAD-CRE-047 — Rectangle assistant: per-corner treatment</h3>
+<ul>
+<li><strong>Requirement</strong>: The rectangle assistant SHALL allow each corner to be independently set to one of the corner treatments — <strong>plain</strong> (<code>setPlain</code>/<code>e_cornerPlain</code>), <strong>notch/Klinkung</strong> (<code>setNotch(p1,p2,diameter)</code>/<code>e_cornerNotch</code>), <strong>chamfer/Fase</strong> (<code>setChamfer(d1,d2)</code>/<code>e_cornerChamfer</code>), <strong>rounding/Rundung</strong> (<code>setRounding(radius)</code>/<code>e_cornerRounding</code>) or <strong>undercut/Freistich</strong> (<code>setUndercut(diameter)</code>/<code>e_cornerUndercut</code>) — via corner-type + parameter entry (<code>YACC_SET</code> → <code>rectCornerType</code>/<code>rectCornerParam</code>), with iteration over corners (<code>YACC_POINT</code> start/next), per-corner preview (<code>YACC_CHECK</code> → <code>rectShowChange</code>), accept/reject (<code>YACC_CONFIRM</code>/<code>YACC_REMOVE</code>) and apply-to-all (<code>YACC_ALL</code> → <code>rectChangeAllCorners</code>).</li>
+<li><strong>Parameters &amp; options</strong>: per corner: treatment type + its parameters (radius; two chamfer distances; two notch params + diameter; undercut diameter); iterate/preview/accept/reject/all.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Independent per-corner treatment is the defining capability of the corner-configurable rectangle (FR-CAD-002).</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>F_CadRechteckZeileEckeSet{Rund,Fase,Klink}</code>, <code>…SetAll{R,F,K}</code>, <code>F_CadRechteckDatenRundung/Fase*/Klinkung*</code>; <code>rect.cpp</code> <code>YACC_SET</code>/<code>YACC_CHANGE</code>/<code>YACC_ALL</code>; <code>TcDbaseRectangleAssistant::setPlain/setNotch/setChamfer/setRounding/setUndercut</code>, enum <code>TeCornerType</code>.</li>
+<li><strong>Verification</strong>: Test — set corner 1 rounded r=8, corner 2 chamfer 4×4, corner 3 notch; assert each corner geometry independently.</li>
+</ul>
+<h3 id="fr-cad-cre-048-rectangle-assistant-per-edge-element-notch">FR-CAD-CRE-048 — Rectangle assistant: per-edge element notch</h3>
+<ul>
+<li><strong>Requirement</strong>: The rectangle assistant SHALL allow element notches to be placed along an <strong>edge</strong> (<code>YACC_ELEMENT</code> edge iteration + <code>F_CadRechteckDatenElem*</code>) with shape <strong>rectangle</strong> (<code>setRectangle(height,width,radius)</code>), <strong>triangle</strong> (<code>setTriangle(height,angle,radius)</code>), <strong>oblong/Langloch</strong> (<code>setOblong(height,width)</code>) or <strong>circle</strong> (<code>setCircle(diameter)</code>), and SHALL set the notch reference (local vs. global, and which side of the edge) via <code>setElementNotchReference</code> and edge-side flags.</li>
+<li><strong>Parameters &amp; options</strong>: edge selection; element-notch shape + dimensions; reference (local/global, upper/lower side); centre offset along the edge.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Edge notches on a rectangular blank create tabs slots and locating features in one assistant.</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>F_CadRechteckZeileElem{Rechteck,Langloch,Kreis,Dreieck}</code>, <code>F_CadRechteckDatenElem*</code>; <code>rect.cpp</code> <code>YACC_ELEMENT</code> edge/corner iteration; <code>TcDbaseRectangleAssistant::setRectangle/setTriangle/setOblong/setCircle/setElementNotchReference</code>.</li>
+<li><strong>Verification</strong>: Test — add a rectangular edge notch 10×5 on one edge; assert placement and reference.</li>
+</ul>
+<h3 id="fr-cad-cre-049-rectangle-assistant-corner-collision-overlap-handling">FR-CAD-CRE-049 — Rectangle assistant: corner collision / overlap handling</h3>
+<ul>
+<li><strong>Requirement</strong>: The rectangle assistant SHALL detect and let the user resolve collisions where adjacent corner/edge features overlap: it SHALL expose the overlap/collision form via get/set (<code>YACC_FORM</code> → <code>rectGetCornerForm</code>/<code>rectSetCornerForm</code>), show collisions (<code>rectShowCollision</code>/<code>rectShowAllCollisions</code>), iterate collision corners (<code>rectFirstCollision</code>/<code>rectNextCollision</code>) and support collision types (dominant/equal via <code>setCollisionType</code>, corner forms <code>e_cornerDoubleAfter/Before/Equal</code>, <code>e_cornerSingleAfter/Before[Long]</code>, <code>e_cornerMultiple</code>).</li>
+<li><strong>Parameters &amp; options</strong>: collision form selector; dominant/equal flags; iterate/show collisions.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Corner treatments on short edges can overlap; explicit collision resolution keeps the contour valid.</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>F_CadRechteckZeileKollision</code>, <code>FUNC_CadRechteckKollision</code>, <code>F_CadRechteckZeileEckeKoll{LO,LU,RO,RU}</code>; <code>rect.cpp</code> <code>YACC_FORM</code>/collision states; <code>TcDbaseRectangleAssistant::setCollisionType</code>, corner-form enums.</li>
+<li><strong>Verification</strong>: Test — force two large adjacent corner treatments to overlap; assert a collision is reported and the chosen form resolves it.</li>
+</ul>
+<h3 id="fr-cad-cre-050-rectangle-assistant-tabs-lasche-creation-and-management">FR-CAD-CRE-050 — Rectangle assistant: tabs (Lasche) creation and management</h3>
+<ul>
+<li><strong>Requirement</strong>: The rectangle assistant SHALL create bend tabs (Laschen) on the rectangle with a bend direction (up/down via <code>setBendData(top, tool)</code>) and an associated bending tool, and SHALL manage them: create a new tab (<code>F_CadRechteckZeileLascheNeu</code>, with edge/side type L/O/R/U and margin), detect tab-vs-tab collisions, delete the last N tabs (<code>F_CadRechteckZeileLascheDelete</code>), iterate deletable/deleted tabs, and restore deleted tabs (<code>F_CadRechteckZeileLascheWieder</code>); tab tool data SHALL be settable (<code>setToolData(first, toolType, values…)</code>).</li>
+<li><strong>Parameters &amp; options</strong>: tab edge/side (L/O/R/U); tab margin/width; bend up/down; bending tool; delete-count; restore-count; collision-free check.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Tabs turn a flat rectangle into a bent-part blank; managed create/delete/restore supports iterative design.</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>F_CadRechteckZeileLasche*</code>, <code>F_CadRechteckDatenLascheNeu</code>, <code>FUNC_CadRechteckErzeugeLasche/UndoLasche</code>; <code>rect.cpp</code> Lasche states; <code>TcDbaseRectangleAssistant::setBendData/setToolData</code> and tab collision/delete/restore methods.</li>
+<li><strong>Verification</strong>: Demonstration — add two tabs (up/down), delete one, restore it; assert tab geometry and bend data.</li>
+</ul>
+<h3 id="fr-cad-cre-051-rectangle-assistant-factor-and-tool-management">FR-CAD-CRE-051 — Rectangle assistant: factor and tool management</h3>
+<ul>
+<li><strong>Requirement</strong>: The rectangle assistant SHALL let the user manage the correction <strong>factors</strong> and <strong>tools</strong> it uses (<code>M_CadRechteckFaktorVerwalten</code>, <code>M_CadRechteckWerkzeugVerwalten</code>, <code>F_CadVerwalten*</code> masks): select/create factor and tool table entries (with a distinct set where machine ≠ 600, <code>…No600</code>/<code>…NeuN6</code>), and select upper/lower tools for corner notches (<code>M_CadRechteckOberWzgAuswahl</code>, <code>M_CadRechteckUnterWzgAuswahl</code>).</li>
+<li><strong>Parameters &amp; options</strong>: material; factor value(s); tool identifiers (upper/lower); machine-dependent variant (600 vs. non-600).</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: Corner/tab treatments depend on tooling and correction factors that must be selectable/maintainable per material and machine.</li>
+<li><strong>Source</strong>: <code>cad_assi.gritx</code> <code>M_CadRechteck{Faktor,Werkzeug}Verwalten</code>, <code>F_CadVerwaltenZeile/Daten*</code>, <code>FUNC_CadRechteckUWzgVorschlag</code>.</li>
+<li><strong>Verification</strong>: Demonstration — pick a tool and factor and apply to a corner notch; assert the values are used.</li>
+</ul>
+<h3 id="fr-cad-cre-052-group-elements-block">FR-CAD-CRE-052 — Group elements (block)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL group the currently selected elements into a single group/block attribute (<code>aCadCreateGroup</code> → <code>asm_call(attribute block)</code> → <code>createGroup</code>): the user boxes/picks elements (<code>groupSelectStart</code>/<code>groupSelect</code>), confirms (<code>groupSelectConfirm</code>) or selects all (<code>groupSelectAll</code>), and the elements are bound into one group; if only a single element is selected the command MAY warn that Ctrl (multi-select) was possibly forgotten.</li>
+<li><strong>Parameters &amp; options</strong>: element selection (box/pick/all); group attribute created over the selection.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Grouping lets related elements (e.g. a logo or sub-assembly) be selected and transformed as a unit.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateGroup</code>; <code>tc_cad/allg_asm/attribut.cpp</code> (<code>createGroup</code>, <code>groupSelect*</code>, single-element warning).</li>
+<li><strong>Verification</strong>: Test — group three elements; assert they select/move together as one group.</li>
+</ul>
+<h3 id="fr-cad-cre-053-profile-creation-editor-bent-profile-cross-section">FR-CAD-CRE-053 — Profile creation editor (bent-profile cross-section)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL provide a profile-creation editor (<code>aCadCreateProfile</code> → dialog <code>M_ProfilErstellung</code> → profile automat <code>YACC_CAD_PROFILE</code>) that builds a bent-profile cross-section as a chain of straight <strong>line segments</strong> each defined by an <strong>angle</strong> and a <strong>length</strong> (<code>store_lineAngle</code> → <code>generateLine_angle_length</code>), with quick-key direction entry (N/S/E/W and diagonals <code>YACC_NORTH/SOUTH/EAST/WEST/NORTHEAST/…</code> → <code>store_lineAngleOption</code>), a horizontal-constrained segment (<code>generateLine_angle_horizontal</code>) and a vertical-constrained segment (<code>generateLine_angle_vertical</code>), and a BACK step to revert the last angle (<code>YACC_BACK</code> → <code>setOldInitAngle</code>).</li>
+<li><strong>Parameters &amp; options</strong>: per segment: angle (deg, or quick-key direction) and length; horizontal/vertical constraint; back/undo of last segment.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: The profile editor is how bent-part and tube profiles are drafted segment-by-segment.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateProfile</code>; <code>tc_cad/cad_asm/profile.cpp</code> <code>init_profile_befehl</code> (<code>store_lineAngle</code>, <code>generateLine_angle_length/horizontal/vertical</code>, direction tokens). Cross-refs [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]].</li>
+<li><strong>Verification</strong>: Demonstration — draft a U-profile via angle/length segments; assert the cross-section.</li>
+</ul>
+<h3 id="fr-cad-cre-054-profile-bumping-segment">FR-CAD-CRE-054 — Profile bumping segment</h3>
+<ul>
+<li><strong>Requirement</strong>: Within the profile editor the CAD editor SHALL add a <strong>bumping</strong> (rolled-arc) segment (<code>aCadCreateProfileBumping</code> → <code>asm_call(profilebumping)</code>): the user gives a bumping <strong>angle</strong> (<code>store_bumpingAngle</code>, also via quick-key directions) and a <strong>radius</strong> (<code>generateBumping</code>), producing a curved profile segment approximating a bumped/rolled bend.</li>
+<li><strong>Parameters &amp; options</strong>: bumping angle (deg); radius (current unit); direction quick-keys.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Bumping models roll-formed curved transitions in a profile.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateProfileBumping</code>; <code>profile.cpp</code> <code>YACC_PROFILEBUMPING</code> (<code>store_bumpingAngle</code>, <code>generateBumping</code>).</li>
+<li><strong>Verification</strong>: Demonstration — add a bumping arc of radius r over angle a; assert the curved segment.</li>
+</ul>
+<h3 id="fr-cad-cre-055-profile-falzung-hemming-segment">FR-CAD-CRE-055 — Profile Falzung (hemming) segment</h3>
+<ul>
+<li><strong>Requirement</strong>: Within the profile editor the CAD editor SHALL add a <strong>Falzung/hemming</strong> (folded-back) segment (<code>aCadCreateProfileFalzung</code> → <code>asm_call(hemming)</code>): the user gives a hemming <strong>radius</strong> (<code>store_hemmingRadius</code>) and a <strong>direction/side</strong> (<code>hemmingDirection</code>), generating a fold-back with a following short line (<code>generateHemming</code>/<code>generateHemmingOnPickedSite</code>/<code>generatePickedHemming</code> + <code>generateLine_angle_length</code>).</li>
+<li><strong>Parameters &amp; options</strong>: hemming radius (current unit); fold direction/side (typed value or picked); following line length.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Hems (folded edges) are common on sheet-metal profiles for stiffness/safety.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateProfileFalzung</code>; <code>profile.cpp</code> <code>YACC_HEMMING</code> (<code>store_hemmingRadius</code>, <code>hemmingDirection</code>, <code>generateHemming*</code>).</li>
+<li><strong>Verification</strong>: Demonstration — add a hem of radius r; assert the folded-back geometry.</li>
+</ul>
+<h3 id="fr-cad-cre-056-profile-xy-segment">FR-CAD-CRE-056 — Profile XY segment</h3>
+<ul>
+<li><strong>Requirement</strong>: Within the profile editor the CAD editor SHALL support an <strong>XY</strong> input mode (<code>aCadCreateProfileXY</code> → <code>asm_call(xy)</code>) that switches segment entry to Cartesian X/Y so a profile segment can be defined by coordinates rather than angle/length.</li>
+<li><strong>Parameters &amp; options</strong>: X, Y for the next profile node (current unit).</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: XY entry suits profiles dimensioned by coordinates rather than by turn angles.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateProfileXY</code>; <code>profile.cpp</code> <code>YACC_XY</code> option shift.</li>
+<li><strong>Verification</strong>: Demonstration — define a segment via XY; assert node placement.</li>
+</ul>
+<h3 id="fr-cad-cre-057-create-bend-line-biegelinie">FR-CAD-CRE-057 — Create bend line (Biegelinie)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create bend lines (<code>aCadCreateBending</code> → dialog <code>M_SetBendLineParameter</code> → bend automat <code>YACC_BEND</code> → <code>create_bend_line</code>) carrying the bend data: <strong>type/Art</strong>, <strong>method/Methode</strong>, <strong>technique/Technik</strong>, bend <strong>angle</strong> (win), <strong>V-angle</strong> (vwin), <strong>start radius</strong> (srad), <strong>end radius</strong> (erad), bend-allowance <strong>factor</strong> (afak), and <strong>upper/lower bend tools</strong> (wzgO/wzgU); the user then identifies bend-line positions by picking (<code>create_bend_line</code>), confirming (<code>YACC_CONFIRM</code>) or applying to all (<code>YACC_ALL</code>). The command SHALL also support changing an existing bend line's data (<code>YACC_CHANGE</code>), unfolding (<code>YACC_SMOOTH</code>, Abwicklung) and creating/stretching a bend profile (<code>YACC_CONTOUR</code>).</li>
+<li><strong>Parameters &amp; options</strong>: type, method, technique (integers); angle, V-angle, start/end radius, factor (reals); upper/lower tool (strings); identify by pick/confirm/all; change/unfold/profile sub-modes.</li>
+<li><strong>Priority</strong>: Essential</li>
+<li><strong>Rationale</strong>: Bend lines drive unfolding and bending NC; the full parameter set defines the bend allowance and tooling.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateBending</code>; <code>tc_cad/cad_asm/cad_bieg.cpp</code> <code>init_bend_befehl</code> (<code>set_bend_type/method/tech/win/vwin/srad/erad/afak/wzgO/wzgU</code>, <code>create_bend_line[_confirm/_all]</code>); <code>TcDbaseCreateBendingCommand</code>. Cross-refs [[16 - FR - Bending (ToPs 600)]].</li>
+<li><strong>Verification</strong>: Test — create a bend line at 90°, r=2, with tools; assert the bend attribute values and placement.</li>
+</ul>
+<h3 id="fr-cad-cre-058-automatic-corner-relief-at-bend-intersections-bend-round">FR-CAD-CRE-058 — Automatic corner relief at bend intersections (bend round)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create automatic corner reliefs/notches where bend lines meet edges (<code>aCadCreateBendNotch</code> → <code>asm_call(bend round)</code> → <code>autoKlinkung</code>): after selecting bend(s) (<code>bend_multi_bend_selector</code>) the user picks corners (<code>autoKlinkung</code>), confirms (<code>YACC_CONFIRM</code>) or applies to all (<code>YACC_ALL</code>) to insert the relief geometry required for the bend.</li>
+<li><strong>Parameters &amp; options</strong>: bend selection; corner pick/confirm/all; relief geometry derived from the bend/material.</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Bend corners need relief to avoid tearing; automating it from the bend data reduces manual notching.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateBendNotch</code>; <code>cad_bieg.cpp</code> <code>YACC_ROUND</code> (<code>bend_multi_bend_selector</code>, <code>autoKlinkung[Confirm/All]</code>).</li>
+<li><strong>Verification</strong>: Demonstration — auto-relief a bent corner; assert relief geometry at the bend/edge junction.</li>
+</ul>
+<h3 id="fr-cad-cre-059-create-bend-tool-biegewerkzeug-geometry">FR-CAD-CRE-059 — Create bend tool (Biegewerkzeug) geometry</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL create bend-tool cross-section geometry via an assistant (<code>aCadCreateBendtool</code> → dialog <code>M_CadBendToolCreateAssistant</code> → <code>asm_call(bendtool …)</code> then <code>bendtool confirm</code>): supporting tool <strong>type</strong> (<code>YACC_SET</code> integer), <strong>size/height</strong> (<code>YACC_SIZE</code>), <strong>angle + tip radius</strong> (<code>YACC_ANGLE</code> → <code>bendToolAngle</code>/<code>bendToolTipRadius</code>), a full <strong>form</strong> definition (<code>YACC_FORM</code>: total width, angle, groove radius, width, radius, with-radius flag), a <strong>horizontal/Horn</strong> form (<code>YACC_HORIZONTAL</code>: width, total width, horn flag), a <strong>polygon</strong> segment (<code>YACC_POLYGON</code>: angle, Z-length), an <strong>adapter/extension</strong> (<code>YACC_EXTENSION</code>), a start point (<code>YACC_START</code>), plus NEW/MODIFY iteration (angle, relative flag, length) with preview; on completion it SHALL create the front/side tool drawing and write the tool info (name from <code>ST_CadBendToolSide</code>: Front vs. Seite).</li>
+<li><strong>Parameters &amp; options</strong>: type; height; angle + tip radius; form parameters (5–6 values + flag); horn form; polygon (angle, Z-length); adapter; start point; new/modify with angle/relative/length; side (front/side).</li>
+<li><strong>Priority</strong>: Conditional</li>
+<li><strong>Rationale</strong>: Bending simulation and collision checks need accurate tool cross-sections; the assistant parameterises common tool shapes.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateBendtool</code>; <code>tc_cad/cad_asm/bendtool.cpp</code> <code>init_bendtool_befehl</code> (<code>bendToolType/Height/Angle/TipRadius/TotalWidth/GrooveRadius/Width/Radius/WithRadius/Horn/ZLength/Adapter/New/Modify</code>); MMK body writes tool info and fits window. Cross-refs [[16 - FR - Bending (ToPs 600)]].</li>
+<li><strong>Verification</strong>: Demonstration — create a punch tool with angle/tip-radius and form values; assert the generated cross-section and stored tool info.</li>
+</ul>
+<h3 id="fr-cad-cre-060-create-parametric-variant-creation-aspect">FR-CAD-CRE-060 — Create parametric variant (creation aspect)</h3>
+<ul>
+<li><strong>Requirement</strong>: The CAD editor SHALL let the user define a parametric variant during drawing creation (<code>aCadCreateVariant</code> → dialog <code>M_CadVarVariante</code> → <code>asm_call(variant create &lt;art&gt; &lt;condition&gt;)</code> with up to 7 parameters, then <code>confirm</code>): the variant SHALL carry an <strong>art/kind</strong> and an optional <strong>condition</strong>, up to seven parameter strings, an optional <strong>designation</strong> (<code>variant 0 &lt;name&gt;</code>), and SHALL bind to selected elements (<code>variant 0 set element</code>) unless the variant kind is one that needs no elements (kinds 9, 15–17, 19 → <code>needElements = 0</code>).</li>
+<li><strong>Parameters &amp; options</strong>: variant kind (integer); condition (string); 0–7 parameters (strings); designation; element binding (conditional on kind).</li>
+<li><strong>Priority</strong>: Optional</li>
+<li><strong>Rationale</strong>: Variants parameterise a drawing for family-of-parts generation. The full variant/scripting model is specified in [[10.5 - CAD Detail - Parametric Variants &amp; Scripting]]; this requirement captures only the creation entry point.</li>
+<li><strong>Source</strong>: mask <code>aCadCreateVariant</code>; MMK body <code>asm_call(variant create …)</code>, <code>variant 0 …</code>, <code>variant refresh</code>, <code>variant 0 set element</code>. Parent FR-CAD-028; detailed in [[10.5 - CAD Detail - Parametric Variants &amp; Scripting]].</li>
+<li><strong>Verification</strong>: Test — define a variant of a kind that binds elements; assert the variant and its parameters are stored.</li>
+</ul>
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>Degenerate-input handling</strong> for 3-point circle/arc (collinear points) and 2-tangent circle (no solution / concentric elements) is asserted from geometric necessity but the exact error codes/messages were not confirmed in the read sources; the rejection behaviour is marked <em>(inferred)</em>.</li>
+<li><strong>Line <code>pt_ang</code> sign/orientation convention</strong> (positive angle direction, reference axis) is taken from <code>winkel_vektoren</code>/<code>gerade_mit_winkel</code> usage; the precise zero-reference (global X vs. picked element) should be confirmed against <code>line.cpp</code> helper <code>winkel()</code>.</li>
+<li><strong>Elliptical arc mask</strong> (FR-CAD-CRE-025): the <code>arc ellipse</code> sub-command exists in <code>init_arc_befehl</code> but no dedicated <code>aCadCreate…</code> mask was found in <code>aCadCreateFunc.gritx</code>; it may be invoked from another gritx (e.g. a macro/pattern mask) — entry point unconfirmed.</li>
+<li><strong>Chamfer/fillet/notch CREATE (convert) options</strong> (<code>YACC_CREATE</code>) overlap with editing (converting existing lines/arcs into chamfers/fillets); the split between &quot;creation&quot; (this doc) and &quot;editing&quot; ([[10.2 - CAD Detail - Editing &amp; Transformation Commands]]) is a documentation convention, not a code boundary.</li>
+<li><strong>Units</strong> are assumed to follow <code>GRITUNIT</code> (mm/inch) as in sibling docs; per-command default values (e.g. default radius/distance seeds) were not exhaustively traced and may be read from ini/state variables (<code>ST_Zeichnung…</code>).</li>
+<li><strong>Macro tool value count</strong>: <code>TcDbaseHoleCommand::setTool</code> exposes 8 tool values in its signature but <code>m_toolValues[6]</code> stores six; whether values 7–8 are persisted or transient is unclear.</li>
+<li><strong>Rectangle assistant collision enum</strong> (<code>TeCornerType</code>/corner-form enums) was read partially; the full set of collision/overlap resolution rules (dominant vs. equal, single-before/after-long) needs behavioural confirmation against <code>TcDbaseRectangleAssistant.cpp</code>.</li>
+<li><strong>Text reference-point and writing-direction codes</strong> (<code>ST_TextRefPunkt</code>, <code>ST_TextSchreibrichtung</code>) enumerations were not fully decoded; the 9-anchor interpretation is inferred from typical CAD text anchors.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-geometry-creation-commands-doc-10.1-cad-detail-geometry-creation-commands-id-prefix-fr-cad-cre-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Geometry Creation Commands"
+doc: "10.1 - CAD Detail - Geometry Creation Commands"
+id-prefix: "FR-CAD-CRE"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-001-create-point">FR-CAD-CRE-001 — Create point</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-002-line-by-two-points">FR-CAD-CRE-002 — Line by two points</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-003-horizontal-line">FR-CAD-CRE-003 — Horizontal line</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-004-vertical-line-incl.perpendicular-onto-a-round-element">FR-CAD-CRE-004 — Vertical line (incl. perpendicular onto a round element)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-005-line-by-point-and-angle">FR-CAD-CRE-005 — Line by point and angle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-006-parallel-line-multiple-offsets">FR-CAD-CRE-006 — Parallel line (multiple offsets)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-007-perpendicular-line-onto-an-element">FR-CAD-CRE-007 — Perpendicular line onto an element</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-008-tangent-line-through-a-point">FR-CAD-CRE-008 — Tangent line through a point</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-009-tangent-line-to-two-round-elements">FR-CAD-CRE-009 — Tangent line to two round elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-010-polygon-connected-line-chain">FR-CAD-CRE-010 — Polygon (connected line chain)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-011-polygon-by-tracing-existing-geometry-nachzeichnen-construct">FR-CAD-CRE-011 — Polygon by tracing existing geometry (Nachzeichnen / construct)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-012-rectangle-by-two-diagonal-points">FR-CAD-CRE-012 — Rectangle by two diagonal points</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-013-circle-by-centre-and-radius">FR-CAD-CRE-013 — Circle by centre and radius</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-014-circle-by-centre-and-diameter">FR-CAD-CRE-014 — Circle by centre and diameter</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-015-circle-through-three-points">FR-CAD-CRE-015 — Circle through three points</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-016-circle-tangent-to-two-elements">FR-CAD-CRE-016 — Circle tangent to two elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-017-concentric-circle">FR-CAD-CRE-017 — Concentric circle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-018-circle-by-diameter-two-points">FR-CAD-CRE-018 — Circle by diameter (two points)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-019-arc-through-three-points">FR-CAD-CRE-019 — Arc through three points</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-020-arc-by-centre-begin-and-end">FR-CAD-CRE-020 — Arc by centre, begin and end</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-021-arc-by-centre-radius-and-angle">FR-CAD-CRE-021 — Arc by centre, radius and angle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-022-concentric-arc">FR-CAD-CRE-022 — Concentric arc</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-023-arc-by-diameter">FR-CAD-CRE-023 — Arc by diameter</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-024-smooth-tangential-connecting-arc">FR-CAD-CRE-024 — Smooth (tangential) connecting arc</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-025-elliptical-arc-kernel">FR-CAD-CRE-025 — Elliptical arc (kernel)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-026-chamfer-fase-across-two-elements">FR-CAD-CRE-026 — Chamfer (Fase) across two elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-027-chamfer-at-a-vertex-squaresymmetric">FR-CAD-CRE-027 — Chamfer at a vertex (square/symmetric)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-028-corner-notch-klinkung-across-two-elements">FR-CAD-CRE-028 — Corner notch (Klinkung) across two elements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-029-corner-notch-at-a-vertex">FR-CAD-CRE-029 — Corner notch at a vertex</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-030-element-notch-triangular">FR-CAD-CRE-030 — Element notch, triangular</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-031-element-notch-rectangular">FR-CAD-CRE-031 — Element notch, rectangular</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-032-element-notch-oblong-langloch-and-circular">FR-CAD-CRE-032 — Element notch, oblong (Langloch) and circular</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-033-relief-groove-freistich-undercut">FR-CAD-CRE-033 — Relief groove (Freistich / undercut)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-034-fillet-rundung-at-a-corner">FR-CAD-CRE-034 — Fillet (Rundung) at a corner</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-035-equidistant-offset-contour">FR-CAD-CRE-035 — Equidistant (offset) contour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-036-create-truetype-text">FR-CAD-CRE-036 — Create TrueType text</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-037-text-placement-modifiers-arc-radius-signing-auto-part-number-rotation">FR-CAD-CRE-037 — Text placement modifiers: arc radius, signing, auto part-number, rotation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-038-truetype-glyph-linearc-contour-approximation-algorithm">FR-CAD-CRE-038 — TrueType glyph → line/arc contour approximation (algorithm)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-039-macro-shapetool-definition-round-square-rectangle-oblong-ellipse-korner-vorlage-tool-form">FR-CAD-CRE-039 — Macro shape/tool definition (round, square, rectangle, oblong, ellipse, Körner, Vorlage,
+   tool, form)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-040-single-hole-einzelloch">FR-CAD-CRE-040 — Single hole (Einzelloch)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-041-hole-row-lochreihe">FR-CAD-CRE-041 — Hole row (Lochreihe)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-042-hole-grid-lochgitter">FR-CAD-CRE-042 — Hole grid (Lochgitter)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-043-hole-circle-lochkreis-by-centre-points-angle">FR-CAD-CRE-043 — Hole circle (Lochkreis) by centre / points / angle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-044-macro-assistant-interactive-pattern-editor-with-local-coordinate-systems">FR-CAD-CRE-044 — Macro assistant (interactive pattern editor with local coordinate systems)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-045-single-hole-with-boolean-merge-into-a-contour">FR-CAD-CRE-045 — Single hole with boolean merge into a contour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-046-rectangle-assistant-new-base-rectangle-length-width-type">FR-CAD-CRE-046 — Rectangle assistant: new base rectangle (length, width, type)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-047-rectangle-assistant-per-corner-treatment">FR-CAD-CRE-047 — Rectangle assistant: per-corner treatment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-048-rectangle-assistant-per-edge-element-notch">FR-CAD-CRE-048 — Rectangle assistant: per-edge element notch</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-049-rectangle-assistant-corner-collision-overlap-handling">FR-CAD-CRE-049 — Rectangle assistant: corner collision / overlap handling</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-050-rectangle-assistant-tabs-lasche-creation-and-management">FR-CAD-CRE-050 — Rectangle assistant: tabs (Lasche) creation and management</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-051-rectangle-assistant-factor-and-tool-management">FR-CAD-CRE-051 — Rectangle assistant: factor and tool management</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-052-group-elements-block">FR-CAD-CRE-052 — Group elements (block)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-053-profile-creation-editor-bent-profile-cross-section">FR-CAD-CRE-053 — Profile creation editor (bent-profile cross-section)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-054-profile-bumping-segment">FR-CAD-CRE-054 — Profile bumping segment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-055-profile-falzung-hemming-segment">FR-CAD-CRE-055 — Profile Falzung (hemming) segment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-056-profile-xy-segment">FR-CAD-CRE-056 — Profile XY segment</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-057-create-bend-line-biegelinie">FR-CAD-CRE-057 — Create bend line (Biegelinie)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-058-automatic-corner-relief-at-bend-intersections-bend-round">FR-CAD-CRE-058 — Automatic corner relief at bend intersections (bend round)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-059-create-bend-tool-biegewerkzeug-geometry">FR-CAD-CRE-059 — Create bend tool (Biegewerkzeug) geometry</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-cre-060-create-parametric-variant-creation-aspect">FR-CAD-CRE-060 — Create parametric variant (creation aspect)</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">ToPs600CAD</a></span>
+ <span class="next"><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

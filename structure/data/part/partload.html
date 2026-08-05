@@ -1,0 +1,429 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Part.Load</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">Structure of Flux</a>
+   <ul>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../../folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">Data & Process</a>
+     <ul>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Part</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a class="active" href="partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../../../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../../../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../../../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">Structure of Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Data & Process</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Part</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="partload.html">Part.Load</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Part.Load</h1>
+<p><code>Part.Load</code> is the SDK entry point for reading a sheet-metal part from disk.
+It accepts any file format that Flux understands, returns a fully constructed <code>Part</code> object,
+and leaves manufacturing calculations to the caller.</p>
+<p><strong>File:</strong> <code>Core/Part/Part.cs</code> — static method <code>Part.Load(string filename)</code></p>
+<h2 id="prerequisite-library.init">Prerequisite — Library.Init</h2>
+<p><code>Part.Load</code> requires the Flux library to be initialised before it is called.
+<code>Library.Init</code> loads the WAD resource packages and verifies the licence.
+Calling <code>Part.Load</code> before <code>Library.Init</code> results in undefined behaviour.</p>
+<p>[source,csharp]</p>
+<pre><code>Library.Init(sDataDir, sWadDir, null);   // must come first
+var part = Part.Load(filename);
+</code></pre>
+<p>The third argument to <code>Library.Init</code> is the application's main window handle —
+pass <code>null</code> for console applications, a <code>Window</code> instance for WPF applications.</p>
+<p>For licence handling during initialisation see the <code>APIInit</code> pattern used in every
+SDK sample:</p>
+<p>[source,csharp]</p>
+<pre><code>static void APIInit() {
+    try {
+        Library.Init(sDataDir, sWadDir, null);
+    } catch (APIException e) {
+        if (e.Code == EResult.NoLicense) {
+            // Prompt user for serial / name / email, then call Library.RegisterLicense.
+            // ...
+            Environment.Exit(exitCode);
+        }
+    }
+}
+
+static readonly string sDataDir = &quot;C:/FluxSDK/Data&quot;, sWadDir = &quot;C:/FluxSDK/Bin&quot;;
+</code></pre>
+<h2 id="signature">Signature</h2>
+<p>[source,csharp]</p>
+<pre><code>public static Part Part.Load(string filename)
+</code></pre>
+<p>[cols=&quot;1,1,4&quot;, options=&quot;header&quot;]
+|===
+| Parameter | Type | Meaning</p>
+<p>| <code>filename</code> | <code>string</code> | Absolute or relative path to the source file.
+The extension determines which loader is used.
+| <em>return</em>   | <code>Part</code>   | A fully constructed <code>Part</code> object.
+The set of populated properties depends on the file format (see below).
+|===</p>
+<p>The method throws if the file does not exist, the format is unrecognised, or the file
+is corrupt.</p>
+<h2 id="supported-file-formats">Supported File Formats</h2>
+<p>The format is detected from the file extension.
+<code>Part.KnownFileTypes</code> returns the complete list of extensions recognised by the
+installed build:</p>
+<p>[source,csharp]</p>
+<pre><code>
+string filter = string.Join(&quot;;&quot;, Part.KnownFileTypes.Select(x =&gt; x.After('|')));
+</code></pre>
+<p>Common formats:</p>
+<p>[cols=&quot;1,4&quot;, options=&quot;header&quot;]
+|===
+| Extension | Format</p>
+<p>| <code>.fx</code>   | Flux native format — ZIP archive containing AU-serialised part data.
+Produced by <code>Part.SaveFX()</code>. Preserves everything the part contains.
+| <code>.geo</code>  | Flux text format for 2D flat drawings. Contains geometry, material, thickness,
+and bend marks but no 3D model.
+| <code>.dxf</code>  | AutoCAD Drawing Exchange Format. Flat 2D drawings; layers map to drawing roles.
+| <code>.pdf</code>  | PDF vector outlines imported as a 2D flat drawing.
+| <code>.iges</code> / <code>.igs</code> | 3D surface or solid geometry imported as a surface model.
+| <code>.step</code> / <code>.stp</code> | 3D solid geometry imported as a surface model.
+|===</p>
+<h2 id="what-gets-populated">What Gets Populated</h2>
+<p>The properties populated on the returned <code>Part</code> depend entirely on what the file contains.
+No manufacturing data is computed automatically — all <code>Make**</code> methods must be called
+explicitly after loading.</p>
+<p>[cols=&quot;2,1,1,1,1&quot;, options=&quot;header&quot;]
+|===
+| Property | <code>.fx</code> | <code>.geo</code> | <code>.dxf</code> | <code>.iges</code> / <code>.step</code></p>
+<p>| <code>Part.Info</code> (name, material, thickness) | yes | yes | partial | no
+| <code>Part.Dwg</code> (2D flat drawing)            | yes | yes | yes     | no
+| <code>Part.Model</code> (3D folded model)          | if saved | no | no  | no
+| <code>Part.BendTech</code>                         | if saved | no | no  | no
+| <code>Part.FoldTech</code>                         | if saved | no | no  | no
+| <code>Part.CutTech</code>                          | if saved | no | no  | no
+| <code>Part.SurfaceModel</code>                     | if saved | no | no  | yes
+|===</p>
+<p>A <code>.geo</code> or <code>.dxf</code> file always yields a <code>Dwg</code> and never a <code>Model</code>.
+A <code>.iges</code> or <code>.step</code> file yields a <code>SurfaceModel</code> and nothing else —
+both <code>Dwg</code> and <code>Model</code> must be derived via post-load operations (see below).</p>
+<h2 id="post-load-operations">Post-Load Operations</h2>
+<p><code>Part.Load</code> does not call any manufacturing algorithms.
+Callers must explicitly request whatever representations or tooling they need:</p>
+<p>[cols=&quot;2,4&quot;, options=&quot;header&quot;]
+|===
+| Method | What it produces</p>
+<p>| <code>part.FoldTo3D()</code>       | Derives <code>Part.Model</code> from <code>Part.Dwg</code> — folds the flat drawing into a 3D model.
+Required before <code>MakeBendTech</code> or <code>MakeFoldTech</code> if only a flat file was loaded.
+| <code>part.UnfoldTo2D()</code>     | Derives <code>Part.Dwg</code> from <code>Part.Model</code> — unfolds the 3D model into a flat drawing.
+Required before <code>MakeCutTech</code> or saving as DXF/GEO if only an FX with a 3D model was loaded.
+| <code>part.SheetMetalize()</code>  | Derives <code>Part.Model</code> from <code>Part.SurfaceModel</code> — converts imported 3D geometry to
+a sheet-metal model. Call before <code>FoldTo3D</code> / <code>UnfoldTo2D</code> when loading IGES or STEP.
+| <code>part.MakeBendTech(machine)</code> | Generates <code>Part.BendTech</code> — press-brake tooling for the part.
+| <code>part.MakeFoldTech(machine)</code> | Generates <code>Part.FoldTech</code> — panel-bender tooling for the part.
+| <code>part.MakeCutTech(machine)</code>  | Generates <code>Part.CutTech</code> — laser or punch tooling for the flat drawing.
+|===</p>
+<p>The call graph for the most common starting points:</p>
+<p>[source]</p>
+<pre><code>File loaded as flat 2D (geo, dxf)
+ └── Part.Load(file)
+      ├── part.Dwg          ← ready immediately
+      ├── part.FoldTo3D()   ← derive 3D model from Dwg
+      │    ├── part.Model   ← now available
+      │    ├── part.MakeBendTech(mac)
+      │    └── part.MakeFoldTech(mac)
+      └── part.MakeCutTech(mac)
+
+File loaded as 3D surface (iges, step)
+ └── Part.Load(file)
+      ├── part.SurfaceModel ← ready immediately
+      ├── part.SheetMetalize()
+      │    └── part.Model   ← now available
+      └── part.UnfoldTo2D()
+           └── part.Dwg     ← now available
+
+File loaded as native (fx)
+ └── Part.Load(file)
+      ├── part.Info, Dwg, Model, **Tech ← as saved in the file
+      ├── part.FoldTo3D()   ← only if Model is null
+      └── part.UnfoldTo2D() ← only if Dwg is null
+</code></pre>
+<h2 id="common-patterns">Common Patterns</h2>
+<h3 id="read-metadata-only">Read metadata only</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(file);
+Console.WriteLine($&quot;Name:      {part.Info.Name}&quot;);
+Console.WriteLine($&quot;Material:  {part.Info.Matl.DisplayName}&quot;);
+Console.WriteLine($&quot;Thickness: {part.Info.Thickness}&quot;);
+</code></pre>
+<h3 id="convert-to-another-2d-format">Convert to another 2D format</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(file);
+part.Dwg.SaveDXF(Path.ChangeExtension(file, &quot;.dxf&quot;));   // GEO → DXF
+part.Dwg.SaveGEO(Path.ChangeExtension(file, &quot;.geo&quot;));   // DXF → GEO
+</code></pre>
+<h3 id="save-as-native-flux-format">Save as native Flux format</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(file);          // any supported format
+part.SaveFX(Path.ChangeExtension(file, &quot;.fx&quot;));
+</code></pre>
+<h3 id="generate-press-brake-tooling">Generate press-brake tooling</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(file);
+if (part.Model == null) part.FoldTo3D();   // ensure 3D model exists
+part.MakeBendTech(BendMachine.Default);
+var tech = part.BendTech;
+</code></pre>
+<h3 id="generate-laser-tooling">Generate laser tooling</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(file);
+part.UnfoldTo2D();                          // ensure flat drawing exists
+part.MakeCutTech(sDefaultCutMac);
+var tech = part.CutTech;
+</code></pre>
+<h3 id="view-in-a-wpf-editor">View in a WPF editor</h3>
+<p>[source,csharp]</p>
+<pre><code>var part = Part.Load(filename);
+part.UnfoldTo2D();
+if (part.Dwg != null) part.FoldTo3D();     // derive 3D from Dwg if possible
+_ = new PartEditor(part, PartEditor.ESkin.Model);
+</code></pre>
+<h2 id="knownfiletypes">KnownFileTypes</h2>
+<p><code>Part.KnownFileTypes</code> is a static property that returns all file type descriptors
+recognised by the current build, in file-dialog filter format:</p>
+<p>[source,csharp]</p>
+<pre><code>IEnumerable&lt;string&gt; Part.KnownFileTypes
+</code></pre>
+<p>Each element has the form <code>&quot;Description|**.ext1;**.ext2&quot;</code>, matching the <code>Filter</code> property
+of a standard <code>OpenFileDialog</code>:</p>
+<p>[source,csharp]</p>
+<pre><code>
+static string PartFileTypes
+    =&gt; string.Join(&quot;;&quot;, Part.KnownFileTypes.Select(x =&gt; x.After('|')))
+             .Replace(&quot;**.pdf;&quot;, &quot;&quot;);
+</code></pre>
+<h2 id="result-after-part.load">Result After Part.Load</h2>
+<p>[source]</p>
+<pre><code>Part.Load(filename)
+ │
+ ├── Info           ← name, material, thickness, grain, GUID
+ │
+ ├── Dwg            ← 2D flat drawing (null if 3D-only file)
+ │    ├── E2Pline[]     outer contour + holes + features
+ │    └── E2Bendline[]  bend marks with angle, radius, k-factor
+ │
+ ├── Model          ← 3D folded model (null unless .fx contains one)
+ │    ├── E3Plane[]     flat faces
+ │    └── E3Flex[]      bends connecting faces
+ │
+ ├── SurfaceModel   ← raw imported surfaces (iges/step only, otherwise null)
+ │
+ └── BendTech / FoldTech / CutTech
+                    ← null unless restored from .fx; call Make**() to generate
+</code></pre>
+<h2 id="key-files">Key Files</h2>
+<p>[cols=&quot;3,5&quot;, options=&quot;header&quot;]
+|===
+| File | Responsibility</p>
+<p>| <code>Core/Part/Part.cs</code>       | <code>Part.Load()</code>, <code>SaveFX()</code>, <code>FoldTo3D()</code>, <code>UnfoldTo2D()</code>, <code>SheetMetalize()</code>, <code>MakeBendTech()</code>, <code>MakeFoldTech()</code>, <code>MakeCutTech()</code>
+| <code>Core/FX.cs</code>              | <code>FX.LoadPart()</code> — internal dispatcher that routes the filename to the correct loader
+| <code>Core/IO/GeoLoader.cs</code>    | Parses the <code>.geo</code> text format into a <code>Drawing2</code>
+| <code>Core/IO/DxfLoader.cs</code>    | Parses DXF into a <code>Drawing2</code>
+| <code>Base/Gold/AuStream.cs</code>   | AU deserialiser — reads the binary object graph inside <code>.fx</code> entries
+| <code>Core/Part/PartInfo.cs</code>   | <code>PartInfo</code> — name, material, thickness, and metadata dictionary
+| <code>Core/Model/Drawing2.cs</code>  | <code>Drawing2</code> — the 2D flat representation
+| <code>Core/Model/Model3.cs</code>    | <code>Model3</code> — the 3D folded representation
+|===</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#prerequisite-library.init">Prerequisite — Library.Init</a>
+  </li>
+  <li level="1">
+   <a href="#signature">Signature</a>
+  </li>
+  <li level="1">
+   <a href="#supported-file-formats">Supported File Formats</a>
+  </li>
+  <li level="1">
+   <a href="#what-gets-populated">What Gets Populated</a>
+  </li>
+  <li level="1">
+   <a href="#post-load-operations">Post-Load Operations</a>
+  </li>
+  <li level="1">
+   <a href="#common-patterns">Common Patterns</a>
+  </li>
+  <li level="2">
+   <a href="#read-metadata-only">Read metadata only</a>
+  </li>
+  <li level="2">
+   <a href="#convert-to-another-2d-format">Convert to another 2D format</a>
+  </li>
+  <li level="2">
+   <a href="#save-as-native-flux-format">Save as native Flux format</a>
+  </li>
+  <li level="2">
+   <a href="#generate-press-brake-tooling">Generate press-brake tooling</a>
+  </li>
+  <li level="2">
+   <a href="#generate-laser-tooling">Generate laser tooling</a>
+  </li>
+  <li level="2">
+   <a href="#view-in-a-wpf-editor">View in a WPF editor</a>
+  </li>
+  <li level="1">
+   <a href="#knownfiletypes">KnownFileTypes</a>
+  </li>
+  <li level="1">
+   <a href="#result-after-part.load">Result After Part.Load</a>
+  </li>
+  <li level="1">
+   <a href="#key-files">Key Files</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="partinformation.html">Part.Dwg</a></span>
+ <span class="next"><a href="partload2.html">Part.Load to Part.Dwg</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

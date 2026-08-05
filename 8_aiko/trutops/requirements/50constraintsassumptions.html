@@ -1,0 +1,1041 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>50ConstraintsAssumptions</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a class="active" href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="50constraintsassumptions.html">50ConstraintsAssumptions</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>50ConstraintsAssumptions</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-constraints-assumptions-doc-50-constraints-assumptions-id-prefix-con-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-30-external-interface-requirements-40-non-functional-requirements-12-fr-part-data-management-22-fr-ui-framework-dialogs-interaction-grit-tags-requirements-trutops-constraints">product: trutopscad
+org: trumpf
+title: &quot;Constraints &amp; Assumptions&quot;
+doc: &quot;50 - Constraints &amp; Assumptions&quot;
+id-prefix: &quot;CON&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[03 - System Context &amp; Architecture Overview]]&quot;, &quot;[[30 - External Interface Requirements]]&quot;, &quot;[[40 - Non-Functional Requirements]]&quot;, &quot;[[12 - FR - Part &amp; Data Management]]&quot;, &quot;[[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]&quot;]
+tags: [requirements, trutops, constraints]</h2>
+<h1 id="constraints-assumptions">Constraints &amp; Assumptions</h1>
+<p>This document records the <strong>constraints</strong> — conditions that limit the design space and are not open to negotiation by the requirements engineering team — and the <strong>assumptions</strong> — conditions taken to be true for the requirements to hold — governing the reverse-engineered TruTops CAD/CAM suite. Constraints and assumptions are recorded per ISO/IEC/IEEE 29148:2018 §9.5 (constraints on the system) and §5.2.8 (assumptions and dependencies).</p>
+<p>Because these requirements are reverse-engineered from a legacy source snapshot rather than authored greenfield, most constraints are <strong>as-built</strong> (the system <em>does</em> depend on X) rather than <em>imposed</em> (the system <em>shall</em> use X). Each item states the constraint, its type, the rationale, and the concrete source evidence in the code base under <code>/Users/Aiko.Radlingmayr/dev/trumpf/TruTopsCAD</code>.</p>
+<p>Constraint types used below:</p>
+<ul>
+<li><strong>Build/Toolchain</strong> — how the software is compiled and assembled.</li>
+<li><strong>Platform/Runtime</strong> — the operating environment the binaries need.</li>
+<li><strong>Interface/Dependency</strong> — a mandated external component or protocol (see [[30 - External Interface Requirements]]).</li>
+<li><strong>Data/Persistence</strong> — storage engine, schema and file-format constraints (see [[12 - FR - Part &amp; Data Management]]).</li>
+<li><strong>Domain/Business</strong> — sheet-metal-fabrication and product-line constraints (see [[01 - Vision &amp; Scope]], [[04 - Domain Model &amp; Glossary]]).</li>
+<li><strong>Regulatory/Safety</strong> — machine-safety and liability considerations.</li>
+</ul>
+<p>Related non-functional targets (performance, portability, maintainability, security) are specified separately in [[40 - Non-Functional Requirements]]; the interfaces referenced here are detailed in [[30 - External Interface Requirements]].</p>
+<hr />
+<h2 id="technical-implementation-constraints-con-requirements">1. Technical / Implementation Constraints (CON requirements)</h2>
+<h3 id="con-001-build-toolchain-fixed-to-visual-studio-2010-msvc-10.0">CON-001 — Build toolchain fixed to Visual Studio 2010 / MSVC 10.0</h3>
+<p><strong>Constraint:</strong> The native code base is built exclusively with the Microsoft Visual C++ 10.0 compiler (Visual Studio 2010). The master solution <code>tcolib_win_VS2010.sln</code> declares <em>Solution File Format 11.00 / # Visual Studio 2010</em>, the project uses MSBuild <code>ToolsVersion=&quot;4.0&quot;</code>, <code>CompilerName.txt</code> contains <code>Msvc100</code>, the global build props set <code>&lt;MsvcVersion&gt;Msvc100&lt;/MsvcVersion&gt;</code>, and the developer shell <code>_shell/environment.bat</code> calls <code>&quot;%VS100COMNTOOLS%\vsvars32.bat&quot;</code>. Upgrading the compiler is not supported without broad rework.
+<strong>Type:</strong> Build/Toolchain.
+<strong>Rationale:</strong> All third-party binary distributions under <code>Common/.../dist/win/Msvc100</code> are ABI-matched to this compiler; mixing toolsets would break linkage.
+<strong>Source:</strong> <code>tcolib_win_VS2010.sln</code>, <code>tcolib_win_VS2010.vcxproj</code>, <code>CompilerName.txt</code>, <code>makeutil/msbuild/tcolib_global_sys_defines.props</code>, <code>_shell/environment.bat</code>.</p>
+<h3 id="con-002-32-bit-win32-target-for-the-legacy-core">CON-002 — 32-bit (Win32) target for the legacy core</h3>
+<p><strong>Constraint:</strong> The legacy <code>tcolib_win</code> core and its edition executables target the <strong>Win32 (x86, 32-bit)</strong> platform only; the project defines <code>&lt;Platform&gt;Win32&lt;/Platform&gt;</code> and no x64 configuration for the core. An <code>_shell_x64</code> exists but references newer tooling (<code>VS2012</code>/<code>VS2014</code> <code>vcvars64.bat</code>) for auxiliary components, not the legacy core.
+<strong>Type:</strong> Build/Toolchain, Platform/Runtime.
+<strong>Rationale:</strong> 32-bit pointer/address-space assumptions pervade the C/C++ code and the pinned 3rd-party libraries; the product ships as 32-bit binaries.
+<strong>Source:</strong> <code>tcolib_win_VS2010.vcxproj</code> (<code>&lt;Platform&gt;Win32&lt;/Platform&gt;</code>), <code>_shell_x64/environment.bat</code>.</p>
+<h3 id="con-003-polyglot-implementation-c-c.net-python-generated-parsers">CON-003 — Polyglot implementation: C++ + C#/.NET + Python + generated parsers</h3>
+<p><strong>Constraint:</strong> The system is a mix of native C++ (the bulk of <code>tc_*</code>/<code>grit</code>), managed C#/.NET assemblies (e.g. <code>GeoAlgorithmsKernel</code>, <code>tc_nest/NestCore</code>, <code>tc_fabAdapter</code>, XIDL interop, <code>TruTopsDllNET</code>), embedded Python, and lex/yacc-generated command interpreters. Any change touching a cross-language boundary must satisfy all four toolchains simultaneously (MSBuild orchestrates C++, C# and code generators in one run).
+<strong>Type:</strong> Build/Toolchain.
+<strong>Rationale:</strong> Managed geometry/nesting engines and the automation surfaces (see [[23 - FR - Automation, Scripting &amp; Integration]]) are interop-bound to the native core via P/Invoke and the XIDL remote factory.
+<strong>Source:</strong> <code>Build_tcolib_win_05XX.msbuild</code> (OLB/Gdl/XIDL/GeneratedXIDLProjects targets), <code>*.csproj</code> inventory, <code>tcolib_win_VS2010.sln</code>.</p>
+<h3 id="con-004-managed-assemblies-pinned-to.net-framework-2.03.54.0">CON-004 — Managed assemblies pinned to .NET Framework 2.0/3.5/4.0</h3>
+<p><strong>Constraint:</strong> The C# assemblies target legacy .NET Framework versions — a survey of <code>*.csproj</code> shows <code>v2.0</code> (×1), <code>v3.5</code> (×4) and <code>v4.0</code> (×49). No .NET Core / .NET 5+ target exists for these components. A separate licensing wrapper distribution targets <code>.NET4.6.1</code>.
+<strong>Type:</strong> Build/Toolchain, Platform/Runtime.
+<strong>Rationale:</strong> Interop with the 32-bit native core and the frozen TRUMPF dist libraries fixes the CLR era.
+<strong>Source:</strong> <code>TargetFrameworkVersion</code> across <code>*.csproj</code>; <code>Common/TRUMPF/dist/win/.NET4.0</code>, <code>.../.NET4.6.1</code>.</p>
+<h3 id="con-005-embedded-python-2.5-scripting-runtime-end-of-life">CON-005 — Embedded Python 2.5 scripting runtime (end-of-life)</h3>
+<p><strong>Constraint:</strong> Automation and parametric-variant scripting are bound to <strong>Python 2.5</strong> (<code>python_2_5_0</code> in the build props; <code>Python25</code>/<code>python25</code> paths in the ini files). Python 2.5 is long past end-of-life; scripts and the embedded interpreter (<code>tc_python</code>) cannot be run on a modern Python without porting.
+<strong>Type:</strong> Build/Toolchain, Interface/Dependency.
+<strong>Rationale:</strong> The <code>TcPythonInterpreter</code> links <code>python25.dll</code>; the <code>ToPs</code>/<code>ToPsGraphics</code> modules and <code>TruTops_customize.py</code> assume the 2.5 C-API and standard library (see [[23 - FR - Automation, Scripting &amp; Integration]]).
+<strong>Source:</strong> <code>tcolib_global_sys_defines.props</code> (<code>PythonPath=...python_2_5_0</code>), <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TOPS_PYTHON_PATH=...\Python25</code>).</p>
+<h3 id="con-006-frozen-third-party-library-versions">CON-006 — Frozen third-party library versions</h3>
+<p><strong>Constraint:</strong> The build depends on a set of <strong>specific, old</strong> third-party library versions that are checked into <code>Common/3rdParty</code> and <code>Common/TRUMPF</code>: Qt 4.3.5, ACE 5.5.1 + TAO 1.5.1 (CORBA), Xerces-C 2.7.0 (XML), FreeType 2.3.1 (fonts), Boost 1.50.0, ICU 49, crypto++ 5.5.0, lp_solve 5.5 (LP optimizer), libodbc++ 0.2.4pre1 (ODBC C++ wrapper), and the GSSL NestLib nesting engine. These versions are effectively immutable for this branch.
+<strong>Type:</strong> Build/Toolchain, Interface/Dependency.
+<strong>Rationale:</strong> Each is ABI-compiled for MSVC 10.0 / Win32 and integrated at source level; version bumps would ripple through many modules.
+<strong>Source:</strong> <code>makeutil/msbuild/tcolib_global_sys_defines.props</code> (QtPath, AceTaoPath, XercesPath, FreeTypePath, BoostPath, IcuPath, CryptoPath, LpSolvePath, LibOdbcPath, NestlibPath).</p>
+<h3 id="con-007-grit-ui-framework-and-mmk-interpreter-are-the-mandatory-interaction-layer">CON-007 — GRIT UI framework and MMK interpreter are the mandatory interaction layer</h3>
+<p><strong>Constraint:</strong> All interactive behaviour is expressed through the proprietary <strong>GRIT</strong> UI framework and its embedded <strong>MMK interpreter</strong> (with <code>mini_sql</code> data binding). Dialogs are GRIT masks; command logic lives in MMK/ASM scripts. There is no alternative UI path for the legacy screens; the modern Qt front-end is bridged through <code>tc_guiAdapter</code> AppStates rather than replacing GRIT.
+<strong>Type:</strong> Platform/Runtime, Interface/Dependency.
+<strong>Rationale:</strong> The entire interactive command surface, validation, finder lists and undo are implemented against GRIT/MMK (see [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]]).
+<strong>Source:</strong> <code>grit/</code>, <code>tc_bof/*.gritx</code>, <code>tc_guiAdapter/</code>, build target <code>OLB</code> in <code>Build_tcolib_win_05XX.msbuild</code>.</p>
+<h3 id="con-008-grit-mask-storage-formats-and-build-time-gdlolbxidl-code-generation">CON-008 — GRIT mask storage formats and build-time GDL/OLB/XIDL code generation</h3>
+<p><strong>Constraint:</strong> UI masks are stored in three interconvertible formats — <code>.gritx</code> (XML authoring form, v2.63/UTF-8), <code>.olb</code> (binary runtime form) and <code>.a26</code> (legacy ASCII) — and the runtime loads a compiled <code>.OLB</code> (e.g. <code>TOPS_OLB=...\bin\T100.OLB</code>). The build must run dedicated code-generation steps (GDL translation, OLB compilation, XIDL interface generation) before compiling C++/C#; these are ordered dependencies (<code>DependsOnTargets=&quot;Gdl;XIDL;OLB;GeneratedXIDLProjects;...&quot;</code>).
+<strong>Type:</strong> Build/Toolchain.
+<strong>Rationale:</strong> Masks and cross-process interfaces are generated artefacts, not hand-written source; the build order is not free.
+<strong>Source:</strong> <code>Build_tcolib_win_05XX.msbuild</code> (targets OLB/Gdl/XIDL/T100), <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TOPS_OLB</code>).</p>
+<h3 id="con-009-parser-generators-flexbison-required-to-build-the-interpreters">CON-009 — Parser generators (flex/bison) required to build the interpreters</h3>
+<p><strong>Constraint:</strong> The MMK and ASM command interpreters are generated from lex/yacc grammars, so the build depends on <strong>flex 2.5.4</strong> and <strong>bison 1.35</strong> distributed under <code>Common/3rdParty/dist/win/gcc32</code>. These GNU tools must be present in the toolchain even though the product is otherwise MSVC-based.
+<strong>Type:</strong> Build/Toolchain.
+<strong>Rationale:</strong> The <code>tc_asm</code> state machine and the MMK interpreter behind GRIT are yacc/lex-based (see [[23 - FR - Automation, Scripting &amp; Integration]]).
+<strong>Source:</strong> <code>tcolib_global_sys_defines.props</code> (<code>FlexPath=...flex_2_5_4</code>, <code>BisonPath=...bison_1_35</code>).</p>
+<h3 id="con-010-relational-persistence-on-microsoft-sql-server-via-odbc">CON-010 — Relational persistence on Microsoft SQL Server via ODBC</h3>
+<p><strong>Constraint:</strong> All master/technology/order data is held in <strong>Microsoft SQL Server</strong> databases accessed over <strong>ODBC</strong> (via the <code>libodbc++</code> wrapper and <code>grit/tco_api/tc_odbc</code>). A SQL Server instance (default <code>TRUMPFSQL1</code>) and per-database ODBC DSN entries are provisioned by admin scripts. Provisioning references SQL Server client tooling versions 100/110 (SQL Server 2008 / 2008 R2 era), with a separate 2019 structure snapshot present.
+<strong>Type:</strong> Data/Persistence, Interface/Dependency.
+<strong>Rationale:</strong> The whole technology/config layer, rule set (<code>REGEL_ALLG</code>) and inventory are relational tables; there is no non-SQL persistence path for them.
+<strong>Source:</strong> <code>Databases/createSqlServerLocalMdb.bat</code>, <code>Databases/createSqlServerOdbcEntry.bat</code>, <code>Databases_SQL_2019/</code>, <code>ini_files/*/*.ORG</code> (<code>SERVER=</code>, <code>DBVLOG=</code>).</p>
+<h3 id="con-011-locally-attached-mdf-single-workstation-database-variant">CON-011 — Locally-attached MDF single-workstation database variant</h3>
+<p><strong>Constraint:</strong> In addition to a networked SQL Server instance, the product supports <strong>locally-attached MDF</strong> database files (attached/detached by <code>AttachSqlServerLocalMdb.bat</code> / <code>DetachSqlServerLocalMdb.bat</code>), giving a single-workstation deployment. (Analysts elsewhere describe this as an &quot;Access MDB&quot; mode; no Jet/ACE Access-driver dependency was found — the local store is a SQL Server <code>.mdf</code> attached to a local instance.) Attaching/detaching requires local administrator rights.
+<strong>Type:</strong> Data/Persistence, Platform/Runtime.
+<strong>Rationale:</strong> Standalone editions (e.g. ToPsCad, Lite) run without a shared server; the same schema is served from a local MDF.
+<strong>Source:</strong> <code>Databases/AttachSqlServerLocalMdb.bat</code>, <code>Databases/createSqlServerLocalMdb.bat</code> (admin-rights check <code>S-1-5-32-544</code>), <code>Databases/DetachSqlServerLocalMdb.bat</code>.</p>
+<h3 id="con-012-datadict-driven-schema-and-per-schema-db-versioningmigration">CON-012 — DATADICT-driven schema and per-schema DB versioning/migration</h3>
+<p><strong>Constraint:</strong> The physical schema is defined and provisioned from the <strong>DATADICT</strong> data dictionary (tables/columns/relations/indexes), and each technology schema carries a <code>DB_VERSION</code> marker. The installed database version must be compatible with the application; migration/porting is applied in place at install/upgrade.
+<strong>Type:</strong> Data/Persistence.
+<strong>Rationale:</strong> Tables are auto-created from dictionary rows and the app validates schema version on connect (see [[12 - FR - Part &amp; Data Management]]).
+<strong>Source:</strong> <code>Databases/SQLServerDatabase/Tables/DATADICT.*.sql</code>, <code>.../Common.DB_VERSION.sql</code>, <code>.../Laser.DB_VERSION.sql</code>, <code>.../CAD.DB_VERSION.sql</code>.</p>
+<h3 id="con-013-technology-partitioned-dual-metricinch-databases">CON-013 — Technology-partitioned, dual metric/inch databases</h3>
+<p><strong>Constraint:</strong> Data is partitioned into technology schemas (<strong>Punch, Laser, Bend, Tube, Nest, Common, CAD, Text, DATADICT, Logging, …</strong>) and every measurement-bearing schema is <strong>duplicated in an <code>_inch</code> variant</strong> (<code>Punch_inch</code>, <code>Laser_inch</code>, <code>Tube_inch</code>, <code>Common_inch</code>, <code>Nest_inch</code>, <code>CAD_inch</code>, <code>Text_inch</code>). The application must select the unit-correct database and keep the two representations in sync via a porting step.
+<strong>Type:</strong> Data/Persistence, Domain/Business.
+<strong>Rationale:</strong> Metric and imperial are maintained as parallel physical databases rather than by runtime conversion.
+<strong>Source:</strong> <code>Databases/SQLServerDatabase/Tables/</code> schema-prefix inventory; <code>Databases/RedGateFilter/RedGateStructureImperial.scpf</code> / <code>...Metric.scpf</code>; <code>Databases/DB_Port_SqlSrv*_InchRefresh*.ps1</code>.</p>
+<h3 id="con-014-corba-acetao-as-the-pdm-integration-transport">CON-014 — CORBA (ACE/TAO) as the PDM integration transport</h3>
+<p><strong>Constraint:</strong> Integration with TRUMPF PDM uses <strong>CORBA</strong> over ACE 5.5.1 + TAO 1.5.1, addressed through a naming service (<code>servername:port</code>). The PDM connection is therefore bound to this CORBA stack and its addressing model.
+<strong>Type:</strong> Interface/Dependency.
+<strong>Rationale:</strong> <code>pdmConvert</code>, the OmAdapter/TiPdmFacet file abstraction and the per-edition XIDL component APIs connect via the CORBA naming service.
+<strong>Source:</strong> <code>tcolib_global_sys_defines.props</code> (<code>AceTaoPath=...ACE_5_5_1+TAO_1_5_1</code>), <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>PdmServiceName</code>, <code>PdmNameServiceSpec=XXXX:9999</code>).</p>
+<h3 id="con-015-java-saxon-required-for-build-time-report-xslt">CON-015 — Java (Saxon) required for build-time / report XSLT</h3>
+<p><strong>Constraint:</strong> A <strong>Java</strong> runtime and <strong>Saxon 9</strong> are required to translate report/plan stylesheets (XSLT) during build and reporting; the build props set a Saxon classpath (<code>saxon9.jar</code>, <code>saxon9-jdom.jar</code>, <code>saxon9-sql.jar</code>).
+<strong>Type:</strong> Build/Toolchain, Interface/Dependency.
+<strong>Rationale:</strong> Nesting/production-plan reports are rendered through XSL transforms driven by Saxon.
+<strong>Source:</strong> <code>tcolib_global_sys_defines.props</code> (<code>SaxonClassPath</code>, <code>ThirdPartyJavaDir</code>).</p>
+<h3 id="con-016-single-monolithic-project-producing-per-edition-executables">CON-016 — Single monolithic project producing per-edition executables</h3>
+<p><strong>Constraint:</strong> The editions (<strong>ToPs 100/300/400, ToPs 400 Cad, ToPsCad, ToPsNest</strong>, plus <strong>Lite/2000</strong> and a <code>TStub</code>) are not separate code bases: they build from the one shared <code>tcolib_win</code> core, differentiated by thin executable projects (<code>topsmain/T100</code>, <code>T300</code>, <code>T400</code>, <code>T400Cad</code>, <code>TCad</code>, <code>TNest</code>, <code>TStub</code>) and by runtime <code>.ORG</code>/<code>.OLB</code> configuration and licensing. A change to the shared core affects all editions at once.
+<strong>Type:</strong> Build/Toolchain, Domain/Business.
+<strong>Rationale:</strong> Edition behaviour is selected by config and license, not by code fork; there is one deliverable core library.
+<strong>Source:</strong> <code>topsmain/*.vcxproj</code>, <code>Build_tcolib_win_05XX.msbuild</code> (T100/T300/T400 targets), <code>ini_files/</code> per-edition folders.</p>
+<h3 id="con-017-source-retains-obsolete-hp-ux-x11-rendering-paths">CON-017 — Source retains obsolete HP-UX / X11 rendering paths</h3>
+<p><strong>Constraint:</strong> The graphics and system-adapter layers still contain <strong>HP-UX / X11</strong> code paths (<code>grit/drive/elem_ux.cpp</code>, <code>grit/src/graf_x11.cpp/.h</code>, <code>grit/drive/x11_def.h</code>, <code>grit/hpux/</code>, <code>grit/tco_api/tc_api/t_sysux.cpp</code>). These are legacy remnants; the live rendering path is Windows GDI (<code>vis_gdi</code>, <code>elem_win.cpp</code>). Maintainers must not assume the Unix paths are current or tested.
+<strong>Type:</strong> Platform/Runtime, Build/Toolchain.
+<strong>Rationale:</strong> The product historically ran on HP-UX; the ported-out code was never fully removed (see [[21 - FR - Visualization, Viewing &amp; Plotting]]).
+<strong>Source:</strong> <code>grit/drive/elem_ux.cpp</code>, <code>grit/src/graf_x11.cpp</code>, <code>grit/hpux/</code>, <code>tc_visualize/visFunc.cpp</code>.</p>
+<h3 id="con-018-development-configuration-management-on-perforce-red-gate-sql-source-control">CON-018 — Development configuration management on Perforce + Red Gate SQL Source Control</h3>
+<p><strong>Constraint:</strong> The source and database schema are versioned in <strong>Perforce</strong> (files carry <code>$Id: //cadCam/TruTops/...#N $</code> keywords; <code>CommandLineHooks.xml</code> drives P4 sync/add/edit/delete/submit/revert) with <strong>Red Gate SQL Source Control</strong> managing the DB schema (<code>RedGate.ssc</code>, <code>RedGateDatabaseInfo.xml</code>). Build/branch metadata is Perforce-specific.
+<strong>Type:</strong> Build/Toolchain.
+<strong>Rationale:</strong> DB objects are scripted per-object and reconciled through Red Gate; the P4 depot layout is baked into hooks and build server info.
+<strong>Source:</strong> <code>CommandLineHooks.xml</code>, <code>Databases/RedGate.ssc</code>, <code>buildServerInfo</code>, Perforce <code>$Id$</code>/<code>$Change$</code> keywords in headers.</p>
+<hr />
+<h2 id="environmental-deployment-constraints">2. Environmental &amp; Deployment Constraints</h2>
+<h3 id="con-019-windows-only-runtime-environment">CON-019 — Windows-only runtime environment</h3>
+<p><strong>Constraint:</strong> The delivered product runs only on <strong>Microsoft Windows</strong>: it uses Win32 GDI for display and printing, the Windows registry for configuration discovery, drive-letter/UNC filesystem paths, and Windows-hosted SQL Server/ODBC. There is no supported non-Windows runtime.
+<strong>Type:</strong> Platform/Runtime.
+<strong>Rationale:</strong> GDI rendering, registry reads and drive-letter path templates are hard dependencies of the runtime.
+<strong>Source:</strong> <code>grit/drive/elem_win.cpp</code>, registry reads in <code>ini_files/*/*.ORG</code> (<code>$(REGISTRY_VAR,HKEY_LOCAL_MACHINE\...)</code>), <code>ini_files/ToPs100/Grit100.ORG</code> drive-letter paths.</p>
+<h3 id="con-020-mandated-trumpf.net-pdm-directory-layout">CON-020 — Mandated TRUMPF.NET / PDM directory layout</h3>
+<p><strong>Constraint:</strong> The runtime expects a fixed <strong>TRUMPF.NET</strong> directory tree rooted at a configured drive: <code>TOPS_DRIVE</code> → <code>TOPS_PATH=&lt;drive&gt;\TRUMPF.NET</code> with the sub-tree <code>Applications\TOPS&lt;edition&gt;</code>, <code>Utils</code> (<code>MACROS</code>, <code>APT</code>, <code>Python25</code>, <code>Iris</code>, <code>ImageMagick</code>, <code>Reports</code>, …), <code>Data</code> (local and shared, e.g. <code>ToPsDrawings</code>, <code>PunchTools</code>, <code>BendTools</code>, <code>TubeProfiles</code>, <code>NestingProfiles</code>, <code>ProcessingSamples</code>), <code>Templates</code>, <code>Licences</code>, and <code>TEMP</code>. Deployment must reproduce this layout; the paths are consumed throughout the code via named environment variables.
+<strong>Type:</strong> Platform/Runtime, Interface/Dependency.
+<strong>Rationale:</strong> Hundreds of environment-variable path references (and legacy <code>TC_*_PFAD</code> aliases) resolve against this exact structure.
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>[ENVIRONMENT]</code> block: <code>TOPS_*</code> and <code>TC_*_PFAD</code> mappings).</p>
+<h3 id="con-021-dongle-based-licensing-hardlock-hasp-wibu">CON-021 — Dongle-based licensing (Hardlock / HASP / Wibu)</h3>
+<p><strong>Constraint:</strong> The software is protected by <strong>hardware dongle</strong> licensing plus a software time-limit fallback. Implementations exist for <strong>Hardlock</strong> and its successor <strong>HASP</strong> (both Aladdin/SafeNet) and a <strong>Wibu/CodeMeter</strong> machine-license provider. Access mode is configurable (<code>TC_DONGLE_ACCESS</code>: 1 = local, 2 = network); per-format import/export licences use named passwords (e.g. <code>DXF_PASSWORD</code>, <code>DWG_PASSWORD</code>, <code>IGES_PASSWORD</code>) with a superuser bypass. A valid, readable license is a precondition for feature availability.
+<strong>Type:</strong> Platform/Runtime, Domain/Business.
+<strong>Rationale:</strong> Edition and per-format capabilities are gated by the license check at startup and on demand (see [[30 - External Interface Requirements]]).
+<strong>Source:</strong> <code>Common/TRUMPF/dist/win/Msvc100/licenseCheck/</code> (<code>TcLicenseCheckHardlockImpl.h</code>, <code>TcLicenseCheckHaspImpl.h</code>, <code>TcLicenseCheckWibu.h</code>, <code>TcMachineLicenseIdProviderWibu.h</code>), <code>tc_pwd/</code> (<code>check_dll.cpp</code>, <code>pp_pwd.cpp</code>), <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TC_DONGLE_ACCESS</code>, <code>TOPS_PWD_PATH</code>).</p>
+<h3 id="con-022-two-pdm-deployment-modes-shared-vault-vs.local-file-system">CON-022 — Two PDM deployment modes: shared vault vs. local file system</h3>
+<p><strong>Constraint:</strong> File access runs either through a <strong>TRUMPF PDM vault</strong> (CORBA naming service <code>PdmServiceName=TruTopsPDM2</code>, <code>PdmNameServiceSpec=&lt;server&gt;:&lt;port&gt;</code>, local attribute cache, client logging) or directly on the <strong>local/shared file system</strong>. Switching to PDM requires removing the <code>$(TOPS_DRIVE)</code> element from <code>TOPS_SHARED</code> per the ini comment. The OmAdapter/TiPdmFacet facade abstracts both.
+<strong>Type:</strong> Platform/Runtime, Interface/Dependency.
+<strong>Rationale:</strong> Persistence and browsing are routed through one facade whose backend is a deployment choice, not a code choice (see [[12 - FR - Part &amp; Data Management]]).
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> (PDM settings block, <code>TOPS_SHARED</code>/<code>TOPS_PATH</code> comment), <code>tc_util/pdmUtilities</code>.</p>
+<h3 id="con-023-required-external-helper-executables-at-runtime">CON-023 — Required external helper executables at runtime</h3>
+<p><strong>Constraint:</strong> Several capabilities are delegated to <strong>external executables</strong> that must be installed and path-configured: <code>NcLink</code>/<code>NCLINK_GUI</code> (production-plan/DNC transfer), <code>ToPsVectorize.exe</code> (raster→vector), <code>DWGConverter.exe</code> (DWG→DXF), <code>ToPs400Export.exe</code> (tube NC/APD), ImageMagick <code>Convert.exe</code> (bitmap conversion), Ghostscript/NikNak <code>topdf.exe</code> (PS→PDF), <code>HtmlEditor.exe</code> (HTML→PDF setup plans), and <code>Iris.exe</code> (LST analysis). Missing helpers disable the corresponding features.
+<strong>Type:</strong> Interface/Dependency, Platform/Runtime.
+<strong>Rationale:</strong> These functions are shelled out rather than implemented in-process (see [[11 - FR - Import, Export &amp; File Formats]], [[18 - FR - NC Generation &amp; Motion Optimization]]).
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>PathBmpConvert</code>, <code>CmdLineEplanBmpConvert</code>, <code>CmdLineEplanHtmlConvert</code>, <code>CmdLinePsConvert</code>, <code>TOPS_IRIS_PATH</code>, <code>TC_NCLINK_LANGUAGE_INI</code>), digest interfaces for <code>TOPS_VECTORIZE_PATH</code>/DWGConverter.</p>
+<h3 id="con-024-windows-registry-as-a-configurationdiscovery-source">CON-024 — Windows registry as a configuration/discovery source</h3>
+<p><strong>Constraint:</strong> The runtime reads configuration from the <strong>Windows registry</strong> under <code>HKEY_LOCAL_MACHINE\Software\Trumpf\...</code> (e.g. NcLink ini path, PS→PDF tool path, PPS-plugin path <code>HKLM\SOFTWARE\TRUMPF\TruTops Fab\PPS-Plugin</code>) and ODBC DSNs are installed as registry entries. The <code>.ORG</code> files support a <code>$(REGISTRY_VAR,...)</code> substitution to pull values at load time.
+<strong>Type:</strong> Platform/Runtime, Interface/Dependency.
+<strong>Rationale:</strong> Machine-local settings and third-party tool locations live in the registry, not only in the ini files.
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>$(REGISTRY_VAR,HKEY_LOCAL_MACHINE\\Software\\Trumpf\\NcLink\\Ini,...)</code>, <code>CmdLinePsConvert=HKEY_LOCAL_MACHINE\...</code>), <code>Databases/createSqlServerOdbcEntry.bat</code> (<code>reg.exe import</code>).</p>
+<h3 id="con-025-administrator-privileges-required-for-databaseodbc-provisioning">CON-025 — Administrator privileges required for database/ODBC provisioning</h3>
+<p><strong>Constraint:</strong> Installing/attaching databases and creating ODBC entries requires <strong>local administrator rights</strong> — the provisioning scripts explicitly check group SID <code>S-1-5-32-544</code> and UAC elevation and abort otherwise. Ordinary end-user operation does not require admin, but initial deployment/upgrade does.
+<strong>Type:</strong> Platform/Runtime.
+<strong>Rationale:</strong> Attaching SQL Server MDFs and importing registry ODBC DSNs are privileged operations.
+<strong>Source:</strong> <code>Databases/createSqlServerLocalMdb.bat</code>, <code>Databases/createSqlServerOdbcEntry.bat</code> (<code>whoami /groups | find &quot;S-1-5-32-544&quot;</code>, <code>net.exe session</code>).</p>
+<h3 id="con-026-machinenc-transfer-over-a-filesystem-directory">CON-026 — Machine/NC transfer over a filesystem directory</h3>
+<p><strong>Constraint:</strong> Generated NC programs and production plans are handed to machine controls through a <strong>configurable filesystem transfer directory</strong> (per machine, default <code>TOPS_MACHINE_PATH=&lt;drive&gt;\Trumpf.NET\DATA_PDM2\Transfer\MASCH01</code>, overridable by the machine rule <code>PRP_PfadModal</code>), and/or via the external NcLink/DNC service. There is no direct online machine protocol in this snapshot.
+<strong>Type:</strong> Interface/Dependency, Platform/Runtime.
+<strong>Rationale:</strong> Output routing is file-drop plus NcLink, keyed by machine transfer path (see [[18 - FR - NC Generation &amp; Motion Optimization]], [[20 - FR - Production Planning &amp; Projects]]).
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TOPS_MACHINE_PATH</code>), digest (<code>PRP_PfadModal</code>, NcLink CLI).</p>
+<hr />
+<h2 id="domain-business-constraints">3. Domain &amp; Business Constraints</h2>
+<h3 id="con-027-scope-limited-to-2d-sheet-metal-fabrication">CON-027 — Scope limited to 2D sheet-metal fabrication</h3>
+<p><strong>Constraint:</strong> The suite is a <strong>2D CAD/CAM system for sheet-metal fabrication</strong>. The geometry model is 2D contours/elements; there is no general 3D solid modeller. Tube machining is handled as a 3D surface that is <strong>unrolled (Abwicklung)</strong> to a 2D development for programming, and bending works on a flat pattern — not as free-form 3D CAD. Requirements must not assume general 3D solid capabilities.
+<strong>Type:</strong> Domain/Business.
+<strong>Rationale:</strong> The kernel, editors and NC paths operate on 2D drawings/contours; 3D appears only as tube unrolling and bend flat-patterns (see [[04 - Domain Model &amp; Glossary]], [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]]).
+<strong>Source:</strong> digest (<code>FR-CAD</code>, <code>FR-TUBE</code> overviews), <code>tc_dbase</code> 2D geometry model, <code>tc_rohr</code> Abwicklung.</p>
+<h3 id="con-028-edition-gated-product-line-and-shared-master-data">CON-028 — Edition-gated product line and shared master data</h3>
+<p><strong>Constraint:</strong> Functionality is partitioned into <strong>editions</strong> — ToPs 300 (punch/nibble), ToPs 600 (bending), ToPs 100 (laser), ToPs 400 Cad, ToPsCad (CAD), ToPsNest (nesting), ToPs Tube, plus ToPs 100 Lite / ToPs 2000 — each exposing a licensed subset over the same shared master data and core. Bend factor/tool data is owned by the <strong>external ToPs 600</strong> product. Feature visibility is controlled by license + per-edition config, so a requirement's applicability is always edition-scoped.
+<strong>Type:</strong> Domain/Business.
+<strong>Rationale:</strong> One code base, many licensed products; the edition matrix and ToPs 600 dependency shape every functional area.
+<strong>Source:</strong> <code>ini_files/</code> per-edition <code>.ORG</code> sets, digest edition lists across FR docs, <code>Databases/.../Bend.*</code> (ToPs 600 schema references).</p>
+<h3 id="con-029-machine-and-controller-specific-data-driven-nc-output">CON-029 — Machine- and controller-specific, data-driven NC output</h3>
+<p><strong>Constraint:</strong> NC generation is <strong>controller-specific and data-driven</strong> from cycle/format tables (<code>NCZYKLEN</code>, <code>NCZYKLUS_STV</code>, <code>AUS_FORMAT</code>, <code>NC_KOPF_TABELLEN</code>, …) keyed by machine + control + control-version, with <strong>control-version compatibility gating</strong> (<code>STEUERUNGSVERSIONEN</code>). Output correctness depends on correctly maintained control tables; the only controller directly observed in source is Siemens <strong>SIN840D</strong>, though the mechanism is generic.
+<strong>Type:</strong> Domain/Business, Interface/Dependency.
+<strong>Rationale:</strong> The post-processor renders NC purely from database tables per control version (see [[18 - FR - NC Generation &amp; Motion Optimization]], [[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Source:</strong> digest (<code>FR-NC</code>, <code>FR-TECH</code>), <code>Databases/SQLServerDatabase/Tables/*.NCZYKLEN.*</code>, control-version tables.</p>
+<h3 id="con-030-master-data-is-authoritative-and-prerequisite-to-programming">CON-030 — Master data is authoritative and prerequisite to programming</h3>
+<p><strong>Constraint:</strong> Machines, tools, materials, sheets and technology tables constitute <strong>authoritative master data</strong> that must exist and be mutually compatible before a part can be programmed; the system validates part compatibility with the active material and machine and delegates technological correctness to these tables (e.g. laser LTT, punch rules <code>STANZ_REGELN</code>, bend factors <code>AKF_BENDFACTORS</code>). The application does not invent technology values absent from the database.
+<strong>Type:</strong> Domain/Business, Data/Persistence.
+<strong>Rationale:</strong> Rule-based automatic tool/technology assignment reads directly from master tables (see [[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Source:</strong> digest (<code>FR-TECH</code>, <code>FR-PUNCH</code>, <code>FR-LASER</code>, <code>FR-BEND</code>), <code>tc_verw</code> compatibility check, <code>Databases/.../STANZ_REGELN</code>, <code>LASERTECHNO</code>, <code>Common.AKF_BENDFACTORS</code>.</p>
+<h3 id="con-031-metricimperial-duality-as-a-first-class-domain-constraint">CON-031 — Metric/imperial duality as a first-class domain constraint</h3>
+<p><strong>Constraint:</strong> The product must operate in <strong>metric or imperial</strong> units end-to-end: dual databases (CON-013), a <code>GRITUNIT</code> (0 = metric, 1 = inch) runtime switch, dedicated inch <code>.ORG</code>/<code>Grit*.ORG</code> configurations and inch build configurations. Unit is a deployment/session-level constraint that pervades data access, UI rendering and NC output.
+<strong>Type:</strong> Domain/Business, Platform/Runtime.
+<strong>Rationale:</strong> Sheet-metal customers work in both systems; the code and data are structured around the split rather than converting on the fly.
+<strong>Source:</strong> <code>ini_files/*/…Inch.ORG</code>, <code>ini_files/ToPs100/Grit100.ORG</code> (<code>GRITUNIT</code>), <code>tcolib_win_VS2010.vcxproj</code> (<code>Inch</code> configuration).</p>
+<h3 id="con-032-internationalized-ui-with-german-as-sourcebase-language">CON-032 — Internationalized UI with German as source/base language</h3>
+<p><strong>Constraint:</strong> The UI supports up to <strong>30 languages</strong> (raised from a legacy limit of 10), including CJK, with translatable texts stored in the database (<code>COMMON_TEXT</code>, <code>SPRACHEN</code>) and per-language + per-resolution fonts. The <strong>source/base domain language is German</strong> (identifiers, comments and domain terms are German), and the default startup language is <code>deu</code> with English as basic fallback. Reverse-engineering and any glossary work must treat German as the canonical term source (see [[04 - Domain Model &amp; Glossary]]).
+<strong>Type:</strong> Domain/Business.
+<strong>Rationale:</strong> TRUMPF is a German manufacturer; the code base and default configuration are German-first.
+<strong>Source:</strong> <code>grit</code> <code>#define GRIT_ANZAHL_SPRACHEN 30</code> / <code>GRIT_ANZAHL_SPRACHEN_261 10</code>, <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TC_LANGUAGE=deu</code>, <code>TC_LANGUAGE_BASIC=eng</code>), <code>ini_files/ToPs100/Grit100.ORG</code> (<code>GRITLANG</code>, <code>GRITFONT</code>).</p>
+<h3 id="con-033-safety-critical-output-driving-physical-machines">CON-033 — Safety-critical output driving physical machines</h3>
+<p><strong>Constraint:</strong> The generated NC controls <strong>physical machine tools</strong> (multi-kilowatt lasers, punch presses, press brakes, tube lasers). Consequently collision detection, machine work-area/axis-dynamics limits, clamp/dead-zone avoidance, and control-version compatibility are <strong>business-critical correctness constraints</strong>, and the dongle/control-version gating restricts which programs may be transferred to which control. No explicit external safety/regulatory standard (e.g. a cited CE/ISO machine-safety norm) is referenced in the source snapshot; machine safety is enforced by the physical controls and by these in-software checks.
+<strong>Type:</strong> Regulatory/Safety, Domain/Business.
+<strong>Rationale:</strong> Incorrect NC or an out-of-limits path can damage the machine or produce scrap; the software embeds the guards but is not the final safety authority.
+<strong>Source:</strong> digest (collision detection in <code>FR-PUNCH</code>/<code>FR-LASER</code>/<code>FR-TUBE</code>, machine limits in <code>FR-TECH</code>, control-version gating in <code>FR-NC</code>).</p>
+<h3 id="con-034-bend-sequence-press-brake-collision-and-true-scheduling-are-external">CON-034 — Bend-sequence, press-brake collision and true scheduling are external</h3>
+<p><strong>Constraint:</strong> Certain domain functions are <strong>out of scope of this code base</strong> and delegated to separate TRUMPF products: automatic bend-sequence determination and press-brake tool/part collision checking reside in <strong>ToPs 600 / TruTops Bend</strong>, and cross-machine, due-date-driven <strong>scheduling</strong> resides in <strong>TruTops Fab (MES)</strong>. This code captures due dates, priorities and quantities but does not schedule.
+<strong>Type:</strong> Domain/Business.
+<strong>Rationale:</strong> Analysts found no readable bend-sequencing or scheduling engine in the snapshot; both are handed off (see [[16 - FR - Bending (ToPs 600)]], [[20 - FR - Production Planning &amp; Projects]]).
+<strong>Source:</strong> digest open questions (<code>FR-BEND</code>, <code>FR-PLAN</code>), <code>tc_fabAdapter</code> hand-off (<code>declareJobAsDone</code>).</p>
+<hr />
+<h2 id="assumptions">4. Assumptions</h2>
+<h3 id="con-035-assumption-db-schema-version-matches-the-application-version">CON-035 — Assumption: DB schema version matches the application version</h3>
+<p><strong>Assumption:</strong> At runtime the connected databases are assumed to be at a <strong>schema version compatible with the installed application</strong>, with any migration already applied at install/upgrade time; the app validates and rejects incompatible versions rather than adapting to arbitrary schemas.
+<strong>Type:</strong> Data/Persistence (dependency).
+<strong>Rationale:</strong> <code>DB_VERSION</code> markers and DATADICT-driven provisioning imply a lock-step version relationship.
+<strong>Source:</strong> CON-012 evidence; <code>Databases/UpdateDbRequiredApplicExeVersion_ps_legacy.bat</code>, <code>DATADICT.DATADICT_ProductVersion</code>.</p>
+<h3 id="con-036-assumption-a-valid-readable-licensedongle-is-present">CON-036 — Assumption: a valid, readable license/dongle is present</h3>
+<p><strong>Assumption:</strong> The system assumes that at startup a <strong>valid license is accessible</strong> — a local or network dongle (Hardlock/HASP/Wibu) or a time-limited software license — matching the requested edition and per-format options; absent a license, the corresponding features are unavailable rather than degraded.
+<strong>Type:</strong> Platform/Runtime (dependency).
+<strong>Rationale:</strong> The license check is a hard gate for edition and format capabilities (CON-021).
+<strong>Source:</strong> <code>Common/.../licenseCheck/</code>, <code>tc_pwd/</code>, <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TC_DONGLE_ACCESS</code>).</p>
+<h3 id="con-037-assumption-the-mandated-directory-tree-and-paths-are-provisioned">CON-037 — Assumption: the mandated directory tree and paths are provisioned</h3>
+<p><strong>Assumption:</strong> The <strong>TRUMPF.NET directory layout, drive letters and transfer paths</strong> (CON-020, CON-026) are assumed present and writable as configured; the installer/administrator provisions them, and the software resolves environment variables against them without runtime discovery of an alternative layout.
+<strong>Type:</strong> Platform/Runtime (dependency).
+<strong>Rationale:</strong> Path variables are consumed literally; a missing directory yields failures, not fallbacks.
+<strong>Source:</strong> <code>ini_files/*/*.ORG</code> <code>[ENVIRONMENT]</code> blocks.</p>
+<h3 id="con-038-assumption-pdm-vault-or-shared-network-storage-is-reachable-else-local-fallback">CON-038 — Assumption: PDM vault or shared network storage is reachable (else local fallback)</h3>
+<p><strong>Assumption:</strong> When configured for PDM, the <strong>CORBA naming service and PDM server are assumed reachable</strong>; otherwise the deployment is assumed to use the local/shared file system. The OmAdapter facade is assumed to hide which backend is active, and shared-drive availability is assumed for multi-user data.
+<strong>Type:</strong> Interface/Dependency.
+<strong>Rationale:</strong> The two backends are a deployment switch (CON-022); code assumes one is available.
+<strong>Source:</strong> <code>ini_files/ToPs100/ToPs100.ORG</code> PDM block, digest (<code>OmAdapter</code>/<code>TiPdmFacet</code>).</p>
+<h3 id="con-039-assumption-concurrency-is-managed-by-sql-server-plus-record-locks-pdm-check-out">CON-039 — Assumption: concurrency is managed by SQL Server plus record locks / PDM check-out</h3>
+<p><strong>Assumption:</strong> Multi-user safety is assumed to be provided by the <strong>SQL Server engine together with record lock flags</strong> (<code>*_GESPERRT</code>, <code>MAT_LOCKSTATE</code>) and <strong>PDM check-out</strong>; there is no single unified concurrency layer, and the exact interplay is not fully determined. Deployments are assumed to accept this composite model.
+<strong>Type:</strong> Data/Persistence (dependency).
+<strong>Rationale:</strong> Analysts could not confirm a single concurrency mechanism; lock flags and engine locking coexist (see [[12 - FR - Part &amp; Data Management]] open questions).
+<strong>Source:</strong> digest (<code>FR-DATA</code> open questions), <code>Databases/.../*LOCKSTATE*</code>, <code>*_GESPERRT</code> columns.</p>
+<h3 id="con-040-assumption-imported-geometry-is-2d-or-projectable-and-cleanable">CON-040 — Assumption: imported geometry is 2D or projectable and cleanable</h3>
+<p><strong>Assumption:</strong> Externally imported CAD (DXF/DWG/IGES/MI/DSTV, raster) is assumed to be <strong>2D or safely projectable to 2D</strong> (Z-suppression), and assumed to be repairable by the conversion post-processing (point-merge, contour-close, thinning) into valid contours suitable for machining. 3D solids beyond tube surfaces are not assumed importable as machinable geometry.
+<strong>Type:</strong> Domain/Business (dependency).
+<strong>Rationale:</strong> The importer + post-processing pipeline targets a 2D contour model (see [[11 - FR - Import, Export &amp; File Formats]]).
+<strong>Source:</strong> digest (<code>FR-IMPEX</code> capabilities: Z-suppression, contour-close, thinning).</p>
+<h3 id="con-041-assumption-target-machine-control-material-and-tools-exist-and-are-compatible">CON-041 — Assumption: target machine, control, material and tools exist and are compatible</h3>
+<p><strong>Assumption:</strong> Programming and NC generation assume that the <strong>selected machine + control-version + material + tools all exist in master data and are mutually compatible</strong>; the technology processors rely on this and validate compatibility, but assume the master data is correctly maintained by the technology administrator.
+<strong>Type:</strong> Domain/Business (dependency).
+<strong>Rationale:</strong> Automatic technology assignment and NC output read master data as ground truth (CON-029, CON-030).
+<strong>Source:</strong> digest (<code>FR-TECH</code>, <code>FR-PUNCH</code>, <code>FR-LASER</code>, <code>FR-NC</code>), <code>tc_verw</code> compatibility check.</p>
+<h3 id="con-042-assumption-scripts-macros-and-mmkasm-variables-are-trusted-not-sandboxed">CON-042 — Assumption: scripts, macros and MMK/ASM variables are trusted (not sandboxed)</h3>
+<p><strong>Assumption:</strong> Embedded <strong>Python customization</strong> (<code>TruTops_customize.py</code>), MMK/ASM command strings and interpreter stack variables are assumed to originate from <strong>trusted authors</strong> (administrators/integrators) and are executed without a security sandbox; no untrusted-script threat model is present in the snapshot.
+<strong>Type:</strong> Platform/Runtime (dependency), Regulatory/Safety.
+<strong>Rationale:</strong> The automation surfaces execute scripts and drive the ASM directly with full application privileges (see [[23 - FR - Automation, Scripting &amp; Integration]]).
+<strong>Source:</strong> <code>tc_python/</code>, <code>tc_asm/</code>, <code>ini_files/ToPs100/ToPs100.ORG</code> (<code>TOPS_KONFIG_VARS_*</code>, <code>TOPS_MACROS_PATH</code>).</p>
+<h3 id="con-043-assumption-the-legacy-toolchain-is-preserved-for-maintenance">CON-043 — Assumption: the legacy toolchain is preserved for maintenance</h3>
+<p><strong>Assumption:</strong> Maintenance is assumed to occur on the <strong>pinned toolchain</strong> (VS2010/MSVC100, Win32, .NET ≤4.x, Python 2.5, Qt 4.3.5, the frozen 3rd-party set); upgrading any of these is treated as a project in its own right and is outside the assumptions under which the current requirements hold.
+<strong>Type:</strong> Build/Toolchain (dependency).
+<strong>Rationale:</strong> Cross-cutting ABI and API coupling across CON-001–CON-006 makes toolchain modernization non-incremental.
+<strong>Source:</strong> CON-001–CON-006 evidence.</p>
+<hr />
+<h2 id="traceability-note">Traceability note</h2>
+<p>These constraints and assumptions apply cross-cutting to all functional areas. They are aggregated in [[60 - Requirements Traceability Index]] and complement the interface obligations in [[30 - External Interface Requirements]] and the quality targets in [[40 - Non-Functional Requirements]]. Open scoping questions raised by the functional analysts (e.g. PDM-vs-DB locking, unconfirmed controller set, Access-vs-MDF wording) are reflected as bounded assumptions above rather than firm constraints.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-constraints-assumptions-doc-50-constraints-assumptions-id-prefix-con-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-03-system-context-architecture-overview-30-external-interface-requirements-40-non-functional-requirements-12-fr-part-data-management-22-fr-ui-framework-dialogs-interaction-grit-tags-requirements-trutops-constraints">product: trutopscad
+org: trumpf
+title: "Constraints & Assumptions"
+doc: "50 - Constraints & Assumptions"
+id-prefix: "CON"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[03 - System Context & Architecture Overview]]", "[[30 - External Interface Requirements]]", "[[40 - Non-Functional Requirements]]", "[[12 - FR - Part & Data Management]]", "[[22 - FR - UI Framework, Dialogs & Interaction (GRIT)]]"]
+tags: [requirements, trutops, constraints]</a>
+  </li>
+  <li level="1">
+   <a href="#technical-implementation-constraints-con-requirements">1. Technical / Implementation Constraints (CON requirements)</a>
+  </li>
+  <li level="2">
+   <a href="#con-001-build-toolchain-fixed-to-visual-studio-2010-msvc-10.0">CON-001 — Build toolchain fixed to Visual Studio 2010 / MSVC 10.0</a>
+  </li>
+  <li level="2">
+   <a href="#con-002-32-bit-win32-target-for-the-legacy-core">CON-002 — 32-bit (Win32) target for the legacy core</a>
+  </li>
+  <li level="2">
+   <a href="#con-003-polyglot-implementation-c-c.net-python-generated-parsers">CON-003 — Polyglot implementation: C++ + C#/.NET + Python + generated parsers</a>
+  </li>
+  <li level="2">
+   <a href="#con-004-managed-assemblies-pinned-to.net-framework-2.03.54.0">CON-004 — Managed assemblies pinned to .NET Framework 2.0/3.5/4.0</a>
+  </li>
+  <li level="2">
+   <a href="#con-005-embedded-python-2.5-scripting-runtime-end-of-life">CON-005 — Embedded Python 2.5 scripting runtime (end-of-life)</a>
+  </li>
+  <li level="2">
+   <a href="#con-006-frozen-third-party-library-versions">CON-006 — Frozen third-party library versions</a>
+  </li>
+  <li level="2">
+   <a href="#con-007-grit-ui-framework-and-mmk-interpreter-are-the-mandatory-interaction-layer">CON-007 — GRIT UI framework and MMK interpreter are the mandatory interaction layer</a>
+  </li>
+  <li level="2">
+   <a href="#con-008-grit-mask-storage-formats-and-build-time-gdlolbxidl-code-generation">CON-008 — GRIT mask storage formats and build-time GDL/OLB/XIDL code generation</a>
+  </li>
+  <li level="2">
+   <a href="#con-009-parser-generators-flexbison-required-to-build-the-interpreters">CON-009 — Parser generators (flex/bison) required to build the interpreters</a>
+  </li>
+  <li level="2">
+   <a href="#con-010-relational-persistence-on-microsoft-sql-server-via-odbc">CON-010 — Relational persistence on Microsoft SQL Server via ODBC</a>
+  </li>
+  <li level="2">
+   <a href="#con-011-locally-attached-mdf-single-workstation-database-variant">CON-011 — Locally-attached MDF single-workstation database variant</a>
+  </li>
+  <li level="2">
+   <a href="#con-012-datadict-driven-schema-and-per-schema-db-versioningmigration">CON-012 — DATADICT-driven schema and per-schema DB versioning/migration</a>
+  </li>
+  <li level="2">
+   <a href="#con-013-technology-partitioned-dual-metricinch-databases">CON-013 — Technology-partitioned, dual metric/inch databases</a>
+  </li>
+  <li level="2">
+   <a href="#con-014-corba-acetao-as-the-pdm-integration-transport">CON-014 — CORBA (ACE/TAO) as the PDM integration transport</a>
+  </li>
+  <li level="2">
+   <a href="#con-015-java-saxon-required-for-build-time-report-xslt">CON-015 — Java (Saxon) required for build-time / report XSLT</a>
+  </li>
+  <li level="2">
+   <a href="#con-016-single-monolithic-project-producing-per-edition-executables">CON-016 — Single monolithic project producing per-edition executables</a>
+  </li>
+  <li level="2">
+   <a href="#con-017-source-retains-obsolete-hp-ux-x11-rendering-paths">CON-017 — Source retains obsolete HP-UX / X11 rendering paths</a>
+  </li>
+  <li level="2">
+   <a href="#con-018-development-configuration-management-on-perforce-red-gate-sql-source-control">CON-018 — Development configuration management on Perforce + Red Gate SQL Source Control</a>
+  </li>
+  <li level="1">
+   <a href="#environmental-deployment-constraints">2. Environmental & Deployment Constraints</a>
+  </li>
+  <li level="2">
+   <a href="#con-019-windows-only-runtime-environment">CON-019 — Windows-only runtime environment</a>
+  </li>
+  <li level="2">
+   <a href="#con-020-mandated-trumpf.net-pdm-directory-layout">CON-020 — Mandated TRUMPF.NET / PDM directory layout</a>
+  </li>
+  <li level="2">
+   <a href="#con-021-dongle-based-licensing-hardlock-hasp-wibu">CON-021 — Dongle-based licensing (Hardlock / HASP / Wibu)</a>
+  </li>
+  <li level="2">
+   <a href="#con-022-two-pdm-deployment-modes-shared-vault-vs.local-file-system">CON-022 — Two PDM deployment modes: shared vault vs. local file system</a>
+  </li>
+  <li level="2">
+   <a href="#con-023-required-external-helper-executables-at-runtime">CON-023 — Required external helper executables at runtime</a>
+  </li>
+  <li level="2">
+   <a href="#con-024-windows-registry-as-a-configurationdiscovery-source">CON-024 — Windows registry as a configuration/discovery source</a>
+  </li>
+  <li level="2">
+   <a href="#con-025-administrator-privileges-required-for-databaseodbc-provisioning">CON-025 — Administrator privileges required for database/ODBC provisioning</a>
+  </li>
+  <li level="2">
+   <a href="#con-026-machinenc-transfer-over-a-filesystem-directory">CON-026 — Machine/NC transfer over a filesystem directory</a>
+  </li>
+  <li level="1">
+   <a href="#domain-business-constraints">3. Domain & Business Constraints</a>
+  </li>
+  <li level="2">
+   <a href="#con-027-scope-limited-to-2d-sheet-metal-fabrication">CON-027 — Scope limited to 2D sheet-metal fabrication</a>
+  </li>
+  <li level="2">
+   <a href="#con-028-edition-gated-product-line-and-shared-master-data">CON-028 — Edition-gated product line and shared master data</a>
+  </li>
+  <li level="2">
+   <a href="#con-029-machine-and-controller-specific-data-driven-nc-output">CON-029 — Machine- and controller-specific, data-driven NC output</a>
+  </li>
+  <li level="2">
+   <a href="#con-030-master-data-is-authoritative-and-prerequisite-to-programming">CON-030 — Master data is authoritative and prerequisite to programming</a>
+  </li>
+  <li level="2">
+   <a href="#con-031-metricimperial-duality-as-a-first-class-domain-constraint">CON-031 — Metric/imperial duality as a first-class domain constraint</a>
+  </li>
+  <li level="2">
+   <a href="#con-032-internationalized-ui-with-german-as-sourcebase-language">CON-032 — Internationalized UI with German as source/base language</a>
+  </li>
+  <li level="2">
+   <a href="#con-033-safety-critical-output-driving-physical-machines">CON-033 — Safety-critical output driving physical machines</a>
+  </li>
+  <li level="2">
+   <a href="#con-034-bend-sequence-press-brake-collision-and-true-scheduling-are-external">CON-034 — Bend-sequence, press-brake collision and true scheduling are external</a>
+  </li>
+  <li level="1">
+   <a href="#assumptions">4. Assumptions</a>
+  </li>
+  <li level="2">
+   <a href="#con-035-assumption-db-schema-version-matches-the-application-version">CON-035 — Assumption: DB schema version matches the application version</a>
+  </li>
+  <li level="2">
+   <a href="#con-036-assumption-a-valid-readable-licensedongle-is-present">CON-036 — Assumption: a valid, readable license/dongle is present</a>
+  </li>
+  <li level="2">
+   <a href="#con-037-assumption-the-mandated-directory-tree-and-paths-are-provisioned">CON-037 — Assumption: the mandated directory tree and paths are provisioned</a>
+  </li>
+  <li level="2">
+   <a href="#con-038-assumption-pdm-vault-or-shared-network-storage-is-reachable-else-local-fallback">CON-038 — Assumption: PDM vault or shared network storage is reachable (else local fallback)</a>
+  </li>
+  <li level="2">
+   <a href="#con-039-assumption-concurrency-is-managed-by-sql-server-plus-record-locks-pdm-check-out">CON-039 — Assumption: concurrency is managed by SQL Server plus record locks / PDM check-out</a>
+  </li>
+  <li level="2">
+   <a href="#con-040-assumption-imported-geometry-is-2d-or-projectable-and-cleanable">CON-040 — Assumption: imported geometry is 2D or projectable and cleanable</a>
+  </li>
+  <li level="2">
+   <a href="#con-041-assumption-target-machine-control-material-and-tools-exist-and-are-compatible">CON-041 — Assumption: target machine, control, material and tools exist and are compatible</a>
+  </li>
+  <li level="2">
+   <a href="#con-042-assumption-scripts-macros-and-mmkasm-variables-are-trusted-not-sandboxed">CON-042 — Assumption: scripts, macros and MMK/ASM variables are trusted (not sandboxed)</a>
+  </li>
+  <li level="2">
+   <a href="#con-043-assumption-the-legacy-toolchain-is-preserved-for-maintenance">CON-043 — Assumption: the legacy toolchain is preserved for maintenance</a>
+  </li>
+  <li level="1">
+   <a href="#traceability-note">Traceability note</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></span>
+ <span class="next"><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

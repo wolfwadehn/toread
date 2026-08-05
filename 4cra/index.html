@@ -1,0 +1,921 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>CRA</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a class="active" href="index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8_aiko/index.html">8_Aiko</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8_aiko/home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../8_aiko/readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">CRA</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>CRA</h1>
+<p>CRA GAP analysis
+<a href="https://trumpf.atlassian.net/wiki/spaces/ttbc/pages/1943046449/cut+gap+analysis+workflow">https://trumpf.atlassian.net/wiki/spaces/TTBC/pages/1943046449/Cut+Gap+Analysis+Workflow</a></p>
+<p>This page describes the workflow used to create a gap analysis for the software component TruTops Boost Cut. This workflow can be adapted for any other software component to create an IEC 62443-4-2 based gap analysis.</p>
+<p>Stage 1: Initial preparation (required only once per software component)
+Step 1: Create a markdown document describing the software component to assess
+Step 2: Create AI prompts and a report template to conduct the assessment
+Stage 2: Perform the gap analysis
+Step 1: Provide analysis data
+Step 2: Perform the analysis
+Prompt 1: Context priming
+Prompt 2: Applicability mapping
+Prompt 3: Evidence correlation
+Prompt 4: Gap list and risk
+Prompt 5: Mitigation roadmap
+Prompt 6: Full report generation
+Prompt 7: Review and refinement
+Stage 1: Initial preparation (required only once per software component)
+For the first assessment it is recommended to apply this stage first. This stage will result in a gap analysis template and a series of AI prompts to generate the gap analysis result.</p>
+<p>Step 1: Create a markdown document describing the software component to assess
+This markdown document will serve as input for the blueGPT Agent CyberResilienceAct_MT_Product_Advisor_GBL_0326 to prepare the analysis. It should contain information about</p>
+<p>The software component to assess</p>
+<p>The software system it is embedded in</p>
+<p>Add CRA relevant facts</p>
+<p>Example for Cut (generated using blueGPT Opus 4.6, manually revised, additional facts added): trutops_boost_intro_and_cut_facts.md</p>
+<p>Step 2: Create AI prompts and a report template to conduct the assessment
+Give the blueGPT Agent CyberResilienceAct_MT_Product_Advisor_GBL_0326 the software component description created in Step 1 and the following prompts have been used to generate templates and AI prompts (adjust as required, i.e. component name):</p>
+<p>We have to perform a gap analysis for the component TruTops Boost Cut based on IEC 62443-4-2. The attached document gives a high level description of the programming system TruTops Boost containing the component Cut and provides additional facts about Cut. Please generate a detailed description of the recommended documents to be considered in the analysis (source code, architecture documentation, etc.), the objectives of the analysis, the required content and structure of the analysis report and additional recommendation in particular to properly condition an AI to perform the analysis and write the report.</p>
+<p>Please prepare a template report structure in markdown format. Also generate markdown files for each assessment step prompt and generate a zip file containing all markdown documents for download.
+Markdown-Resultate:</p>
+<p>iec62443_4_2_fr_cr_paraphrased_list.md</p>
+<p>cut_iec62443_4_2_gap_analysis_template.md</p>
+<p>prompt_1_context_priming.md</p>
+<p>prompt_2_applicability_mapping.md</p>
+<p>prompt_3_evidence_correlation.md</p>
+<p>prompt_4_gap_list_and_risk.md</p>
+<p>prompt_5_mitigation_roadmap.md</p>
+<p>prompt_6_full_report_generation.md</p>
+<p>prompt_7_review_and_refinement.md</p>
+<p>Stage 2: Perform the gap analysis
+Step 1: Provide analysis data
+A directory named AnalysisDocuments has been created and the following data has been copied into this directory:</p>
+<p>Directory CutArc42ArchitectureDocumentation: Full Arc42 documentation of TruTops Boost Cut taken from <a href="https://trumpf.atlassian.net/wiki/x/hi5xb">https://trumpf.atlassian.net/wiki/x/HI5xB</a> including threat analysis data</p>
+<p>Product.Cut: complete source code of Cut including pipeline definitions</p>
+<p>Regulations: regulations and norm documents IEC_62443-4-2-01_02_2019-en_fr-Aktuell.pdf, GL30_G025_Standard-Secure_Project_and_Product_Management.pdf, GL30_G027_Standard-Secure_Product_Design_Guidelines.pdf, GL30_G028_Standard-Secure_Development.pdf, GL70_G152_Policy_Product_Security.pdf (Sources: TDM and WISDOM)</p>
+<p>File iec62443_4_2_fr_cr_paraphrased_list.md from Stage 1, Step 2</p>
+<p>File cut_iec62443_4_2_gap_analysis_template.md from Stage 1, Step 2</p>
+<p>File sbom_cut_22.1.14.json: latest available SBOM file of TruTops Boost Cut</p>
+<p>File trutops_boost_intro_and_cut_facts.md from Stage 1, Step 1</p>
+<p>Step 2: Perform the analysis
+The AnalysisDocuments directory has been opened with Visual Studio Code. The gap analysis has been conducted using Copilot with Opus 4.8 applying subsequently revised versions of the prompts generated in Stage 1, Step 2:</p>
+<p>Prompt 1: Context priming</p>
+<p>You are an assistant helping with an IEC 62443-4-2 gap analysis for a TRUMPF Machine Tool software component named TruTops Boost Cut (short Cut).
+Read and understand the follwong context documents:</p>
+<ul>
+<li>trutops_boost_intro_and_cut_facts.md: Short introduction to the programming system TruTops Boost and its component Cut. Contains additional gap analysis relevant facts about Cut.</li>
+<li>All files in directory CutArc42ArchitectureDocumentation: Contains architecture documents for Cut following the Arc42 architecture documentation template.</li>
+<li>All files in directory Regulations: Contains all relevant standards and regulations to follow.</li>
+<li>During the assessment process stay strictly within the current workspace folder AnalysisDocuments and its subfolders. You are not allowed to access data outside or request access to it
+Assume:</li>
+<li>Cut is an IEC 62443-4-2 component.</li>
+<li>CRA applies; product is non-important/non-critical.</li>
+<li>TRUMPF internal standards (GL70 Product Security, GL30_G025/G027/G028) must be considered for process aspects.
+Tasks:</li>
+</ul>
+<ol>
+<li>Restate this architecture and security context in your own words to show understanding.</li>
+<li>Identify the main trust boundaries (e.g., Cut ↔ HomeZone, Cut ↔ DB, Cut ↔ helper apps, Cut ↔ customer environment).</li>
+<li>List the main security-relevant assets and interfaces of Cut.
+Answer concisely but clearly. Follow my instructions as I lead you through the analysis process prompt by prompt.
+Prompt 2: Applicability mapping</li>
+</ol>
+<p>We are now focusing on IEC 62443-4-2 technical security requirements for IACS components.
+You have a paraphrased list provided by the file iec62443_4_2_fr_cr_paraphrased_list.md of:</p>
+<ul>
+<li>Function Requirements FR 1 to FR 7 (identification/authentication, use control, system integrity, data confidentiality, restricted data flow, timely response to events, resource availability).</li>
+<li>Component Requirements CR x.y under each FR.
+Task:
+For each IEC 62443-4-2 requirement (FR/CR pair):</li>
+</ul>
+<ol>
+<li>Classify its applicability to the Cut component as one of:
+<ul>
+<li>&quot;Directly applicable to Cut (component level)&quot; – Cut itself must implement the measure.</li>
+<li>&quot;Fulfilled at system level (TruTops Boost / OS / enabler)&quot; – Cut relies on the surrounding system or OS.</li>
+<li>&quot;Not applicable&quot; – truly out of scope for Cut (must be justified).</li>
+</ul>
+</li>
+<li>Provide a short justification for your classification, specifically referencing:
+<ul>
+<li>The fact that Cut is invoked by other applications like HomeZone but not by the user.</li>
+<li>The client/server runtime split.</li>
+<li>The existence of helper applications and external DB.</li>
+<li>The CRA and TRUMPF product security context.
+Additional sources of information:</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>You can access the source code of Cut including build pipeline code located under Product.Cut (very large codebase)</li>
+<li>Current Cut SBOM file sbom_cut_22.1.14.json
+Important constraints:</li>
+<li>Do NOT mark a requirement as &quot;Not applicable&quot; just because it is difficult; only do so if it clearly does not logically apply to a component like Cut.</li>
+<li>If you are unsure, classify as &quot;Directly applicable&quot; or &quot;System-level&quot; and explicitly state uncertainty.
+Output:</li>
+<li>A table with columns: IEC Ref, Requirement Title, Applicability (Component/System/N/A), Justification.
+Prompt 3: Evidence correlation</li>
+</ul>
+<p>Now evaluate whether Cut currently meets each IEC 62443-4-2 requirement that you classified as &quot;Directly applicable to Cut&quot; or &quot;Fulfilled at system level&quot;.
+You have the following types of evidence:</p>
+<ul>
+<li>Architecture and design descriptions</li>
+<li>Source code</li>
+<li>CI/CD pipeline YAML files in the subdirectory Product.Cut/pipelines</li>
+<li>SBOM (CycloneDX) content for Cut in sbom_cut_22.1.14.json</li>
+<li>Test documentation (unit tests, system tests code in Product.Cut/SystemTest)</li>
+<li>TRUMPF internal process descriptions (GL70 Product Security, GL30_G025/G027/G028)
+Task:
+For each requirement classified as &quot;Component&quot; or &quot;System-level&quot;:</li>
+</ul>
+<ol>
+<li>Assess implementation status using the evidence you have:
+<ul>
+<li>&quot;OK&quot; – clearly implemented with sufficient evidence.</li>
+<li>&quot;Partial&quot; – some aspects implemented; gaps or unclear areas remain.</li>
+<li>&quot;Gap&quot; – not implemented or evidence suggests non-compliance.</li>
+<li>&quot;Unknown&quot; – no sufficient evidence available.</li>
+</ul>
+</li>
+<li>Provide:
+<ul>
+<li>A short description of the current implementation.</li>
+<li>References to specific evidence (e.g. &quot;CI/CD file Y&quot;, &quot;module Z.cpp&quot;, &quot;SBOM vX&quot;).</li>
+<li>A short explanation for the chosen status.
+Important constraints:</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>When in doubt, prefer &quot;Partial&quot; or &quot;Unknown&quot; rather than &quot;OK&quot;.</li>
+<li>Do not assume TRUMPF Product Security has granted exceptions unless explicitly stated; treat all IEC 62443-4-2 and CRA-related requirements as applicable by default.
+Output:</li>
+<li>A table with: IEC Ref, Requirement Title, Applicability, Current Implementation &amp; Evidence, Status (OK/Partial/Gap/Unknown), Short Explanation.
+Prompt 4: Gap list and risk</li>
+</ul>
+<p>Using the requirement status table you produced, extract all entries with status &quot;Partial&quot;, &quot;Gap&quot;, or &quot;Unknown&quot;.
+Task:</p>
+<ol>
+<li>Create a consolidated gap list:
+<ul>
+<li>Assign an ID (G1, G2, …) to each gap.</li>
+<li>For each gap, state:
+<ul>
+<li>Related IEC 62443-4-2 reference(s).</li>
+<li>Short description of the gap.</li>
+<li>Root cause or context (e.g., lack of logging, missing encryption, reliance on OS without documented assumptions).</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>For each gap, assess potential impact:
+<ul>
+<li>Which properties may be affected (Confidentiality, Integrity, Availability, Authenticity, CRA compliance)?</li>
+<li>Qualitative risk level: Low / Medium / High, based on your understanding of Cut's role (programming system, customer environment, interfaces).</li>
+</ul>
+</li>
+<li>If a TARA or threat model description is available, link gaps to:
+<ul>
+<li>Known threats.</li>
+<li>Attack paths.</li>
+<li>Security goals that are not fully met.
+Output:</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>A gap table with columns: Gap ID, IEC Ref, Gap Description, Root Cause/Context, Impact, Risk Level.</li>
+<li>A short narrative summarising which FR areas (FR 1–FR 7) are most affected.
+Prompt 5: Mitigation roadmap</li>
+</ul>
+<p>Based on the consolidated gap list and your risk assessment, propose a mitigation roadmap for Cut.
+Constraints and context:</p>
+<ul>
+<li>Technical requirements must align with TRUMPF internal standards:
+<ul>
+<li>GL70_G152 Product Security Policy.</li>
+<li>GL30_G025 Secure Project and Product Management.</li>
+<li>GL30_G027 Secure Product Design Guidelines.</li>
+<li>GL30_G028 Secure Development.</li>
+</ul>
+</li>
+<li>Some central enablers may be available (IAM, logging, PKI, SAST, vulnerability management, risk assessment via SECIRA) but are not necessarily fully ready; where enablers are mentioned, also note integration effort.</li>
+<li>Product-level accountability lies with the business centre leads of the corresponding MT product; you may mention generic roles (architect, developer, LPSO) but not individuals.
+Task:
+For each gap:</li>
+</ul>
+<ol>
+<li>Propose one or more mitigation actions:
+<ul>
+<li>State whether the action is technical, organisational, or process-related.</li>
+<li>Reference relevant TRUMPF standards and, where applicable, CRA essential requirements.</li>
+<li>Mention whether central enablers can be used (e.g. M-/F-IAM, TSI Syslog Server, PKI &amp; code signing, vulnerability management tool).</li>
+</ul>
+</li>
+<li>Assign:
+<ul>
+<li>Priority (P1=high, P2=medium, P3=low), based on risk level and implementation effort.</li>
+<li>Indicative target timeline (e.g. quarter/year).</li>
+</ul>
+</li>
+<li>Map each action to TRUMPF CRA reporting categories:
+<ul>
+<li>Conformity declaration.</li>
+<li>Secure software development lifecycle.</li>
+<li>CI/CD requirements.</li>
+<li>Communication across trust boundaries.</li>
+<li>Technical product requirements.
+Output:</li>
+</ul>
+</li>
+</ol>
+<ul>
+<li>A mitigation table: Gap ID, Recommended Action, Type, Dependencies, Priority, Target Timeline, CRA Category.</li>
+<li>Short narrative explaining which actions are most critical.
+Prompt 6: Full report generation</li>
+</ul>
+<p>You now have:</p>
+<ul>
+<li>The IEC 62443-4-2 applicability and status mapping.</li>
+<li>The consolidated gap list and risk assessment.</li>
+<li>The mitigation roadmap.</li>
+<li>The TruTops Boost Cut context and architecture description.</li>
+<li>The markdown template structure for the report.
+Task:
+Generate a complete IEC 62443-4-2 gap analysis report based on the template file cut_iec62443_4_2_gap_analysis_template.md under AnalysisResult for TruTops Boost Cut by filling the template sections:</li>
+<li>
+<ol>
+<li>Executive Summary</li>
+</ol>
+</li>
+<li>
+<ol start="2">
+<li>Scope, Context and Assumptions</li>
+</ol>
+</li>
+<li>
+<ol start="3">
+<li>System and Component Description</li>
+</ol>
+</li>
+<li>
+<ol start="4">
+<li>IEC 62443-4-2 Requirement Mapping</li>
+</ol>
+</li>
+<li>
+<ol start="5">
+<li>Gaps and Risk Assessment</li>
+</ol>
+</li>
+<li>
+<ol start="6">
+<li>Recommended Mitigation Roadmap</li>
+</ol>
+</li>
+<li>
+<ol start="7">
+<li>Evidence and Traceability</li>
+</ol>
+</li>
+<li>
+<ol start="8">
+<li>Appendices
+Constraints:</li>
+</ol>
+</li>
+<li>Use concise but technically precise language.</li>
+<li>Clearly distinguish facts (based on evidence) from assumptions. Mark assumptions explicitly.</li>
+<li>When describing responsibilities, refer only to &quot;business centre leads of the corresponding MT product&quot; and generic roles (architect, developer, LPSO, tester).</li>
+<li>Do not reproduce full standard text of IEC 62443-4-2; use references and short paraphrased headings.</li>
+<li>Keep the markdown structure (headings, tables) intact.
+Output:</li>
+<li>A single markdown report file cut_iec62443_4_2_gap_analysis.md located in AnalysisResults.
+Prompt 7: Review and refinement</li>
+</ul>
+<p>Review the generated report critically.
+Task:</p>
+<ol>
+<li>List any sections where:
+<ul>
+<li>The reasoning seems speculative.</li>
+<li>Requirements have been classified as &quot;Not applicable&quot; without strong justification.</li>
+<li>Evidence references are missing or vague.</li>
+</ul>
+</li>
+<li>Suggest corrections or mark items that need human expert review (e.g. LPSO, architect).</li>
+<li>Propose 3–5 targeted questions to be answered by human experts to improve the accuracy of the gap analysis.
+Output an additional markdown file in the AnalysisResults directory containing:</li>
+</ol>
+<ul>
+<li>a list of issues to review.</li>
+<li>a bullet list of expert questions.</li>
+<li>Show these two lists also in this chat.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc"></aside>
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></span>
+ <span class="next"><a href="../8translation/index.html">Translation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

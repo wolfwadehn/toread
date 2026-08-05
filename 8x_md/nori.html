@@ -1,0 +1,230 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>CLAUDE.md</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../2fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../2fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../9helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../3iu/index.html">3IU</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">MD for coding</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">MD for coding</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="nori.html">CLAUDE.md</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>CLAUDE.md</h1>
+<p>C:\Work\Nori is a 2d/3d C# library</p>
+<h2 id="architecture">Architecture</h2>
+<h3 id="project-layout-dependency-graph">Project layout / dependency graph</h3>
+<pre><code>Core (Nori.Core)            platform-neutral core: geometry, drawing entities, mesh, model,
+                             sim, IO, base utilities, and the test-runner types themselves
+  ↑
+Lux (Nori.Lux)               OpenGL scene-graph renderer, platform-neutral — depends only on
+  ↑                          interfaces from Core, not on any concrete windowing/GL implementation
+Host/GLFW, Host/WPF          platform-specific implementations of Core's Hub interfaces
+  (Nori.Host.GLFW/WPF)       (IOpenGL, IDispatcher, IKeyboard, IMouse) — GLFW is cross-platform-
+                             capable, WPF is Windows-only
+GLU (Nori.GLU)                small OpenGL utility layer used above Host
+Test (Nori.Test)             console app + custom reflection-based test runner (depends on Core,
+                             Lux, Host/GLFW to get an offscreen GL context)
+Tools/Generate (Nori.Gen)    Roslyn source generator, referenced as an Analyzer by Core and Lux
+Tools/Console (Nori.Con)     dev CLI (coverage, line-count, id allocation, source cleanup, ...)
+Tools/Doc (Nori.Doc)          generates HTML docs from XML doc comments
+Tools/Cover (Nori.Cover)     WPF viewer for coverage.xml produced by `Nori.Con COVERAGE`
+Demos/*                      GLShell, WPFDemo, ConShell, BenchShell — sample/scratch apps
+</code></pre>
+<p><code>Nori.slnx</code> (the XML-based solution format, not a classic <code>.sln</code>) is the source of truth for which
+projects exist and how they're grouped.</p>
+<h3 id="hub-dependency-injection-for-platform-services">Hub: dependency injection for platform services</h3>
+<p><code>Core/Base/Hub.cs</code> is a static whiteboard exposing <code>IDispatcher</code>, <code>IKeyboard</code>, <code>IMouse</code>, <code>IOpenGL</code>
+(interfaces defined in <code>Core/Base/Interface.cs</code>). Core and Lux code depend only on these interfaces.
+A concrete host (<code>GLFWHost.Init</code> in <code>Host/GLFW/Host.cs</code>, or the WPF equivalent) fills in <code>Hub.*</code> at
+startup before any rendering happens. This is how Lux stays platform-neutral while still driving
+real windowing/OpenGL/input on Windows via WPF or cross-platform via GLFW.</p>
+<h3 id="lux-scene-graph-luxscene-luxbuffer-luxshader-luxvnodes">Lux scene graph (Lux/Scene, Lux/Buffer, Lux/Shader, Lux/VNodes)</h3>
+<p>Rendering is organized as a <code>VNode</code> DAG (<code>Lux/Scene/VNode.cs</code>): each <code>VNode</code> can carry drawable
+geometry (via <code>RBatch</code>/<code>RBuffer</code>, built during <code>Draw()</code> using <code>Lux.Draw</code> calls), can have children
+(directly, or automated via a <code>ChildSource</code> implementing <code>IAList</code>/<code>IObservable&lt;ListChange&gt;</code>), and
+can bequeath attributes (color, transform, line type, ...) down its subtree. <code>Scene</code>
+(<code>Lux/Scene/Scene.cs</code>) owns the tree and drives per-frame rendering; <code>Lux/VNodes/*VN.cs</code> files are
+concrete VNode types that render specific domain entities (e.g. <code>Dwg2VN</code> renders a <code>Dwg2</code> drawing,
+<code>Ent2VN</code>/<code>Ent3VN</code> render entities, <code>MechanismVN</code> renders <code>Sim/Mechanism</code>).</p>
+<h3 id="source-generators-and-code-gen-attributes-toolsgenerate-corebaseattributes.cs">Source generators and code-gen attributes (Tools/Generate, Core/Base/Attributes.cs)</h3>
+<p>Two generator-driven patterns recur throughout Core/Lux — recognize them rather than
+hand-implementing the equivalent boilerplate:</p>
+<ul>
+<li><code>[Singleton]</code> on a class with a private parameterless constructor generates a thread-safe static
+<code>It</code> property (<code>Tools/Generate/SingletonGen.cs</code>).</li>
+<li><code>[EPropClass]</code> on a class + <code>[EPropField(EProp.X)] TType mField</code> on its backing fields
+(named with an <code>m</code> prefix) generates a public property (same name minus <code>m</code>) that raises change
+notifications tagged with the given <code>EProp</code> value when set — a lighter-weight alternative to
+<code>INotifyPropertyChanged</code> (<code>Tools/Generate/EPropGen.cs</code>).</li>
+</ul>
+<h3 id="core-subsystems">Core subsystems</h3>
+<ul>
+<li><code>Core/Geom</code>: 2D/3D geometry primitives (<code>Point</code>, <code>Vector</code>, <code>Matrix</code>, <code>Bound</code>, <code>Poly</code>, <code>Seg</code>,
+<code>Nurbs</code>, <code>OBB</code>, <code>ConvexHull</code>, <code>FastTess2D</code> tessellator, collision).</li>
+<li><code>Core/Drawing</code>: 2D drawing-entity layer (<code>Dwg2</code>, <code>Ent2</code>, dimensions in <code>E2Dim*</code>, snapping/stitching).</li>
+<li><code>Core/Model</code>: 3D model layer (<code>Model3</code>, <code>Ent3</code>, <code>Curve3</code>, surfaces, and <code>Tenkai/</code> sheet-metal
+flat/flex/bend-pose support).</li>
+<li><code>Core/Mesh</code>: triangle mesh representation/build/slicing (<code>Mesh</code>, <code>TopoMesh</code>, <code>CSMesher</code>).</li>
+<li><code>Core/Sim</code>: kinematics/collision simulation (<code>Mechanism</code>, <code>OBBTree</code>, <code>OBBCollider</code>, <code>RBRSolver</code>).</li>
+<li><code>Core/IO</code>: file format readers/writers — DXF, STEP, STL, PNG, a custom binary/text serialization
+scheme (<code>AuType</code>/<code>[AuPrimitive]</code>, Curl format) used for saving Nori's own object graphs, plus
+<code>IStmLocator</code>/<code>Lib.OpenRead</code> which resolves virtual paths like <code>nori:GL/point.frag</code> (backed by a
+zipped <code>Nori.wad</code> resource bundle or a loose folder).</li>
+<li><code>Core/Base</code>: cross-cutting utilities — <code>Lib</code> (module-level constants/helpers, <code>Lib.Init()</code> must be
+called before using the library), <code>Hub</code>, <code>Undo</code> (undo/redo), <code>Ledger&lt;T&gt;</code>, <code>SymTable</code>, collection
+helpers, and the <code>[Fixture]</code>/<code>[Test]</code>/<code>TestRunner</code> types used by <code>Nori.Test</code>.</li>
+</ul>
+<h3 id="coding-conventions-worth-preserving">Coding conventions worth preserving</h3>
+<ul>
+<li>Method call parens are preceded by a space (<code>Foo (x)</code>, not <code>Foo(x)</code>); this is enforced by
+<code>.editorconfig</code>, not a matter of taste.</li>
+<li>3-space indentation, no forced braces on single-line <code>if</code>/<code>for</code> bodies.</li>
+<li>Most <code>.cs</code> files start with a decorative banner comment naming the file and a one-line purpose
+(e.g. <code>// ╔═╦╦═╦╦╬╣ Hub.cs</code>); <code>Nori.Con CLEAN</code> can (re)generate/normalize these — don't remove them
+from existing files.</li>
+<li>Prefer terse XML <code>&lt;summary&gt;</code> on a single line over multi-line <code>&lt;summary&gt;</code> blocks (the <code>CLEAN</code>
+command actively collapses 3-line summaries into one line).</li>
+<li><code>IDE0130</code> (namespace-must-match-folder) is disabled: files are organized by subsystem folder, not
+by namespace — most public types live directly in <code>namespace Nori;</code> regardless of their folder.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#architecture">Architecture</a>
+  </li>
+  <li level="2">
+   <a href="#project-layout-dependency-graph">Project layout / dependency graph</a>
+  </li>
+  <li level="2">
+   <a href="#hub-dependency-injection-for-platform-services">Hub: dependency injection for platform services</a>
+  </li>
+  <li level="2">
+   <a href="#lux-scene-graph-luxscene-luxbuffer-luxshader-luxvnodes">Lux scene graph (Lux/Scene, Lux/Buffer, Lux/Shader, Lux/VNodes)</a>
+  </li>
+  <li level="2">
+   <a href="#source-generators-and-code-gen-attributes-toolsgenerate-corebaseattributes.cs">Source generators and code-gen attributes (Tools/Generate, Core/Base/Attributes.cs)</a>
+  </li>
+  <li level="2">
+   <a href="#core-subsystems">Core subsystems</a>
+  </li>
+  <li level="2">
+   <a href="#coding-conventions-worth-preserving">Coding conventions worth preserving</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">MD for coding</a></span>
+ <span class="next"><a href="pix.html">CLAUDE.md</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

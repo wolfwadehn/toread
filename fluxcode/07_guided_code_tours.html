@@ -1,0 +1,404 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Guided Code Tours</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a class="active" href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="07_guided_code_tours.html">Guided Code Tours</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Guided Code Tours</h1>
+<p>___*
+<strong>Goal:</strong> seven structured, time-boxed reading walks through the most important Flux flows. Each tour starts at a precise file and line, has named stops, and ends with a question to confirm understanding. Every tour is doable read-only -- you do not need to compile or run anything.</p>
+<p><strong>Use this when:</strong> you want to build mental scaffolding for an unfamiliar area in 15--20 minutes flat.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="how-to-use-these-tours">How to use these tours</h2>
+<p>** <strong>Open exactly the files named.</strong> Don't wander; you can always do a second pass.
+** <strong>Don't read the whole file.</strong> Stop at the named lines.
+** <strong>At each stop, write one sentence</strong> in your own words about what you just read. If you can't, re-read.
+** <strong>End with the self-check question.</strong> If you can't answer, redo the last stop.</p>
+<p>'''</p>
+<h2 id="tour-a-from-cad-import-to-bend-sequence-20-min">Tour A -- From CAD import to bend sequence (20 min)</h2>
+<p><strong>Premise.</strong> You opened a 3D model. Click &quot;Bend Auto-Tool&quot;. What just happened?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Src\Core\IO\GeoReader.cs</code>
+| top 60 lines
+| The entry point that parses a <code>.geo</code> file into a <code>Part</code>.</p>
+<p>| 2
+| <code>Src\Core\Part\Part.cs</code>
+| lines 22--80
+| <code>Part</code> properties: <code>Model</code>, <code>Dwg</code>, <code>BendTech</code>, <code>FoldTech</code>, <code>CutTech</code>.</p>
+<p>| 3
+| <code>Src\Core\Bend\BendTech.cs</code>
+| lines 19--120
+| The <code>BendTech</code> constructor -- group flexes, split hem phases, build BendOps.</p>
+<p>| 4
+| <code>Src\Core\Bend\Ops\BendTooler.cs</code>
+| lines 16--80
+| The <code>BendTooler</code> constructor + <code>DoTooling</code> skeleton.</p>
+<p>| 5
+| <code>Src\Core\Bend\BendSetup.cs</code>
+| lines 46--62
+| The <code>Dump</code> method -- the test contract.
+|===</p>
+<p><strong>Self-check:</strong> in three sentences, describe how a <code>.geo</code> file becomes a <code>BendTech</code> with N <code>BendOp</code>s and one or more <code>BendSetup</code>s. Where would you set a breakpoint to inspect the <em>initial</em> (pre-tooler) sequence?</p>
+<p>'''</p>
+<h2 id="tour-b-the-glob-system-in-action-15-min">Tour B -- The Glob system in action (15 min)</h2>
+<p><strong>Premise.</strong> Why does selecting a bend in the UI show a properties panel?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Src\UI\Bend\BendOpUI.cs</code>
+| lines 1--60
+| The <code>BendOpGlob</code> declaration: <code>[Glob (Draw = true, Mouse = EMouse.LDown)]</code>.</p>
+<p>| 2
+| <code>Src\UI\Bend\BendOpUI.cs</code>
+| lines 21--55
+| The <code>AddRegrip</code> static method -- composite command shaping.</p>
+<p>| 3
+| <code>Src\UI\Bend\BendOpUI.cs</code>
+| line 661
+| The <code>BendOpsGlob</code> (multi-select composite) declaration.</p>
+<p>| 4
+| <code>Src\UI\Glob.cs</code>
+| top 80 lines
+| The base <code>Glob</code> class itself.
+|===</p>
+<p><strong>Self-check:</strong> when the user selects three bends, what class wraps them? Where does it decide which properties are shown?</p>
+<p>'''</p>
+<h2 id="tour-c-rendering-pipeline-15-min">Tour C -- Rendering pipeline (15 min)</h2>
+<p><strong>Premise.</strong> Where does the screen get its pixels from?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Src\Base\Lux\VModel.cs</code>
+| lines 1--80
+| <code>VModel</code> base, <code>Id</code>, <code>Nodes</code>, <code>Scene</code>, <code>Obj</code>.</p>
+<p>| 2
+| <code>Src\Core\Bend\BendVM.cs</code>
+| lines 1--80
+| <code>BendMountVM.Draw()</code> -- how a tool mount becomes geometry.</p>
+<p>| 3
+| <code>Src\Base\Lux\Lux.cs</code>
+| top 60 lines
+| The static <code>Lux.DrawMesh</code>, <code>Lux.Layer</code>, <code>Lux.Mood</code>.</p>
+<p>| 4
+| <code>Src\Base\Lux\Scene.cs</code>
+| top 60 lines
+| The scene graph that holds live <code>VModel</code>s.
+|===</p>
+<p><strong>Self-check:</strong> if the bend setup <em>renders</em> incorrectly, name the <em>one</em> method you would put a breakpoint on first.</p>
+<p>'''</p>
+<h2 id="tour-d-a-test-end-to-end-15-min">Tour D -- A test, end-to-end (15 min)</h2>
+<p><strong>Premise.</strong> Tests are documentation. Read one carefully.</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Test\Bend\BasicBendAuto.cs</code>
+| full file
+| A textbook fixture with one helper.</p>
+<p>| 2
+| <code>X:\TData\Bend\Auto\Bend*04.geo</code>
+| (just the filename)
+| A binary input -- confirm it exists.</p>
+<p>| 3
+| <code>X:\TData\Bend\Auto\Bend*04.txt</code>
+| full file
+| The golden file.</p>
+<p>| 4
+| <code>Src\Core\Bend\BendSetup.cs</code>
+| <code>Dump</code> method
+| What writes the lines you just read.
+|===</p>
+<p><strong>Self-check:</strong> if test 82 fails after a code change, what's the first thing you compare?</p>
+<p>'''</p>
+<h2 id="tour-e-persistence-au-load-migration-15-min">Tour E -- Persistence (Au load + migration) (15 min)</h2>
+<p><strong>Premise.</strong> How does Flux load yesterday's file with today's classes?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Notes\Dev\1003.AuGoldEncoding.ftx</code>
+| top 80 lines
+| The Au binary format.</p>
+<p>| 2
+| <code>Src\Core\Bend\BendSetup.cs</code>
+| lines 64--76
+| A real <code>[PostLoad]</code> migration handling clamp positions and blade sensors.</p>
+<p>| 3
+| <code>Notes\Tech\2007.CurlFiles.ftx</code>
+| top 60 lines
+| The Curl text format and its grammar.</p>
+<p>| 4
+| <code>X:\Data\Machine\13\Machine.curl</code>
+| top 30 lines
+| A real Curl file -- the test machine.
+|===</p>
+<p><strong>Self-check:</strong> if you change a property's type on <code>BendOp</code>, what do you write <em>and</em> in which file?</p>
+<p>'''</p>
+<h2 id="tour-f-a-real-bug-fix-in-the-wild-20-min">Tour F -- A real bug fix in the wild (20 min)</h2>
+<p><strong>Premise.</strong> Watch how a bug is fixed in this codebase.</p>
+<p>|===
+| Step | Command / Open | What you should see</p>
+<p>| 1
+| Run <code>git show 4a5119dcb</code> (or look up its diff)
+| &quot;Case 45728: Changing the suction cup state no longer deletes adjusted waypoints.&quot;</p>
+<p>| 2
+| Identify which files were touched
+| The blast radius of the change.</p>
+<p>| 3
+| For each file, read 30 lines around the change
+| The <em>why</em> of the change.</p>
+<p>| 4
+| Find the test that locks it in
+| Usually a new <code>[Test]</code> or amended fixture.
+|===</p>
+<p><strong>Self-check:</strong> describe in one paragraph what behavior was broken, what change fixed it, and what test now guards it.</p>
+<p>'''</p>
+<h2 id="tour-g-settings-cascade-sheaf-10-min">Tour G -- Settings cascade (Sheaf) (10 min)</h2>
+<p><strong>Premise.</strong> Why does a setting &quot;live&quot; at the right level?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Src\Core\Settings\Sheaf.cs</code>
+| lines 21--80
+| The <code>ISheafSite</code> contract and helpers.</p>
+<p>| 2
+| <code>Src\Core\Bend\BendOp.cs</code>
+| first 40 lines + the <code>BendSpeed</code> property
+| A <code>BendOp</code> resolving <code>Settings.RamVBend</code> through its parent.</p>
+<p>| 3
+| <code>Src\Core\Bend\BendMachine.cs</code>
+| top 80 lines
+| The machine-level settings.
+|===</p>
+<p><strong>Self-check:</strong> if you set <code>RamVBend = 50</code> on a single op, does it affect future ops? On the machine, does it affect future techs?</p>
+<p>'''</p>
+<h2 id="tour-h-layer-dependencies-and-the-hub-10-min">Tour H -- Layer dependencies and the Hub (10 min)</h2>
+<p><strong>Premise.</strong> How does Core call back into App without a project reference?</p>
+<p>|===
+| Step | Open | Read | What you should see</p>
+<p>| 1
+| <code>Src\Core\Hub.cs</code>
+| top 80 lines
+| The slot pattern: static <code>Func&lt;&gt;</code>/<code>Action&lt;&gt;</code>.</p>
+<p>| 2
+| <code>Notes\Dev\1002.BuildingFlux.ftx</code>
+| lines 31--95
+| The architectural decision behind the Hub.</p>
+<p>| 3
+| Search the codebase
+| <code>Hub.ClosePartByJobID?.Invoke</code> (or any other slot)
+| Real call sites.
+|===</p>
+<p><strong>Self-check:</strong> in headless (Engine flavor) mode, what happens when <code>+Hub.BigChooser?.Invoke (...)+</code> is called?</p>
+<p>'''</p>
+<h2 id="how-to-read-these-tours-productively">How to read these tours productively</h2>
+<p>** <strong>Time-box each tour</strong> to its target. Going long means you're trying to memorize, not understand.
+** <strong>Repeat tours weekly</strong> for the first month. The same tour reveals more on the second pass.
+** <strong>Make your own notes.</strong> Three lines per tour is plenty.
+** <strong>Discuss with your buddy.</strong> Each tour ends with a question -- answer it out loud.</p>
+<p>'''</p>
+<h2 id="a-gentle-calendar-for-the-first-three-weeks">A gentle calendar for the first three weeks</h2>
+<p>|===
+| Week | Tours to do</p>
+<p>| <strong>1</strong>
+| A, D, G -- the spine: import-to-bend, a test, and the Sheaf cascade.</p>
+<p>| <strong>2</strong>
+| B, C, E -- Glob, rendering, persistence.</p>
+<p>| <strong>3</strong>
+| F, H -- bug fix in the wild, layer wiring.
+|===</p>
+<p>By the end of week 3 you've internalized the full reading vocabulary of the codebase.</p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. All file paths and line numbers verified against the current tree._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#how-to-use-these-tours">How to use these tours</a>
+  </li>
+  <li level="1">
+   <a href="#tour-a-from-cad-import-to-bend-sequence-20-min">Tour A -- From CAD import to bend sequence (20 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-b-the-glob-system-in-action-15-min">Tour B -- The Glob system in action (15 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-c-rendering-pipeline-15-min">Tour C -- Rendering pipeline (15 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-d-a-test-end-to-end-15-min">Tour D -- A test, end-to-end (15 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-e-persistence-au-load-migration-15-min">Tour E -- Persistence (Au load + migration) (15 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-f-a-real-bug-fix-in-the-wild-20-min">Tour F -- A real bug fix in the wild (20 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-g-settings-cascade-sheaf-10-min">Tour G -- Settings cascade (Sheaf) (10 min)</a>
+  </li>
+  <li level="1">
+   <a href="#tour-h-layer-dependencies-and-the-hub-10-min">Tour H -- Layer dependencies and the Hub (10 min)</a>
+  </li>
+  <li level="1">
+   <a href="#how-to-read-these-tours-productively">How to read these tours productively</a>
+  </li>
+  <li level="1">
+   <a href="#a-gentle-calendar-for-the-first-three-weeks">A gentle calendar for the first three weeks</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></span>
+ <span class="next"><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

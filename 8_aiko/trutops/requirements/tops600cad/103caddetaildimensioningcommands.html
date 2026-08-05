@@ -1,0 +1,1415 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>103CADDetailDimensioningCommands</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">ToPs600CAD</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a class="active" href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">ToPs600CAD</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>103CADDetailDimensioningCommands</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-cad-detail-dimensioning-commands-doc-10.3-cad-detail-dimensioning-commands-id-prefix-fr-cad-dim-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: &quot;CAD Detail — Dimensioning Commands&quot;
+doc: &quot;10.3 - CAD Detail - Dimensioning Commands&quot;
+id-prefix: &quot;FR-CAD-DIM&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+tier: detailed
+parent: &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[60 - Requirements Traceability Index]]&quot;]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</h2>
+<h1 id="cad-detail-dimensioning-commands">CAD Detail — Dimensioning Commands</h1>
+<blockquote>
+<p>Detailed reverse-engineered requirements (Tier: command/algorithm level). Child of [[10 - FR - CAD Geometry &amp; Drawing Editing]]. Reconstructed intent from static source analysis, not an authoritative spec.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This document specifies, at the command and algorithm level, the <strong>dimensioning (German: <em>Bemaßung</em>)</strong> subsystem of the TruTops 2D CAD drawing editor. It refines the parent system-level requirements:</p>
+<ul>
+<li><strong>FR-CAD-020</strong> — Linear dimensioning (between two points / between elements / along contour / short; horizontal / vertical / aligned / free).</li>
+<li><strong>FR-CAD-021</strong> — Angular, radius, diameter, arc-length and ordinate (X/Y) dimensioning.</li>
+<li><strong>FR-CAD-022</strong> — Dimension text / tolerance / format editing, move, delete, defaults.</li>
+</ul>
+<p>The subsystem is driven by a single interpreter/state-machine module (<code>tc_cad/cad_asm/dim.cpp</code>, entry <code>init_dim_befehl()</code>), invoked from 29 GRIT masks in <code>tc_bof/aCadDimFunc.gritx</code> via <code>asm_call( dim … )</code>. All persistent geometry lives in dimension <em>attribute</em> objects in <code>tc_dbase/dbase_dim/</code> (<code>TcDim*Attribute</code>), created and mutated through <em>command</em> objects (<code>TcDim*Command</code>), with undo mediated by per-attribute <em>memento</em> objects and a <code>TcDbaseActionManager</code> action-sequence stack.</p>
+<p>Terminology (see [[04 - Domain Model &amp; Glossary]]): <em>Bemaßung</em> = dimension; <em>Kontur</em> = contour; <em>Fangen</em> = snapping; <em>Rundung</em> = fillet; <em>Fase</em> = chamfer; <em>Toleranz</em> = tolerance; <em>ausgerichtet</em> = aligned; <em>Extensionslinie</em> = extension/witness line; <em>Zwilling</em> = twin (duplicate); <em>Nachkommastellen</em> = decimal places.</p>
+<p>Scope boundary: the visual generation of arrows/witness lines/text glyphs (<code>TcDimDrawGenerator</code>) is treated as a downstream renderer and is referenced only where it affects behaviour. Snapping/selection infrastructure is refined in [[10.4 - CAD Detail - Attributes, Snapping, Selection &amp; Lifecycle]]. The mask-driven text dialog integration ties into [[10.5 - CAD Detail - Parametric Variants &amp; Scripting]].</p>
+<p>Sibling detail documents: [[10.1 - CAD Detail - Geometry Creation Commands]] · [[10.2 - CAD Detail - Editing &amp; Transformation Commands]] · [[10.4 - CAD Detail - Attributes, Snapping, Selection &amp; Lifecycle]] · [[10.5 - CAD Detail - Parametric Variants &amp; Scripting]] · [[10.6 - CAD Detail - Geometry Kernel Algorithms]] · [[10.7 - CAD Detail - Contour Arithmetic Algorithms]] · [[10.8 - CAD Detail - Curve Approximation &amp; Fourier Analysis]].</p>
+<h2 id="command-algorithm-inventory">2. Command / Algorithm Inventory</h2>
+<h3 id="interactive-commands-grit-masks-dim-sub-command">2.1 Interactive commands (GRIT masks → <code>dim</code> sub-command)</h3>
+<table>
+<thead>
+<tr>
+<th>Mask (<code>aCadDimFunc.gritx</code>)</th>
+<th><code>asm_call</code></th>
+<th>German / plain meaning</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>aCadDimPointsLinearAligned</code></td>
+<td><code>dim two_pts</code></td>
+<td>Linear dim between two points, aligned to the connection</td>
+<td>FR-CAD-DIM-001</td>
+</tr>
+<tr>
+<td><code>aCadDimPointsLinearHorizontal</code></td>
+<td><code>dim two_pts angle 0</code></td>
+<td>…horizontal</td>
+<td>FR-CAD-DIM-001</td>
+</tr>
+<tr>
+<td><code>aCadDimPointsLinearVertical</code></td>
+<td><code>dim two_pts angle 90</code></td>
+<td>…vertical</td>
+<td>FR-CAD-DIM-001</td>
+</tr>
+<tr>
+<td><code>aCadDimPointsLinearRandom</code></td>
+<td><code>dim two_pts angle</code></td>
+<td>…free angle (user value)</td>
+<td>FR-CAD-DIM-001</td>
+</tr>
+<tr>
+<td><code>aCadDimElemLinearAligned</code></td>
+<td><code>dim size</code></td>
+<td>Linear dim of one element, aligned</td>
+<td>FR-CAD-DIM-002</td>
+</tr>
+<tr>
+<td><code>aCadDimElemLinearHorizontal</code></td>
+<td><code>dim size angle 0</code></td>
+<td>…horizontal</td>
+<td>FR-CAD-DIM-002</td>
+</tr>
+<tr>
+<td><code>aCadDimElemLinearVertical</code></td>
+<td><code>dim size angle 90</code></td>
+<td>…vertical</td>
+<td>FR-CAD-DIM-002</td>
+</tr>
+<tr>
+<td><code>aCadDimElemLinearRandom</code></td>
+<td><code>dim size angle</code></td>
+<td>…free angle</td>
+<td>FR-CAD-DIM-002</td>
+</tr>
+<tr>
+<td><code>aCadDimContourLinearHorizontal</code></td>
+<td><code>dim size contour angle 0</code></td>
+<td>Linear extent of a contour, horizontal</td>
+<td>FR-CAD-DIM-003</td>
+</tr>
+<tr>
+<td><code>aCadDimContourLinearVertical</code></td>
+<td><code>dim size contour angle 90</code></td>
+<td>…vertical</td>
+<td>FR-CAD-DIM-003</td>
+</tr>
+<tr>
+<td><code>aCadDimContourLinearRandom</code></td>
+<td><code>dim size contour angle</code></td>
+<td>…free angle</td>
+<td>FR-CAD-DIM-003</td>
+</tr>
+<tr>
+<td><code>aCadDimShortLinearAligned</code></td>
+<td><code>dim open</code></td>
+<td>Short (open/half) linear dim, aligned</td>
+<td>FR-CAD-DIM-004</td>
+</tr>
+<tr>
+<td><code>aCadDimShortLinearHorizontal</code></td>
+<td><code>dim open angle 0</code></td>
+<td>…horizontal</td>
+<td>FR-CAD-DIM-004</td>
+</tr>
+<tr>
+<td><code>aCadDimShortLinearVertical</code></td>
+<td><code>dim open angle 90</code></td>
+<td>…vertical</td>
+<td>FR-CAD-DIM-004</td>
+</tr>
+<tr>
+<td><code>aCadDimShortLinearRandom</code></td>
+<td><code>dim open angle</code></td>
+<td>…free angle</td>
+<td>FR-CAD-DIM-004</td>
+</tr>
+<tr>
+<td><code>aCadDimAngle</code></td>
+<td><code>dim angle</code></td>
+<td>Angular dim between two lines</td>
+<td>FR-CAD-DIM-005</td>
+</tr>
+<tr>
+<td><code>aCadDimRadius</code></td>
+<td><code>dim radius</code></td>
+<td>Radius dim of arc/fillet/circle</td>
+<td>FR-CAD-DIM-006</td>
+</tr>
+<tr>
+<td><code>aCadDimDiameter</code></td>
+<td><code>dim diameter</code></td>
+<td>Diameter dim of arc/fillet/circle</td>
+<td>FR-CAD-DIM-007</td>
+</tr>
+<tr>
+<td><code>aCadDimArcLength</code></td>
+<td><code>dim length</code></td>
+<td>Arc-length dim of an arc</td>
+<td>FR-CAD-DIM-008</td>
+</tr>
+<tr>
+<td><code>aCadDimOrdinateX</code></td>
+<td><code>dim x_axis</code></td>
+<td>Ordinate dim referenced to X axis (origin-locked)</td>
+<td>FR-CAD-DIM-009</td>
+</tr>
+<tr>
+<td><code>aCadDimOrdinateY</code></td>
+<td><code>dim y_axis</code></td>
+<td>Ordinate dim referenced to Y axis (origin-locked)</td>
+<td>FR-CAD-DIM-009</td>
+</tr>
+<tr>
+<td><code>aCadChangeDimText</code></td>
+<td><code>dim read 'M_ZeichnungDimText'</code> (+<code>dim write</code>)</td>
+<td>Edit text content/tolerance via dialog; inline <code>dim dim_text change</code></td>
+<td>FR-CAD-DIM-010, -013</td>
+</tr>
+<tr>
+<td><code>aCadChangeDimTextDirection</code></td>
+<td><code>dim dim_text angle #ST_DimTextDirection</code></td>
+<td>Change text writing direction</td>
+<td>FR-CAD-DIM-011</td>
+</tr>
+<tr>
+<td><code>aCadChangeDimTextSize</code></td>
+<td><code>dim dim_text size</code></td>
+<td>Change text (font) height per dim</td>
+<td>FR-CAD-DIM-012</td>
+</tr>
+<tr>
+<td><code>aCadMoveDim</code></td>
+<td><code>dim move</code></td>
+<td>Move/offset a dimension line</td>
+<td>FR-CAD-DIM-014</td>
+</tr>
+<tr>
+<td><code>aCadMoveDimText</code></td>
+<td><code>dim dim_text move</code></td>
+<td>Move the dimension text</td>
+<td>FR-CAD-DIM-015</td>
+</tr>
+<tr>
+<td><code>aCadDeleteDim</code></td>
+<td><code>dim remove</code></td>
+<td>Delete dimension(s)</td>
+<td>FR-CAD-DIM-016</td>
+</tr>
+<tr>
+<td><code>aCadSetDimDefault</code></td>
+<td><code>dim dim_text size default #ST_DimFormatDefaultTextSize</code></td>
+<td>Set default text height</td>
+<td>FR-CAD-DIM-017</td>
+</tr>
+<tr>
+<td><code>aCadSetDimFormat</code></td>
+<td><code>show dim_show &lt;valPrec&gt; &lt;tolPrec&gt;</code> + <code>dim vertex &lt;arrow&gt;</code></td>
+<td>Set decimal precision + arrow size</td>
+<td>FR-CAD-DIM-018, -019</td>
+</tr>
+</tbody>
+</table>
+<p>Additional <code>dim</code> sub-commands wired in <code>init_dim_befehl()</code> but not bound to a mask in this file: <code>dim tol</code> (tolerance triple, FR-CAD-DIM-013), <code>dim &lt;…&gt; rotate</code> (radius/diameter display angle, FR-CAD-DIM-020), <code>dim form &lt;style&gt;</code> (layout style, FR-CAD-DIM-021), <code>dim set</code> (colour init, FR-CAD-DIM-022).</p>
+<h3 id="kernel-algorithms-object-model-capabilities">2.2 Kernel algorithms / object-model capabilities</h3>
+<table>
+<thead>
+<tr>
+<th>Capability</th>
+<th>Source</th>
+<th>Requirement ID</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Dimension attribute object model (base <code>TcDimAttribute</code>)</td>
+<td><code>TcDimAttribute.h</code></td>
+<td>FR-CAD-DIM-023</td>
+</tr>
+<tr>
+<td>Element-anchored points + <code>recalculate()</code>/<code>prepareRecalculation()</code></td>
+<td><code>TcDimTwoPointsAttribute.h</code></td>
+<td>FR-CAD-DIM-024</td>
+</tr>
+<tr>
+<td>Duplicate (&quot;twin&quot;) avoidance (<code>getTwin</code>/<code>isIdentical</code>)</td>
+<td><code>TcDimCommand.h</code>, attributes</td>
+<td>FR-CAD-DIM-025</td>
+</tr>
+<tr>
+<td>Eligible-element constraint (<code>isValidDimElement</code>)</td>
+<td><code>TcDimCommand.h</code>/<code>.cpp</code></td>
+<td>FR-CAD-DIM-026</td>
+</tr>
+<tr>
+<td>Snap acquisition (<code>getDimElement</code>, nearest endpoint / centre fallback)</td>
+<td><code>dim.cpp</code></td>
+<td>FR-CAD-DIM-027</td>
+</tr>
+<tr>
+<td>Same-part constraint</td>
+<td><code>dim.cpp</code> (<code>dimPoint2</code>/<code>dimLine2</code>)</td>
+<td>FR-CAD-DIM-028</td>
+</tr>
+<tr>
+<td><code>&lt;&gt;</code> value placeholder substitution</td>
+<td><code>TcDimAttribute::setText</code></td>
+<td>FR-CAD-DIM-029</td>
+</tr>
+<tr>
+<td>Measured value semantics per type (<code>getValue</code>)</td>
+<td>attribute classes</td>
+<td>FR-CAD-DIM-030</td>
+</tr>
+<tr>
+<td>Offset/placement control (<code>TcDimOffsetCommand</code>)</td>
+<td><code>TcDimOffsetCommand.h</code></td>
+<td>FR-CAD-DIM-031</td>
+</tr>
+<tr>
+<td>Extension-line type (none/short/long)</td>
+<td><code>TeDimEnumTypes.h</code></td>
+<td>FR-CAD-DIM-032</td>
+</tr>
+<tr>
+<td>Undo / memento model &amp; action sequences</td>
+<td><code>*Memento.h</code>, <code>dim.cpp</code></td>
+<td>FR-CAD-DIM-033</td>
+</tr>
+<tr>
+<td>Mode &amp; licensing gating (lite/machine/password)</td>
+<td><code>dim.cpp</code> (<code>init_dim_befehl</code>, <code>start_dim</code>)</td>
+<td>FR-CAD-DIM-034</td>
+</tr>
+<tr>
+<td>Selection modes (single/box/ALL/confirm)</td>
+<td><code>dim.cpp</code> selectors</td>
+<td>FR-CAD-DIM-035</td>
+</tr>
+<tr>
+<td>Interactive rubber-band feedback &amp; live preview</td>
+<td><code>dim.cpp</code> feedback fns</td>
+<td>FR-CAD-DIM-036</td>
+</tr>
+</tbody>
+</table>
+<h2 id="detailed-requirements">3. Detailed Requirements</h2>
+<h3 id="fr-cad-dim-001-two-point-linear-dimension">FR-CAD-DIM-001 — Two-point linear dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes two-point linear dimensioning, the system SHALL prompt for a first point and a second point, and upon receiving two distinct points create a linear distance dimension whose orientation is either (a) aligned to the connecting line of the two points, or (b) fixed to a given angle of 0° (horizontal), 90° (vertical) or a free user-entered angle; if the two picked points are closer than 1×10⁻³ (drawing units) apart the command SHALL reject the creation and re-prompt.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim two_pts</code> (aligned; <code>m_aligned = true</code>); <code>dim two_pts angle 0</code> / <code>angle 90</code> / <code>angle &lt;free&gt;</code> (non-aligned; free angle read as a real). Each picked point is snapped to a part/element and classified (see FR-CAD-DIM-024). Both points must lie in the same part (FR-CAD-DIM-028). After creation the dimension enters move/offset placement (FR-CAD-DIM-031). Prompts: msg 10770 (first point), 10771 (second point, with <code>RUBBER_LINE</code> feedback anchored at point 1).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Two-point distance is the most general linear annotation and underpins all four orientation masks.</li>
+<li><strong>Source:</strong> <code>aCadDimFunc.gritx</code> masks <code>aCadDimPointsLinear{Aligned,Horizontal,Vertical,Random}</code>; <code>dim.cpp</code> <code>dimPoint1()</code>, <code>dimPoint2()</code> (min-distance guard <code>abstand_pkte(...) &gt; 0.001</code>, lines ~4592–4700), state wiring <code>z17..z20</code> (<code>YACC_TWO_PTS</code>); <code>TcDimTwoPointsCommand::dimTwoPoints</code> (aligned + angle overloads).</li>
+<li><strong>Verification:</strong> Test — dimension a known distance in each of the four orientations; verify displayed value equals the true distance and orientation matches; attempt a zero-length pick and verify rejection.</li>
+</ul>
+<h3 id="fr-cad-dim-002-element-linear-dimension-aligned-angled">FR-CAD-DIM-002 — Element linear dimension (aligned / angled)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes element linear dimensioning and picks a single eligible element, the system SHALL create a linear length dimension of that element, oriented either parallel to the element (&quot;aligned&quot;) or fixed to 0°, 90° or a free angle; when a fixed angle is chosen the command SHALL support dimensioning a box/ALL selection of elements sharing one part.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim size</code> (aligned, single pick only — see <code>p_dim</code>/<code>m_aligned</code>); <code>dim size angle 0|90|&lt;free&gt;</code> (angle first via <code>dimAngleElem</code>, then element selection with pick/<code>CONFIRM</code>/<code>ALL</code>). Aligned mode picks exactly one element (<code>getSingleSelectedElement</code>); angled mode dimensions the confirmed selection (<code>dimElementSize(angle,…)</code>) and reports msg 10835 if elements span multiple parts.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Element-based linear dimensioning is the primary way to annotate a single edge's length.</li>
+<li><strong>Source:</strong> masks <code>aCadDimElemLinear{Aligned,Horizontal,Vertical,Random}</code>; <code>dim.cpp</code> <code>dimSizeExecute()</code>, <code>dimSize()</code>, <code>dimOptionElem()</code>, wiring <code>z14/z14a/z15/z16</code> (<code>YACC_SIZE</code>,<code>YACC_ANGLE</code>); <code>TcDimSizeCommand::dimElementSize</code> (both overloads).</li>
+<li><strong>Verification:</strong> Test — dimension a line of known length in each orientation; box-select several parallel edges under a fixed angle and confirm one dimension per element; verify multi-part rejection message.</li>
+</ul>
+<h3 id="fr-cad-dim-003-contour-linear-extent-dimension">FR-CAD-DIM-003 — Contour linear (extent) dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes contour linear dimensioning and picks a contour, the system SHALL first (re)build contours from the active geometry, then create a linear dimension of the contour's extent along a horizontal (0°), vertical (90°) or free angle.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim size contour angle 0|90|&lt;free&gt;</code>; the mask first calls <code>delete contour end</code> (or <code>delete part contour end</code> when <code>ST_CAD_ContourDeleteOverAll</code> is not set) to consolidate contours before dimensioning. Contour mode forces single-pick selection (<code>p_dim</code>: <code>m_dimContour</code> ⇒ <code>e_selectPick</code>, <code>e_selectNoInfo</code>, prompt 10767). No &quot;aligned&quot; contour variant exists.</li>
+<li><strong>Priority:</strong> Conditional — applicable only when closed/joined contours exist.</li>
+<li><strong>Rationale:</strong> Annotating overall part/contour extent is required for bounding-size documentation.</li>
+<li><strong>Source:</strong> masks <code>aCadDimContourLinear{Horizontal,Vertical,Random}</code> (EnterFunction includes the contour-build preamble); <code>dim.cpp</code> <code>dimContour()</code> (<code>YACC_CONTOUR</code>, <code>createSelector(e_selContour)</code>), <code>TcDimSizeCommand::dimContourSize</code>.</li>
+<li><strong>Verification:</strong> Test — build a contour, dimension its extent horizontally and vertically; verify value equals the contour's bounding span along the chosen axis.</li>
+</ul>
+<h3 id="fr-cad-dim-004-short-open-linear-dimension">FR-CAD-DIM-004 — Short (open) linear dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> Where short-dimension mode is selected, the system SHALL create a two-point linear dimension rendered as a shortened/open dimension (one full witness/arrow, abbreviated dimension line) in aligned, horizontal, vertical or free orientation.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim open [angle 0|90|&lt;free&gt;]</code>; sets <code>m_short = true</code> (<code>dimOpen</code>). Uses the same two-point acquisition as FR-CAD-DIM-001 (<code>z17a..z20a</code>, <code>dimPoint1</code>/<code>dimPoint2</code>) but passes <code>t_isShort = true</code> to <code>TcDimTwoPointsCommand::dimTwoPoints</code>; the attribute stores <code>m_isShort</code> and a <code>m_shortLength</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Short dimensions are needed where space is limited or only one reference edge is available (e.g. symmetric parts).</li>
+<li><strong>Source:</strong> masks <code>aCadDimShortLinear{Aligned,Horizontal,Vertical,Random}</code>; <code>dim.cpp</code> <code>dimOpen()</code> (<code>YACC_OPEN</code>); <code>TcDimTwoPointsAttributeMemento</code> fields <code>m_isShort</code>, <code>m_shortLength</code>.</li>
+<li><strong>Verification:</strong> Test — create a short dimension in each orientation and verify shortened rendering plus correct value.</li>
+</ul>
+<h3 id="fr-cad-dim-005-angular-dimension-between-two-lines">FR-CAD-DIM-005 — Angular dimension between two lines</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes angular dimensioning and picks two distinct straight-line elements in the same part, the system SHALL create an angular dimension of the angle enclosed by the two lines.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim angle</code> (top-level <code>YACC_ANGLE</code> at start state); selector restricted to lines (<code>e_selElemLine</code>). Rejects picking the same element twice (<code>a_elementPtr != m_elementPtr</code>) and rejects cross-part pairs (msg 10835). Then enters offset placement.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Angle between edges is a fundamental GD annotation.</li>
+<li><strong>Source:</strong> mask <code>aCadDimAngle</code>; <code>dim.cpp</code> <code>dimLine1()</code>, <code>dimLine2()</code>, <code>dimOptionLine()</code> (<code>z26..z28</code>); <code>TcDimAngleCommand::dimAngle</code>; <code>TcDimAngleAttribute</code>.</li>
+<li><strong>Verification:</strong> Test — dimension the angle between two lines of known included angle; verify value; verify same-element and cross-part rejection.</li>
+</ul>
+<h3 id="fr-cad-dim-006-radius-dimension">FR-CAD-DIM-006 — Radius dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes radius dimensioning and picks a single round element (arc, fillet or circle), the system SHALL create a radius dimension of that element.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim radius</code>; selector <code>e_selElemRound</code> (<code>dimOptionRound</code>). Creation via <code>TcDimCircularCommand::dimRadius</code>; then offset placement. Radius display angle can subsequently be rotated (FR-CAD-DIM-020).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Radius callouts are required for arcs and fillets.</li>
+<li><strong>Source:</strong> mask <code>aCadDimRadius</code>; <code>dim.cpp</code> <code>dimRadius()</code> (<code>z23</code>, <code>YACC_RADIUS</code>); <code>TcDimRadiusAttribute</code>.</li>
+<li><strong>Verification:</strong> Test — dimension an arc of known radius; verify displayed value and &quot;R&quot; prefix rendering.</li>
+</ul>
+<h3 id="fr-cad-dim-007-diameter-dimension">FR-CAD-DIM-007 — Diameter dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes diameter dimensioning and picks a single round element, the system SHALL create a diameter dimension of that element.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim diameter</code>; selector <code>e_selElemRound</code> (<code>dimOptionDiameter</code>). Creation via <code>TcDimCircularCommand::dimDiameter</code>; then offset placement. Diameter display angle can subsequently be rotated (FR-CAD-DIM-020).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Diameter callouts are required for holes and circles.</li>
+<li><strong>Source:</strong> mask <code>aCadDimDiameter</code>; <code>dim.cpp</code> <code>dimDiameter()</code> (<code>z11</code>, <code>YACC_DIAMETER</code>); <code>TcDimDiameterAttribute</code>.</li>
+<li><strong>Verification:</strong> Test — dimension a circle of known diameter; verify value and &quot;⌀&quot; prefix rendering.</li>
+</ul>
+<h3 id="fr-cad-dim-008-arc-length-dimension">FR-CAD-DIM-008 — Arc-length dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes arc-length dimensioning and picks a single arc element, the system SHALL create a dimension whose value is the developed length of that arc.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim length</code>; selector <code>e_selElemArc</code> (<code>dimOptionArc</code>, single pick). Creation via <code>TcDimArcLengthCommand::dimElementArcLength</code>; the command rejects a second identical arc-length dimension on the same element. Then offset placement.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Arc length is needed where the developed (unwound) length of a curved edge matters (e.g. bending, unfolding/Abwicklung).</li>
+<li><strong>Source:</strong> mask <code>aCadDimArcLength</code>; <code>dim.cpp</code> <code>dimLength()</code> (<code>z21</code>, <code>YACC_LENGTH</code>); <code>TcDimArcLengthCommand</code>/<code>TcDimArcLengthAttribute</code>.</li>
+<li><strong>Verification:</strong> Test — dimension an arc of known radius and sweep; verify value equals r·θ.</li>
+</ul>
+<h3 id="fr-cad-dim-009-ordinate-dimension-x-y-axis">FR-CAD-DIM-009 — Ordinate dimension (X / Y axis)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user invokes ordinate dimensioning against the X or Y axis and picks a reference point, the system SHALL create a dimension of that point's coordinate distance from the drawing origin along the selected axis, implemented internally as a two-point dimension whose start point is locked to the origin.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim x_axis</code> sets angle 0°; <code>dim y_axis</code> sets angle 90° (<code>dimOrdinateAxis</code>). Creation via <code>TcDimTwoPointsCommand::dimOrdinate(point, elem, additional, angle{0|90}, …)</code>; the resulting attribute's start type is forced to <code>e_dimLockedPoint</code> and the end type reflects the snapped point. Then offset placement.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Ordinate/datum dimensioning references features to a common origin, common on sheet-metal layouts.</li>
+<li><strong>Source:</strong> masks <code>aCadDimOrdinateX</code>/<code>aCadDimOrdinateY</code>; <code>dim.cpp</code> <code>dimOrdinate()</code>, <code>dimOrdinateAxis()</code> (<code>z45</code>, <code>YACC_X_AXIS</code>/<code>YACC_Y_AXIS</code>); <code>TcDimTwoPointsCommand::dimOrdinate</code>; <code>TcDimTwoPointsAttribute::e_dimLockedPoint</code>.</li>
+<li><strong>Verification:</strong> Test — set an origin, dimension a point's X and Y ordinates; verify each equals the point's coordinate relative to origin.</li>
+</ul>
+<h3 id="fr-cad-dim-010-edit-dimension-text-content">FR-CAD-DIM-010 — Edit dimension text content</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL allow the user to change a selected dimension's text, either (a) inline by picking a dimension and entering a new text string, or (b) via the <code>M_ZeichnungDimText</code> dialog which reads back the dimension's current text (split around the <code>&lt;&gt;</code> value placeholder into leading/value/trailing parts), tolerance type, tolerance values, text height and direction, and writes the edited set back atomically.</li>
+<li><strong>Parameters &amp; options:</strong> Inline: <code>dim dim_text change</code> → pick (msg 10757) → new text (msg 10779) → <code>TcDimTextCommand::setText</code>. Dialog: <code>dim read 'M_ZeichnungDimText'</code> populates mask variables (<code>dimTextTypeVar</code> returns 1 if text contains <code>&lt;&gt;</code> else 2, <code>dimTextBeforeVar</code>/<code>dimValueVar</code>/<code>dimTextBehindVar</code>, tolerance type/top/bottom, size, angle); <code>dim write</code> applies text + size + direction + tolerances inside one action sequence (<code>dimTolWrite</code>); <code>dim write stop</code> cancels (<code>dimTextStop</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Overriding the auto-computed text (adding notes, symbols, fixed strings) is a core drafting need.</li>
+<li><strong>Source:</strong> mask <code>aCadChangeDimText</code>; <code>dim.cpp</code> <code>dimText()</code>, <code>dimTextMask()</code>, <code>dimTextTypeVar()</code>…<code>dimTextAngleVar()</code>, <code>dimTextWrite()</code>, <code>dimTolWrite()</code>, <code>dimTextStop()</code> (<code>z29..z43</code>, <code>YACC_READ</code>/<code>YACC_WRITE</code>/<code>YACC_STOP</code>); <code>TcDimTextCommand::setText</code>.</li>
+<li><strong>Verification:</strong> Test — edit a dimension's text inline and via the dialog; verify persistence, <code>&lt;&gt;</code> round-trip, and cancel behaviour.</li>
+</ul>
+<h3 id="fr-cad-dim-011-change-dimension-text-direction">FR-CAD-DIM-011 — Change dimension text direction</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user changes text direction and confirms a target direction, the system SHALL set the text writing angle of the selected dimension(s) to right (0°), up (+90°) or down (−90°).</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim dim_text angle &lt;dir&gt;</code> with dir ∈ {0,1,−1} mapped to {0°,+90°,−90°} (<code>dimTextAngle</code> switch). Direction value supplied by dialog <code>M_ZeichnungDimTextDirection</code> via <code>#ST_DimTextDirection</code>; applies to a picked dimension or box/ALL selection (<code>dimTextAngleSelMulti</code>, <code>dimTextAnglePick</code>/<code>Confirm</code>/<code>All</code>) through <code>TcDimTextCommand::setTextDirection</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Vertical/rotated text placement improves legibility on tall dimensions.</li>
+<li><strong>Source:</strong> mask <code>aCadChangeDimTextDirection</code>; <code>dim.cpp</code> <code>dimTextAngle()</code> (cases 1→90, −1→−90, 0→0), <code>dimTextAngleExecute()</code> (<code>z3h/z3i</code>, <code>YACC_ANGLE</code> under text option); msg 10793.</li>
+<li><strong>Verification:</strong> Test — apply each direction and verify text rotation on rendered dimension.</li>
+</ul>
+<h3 id="fr-cad-dim-012-change-dimension-text-font-size">FR-CAD-DIM-012 — Change dimension text (font) size</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user changes dimension text size, the system SHALL apply a new positive font height to the picked dimension or to a box/ALL selection, rejecting non-positive sizes.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim dim_text size</code> → real height (<code>dimTextSizeMulti</code>, guarded <code>t_size &gt; 0</code>) → pick / <code>CONFIRM</code> / <code>ALL</code> (<code>dimTextSizePick</code>/<code>Confirm</code>/<code>All</code> → <code>TcDimTextCommand::setTextSize(list,size)</code>). Font height persists per attribute (<code>TcDimAttribute::setFontHeight</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Per-dimension text sizing is needed to fit dense drawings and match standards.</li>
+<li><strong>Source:</strong> mask <code>aCadChangeDimTextSize</code>; <code>dim.cpp</code> <code>dimTextSize()</code>, <code>dimTextSizeMulti()</code>, <code>dimTextSizeExecute()</code> (<code>z3c/z3d</code>, <code>YACC_SIZE</code>); msg 10780.</li>
+<li><strong>Verification:</strong> Test — set a new size on one and on all dimensions; verify rendered height; verify a zero/negative entry is rejected.</li>
+</ul>
+<h3 id="fr-cad-dim-013-apply-edit-tolerances">FR-CAD-DIM-013 — Apply / edit tolerances</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL allow application of a top and bottom tolerance value and a tolerance presentation type to a dimension, where the type is one of: none (1), upper only (2), lower only (3), both (4), symmetric/equal (5), or applied limits (6).</li>
+<li><strong>Parameters &amp; options:</strong> Interactive path <code>dim tol</code> → pick → top tolerance (msg 10760) → bottom tolerance (msg 10761) → type 1–6 (msg 10762) → <code>TcDimToleranceCommand::setTolerances(attr,type,top,bottom)</code>. Same triple is also written by the text dialog (FR-CAD-DIM-010, <code>dimTolWrite</code>). Type mapping via <code>getToleranceType()</code>; stored on the attribute (<code>m_toleranceType</code>, <code>m_topTolerance</code>, <code>m_bottomTolerance</code>).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Tolerancing is mandatory for manufacturing drawings.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>dimTopTol()</code>, <code>dimBottomTol()</code>, <code>dimTolType()</code>, <code>getToleranceType()</code> (<code>z6..z9</code>, <code>YACC_DIM_TOL</code>); <code>TeDimEnumTypes.h</code> <code>TeDimToleranceType</code>; <code>TcDimToleranceCommand</code>.</li>
+<li><strong>Verification:</strong> Test — apply each of the six presentation types with sample values; verify rendered tolerance block matches type.</li>
+</ul>
+<h3 id="fr-cad-dim-014-move-offset-a-dimension">FR-CAD-DIM-014 — Move (offset) a dimension</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user picks a dimension and then a new position, the system SHALL recompute the dimension's offset so that its dimension line passes through (or as near as possible to) the new position, without altering the measured value.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim move</code> → pick dim (msg 10758) → new position (msg 10759, live preview) → <code>TcDimOffsetCommand::setOffsetPoint(attr,position)</code>. If the moved attribute is the one just created (chained move) the move action is merged into the creation action sequence and the affected elements are refreshed. Offset interpretation is attribute-specific.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Placement control (standoff distance) is required for readable drawings and is the mandatory final step of every creation command.</li>
+<li><strong>Source:</strong> mask <code>aCadMoveDim</code>; <code>dim.cpp</code> <code>dimMove()</code>, <code>dimMoveSingle()</code>, <code>dimPickAndHide()</code> (<code>z4/z5</code>, <code>YACC_MOVE</code>); <code>TcDimOffsetCommand::setOffsetPoint</code>; <code>TcDimAttribute::setOffset</code>/<code>setOffsetPoint</code>.</li>
+<li><strong>Verification:</strong> Test — move a dimension line and verify offset changes while value is unchanged; verify chained move undoes together with creation.</li>
+</ul>
+<h3 id="fr-cad-dim-015-move-dimension-text">FR-CAD-DIM-015 — Move dimension text</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user picks a dimension and then a new text position, the system SHALL store the text position as an offset relative to the dimension centre without changing the dimension geometry or value.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim dim_text move</code> → pick text (msg 10757) → new position (msg 10756, live preview) → <code>TcDimTextCommand::setTextPosition(attr,position)</code>; stored via <code>TcDimAttribute::setTextVector</code> (relative to <code>getElementMiddle</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Repositioning text avoids clashes with geometry and other annotations.</li>
+<li><strong>Source:</strong> mask <code>aCadMoveDimText</code>; <code>dim.cpp</code> <code>dimTextMove()</code>, <code>dimTextPickAndHide()</code> (<code>z2/z3a/z3b</code>, text <code>YACC_MOVE</code>).</li>
+<li><strong>Verification:</strong> Test — drag a dimension's text to a new location; verify text moves while dimension line/value are unchanged.</li>
+</ul>
+<h3 id="fr-cad-dim-016-delete-dimensions">FR-CAD-DIM-016 — Delete dimension(s)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user selects one or more dimensions (by pick, box or ALL) and confirms, the system SHALL delete the selected dimension attributes; the operation SHALL be undoable.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim remove</code> → multi-selection (<code>dimOptionDimMulti</code>) → pick / <code>CONFIRM</code> / <code>ALL</code> (<code>dimDelete</code>/<code>Confirm</code>/<code>All</code>) → <code>TcDimDeleteCommand::deleteDimAttributeList</code>. A separate API deletes all dimensions of a drawing (<code>deleteAllDimAttributes</code>). Prompt msg 10766; selection info level = count.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Removing obsolete/incorrect dimensions is a basic edit.</li>
+<li><strong>Source:</strong> mask <code>aCadDeleteDim</code>; <code>dim.cpp</code> <code>dimDeleteExecute()</code>, <code>dimDelete()</code>/<code>Confirm()</code>/<code>All()</code> (<code>z10</code>, <code>YACC_REMOVE</code>); <code>TcDimDeleteCommand</code>.</li>
+<li><strong>Verification:</strong> Test — delete via pick, box and ALL; verify removal and undo restore.</li>
+</ul>
+<h3 id="fr-cad-dim-017-set-default-dimension-text-height">FR-CAD-DIM-017 — Set default dimension text height</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user sets a default dimension text height, the system SHALL store it as the default font size applied to subsequently created dimensions.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim dim_text size default &lt;size&gt;</code> (value <code>#ST_DimFormatDefaultTextSize</code> from dialog <code>M_ZeichnungDimDefaultTextSize</code>); <code>dimDefaultTextSize()</code> → <code>setDimDefaultTextSize()</code> → <code>TcDimDrawManager::setFontSize</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> A consistent default height avoids per-dimension sizing effort.</li>
+<li><strong>Source:</strong> mask <code>aCadSetDimDefault</code>; <code>dim.cpp</code> <code>dimDefaultTextSize()</code> (<code>z3k</code>, <code>YACC_DEFAULT</code>); <code>TcDimDrawManager::setFontSize</code>/<code>getFontSize</code>.</li>
+<li><strong>Verification:</strong> Test — set a default, create a new dimension, verify its text height equals the default.</li>
+</ul>
+<h3 id="fr-cad-dim-018-set-decimal-precision-value-tolerance">FR-CAD-DIM-018 — Set decimal precision (value &amp; tolerance)</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user sets the dimension format, the system SHALL set the number of decimal places used to render dimension values and tolerances independently, and SHALL invalidate existing dimension visualizations so they re-render at the new precision.</li>
+<li><strong>Parameters &amp; options:</strong> <code>show dim_show &lt;valuePrecision&gt; &lt;tolerancePrecision&gt;</code> (<code>#ST_DimFormatValuePrecision</code>, <code>#ST_DimFormatTolerancePrecision</code> from dialog <code>M_ZeichnungDimFormat</code>); realized by <code>TcDimDrawManager::setPrecision(value,tolerance)</code> where value = −1 means &quot;no override&quot; and tolerance = −1 means &quot;same as value&quot;; <code>invalidateAttributes()</code> forces recompute.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Decimal precision governs conformance to drawing standards and rounding of displayed measurements.</li>
+<li><strong>Source:</strong> mask <code>aCadSetDimFormat</code> (wraps calls in <code>undo sequenz start/stop</code>); <code>TcDimDrawManager.h</code> <code>setPrecision</code>/<code>getPrecision</code>/<code>invalidateAttributes</code>.</li>
+<li><strong>Verification:</strong> Test — set value precision 2 and tolerance precision 3; verify rendered strings; change precision and verify existing dimensions re-render.</li>
+</ul>
+<h3 id="fr-cad-dim-019-set-dimension-arrow-size">FR-CAD-DIM-019 — Set dimension arrow size</h3>
+<ul>
+<li><strong>Requirement:</strong> When the user sets the dimension format arrow size to a positive value, the system SHALL set the length of dimension arrows for the drawing and record an undo action; a non-positive value SHALL be rejected.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim vertex &lt;arrowSize&gt;</code> (<code>#ST_DimFormatArrowSize</code>); <code>dimArrowSize()</code> guards <code>t_size &gt; 0</code>, registers <code>changeDimArrowSize()</code> undo action, then <code>setDimArrowSize()</code> → <code>TcDimDrawManager::setArrowLength</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Arrow sizing is a drawing-standard/legibility setting.</li>
+<li><strong>Source:</strong> mask <code>aCadSetDimFormat</code>; <code>dim.cpp</code> <code>dimArrowSize()</code> (<code>z44</code>, <code>YACC_VERTEX</code>); <code>TcDimDrawManager::setArrowLength</code>/<code>getArrowLength</code>.</li>
+<li><strong>Verification:</strong> Test — set arrow size, verify rendered arrow length and undo; verify zero/negative rejected.</li>
+</ul>
+<h3 id="fr-cad-dim-020-rotate-radius-diameter-display-angle">FR-CAD-DIM-020 — Rotate radius / diameter display angle</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a radius or diameter dimension is selected, the system SHALL allow rotating its display angle (the leader/callout orientation) to a new user-supplied angle without changing the measured radius/diameter value.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim radius … rotate</code> / <code>dim diameter … rotate</code> → pick existing radius/diameter dim (type-checked <code>e_dbaseDimRadiusAttribute</code> / <code>e_dbaseDimDiameterAttribute</code>) → new angle (real or picked point, msg 10763/10764) → <code>TcDimCircularCommand::setRadiusAngle</code> / <code>setDiameterAngle</code>.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Callout direction control avoids overlaps on dense circular features.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>dimRadiusPick()</code>/<code>dimRadiusRotate()</code> (<code>z24/z25</code>) and <code>dimDiameterPick()</code>/<code>dimDiameterRotate()</code> (<code>z12/z13</code>), both under <code>YACC_ROTATE</code>; <code>TcDimCircularCommand.h</code>.</li>
+<li><strong>Verification:</strong> Test — rotate a diameter callout and verify orientation changes while value is constant.</li>
+</ul>
+<h3 id="fr-cad-dim-021-set-dimension-layout-style">FR-CAD-DIM-021 — Set dimension layout style</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL support two dimension layout styles — standard (text breaks the dimension line) and enhanced (text sits on the dimension line) — and SHALL position dimension text accordingly for linear dimensions.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dim form &lt;style&gt;</code> with style 1 ⇒ <code>e_dimEnhancedLayout</code>, else <code>e_dimStandardLayout</code> (<code>dimLayout</code>); <code>TcDimDrawManager::setLayoutStyle</code>/<code>getLayoutStyle</code>. <code>TcDimAttribute::setTextLayoutPosition()</code> places text above/below the line in enhanced style.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Layout style matches differing regional/company drawing conventions.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>dimLayout()</code> (<code>z46</code>, <code>YACC_FORM</code>); <code>TcDimDrawManager.h</code> <code>TeDimLayoutStyle {e_dimStandardLayout=1, e_dimEnhancedLayout=2}</code>; <code>TcDimAttribute::setTextLayoutPosition</code>.</li>
+<li><strong>Verification:</strong> Demonstration — toggle layout style and verify text placement relative to the dimension line.</li>
+</ul>
+<h3 id="fr-cad-dim-022-dimension-visualization-colour">FR-CAD-DIM-022 — Dimension visualization colour</h3>
+<ul>
+<li><strong>Requirement:</strong> On activation of the dimensioning subsystem, the system SHALL display dimension visualizations in the colour configured in the system ruleset, and SHALL keep this colour synchronized when set via <code>dim set</code>.</li>
+<li><strong>Parameters &amp; options:</strong> <code>start_dim</code> fetches <code>SRW_DimensioningColor</code> via <code>DBInterface::GetValue</code> and applies it (<code>setDimColor</code>, <code>showDimAttributes</code>, <code>drawAllDimAttributes</code>) if dimensions were not already visible; <code>dim set</code> (<code>dimSet</code>) re-reads the ruleset value and applies it via <code>TcDimDrawManager::setColor</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Consistent, configurable dimension colour distinguishes annotations from geometry.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>start_dim()</code> (lines ~3279–3295), <code>dimSet()</code> (<code>YACC_SET</code>); <code>TcDimDrawManager::setColor</code>/<code>getColor</code>; ruleset keys <code>SRW_DimensioningColorPtr/DMV</code>.</li>
+<li><strong>Verification:</strong> Inspection/Test — change the ruleset colour; enter dimensioning and verify dimension render colour.</li>
+</ul>
+<h3 id="fr-cad-dim-023-dimension-attribute-object-model">FR-CAD-DIM-023 — Dimension attribute object model</h3>
+<ul>
+<li><strong>Requirement:</strong> Every dimension SHALL be represented as a <code>TcDimAttribute</code> (subclass of <code>TcDbaseAttribute</code>) carrying: overridable text (with <code>&lt;&gt;</code> placeholder), relative text vector, offset, tolerance type + top/bottom tolerance, font height, text direction (deg), a validity flag for its cached visualization, and an element-type hint for rendering; each concrete type SHALL implement <code>getValue()</code>, <code>recalculate()</code>, <code>getElementStart/Middle/End()</code>, <code>getStart/EndNormal()</code>, <code>getExtensionType()</code> and <code>isIdentical()</code>.</li>
+<li><strong>Parameters &amp; options:</strong> Element-type hints: <code>e_linearElement</code>, <code>e_arcElement</code>, <code>e_shortLineElement</code>, <code>e_linearNoArrows</code>. Concrete attributes: <code>TcDimTwoPointsAttribute</code> (incl. ordinate), <code>TcDimSizeAttribute</code>, <code>TcDimAngleAttribute</code>, <code>TcDimRadiusAttribute</code>, <code>TcDimDiameterAttribute</code>, <code>TcDimArcLengthAttribute</code>, <code>TcDimStaticArcAttribute</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> A common base defines the polymorphic contract the renderer, snapper and undo rely on.</li>
+<li><strong>Source:</strong> <code>TcDimAttribute.h</code> (full interface); concrete <code>TcDim*Attribute.h</code>.</li>
+<li><strong>Verification:</strong> Inspection — confirm each concrete attribute implements the pure-virtual contract; Test — read/write round-trip of the base fields.</li>
+</ul>
+<h3 id="fr-cad-dim-024-element-anchored-points-and-auto-recalculation">FR-CAD-DIM-024 — Element-anchored points and auto-recalculation</h3>
+<ul>
+<li><strong>Requirement:</strong> For dimensions anchored to geometry, each anchor point SHALL be classified by type, and the dimension SHALL automatically recalculate its value and geometry when the referenced elements change (move, split, merge, edit); on element split the dimension SHALL choose the best-fit sub-segment to keep dimensioning.</li>
+<li><strong>Parameters &amp; options:</strong> Point types (<code>TcDimTwoPointsAttribute::TeDimPointType</code>): <code>e_dimLockedPoint</code> (0, no element), <code>e_dimEndPoint</code> (1), <code>e_dimMiddlePoint</code> (2), <code>e_dimDegree0/90/180/270Point</code> (3–6, arc cardinal points), <code>e_dimVirtualCorner</code> (7). Lifecycle hooks: <code>prepareRecalculation()</code>, <code>adjustInternalElements(old,new)</code>, <code>getBestFit(orig,new,useOrig,useNew)</code>, <code>recalculate()</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Associative dimensions must track edited geometry to stay correct.</li>
+<li><strong>Source:</strong> <code>TcDimTwoPointsAttribute.h</code> (point-type enum + lifecycle methods); <code>TcDimAttribute::recalculate</code> (pure virtual).</li>
+<li><strong>Verification:</strong> Test — dimension an edge, move/trim it, and verify the dimension value and endpoints update; split an edge and verify best-fit segment is retained.</li>
+</ul>
+<h3 id="fr-cad-dim-025-duplicate-twin-dimension-avoidance">FR-CAD-DIM-025 — Duplicate (&quot;twin&quot;) dimension avoidance</h3>
+<ul>
+<li><strong>Requirement:</strong> Before creating a dimension, the system SHALL check for an existing identical dimension (same elements / points / angle) via <code>getTwin()</code>/<code>isIdentical()</code>; if a twin exists the new attribute SHALL NOT be created and the creation action sequence SHALL be aborted, with the existing dimension reported as the result.</li>
+<li><strong>Parameters &amp; options:</strong> Each creation command returns <code>getLastAttribute(bool&amp; isTwin)</code>; when <code>isTwin</code> is true the caller aborts the action sequence (<code>abortActionSequence</code>) and suppresses feedback (<code>m_feedbackAttributePtr = 0</code>). Applies to size, two-points, arc-length, angle, radius, diameter creation.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Prevents clutter and redundant/ambiguous annotations.</li>
+<li><strong>Source:</strong> <code>TcDimCommand::getTwin</code>, <code>TcDimAttribute::isIdentical</code>; <code>dim.cpp</code> <code>dimSizeExecute</code>, <code>dimPoint2</code>, <code>dimLength</code>, <code>dimLine2</code>, <code>dimRadius</code>, <code>dimDiameter</code> (<code>a_twin</code> handling / <code>abortActionSequence</code>).</li>
+<li><strong>Verification:</strong> Test — dimension the same feature twice identically; verify only one dimension exists and no spurious undo step.</li>
+</ul>
+<h3 id="fr-cad-dim-026-eligible-element-constraint">FR-CAD-DIM-026 — Eligible-element constraint</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL permit dimensioning only of eligible element types: lines, chamfers (Fase), arcs (Bogen), fillets (Rundung) and circles; ineligible picks SHALL be rejected. Point acquisition for two-point dimensions additionally accepts point (<code>PUNKT</code>) and text (<code>DB_TEXT</code>) reference geometry.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcDimCommand::isValidDimElement</code> (lines/chamfers/arcs/fillets/circles). <code>getDimElement</code> accepts <code>LINIE, FASE, KREIS, BOGEN, RUNDUNG, DB_TEXT, PUNKT</code> for endpoint snapping. Round-only selectors (<code>e_selElemRound</code>) gate radius/diameter; arc-only (<code>e_selElemArc</code>) gates arc length; line-only (<code>e_selElemLine</code>) gates angular.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Restricting to measurable geometry prevents undefined dimensions.</li>
+<li><strong>Source:</strong> <code>TcDimCommand.h</code> <code>isValidDimElement</code>; <code>dim.cpp</code> <code>getDimElement()</code> type switch (lines ~4415–4421), selector types in <code>TeDimSelectorType</code>.</li>
+<li><strong>Verification:</strong> Test — attempt to dimension each ineligible/eligible type; verify acceptance/rejection.</li>
+</ul>
+<h3 id="fr-cad-dim-027-snap-acquisition-algorithm-for-two-point-dimensions">FR-CAD-DIM-027 — Snap acquisition algorithm for two-point dimensions</h3>
+<ul>
+<li><strong>Requirement:</strong> For two-point dimensioning, when the user picks near geometry the system SHALL first attempt to catch an element in the active part, then (on failure) in the configured catch range, and SHALL snap the picked coordinate to the nearest of the caught element's characteristic points; if no element is caught it SHALL attempt to catch a circle/arc/fillet centre point and identify the owning element.</li>
+<li><strong>Parameters &amp; options:</strong> <code>getDimElement(x,y)</code>: sets catch mode <code>e_catchElements</code>, range <code>AKTIV_TEIL</code> then falls back to <code>m_fangBereich</code>; retrieves up to three element points (<code>holeElementPunkte</code>) and selects the minimum-distance point (<code>betrag_vektor</code>); centre fallback uses <code>e_catchPoints</code> and matches index 0 (circle) or 2 (arc/fillet). Catch mode/range are saved and restored around the operation. <code>dim</code> restricts snapping to the active part when <code>dimPart</code> set <code>m_fangBereich = AKTIV_TEIL</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Robust snapping to true endpoints/centres is required for accurate, repeatable dimensions.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>getDimElement()</code> (lines ~4379–4553), <code>dimPart()</code>; catch API <code>db_setze_fang_modus</code>/<code>db_setze_fang_bereich</code>, <code>cad_fange_pick_punkt</code>.</li>
+<li><strong>Verification:</strong> Test — pick near an endpoint and near a circle centre; verify the snapped coordinate equals the true endpoint/centre.</li>
+</ul>
+<h3 id="fr-cad-dim-028-same-part-constraint-for-two-elementtwo-point-dimensions">FR-CAD-DIM-028 — Same-part constraint for two-element/two-point dimensions</h3>
+<ul>
+<li><strong>Requirement:</strong> If the two references of a two-point or angular dimension do not belong to the same part, the system SHALL reject the creation and inform the user.</li>
+<li><strong>Parameters &amp; options:</strong> <code>dimPoint2</code> and <code>dimLine2</code> compare the resolved part pointers (<code>S_dimDataPtr-&gt;m_partPtr == a_partPtr</code>); on mismatch they emit info message 10835 (&quot;Elemente befinden sich nicht im selben Teil&quot; — elements are not in the same part) and do not create the dimension.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Cross-part distances are generally undefined for the associative model.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>dimPoint2()</code> (line ~4613/4684), <code>dimLine2()</code> (line ~5044/5091), <code>db_get_text(10835)</code>.</li>
+<li><strong>Verification:</strong> Test — pick references in two different parts; verify rejection and message.</li>
+</ul>
+<h3 id="fr-cad-dim-029-value-placeholder-substitution-in-text">FR-CAD-DIM-029 — Value placeholder substitution in text</h3>
+<ul>
+<li><strong>Requirement:</strong> When a dimension's overridable text contains the token <code>&lt;&gt;</code>, the renderer SHALL substitute the token with the computed dimension value; the text editor SHALL split stored text into leading text, the <code>&lt;&gt;</code> value marker, and trailing text so the value part remains dynamic.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcDimAttribute::setText</code> documents <code>&lt;&gt;</code> replacement; <code>dimTextTypeVar</code> returns type 1 (dynamic, contains <code>&lt;&gt;</code>) vs 2 (literal); <code>dimTextBeforeVar</code> returns the substring before <code>&lt;&gt;</code>, <code>dimTextBehindVar</code> the substring after (<code>index(&quot;&lt;&gt;&quot;)</code>), <code>dimValueVar</code> returns the current computed value.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Preserving a dynamic value while adding prefixes/suffixes (e.g. &quot;R&lt;&gt;&quot; , &quot;&lt;&gt; ±0.1&quot;) keeps text correct after edits.</li>
+<li><strong>Source:</strong> <code>TcDimAttribute.h</code> <code>setText</code> doc; <code>dim.cpp</code> <code>dimTextTypeVar()</code>, <code>dimTextBeforeVar()</code>, <code>dimTextBehindVar()</code>, <code>dimValueVar()</code> (lines ~5138–5214).</li>
+<li><strong>Verification:</strong> Test — set text &quot;⌀&lt;&gt; H7&quot;, edit the geometry, verify the value portion updates while prefix/suffix remain.</li>
+</ul>
+<h3 id="fr-cad-dim-030-measured-value-semantics-per-dimension-type">FR-CAD-DIM-030 — Measured value semantics per dimension type</h3>
+<ul>
+<li><strong>Requirement:</strong> Each dimension's reported value (<code>getValue()</code>) SHALL equal the correct geometric quantity for its type: linear/two-point → straight distance along the dimension direction; angular → included angle between the two lines; radius → element radius; diameter → 2×radius; arc length → developed arc length; ordinate → coordinate offset from origin along the selected axis.</li>
+<li><strong>Inputs/Outputs &amp; tolerances:</strong> Inputs are the anchored geometry/points; output is a double consumed by text rendering and precision formatting (FR-CAD-DIM-018). Two-point value uses the projected/aligned length per <code>m_angle</code>/<code>m_aligned</code>; memento stores <code>m_length</code>, <code>m_angle</code>, <code>m_shortLength</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> The measured value is the entire purpose of a dimension; correctness is critical.</li>
+<li><strong>Source:</strong> <code>TcDimAttribute::getValue</code> (pure virtual) with per-type implementations in <code>TcDim{TwoPoints,Size,Angle,Radius,Diameter,ArcLength}Attribute.cpp</code>; <code>TcDimTwoPointsAttributeMemento</code> (<code>m_length</code>,<code>m_angle</code>).</li>
+<li><strong>Verification:</strong> Analysis + Test — for each type, compare <code>getValue()</code> against an independently computed reference for known geometry.</li>
+</ul>
+<h3 id="fr-cad-dim-031-offset-placement-control">FR-CAD-DIM-031 — Offset / placement control</h3>
+<ul>
+<li><strong>Requirement:</strong> The system SHALL store, per dimension, a placement offset that positions the dimension drawing relative to the dimensioned geometry, settable either directly (scalar offset) or by supplying a point through which the dimension line should pass; offset interpretation SHALL be attribute-specific.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TcDimAttribute::setOffset(double)</code>, <code>setOffsetPoint(TcVector)</code> (pure virtual per type), <code>getOffset()</code>; <code>TcDimOffsetCommand::setOffsetPoint(attr,position)</code> is the command wrapper used by all move/placement flows.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Every creation ends in placement; offset defines standoff and side.</li>
+<li><strong>Source:</strong> <code>TcDimAttribute.h</code> (<code>setOffset</code>/<code>setOffsetPoint</code>/<code>getOffset</code>); <code>TcDimOffsetCommand.h</code>.</li>
+<li><strong>Verification:</strong> Test — set offset by point and by scalar; verify dimension line passes through / stands off as specified.</li>
+</ul>
+<h3 id="fr-cad-dim-032-extension-witness-line-type">FR-CAD-DIM-032 — Extension (witness) line type</h3>
+<ul>
+<li><strong>Requirement:</strong> Each dimension SHALL declare an extension-line type governing whether witness lines are drawn and how far: none, short, or long (extended to the dimensioned point); the type SHALL in general be determined by the dimension kind.</li>
+<li><strong>Parameters &amp; options:</strong> <code>TeDimExtensionType {e_dimExtensionNone=0, e_dimExtensionShort=1, e_dimExtensionLong=2}</code>; <code>TcDimAttribute::getExtensionType()</code> (virtual); stored per two-point attribute (<code>m_extensionType</code>).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Witness-line behaviour is part of drawing-standard compliance and readability.</li>
+<li><strong>Source:</strong> <code>TeDimEnumTypes.h</code>; <code>TcDimAttribute::getExtensionType</code>; <code>TcDimTwoPointsAttributeMemento::m_extensionType</code>.</li>
+<li><strong>Verification:</strong> Inspection/Demonstration — verify each dimension type renders the documented witness-line style.</li>
+</ul>
+<h3 id="fr-cad-dim-033-undo-memento-model-for-dimensions">FR-CAD-DIM-033 — Undo / memento model for dimensions</h3>
+<ul>
+<li><strong>Requirement:</strong> All dimension create/modify/delete operations SHALL be undoable via a memento capturing the attribute's internal state (excluding associated elements and cached visualization, which are regenerated), and SHALL be grouped into atomic action sequences via <code>TcDbaseActionManager</code> (start/end/abort), so that a compound operation (e.g. create-then-place, or format change) undoes as one step.</li>
+<li><strong>Parameters &amp; options:</strong> Per-type mementos (<code>TcDim*AttributeMemento</code>) store geometry/value/angle/tolerance/short-length etc.; <code>startActionSequence</code>/<code>endActionSequence</code>/<code>abortActionSequence</code>; format mask wraps precision+arrow changes in <code>undo sequenz start/stop</code>; chained move merges into the creation sequence (FR-CAD-DIM-014).</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Reliable, correctly-grouped undo is required for an interactive editor.</li>
+<li><strong>Source:</strong> <code>TcDimTwoPointsAttributeMemento.h</code> (and sibling <code>*Memento.h</code>); <code>dim.cpp</code> action-sequence calls throughout; <code>aCadSetDimFormat</code> <code>undo sequenz start/stop</code>.</li>
+<li><strong>Verification:</strong> Test — undo/redo each operation; verify create+place and format changes each undo as a single step.</li>
+</ul>
+<h3 id="fr-cad-dim-034-mode-and-licensing-gating">FR-CAD-DIM-034 — Mode and licensing gating</h3>
+<ul>
+<li><strong>Requirement:</strong> The dimensioning subsystem SHALL be unavailable in Lite mode and when TruTops runs on-machine, and SHALL require the dimensioning password/dongle authorization; if authorization fails at command start the command SHALL terminate without side effects.</li>
+<li><strong>Parameters &amp; options:</strong> <code>init_dim_befehl</code> returns error (disabling registration) when <code>ST_Lite_Modus == &quot;1&quot;</code> or <code>ST_TOPS_RUNS_ON_MACHINE == &quot;1&quot;</code>, and only registers states if <code>TcAppStatePassword::SetPasswordDimensioning(isLite)</code> succeeds; <code>start_dim</code> re-checks <code>SetPasswordDimensioning()</code> and pops the automaton (<code>ASM_POP</code>) if it fails.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Licensing/feature gating must prevent use of an unlicensed capability.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>init_dim_befehl()</code> (lines ~5597–5620), <code>start_dim()</code> (lines ~3271–3276); <code>TcAppStatePassword::SetPasswordDimensioning</code>.</li>
+<li><strong>Verification:</strong> Inspection/Test — run in Lite/on-machine and unlicensed configurations; verify dimensioning is disabled/aborts cleanly.</li>
+</ul>
+<h3 id="fr-cad-dim-035-selection-modes-for-multi-target-operations">FR-CAD-DIM-035 — Selection modes for multi-target operations</h3>
+<ul>
+<li><strong>Requirement:</strong> Dimension edit operations that can target multiple dimensions (text size, text direction, delete) SHALL support single-pick, box (rubber-box) and ALL selection with a confirm step, while creation and per-object operations SHALL use single-pick selection.</li>
+<li><strong>Parameters &amp; options:</strong> Multi selectors <code>dimMultiSelector</code> with <code>e_selectInfoCount</code> and <code>pick</code>/<code>confirm()</code>/<code>all()</code> handlers (<code>…Pick</code>/<code>…Confirm</code>/<code>…All</code>); single selectors <code>dimSingleSelector</code> (<code>e_selectSingle</code>,<code>e_selectPick</code>); contour/aligned modes force single pick (<code>p_dim</code>). Selector kinds by target: <code>e_selDim</code>, <code>e_selDimText</code>, <code>e_selDimDiameter</code>, <code>e_selDimRadius</code>, <code>e_selElem</code>/<code>Round</code>/<code>Line</code>/<code>Arc</code>, <code>e_selContour</code>.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Batch editing of many dimensions is essential for productivity; creation must stay unambiguous.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>dimSingleSelector</code>/<code>dimMultiSelector</code>/<code>dimElemSelector</code>/<code>dimPointSelector</code>/<code>dimPosSelector</code>, <code>TeDimSelectorType</code>; delete/size/direction Confirm/All handlers.</li>
+<li><strong>Verification:</strong> Test — box-select and ALL-select for delete and text size; verify batch application; verify creation accepts only single picks where required.</li>
+</ul>
+<h3 id="fr-cad-dim-036-interactive-live-feedback-preview">FR-CAD-DIM-036 — Interactive live feedback / preview</h3>
+<ul>
+<li><strong>Requirement:</strong> During point acquisition and placement the system SHALL provide live visual feedback: a rubber-band line from the first to the moving second point, and a live preview of the dimension following the cursor during offset/text placement, with the persisted attribute temporarily hidden while its preview is shown.</li>
+<li><strong>Parameters &amp; options:</strong> <code>p_dimPoint2</code> sets <code>RUBBER_LINE</code> feedback anchored at point 1; placement uses <code>cad_free_define_feedback(resetOffset/resetTextPos, nextSegment)</code>; <code>createFeedback()</code>/<code>hideAttributeForFeedback()</code>/<code>cleanFeedback()</code> manage the preview attribute (<code>m_feedbackAttributePtr</code>). Prompts guide each step (msgs 10753/10754/10756–10780/10793).</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Live feedback makes placement predictable and reduces rework.</li>
+<li><strong>Source:</strong> <code>dim.cpp</code> <code>p_dimPoint2()</code>, <code>p_dimMove()</code>, <code>p_dimTextPosition()</code>, <code>createFeedback</code>/<code>hideAttributeForFeedback</code>/<code>cleanFeedback</code>; <code>cad_define_feedback(RUBBER_LINE,…)</code>.</li>
+<li><strong>Verification:</strong> Demonstration — observe rubber-band and preview during creation and placement.</li>
+</ul>
+<h2 id="open-questions-ambiguities">4. Open Questions &amp; Ambiguities</h2>
+<ol>
+<li><strong>Free-angle entry unit and range.</strong> <code>dim … angle &lt;free&gt;</code> reads a real (<code>ASM_REAL</code>) as the dimension angle; the source does not constrain units/range here. Assumed degrees, unbounded, normalized downstream. (Needs confirmation against <code>TcDimSizeAttribute</code>/<code>TcDimTwoPointsAttribute</code> recalculation.)</li>
+<li><strong>No aligned contour variant.</strong> The mask set provides contour dimensioning only in horizontal/vertical/free (<code>aCadDimContourLinear{Horizontal,Vertical,Random}</code>), with no aligned counterpart, whereas points/element/short families all have an aligned variant. Whether &quot;aligned contour&quot; is intentionally excluded or simply not exposed is unclear.</li>
+<li><strong>Tolerance interactive entry (<code>dim tol</code>).</strong> The <code>YACC_DIM_TOL</code> path (<code>dimTopTol</code>→<code>dimBottomTol</code>→<code>dimTolType</code>) is fully wired in <code>init_dim_befehl</code> but no mask in <code>aCadDimFunc.gritx</code> calls <code>dim tol</code>; tolerance entry appears to be reached only through the <code>M_ZeichnungDimText</code> dialog (<code>dim write</code>). Confirm whether a separate tolerance mask exists elsewhere.</li>
+<li><strong><code>dim form</code> (layout) exposure.</strong> <code>dimLayout</code>/<code>YACC_FORM</code> and <code>TeDimLayoutStyle</code> exist, but <code>aCadSetDimFormat</code> only calls <code>show dim_show</code> and <code>dim vertex</code>; the mask/dialog that issues <code>dim form &lt;style&gt;</code> was not found in this slice. FR-CAD-DIM-021 is therefore an inferred capability with uncertain UI binding.</li>
+<li><strong>Precision sentinels.</strong> <code>TcDimDrawManager::setPrecision</code> documents value <code>-1</code> = &quot;no override&quot; and tolerance <code>-1</code> = &quot;same as value&quot;, but the value ranges supplied by <code>M_ZeichnungDimFormat</code> (min/max decimal places) are defined in the dialog mask, not here.</li>
+<li><strong>Diameter/radius twin semantics.</strong> <code>dimDiameter</code>/<code>dimRadius</code> treat a twin as success-with-abort (returns the existing attribute, aborts the sequence). It is unclear whether the UI then re-enters placement on the pre-existing dimension or silently no-ops. (inferred)</li>
+<li><strong><code>TcDimStaticArcAttribute</code> role.</strong> A <code>TcDimStaticArcAttribute</code>/memento exists in <code>dbase_dim</code> but is not referenced by any <code>dim.cpp</code> creation handler in this slice; its trigger (possibly bend/unfolding annotation, or import) is unconfirmed.</li>
+<li><strong>Ordinate additional element.</strong> <code>dimOrdinate</code> passes an <code>a_element2Ptr</code> &quot;additional&quot; element for a virtual reference point, but the acquisition of that second element for ordinates is not evident in the single-pick <code>dimOrdinate</code> flow; its population path needs confirmation.</li>
+<li><strong>Message-ID text.</strong> Prompt/behaviour is inferred from <code>db_cad_meldung</code>/<code>cad_selector_prompt</code> numeric IDs and German code comments; the exact user-facing strings live in a resource catalog not read here.</li>
+</ol>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-cad-detail-dimensioning-commands-doc-10.3-cad-detail-dimensioning-commands-id-prefix-fr-cad-dim-srs-standard-isoiecieee-291482018-tier-detailed-parent-10-fr-cad-geometry-drawing-editing-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-10-fr-cad-geometry-drawing-editing-00-index-reading-guide-04-domain-model-glossary-60-requirements-traceability-index-tags-requirements-trutops-functional-requirements-cad-detailed">product: trutopscad
+org: trumpf
+title: "CAD Detail — Dimensioning Commands"
+doc: "10.3 - CAD Detail - Dimensioning Commands"
+id-prefix: "FR-CAD-DIM"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+tier: detailed
+parent: "[[10 - FR - CAD Geometry & Drawing Editing]]"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[10 - FR - CAD Geometry & Drawing Editing]]", "[[00 - Index & Reading Guide]]", "[[04 - Domain Model & Glossary]]", "[[60 - Requirements Traceability Index]]"]
+tags: [requirements, trutops, functional-requirements, cad, detailed]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#command-algorithm-inventory">2. Command / Algorithm Inventory</a>
+  </li>
+  <li level="2">
+   <a href="#interactive-commands-grit-masks-dim-sub-command">2.1 Interactive commands (GRIT masks →  sub-command)</a>
+  </li>
+  <li level="2">
+   <a href="#kernel-algorithms-object-model-capabilities">2.2 Kernel algorithms / object-model capabilities</a>
+  </li>
+  <li level="1">
+   <a href="#detailed-requirements">3. Detailed Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-001-two-point-linear-dimension">FR-CAD-DIM-001 — Two-point linear dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-002-element-linear-dimension-aligned-angled">FR-CAD-DIM-002 — Element linear dimension (aligned / angled)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-003-contour-linear-extent-dimension">FR-CAD-DIM-003 — Contour linear (extent) dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-004-short-open-linear-dimension">FR-CAD-DIM-004 — Short (open) linear dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-005-angular-dimension-between-two-lines">FR-CAD-DIM-005 — Angular dimension between two lines</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-006-radius-dimension">FR-CAD-DIM-006 — Radius dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-007-diameter-dimension">FR-CAD-DIM-007 — Diameter dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-008-arc-length-dimension">FR-CAD-DIM-008 — Arc-length dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-009-ordinate-dimension-x-y-axis">FR-CAD-DIM-009 — Ordinate dimension (X / Y axis)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-010-edit-dimension-text-content">FR-CAD-DIM-010 — Edit dimension text content</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-011-change-dimension-text-direction">FR-CAD-DIM-011 — Change dimension text direction</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-012-change-dimension-text-font-size">FR-CAD-DIM-012 — Change dimension text (font) size</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-013-apply-edit-tolerances">FR-CAD-DIM-013 — Apply / edit tolerances</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-014-move-offset-a-dimension">FR-CAD-DIM-014 — Move (offset) a dimension</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-015-move-dimension-text">FR-CAD-DIM-015 — Move dimension text</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-016-delete-dimensions">FR-CAD-DIM-016 — Delete dimension(s)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-017-set-default-dimension-text-height">FR-CAD-DIM-017 — Set default dimension text height</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-018-set-decimal-precision-value-tolerance">FR-CAD-DIM-018 — Set decimal precision (value & tolerance)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-019-set-dimension-arrow-size">FR-CAD-DIM-019 — Set dimension arrow size</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-020-rotate-radius-diameter-display-angle">FR-CAD-DIM-020 — Rotate radius / diameter display angle</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-021-set-dimension-layout-style">FR-CAD-DIM-021 — Set dimension layout style</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-022-dimension-visualization-colour">FR-CAD-DIM-022 — Dimension visualization colour</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-023-dimension-attribute-object-model">FR-CAD-DIM-023 — Dimension attribute object model</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-024-element-anchored-points-and-auto-recalculation">FR-CAD-DIM-024 — Element-anchored points and auto-recalculation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-025-duplicate-twin-dimension-avoidance">FR-CAD-DIM-025 — Duplicate ("twin") dimension avoidance</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-026-eligible-element-constraint">FR-CAD-DIM-026 — Eligible-element constraint</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-027-snap-acquisition-algorithm-for-two-point-dimensions">FR-CAD-DIM-027 — Snap acquisition algorithm for two-point dimensions</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-028-same-part-constraint-for-two-elementtwo-point-dimensions">FR-CAD-DIM-028 — Same-part constraint for two-element/two-point dimensions</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-029-value-placeholder-substitution-in-text">FR-CAD-DIM-029 — Value placeholder substitution in text</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-030-measured-value-semantics-per-dimension-type">FR-CAD-DIM-030 — Measured value semantics per dimension type</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-031-offset-placement-control">FR-CAD-DIM-031 — Offset / placement control</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-032-extension-witness-line-type">FR-CAD-DIM-032 — Extension (witness) line type</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-033-undo-memento-model-for-dimensions">FR-CAD-DIM-033 — Undo / memento model for dimensions</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-034-mode-and-licensing-gating">FR-CAD-DIM-034 — Mode and licensing gating</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-035-selection-modes-for-multi-target-operations">FR-CAD-DIM-035 — Selection modes for multi-target operations</a>
+  </li>
+  <li level="2">
+   <a href="#fr-cad-dim-036-interactive-live-feedback-preview">FR-CAD-DIM-036 — Interactive live feedback / preview</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">4. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></span>
+ <span class="next"><a href="104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    
+</body>
+</html>

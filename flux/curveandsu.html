@@ -1,0 +1,316 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Curve and Surface Parametrization</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">General Notes</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">General Notes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="curveandsu.html">Curve and Surface Parametrization</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Curve and Surface Parametrization</h1>
+<p>V1 ● 20150228 ● AV</p>
+<h2 id="curves">Curves</h2>
+<h3 id="line3">Line3</h3>
+<p>A line is defined in its own coordinate system and stretches along the X axis in that system. Technically, the orientations of the Y and Z axes are irrelevant, so only the origin and X-vector are stored rather than a complete coordinate system.</p>
+<p>Definition:
+The parametrization is in mm and is simply the distance along the X axis.</p>
+<h3 id="arc3">Arc3</h3>
+<p>An arc is defined in its own local coordinate system, where it lies in the XY plane and winds around the Z axis. The center of the arc is at the origin, and <code>T=0</code> corresponds to a point lying on the X axis. <code>T</code> is measured in radians.</p>
+<p>Definition:
+<code>R</code> is the radius of the arc.</p>
+<h3 id="ellipse3">Ellipse3</h3>
+<p>The parametrization of <code>Ellipse3</code> is identical to that of an arc. The ellipse is defined in the XY plane with center at the origin. <code>T</code> is measured in radians, winding clockwise about the X axis.</p>
+<p>image:image19.png[image19,width=174,height=119]</p>
+<p>image:image20.png[image20,width=226,height=159]</p>
+<p>Definition:
+<code>XRadius</code> is the radius measured along the X axis.
+<code>YRadius</code> is the radius measured along the Y axis.</p>
+<p>Note that the X and Y directions must be the major and minor axes of the ellipse, though either of them can be the major and the other the minor. That is, <code>XRadius</code> may be smaller or larger than <code>YRadius</code>.</p>
+<h3 id="coniccurve3">ConicCurve3</h3>
+<p>The parametrization of <code>ConicCurve3</code> varies depending on the form of the curve. This type can represent ellipses, hyperbolas, or parabolas, all the conic sections, and the parametrization is different for each type. For an exhaustive definition, see the IGES reference, Entity type 104.</p>
+<p>This is rarely used except to import type 104 entities from IGES. It is possible that in the future this may be deprecated and converted into <code>NurbCurve</code> on import.</p>
+<h3 id="piecewisecubic3">PiecewiseCubic3</h3>
+<p>This represents a piecewise cubic curve. There are multiple knots in the curve, and between each knot the curve is a cubic with its own cubic polynomial coefficients. The parametrization can be understood by studying the polynomial curve, Entity type 112, in the IGES reference.</p>
+<p>Like <code>ConicCurve3</code>, this may be deprecated in the future and converted into <code>NurbCurve</code> on import.</p>
+<h3 id="polyline3">Polyline3</h3>
+<p>This represents a simple piecewise linear approximation given by <code>N</code> points where <code>N &gt;= 2</code>. The parametrization goes from <code>0 .. N-1</code>.</p>
+<p>The integer part of the parameter is used to select a segment within the polyline, and the fractional part is the lie along that segment, where <code>0</code> is start of segment and <code>1</code> is end of segment. Thus, a point with parameter <code>2.5</code> lies at the midpoint of the third segment in the <code>Polyline3</code>.</p>
+<p>image:image21.png[image21,width=293,height=108]</p>
+<h3 id="nurbcurve3">NurbCurve3</h3>
+<p>This is a classic NURBS curve, and the parametrization is given by the knot vector.</p>
+<h2 id="surfaces">Surfaces</h2>
+<h3 id="cylinder">Cylinder</h3>
+<p>A cylinder is defined in its own local coordinate space and is then lofted into the desired location and orientation using a transform.</p>
+<p>Definition:
+<code>R</code> is the radius of the cylinder in mm.</p>
+<p>Parametrization:
+<code>U</code> goes around the Z axis, along the XY plane, and is in radians from <code>0 .. 2PI</code>.
+<code>V</code> goes along the Z axis, is in mm, and is unbounded.</p>
+<h3 id="cone">Cone</h3>
+<p>A cone is defined in its own local coordinate space and has a transform to move it into the desired location and orientation.</p>
+<p>Definition:
+<code>R</code> is the radius of the cone at the XY plane.
+As we go higher in Z, the radius increases.
+<code>A</code> is the semi-angle subtended by the cone at the tip.
+At a given <code>Z</code>, radius is <code>R + tan(A)</code>.</p>
+<p>Parametrization:
+<code>U</code> goes around the Z axis, along the XY plane, and is in radians from <code>0 .. 2PI</code>.
+<code>V</code> goes vertically along the Z axis and is in mm.</p>
+<p>image:image22.png[image22,width=196,height=164]</p>
+<p>image:image23.png[image23,width=206,height=205]</p>
+<h3 id="plane">Plane</h3>
+<p>A plane is defined in its own local coordinate system. In this coordinate system, the plane coincides with the XY plane.</p>
+<p>Parametrization:
+<code>U</code> is in mm along the X axis of the local coordinate system, from <code>-Infinity .. +Infinity</code>.
+<code>V</code> is in mm along the Y axis of the local coordinate system, from <code>-Infinity .. +Infinity</code>.</p>
+<h3 id="ruledsurface">RuledSurface</h3>
+<p>A <code>RuledSurface</code> is defined by two generator curves. The surface is obtained by connecting corresponding points of these two curves with straight lines. The two generator curves must therefore have equal parametric domains.</p>
+<p>Definition:
+<code>Cb</code> is the bottom generator curve.
+<code>Ct</code> is the top generator curve, which must have the same parameter domain as <code>Cb</code>.</p>
+<p>Parametrization:
+<code>V</code> is used to evaluate points <code>Pb</code> on curve <code>Cb</code> and <code>Pt</code> on curve <code>Ct</code>, using <code>V</code> as parameter input to these curves. <code>V</code> must lie between <code>Tmin .. Tmax</code> of the domain of <code>Cb</code>.
+<code>U</code> is used to interpolate between <code>Pb</code> and <code>Pt</code> and must lie between <code>0 .. 1</code>.</p>
+<h3 id="sphere">Sphere</h3>
+<p>image:image24.png[image24,width=140,height=117]</p>
+<p>image:image25.png[image25,width=234,height=150]</p>
+<p>A sphere is defined in its own local coordinate system.</p>
+<p>Definition:
+<code>R</code> is the radius of the sphere in mm.</p>
+<p>Parametrization:
+<code>U</code> goes around the Z axis, along the XY plane, and is in radians from <code>0 .. 2PI</code>.
+<code>V</code> goes vertically and is the elevation angle of the point from the XY plane. The domain is <code>-PI .. +PI</code>.</p>
+<h3 id="spunsurface">SpunSurface</h3>
+<p>A <code>SpunSurface</code> is defined by rotating a generator curve about the Z axis.</p>
+<p>Definition:
+<code>Cg</code> is the parametric generator curve that is spun around the Z axis.</p>
+<p>Parametrization:
+<code>V</code> is used to evaluate a point <code>Peval</code> on the generator curve <code>Cg</code>. The domain of <code>V</code> is the same as the <code>T</code> domain of <code>Cg</code>.
+<code>U</code> is used to rotate point <code>Peval</code> around the Z axis in a counter-clockwise direction and is measured in radians. The domain of <code>U</code> is <code>0 .. 2PI</code>.</p>
+<p>Note: The picture often shows a generator curve lying in the XZ plane, but this is not mandatory. The generator curve may be positioned anywhere in space and need not be planar. The point obtained at <code>U=0</code> is not necessarily in the XZ plane. Wherever that point is, it is rotated about the Z axis by <code>U</code> radians to get the final point.</p>
+<h3 id="sweptsurface">SweptSurface</h3>
+<p>image:image26.png[image26,width=191,height=163]</p>
+<p>image:image27.png[image27,width=196,height=204]</p>
+<p>A <code>SweptSurface</code> is defined by moving a generator curve <code>Cg</code> along a direction <code>D</code>.</p>
+<p>Definition:
+<code>Cg</code> is the parametric generator curve that is swept.
+<code>Dir</code> is a unit vector defining the sweep direction.</p>
+<p>Parametrization:
+<code>U</code> is used to evaluate a point <code>Peval</code> on the generator curve <code>Cg</code>. The domain of <code>U</code> is the same as the <code>T</code> domain of <code>Cg</code>.
+<code>V</code> is used as a distance to move <code>Peval</code> along direction vector <code>Dir</code>. <code>V</code> is measured in mm, and the domain of <code>V</code> is <code>-Infinity .. +Infinity</code>.</p>
+<h3 id="torus">Torus</h3>
+<p>A torus is defined in its local coordinate system and is lofted into space with a transformation. A torus is defined by taking a small circle with center on the X axis, lying in the XZ plane, and sweeping it around the Z axis.</p>
+<p>Definition:
+<code>RMajor</code> is the radius of the big circle traced by the centerline of the torus tube.
+<code>RMinor</code> is the radius of the small circle rotated around to form the torus.</p>
+<p>Parametrization:
+<code>U</code> is the rotation of the generator circle about the Z axis. <code>U=0</code> corresponds to the generator circle lying in the XY plane. <code>U</code> goes from <code>0 .. 2PI</code>.
+<code>V</code> is the angle around the generator circle itself. At <code>U=0</code>, <code>V=0</code> corresponds to a point at <code>RMajor + RMinor</code>, the furthest point. As <code>V</code> increases, we go around the generator circle counter-clockwise.</p>
+<p>image:image28.png[image28,width=210,height=150]</p>
+<p>image:image29.png[image29,width=308,height=167]</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#curves">Curves</a>
+  </li>
+  <li level="2">
+   <a href="#line3">Line3</a>
+  </li>
+  <li level="2">
+   <a href="#arc3">Arc3</a>
+  </li>
+  <li level="2">
+   <a href="#ellipse3">Ellipse3</a>
+  </li>
+  <li level="2">
+   <a href="#coniccurve3">ConicCurve3</a>
+  </li>
+  <li level="2">
+   <a href="#piecewisecubic3">PiecewiseCubic3</a>
+  </li>
+  <li level="2">
+   <a href="#polyline3">Polyline3</a>
+  </li>
+  <li level="2">
+   <a href="#nurbcurve3">NurbCurve3</a>
+  </li>
+  <li level="1">
+   <a href="#surfaces">Surfaces</a>
+  </li>
+  <li level="2">
+   <a href="#cylinder">Cylinder</a>
+  </li>
+  <li level="2">
+   <a href="#cone">Cone</a>
+  </li>
+  <li level="2">
+   <a href="#plane">Plane</a>
+  </li>
+  <li level="2">
+   <a href="#ruledsurface">RuledSurface</a>
+  </li>
+  <li level="2">
+   <a href="#sphere">Sphere</a>
+  </li>
+  <li level="2">
+   <a href="#spunsurface">SpunSurface</a>
+  </li>
+  <li level="2">
+   <a href="#sweptsurface">SweptSurface</a>
+  </li>
+  <li level="2">
+   <a href="#torus">Torus</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">General Notes</a></span>
+ <span class="next"><a href="xlate.html">Translation tables</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

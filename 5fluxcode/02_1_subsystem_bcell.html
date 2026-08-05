@@ -1,0 +1,1280 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Subsystem **BCell** (Bend Cell Automation)</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../8_aiko/index.html">8_Aiko</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../8_aiko/home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../8_aiko/readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../8_aiko/flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../8_aiko/trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../8_aiko/trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../8_aiko/trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../8_aiko/trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../8_aiko/trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../8_aiko/trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../8_aiko/trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a class="active" href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Subsystem **BCell** (Bend Cell Automation)</h1>
+<p>_<strong>*
+<strong>Prerequisite:</strong> Chapter 02 (Bend) read. BCell is layered <em>on top of</em> Bend -- every BCell concept ultimately wraps a <code>BendOp</code>.
+<strong>Goal:</strong> understand the bend-cell automation subsystem well enough to localize any robot-cell bug to the right code area without writing a fix. Reading time: 60--90 minutes.
+<strong>Companion to:</strong> chapter 02 §7.4 (&quot;Robotic bend lives <em>in</em> <code>BendOp</code>, not separately&quot;) -- that paragraph is the orientation; this chapter is the depth.
+*</strong>*</p>
+<p>'''</p>
+<h2 id="tldr-bcell-in-twelve-lines">1. TL;DR -- BCell in twelve lines</h2>
+<p>** <strong>Domain:</strong> automated press-brake bending performed by a robot cell (Trumpf BendMaster 60/150, Cell5000, Cell7000, FlexCell 10, B23-attached cells).
+** <strong>Code root:</strong> <code>Src\Core\BCell\</code> (34 files, ~1.2 MB) plus <code>Src\UI\BCell\</code> (10 files).
+** <strong>Top-level model:</strong> <code>BCellTech</code> is <strong>abstract</strong> -- concrete subclasses include <code>BM5000</code>/<code>BM7000</code>/<code>BC7000</code> family. Lives at <code>BendTech.Cell</code> (every <code>BendTech</code> <em>may</em> have one cell).
+** <strong>Three primary stages:</strong> <strong>Pickup</strong> (<code>BCPickup</code>) → many <strong>Bends</strong> (regular <code>BendOp</code> plus possibly <code>BCRegrip</code> between them) → <strong>Deposit</strong> (<code>BCDeposit</code>).
+** <strong>Cell items:</strong> physical objects that can sit in the cell -- <code>BPallet</code>, <code>BDispenser</code>, <code>BCupGrip</code>, <code>BJawGrip</code>, <code>BProfileGrip</code>, <code>BFlipConveyor</code>, <code>BTiltConveyor</code>, <code>BLightBox</code>, <code>BFurniture</code> -- all under one base <code>BCellItem</code>.
+** <strong>Components vs. items:</strong> an <em>item</em> is the catalog object; a <code>BCComponent</code> is the <em>placed instance</em> in this cell at a specific transform.
+** <strong>Robot pose:</strong> kinematic state via <code>BRobotPose</code> (axes / wrist / part transforms); inverse kinematics included.
+** <strong>Routing:</strong> <code>BRouting</code> decides per-bend insert/bend/extract strategy (front, side-left, side-right, with-ram, vacuum-on, swivel).
+** <strong>Regrip flavors:</strong> <code>BCRegrip.EFlavor</code> -- <code>Pickup</code>, <code>Deposit</code>, <code>Station</code>, <code>Clamp</code>, <code>PostBend</code>, <code>DuringBend</code>, <code>CenteringTable</code>, <code>DoubleSheet</code>. Each has different rules about where it can be added.
+** <strong>Output:</strong> robot code (proprietary text) + EIN files (Trumpf simulation) + standard NC for the brake.
+** <strong>UI controllers:</strong> <code>BCellGlob</code>, <code>BPickupGlob</code>, <code>BRegripGlob</code>, <code>BDepositGlob</code>, <code>BWaypointGlob</code>, <code>BGripperGlob</code>, <code>BJawPickupGlob</code>, <code>BGripperToolGlob</code>, <code>BFlexiGripperGlob</code>, <code>BRobotStrategyGlob</code> -- all under <code>Src\UI\BCell\</code>.
+** <strong>Tests:</strong> <code>Test\Bend\Cell\</code> -- yearly bundles (<code>Cell2021.cs</code> ... <code>Cell2026.cs</code>) plus thematic (<code>CellBasic.cs</code>, <code>CellFixes.cs</code>, <code>CellGripper.cs</code>, <code>BCRegripTest.cs</code>, <code>BCPickupTest.cs</code>, <code>BCDepositTest.cs</code>, <code>BCRouting.cs</code>, <code>BCExtract.cs</code>, <code>CellCustomer.cs</code>, <code>CellUI.cs</code>).</p>
+<p>'''</p>
+<h2 id="vocabulary-25-terms">2. Vocabulary -- 25 terms</h2>
+<p>|===
+| Term | Meaning | Where in code</p>
+<p>| <strong>Cell</strong>
+| The bend cell -- a robot, grippers, machine, peripherals
+| <code>BCellTech.cs</code></p>
+<p>| <strong>BendMaster (BM60/BM150)</strong>
+| Trumpf robotic bending cell families (60 kg / 150 kg payload)
+| <code>BCellItem.EFlags.BM60</code>/<code>BM150</code></p>
+<p>| <strong>Cell5000 / Cell7000</strong>
+| Newer Trumpf cell platforms
+| <code>BCellTech</code> subclasses; <code>7K\BC7000Tech.cs</code></p>
+<p>| <strong>B23</strong>
+| A Trumpf APC-controlled brake; can be cell-attached
+| <code>BCellItem.EFlags.B23</code></p>
+<p>| <strong>FlexCell 10</strong>
+| Compact cell variant
+| <code>BCellItem.EFlags.FC10</code></p>
+<p>| <strong>Pickup</strong>
+| Picking the unbent blank from a pallet/dispenser
+| <code>BCPickup</code></p>
+<p>| <strong>Deposit</strong>
+| Putting the finished part on a pallet/conveyor
+| <code>BCDeposit</code></p>
+<p>| <strong>Regrip</strong>
+| Mid-job change of how the gripper holds the part
+| <code>BCRegrip</code> (eight flavors)</p>
+<p>| <strong>Pallet</strong>
+| Passive part-storage shelf
+| <code>BPallet : BStorage</code></p>
+<p>| <strong>Dispenser</strong>
+| Active blank-feeder with lifting suction
+| <code>BDispenser : BStorage</code></p>
+<p>| <strong>Conveyor</strong>
+| Active transport (flip / tilt variants)
+| <code>BFlipConveyor</code>, <code>BTiltConveyor</code></p>
+<p>| <strong>Light box</strong>
+| Transillumination platform for image-recognition
+| <code>BLightBox</code></p>
+<p>| <strong>Cup gripper</strong>
+| Vacuum or magnetic suction-cup gripper
+| <code>BCupGrip</code></p>
+<p>| <strong>Jaw gripper</strong>
+| Pincer-style gripper
+| <code>BJawGrip</code></p>
+<p>| <strong>Profile gripper</strong>
+| Long-thin gripper with a slide for extruded profiles
+| <code>BProfileGrip</code></p>
+<p>| <strong>Multi-circuit gripper</strong>
+| Cup gripper with independent vacuum groups
+| <code>BGripperM</code>/<code>BGripperS</code> plus <code>CupGroup</code></p>
+<p>| <strong>Suction cup</strong>
+| A single cup on the cup gripper
+| <code>BSuctionCup</code></p>
+<p>| <strong>Cup state</strong>
+| Per-cup on/off/leak state in a configuration
+| <code>BCupGripConfig</code></p>
+<p>| <strong>Waypoint</strong>
+| Discrete 3D pose along the robot trajectory
+| <code>BCellTech.Waypoints[]</code>, <code>BWaypointUI.cs</code></p>
+<p>| <strong>Routing</strong>
+| Insert / bend / extract strategy per bend
+| <code>BRouting</code> (<code>EIn.Normal/Left/Right</code>, <code>EOut.**</code>)</p>
+<p>| <strong>Regrip station</strong>
+| Fixed cell location used for hand-off regrips
+| <code>BRegripStnVM</code>; tracked in <code>RegripStnHome</code></p>
+<p>| <strong>Centering table</strong>
+| Cell component used to reference part position
+| <code>BCellItem.EFlags.Centering</code></p>
+<p>| <strong>Separator sheet</strong>
+| Paper/foam sheet placed between parts in a stack
+| <code>BSeparator</code></p>
+<p>| <strong>Lattice / DPlan</strong>
+| The deposit lattice: rows×cols×layers + pitch + start corner + weave
+| <code>BDepositPlan</code></p>
+<p>| <strong>EIN file</strong>
+| Trumpf simulation output for the bend cell
+| <code>BCellTech.EINWriter</code>
+|===</p>
+<p><em>__</em>
+<strong>Visuals:</strong> <code>Doc\Img\BCell\</code> has the entire concept gallery -- gripper anatomy, pickup cycle, deposit cycle, swivel side, slide, regrip station, separator sheet, image-point calculation, inverse-kinematics diagram. Every term above has a picture.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="the-data-model-class-hierarchy">3. The data model -- class hierarchy</h2>
+<pre><code>Part
+ └─ BendTech
+     └─ Cell : BCellTech (optional, only for robotic parts)        [BCellTech.cs]
+         ├─ BMachine (inherited via BendTech)
+         ├─ Components : List&lt;BCComponent&gt;                          [BCComponent.cs]
+         │   └─ Item : BCellItem (gripper / pallet / dispenser…)   [BCellItem.cs]
+         ├─ Pickup : BCPickup                                       [BPickup.cs]
+         ├─ Regrips : List&lt;BCRegrip&gt;                                [BRegrip.cs]
+         ├─ Deposits : List&lt;BCDeposit&gt;                              [BDeposit.cs]
+         ├─ Gripper : BGripper (active gripper for this run)        [BCellItem.cs]
+         ├─ DPlan : BDepositPlan (the lattice)                      [BDepositPlan.cs]
+         ├─ Routing : per-BendOp BRouting                           [BRouting.cs]
+         ├─ Waypoints : List&lt;Waypoint&gt;                              [internal in BCellTech]
+         ├─ RobotCode : string                                      (generated)
+         └─ Separators : (per pallet/dispenser)                     [BSeparator.cs]
+</code></pre>
+<h3 id="cell-item-hierarchy-from-bcellitem.cs-lines-8-23">Cell-item hierarchy (from <code>BCellItem.cs</code> lines 8--23)</h3>
+<pre><code>BCellItem
+ ├─ BStorage
+ │   ├─ BPallet
+ │   └─ BDispenser
+ ├─ BGripper
+ │   ├─ BCupGrip
+ │   │   ├─ BProfileGrip
+ │   │   ├─ BGripperM
+ │   │   └─ BGripperS
+ │   └─ BJawGrip
+ ├─ BLightBox
+ ├─ BFurniture
+ └─ BEquipment
+     ├─ BFlipConveyor
+     └─ BTiltConveyor
+</code></pre>
+<h3 id="three-subtleties">Three subtleties</h3>
+<p>. <strong><code>BCellTech</code> is abstract.</strong> Every concrete cell is one of a small set of subclasses (<code>BM5000</code> family, <code>BC7000Tech</code>). When you read <code>BCellTech.Foo()</code>, look at the <em>concrete</em> class that the part actually owns -- overrides matter.
+. <strong>Items are catalog, components are placements.</strong> Editing a <code>BCupGrip</code> (item) potentially affects all parts that use it; editing its <code>BCComponent</code> (placement) only affects the current cell.
+. <strong>Stages are siblings, but ordered.</strong> A cell run is <em>Pickup → (Bends with optional Regrips between them) → Deposit</em>. The Bend ops themselves are owned by the parent <code>BendTech</code>; BCell owns the inter-bend &quot;glue&quot;.</p>
+<p>'''</p>
+<h2 id="module-map-the-34-files-grouped">4. Module map -- the 34 files grouped</h2>
+<h3 id="root-srccorebcell-24-files">4.1 Root <code>Src\Core\BCell\</code> (24 files)</h3>
+<p>[cols=&quot;&gt;,,&quot;]
+|===
+| Size | File | Contents</p>
+<p>| <strong>81 KB</strong>
+| <strong><code>BCellTech.cs</code></strong>
+| The abstract cell tech. <strong>Read first.</strong> Constructors, dump format, robot-code mangling, components/regrips/deposits lists.</p>
+<p>| <strong>85 KB</strong>
+| <strong><code>BCellItem.cs</code></strong>
+| The item type hierarchy (gripper, pallet, dispenser, conveyors). Long but the comment header (lines 8--23) is the cheat-sheet.</p>
+<p>| 66 KB
+| <code>BCellUtil.cs</code>
+| Cross-cutting helpers used by the cell stages.</p>
+<p>| 28 KB
+| <code>BCellVM.cs</code>
+| View-models for cell rendering: <code>BCellVM</code>, <code>BM5000VM</code>, <code>BCComponentVM</code>, <code>BDispenserVM</code>, <code>BProfileGripVM</code>, <code>BRegripStnVM</code>, <code>PartForPickupVM</code>, <code>PartAtDepositVM</code>. The header comment (lines 7--16) lists everything.</p>
+<p>| 14 KB
+| <code>BCMiscTypes.cs</code>
+| Small types and enums shared across the module.</p>
+<p>| 7 KB
+| <code>BCOperations.cs</code>
+| Operations facade.</p>
+<p>| 28 KB
+| <code>BCComponent.cs</code>
+| The &quot;placed instance&quot; wrapper around a <code>BCellItem</code>.</p>
+<p>| <strong>57 KB</strong>
+| <strong><code>BPickup.cs</code></strong>
+| Pickup operation (vacuum from pallet, jaw from dispenser, with light-box imaging). Implements <code>IBSimStage</code> and <code>IGripSource</code>.</p>
+<p>| 9 KB
+| <code>BPickupPlan.cs</code>
+| Lattice/plan for the pickup pile.</p>
+<p>| <strong>61 KB</strong>
+| <strong><code>BRegrip.cs</code></strong>
+| Regrip operation. <strong>Eight flavors</strong> in <code>EFlavor</code>. The most subtle file in the module.</p>
+<p>| <strong>34 KB</strong>
+| <code>BDeposit.cs</code>
+| Deposit operation.</p>
+<p>| 46 KB
+| <code>BDepositPlan.cs</code>
+| The deposit lattice (<code>DPlan</code>): rows, cols, layers, pitch, weave, two-part stagger.</p>
+<p>| <strong>42 KB</strong>
+| <strong><code>BCupGrip.cs</code></strong>
+| Cup gripper, suction cups, multi-circuit configuration.</p>
+<p>| 11 KB
+| <code>BFlexiGripper.cs</code>
+| Flexible gripper variant.</p>
+<p>| 14 KB
+| <code>BEquipment.cs</code>
+| Active equipment (flip/tilt conveyors).</p>
+<p>| 21 KB
+| <code>BSeparator.cs</code>
+| Separator-sheet model.</p>
+<p>| 31 KB
+| <code>BRouting.cs</code>
+| Per-bend insert/bend/extract strategy.</p>
+<p>| 34 KB
+| <code>BRobotPose.cs</code>
+| Robot kinematics -- FK/IK, axes ↔ wrist ↔ part transforms.</p>
+<p>| 45 KB
+| <code>BSimStepNeo.cs</code>
+| Step-by-step simulation of a cell run.</p>
+<p>| 9 KB
+| <code>Cell5KNCSim.cs</code>
+| NC-side simulation for Cell5000.</p>
+<p>| 10 KB
+| <code>BNCInterface.cs</code>
+| NC-code interface.</p>
+<p>| 21 KB
+| <code>GripperTool.cs</code>
+| Tooling-side gripper representation.</p>
+<p>| 9 KB
+| <code>7K\BC7000Tech.cs</code>
+| Cell7000 specialization.</p>
+<p>| 13 KB
+| <code>Fanuc\BCFanucTech.cs</code>
+| Fanuc-controller specialization.
+|===</p>
+<h3 id="srccorebcellops-10-files-algorithms">4.2 <code>Src\Core\BCell\Ops\</code> (10 files -- algorithms)</h3>
+<p>[cols=&quot;&gt;,,&quot;]
+|===
+| Size | File | Contents</p>
+<p>| 39 KB
+| <code>BCComputer.cs</code>
+| Cell-level computation orchestrator.</p>
+<p>| 22 KB
+| <code>BCellImport.cs</code>
+| Importing grippers (ARV / JSON / DXF / GEO -- see Note 2017).</p>
+<p>| 45 KB
+| <code>BDepositExpert.cs</code>
+| The lattice/deposit expert (decides where each part lands).</p>
+<p>| 16 KB
+| <code>BRegripExpert.cs</code>
+| Decides <em>whether</em> / <em>which</em> regrips to insert.</p>
+<p>| 42 KB
+| <code>BRegripAux.cs</code>
+| Regrip auxiliary algorithms.</p>
+<p>| 20 KB
+| <code>PickupExpert.cs</code>
+| Decides pickup parameters (which gripper config, which cups, which approach).</p>
+<p>| 24 KB
+| <code>DispenserExpert.cs</code>
+| Special-case logic for dispenser pickups.</p>
+<p>| 29 KB
+| <code>BStepComputer.cs</code>
+| Per-step computer (waypoints, simulation steps).</p>
+<p>| 40 KB
+| <code>CellRefine.cs</code>
+| Refinement passes after initial planning.</p>
+<p>| 26 KB
+| <code>RPathPlanner.cs</code>
+| Robot-path planner (between any two cell poses).
+|===</p>
+<h3 id="ui-hooks-srcuibcell-10-files">4.3 UI hooks <code>Src\UI\BCell\</code> (10 files)</h3>
+<p>|===
+| File | Wraps</p>
+<p>| <code>BCellUI.cs</code>
+| <code>BCellGlob</code> -- top-level cell editor (largest at 35 KB)</p>
+<p>| <code>BPickupUI.cs</code>
+| <code>BPickupGlob</code></p>
+<p>| <code>BRegripUI.cs</code>
+| <code>BRegripGlob</code></p>
+<p>| <code>BDepositUI.cs</code>
+| <code>BDepositGlob</code></p>
+<p>| <code>BWaypointUI.cs</code>
+| <code>BWaypointGlob</code></p>
+<p>| <code>BGripperUI.cs</code>
+| <code>BGripperGlob</code></p>
+<p>| <code>BGripperToolUI.cs</code>
+| <code>BGripperToolGlob</code></p>
+<p>| <code>BJawPickupUI.cs</code>
+| <code>BJawPickupGlob</code></p>
+<p>| <code>BFlexiGripperUI.cs</code>
+| <code>BFlexiGripperGlob</code></p>
+<p>| <code>BRobotStrategyUI.cs</code>
+| strategy editor
+|===</p>
+<h3 id="notes">4.4 Notes</h3>
+<p>|===
+| Note | Content</p>
+<p>| <code>Notes\Tech\2017.CupGripperInfoInDwg.ftx</code>
+| <strong>Required reading.</strong> How DXF/GEO files import cup-gripper data (cup positions, groups, baseplate, multi-circuit).</p>
+<p>| <code>Notes\Tech\2016.ImportBMC.ftx</code>
+| BMC machine format (cell-aware machines too).</p>
+<p>| <code>Notes\Tech\2020.ImportBComponent.ftx</code>
+| Importing cell components.
+|===</p>
+<p>'''</p>
+<h2 id="the-eight-regrip-flavors-the-most-subtle-topic">5. The eight regrip flavors (the most subtle topic)</h2>
+<p><code>BCRegrip.EFlavor</code> (in <code>BRegrip.cs</code>) drives where and how a regrip can be inserted. Each flavor has different placement rules -- see <code>BendOpGlob.AddRegrip</code> in <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55.</p>
+<p>|===
+| Flavor | Where it occurs | Notes</p>
+<p>| <code>Pickup</code>
+| Right after the pickup, before the first bend
+| Available if the pickup pose differs from what the first bend wants.</p>
+<p>| <code>Deposit</code>
+| Right before deposit, after the last bend
+| Available if the deposit pose differs from the last-bend hold.</p>
+<p>| <code>Station</code>
+| At a fixed regrip station between two bends
+| Requires <code>HasRegripStns</code> and not jaw-grip.</p>
+<p>| <code>Clamp</code>
+| While the part is held by the brake clamp
+| Available if previous regrip wasn't a station/pickup/centering-table.</p>
+<p>| <code>PostBend</code>
+| Right after a bend, before the next
+| Cannot stack with another <code>Station</code>-type regrip.</p>
+<p>| <code>DuringBend</code>
+| While the part is being bent (rare, machine-dependent)
+| Requires <code>RegripDuringBend = true</code> on the prior op.</p>
+<p>| <code>CenteringTable</code>
+| At a centering-table component
+| Requires a <code>Centering</code>-flagged component.</p>
+<p>| <code>DoubleSheet</code>
+| At a double-sheet station for paired processing
+| Requires <code>HasDoubleSheetStn</code>.
+|===</p>
+<p><em>__</em>
+When debugging &quot;regrip in the wrong place&quot; or &quot;regrip cannot be added&quot;, the answer is almost always in this enum's rules combined with the per-cell capability flags.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="lifecycle-of-a-robotic-part-sequence-in-words">6. Lifecycle of a robotic part -- sequence in words</h2>
+<pre><code>1. Part loads (.fx or 3D import).
+2. BendTech.Make creates the bend projection (chapter 02 §5).
+3. If the target machine is cell-attached:
+   a. BCellTech is constructed (concrete subclass: BM5000 / BC7000 / Fanuc).
+   b. Cell components (gripper, pallet, dispenser, regrip stns) are placed.
+   c. BendTech.Cell = cellTech.
+4. BendTooler.Process runs (still chapter 02).
+   ─ But: now mRobotic = true → tool-scoring / sequencing rules differ.
+5. Cell-level expert passes:
+   a. PickupExpert / DispenserExpert decide pickup parameters.
+   b. BRegripExpert decides regrips between bends.
+   c. BDepositExpert decides the deposit lattice.
+   d. CellRefine refines the plan.
+   e. RPathPlanner plans robot motion between every pose.
+   f. BStepComputer materializes per-step waypoints.
+6. BSimStepNeo simulates the run end-to-end.
+7. Validation: per-stage EBCStatus / EBStatus flags collected.
+8. Output:
+   ─ NC code for the brake — produced by a C# writer in Src\API\Bend\Post\
+     (e.g. BNCWriter for Cell5K / TrumpfB23, TrumpfDLD, ...) via Hub.GenerateNC.
+   ─ Robot code (cell-specific text) — generated by BCellTech.RobotCode + MangleRobotCode.
+   ─ Optionally an EIN file (Trumpf simulation) via BCellTech.EINWriter.
+</code></pre>
+<p>'''</p>
+<h2 id="three-canonical-reading-tours-15-min-each">7. Three canonical reading tours (15 min each)</h2>
+<h3 id="tour-a-what-does-a-cell-run-actually-consist-of">Tour A -- &quot;What does a cell run actually consist of?&quot;</h3>
+<p>. <code>Src\Core\BCell\BCellTech.cs</code> lines 27--80 -- the abstract base, components/regrips/deposits lists.
+. <code>Src\Core\BCell\BCellTech.cs</code> <code>Dump</code> method lines 45--78 -- exactly what gets compared in tests.
+. <code>Test\Bend\Cell\CellBasic.cs</code> lines 13--137 -- a fixture with <code>Test</code> helper. <strong>Note</strong> the helper calls <code>+tech.Cell.CheckDump (...)+</code> <em>and</em> <code>+tech.CheckBNC (...)+</code>: two golden files per test (cell text + NC).</p>
+<p><strong>Self-check:</strong> name the three lists on <code>BCellTech</code> that determine cell behavior. What does <code>MangleRobotCode</code> do?</p>
+<h3 id="tour-b-what-is-a-regrip-mechanically">Tour B -- &quot;What is a regrip, mechanically?&quot;</h3>
+<p>. <code>Src\Core\BCell\BRegrip.cs</code> lines 14--60 -- class declaration and constructor.
+. <code>BCRegrip.EFlavor</code> enum (search <code>enum EFlavor</code> inside <code>BRegrip.cs</code>) -- the eight kinds.
+. <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55 -- <code>BendOpGlob.AddRegrip</code>. The rules of &quot;what flavor can be added next&quot; live here.</p>
+<p><strong>Self-check:</strong> if the user clicks &quot;Add Regrip&quot; on the <em>first</em> bend, which flavors are eligible?</p>
+<h3 id="tour-c-how-are-grippers-imported">Tour C -- &quot;How are grippers imported?&quot;</h3>
+<p>. <code>Notes\Tech\2017.CupGripperInfoInDwg.ftx</code> -- the entire note (~90 lines).
+. <code>Src\Core\BCell\Ops\BCellImport.cs</code> lines 1--30 -- the <code>BCupGripImport.Load</code> entry, ARV vs. JSON.
+. <code>Src\Core\BCell\BCupGrip.cs</code> lines 13--40 -- the <code>ICupGrip</code> interface, what the imported gripper must expose.</p>
+<p><strong>Self-check:</strong> what is a &quot;multi-circuit&quot; gripper, and where in the DXF does the circuit grouping appear?</p>
+<p>'''</p>
+<h2 id="common-stumbling-blocks">8. Common stumbling blocks</h2>
+<h3 id="bcell-logic-is-split-across-bendop-and-bcregrip">8.1 BCell logic is split across <code>BendOp</code> and <code>BCRegrip</code></h3>
+<p>Robotic-bend awareness lives partly in <code>BendOp</code> (<code>Robotic</code>, <code>RegripDuringBend</code>, <code>IsFirstOp</code>/<code>IsLastOp</code> cell-stage logic) and partly in <code>BCRegrip</code> (the regrip itself). When a &quot;regrip in wrong place&quot; bug arrives, <strong>both</strong> places need inspection, not just BCell.</p>
+<h3 id="bcelltech-is-abstract-every-override-matters">8.2 <code>BCellTech</code> is abstract -- every override matters</h3>
+<p><code>BCellTech</code> defines the contract; <code>BM5000</code>, <code>BC7000Tech</code>, <code>BCFanucTech</code> override behavior. A bug &quot;only on Cell7000&quot; usually points at <code>7K\BC7000Tech.cs</code>. A &quot;only on Fanuc&quot; bug → <code>Fanuc\BCFanucTech.cs</code>.</p>
+<h3 id="versioning-is-everywhere">8.3 Versioning is everywhere</h3>
+<p><code>BPickup.PostLoad</code> (<code>BPickup.cs</code> lines 31--50) does an <em>in-line</em> migration based on <code>mCell.FXBuildRev</code> and <code>mCell.FXBuildNo</code> -- not just <code>AuType.ObjVersion</code>. The pattern is: turn off status flags that older builds couldn't set correctly. <strong>When you find a flag mysteriously missing, check the build-number gates.</strong></p>
+<h3 id="robot-code-post-processing-is-in-the-dump">8.4 Robot-code post-processing is in the dump</h3>
+<p><code>BCellTech.MangleRobotCode</code> (lines 80--119) post-processes the raw robot code to produce the canonical text used in tests. If you see odd <code>DZ</code>/<code>DY</code>/<code>DX</code> deltas in golden files, that's this method emitting compact relative motion.</p>
+<h3 id="cell-items-have-eflags-for-capability-gating">8.5 Cell items have <code>EFlags</code> for capability gating</h3>
+<p><code>BCellItem.EFlags</code> (25 flags!) gates compatibility (BM60 vs. BM150 vs. B23 vs. FC10 vs. Cell7000 vs. TBC7030, plus structural attributes like <code>Conveyor</code>, <code>Centering</code>, <code>DoubleSheet</code>, <code>Inclined</code>, <code>RotateBy180</code>). When a component doesn't appear in a placement dialog, the answer is here.</p>
+<h3 id="the-igripsource-interface">8.6 The <code>IGripSource</code> interface</h3>
+<p><code>BCPickup</code> and <code>BCRegrip</code> both implement <code>IGripSource</code> (search the interface in <code>BCupGrip.cs</code> or sibling) -- they are the two places the part transitions to a new gripper hold. Bugs about &quot;gripper hold transform after regrip/pickup&quot; are at this interface.</p>
+<h3 id="two-output-streams">8.7 Two output streams</h3>
+<p>A cell test uses <strong>two</strong> golden files: a <code>.txt</code> (the cell dump) and a <code>.nc</code> (the brake NC code). Changing one without the other = one of the two will fail.</p>
+<p>'''</p>
+<h2 id="tests-how-they-are-organized">9. Tests -- how they are organized</h2>
+<h3 id="inventory-xtestbendcell-15-files-plus-cell7kcell7kbase.cs">Inventory (<code>X:\Test\Bend\Cell\</code>, 15 files; plus <code>Cell7K\Cell7KBase.cs</code>)</h3>
+<p>|===
+| Category | Files</p>
+<p>| <strong>Cell5000 basics</strong>
+| <code>CellBasic.cs</code> (~360 tests)</p>
+<p>| <strong>Yearly regression bundles</strong>
+| <code>Cell2021.cs</code> ... <code>Cell2026.cs</code></p>
+<p>| <strong>Per-stage tests</strong>
+| <code>BCPickupTest.cs</code>, <code>BCRegripTest.cs</code>, <code>BCDepositTest.cs</code></p>
+<p>| <strong>Routing &amp; extraction</strong>
+| <code>BCRouting.cs</code>, <code>BCExtract.cs</code></p>
+<p>| <strong>Customer-specific</strong>
+| <code>CellCustomer.cs</code></p>
+<p>| <strong>Grippers</strong>
+| <code>CellGripper.cs</code></p>
+<p>| <strong>Misc / fixes</strong>
+| <code>CellFixes.cs</code></p>
+<p>| <strong>UI</strong>
+| <code>CellUI.cs</code></p>
+<p>| <strong>Cell7000</strong>
+| <code>Cell7K\Cell7KBase.cs</code></p>
+<p>| <strong>Cell-aware IO</strong>
+| <code>Test\IO\CellCfgReaderTest.cs</code>
+|===</p>
+<h3 id="the-standard-test-pattern">The standard test pattern</h3>
+<p>From <code>Test\Bend\Cell\CellBasic.cs</code> lines 131--137:</p>
+<p>[,csharp]</p>
+<pre><code>public static Part Test (string infile, int idMC = 93, bool checkBNC = true) {
+   var part = FX.LoadTestPart (infile);
+   part.DoSwitchToBending (EDoFlags.NoGAPAdjust, BendMachine.Get (idMC));
+   part.BendTech.Cell.CheckDump (Path.ChangeExtension (infile, &quot;.txt&quot;));
+   if (checkBNC) part.BendTech.CheckBNC (Path.ChangeExtension (infile, &quot;.nc&quot;));
+   return part;
+}
+</code></pre>
+<p><strong>Note the differences from chapter-02 Bend tests:</strong></p>
+<p>** <code>idMC = 93</code> is the standard cell-attached machine (<code>X:\Data\Machine\93\</code>), not 13.
+** <code>DoSwitchToBending</code> not <code>BendTech.Make</code> directly (cell-aware switching).
+** <strong>Two</strong> golden checks: <code>Cell.CheckDump</code> (cell text) + <code>BendTech.CheckBNC</code> (brake NC).
+** <code>BendCellMisc</code> adds <strong>EIN-file tests</strong> (<code>EINTest</code>, lines 169--174) and <strong>recognition-image</strong> tests (<code>Test</code>, lines 175--187).</p>
+<p>Test inputs live under <code>X:\TData\Cell\&lt;area&gt;\</code> with the same subdirectory taxonomy as the test categories above. Customer cases use the prefix <code>C&lt;number&gt;</code> (e.g. <code>C45292</code>, <code>C42921</code>); internal tickets use <code>T&lt;number&gt;</code> (e.g. <code>T4715</code>, <code>T8574</code>).</p>
+<p>'''</p>
+<h2 id="the-four-standard-machines-cells">10. The four standard machines / cells</h2>
+<p>|===
+| ID | What | Where</p>
+<p>| <strong>93</strong>
+| Default cell-attached test machine
+| <code>X:\Data\Machine\93\</code> -- used for <code>CellBasic</code> tests</p>
+<p>| <strong>13</strong>
+| Default standalone bend test machine
+| <code>X:\Data\Machine\13\</code></p>
+<p>| <strong>99</strong>
+| <code>BendMachine.Default</code> in <code>BA.Testing</code> mode
+| <code>X:\Data\Machine\99\</code></p>
+<p>| custom
+| Customer machines (delivered with installation)
+| <code>X:\Data\Machine\&lt;custom&gt;\</code>
+|===</p>
+<p>Cell-aware machines have additional cell metadata in their <code>Machine.curl</code>. The cell-tech subclass is selected based on the machine's cell type.</p>
+<p>'''</p>
+<h2 id="when-a-bcell-bug-arrives-60-second-triage">11. When a BCell bug arrives -- 60-second triage</h2>
+<p>|===
+| Symptom | Likely code area | First file</p>
+<p>| &quot;Wrong gripper choice&quot;
+| Pickup expert
+| <code>Ops\PickupExpert.cs</code></p>
+<p>| &quot;Cup state wrong / waypoints don't update&quot;
+| Pickup setter logic
+| <code>BPickup.cs</code> (notice the build-version gates around line 42)</p>
+<p>| &quot;Regrip inserted in wrong place&quot;
+| Add-regrip rules
+| <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55 + <code>BRegrip.cs</code> <code>EFlavor</code></p>
+<p>| &quot;Regrip-station collision&quot;
+| Regrip-station Y position / shift
+| <code>BRegrip.cs</code> <code>ShiftX</code> (line 32) and <code>RegripStnHome</code></p>
+<p>| &quot;Deposit lattice wrong&quot;
+| Deposit expert
+| <code>Ops\BDepositExpert.cs</code> + <code>BDepositPlan.cs</code></p>
+<p>| &quot;Robot motion through obstacle&quot;
+| Path planner
+| <code>Ops\RPathPlanner.cs</code></p>
+<p>| &quot;Wrong insert/extract direction&quot;
+| Routing
+| <code>BRouting.cs</code> (<code>EIn</code>/<code>EOut</code>)</p>
+<p>| &quot;Robot code looks wrong&quot;
+| Mangling
+| <code>BCellTech.MangleRobotCode</code> (lines 80--119)</p>
+<p>| &quot;EIN file mismatch&quot;
+| EIN writer
+| <code>BCellTech.EINWriter</code></p>
+<p>| &quot;Component missing from placement dialog&quot;
+| Capability flags
+| <code>BCellItem.EFlags</code></p>
+<p>| &quot;Gripper import fails&quot;
+| Import path
+| <code>Ops\BCellImport.cs</code> (ARV/JSON), <code>Notes\Tech\2017</code></p>
+<p>| &quot;Cell-only on Cell7000&quot;
+| Cell7000 override
+| <code>7K\BC7000Tech.cs</code></p>
+<p>| &quot;Cell-only on Fanuc&quot;
+| Fanuc override
+| <code>Fanuc\BCFanucTech.cs</code></p>
+<p>| &quot;Image recognition off&quot;
+| Pickup imaging
+| <code>BPickup.cs</code> <code>IImageRecogSrc</code> and <code>mImages</code> (line 37)</p>
+<p>| &quot;Separator-sheet stack wrong&quot;
+| Separator
+| <code>BSeparator.cs</code>, <code>BDepositPlan</code></p>
+<p>| &quot;Force/payload check wrong&quot;
+| Cup load
+| <code>BCupGrip.cs</code> cup-state logic</p>
+<p>| &quot;Stroke / reach error&quot;
+| Robot pose
+| <code>BRobotPose.cs</code> (FK/IK)</p>
+<p>| &quot;Sim step wrong&quot;
+| Step computer
+| <code>Ops\BStepComputer.cs</code> + <code>BSimStepNeo.cs</code>
+|===</p>
+<p>'''</p>
+<h2 id="exercise-1-find-explain-30-min-read-only">12. Exercise 1 -- &quot;Find &amp; Explain&quot; (30 min, read-only)</h2>
+<p><strong>Task.</strong> Explain in half a page what happens when a user adds a &quot;Station&quot; regrip to the second bend of a cell-attached part.</p>
+<p><strong>Approach:</strong></p>
+<p>. <code>Src\UI\Bend\BendOpUI.cs</code> lines 21--55 -- <code>AddRegrip</code>. Which conditions enable <code>EGTag.AddAtStation</code>?
+. <code>Src\Core\BCell\BRegrip.cs</code> lines 14--60 -- what does the constructor do, and what is <code>mGripXfmAfter</code>?
+. <code>Src\Core\BCell\Ops\BRegripExpert.cs</code> -- does the expert recompute anything, or is the user's edit final?
+. <code>BCellTech.Dump</code> -- where in the cell text does this regrip appear?
+. <strong>Bonus:</strong> what test in <code>Test\Bend\Cell\BCRegripTest.cs</code> is closest to this scenario?</p>
+<p><strong>Rubric:</strong></p>
+<p>|===
+| Level | Criterion</p>
+<p>| 1
+| Locates <code>AddRegrip</code> and the <code>Station</code> flavor</p>
+<p>| 2
+| Explains the eligibility conditions</p>
+<p>| 3
+| Plus: traces to a re-validation pass and to the dump</p>
+<p>| 4
+| Plus: identifies the corner case where station regrips collide with regrip-station home positions
+|===</p>
+<p>'''</p>
+<h2 id="exercise-2-trace-a-real-cell-bug-45-min-read-only">13. Exercise 2 -- &quot;Trace a real cell bug&quot; (45 min, read-only)</h2>
+<p><strong>Task.</strong> The recent commit <code>4a5119dcb</code> (<em>&quot;Case 45728: Changing the suction cup state no longer deletes adjusted waypoints&quot;</em>) is a textbook BCell bug. Read the diff and answer:</p>
+<p>. Which class's setter triggered the bug? (Hint: cup state lives in a cup-grip-config type.)
+. Which setter forgot to invalidate which dirty flag? (See <code>EBDirty</code> / <code>EBInvalid</code>.)
+. Which test fixture covers the case?
+. <strong>Bonus:</strong> the second recent commit <code>3a1791bf8</code> (<em>&quot;Case 46197: Don't change GripperHoldXfm when changing base plane for centering regrip&quot;</em>) is a related class. Compare the two: same module? Same flavor of fix?</p>
+<p><strong>Rubric:</strong></p>
+<p>|===
+| Level | Criterion</p>
+<p>| 1
+| Names the file and the property</p>
+<p>| 2
+| Identifies the dirty / invalidate flag pattern</p>
+<p>| 3
+| Plus: locates the test</p>
+<p>| 4
+| Plus: explains why the centering-regrip variant needed the <em>opposite</em> of the first fix
+|===</p>
+<p>'''</p>
+<h2 id="what-this-chapter-does-not-cover">14. What this chapter does <em>not</em> cover</h2>
+<p>** <strong>NC code generation for the brake</strong> -- see chapter 02 §10. NC writing is handled by C# writers in <code>Src\API\Bend\Post\</code> (e.g. <code>BNCWriter</code> for Cell5K / TrumpfB23, <code>TrumpfDLD</code>, ...) dispatched via <code>Hub.GenerateNC</code>.
+** <strong>The Bend Tooler proper</strong> -- chapter 02. BCell <em>influences</em> it via <code>mRobotic</code>; it does not reimplement it.
+** <strong>Cell7000 / Fanuc deep specifics</strong> -- separate chapters when those subsystems mature further.
+** <strong>The wider <code>Sim</code> subsystem</strong> -- <code>Src\Core\Sim\</code> is invoked by BCell but is its own area.
+** <strong>Individual gripper-import format details</strong> -- see <code>Notes\Tech\2017</code> for cup grippers; jaw / profile have their own notes.</p>
+<p>'''</p>
+<h2 id="if-you-take-just-one-thing-from-this-chapter">15. If you take just one thing from this chapter</h2>
+<p><em>__</em>
+<strong>BCell lives at <code>BendTech.Cell</code> and orchestrates three stages -- Pickup, Regrips, Deposit -- around the existing Bend sequence. Almost every cell-specific bug is a flavor / capability / version gate in one of those three stages, or the regrip-add rules in <code>BendOpGlob.AddRegrip</code>. Models are catalog (<code>BCellItem</code>); placements are instances (<code>BCComponent</code>). Always check both.</strong>
+<em>__</em></p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. Code paths verified against <code>Src\Core\BCell\</code>, <code>Src\UI\BCell\</code>, <code>Test\Bend\Cell\</code>, and Note 2017._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#tldr-bcell-in-twelve-lines">1. TL;DR -- BCell in twelve lines</a>
+  </li>
+  <li level="1">
+   <a href="#vocabulary-25-terms">2. Vocabulary -- 25 terms</a>
+  </li>
+  <li level="1">
+   <a href="#the-data-model-class-hierarchy">3. The data model -- class hierarchy</a>
+  </li>
+  <li level="2">
+   <a href="#cell-item-hierarchy-from-bcellitem.cs-lines-8-23">Cell-item hierarchy (from  lines 8--23)</a>
+  </li>
+  <li level="2">
+   <a href="#three-subtleties">Three subtleties</a>
+  </li>
+  <li level="1">
+   <a href="#module-map-the-34-files-grouped">4. Module map -- the 34 files grouped</a>
+  </li>
+  <li level="2">
+   <a href="#root-srccorebcell-24-files">4.1 Root  (24 files)</a>
+  </li>
+  <li level="2">
+   <a href="#srccorebcellops-10-files-algorithms">4.2  (10 files -- algorithms)</a>
+  </li>
+  <li level="2">
+   <a href="#ui-hooks-srcuibcell-10-files">4.3 UI hooks  (10 files)</a>
+  </li>
+  <li level="2">
+   <a href="#notes">4.4 Notes</a>
+  </li>
+  <li level="1">
+   <a href="#the-eight-regrip-flavors-the-most-subtle-topic">5. The eight regrip flavors (the most subtle topic)</a>
+  </li>
+  <li level="1">
+   <a href="#lifecycle-of-a-robotic-part-sequence-in-words">6. Lifecycle of a robotic part -- sequence in words</a>
+  </li>
+  <li level="1">
+   <a href="#three-canonical-reading-tours-15-min-each">7. Three canonical reading tours (15 min each)</a>
+  </li>
+  <li level="2">
+   <a href="#tour-a-what-does-a-cell-run-actually-consist-of">Tour A -- "What does a cell run actually consist of?"</a>
+  </li>
+  <li level="2">
+   <a href="#tour-b-what-is-a-regrip-mechanically">Tour B -- "What is a regrip, mechanically?"</a>
+  </li>
+  <li level="2">
+   <a href="#tour-c-how-are-grippers-imported">Tour C -- "How are grippers imported?"</a>
+  </li>
+  <li level="1">
+   <a href="#common-stumbling-blocks">8. Common stumbling blocks</a>
+  </li>
+  <li level="2">
+   <a href="#bcell-logic-is-split-across-bendop-and-bcregrip">8.1 BCell logic is split across  and </a>
+  </li>
+  <li level="2">
+   <a href="#bcelltech-is-abstract-every-override-matters">8.2  is abstract -- every override matters</a>
+  </li>
+  <li level="2">
+   <a href="#versioning-is-everywhere">8.3 Versioning is everywhere</a>
+  </li>
+  <li level="2">
+   <a href="#robot-code-post-processing-is-in-the-dump">8.4 Robot-code post-processing is in the dump</a>
+  </li>
+  <li level="2">
+   <a href="#cell-items-have-eflags-for-capability-gating">8.5 Cell items have  for capability gating</a>
+  </li>
+  <li level="2">
+   <a href="#the-igripsource-interface">8.6 The  interface</a>
+  </li>
+  <li level="2">
+   <a href="#two-output-streams">8.7 Two output streams</a>
+  </li>
+  <li level="1">
+   <a href="#tests-how-they-are-organized">9. Tests -- how they are organized</a>
+  </li>
+  <li level="2">
+   <a href="#inventory-xtestbendcell-15-files-plus-cell7kcell7kbase.cs">Inventory (, 15 files; plus )</a>
+  </li>
+  <li level="2">
+   <a href="#the-standard-test-pattern">The standard test pattern</a>
+  </li>
+  <li level="1">
+   <a href="#the-four-standard-machines-cells">10. The four standard machines / cells</a>
+  </li>
+  <li level="1">
+   <a href="#when-a-bcell-bug-arrives-60-second-triage">11. When a BCell bug arrives -- 60-second triage</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-1-find-explain-30-min-read-only">12. Exercise 1 -- "Find & Explain" (30 min, read-only)</a>
+  </li>
+  <li level="1">
+   <a href="#exercise-2-trace-a-real-cell-bug-45-min-read-only">13. Exercise 2 -- "Trace a real cell bug" (45 min, read-only)</a>
+  </li>
+  <li level="1">
+   <a href="#what-this-chapter-does-not-cover">14. What this chapter does not cover</a>
+  </li>
+  <li level="1">
+   <a href="#if-you-take-just-one-thing-from-this-chapter">15. If you take just one thing from this chapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="01_architecture.html">Architecture & System Context</a></span>
+ <span class="next"><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

@@ -1,0 +1,851 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../../res/bento.css">
+  <link rel="stylesheet" href="../../../../res/site.css">
+  <link rel="stylesheet" href="../../../../res/tree.css">
+  <link rel="stylesheet" href="../../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../../index.html">Flux</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../../flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree open"></button>
+       <a href="../index.html">Notes</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="../refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree open"></button>
+         <a href="index.html">PRReviews</a>
+         <ul>
+          <li><button class="tree blank"></button><a href="pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a class="active" href="pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../../../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../../../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../../index.html">Flux</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">Notes</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">PRReviews</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</h1>
+<ul>
+<li><strong>Repo/PR:</strong> metamation/Flux #3634 · branch <code>Case.44835</code> → <code>main</code> · state <strong>OPEN</strong></li>
+<li><strong>Author:</strong> florian (EngertFlo) · <strong>Date reviewed:</strong> 2026-07-20</li>
+<li><strong>Size:</strong> +157 / −10, 8 files (3 source + 2 regenerated goldens + 2 new test-data files + 1 test) · 6 commits · <strong>Label:</strong> bend</li>
+<li><strong>Verdict:</strong> ✅ <strong>Approve with follow-ups</strong> — no blockers, no correctness bugs. Root-cause-accurate fix. Two real gates before merge: (1) run the full golden suite (no CI), (2) domain/visual sign-off on an actual FlexCell part.</li>
+</ul>
+<blockquote>
+<p>Reviewed with a deep manual source pass plus a 7-agent adversarial verification workflow (6 dimension attackers + 1 completeness critic, each independently re-deriving from source and trying to <em>falsify</em>). <strong>All 7 returned CONFIRMED_CORRECT</strong>; every finding below is a coverage/process/tech-debt item, not a defect.</p>
+</blockquote>
+<hr />
+<h2 id="what-the-pr-does">What the PR does</h2>
+<p>Fixes the ACB laser sensor trace not appearing in the FlexCell bend simulation when ACB runs in <strong>ACBSmart (Corrected) mode</strong>. Three source changes + test artifacts.</p>
+<h3 id="root-cause-verified">Root cause (verified)</h3>
+<p>On <strong>FlexCell, ACB <em>Identify</em> mode is not allowed</strong> — <code>BendOp.cs</code> <code>BadACBModes</code> sets <code>dict[EACBMode.Identify] = 18508  // Not supported for FlexCell</code>. FlexCell ACB laser therefore always runs in <strong>Corrected (ACBSmart)</strong> mode. The old code gated the <code>PressHold</code> phase (and hence the laser measurement/trace) on <code>ACBMode == EACBMode.Identify</code>, so on FlexCell it was <strong>never</strong> added → no press-hold → no laser trace. The fix keys on <em>laser activity</em> instead of the specific mode.</p>
+<h3 id="change-1-srccorebcellopsbstepcomputer.cs-pinchtobend">Change 1 — <code>Src/Core/BCell/Ops/BStepComputer.cs</code> (<code>PinchToBend</code>)</h3>
+<pre><code class="language-csharp">bool isLaserActive = mOp.UsingACBLaser &amp;&amp; mOp.ACB.IsLaserActive;   // new, top of method
+...
+// supported-overbend branch: gate broadened
+- if (mOp.UsingACBLaser &amp;&amp; mOp.ACBMode == EACBMode.Identify)
+-    Add (EBPhase.PressHold, RPOverBend.Clone ());
++ if (isLaserActive) Add (EBPhase.PressHold, RPOverBend.Clone ());
+...
+// NoSupport jaw release-and-retake branch (both overbend + non-overbend sub-branches):
+  Add (EBPhase.CatchAfterBend, poses[^n], speed, catchT);
++ if (isLaserActive) Add (EBPhase.PressHold, poses[^n].Clone ());   // new
+</code></pre>
+<h3 id="change-2-srccorebcellopsrpathplanner.cs-getregripatbendingjawsteps-regrip-during-bend">Change 2 — <code>Src/Core/BCell/Ops/RPathPlanner.cs</code> (<code>GetRegripAtBendingJawSteps</code>, regrip-<strong>during</strong>-bend)</h3>
+<pre><code class="language-csharp">bool isLaserActive = op.UsingACBLaser &amp;&amp; op.ACB.IsLaserActive;      // new
+...
+  Add2 (EBPhase.RegripGrip, poses[^n], speed, regripT);
++ if (isLaserActive) Add2 (EBPhase.PressHold, poses[^n].Clone ());  // new (before Decompress in the overbend branch)
+</code></pre>
+<h3 id="change-3-srccorebendopsbendopstep.cs-acblaserposex-laser-sensor-geometry-per-phase">Change 3 — <code>Src/Core/Bend/Ops/BendOpStep.cs</code> (<code>ACBLaserPosEx</code>, laser sensor geometry per phase)</h3>
+<ul>
+<li>FootSwitch/MutePoint case now also covers the two pre-bend regrip phases:
+<code>phase is GaugeRetract or RegripRetract or RegripSwivel1 or Bending</code>.</li>
+<li><strong>New block</strong> — hold the laser at <code>Measure1</code> through the regrip-swivel:
+<pre><code class="language-csharp">if (!flat &amp;&amp; (phase is CatchAfterBend or RegripGrip || phase &gt;= RegripSwivel1 &amp;&amp; phase &lt;= RegripSwivel9))
+   sindex = eindex = ELCBPhase.Measure1;
+</code></pre>
+</li>
+<li><strong>Release-phase fix</strong> — for robotic, release the laser from the final measurement at <code>UpOpen</code> when there is no overbending:
+<pre><code class="language-csharp">- phase == (op.Tech.Robotic ? (op.NextStage is BCRegrip {Flavor: PostBend} ? UpOpen : Decompress) : UpRelease)
++ phase == (op.Tech.Robotic ? (!op.NeedsOverbending || op.NextStage is BCRegrip {Flavor: PostBend} ? UpOpen : Decompress) : UpRelease)
+</code></pre>
+</li>
+</ul>
+<h3 id="test-artifacts">Test artifacts</h3>
+<ul>
+<li><strong>New:</strong> <code>TData/Fanuc/C44835.fx</code> (+<code>.txt</code>) — Fanuc10, <code>HasACBLaser=true</code>, 2 bends <code>ACB=Laser Mode=Corrected</code>; dump shows the new <code>PressHold</code> pose after <code>CatchAfterBend</code> in both bends.</li>
+<li><strong>New:</strong> <code>Test/Bend/Fanuc/FanucBase.cs</code> <code>Test21</code> <code>[Test (18532, &quot;C44835: …ACBSmart&quot;)]</code>.</li>
+<li><strong>Regenerated (incidental, non-laser):</strong> <code>TData/Cell/2021/C30886.txt</code> (Test 4920, BM150) and <code>TData/Cell/Gripper/Standard_Serviceklappe_BM60TM_Multi_S.txt</code> (Test 2208, BM60).</li>
+</ul>
+<hr />
+<h2 id="correctness-analysis-the-deep-part">Correctness analysis (the deep part)</h2>
+<h3 id="the-semantic-change-is-exactly-right-and-null-safe">The semantic change is exactly right — and null-safe</h3>
+<p><code>IsLaserActive</code> (<code>BendACB.cs:267</code>) <code>= System == Laser &amp;&amp; Mode.IsLaserOn()</code>, and <code>IsLaserOn()</code> (<code>BendExtensions.cs:129</code>) <code>= mode is Identify or Corrected</code>. So the gate widens from <strong>Identify-only</strong> to <strong>Identify + Corrected (ACBSmart)</strong> — precisely the FlexCell case. <code>Learned</code>/<code>LearnSB</code> correctly stay excluded (they copy a reference bend, no live measurement).
+<code>UsingACBLaser =&gt; mACB is { System: Laser }</code> (<code>BendOp.cs:889</code>) is true only when <code>mACB</code> is non-null, <code>&amp;&amp;</code> short-circuits, and <code>ACB</code> is a pure <code>get =&gt; mACB</code> — so <code>mOp.ACB.IsLaserActive</code> is <strong>never dereferenced on null</strong>. Every <code>PressHold</code> consumer (duration <code>2*Measurements</code> at <code>BendOpStep.cs:49</code>; geometry at <code>:139/:153</code>) keys on <code>Laser</code>/<code>IsLaserActive</code>, both true for Corrected, so a Corrected press-hold behaves identically to the Identify one that already shipped.</p>
+<h3 id="the-release-phase-fix-targets-a-real-dead-branch">The release-phase fix targets a real dead branch</h3>
+<p><code>Decompress</code> is emitted <strong>only when overbending</strong> (both <code>PinchToBend</code> and <code>GetRegripAtBendingJawSteps</code>). So for a non-overbend robotic laser bend the old <code>phase == Decompress</code> release condition <strong>never matched</strong> → the laser stayed pinned at the last measurement position through extraction. The fix routes release to <code>UpOpen</code> when <code>!NeedsOverbending</code>. Verified safe on all axes:</p>
+<ul>
+<li><strong><code>UpOpen</code> always exists</strong> on every non-overbend robotic path — <code>BendToFinish</code> (<code>BStepComputer.cs:465</code>) emits it unconditionally and is the terminal step-producer (reached via <code>Compute()</code>, the regrip-during-bend chain <code>RPathPlanner.cs:140/230</code>, and <code>BRegripAux.cs:591</code>), always keeping <code>Op</code> = the laser op so <code>ACBLaserPos</code> fires.</li>
+<li><strong>Overbend path unchanged</strong> — when <code>NeedsOverbending</code> is true the ternary collapses to the exact old <code>NextStage is PostBend ? UpOpen : Decompress</code>.</li>
+<li><strong>Precedence</strong> — <code>is</code> &gt; <code>||</code> &gt; <code>?:</code>, so it parses as <code>(!NeedsOverbending || NextStage is …) ? UpOpen : Decompress</code>.</li>
+</ul>
+<p><em>Known limitation (author-flagged; validated → deferred to Case 48031):</em> this fix covers only the <em>release</em> transition. For a <strong>post-bend regrip</strong> the release is pinned to <code>UpOpen</code>, and every extraction phase after it — <code>PostBendSafe</code> plus all extraction-strategy phases (<code>OutSlide</code>/<code>OutLower</code>/<code>OutRotate*</code>/<code>OutTallFlange*</code>/<code>SideSlide</code>) — is <strong>unhandled in <code>ACBLaserPosEx</code></strong> (none are named there), so the laser defaults to <code>Release</code> with no strategy awareness → the ACB-laser trace is wrong during those phases. Pre-existing, <strong>machine-agnostic</strong> (the extraction default path isn't <code>IsBendMaster</code>-gated → affects BendMaster too), and <strong>untouched by this PR</strong> — the <code>postbend → UpOpen</code> branch is byte-identical before/after #3634 (the added <code>!NeedsOverbending ||</code> only alters the non-postbend branch). See finding #6.</p>
+<h3 id="the-regrip-swivel-block-is-correct-with-one-pre-existing-out-of-scope-gap">The regrip-swivel block is correct (with one pre-existing, out-of-scope gap)</h3>
+<p>Precedence groups as <code>(phase is CatchAfterBend or RegripGrip) || (phase &gt;= RegripSwivel1 &amp;&amp; phase &lt;= RegripSwivel9)</code>. Enum ranges check out — <code>RegripSwivel1..9 = 310..318</code>, <code>RegripSwivelNext (319)</code> correctly excluded (only between-bend regrips use it). <code>RegripRetract</code>/<code>RegripSwivel1</code> are always <code>flat</code> (they're in <code>sBeforeBending</code> → <code>BendLie</code> returns 0), so they're handled by the switch's flat→<code>Measure1</code> path and the new <code>!flat</code> block never touches them; <code>RegripSwivel2..9</code>/<code>CatchAfterBend</code>/<code>RegripGrip</code> are always non-flat → the new block drives them to <code>Measure1</code>, and no later block re-writes them. Adding <code>RegripRetract</code>/<code>RegripSwivel1</code> to MutePoint/FootSwitch <strong>brings those into line with the default <code>StepChange</code> case</strong> (not an asymmetry).
+<em>Gap:</em> the whole regrip-swivel block lives in the <code>PrepStrategy == None</code> branch, so an <strong>8000-series</strong> machine (<code>PrepStrategy != None</code>, e.g. TruBend 8000/B36) doing a during-bend regrip with the laser would leave swivel phases at <code>Release</code>. Pre-existing, out of scope (the test machine FANUC10 is <code>PrepStrategy == None</code>); likely unreachable, but worth a tracked note.</p>
+<h3 id="golden-regeneration-is-provably-complete-for-the-laser-change">Golden regeneration is provably complete for the laser change</h3>
+<p>The two new <code>PressHold</code> paths fire only when <code>isLaserActive</code> <strong>and</strong> the op takes the NoSupport-jaw or regrip-during-bend branch (signature: a <code>RegripSwivel1</code> line immediately followed by <code>Bending</code>, or a <code>CatchAfterBend</code>). A full-<code>TData</code> cross-check finds <strong>zero</strong> files that contain both <code>ACB=Laser</code> and either signature. All 57 existing robotic laser bends are <code>Mode=Identify</code> (37) or <code>Learned</code> (20) — <strong>none Corrected, none overbend</strong> — so the gate broadening changes no existing golden. <code>ACBLaserPosEx</code> only touches <code>ACBLaserPos</code>, which is <strong>not written to any dump</strong>. So the only laser golden needed is the new <code>C44835</code>.</p>
+<h3 id="the-two-incidental-non-laser-goldens-are-safe-but-not-caused-by-this-prs-logic">The two incidental non-laser goldens are safe — but not caused by this PR's logic</h3>
+<p><code>C30886</code> (BM150) and the <code>Serviceklappe</code> gripper (BM60) are both <strong>NoACB bends on machines that physically carry the laser</strong>. None of the three code changes can affect a non-laser part (all <code>PressHold</code> adds are <code>isLaserActive</code>-gated; <code>ACBLaserPosEx</code> returns early for <code>op.ACB == null</code>). What actually changed them: the new <strong>unconditional</strong> <code>mOp.UsingACBLaser &amp;&amp; mOp.ACB.IsLaserActive</code> read at the top of <code>PinchToBend</code> (and in <code>GetRegripAtBendingJawSteps</code>) accesses the <code>ACBSettings.System</code>/<code>Mode</code> getters, whose stale-reset + <code>Dirty</code> cascade (<code>BendACB.cs:224-234/407-414</code>) forces re-derivation of ACB-related caches that were serialized <strong>stale</strong> in the old <code>.fx</code> files.
+<strong>Why it's safe:</strong> for a NoACB bend the simulator always models the laser at the parked <code>Release</code> position — <code>BendOpStep.cs:153</code> <code>if (!acb.IsLaserActive &amp;&amp; !isMoving) sindex = eindex = Release;</code> — and <strong>that line is unchanged</strong>. So the laser-box geometry the collision test sees is byte-identical before and after; no crash is newly hidden and no clearance is newly dropped. The fresh recompute is therefore the source of truth: the dropped <code>ACBLaserCrash</code> flag and the 12 mm smaller extraction lift were <strong>stale FX state</strong>, exactly as the author suspected. (Likely drift from Case 47639 / #3546 &quot;reduce retract distance on release-and-regrip&quot;, which never regenerated <code>C30886</code>.)</p>
+<hr />
+<h2 id="findings-severity-ranked">Findings (severity-ranked)</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Sev</th>
+<th>Area</th>
+<th>Finding</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td><strong>minor</strong></td>
+<td>merge gate / hidden drift</td>
+<td><strong>Run the full cell+fanuc golden suite before merge.</strong> The new unconditional <code>isLaserActive</code> read has <em>proven</em> side effects on non-laser goldens (C30886, Serviceklappe re-derived from stale FX caches). With <strong>no CI on this repo</strong>, there is no green check that some <em>other</em> cell golden on an ACB-laser-carrying BendMaster with stale FX state won't also silently shift. The completeness reasoning says the laser change is clean, but the incidental-drift channel means only a full-suite regen closes it. Treat as a pre-merge gate, not a note.</td>
+</tr>
+<tr>
+<td>2</td>
+<td><strong>minor</strong></td>
+<td>test-coverage</td>
+<td><strong>The fix's core is essentially untested by goldens.</strong> The user-visible bug is 3D laser-trace geometry, and <code>ACBLaserPos</code>/<code>ACBLaserPosEx</code> output is <strong>never dumped</strong> (grep <code>LaserPos</code> over <code>TData</code> = 0). <code>C44835.txt</code> only proves a <code>PressHold</code> <em>step</em> is emitted for the Fanuc <strong>overbend</strong> release-and-retake path. Unverified by any golden: the RPathPlanner <strong>regrip-during-bend</strong> <code>PressHold</code>, the <strong>non-overbend</strong> <code>CatchAfterBend</code>+<code>PressHold</code> branch (both <code>C44835</code> bends are overbend), and all <code>ACBLaserPosEx</code> geometry. Consider adding a during-bend-regrip laser part + a non-overbend robotic-laser part, and require a <strong>manual visual check on an actual FlexCell</strong> part.</td>
+</tr>
+<tr>
+<td>3</td>
+<td><strong>minor</strong></td>
+<td>domain sign-off</td>
+<td><strong>Bend-expert OK on the robot motion + machine fidelity.</strong> Inserting <code>PressHold</code> after <code>CatchAfterBend</code>/<code>RegripGrip</code> (holding at the regrip pose while the laser cycles measurements) is a physical-motion judgment for ACBSmart — worth an explicit OK from the bend lead (Arvind / <code>tarydon</code>). Also: the ticket is <em>FlexCell</em>, but the repro forces <code>BendMachine.Get(FANUC10).HasACBLaser = true</code> rather than a FlexCell profile — it exercises the code path but not the named machine.</td>
+</tr>
+<tr>
+<td>4</td>
+<td><strong>minor</strong></td>
+<td>tech-debt</td>
+<td><strong>Incidental goldens fix a symptom, not the root cause.</strong> The two non-laser golden corrections come from an <em>evaluation-order side effect</em> re-deriving stale FX caches, not from addressing the load-time invalidation gap (FX keeps ACB-derived caches a fresh part wouldn't). The corrected goldens now encode a dependence on the <code>isLaserActive</code> read staying at the top of <code>PinchToBend</code>; a future refactor that moves/short-circuits it could silently revert both. Worth a tracked case for the load-time invalidation.</td>
+</tr>
+<tr>
+<td>5</td>
+<td><strong>minor</strong></td>
+<td>scope (pre-existing)</td>
+<td><strong>8000-series regrip-swivel laser gap.</strong> The new regrip-swivel→<code>Measure1</code> handling is only in the <code>PrepStrategy == None</code> branch (<code>BendOpStep.cs:89-91</code>); a <code>PrepStrategy != None</code> machine (8000/B36) doing a during-bend regrip with the laser would leave those phases at <code>Release</code>. Pre-existing and out of this PR's FlexCell scope — note only.</td>
+</tr>
+<tr>
+<td>6</td>
+<td><strong>minor</strong></td>
+<td>scope (pre-existing → C48031)</td>
+<td><strong>Post-bend-regrip extraction-phase ACB laser position is wrong</strong> (author-flagged; validated). For a post-bend regrip the release is pinned to <code>UpOpen</code> (<code>BendOpStep.cs:147</code>) and every extraction phase after it — <code>PostBendSafe</code> + all extraction-strategy phases (<code>OutSlide</code>/<code>OutLower</code>/<code>OutRotate*</code>/<code>OutTallFlange*</code>/<code>SideSlide</code>) — is <strong>unhandled in <code>ACBLaserPosEx</code></strong>, so the laser defaults to <code>Release</code> with no strategy awareness. <strong>Untouched by this PR</strong> (the <code>postbend → UpOpen</code> branch is byte-identical before/after #3634; #3634's laser edits are all during-bend/no-support phases) and <strong>machine-agnostic</strong> (extraction default isn't <code>IsBendMaster</code>-gated → BendMaster too). Correctly deferred to <strong>Case 48031</strong>.</td>
+</tr>
+<tr>
+<td>7</td>
+<td>nit</td>
+<td>robustness</td>
+<td>New gate no longer forces <code>ComputeACBMode()</code>. The old <code>ACBMode</code> read triggered it; <code>ACB.IsLaserActive</code> reads raw <code>Mode</code>/<code>System</code>. If the ACB were <code>Dirty</code> at step-compute time, <code>Mode</code>→<code>Unknown</code>→<code>PressHold</code> silently skipped. Not a real defect (ACB is cleaned upstream by <code>BendToolerRefine</code>; C44835 confirms emission), but correctness now <em>depends</em> on the ACB being non-dirty by <code>PinchToBend</code>.</td>
+</tr>
+<tr>
+<td>8</td>
+<td>nit</td>
+<td>G022</td>
+<td><code>Test21</code> mutates the shared cached <code>BendMachine.Get(FANUC10).HasACBLaser</code> via try/finally with no <code>[SkipIfParallel]</code>/<code>TmpMachine</code>. Real risk ≈ zero — parallelism is <strong>process-per-fixture</strong> (<code>Test/Parallel.cs</code>) with a per-process machine cache, sequential in-fixture, finally-restore — and it matches the established convention (<code>BendACB.cs</code> <code>Test7</code>, <code>Test9→CheckACBGlob(83)</code>).</td>
+</tr>
+<tr>
+<td>9</td>
+<td>nit</td>
+<td>dead-but-harmless</td>
+<td><code>RegripSwivel1</code> inside the <code>!flat</code> range (<code>BendOpStep.cs:90</code>) never executes (always flat → the block could start at <code>RegripSwivel2</code>). Also <code>_BDC</code> + during-bend robotic regrip would force <code>CatchAfterBend</code>/<code>RegripGrip</code> to <code>Measure1</code> before the <code>_BDC</code> insert — premature, but an implausible/untested combination and not dumped.</td>
+</tr>
+<tr>
+<td>10</td>
+<td>nit</td>
+<td>commit hygiene</td>
+<td>6 commits incl. a merge, &quot;Fix spelling&quot;, &quot;Remove redundant variable&quot;. Squash/rebase-merge rather than carry the merge commit.</td>
+</tr>
+</tbody>
+</table>
+<h3 id="praise">Praise</h3>
+<ul>
+<li><strong>Root-cause-accurate:</strong> keys on <em>laser activity</em> (<code>IsLaserActive</code>) rather than a specific mode, correctly capturing FlexCell's Corrected-only ACBSmart — instead of special-casing FlexCell.</li>
+<li><strong>Clean, null-safe gate</strong> reused consistently across all three paths, with correct <code>.Clone()</code> to avoid the shared-pose mutation trap (<code>Add</code>/<code>Add2</code> mutate <code>Speed</code>/<code>Tolerance</code>).</li>
+<li><strong>Honest dev note</strong> flagging the two unexplained goldens — the instinct (&quot;old state in the FX&quot;) was correct; the mechanism is a stale-cache re-derivation validated against the <em>unchanged</em> parked-laser geometry (<code>BendOpStep.cs:153</code>).</li>
+</ul>
+<hr />
+<h2 id="guideline-compliance-g001g035">Guideline compliance (G001–G035)</h2>
+<p>Clean. <strong>G005</strong> ✓ (<code>&quot;C44835:&quot;</code> prefix allowed; not <code>&quot;Case&quot;</code>). <strong>G033</strong> — test ID <code>18532</code> is unique <em>on <code>main</code></em>, but ⚠️ <strong>collides cross-branch with open PR #3597</strong> (<code>FanucUI.cs</code> <code>Test15</code>, also <code>18532</code>): whichever merges second trips the duplicate-ID guard. One of the two must be renumbered. See [[PR-3597 Case 47665 - Multi-pickup per-corner error handling]]. <strong>G022</strong> — nit only (see #7). Source hunks are style-clean; <code>mOp.UsingACBLaser</code> before <code>mOp.ACB.IsLaserActive</code> is a required null-guard, not a redundant lambda. All touched types are <code>internal</code> in <code>namespace Flux</code> (not <code>Flux.API</code>) → <strong>no APIGen/<code>.gen.cs</code></strong> (G026 N/A). New test-data files are <code>.fx</code>/<code>.txt</code> (not <code>.cs</code>) → G012/G014 N/A; the one new <code>.cs</code> is a test method, not a file. No translation files (G025/G033). Documented false-positive traps (G009 banner widths by eye, G013 method-group with optional/params) deliberately not raised.</p>
+<p><strong>ReFlux companion:</strong> not required — no machine/3D-model, tool-catalog, TBS, WIBU, or flavor changes (only bend-sim code + test data). See [[ReFlux — Companion Repo Checklist]].</p>
+<hr />
+<h2 id="bottom-line">Bottom line</h2>
+<p>Correct, minimal, root-cause-accurate, and — for the <em>laser</em> change — provably complete on goldens. <strong>Safe to merge</strong> after: (1) a <strong>full golden-suite run</strong> to confirm no other stale-FX drift (no CI), (2) a <strong>domain + visual OK</strong> on an actual FlexCell ACBSmart part (the trace geometry the case is about is not captured by any dump), and (3) squashing the commits. The incidental non-laser goldens are safe corrections of stale FX state; documenting that (and optionally tracking the load-time invalidation gap) would close the loop.</p>
+<hr />
+<p>Related: [[PR-3649 Case 47961 - Rounding &amp; regrip-during-bend waypoints]] · [[PR-3645 Case 48000 - Overbending when base plane inside machine]] — same author, same <code>BStepComputer</code>/<code>RPathPlanner</code> regrip-during-bend machinery.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#what-the-pr-does">What the PR does</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-verified">Root cause (verified)</a>
+  </li>
+  <li level="2">
+   <a href="#change-1-srccorebcellopsbstepcomputer.cs-pinchtobend">Change 1 —  ()</a>
+  </li>
+  <li level="2">
+   <a href="#change-2-srccorebcellopsrpathplanner.cs-getregripatbendingjawsteps-regrip-during-bend">Change 2 —  (, regrip-during-bend)</a>
+  </li>
+  <li level="2">
+   <a href="#change-3-srccorebendopsbendopstep.cs-acblaserposex-laser-sensor-geometry-per-phase">Change 3 —  (, laser sensor geometry per phase)</a>
+  </li>
+  <li level="2">
+   <a href="#test-artifacts">Test artifacts</a>
+  </li>
+  <li level="1">
+   <a href="#correctness-analysis-the-deep-part">Correctness analysis (the deep part)</a>
+  </li>
+  <li level="2">
+   <a href="#the-semantic-change-is-exactly-right-and-null-safe">The semantic change is exactly right — and null-safe</a>
+  </li>
+  <li level="2">
+   <a href="#the-release-phase-fix-targets-a-real-dead-branch">The release-phase fix targets a real dead branch</a>
+  </li>
+  <li level="2">
+   <a href="#the-regrip-swivel-block-is-correct-with-one-pre-existing-out-of-scope-gap">The regrip-swivel block is correct (with one pre-existing, out-of-scope gap)</a>
+  </li>
+  <li level="2">
+   <a href="#golden-regeneration-is-provably-complete-for-the-laser-change">Golden regeneration is provably complete for the laser change</a>
+  </li>
+  <li level="2">
+   <a href="#the-two-incidental-non-laser-goldens-are-safe-but-not-caused-by-this-prs-logic">The two incidental non-laser goldens are safe — but not caused by this PR's logic</a>
+  </li>
+  <li level="1">
+   <a href="#findings-severity-ranked">Findings (severity-ranked)</a>
+  </li>
+  <li level="2">
+   <a href="#praise">Praise</a>
+  </li>
+  <li level="1">
+   <a href="#guideline-compliance-g001g035">Guideline compliance (G001–G035)</a>
+  </li>
+  <li level="1">
+   <a href="#bottom-line">Bottom line</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></span>
+ <span class="next"><a href="pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../../res/index.js"></script>
+    <script src="../../../../res/files.js"></script>
+    <script src="../../../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

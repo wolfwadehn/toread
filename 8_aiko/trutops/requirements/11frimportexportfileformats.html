@@ -1,0 +1,1254 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>11FRImportExportFileFormats</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a class="active" href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>11FRImportExportFileFormats</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-fr-import-export-file-formats-doc-11-fr-import-export-file-formats-id-prefix-fr-impex-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-10-fr-cad-geometry-drawing-editing-12-fr-part-data-management-04-domain-model-glossary-30-external-interface-requirements-23-fr-automation-scripting-integration-tags-requirements-trutops-functional-requirements">product: trutopscad
+org: trumpf
+title: &quot;FR — Import, Export &amp; File Formats&quot;
+doc: &quot;11 - FR - Import, Export &amp; File Formats&quot;
+id-prefix: &quot;FR-IMPEX&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[10 - FR - CAD Geometry &amp; Drawing Editing]]&quot;, &quot;[[12 - FR - Part &amp; Data Management]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;, &quot;[[30 - External Interface Requirements]]&quot;, &quot;[[23 - FR - Automation, Scripting &amp; Integration]]&quot;]
+tags: [requirements, trutops, functional-requirements]</h2>
+<h1 id="fr-import-export-file-formats">FR — Import, Export &amp; File Formats</h1>
+<blockquote>
+<p>Reverse-engineered requirement draft — derived from static analysis of legacy source, NOT an authoritative specification. Treat SHALL statements as reconstructed intent.</p>
+</blockquote>
+<h2 id="purpose-scope">1. Purpose &amp; Scope</h2>
+<p>This area covers how the TruTops CAD/CAM suite reads and writes <strong>external CAD and exchange file formats</strong> and turns them into (or out of) the internal <em>Dbase</em> drawing model (<code>S_draw</code> → parts → contours → elements). It spans:</p>
+<ul>
+<li><strong>Vector CAD import</strong>: DXF, DWG (via an external converter), IGES, ME10 <strong>MI</strong> (HP ME10 Macro Interchange), and <strong>DSTV</strong> (Deutscher Stahlbau-Verband steel-construction NC).</li>
+<li><strong>Native TRUMPF formats</strong>: GEO / GEO_102, GMT (ToPs 1000) and TAF, handled by the converter as ordinary source/target formats (the on-disk GEO parser itself lives in <code>tc_dbase</code> — see [[12 - FR - Part &amp; Data Management]]).</li>
+<li><strong>Export</strong>: DXF, ME10, IGES, SVG, HPGL, GEO/GEO_102, XML calculation info, XCAD, and GMT drawing-number stamping.</li>
+<li><strong>Raster import &amp; vectorization</strong>: BMP / JPG / PNG / TIF / GIF are vectorized by the external <strong>ToPsVectorize</strong> program (from MCS) into a GEO that is then loaded.</li>
+<li><strong>The converter framework</strong> (<code>convmain</code>): a shared library (<code>readDrawingFromFile</code> / <code>doDrawingConversion</code> / <code>writeDrawingToFile</code>) plus two standalone command-line executables — <code>tc_conv.exe</code> (file-based) and <code>pdmConvert.exe</code>/<code>.dll</code> (PDM/CORBA-connected).</li>
+</ul>
+<p><strong>Editions served:</strong> ToPsCad (full CAD import/export incl. raster vectorization), ToPs 300 (punching) and ToPs 100 (laser) consume the same importers; each external format is gated by a per-format licence/password key.</p>
+<blockquote>
+<p>Several modules named in the assignment were found to belong to <strong>other</strong> functional areas; they are captured in §7 (Open Questions) rather than specified here, because another analyst owns them (<code>tc_scan</code>, <code>tc_bitm</code>, <code>tc_gts</code>, <code>tc_mrif</code>, <code>tc_stl</code>, <code>tc_ein</code>).</p>
+</blockquote>
+<h2 id="capability-overview">2. Capability Overview</h2>
+<ul>
+<li>Import vector CAD from <strong>DXF</strong> (full AutoCAD entity set), <strong>DWG</strong>, <strong>IGES</strong>, <strong>ME10/MI</strong> and <strong>DSTV</strong> into the Dbase drawing model.</li>
+<li>Fine-grained <strong>DXF import control</strong>: layer selection / frozen-layer / off-layer suppression, single block or single layout loading, spline conversion (ignore / interpolate / approximate / control-polygon), text &amp; font handling, Z-coordinate suppression, and a detailed load-error report (optionally HTML).</li>
+<li><strong>Raster-to-vector</strong> import of BMP/JPG/PNG/TIF/GIF via the external ToPsVectorize tool.</li>
+<li><strong>Automatic part extraction</strong> from imported drawings (strips drawing frames, arrows, crosses; closes small gaps; identifies the part contour).</li>
+<li>Export to <strong>DXF, ME10, IGES, SVG, HPGL, GEO/GEO_102, XML, XCAD</strong>; stamp a drawing/part number into a <strong>GMT</strong>.</li>
+<li><strong>Standalone batch converter</strong> (<code>tc_conv.exe</code> / <code>pdmConvert.exe</code>) driven by command-line options and <code>@response</code> files, converting one input to one or several output formats at once.</li>
+<li>Conversion <strong>post-processing pipeline</strong>: duplicate-point merging, open-contour closing, geometry thinning, thin-slot contour preparation, coordinate scaling, unit conversion (auto/metric/inch), automatic bend-notching, and colour handling.</li>
+<li><strong>Licensing</strong>: every external format is protected by a dongle/Wibu + password-list check (<code>DXF_PASSWORD</code>, <code>DWG_PASSWORD</code>, <code>IGES_PASSWORD</code>, <code>MI_PASSWORD</code>, <code>DSTV_PASSWORD</code>); a superuser mode disables the check.</li>
+</ul>
+<h2 id="domain-entities">3. Domain Entities</h2>
+<table>
+<thead>
+<tr>
+<th>Entity</th>
+<th>German</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Drawing (<code>S_draw</code>)</td>
+<td>Zeichnung</td>
+<td>Root of the in-memory Dbase model produced by every importer and consumed by every exporter. See [[04 - Domain Model &amp; Glossary]].</td>
+</tr>
+<tr>
+<td>Part (<code>S_teil</code>)</td>
+<td>Teil</td>
+<td>A part within a drawing; carries the transformation matrix and text-info (part identity number).</td>
+</tr>
+<tr>
+<td>Contour (<code>S_kontur</code>)</td>
+<td>Kontur</td>
+<td>Closed/open chain of elements; nesting depth drives part extraction.</td>
+</tr>
+<tr>
+<td>Element (<code>S_element</code>)</td>
+<td>Element</td>
+<td>Line, arc, circle, spline, point, text — the atomic geometry unit.</td>
+</tr>
+<tr>
+<td>Contour preparation</td>
+<td>Konturaufbereitung</td>
+<td>Offset/equidistant-oriented cleanup applied before writing certain formats.</td>
+</tr>
+<tr>
+<td>Layer</td>
+<td>Layer / Ebene</td>
+<td>DXF/MI grouping; import can select, ignore, freeze or switch off layers.</td>
+</tr>
+<tr>
+<td>Single stroke</td>
+<td>Einzelhub</td>
+<td>Punch-stroke info carried in MI/CAPT files, mapped to Dbase stroke attributes.</td>
+</tr>
+<tr>
+<td>Raster graphic</td>
+<td>Rastergrafik</td>
+<td>BMP/JPG/PNG/TIF/GIF pixel image, input to vectorization.</td>
+</tr>
+<tr>
+<td>Vectorization</td>
+<td>Vektorisierung</td>
+<td>Conversion of a raster image to vector geometry (external ToPsVectorize).</td>
+</tr>
+<tr>
+<td>Thinning</td>
+<td>Ausdünnen</td>
+<td>Reduction of element count / point density during conversion.</td>
+</tr>
+<tr>
+<td>Notching</td>
+<td>Klinken / Klinkung</td>
+<td>Automatic relief notch at bend lines.</td>
+</tr>
+<tr>
+<td>Conversion parameter set</td>
+<td>Konvertierungsparameter (<code>TsConvertParameter</code>)</td>
+<td>Struct holding all import/export/post-processing options for a conversion run.</td>
+</tr>
+<tr>
+<td>Dongle / licence</td>
+<td>Dongle / Wibu</td>
+<td>Hardware/software licence gating each format.</td>
+</tr>
+</tbody>
+</table>
+<h2 id="functional-requirements">4. Functional Requirements</h2>
+<h3 id="fr-impex-001-dxf-geometry-import">FR-IMPEX-001 — DXF geometry import</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports a DXF file, the system shall translate the supported AutoCAD entities — LINE, POLYLINE, LWPOLYLINE, CIRCLE, ARC, ELLIPSE, SPLINE, POINT, TEXT, MTEXT, INSERT (block reference), SOLID, HATCH and DIMENSION — into corresponding Dbase geometry elements of a drawing.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> DXF is the primary interchange format for accepting customer part geometry into ToPsCad/ToPs 300/ToPs 100.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_enti.cpp</code>, <code>tc_dxf/dxf_lese.cpp</code> (entity dispatch on &quot;LINE&quot;,&quot;LWPOLYLINE&quot;,&quot;ARC&quot;,&quot;SPLINE&quot;,&quot;ELLIPSE&quot;,&quot;HATCH&quot;,&quot;INSERT&quot;,…); <code>tc_dxf/TcDxfPartExtractor.h</code>; <code>convmain/convert.cpp</code> <code>lese_dxfdwg_format()</code> → <code>tc_lese_dxf()</code>.</li>
+<li><strong>Verification:</strong> Test (import reference DXF files covering each entity type and compare resulting Dbase geometry).</li>
+</ul>
+<h3 id="fr-impex-002-dxf-layer-filtering">FR-IMPEX-002 — DXF layer filtering</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a DXF file is imported, the system shall allow the operator to select which layers are read, and shall by default ignore layers marked <em>frozen</em> or <em>off</em>, and where the ignore-list mode is inverted (ToPs 300), the system shall instead read only the layers not in the selection list.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Customer DXFs mix geometry, dimensioning and frames on different layers; only production-relevant layers must reach the CAM model.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_konf.cpp</code> (<code>add_dxf_layer</code>, <code>ignoreAllDxfLayers</code>, <code>add_dxf_frozen_layer</code>, <code>add_dxf_off_layer</code>, <code>pruefe_layer_bedingung</code>, <code>IgnoreLayers</code> &quot;Kruecke fuer ToPs 100&quot;); converter option <code>-c ( layername1 layername2 )</code>, <code>-z</code> (ignore frozen layers) in <code>convmain/tc_conv.cpp</code> ShowHelp.</li>
+<li><strong>Verification:</strong> Test (import a multi-layer DXF with layer selections and frozen/off layers; verify only selected/thawed geometry appears).</li>
+</ul>
+<h3 id="fr-impex-003-dxfmi-spline-conversion-mode">FR-IMPEX-003 — DXF/MI spline conversion mode</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a DXF or MI file containing B-splines is imported, the system shall convert each spline according to a configurable mode — 0 ignore, 1 linear interpolation, 2 adaptive approximation, 3 output control polygon — using configurable maximum chord distance and minimum segment length parameters.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Cutting/punching geometry must be reduced from analytic splines to machine-processable segments at a controllable accuracy.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_konf.cpp</code> (<code>set_DxfConvertSpline</code>, default 2; <code>DxfConvertSplineDistance=0.05</code>, <code>DxfConvertSplineLength=0.1</code>); <code>tc_mi/tc_mi.h</code> (<code>get_MiConvertSpline*</code>); converter options <code>-a 0|1|2|3</code>, <code>-g Distance</code>, <code>-h Length</code>.</li>
+<li><strong>Verification:</strong> Test (import a spline in each mode and measure segment count / deviation).</li>
+</ul>
+<h3 id="fr-impex-004-dxf-text-and-font-handling">FR-IMPEX-004 — DXF text and font handling</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a DXF file is imported, the system shall optionally suppress loading and display of text entities, and when text is retained the system shall map it to a configurable font (ISO / ISOPROP / BOLD or a named font file).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Text may be irrelevant or must be normalized to a marking-capable font for the machine.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_konf.cpp</code> (<code>set_DxfConvertText</code>, <code>set_DxfFontType</code> 1=ISO/2=ISOPROP/3=BOLD, <code>set_DxfFontName</code>); converter options <code>-d</code> (suppress text), <code>-n ISO.FNT|ISOPROP.FNT|BOLD.FNT</code>.</li>
+<li><strong>Verification:</strong> Test (import DXF with text using <code>-d</code> and with each font and inspect result).</li>
+</ul>
+<h3 id="fr-impex-005-dxf-single-block-single-layout-import">FR-IMPEX-005 — DXF single block / single layout import</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a DXF file is imported, the system shall support loading only a single named block or only a single named layout while ignoring all other content.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Multi-layout / block libraries must be reduced to the one relevant part.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_konf.cpp</code> (<code>set_single_block_name</code>, <code>set_single_layout_name</code>, <code>get_single_block_name</code>, <code>get_single_layout_name</code>); converter options <code>-b</code> (load block section), <code>-L layoutname</code>.</li>
+<li><strong>Verification:</strong> Test (import a DXF with several blocks/layouts selecting one).</li>
+</ul>
+<h3 id="fr-impex-006-dxf-z-coordinate-suppression-2d-projection">FR-IMPEX-006 — DXF Z-coordinate suppression (2D projection)</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a DXF file is imported, the system shall by default ignore the Z coordinate of entities (treating geometry as 2D at Z=0) and shall provide a mode to honour the file's Z coordinates.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Sheet-metal geometry is 2D; stray Z values in customer files must not distort the flat part.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxf_konf.cpp</code> (<code>Dxf_Ignore_Z_Koord = 1</code>, <code>set_dxf_ignore_z_koord</code>).</li>
+<li><strong>Verification:</strong> Test (import a DXF with non-zero Z and confirm flattening).</li>
+</ul>
+<h3 id="fr-impex-007-dxf-import-error-reporting">FR-IMPEX-007 — DXF import error reporting</h3>
+<ul>
+<li><strong>Requirement:</strong> When a DXF (or DWG) import produces load errors, the system shall record them in a load report and, where detailed logging is enabled, shall write a <code>&lt;inputfile&gt;.LOG</code> report (optionally as HTML with a link) while continuing the load for non-critical errors.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Operators need diagnostics for imperfect customer files without losing a recoverable import.</li>
+<li><strong>Source:</strong> <code>tc_dxf/TcDxfLoadReport.h</code>, <code>tc_dxf/TcDxfLoadReport.cpp</code> (<code>reportLineError</code>, <code>getReport</code>, <code>getErrorCount</code>); <code>convmain/convert.cpp</code> <code>lese_dxfdwg_format()</code> (<code>.LOG</code> handling, <code>t_htmlOutput</code>); converter option <code>-v</code>.</li>
+<li><strong>Verification:</strong> Test (import a malformed DXF with <code>-v</code> and inspect the <code>.LOG</code>).</li>
+</ul>
+<h3 id="fr-impex-008-dwg-import-via-external-converter">FR-IMPEX-008 — DWG import via external converter</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports a DWG file, the system shall invoke the external <code>DWGConverter.exe</code> (with Wibu licensing) to convert the DWG into a temporary DXF and shall then read that DXF through the DXF importer.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> DWG is a proprietary binary format handled by a licensed external converter rather than a native reader.</li>
+<li><strong>Source:</strong> <code>tc_dwg/TcDwgConverter.h</code>; <code>tc_dwg/DwgConverterStaticCall/TcDwgConverter.cpp</code> (<code>getDwgConverterPath()</code> → <code>%ProgramFiles(x86)%\TRUMPF\Utils\DWGConverter\DWGConverter.exe</code>, <code>a_useWibuLicence=true</code>, <code>CreateProcess</code>); DB-call variant <code>tc_dwg/DwgConverterDBCall</code>; <code>convmain/convert.cpp</code> <code>lese_dxfdwg_format(..., isDxf=false)</code>.</li>
+<li><strong>Verification:</strong> Demonstration (import a DWG with the converter installed) / Inspection (invocation path).</li>
+</ul>
+<h3 id="fr-impex-009-iges-import">FR-IMPEX-009 — IGES import</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports an IGES file, the system shall translate the supported IGES entity types — 100 circular arc, 106 copious data, 110 line, 116 point, 124 transformation matrix, 126 rational B-spline, 212 general note (text), and 308/408 subfigure definition/instance — into Dbase geometry, applying transformation matrices and views.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> IGES is a common neutral CAD exchange format for 2D contour geometry.</li>
+<li><strong>Source:</strong> <code>tc_iges/ig_defin.h</code> (entity codes KREISE 100, COPIOUS 106, LINIEN 110, PUNKTE 116, MATRIZE 124, BSPLINE/CURVE 126, IG_TEXT 212); <code>tc_iges/ig_struc.h</code>; <code>tc_iges/ig_lese.cpp</code>, <code>ig_store.cpp</code>; <code>convmain/convert.cpp</code> <code>lese_iges_format()</code> → <code>tc_lese_iges()</code>.</li>
+<li><strong>Verification:</strong> Test (import reference IGES files covering the listed entities).</li>
+</ul>
+<h3 id="fr-impex-010-me10-mi-geometry-import">FR-IMPEX-010 — ME10 MI geometry import</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports an HP ME10 MI file, the system shall parse its geometry records (construction lines/circles, points, lines, arcs, circles) into Dbase geometry and shall interpret the MI format version.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> ME10/MI is a legacy TRUMPF/HP CAD exchange format still present in customer data.</li>
+<li><strong>Source:</strong> <code>tc_mi/mi_lese.cpp</code> (&quot;MI-Interpreter&quot;), <code>tc_mi/mi_def.h</code> (CLINE, CKREIS, PUNKT, LINIE, BOGEN, KREIS), <code>tc_mi/tc_mi.h</code> (<code>MI_Version_Nr</code>, <code>MI_RELEASE_1 2.21</code>, <code>MI_RELEASE_2 2.4</code>); <code>convmain/convert.cpp</code> <code>lese_mi_format()</code> → <code>tc_lese_mi()</code>.</li>
+<li><strong>Verification:</strong> Test (import MI files of both format versions).</li>
+</ul>
+<h3 id="fr-impex-011-mi-single-stroke-capt-attribute-conversion">FR-IMPEX-011 — MI single-stroke (CAPT) attribute conversion</h3>
+<ul>
+<li><strong>Requirement:</strong> Where an MI file is imported in CAPT mode, the system shall convert its single-stroke (Einzelhub) information into Dbase single-stroke attributes using configurable, file-driven conversion rules.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> CAPT/MI files carry punch technology that must be reconstructed as machining attributes, not just geometry.</li>
+<li><strong>Source:</strong> <code>tc_mi/TcMiStrokeConversionManager.h/.cpp</code>, <code>TcMiStrokeConversionRule.*</code>, <code>TcMiStrokeDefinition.*</code>; <code>convmain/convert.cpp</code> <code>readDrawingFromFile()</code> (<code>set_capt_gra_konvert(TRUE)</code> for <code>M_mi_capt</code>).</li>
+<li><strong>Verification:</strong> Test (import a CAPT MI file and verify stroke attributes).</li>
+</ul>
+<h3 id="fr-impex-012-dstv-import">FR-IMPEX-012 — DSTV import</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports a DSTV file, the system shall read its 2D geometry information and build a Dbase drawing, ignoring non-2D data (e.g. bending or powder-marking instructions).</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> DSTV is the steel-construction NC standard; only its 2D contour data is needed for cutting.</li>
+<li><strong>Source:</strong> <code>tc_dstv/db_dstv.cpp</code> (header: &quot;Liest eine Datei aus dem DSTV-Format … liest die 2D-Informationen … weitere Informationen (z.B. zum Biegen oder Pulvern) werden vorerst ignoriert&quot;); <code>convmain/convert.cpp</code> <code>leseDstvFormat()</code> → <code>leseDstvDatei()</code>.</li>
+<li><strong>Verification:</strong> Test (import a DSTV file and inspect the extracted contour).</li>
+</ul>
+<h3 id="fr-impex-013-raster-import-and-vectorization">FR-IMPEX-013 — Raster import and vectorization</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system imports a raster graphic (BMP, JPG, PNG, TIF or GIF), the system shall invoke the external ToPsVectorize program to vectorize the image into a temporary GEO, shall load that GEO into the drawing, and shall then delete the temporary file.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Lets ToPsCad users derive cuttable contours from scanned or pixel drawings.</li>
+<li><strong>Source:</strong> <code>tc_interface/tc_cad/cad_vectorize/vectorize.h</code>, <code>tc_cad/cad_vectorize/vectorize.cpp</code> (<code>vectorizeRasterFile</code>, calls <code>%TOPS_VECTORIZE_PATH%\ToPsVectorize.exe &lt;ini&gt; &lt;in&gt; &lt;out.geo&gt;</code>); <code>tc_cad/cad_util/cad_load.hpp</code> (<code>RASTER_FORMAT 2048 // BMP, JPG, PNG, TIF, GIF</code>); <code>ini_files/ToPsCad/topsCad.org</code> (<code>TOPS_VECTORIZE_PATH</code>).</li>
+<li><strong>Verification:</strong> Demonstration (import a bitmap with ToPsVectorize installed).</li>
+</ul>
+<h3 id="fr-impex-014-native-geo-gmt-taf-read">FR-IMPEX-014 — Native GEO / GMT / TAF read</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system opens a native TRUMPF file in GEO, GMT or TAF format, the system shall load it into the Dbase drawing model through the native reader.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> GEO is the internal exchange/storage format; GMT (ToPs 1000) and TAF are sheet/table variants that the converter must accept as sources.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>readDrawingFromFile()</code> (<code>M_gmt</code>/<code>M_geo</code>/<code>M_taf</code> → <code>lese_tco_format()</code>); <code>convmain/tc_conv.h</code> (input formats &quot;GEO, GMT, TAF&quot;); on-disk parser in <code>tc_dbase</code> (see [[12 - FR - Part &amp; Data Management]]).</li>
+<li><strong>Verification:</strong> Test (round-trip a GEO/GMT/TAF file).</li>
+</ul>
+<h3 id="fr-impex-015-automatic-part-extraction-from-cad-import">FR-IMPEX-015 — Automatic part extraction from CAD import</h3>
+<ul>
+<li><strong>Requirement:</strong> Where automatic part extraction is enabled during a DXF/DWG import, the system shall analyse the drawing to identify the part geometry, remove drawing frames, arrows and crosses, close small contour gaps, and colour the identified part while marking non-part elements for deletion, offering alternative part proposals if the first result is unsatisfactory.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Customer drawings contain title blocks and annotations; automatic extraction yields a clean part without manual cleanup.</li>
+<li><strong>Source:</strong> <code>tc_dxf/TcDxfPartExtractor.h/.cpp</code> (<code>extractPart</code>, <code>removeFrames</code>, <code>removeArrows</code>, <code>removeCrosses</code>, <code>closeContours</code>, <code>getFirstAlternativePart</code>, <code>extractPartWithMarking</code>); <code>convmain/convert.cpp</code> (<code>m_extractPart</code> → <code>deleteElementByColor(...e_blue)</code>); converter option <code>-E</code>.</li>
+<li><strong>Verification:</strong> Test (import a framed customer DXF with extraction on).</li>
+</ul>
+<h3 id="fr-impex-016-dxf-export">FR-IMPEX-016 — DXF export</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports a drawing to DXF, the system shall write the Dbase geometry as DXF entities (lines, arcs, circles, points, texts and block inserts), optionally applying contour preparation before writing.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> DXF is the primary format for returning geometry to external CAD systems.</li>
+<li><strong>Source:</strong> <code>tc_dxf/dxfschr.cpp</code> (<code>schr_entities</code>), <code>dxfenti.cpp</code>, <code>dxfhead.cpp</code>, <code>dxftabl.cpp</code>; <code>convmain/convert.cpp</code> <code>schreibe_dxf_format()</code> → <code>tc_schreibe_dxf()</code> (with <code>bereite_datei_auf()</code> when contour preparation requested); TAF→DXF special path <code>tc_export_taf_to_dxf()</code>.</li>
+<li><strong>Verification:</strong> Test (export a drawing to DXF and re-import / validate in AutoCAD).</li>
+</ul>
+<h3 id="fr-impex-017-me10-export">FR-IMPEX-017 — ME10 export</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports a drawing to ME10 format, the system shall write an ME10 input file containing lines, arcs, points, circles, construction lines/circles, splines, arrows, texts and rectangles, together with their ME10 element and text attributes.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Supports customers who continue to use HP ME10/CoCreate.</li>
+<li><strong>Source:</strong> <code>tc_me10/tc_hpgeo.h</code> (<code>db_geo_daten_to_me10_input</code>), <code>me_elem.h</code> (<code>me10_linie/bogen/punkt/kreis/hilfskreis/hilfslinie/spline/pfeil/text/viereck</code>), <code>me_attr.h</code> (<code>setze_me10_attribute</code>); <code>convmain/convert.cpp</code> <code>schreibe_me10_format()</code>; converter output <code>-o me10</code>.</li>
+<li><strong>Verification:</strong> Test (export to ME10 and open in a compatible viewer).</li>
+</ul>
+<h3 id="fr-impex-018-iges-export">FR-IMPEX-018 — IGES export</h3>
+<ul>
+<li><strong>Requirement:</strong> Where IGES export is invoked, the system shall write the Dbase drawing as an IGES file, applying the configured viewport, help-geometry level and text font.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Provides a neutral CAD hand-off format for downstream systems.</li>
+<li><strong>Source:</strong> <code>tc_iges/ig_ausg.cpp</code>/<code>ig_ausg.h</code> (<code>ig_ausgabe(Draw_ptr)</code>, <code>set_iges_viewport</code>, <code>Level_fuer_Hilfsgeo</code>, <code>get_IgesFontName</code>).</li>
+<li><strong>Verification:</strong> Test (export to IGES and validate entities). <em>Note:</em> the <code>convmain</code> converter's <code>schreibe_iges_format()</code> is a stub — see §7.</li>
+</ul>
+<h3 id="fr-impex-019-svg-export">FR-IMPEX-019 — SVG export</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports a drawing to SVG, the system shall produce a scalable vector graphic and shall apply a configurable stroke width (absolute, percentage of viewport, or pixel value).</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> SVG supports documentation, web viewing and calculation previews.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>schreibe_svg_format()</code> (via <code>db_svg.h</code>); <code>convmain/tc_conv.h</code> (<code>setSvgStrokeWidth</code>); <code>TsConvertParameter::m_svgStrokeWidth</code>.</li>
+<li><strong>Verification:</strong> Test (export to SVG and render).</li>
+</ul>
+<h3 id="fr-impex-020-hpgl-export">FR-IMPEX-020 — HPGL export</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports a drawing to HPGL, the system shall write an HPGL plot file, optionally applying contour preparation.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Supports plotting/legacy output devices.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>schreibe_hpgl_format()</code> (via <code>tc_plot.h</code>).</li>
+<li><strong>Verification:</strong> Test (export to HPGL and plot/inspect).</li>
+</ul>
+<h3 id="fr-impex-021-native-geo-geo_102-export-with-contour-preparation">FR-IMPEX-021 — Native GEO / GEO_102 export with contour preparation</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports a drawing to the native TRUMPF format, the system shall write it as GEO or GEO_102 according to the requested version identifier and shall apply contour preparation when requested.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> GEO is the internal storage/exchange format consumed by the CAM chain; two versions must be selectable.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>schreibe_tco_format(filename, drawing, format, konturAufbereitung)</code>; <code>writeDrawingToFile()</code> (<code>M_geo</code>/<code>M_geo_102</code>); converter output <code>-o geo|geo_102</code>.</li>
+<li><strong>Verification:</strong> Test (export to GEO and GEO_102, reload each).</li>
+</ul>
+<h3 id="fr-impex-022-xml-calculation-info-export">FR-IMPEX-022 — XML calculation-info export</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system exports XML calculation information, the system shall analyse the first real part of the drawing and write its calculation-relevant contour data as XML.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Feeds the ToPs 1000 calculation/costing tool.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>writeXmlCalculationInfo()</code> (<code>TcDbaseKalkulationsTool::analysiereTeil</code>, <code>xmlExport</code>); format enum <code>e_xml</code>.</li>
+<li><strong>Verification:</strong> Test (export XML for a known part and validate against the calculation schema).</li>
+</ul>
+<h3 id="fr-impex-023-xcad-export">FR-IMPEX-023 — XCAD export</h3>
+<ul>
+<li><strong>Requirement:</strong> Where XCAD export is invoked, the system shall write the Dbase drawing to the XCAD exchange format.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Internal TRUMPF exchange format for specific downstream tooling.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>writeDrawingToFile()</code> (<code>M_xcad</code> → <code>exportDbaseToXCad()</code> via <code>db2XCad.h</code>); format enum <code>e_xcad</code>.</li>
+<li><strong>Verification:</strong> Inspection / Test (export and validate against XCAD consumer).</li>
+</ul>
+<h3 id="fr-impex-024-gmt-drawing-number-update">FR-IMPEX-024 — GMT drawing-number update</h3>
+<ul>
+<li><strong>Requirement:</strong> When the system is asked to set a drawing number on a GMT file, the system shall rewrite the file's GEO section so that the part identity number is inserted/replaced (creating the text-info block if absent) without otherwise altering the geometry.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> In the Blechfabrik / NC-Link flow the drawing number is the through-going part identifier for the cutting order.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>setGmtDrawingNumber()</code> (edits <code>#~11</code>, <code>#~30</code>/<code>#~TTINFO_END</code>, <code>KEY_TEILEIDENTNR</code>); output <code>M_gmt</code>; converter option <code>-Z</code>.</li>
+<li><strong>Verification:</strong> Test (stamp a number into a GMT and re-read the identity).</li>
+</ul>
+<h3 id="fr-impex-025-standalone-batch-converter-command-line-response-file">FR-IMPEX-025 — Standalone batch converter (command line / response file)</h3>
+<ul>
+<li><strong>Requirement:</strong> The system shall provide a command-line converter that reads an input file in a specified format (<code>-i geo|iges|dxf|dwg|mi|mi_capt|dstv</code>) and writes it to one or more output formats (<code>-o geo|geo_102|dxf|me10|…</code>), accepting either an explicit file list or an <code>@response_file</code>, and setting the message language via <code>-s deu|eng|frz|spa|ita</code>.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Enables unattended batch conversion and integration into external workflows (see [[23 - FR - Automation, Scripting &amp; Integration]]).</li>
+<li><strong>Source:</strong> <code>convmain/tc_conv.cpp</code> (<code>Handle_All_Options</code>, <code>ShowHelp</code>, <code>convmain()</code>, <code>@</code>-response handling); <code>convmain/convert.cpp</code> <code>convert_file()</code>, <code>writeDrawingToFile()</code> loop over <code>getNextGrafikFormatId</code>; <code>convmain/tc_conv.h</code> (<code>TeGrafikFormat</code>, <code>TsConvertParameter</code>).</li>
+<li><strong>Verification:</strong> Demonstration (run <code>tc_conv.exe -i dxf -o geo,dxf file.dxf</code>).</li>
+</ul>
+<h3 id="fr-impex-026-per-format-licence-dongle-check">FR-IMPEX-026 — Per-format licence / dongle check</h3>
+<ul>
+<li><strong>Requirement:</strong> While password checking is active, the system shall verify the dongle/Wibu licence and password entry for the specific format being read or written (<code>DXF_PASSWORD</code>, <code>DWG_PASSWORD</code>, <code>IGES_PASSWORD</code>, <code>MI_PASSWORD</code>, <code>DSTV_PASSWORD</code>) and shall abort the operation with a diagnostic if the licence is missing.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Each import/export format is a separately licensed option.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> (<code>checkModulePassword(&quot;DXF_PASSWORD&quot; / &quot;DWG_PASSWORD&quot; / &quot;IGES_PASSWORD&quot; / &quot;MI_PASSWORD&quot; / &quot;DSTV_PASSWORD&quot;)</code> in each <code>lese_*</code>/<code>schreibe_*</code>); <code>TsConvertParameter::m_passwordCheck</code> (superuser off). See [[19 - FR - Tools, Machines, Materials &amp; Technology]] and [[40 - Non-Functional Requirements]].</li>
+<li><strong>Verification:</strong> Test (attempt each format with and without the licence).</li>
+</ul>
+<h3 id="fr-impex-027-pdm-connected-conversion">FR-IMPEX-027 — PDM-connected conversion</h3>
+<ul>
+<li><strong>Requirement:</strong> Where the converter is built as the PDM variant (<code>pdmConvert.exe</code>/<code>.dll</code>), the system shall connect to a PDM system via a CORBA naming service specified by <code>-A hostname:port</code>, using a named PDM service (<code>-S</code>) and a data cache directory (<code>-C</code>), and shall route file access through the PDM file-system interface.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Integrates conversion with TruTops PDM/PLM data management rather than the local file system.</li>
+<li><strong>Source:</strong> <code>convmain/tc_conv.cpp</code> ShowHelp (<code>-A</code>/<code>-C</code>/<code>-S</code>, guarded by <code>S_pdmBootStrapPtr-&gt;isPdmConvert()</code>); <code>convmain/pdmConvert.*</code>, <code>convmain/pdmImplementation/</code>, <code>convmain/filesystemImplementation/</code>; <code>TeExitCode::e_errorPdmConnect</code>.</li>
+<li><strong>Verification:</strong> Demonstration (run pdmConvert against a PDM naming service).</li>
+</ul>
+<h3 id="fr-impex-028-contour-cleanup-on-conversion">FR-IMPEX-028 — Contour cleanup on conversion</h3>
+<ul>
+<li><strong>Requirement:</strong> During conversion the system shall merge coincident points within a configurable tolerance and replace geometrically critical elements, and where enabled shall close open contours whose gaps are within a configurable closing tolerance.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Imported geometry frequently has duplicate points and small gaps that must be healed before CAM processing.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>doDrawingConversion()</code> (<code>suche_doppelte_punkte</code>, <code>ersetzeKritischeElemente</code>, <code>TcDbaseClipCommand::closeAllContours</code> under <code>m_closeOpenContours</code>); converter options <code>-O</code>/<code>-t</code> (tolerances).</li>
+<li><strong>Verification:</strong> Test (convert a file with duplicate points and gaps; verify healing).</li>
+</ul>
+<h3 id="fr-impex-029-geometry-thinning">FR-IMPEX-029 — Geometry thinning</h3>
+<ul>
+<li><strong>Requirement:</strong> Where a thinning level is selected (rough / middle / fine), the system shall reduce the element/point density of the converted drawing using level-specific segment-angle, maximum-distance and minimum-length parameters, converting hard-coded tolerances to inch when the drawing unit is inch.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Reduces oversized vectorized/spline geometry to a manageable element count.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>doDrawingConversion()</code> (<code>TcDbaseThinCommand</code>, <code>m_ausduennStufe</code> 1/2/3); converter option <code>-T 0|1|2|3</code>.</li>
+<li><strong>Verification:</strong> Test (thin a dense contour at each level and compare element counts).</li>
+</ul>
+<h3 id="fr-impex-030-thin-slotting-contour-preparation">FR-IMPEX-030 — Thin slotting-contour preparation</h3>
+<ul>
+<li><strong>Requirement:</strong> Where thin-contour preparation is enabled, the system shall reduce standard contours narrower than a configurable width to a single line, selectable for rectangles, oblong holes, and/or contour-section enlargement.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Very narrow slots (e.g. from Bystronic-format migrants) whose equidistants would overlap must be reduced to a cuttable line.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>doDrawingConversion()</code> (<code>TcDbaseSlitContourCommand</code>, <code>TcDbaseSlitStretchCommand</code>, <code>m_preparationThinStdContourMode</code>/<code>Width</code>); <code>convmain/tc_conv.h</code> (<code>setPreparationThinStdContourMode/Width</code>); converter options <code>-M 0-7</code>, <code>-W width</code>.</li>
+<li><strong>Verification:</strong> Test (convert narrow rectangle/oblong contours with each mode).</li>
+</ul>
+<h3 id="fr-impex-031-coordinate-scaling-and-unit-conversion">FR-IMPEX-031 — Coordinate scaling and unit conversion</h3>
+<ul>
+<li><strong>Requirement:</strong> During conversion the system shall optionally scale the drawing by a configurable factor and shall set the target unit to metric or inch, or auto-derive it from the source (GEO/GMT/TAF/IGES/MI), re-initializing the tolerance container when the unit changes.</li>
+<li><strong>Priority:</strong> Conditional</li>
+<li><strong>Rationale:</strong> Cross-system exchange requires unit normalization (formats such as DXF/IGES carry no unit) and geometry scaling.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>doDrawingConversion()</code> (<code>TcDbaseTransformCommand::scaleDrawing</code>, <code>m_scaleDrawingFactor</code>) and <code>reinitToleranzContainer()</code> (<code>m_unitConversionMode</code>, <code>TcToleranzContainer::init</code>); converter options <code>-r scalingFactor</code>, <code>-U auto|metric|inch</code>.</li>
+<li><strong>Verification:</strong> Test (convert with <code>-U inch</code> and <code>-r</code> factor; verify coordinates/units).</li>
+</ul>
+<h3 id="fr-impex-032-automatic-bend-notch-generation">FR-IMPEX-032 — Automatic bend-notch generation</h3>
+<ul>
+<li><strong>Requirement:</strong> Where automatic notching is enabled, the system shall create relief notches at bend lines of the converted drawing.</li>
+<li><strong>Priority:</strong> Optional</li>
+<li><strong>Rationale:</strong> Prepares imported bent-part geometry for downstream bending/cutting without manual notching.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>doDrawingConversion()</code> (<code>createBendLineAutoNotch()-&gt;executeOnDrawing</code>, <code>m_autoNotchOn</code>); <code>convmain/tc_conv.h</code> (<code>setAutoNotch</code>); converter option <code>-N</code>. See [[16 - FR - Bending (ToPs 600)]].</li>
+<li><strong>Verification:</strong> Test (convert a part with bend lines and verify notches).</li>
+</ul>
+<h3 id="fr-impex-033-output-filename-resolution-overwrite-protection-and-auto-drawing-number">FR-IMPEX-033 — Output filename resolution, overwrite protection and auto drawing number</h3>
+<ul>
+<li><strong>Requirement:</strong> When writing conversion output, the system shall derive the output path/name (source name with the format-specific extension, or an explicit output path/name), shall refuse to overwrite an existing file unless the force option is set, and shall optionally derive the part/drawing number from the source filename using a regular expression or from an explicit override.</li>
+<li><strong>Priority:</strong> Essential</li>
+<li><strong>Rationale:</strong> Batch conversion must produce predictable, non-destructive output and consistent part identification.</li>
+<li><strong>Source:</strong> <code>convmain/convert.cpp</code> <code>writeDrawingToFile()</code> (<code>getGrafikFormatFileExtension</code>, <code>teste_ob_name_okay</code>, &quot;Set option -force&quot;), <code>setzeAutomatischeZeichnungsnummer()</code> (<code>TwCRegexp</code>, <code>KEY_TEILEIDENTNR</code>, 39-char cap); converter options <code>-f</code>, <code>-x</code>, <code>-Z</code>.</li>
+<li><strong>Verification:</strong> Test (convert without/with <code>-f</code> to an existing file; verify auto drawing number).</li>
+</ul>
+<h2 id="external-interfaces-area-specific">5. External Interfaces (area-specific)</h2>
+<p>Full definitions in [[30 - External Interface Requirements]].</p>
+<table>
+<thead>
+<tr>
+<th>Interface</th>
+<th>Direction</th>
+<th>Mechanism</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DXF (AutoCAD Drawing Exchange)</td>
+<td>Import + Export</td>
+<td>Native reader/writer (<code>tc_dxf</code>)</td>
+</tr>
+<tr>
+<td>DWG (AutoCAD)</td>
+<td>Import</td>
+<td>External <code>DWGConverter.exe</code> (Wibu) → temp DXF</td>
+</tr>
+<tr>
+<td>IGES</td>
+<td>Import + Export</td>
+<td>Native reader (<code>ig_lese</code>) / writer (<code>ig_ausgabe</code>)</td>
+</tr>
+<tr>
+<td>ME10 / MI (HP ME10 Macro Interchange)</td>
+<td>Import (MI) + Export (ME10)</td>
+<td><code>tc_mi</code> reader, <code>tc_me10</code> writer</td>
+</tr>
+<tr>
+<td>DSTV (Deutscher Stahlbau-Verband)</td>
+<td>Import</td>
+<td><code>tc_dstv/db_dstv.cpp</code> (2D only)</td>
+</tr>
+<tr>
+<td>GEO / GEO_102 / GMT / TAF (TRUMPF native)</td>
+<td>Import + Export</td>
+<td>Converter via <code>tc_dbase</code> parser</td>
+</tr>
+<tr>
+<td>SVG</td>
+<td>Export</td>
+<td><code>db_svg</code></td>
+</tr>
+<tr>
+<td>HPGL</td>
+<td>Export</td>
+<td><code>tc_plot</code></td>
+</tr>
+<tr>
+<td>XML (calculation)</td>
+<td>Export</td>
+<td><code>TcDbaseKalkulationsTool</code></td>
+</tr>
+<tr>
+<td>XCAD</td>
+<td>Export</td>
+<td><code>db2XCad</code></td>
+</tr>
+<tr>
+<td>Raster BMP/JPG/PNG/TIF/GIF</td>
+<td>Import</td>
+<td>External <code>ToPsVectorize.exe</code> → GEO</td>
+</tr>
+<tr>
+<td>Dongle / Wibu + password list</td>
+<td>Gate</td>
+<td><code>TcLicenseCheck::checkModulePassword</code></td>
+</tr>
+<tr>
+<td>PDM / CORBA naming service</td>
+<td>I/O routing</td>
+<td><code>pdmConvert</code> variant (<code>-A</code>/<code>-S</code>/<code>-C</code>)</td>
+</tr>
+</tbody>
+</table>
+<h2 id="assumptions-constraints">6. Assumptions &amp; Constraints</h2>
+<p>Cross-cutting items belong in [[50 - Constraints &amp; Assumptions]] and [[40 - Non-Functional Requirements]].</p>
+<ul>
+<li><strong>External-tool dependency:</strong> DWG import and raster vectorization require separately installed executables (<code>DWGConverter.exe</code>, <code>ToPsVectorize.exe</code>) located via a fixed path / the <code>TOPS_VECTORIZE_PATH</code> environment variable. If absent, those imports fail gracefully with an error code.</li>
+<li><strong>Legacy C code with global state:</strong> the DXF/MI/IGES interpreters use static configuration globals (layer lists, spline mode, fonts); options set for one load persist until reset (<code>gib_konf_var_frei</code>, <code>remove_all_dxf_layers</code>). Temporary layer selections are cleared after a single load.</li>
+<li><strong>Encoding:</strong> legacy sources are ISO-8859-1 with CRLF; domain identifiers and comments are German.</li>
+<li><strong>Licensing:</strong> each format is a separately licensed option; superuser mode disables the password check (<code>m_passwordCheck=false</code>).</li>
+<li><strong>Two converter deployments</strong> are built from the same code: file-based <code>tc_conv.exe</code> and PDM-connected <code>pdmConvert.exe</code>/<code>.dll</code>; PDM help/options only appear in the PDM build.</li>
+<li><strong>Tolerances</strong> default to 0.001–0.005 mm (<code>TOLERANZ</code>, <code>m_toleranz</code>); the converter needs only <code>TEXTE.DAT</code> and <code>TOLERANZ.ASC</code> plus a dongle to run standalone.</li>
+</ul>
+<h2 id="open-questions-ambiguities">7. Open Questions &amp; Ambiguities</h2>
+<ul>
+<li><strong>Module scope corrections (belong to other areas):</strong>
+<ul>
+<li><code>tc_scan</code> (<code>SlPtsTab</code>, &quot;Automatische Trennschnitte&quot;, <em>Gitter auftrennen</em>) is scanline-based <strong>skeleton/scrap-grid parting-cut</strong> generation, <strong>not</strong> raster/vectorization — it belongs to Nesting/NC ([[17 - FR - Nesting &amp; Palletizing]] / [[18 - FR - NC Generation &amp; Motion Optimization]]). Actual raster vectorization lives in <code>tc_cad/cad_vectorize</code>.</li>
+<li><code>tc_bitm</code> is a <strong>nesting/collision bitmap</strong> (<code>bit_taf</code>, <code>bitmfill</code>, <code>bitmkoll</code>), not raster image I/O → Nesting.</li>
+<li><code>tc_gts</code> is the <strong>geometry-parts interface</strong> that builds part/nest structure trees and cut structures (<code>gts()</code>, <code>Teile_baum</code>, <code>Nester_baum</code>, <code>Schnitt</code>), not a file format → Nesting/NC.</li>
+<li><code>tc_mrif</code> caches the <strong>machine rule set</strong> from DB table <code>MAS_REGEL</code> → Tools/Machines/Technology ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).</li>
+<li><code>tc_stl</code>/<code>stl_tech</code> is <strong>Stanz-Laser (punch-laser combi) technology</strong> (<code>tech_la</code>, <code>koll_la</code>, <code>bahn_la</code>), <strong>not</strong> stereolithography STL → Laser/Technology ([[14 - FR - Laser Cutting (ToPs 100)]]). No true 3D STL file import/export was found in the snapshot.</li>
+<li><code>tc_ein</code> contains <code>TcBarcode</code>, <code>TcEinrichteplan</code> (setup plan) and <code>TcSinglePartGrafik</code> — operator-document/barcode generation, not CAD file import → Visualization/Production Planning ([[21 - FR - Visualization, Viewing &amp; Plotting]] / [[20 - FR - Production Planning &amp; Projects]]).</li>
+</ul>
+</li>
+<li><strong>IGES/MI export path:</strong> <code>ig_ausgabe()</code> implements IGES output and <code>tc_mi</code> contains write helpers, but the <code>convmain</code> converter's <code>schreibe_iges_format()</code> and <code>schreibe_mi_format()</code> are <strong>stubs</strong> (return 0). The exact application path that reaches <code>ig_ausgabe</code> (interactive &quot;Save As IGES&quot;) was not traced; MI <em>export</em> may be effectively unavailable.</li>
+<li><strong>DXF/DWG version coverage:</strong> the range of AutoCAD DXF versions the native reader accepts, and the DWG versions handled by the external converter, cannot be determined from source.</li>
+<li><strong>TAF and XCAD</strong> internal formats were only observed at the dispatch level; their record structures were not examined.</li>
+<li><strong><code>getNextGrafikFormatId</code> bit-flag output:</strong> multiple output formats are encoded as OR-ed bits (<code>TeGrafikFormat</code>), so a single run can emit several files; the precise CLI syntax for requesting multiple outputs was inferred, not confirmed end-to-end.</li>
+<li><strong>Error-code aggregation:</strong> <code>convert_file</code> sums error codes across steps (&quot;Fehlercodes werden aufsummiert&quot;), so the returned integer is not a single enumerated status — downstream interpretation is unclear.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-fr-import-export-file-formats-doc-11-fr-import-export-file-formats-id-prefix-fr-impex-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-10-fr-cad-geometry-drawing-editing-12-fr-part-data-management-04-domain-model-glossary-30-external-interface-requirements-23-fr-automation-scripting-integration-tags-requirements-trutops-functional-requirements">product: trutopscad
+org: trumpf
+title: "FR — Import, Export & File Formats"
+doc: "11 - FR - Import, Export & File Formats"
+id-prefix: "FR-IMPEX"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[10 - FR - CAD Geometry & Drawing Editing]]", "[[12 - FR - Part & Data Management]]", "[[04 - Domain Model & Glossary]]", "[[30 - External Interface Requirements]]", "[[23 - FR - Automation, Scripting & Integration]]"]
+tags: [requirements, trutops, functional-requirements]</a>
+  </li>
+  <li level="1">
+   <a href="#purpose-scope">1. Purpose & Scope</a>
+  </li>
+  <li level="1">
+   <a href="#capability-overview">2. Capability Overview</a>
+  </li>
+  <li level="1">
+   <a href="#domain-entities">3. Domain Entities</a>
+  </li>
+  <li level="1">
+   <a href="#functional-requirements">4. Functional Requirements</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-001-dxf-geometry-import">FR-IMPEX-001 — DXF geometry import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-002-dxf-layer-filtering">FR-IMPEX-002 — DXF layer filtering</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-003-dxfmi-spline-conversion-mode">FR-IMPEX-003 — DXF/MI spline conversion mode</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-004-dxf-text-and-font-handling">FR-IMPEX-004 — DXF text and font handling</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-005-dxf-single-block-single-layout-import">FR-IMPEX-005 — DXF single block / single layout import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-006-dxf-z-coordinate-suppression-2d-projection">FR-IMPEX-006 — DXF Z-coordinate suppression (2D projection)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-007-dxf-import-error-reporting">FR-IMPEX-007 — DXF import error reporting</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-008-dwg-import-via-external-converter">FR-IMPEX-008 — DWG import via external converter</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-009-iges-import">FR-IMPEX-009 — IGES import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-010-me10-mi-geometry-import">FR-IMPEX-010 — ME10 MI geometry import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-011-mi-single-stroke-capt-attribute-conversion">FR-IMPEX-011 — MI single-stroke (CAPT) attribute conversion</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-012-dstv-import">FR-IMPEX-012 — DSTV import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-013-raster-import-and-vectorization">FR-IMPEX-013 — Raster import and vectorization</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-014-native-geo-gmt-taf-read">FR-IMPEX-014 — Native GEO / GMT / TAF read</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-015-automatic-part-extraction-from-cad-import">FR-IMPEX-015 — Automatic part extraction from CAD import</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-016-dxf-export">FR-IMPEX-016 — DXF export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-017-me10-export">FR-IMPEX-017 — ME10 export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-018-iges-export">FR-IMPEX-018 — IGES export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-019-svg-export">FR-IMPEX-019 — SVG export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-020-hpgl-export">FR-IMPEX-020 — HPGL export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-021-native-geo-geo_102-export-with-contour-preparation">FR-IMPEX-021 — Native GEO / GEO_102 export with contour preparation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-022-xml-calculation-info-export">FR-IMPEX-022 — XML calculation-info export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-023-xcad-export">FR-IMPEX-023 — XCAD export</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-024-gmt-drawing-number-update">FR-IMPEX-024 — GMT drawing-number update</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-025-standalone-batch-converter-command-line-response-file">FR-IMPEX-025 — Standalone batch converter (command line / response file)</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-026-per-format-licence-dongle-check">FR-IMPEX-026 — Per-format licence / dongle check</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-027-pdm-connected-conversion">FR-IMPEX-027 — PDM-connected conversion</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-028-contour-cleanup-on-conversion">FR-IMPEX-028 — Contour cleanup on conversion</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-029-geometry-thinning">FR-IMPEX-029 — Geometry thinning</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-030-thin-slotting-contour-preparation">FR-IMPEX-030 — Thin slotting-contour preparation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-031-coordinate-scaling-and-unit-conversion">FR-IMPEX-031 — Coordinate scaling and unit conversion</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-032-automatic-bend-notch-generation">FR-IMPEX-032 — Automatic bend-notch generation</a>
+  </li>
+  <li level="2">
+   <a href="#fr-impex-033-output-filename-resolution-overwrite-protection-and-auto-drawing-number">FR-IMPEX-033 — Output filename resolution, overwrite protection and auto drawing number</a>
+  </li>
+  <li level="1">
+   <a href="#external-interfaces-area-specific">5. External Interfaces (area-specific)</a>
+  </li>
+  <li level="1">
+   <a href="#assumptions-constraints">6. Assumptions & Constraints</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-ambiguities">7. Open Questions & Ambiguities</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="04domainmodelglossary.html">04DomainModelGlossary</a></span>
+ <span class="next"><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

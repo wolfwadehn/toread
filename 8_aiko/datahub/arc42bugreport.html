@@ -1,0 +1,1865 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>DataHub — Defects found during architecture documentation review</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">DataHub</a>
+     <ul>
+      <li><button class="tree blank"></button><a class="active" href="arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">DataHub</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="arc42bugreport.html">DataHub — Defects found during architecture documentation review</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>DataHub — Defects found during architecture documentation review</h1>
+<p><strong>Date:</strong> 2026-08-04
+<strong>Reviewed:</strong> <code>Connectors/DataHub</code> @ <code>aa942e6c</code> (branch <code>main</code>)
+<strong>Context:</strong> These defects surfaced while writing an arc42 architecture documentation set from the code base (branch <code>arc42</code>, <code>docs/</code>) and validating it against the existing Confluence <em>DataHub Arc42</em> page.</p>
+<p><strong>Method and caveat.</strong> Every item below was found by <strong>static reading of the source</strong>, and every claim cites the file and lines it rests on. Nothing here was reproduced against a running machine — no test was executed and no instance was instrumented. Severities are my assessment of blast radius, not a measured incident rate. Items marked <em>latent</em> are not reachable with today's configuration but become live under a plausible near-future change.</p>
+<hr />
+<h2 id="summary">Summary</h2>
+<p>Ordered by severity. 29 defects, of which 5 cause data to be lost, corrupted or disclosed.</p>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Defect</th>
+<th>Severity</th>
+<th>Type</th>
+<th>Est. fix</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><a href="#bug-1--multi-sensor-time-series-timestamps-are-wrong">1</a></td>
+<td>Multi-sensor time-series timestamps are wrong</td>
+<td><strong>Critical</strong></td>
+<td>Silent data corruption</td>
+<td>1 line + test</td>
+</tr>
+<tr>
+<td><a href="#bug-2--cached-records-are-discarded-on-every-service-stop">2</a></td>
+<td>Cached records are discarded on every service stop</td>
+<td><strong>High</strong></td>
+<td>Data loss</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-3--the-binary-copy-path-swallows-every-exception">3</a></td>
+<td>The binary COPY path swallows every exception</td>
+<td><strong>High</strong></td>
+<td>Silent data loss</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-18--full-record-payloads-including-customer-classified-data-are-written-to-the-plaintext-log">18</a></td>
+<td>Full record payloads, incl. <code>Customer</code>-classified data, written to plaintext log</td>
+<td><strong>High</strong></td>
+<td>Data governance</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-4--the-port-filter-fails-open-graphql-and-swagger-are-served-on-both-ports">4</a></td>
+<td>Port filter fails open: GraphQL + Swagger on both ports</td>
+<td><strong>High</strong></td>
+<td>Security / exposure</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-5--the-aes-key-is-a-compile-time-constant">5</a></td>
+<td>The AES key for stored credentials is a compile-time constant</td>
+<td><strong>High</strong></td>
+<td>Security</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#bug-17--metadataexporter-writes-to-the-database-without-the-global-semaphore">17</a></td>
+<td>MetaDataExporter writes to the database without the global semaphore</td>
+<td><strong>High</strong></td>
+<td>Concurrency invariant broken</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-19--the-host-fails-to-start-if-postgresql-is-unreachable">19</a></td>
+<td>The host fails to start if PostgreSQL is unreachable</td>
+<td>Med–High</td>
+<td>Availability</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-20--worker-loops-can-spin-without-delay">20</a></td>
+<td>Worker loops can spin without delay</td>
+<td>Medium</td>
+<td>CPU / resource</td>
+<td>1 line</td>
+</tr>
+<tr>
+<td><a href="#bug-21--groupbydynamic-reflects-over-unvalidated-client-input">21</a></td>
+<td><code>GroupByDynamic</code> reflects over unvalidated client input</td>
+<td>Medium</td>
+<td>Security / robustness</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-22--graphql-has-no-depth-complexity-or-timeout-limits">22</a></td>
+<td>GraphQL has no depth, complexity or timeout limits</td>
+<td>Medium</td>
+<td>Availability / DoS</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-6--latent-a-hypertable-with-a-retain-rule-generates-invalid-sql">6</a></td>
+<td>A hypertable with a <code>Retain</code> rule generates invalid SQL</td>
+<td>Medium</td>
+<td><em>Latent</em></td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-7--latent-culture-sensitive-interval-formatting-in-drop_chunks">7</a></td>
+<td>Culture-sensitive interval formatting in <code>drop_chunks</code></td>
+<td>Medium</td>
+<td><em>Latent</em></td>
+<td>1 line</td>
+</tr>
+<tr>
+<td><a href="#bug-8--latent-retryable-exception-matching-ignores-subclasses">8</a></td>
+<td>Retryable-exception matching ignores subclasses</td>
+<td>Medium</td>
+<td><em>Latent</em></td>
+<td>1 line</td>
+</tr>
+<tr>
+<td><a href="#bug-9--hypertable-cleanup-always-reports-nothing-deleted">9</a></td>
+<td>Hypertable cleanup always reports &quot;nothing deleted&quot;</td>
+<td>Medium</td>
+<td>Observability</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-10--stale-machineinfo-is-attached-after-an-equipment-number-change">10</a></td>
+<td>Stale <code>MachineInfo</code> attached after an equipment-number change</td>
+<td>Medium</td>
+<td>Correctness</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-11--published-api-documentation-states-behaviour-that-does-not-exist">11</a></td>
+<td>Published API docs state behaviour that does not exist</td>
+<td>Medium</td>
+<td>Documentation</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td><a href="#bug-12--cleanup-table-order-is-non-deterministic">12</a></td>
+<td>Cleanup table order is non-deterministic</td>
+<td>Low–Med</td>
+<td>Correctness</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-13--encryptandwritesecretsps1-fragilities">13</a></td>
+<td><code>encryptAndWriteSecrets.ps1</code> fragilities</td>
+<td>Low–Med</td>
+<td>Build/release</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-14--encryptorexe-exits-0-when-given-the-wrong-argument-count">14</a></td>
+<td><code>Encryptor.exe</code> exits 0 on wrong argument count</td>
+<td>Low</td>
+<td>Robustness</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td><a href="#bug-15--debugassert-is-compiled-out-in-release">15</a></td>
+<td><code>Debug.Assert</code> guard is compiled out in Release</td>
+<td>Low</td>
+<td>Correctness</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td><a href="#bug-16--dead-configuration-section">16</a></td>
+<td>Dead <code>DebugLogging</code> configuration section</td>
+<td>Low</td>
+<td>Hygiene</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td><a href="#bug-23--async-cleanup-is-invoked-without-awaiting-including-from-dispose">23</a></td>
+<td>Async <code>CleanUp()</code> invoked without awaiting, incl. from <code>Dispose()</code></td>
+<td>Low–Med</td>
+<td>Resource cleanup</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-24--the-cache-flush-blocks-the-calling-ingest-thread">24</a></td>
+<td>The cache flush blocks the calling ingest thread</td>
+<td>Low–Med</td>
+<td>Performance</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-25--licence-document-and-sbom-generation-depends-on-an-llm-api-key">25</a></td>
+<td>Licence document + SBOM generation depends on an LLM API key</td>
+<td>Low–Med</td>
+<td>Supply chain / legal</td>
+<td>Discussion</td>
+</tr>
+<tr>
+<td><a href="#bug-26--a-1116-line-test-file-contains-no-tests">26</a></td>
+<td>A 1116-line test file contains no tests</td>
+<td>Low</td>
+<td>Dead code</td>
+<td>Trivial</td>
+</tr>
+<tr>
+<td><a href="#bug-27--editorconfig-rules-have-no-severities-so-nothing-is-enforced">27</a></td>
+<td><code>.editorconfig</code> rules have no severities, so nothing is enforced</td>
+<td>Low</td>
+<td>Convention drift</td>
+<td>Medium</td>
+</tr>
+<tr>
+<td><a href="#bug-28--coverage-and-static-analysis-are-collected-but-not-gated">28</a></td>
+<td>Coverage and static analysis are collected but not gated</td>
+<td>Low</td>
+<td>Process</td>
+<td>Small</td>
+</tr>
+<tr>
+<td><a href="#bug-29--operationalreadiness-is-async-with-no-await">29</a></td>
+<td><code>operationalReadiness</code> is <code>async</code> with no <code>await</code></td>
+<td>Low</td>
+<td>Hygiene</td>
+<td>Trivial</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Recommended immediate action:</strong> #1, #2, #3, #18, #17. The first four cause data to be lost, corrupted or disclosed; #17 silently breaks the concurrency invariant the whole persistence design rests on. All five are small changes, and #1 corrupts data that is being collected right now.</p>
+<hr />
+<h2 id="bug-1-multi-sensor-time-series-timestamps-are-wrong">BUG-1 — Multi-sensor time-series timestamps are wrong</h2>
+<p><strong>Severity: Critical — silent data corruption</strong>
+<strong>File:</strong> <code>src/Core/TimeSeries/BendstepMeasurementBuilder.cs:46-62</code></p>
+<h3 id="symptom">Symptom</h3>
+<p>In a time-series measurement containing more than one sensor, every sensor after the first is stored with timestamps offset into the future by the cumulative sample count of all preceding sensors.</p>
+<h3 id="root-cause">Root cause</h3>
+<p><code>currentTimestamp</code> is initialised <strong>outside</strong> the per-sensor loop and advanced inside the per-value loop, but is never reset when moving to the next sensor:</p>
+<pre><code class="language-csharp">DateTime currentTimestamp = startTimestamp;          // ← outside the sensor loop
+foreach (SensorValues sensorValues in sensorData)
+{
+    foreach (double? value in sensorValues.Values)
+    {
+        yield return new BendstepMeasurement
+        {
+            Timestamp = currentTimestamp,
+            BendstepStartId = bendstepStartDto.Id,
+            SensorId = sensors[sensorValues.Name].Id,
+            SensorValue = value
+        };
+        currentTimestamp = currentTimestamp.Add(samplingDelta);   // ← never reset per sensor
+    }
+}
+</code></pre>
+<h3 id="why-this-is-a-defect-rather-than-intended-behaviour">Why this is a defect rather than intended behaviour</h3>
+<p>Each <code>SensorValues</code> element is one sensor's series over the <strong>same</strong> time base:</p>
+<ul>
+<li><code>EquidistantTimeSeriesData</code> carries a <em>single</em> <code>StartTimestamp</code> and a <em>single</em> <code>SamplingDelta</code> for the whole record.</li>
+<li>The entity's composite primary key is <code>(Timestamp, BendstepStartId, SensorId)</code>, which explicitly permits two sensors to share a timestamp — so there is no key-collision reason to stagger them.</li>
+</ul>
+<p>Therefore every sensor's series should start at <code>StartTimestamp</code>.</p>
+<h3 id="impact">Impact</h3>
+<p>With two sensors of 1000 samples each at a 1 ms sampling delta, the second sensor's data is shifted <strong>one full second</strong> into the future. With <em>n</em> sensors the error compounds linearly.</p>
+<p>The failure is completely silent: the rows insert successfully, the values are correct, the timestamps are well-formed and monotonic, and nothing is logged. Only the <em>alignment between sensors</em> is wrong — which is precisely what multi-sensor capture exists to provide. Any downstream correlation, overlay or cross-sensor analysis produces wrong results while appearing healthy.</p>
+<p>The defect is invisible when a record contains exactly one sensor, which is the likely reason it has not been noticed.</p>
+<h3 id="fix">Fix</h3>
+<p>Move the initialisation inside the outer loop:</p>
+<pre><code class="language-csharp">foreach (SensorValues sensorValues in sensorData)
+{
+    DateTime currentTimestamp = startTimestamp;       // ← reset per sensor
+    foreach (double? value in sensorValues.Values)
+    {
+        ...
+    }
+}
+</code></pre>
+<p>Add a unit test with <strong>two or more</strong> sensors asserting that each sensor's first sample is stamped at <code>StartTimestamp</code>. Existing coverage evidently exercises the single-sensor case only.</p>
+<h3 id="data-already-collected">Data already collected</h3>
+<p><code>BendstepMeasurement</code> retention is <strong>7 days</strong> (<code>src/DataHubService/appsettings.json:128-131</code>), so the exposure window on any machine is short. That argues for shipping the fix promptly rather than writing a correction migration. Worth confirming with whoever consumes this data whether any multi-sensor analysis has already been run on affected data.</p>
+<hr />
+<h2 id="bug-2-cached-records-are-discarded-on-every-service-stop">BUG-2 — Cached records are discarded on every service stop</h2>
+<p><strong>Severity: High — data loss on a routine operation</strong>
+<strong>Files:</strong> <code>src/DataHubService/Program.cs:296,311</code>; <code>src/DataStorage/Caching/Cache.cs:301-317</code></p>
+<h3 id="symptom-1">Symptom</h3>
+<p>Records still sitting in the write-behind cache when the service stops are lost rather than flushed, and the loss is logged as an error on every stop.</p>
+<h3 id="root-cause-1">Root cause</h3>
+<p><code>DataStore</code> is constructed with <code>IHostApplicationLifetime.ApplicationStopping</code> as its global cancellation token:</p>
+<pre><code class="language-csharp">var globalCancellationToken = hostApplicationLifetime.ApplicationStopping;   // Program.cs:296
+return new DataStore(dataStoreConfiguration, dataStoreDependencies, globalCancellationToken);
+</code></pre>
+<p>That token is passed to every <code>SaveChangesAsync</code> and <code>CopyInsertAsync</code>. The <strong>final</strong> cache flush, however, happens in <code>DataStore.DisposeAsync</code> → <code>Cache.DisposeAsync</code>, which the DI container runs during host disposal — i.e. <strong>after</strong> <code>ApplicationStopping</code> has already been signalled.</p>
+<p>The shutdown flush therefore executes with an already-cancelled token. <code>SaveChangesAsync</code> throws <code>OperationCanceledException</code>, which <code>Cache</code> catches:</p>
+<pre><code class="language-csharp">catch (Exception ex)
+{
+    _logger.LogError(ex,
+        &quot;Exception occurred during the invocation of the cache flush receiver callback. Data is lost. {@LostElements}&quot;,
+        new { LostElements = string.Join(&quot;, &quot;, elementsToBeFlushed) });
+}
+</code></pre>
+<p>By this point the elements have already been dequeued, so they are gone.</p>
+<h3 id="impact-1">Impact</h3>
+<p>Up to <code>MaxCacheSize</code> records <strong>per cache</strong> (default 100, one cache for condition log records and one for Trumpf Analytics messages) are lost on <strong>every</strong> service stop or restart. Restarts are routine: configuration changes, package upgrades, and MINEX backup all stop the service.</p>
+<p>There is a second-order consequence: <code>build/MINEX/Invoke-MINEX.ps1</code> stops the DataHub specifically <em>so that its caches are flushed and the database is consistent for the backup</em>. If the flush is failing, that guarantee does not hold and backups may be missing the most recent records.</p>
+<h3 id="fix-1">Fix</h3>
+<p>Do not use <code>ApplicationStopping</code> for the shutdown drain. Either use <code>ApplicationStopped</code>, or give <code>DataStore</code> a dedicated <code>CancellationTokenSource</code> that is cancelled only after a bounded drain timeout (e.g. 10 s), so the final batch gets a genuine chance to commit.</p>
+<p>The existing log line makes this easy to confirm before and after: search machine logs for <code>&quot;Data is lost&quot;</code> — if BUG-2 is live, it should appear on essentially every service stop.</p>
+<hr />
+<h2 id="bug-3-the-binary-copy-path-swallows-every-exception">BUG-3 — The binary COPY path swallows every exception</h2>
+<p><strong>Severity: High — silent data loss</strong>
+<strong>File:</strong> <code>src/Core/EntityFrameworkCore/CopyInsertExtension.cs:63-66</code></p>
+<h3 id="symptom-2">Symptom</h3>
+<p>A failed bulk insert of time-series data is rolled back and then reported as success. The payload disappears with no trace anywhere.</p>
+<h3 id="root-cause-2">Root cause</h3>
+<p>A bare <code>catch</code> with no logging and no rethrow:</p>
+<pre><code class="language-csharp">try
+{
+    await using NpgsqlBinaryImporter writer = await conn.BeginBinaryImportAsync(copyCommand, cancellationToken);
+    do { await WriteRowAsync(writer, enumerator.Current, propertyGetters, cancellationToken); }
+    while (await enumerator.MoveNextAsync());
+    await writer.CompleteAsync(cancellationToken);
+    await tx.CommitAsync(cancellationToken);
+}
+catch                                   // ← no exception variable, no log, no rethrow
+{
+    await tx.RollbackAsync(cancellationToken);
+}
+</code></pre>
+<p><code>DataStore.InsertTimeSeriesAsync</code> has no way to distinguish this from success.</p>
+<h3 id="impact-2">Impact</h3>
+<p>This is the <strong>only write path in the system with zero failure visibility</strong>. Every other path logs and writes an <code>Error</code> condition log record. Here an entire <code>EquidistantTimeSeriesData</code> payload — potentially thousands of rows — can vanish with no log line, no <code>Error</code> record and no subscription notification.</p>
+<p>It also masks BUG-1's sibling failure modes and any schema mismatch on the COPY statement: the system would look perfectly healthy while storing nothing.</p>
+<h3 id="fix-2">Fix</h3>
+<p>Capture, log and rethrow, and route the failure through the same <code>Error</code>-record path the batched insert path uses:</p>
+<pre><code class="language-csharp">catch (Exception ex)
+{
+    await tx.RollbackAsync(cancellationToken);
+    _logger.LogError(ex, &quot;Binary COPY insert failed for {EntityType}. {RowCount} rows lost.&quot;, ...);
+    throw;
+}
+</code></pre>
+<p><code>CopyInsertExtension</code> is currently a static extension with no logger; the simplest route is to let the exception propagate and let <code>DataStore</code> handle it, since <code>DataStore</code> already has both a logger and the <code>Error</code>-record machinery.</p>
+<hr />
+<h2 id="bug-4-the-port-filter-fails-open-graphql-and-swagger-are-served-on-both-ports">BUG-4 — The port filter fails open: GraphQL and Swagger are served on both ports</h2>
+<p><strong>Severity: High — unintended exposure</strong>
+<strong>Files:</strong> <code>src/DataHubService/Middleware/EndpointSelectionMiddleware.cs:42-63</code>; <code>src/DataHubService/Program.cs:204,208</code></p>
+<h3 id="symptom-3">Symptom</h3>
+<p><code>/graphql</code> and <code>/swagger</code> are reachable on the Trumpf Analytics port (12001) as well as on the DataHub port (31110), despite the port-separation mechanism.</p>
+<h3 id="root-cause-3">Root cause</h3>
+<p>The middleware returns 404 only when the endpoint <strong>carries</strong> an <code>EndpointFilterAttribute</code> whose name is not permitted for the request's local port:</p>
+<pre><code class="language-csharp">if (_portToEndpointNamesMap.TryGetValue(port, out HashSet&lt;string&gt;? expectedEndpointNames))
+{
+    EndpointFilterAttribute? endpointFilter = endpoint.Metadata.GetMetadata&lt;EndpointFilterAttribute&gt;();
+
+    if (endpointFilter is not null &amp;&amp; !expectedEndpointNames.Contains(endpointFilter.EndpointName))
+    {                                  // ← only rejects when the attribute EXISTS
+        context.Response.StatusCode = StatusCodes.Status404NotFound;
+        return Task.CompletedTask;
+    }
+}
+return _next(context);                  // ← no attribute ⇒ allowed on every port
+</code></pre>
+<p><code>MapGraphQL()</code> and <code>MapSwagger()</code> attach no such metadata, so both pass through unconditionally.</p>
+<h3 id="resulting-exposure">Resulting exposure</h3>
+<table>
+<thead>
+<tr>
+<th>Endpoint</th>
+<th>Annotated</th>
+<th>On :12001</th>
+<th>On :31110</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>/api/message</code>, <code>/api/operationalReadiness</code>, <code>/api/settings</code></td>
+<td>yes</td>
+<td>✅</td>
+<td>404</td>
+</tr>
+<tr>
+<td><code>/api/cond-log-records</code></td>
+<td>yes</td>
+<td>404</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>/graphql</code> (HTTP + WebSocket)</td>
+<td><strong>no</strong></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+<tr>
+<td><code>/swagger</code></td>
+<td><strong>no</strong></td>
+<td>✅</td>
+<td>✅</td>
+</tr>
+</tbody>
+</table>
+<h3 id="impact-3">Impact</h3>
+<p>Port 12001 exists for backwards compatibility with senders that previously targeted the <code>TrumpfAnalyticsMachine</code> component. Any network policy that permits a client to reach only 12001 — in the belief that this restricts it to the analytics contract — in fact grants <strong>unrestricted GraphQL read access to the entire DataHub database</strong>, plus the full API contract via Swagger.</p>
+<p>Note this compounds with the absence of authentication (BUG-5's neighbour): there is no second line of defence behind the port filter.</p>
+<h3 id="additional-finding-the-code-contradicts-its-own-documentation">Additional finding: the code contradicts its own documentation</h3>
+<p>The method's XML documentation states:</p>
+<blockquote>
+<p><em>&quot;If the port is contained in the port-endpoint mapping but the name does not match <strong>or if the endpoint does not have an <code>EndpointFilterAttribute</code>, a 404 response is returned</strong>.&quot;</em></p>
+</blockquote>
+<p>The implementation does not do this. Because this XML comment is published into the generated component documentation, the wiki currently describes fail-closed behaviour that does not exist.</p>
+<h3 id="fix-3">Fix</h3>
+<p>Fail closed — treat a missing <code>EndpointFilterAttribute</code> as &quot;not permitted on any mapped port&quot; — and annotate the GraphQL and Swagger endpoints explicitly with the port they belong to. Correct the XML comment either way. Separately, consider guarding Swagger UI behind an environment check rather than serving it unconditionally on production machines.</p>
+<hr />
+<h2 id="bug-5-the-aes-key-is-a-compile-time-constant">BUG-5 — The AES key is a compile-time constant</h2>
+<p><strong>Severity: High — security</strong>
+<strong>File:</strong> <code>src/Core/EncryptionHelper.cs:11</code></p>
+<h3 id="symptom-4">Symptom</h3>
+<p>RabbitMQ credentials stored in <code>appsettings.json</code> can be decrypted by anyone holding the shipped binaries or the repository.</p>
+<h3 id="root-cause-4">Root cause</h3>
+<p>A single 16-byte AES key is declared as a source literal:</p>
+<pre><code class="language-csharp">private static readonly byte[] _encryptionKey = [ /* 16 bytes, decoding to a readable ASCII phrase */ ];
+</code></pre>
+<p>It is identical in every build and every deployment, it is committed to the repository, and it ships inside <code>Core.dll</code> on every machine.</p>
+<h3 id="impact-4">Impact</h3>
+<p>The release pipeline step named &quot;encrypt secrets&quot; provides <strong>obfuscation, not confidentiality</strong>. Anyone with read access to the repo — or to an installed DataHub — can recover the broker credentials from <code>appsettings.json</code>. The key cannot be rotated without rebuilding and redeploying the product to every machine.</p>
+<p>The most immediate risk is not the cryptography but the <strong>false assurance</strong>: naming the mechanism &quot;encryption&quot; invites the reasonable but incorrect assumption that credentials in <code>appsettings.json</code> are protected.</p>
+<h3 id="fix-4">Fix</h3>
+<p>Two options, in increasing order of cost:</p>
+<ol>
+<li><strong>Cheapest, do this regardless:</strong> stop describing this as encryption in documentation and pipeline step names. Call it obfuscation, so nobody relies on it.</li>
+<li><strong>Actual confidentiality:</strong> use the Windows <strong>DPAPI</strong> (<code>ProtectedData</code> with <code>DataProtectionScope.LocalMachine</code>). It requires no key distribution, is available on every target platform, and ties the ciphertext to the machine — which is exactly the trust boundary the DataHub already assumes.</li>
+</ol>
+<hr />
+<h2 id="bug-6-latent-a-hypertable-with-a-retain-rule-generates-invalid-sql">BUG-6 — <em>(latent)</em> A hypertable with a <code>Retain</code> rule generates invalid SQL</h2>
+<p><strong>Severity: Medium — latent</strong>
+<strong>File:</strong> <code>src/Cleanup/CleanupManager.cs:275-319</code></p>
+<h3 id="root-cause-5">Root cause</h3>
+<p>The deletion statement is built per table, branching on whether the table is a TimescaleDB hypertable:</p>
+<pre><code class="language-csharp">if (hyptertableNames.Contains(deletionTask.TableName))
+{
+    deletionSql = $&quot;&quot;&quot;
+    SELECT drop_chunks(
+        older_than =&gt; INTERVAL '{deletionTask.DeleteOlderThanDays} days',
+        relation =&gt; '&quot;{deletionTask.TableName}&quot;'
+    );
+    &quot;&quot;&quot;;
+}
+else
+{
+    deletionSql = $&quot;&quot;&quot;
+    DELETE FROM &quot;{deletionTask.TableName}&quot; t
+    WHERE t.&quot;{deletionTask.TimestampField}&quot; &lt; @limit
+    &quot;&quot;&quot;;
+}
+</code></pre>
+<p>A <code>Retain</code> rule is then appended unconditionally with <code>+=</code>:</p>
+<pre><code class="language-csharp">deletionSql += $&quot;&quot;&quot;
+
+    AND NOT EXISTS (
+        SELECT 1 FROM &quot;{deletionTask.TableName}&quot; keep
+        WHERE ({parameterizedSql.Sql})
+        AND t.&quot;{deletionTask.TimestampField}&quot; BETWEEN ...
+    )
+    &quot;&quot;&quot;;
+</code></pre>
+<p>For a hypertable this yields <code>SELECT drop_chunks(...); AND NOT EXISTS (...)</code> — syntactically invalid, and additionally referencing a table alias <code>t</code> that the <code>drop_chunks</code> form never defines.</p>
+<h3 id="impact-5">Impact</h3>
+<p>Currently unreachable: the only hypertable (<code>BendstepMeasurement</code>) has no <code>Retain</code> section. The moment someone adds one — an entirely reasonable request, e.g. &quot;keep measurements around failed bends&quot; — that table's cleanup breaks <strong>permanently and quietly</strong>. The failure path is <code>NpgsqlException</code> → <code>LogWarning</code> → skip the table, repeated every 10-minute cycle, with the table growing unbounded.</p>
+<h3 id="fix-5">Fix</h3>
+<p>Reject the combination in the <code>CleanupManager</code> constructor with an explicit error (the constructor already validates configuration, so this fits the existing pattern), or implement retention windows for hypertables properly. A silent warning-and-skip is the worst available outcome.</p>
+<hr />
+<h2 id="bug-7-latent-culture-sensitive-interval-formatting-in-drop_chunks">BUG-7 — <em>(latent)</em> Culture-sensitive interval formatting in <code>drop_chunks</code></h2>
+<p><strong>Severity: Medium — latent, locale-dependent</strong>
+<strong>File:</strong> <code>src/Cleanup/CleanupManager.cs:277-282</code></p>
+<h3 id="root-cause-6">Root cause</h3>
+<p><code>DeleteOlderThanDays</code> is a <code>double</code> interpolated directly into SQL with no invariant culture:</p>
+<pre><code class="language-csharp">older_than =&gt; INTERVAL '{deletionTask.DeleteOlderThanDays} days',
+</code></pre>
+<p>On a machine whose current culture uses a comma decimal separator — <strong>German-locale TSI machines being the obvious case</strong> — a fractional value such as <code>0.5</code> renders as <code>INTERVAL '0,5 days'</code> and PostgreSQL rejects the statement.</p>
+<p>Non-hypertable tasks are unaffected because they pass the limit as an <code>NpgsqlParameter</code>.</p>
+<h3 id="impact-6">Impact</h3>
+<p>Latent because every configured <code>DeleteOlderThanDays</code> is currently a whole number, which formats identically in all cultures. The first fractional retention value on a hypertable — e.g. <code>0.5</code> for aggressive time-series retention — fails on German machines and works on English ones. That is an unpleasant class of bug to diagnose in the field.</p>
+<h3 id="fix-6">Fix</h3>
+<p>Format with <code>CultureInfo.InvariantCulture</code>, or pass the interval as a parameter (<code>make_interval(days =&gt; @days)</code>) as the non-hypertable path already does.</p>
+<hr />
+<h2 id="bug-8-latent-retryable-exception-matching-ignores-subclasses">BUG-8 — <em>(latent)</em> Retryable-exception matching ignores subclasses</h2>
+<p><strong>Severity: Medium — latent</strong>
+<strong>File:</strong> <code>src/Core/BaseConnector.cs:73</code></p>
+<h3 id="root-cause-7">Root cause</h3>
+<p>The retry filter compares exception types by exact equality:</p>
+<pre><code class="language-csharp">catch (Exception ex) when (_retryExceptions.Exists(retryExType =&gt; ex.GetType().Equals(retryExType)))
+</code></pre>
+<p>A subclass of a registered retryable exception does <strong>not</strong> match, so it is not retried.</p>
+<h3 id="impact-7">Impact</h3>
+<p><code>RabbitMQConnector</code> registers <code>ConnectFailureException</code> and <code>BrokerUnreachableException</code>. If the RabbitMQ client library throws a more specific derived type — now or after a package upgrade — connection retry silently stops working and the failure escalates to the worker, which (per <code>DebugLoggingBackgroundService</code>) logs <code>Critical</code> and brings the host down.</p>
+<h3 id="fix-7">Fix</h3>
+<p>Use <code>retryExType.IsInstanceOfType(ex)</code> (or <code>IsAssignableFrom</code>) so derived exceptions are covered.</p>
+<hr />
+<h2 id="bug-9-hypertable-cleanup-always-reports-nothing-deleted">BUG-9 — Hypertable cleanup always reports &quot;nothing deleted&quot;</h2>
+<p><strong>Severity: Medium — observability</strong>
+<strong>File:</strong> <code>src/Cleanup/CleanupManager.cs:98-118</code></p>
+<h3 id="root-cause-8">Root cause</h3>
+<p>The deleted-row count comes from <code>ExecuteSqlRawAsync</code>, whose return value is the <em>affected row count</em> of a non-query. The hypertable path executes <code>SELECT drop_chunks(...)</code>, and a <code>SELECT</code> returns <code>-1</code>:</p>
+<pre><code class="language-csharp">int deleted = await context.Database.ExecuteSqlRawAsync(info.SqlStatements.DeletionSql, info.Parameters, cancellationToken);
+...
+if (deleted &gt; 0) { /* &quot;Finished deleting data older than ...&quot; */ }
+else             { /* &quot;No data older than {Limit} found to delete&quot; */ }
+</code></pre>
+<h3 id="impact-8">Impact</h3>
+<p><code>BendstepMeasurement</code> cleanup <strong>always</strong> takes the <code>else</code> branch and logs <em>&quot;No data older than … found to delete&quot;</em> — even when it has just dropped chunks containing millions of rows. The single largest table in the database is therefore the one whose retention cannot be verified from the logs, and a genuine &quot;hypertable retention is not working&quot; fault is indistinguishable from normal operation.</p>
+<h3 id="fix-8">Fix</h3>
+<p>Handle the hypertable branch separately — <code>drop_chunks</code> returns the names of dropped chunks, so use <code>SqlQuery&lt;string&gt;</code> and log the chunk count, or at minimum change the log message so it does not assert that nothing was deleted.</p>
+<hr />
+<h2 id="bug-10-stale-machineinfo-is-attached-after-an-equipment-number-change">BUG-10 — Stale <code>MachineInfo</code> is attached after an equipment-number change</h2>
+<p><strong>Severity: Medium</strong>
+<strong>Files:</strong> <code>src/DataStorage/DataStore.cs:50,464-468</code>; <code>src/Core/MachineInfoManager.cs:65-97</code>; <code>src/DataHubService/Workers/MetaDataExporterWorker.cs:43-53</code></p>
+<h3 id="root-cause-9">Root cause</h3>
+<p><code>DataStore</code> memoises the primary <code>MachineInfo</code> on first use and attaches <strong>that instance</strong> to every subsequently created <code>DbContext</code>. There is no invalidation. If <code>MachineInfoManager.UpdatePrimaryMachineAsync</code> later changes the equipment number or type, <code>DataStore</code> continues attaching the stale tracked entity.</p>
+<p>Two related weaknesses in the same area:</p>
+<ul>
+<li>Machine identity is refreshed only at <code>MetaDataExporterWorker</code> start and then once per cycle — <strong>every 10 hours</strong> by default. An equipment-number change is therefore misattributed for up to 10 hours.</li>
+<li>If the very first ACT server call is cancelled, the worker returns and neither the statistics export nor any further identity refresh happens again until the host restarts.</li>
+</ul>
+<h3 id="impact-9">Impact</h3>
+<p>Records can be attributed to a stale machine identity. More seriously, a MINEX restore that replaces the <code>MachineInfo</code> row underneath a running process leaves the cached entity pointing at a primary key that no longer exists, whose failure mode is a foreign-key violation on the next insert.</p>
+<h3 id="fix-9">Fix</h3>
+<p>Invalidate the memoised instance when <code>MachineInfo</code> is updated (or re-resolve it per unit of work — it is a single-row lookup). Decouple identity refresh from the statistics-export interval. Make a failed first ACT call retry rather than terminate the worker loop.</p>
+<hr />
+<h2 id="bug-11-published-api-documentation-states-behaviour-that-does-not-exist">BUG-11 — Published API documentation states behaviour that does not exist</h2>
+<p><strong>Severity: Medium — documentation, but published to the wiki</strong>
+<strong>Files:</strong> <code>src/DataHubService/Workers/MetaDataExporterWorker.cs:7-9</code>; <code>src/MetaDataExporter/DatabaseStatisticsExporter.cs:126-139,173,257</code></p>
+<h3 id="root-cause-10">Root cause</h3>
+<p>The XML summary on <code>MetaDataExporterWorker</code> states that it</p>
+<blockquote>
+<p><em>&quot;exports DataHub meta data, such as database statistics, as condition log records and <strong>writes them to condition logs</strong> as well as inserts them into the DataHub database itself.&quot;</em></p>
+</blockquote>
+<p><code>DatabaseStatisticsExporter</code> only ever performs <code>DbSet.Add</code> followed by <code>SaveChangesAsync</code>. There is no file output anywhere; <code>IIOManager</code> exposes exactly one member, <code>GetFreeDiskSpace</code>.</p>
+<h3 id="impact-10">Impact</h3>
+<p>Because this comment is published verbatim into <code>Documentation/Component-Documentation/</code>, the wiki tells readers that DataHub statistics appear in the condition-log stream. Anyone building on that expectation will find nothing. Either the comment is stale, or an intended publish path was dropped — worth confirming which, as it changes whether this is a doc fix or a missing feature.</p>
+<blockquote>
+<p>This is the same drift class as the now-removed <code>ConditionLogFileWriter</code> configuration section, which the Confluence arc42 still documents in full but which no longer exists anywhere in code, config or pipelines.</p>
+</blockquote>
+<h3 id="fix-10">Fix</h3>
+<p>Correct the XML comment to match the implementation, or reinstate the file export if it is still wanted.</p>
+<hr />
+<h2 id="bug-12-cleanup-table-order-is-non-deterministic">BUG-12 — Cleanup table order is non-deterministic</h2>
+<p><strong>Severity: Low–Medium</strong>
+<strong>File:</strong> <code>src/Cleanup/CleanupManager.cs:78-84,270,323-330</code></p>
+<h3 id="root-cause-11">Root cause</h3>
+<p><code>ProcessTimestampDeletionTasksAsync</code> iterates a <code>Dictionary&lt;string, TimestampDeletionTaskSqlInfo&gt;</code>, whose enumeration order is not contractually guaranteed, and re-evaluates the size/disk gate before every table — returning as soon as the gate no longer holds.</p>
+<h3 id="impact-11">Impact</h3>
+<p>Under resource pressure, an arbitrary subset of the ~43 configured tables is trimmed and the rest waits for the next 10-minute cycle. There is no notion of priority or of least-valuable data. The configuration format strongly implies that task order expresses deletion priority — and the Confluence documentation states it explicitly (<em>&quot;it executes the first deletion task. After this task is finished, it checks … and if so, executes the second task&quot;</em>) — but the implementation does not honour it.</p>
+<h3 id="fix-11">Fix</h3>
+<p>Preserve configuration order explicitly by using an ordered collection (<code>List&lt;KeyValuePair&lt;…&gt;&gt;</code> or similar) instead of a dictionary, so the documented priority is real.</p>
+<hr />
+<h2 id="bug-13-encryptandwritesecrets.ps1-fragilities">BUG-13 — <code>encryptAndWriteSecrets.ps1</code> fragilities</h2>
+<p><strong>Severity: Low–Medium — build/release robustness</strong>
+<strong>File:</strong> <code>encryptAndWriteSecrets.ps1:14-15,25-32</code></p>
+<p>Three separate issues in one 32-line script:</p>
+<p><strong>a) Hardcoded <code>Debug</code> build path.</strong></p>
+<pre><code class="language-powershell">$encryptorExePath = [IO.Path]::Combine($pwd, &quot;src&quot;, &quot;Encryptor&quot;, &quot;bin&quot;, &quot;Debug&quot;, &quot;net10.0&quot;, &quot;Encryptor.exe&quot;);
+</code></pre>
+<p>The release pipeline must build <code>Encryptor</code> in <strong>Debug</strong> purely to satisfy this path. It breaks on a Release-only build, a target-framework bump, or an RID-specific output layout.</p>
+<p><strong>b) It rewrites a version-controlled file in place.</strong>
+The target is <code>src/DataHubService/appsettings.json</code> — a tracked file. Running the script on a developer machine leaves encrypted credentials in the working tree, where they can be committed by accident. The <code>ConvertTo-Json</code> round-trip also reformats the entire file (and <code>Out-File</code> may alter the existing UTF-8 BOM), producing a large spurious diff.</p>
+<p><strong>c) <code>-Depth 10</code> has only two levels of headroom.</strong>
+I measured the current maximum nesting depth of <code>appsettings.json</code> at <strong>8</strong>, so <code>-Depth 10</code> is sufficient today — this is <em>not</em> currently a live truncation bug. But the retention condition DSL explicitly supports arbitrarily nested <code>And</code>/<code>Or</code> groups, and two further levels of nesting in a <code>Retain.Condition</code> would exceed the limit. PowerShell truncates silently at that point, which would corrupt the shipped configuration without any error.</p>
+<h3 id="fix-12">Fix</h3>
+<p>Write secrets to a separate, git-ignored overlay file (<code>appsettings.Production.json</code> or an environment-variable injection) rather than mutating the tracked file; resolve the <code>Encryptor</code> path from the actual build output; raise <code>-Depth</code> well above any plausible nesting.</p>
+<hr />
+<h2 id="bug-14-encryptor.exe-exits-0-when-given-the-wrong-argument-count">BUG-14 — <code>Encryptor.exe</code> exits 0 when given the wrong argument count</h2>
+<p><strong>Severity: Low — robustness</strong>
+<strong>File:</strong> <code>src/Encryptor/Program.cs:4-15</code></p>
+<h3 id="root-cause-12">Root cause</h3>
+<pre><code class="language-csharp">if (args.Length != 2)
+{
+    Console.WriteLine(&quot;Usage:&quot;);
+    ...
+    return;                     // ← exit code remains 0
+}
+</code></pre>
+<p>Every other error path sets <code>Environment.ExitCode</code> (<code>EnvironmentVariableNotFound</code>, <code>InvalidArguments</code>), so the contract is internally inconsistent.</p>
+<h3 id="impact-12">Impact</h3>
+<p><code>encryptAndWriteSecrets.ps1</code> checks <code>$LASTEXITCODE -ne 0</code> and otherwise takes stdout as the result. A future scripting mistake that passes the wrong number of arguments would therefore treat the <strong>usage text</strong> as a successfully encrypted credential and write it into <code>appsettings.json</code>. Not currently reachable — the script always passes exactly two arguments.</p>
+<h3 id="fix-13">Fix</h3>
+<p>Set <code>Environment.ExitCode = (int)ExitCodes.InvalidArguments</code> before returning, and write the usage text to stderr.</p>
+<hr />
+<h2 id="bug-15-debug.assert-guard-is-compiled-out-in-release">BUG-15 — <code>Debug.Assert</code> guard is compiled out in Release</h2>
+<p><strong>Severity: Low</strong>
+<strong>File:</strong> <code>src/ConditionLogRecordDocumentation/Program.cs:105-114</code></p>
+<h3 id="root-cause-13">Root cause</h3>
+<p>The invariant that renamed and alternative record names are disjoint is enforced only by <code>Debug.Assert</code>, and the <code>TryAdd</code> return value is otherwise ignored:</p>
+<pre><code class="language-csharp">bool successfullyAdded = allNames.TryAdd(alternativeName, actualName);
+// It should not be that a renamed record is simultaneously part of the alternative record names.
+Debug.Assert(successfullyAdded);
+</code></pre>
+<p><code>Debug.Assert</code> is removed in Release builds.</p>
+<h3 id="impact-13">Impact</h3>
+<p>If the two dictionaries ever overlap, the Release build silently drops the duplicate entry from the alias table, publishing an <strong>incomplete alias list</strong> to the machine and to the wiki. Since this file is the authoritative statement of which record names the DataHub accepts, a missing alias is a real interoperability question for producers.</p>
+<h3 id="fix-14">Fix</h3>
+<p>Throw (or <code>Trace.Assert</code>) instead, so the invariant holds in the build that actually ships.</p>
+<hr />
+<h2 id="bug-16-dead-configuration-section">BUG-16 — Dead configuration section</h2>
+<p><strong>Severity: Low — hygiene</strong>
+<strong>File:</strong> <code>src/DataHubService/appsettings.Development.json:20-23</code></p>
+<pre><code class="language-json">&quot;DebugLogging&quot;: {
+    &quot;MinimumLogLevelConsole&quot;: &quot;Info&quot;,
+    &quot;MinimumLogLevel&quot;: &quot;None&quot;
+},
+</code></pre>
+<p>Nothing reads this section. Grepping <code>src/</code> and <code>tests/</code> for <code>DebugLogging</code> and <code>MinimumLogLevelConsole</code> matches only this file — all other apparent hits are the unrelated <code>DebugLoggingBackgroundService</code> type name. The only effective logging configuration is the <code>Serilog</code> section.</p>
+<p>It reads as a log-level switch and has no effect, which will cost someone an afternoon eventually.</p>
+<h3 id="fix-15">Fix</h3>
+<p>Delete it.</p>
+<hr />
+<h2 id="bug-17-metadataexporter-writes-to-the-database-without-the-global-semaphore">BUG-17 — MetaDataExporter writes to the database without the global semaphore</h2>
+<p><strong>Severity: High — the persistence concurrency invariant is broken</strong>
+<strong>File:</strong> <code>src/MetaDataExporter/DatabaseStatisticsExporter.cs:126-139,173,257</code></p>
+<h3 id="symptom-5">Symptom</h3>
+<p>One of the three background workers writes to the database without taking the mutex that every other writer takes.</p>
+<h3 id="root-cause-14">Root cause</h3>
+<p>All database access in the DataHub is supposed to be serialised through a single process-wide <code>SemaphoreSlim(1,1)</code> exposed as <code>IDatabaseService.DatabaseSemaphore</code>. Grepping for every acquisition of it:</p>
+<table>
+<thead>
+<tr>
+<th>Component</th>
+<th>Acquires the semaphore?</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>DataStore</code> (<code>SynchronizedDataHubContext</code>)</td>
+<td>✅ <code>DataStore.cs:488</code></td>
+</tr>
+<tr>
+<td><code>CleanupManager</code></td>
+<td>✅ <code>CleanupManager.cs:93,139</code></td>
+</tr>
+<tr>
+<td><code>MachineInfoManager</code></td>
+<td>✅ <code>MachineInfoManager.cs:128</code></td>
+</tr>
+<tr>
+<td><strong><code>DatabaseStatisticsExporter</code></strong></td>
+<td>❌ <strong>never</strong></td>
+</tr>
+</tbody>
+</table>
+<p><code>DatabaseStatisticsExporter</code> creates its own context, runs its catalog queries and <code>COUNT(*)</code>s, adds rows and calls <code>SaveChangesAsync</code> — all outside the lock.</p>
+<h3 id="impact-14">Impact</h3>
+<p>The semaphore exists to guarantee that exactly one database operation is in flight at a time. That is the stated foundation of the persistence design: it is what prevents duplicate referenced entities, EF Core thread-affinity problems and cleanup/insert interference. One writer ignoring it means the invariant does not actually hold.</p>
+<p>Concretely, a statistics export can run concurrently with a <code>DataStore</code> batch insert or with a cleanup <code>DELETE</code> + <code>VACUUM (FULL)</code>. The most likely observable consequences are lock contention and <code>VACUUM FULL</code> blocking the export's own <code>COUNT(*)</code>s — but &quot;we serialise everything&quot; is now an assumption a future contributor will rely on and be wrong about.</p>
+<p>Note this also runs a full-table <code>COUNT(*)</code> over every table (see the design-level notes), so it is not a short operation.</p>
+<h3 id="fix-16">Fix</h3>
+<p>Wrap the export in <code>IDatabaseService.DatabaseSemaphore</code> like the other three writers. Better still, move the acquisition into <code>DatabaseService</code> itself (e.g. a <code>CreateSynchronizedContextAsync()</code> factory method) so that obtaining a context and holding the lock cannot be separated — the current design makes it easy to forget, and it was forgotten.</p>
+<hr />
+<h2 id="bug-18-full-record-payloads-including-customer-classified-data-are-written-to-the-plaintext-log">BUG-18 — Full record payloads, including <code>Customer</code>-classified data, are written to the plaintext log</h2>
+<p><strong>Severity: High — data governance</strong>
+<strong>Files:</strong> <code>src/DataStorage/Caching/Cache.cs:313-316</code>; <code>src/Core/EntityFrameworkCore/Entities/ConditionLogRecordEntity.cs:123-138</code></p>
+<h3 id="symptom-6">Symptom</h3>
+<p>When a cache flush fails, the complete contents of every affected record are written verbatim into the plaintext log file — regardless of the record's data governance classification.</p>
+<h3 id="root-cause-15">Root cause</h3>
+<p>The flush-failure handler logs the elements themselves:</p>
+<pre><code class="language-csharp">_logger.LogError(ex,
+    &quot;Exception occurred during the invocation of the cache flush receiver callback. Data is lost. {@LostElements}&quot;,
+    new { LostElements = string.Join(&quot;, &quot;, elementsToBeFlushed) });
+</code></pre>
+<p><code>string.Join</code> calls <code>ToString()</code> on each entity, and <code>ConditionLogRecordEntity.ToString()</code> reflects over <strong>every</strong> property and emits its value:</p>
+<pre><code class="language-csharp">public override string ToString()
+{
+    Type type = GetType();
+    return $&quot;Entity: {type.Name}, &quot; + string.Join(&quot;, &quot;, type.GetProperties().Select(p =&gt;
+    {
+        ...
+        return $&quot;{p.Name}: {p.GetValue(this)}&quot;;
+    }));
+}
+</code></pre>
+<p>There is no filtering on <code>DataGovernanceType</code>. The enum includes <code>Operational</code>, <code>Technology</code>, <code>Environmental</code> and <strong><code>Customer</code></strong> (<code>src/Core/DataGovernanceType.cs</code>).</p>
+<h3 id="impact-15">Impact</h3>
+<p>The DataHub carries a data governance classification on every record precisely so that handling rules can be applied. This log path ignores it and writes the payload in clear text to <code>C:\ProgramData\TRUMPF\DataHubFramework\DataHub\Logs\Log.txt</code> — which <code>LogFileCollector</code> is configured to <strong>harvest off the machine</strong> (<code>build/LogFileCollectorConfig/DataHub.xml</code>), and which the integration pipeline publishes as a build artifact.</p>
+<p>This compounds badly with BUG-2: because the shutdown flush uses an already-cancelled token, this error path is expected to fire on <strong>every service stop</strong>, meaning up to 100 records per cache are dumped into the log each time. Fixing BUG-2 largely closes this in practice, but the code path remains a governance hole for any genuine flush failure.</p>
+<h3 id="fix-17">Fix</h3>
+<p RecordNames="">Log identifiers, counts and record names — not payloads. Something like <em>&quot;Data is lost: 100 records ()&quot;</em> preserves the diagnostic value without the disclosure. If payload logging is genuinely wanted for diagnosis, gate it on governance type and on an explicitly opt-in verbose setting.</p>
+<hr />
+<h2 id="bug-19-the-host-fails-to-start-if-postgresql-is-unreachable">BUG-19 — The host fails to start if PostgreSQL is unreachable</h2>
+<p><strong>Severity: Medium–High — availability</strong>
+<strong>File:</strong> <code>src/Cleanup/CleanupManager.cs:49,269,390-413</code></p>
+<h3 id="root-cause-16">Root cause</h3>
+<p><code>CleanupManager</code>'s <strong>constructor</strong> queries the database to discover which tables are TimescaleDB hypertables:</p>
+<pre><code class="language-csharp">.SqlQuery&lt;string&gt;($&quot;SELECT hypertable_name AS \&quot;Value\&quot; FROM timescaledb_information.hypertables&quot;)
+</code></pre>
+<p>An <code>NpgsqlException</code> here is rethrown as <code>InvalidOperationException</code>. Because <code>ICleanupManager</code> is a DI singleton resolved during host start-up, a database that is unreachable at that moment prevents the <strong>entire host</strong> from starting — including the REST and GraphQL surfaces that have nothing to do with cleanup.</p>
+<h3 id="impact-16">Impact</h3>
+<p>The DataHub is otherwise carefully defensive about its dependencies: RabbitMQ absence is tolerated, ACT server failure degrades to a fallback equipment number, and transient database failures are retried. This one path is different — it is a hard start-up dependency on PostgreSQL being up <em>at that instant</em>.</p>
+<p>On a machine, service start order is not fully under the DataHub's control. The installer explicitly starts the PostgreSQL service before running <code>efbundle.exe</code>, which suggests the ordering concern is already known. If PostgreSQL is slow to become ready after a machine boot, the DataHub may fail to start and rely on the service control manager to retry.</p>
+<h3 id="fix-18">Fix</h3>
+<p>Move hypertable discovery out of the constructor and into the first cleanup cycle, where a failure can be logged and retried on the next 10-minute tick. The DataHub would then start and serve queries even if cleanup is temporarily unable to initialise — which is the correct trade-off given the other two dependencies are already handled that way.</p>
+<hr />
+<h2 id="bug-20-worker-loops-can-spin-without-delay">BUG-20 — Worker loops can spin without delay</h2>
+<p><strong>Severity: Medium — CPU / resource</strong>
+<strong>Files:</strong> <code>src/DataHubService/Workers/CleanupWorker.cs:34-48</code>; <code>src/DataHubService/Workers/MetaDataExporterWorker.cs:55-68</code></p>
+<h3 id="root-cause-17">Root cause</h3>
+<p>The <code>try</code>/<code>catch (OperationCanceledException)</code> sits <strong>inside</strong> the <code>while</code> body, and the catch swallows the exception without breaking out:</p>
+<pre><code class="language-csharp">while (!stoppingToken.IsCancellationRequested)
+{
+    try
+    {
+        await _cleanupManager.PerformCleanupAsync(stoppingToken);
+        _logger.LogInformation(&quot;Cleanup done. Sleeping {TotalMinutes} minutes.&quot;, _interval.TotalMinutes);
+        await Task.Delay(_interval, stoppingToken);
+    }
+    catch (OperationCanceledException)
+    {
+        _logger.LogDebug(&quot;Task was canceled.&quot;);      // ← no break, no delay
+    }
+}
+</code></pre>
+<p>If an <code>OperationCanceledException</code> originates from anything other than <code>stoppingToken</code> — a linked token, or an EF Core / Npgsql command timeout surfacing as cancellation — then <code>stoppingToken.IsCancellationRequested</code> is still <code>false</code>, the loop condition holds, and the next iteration starts <strong>immediately</strong>. Because the exception can be thrown before <code>Task.Delay</code> is reached, there is no delay at all.</p>
+<h3 id="impact-17">Impact</h3>
+<p>A tight, delay-free loop that repeatedly attempts cleanup (or statistics export) and repeatedly fails, burning CPU on a machine whose whole point is not to have its CPU burned by the DataHub (quality goal: co-existence). Each iteration logs only at <code>Debug</code>, so with the production <code>Information</code> minimum level the spin is <strong>invisible in the logs</strong>.</p>
+<h3 id="fix-19">Fix</h3>
+<p>Distinguish the two cases:</p>
+<pre><code class="language-csharp">catch (OperationCanceledException) when (stoppingToken.IsCancellationRequested)
+{
+    break;      // genuine shutdown
+}
+catch (OperationCanceledException ex)
+{
+    _logger.LogWarning(ex, &quot;Cleanup cancelled unexpectedly.&quot;);
+    await Task.Delay(_interval, stoppingToken);      // still back off
+}
+</code></pre>
+<hr />
+<h2 id="bug-21-groupbydynamic-reflects-over-unvalidated-client-input">BUG-21 — <code>GroupByDynamic</code> reflects over unvalidated client input</h2>
+<p><strong>Severity: Medium — security / robustness</strong>
+<strong>Files:</strong> <code>src/Core/GraphQL/QueryableExtensions.cs:24-47</code>; <code>src/GraphQLSourceGeneration/GraphQLSourceGenerator.cs:176-181</code></p>
+<h3 id="root-cause-18">Root cause</h3>
+<p>Every generated <code>Aggregate{X}(groupBy: String)</code> resolver passes the client-supplied string straight into reflection with no validation:</p>
+<pre><code class="language-csharp">MemberExpression property = Expression.Property(parameter, propertyName);   // propertyName is client input
+</code></pre>
+<h3 id="impact-18">Impact</h3>
+<p>Two distinct problems:</p>
+<ol>
+<li><p><strong>It bypasses the GraphQL schema as an allow-list.</strong> <code>Expression.Property</code> resolves <em>any</em> public property of the entity type, including properties that the GraphQL schema does not expose. The resolved value is then returned to the caller as <code>AggregationResult.GroupingValue</code>, so a client can read the distinct values of a property that was deliberately not part of the API surface. This is an information-disclosure path around the schema.</p>
+</li>
+<li><p><strong>Unknown property names throw.</strong> <code>Expression.Property</code> raises <code>ArgumentException</code> for a name that does not exist, which surfaces as a server error rather than a GraphQL validation error — so a typo produces a 500-class failure instead of a useful message.</p>
+</li>
+</ol>
+<p>This is <em>not</em> SQL injection: the expression tree is translated by EF Core, so no SQL text is concatenated. The risk is schema-surface bypass and error handling, not query injection.</p>
+<h3 id="fix-20">Fix</h3>
+<p>Validate <code>propertyName</code> against the set of properties the GraphQL schema actually exposes for that type before building the expression, and return a GraphQL validation error for anything else. A generated <code>enum</code> of permitted grouping keys per type would be strictly better than a <code>String</code> argument — the source generator already knows the property set, so it can emit it.</p>
+<hr />
+<h2 id="bug-22-graphql-has-no-depth-complexity-or-timeout-limits">BUG-22 — GraphQL has no depth, complexity or timeout limits</h2>
+<p><strong>Severity: Medium — availability / DoS</strong>
+<strong>File:</strong> <code>src/DataHubService/Program.cs:146-154</code></p>
+<h3 id="root-cause-19">Root cause</h3>
+<p>The GraphQL server is configured with projections, filtering and sorting, but none of HotChocolate's protective options:</p>
+<pre><code class="language-csharp">services
+    .AddGraphQLServer()
+    .RegisterDbContextFactory&lt;DataHubContext&gt;()
+    .AddQueryType&lt;Query&gt;()
+    .AddSubscriptionType&lt;Subscription&gt;()
+    .AddInMemorySubscriptions()
+    .AddProjections()
+    .AddFiltering()
+    .AddSorting();
+</code></pre>
+<p>There is no <code>MaxExecutionDepth</code>, no cost/complexity analysis (<code>ModifyCostOptions</code>), no execution timeout, no mandatory paging and no persisted-query allow-list. The <code>limit</code> argument supplied by <code>[UseLimit]</code> is <strong>optional</strong>, so omitting it returns the entire table.</p>
+<h3 id="impact-19">Impact</h3>
+<p>An unauthenticated caller — and per BUG-4 that includes anyone who can reach either port — can issue a deeply nested or unbounded query against a multi-gigabyte database on a machine control PC. Because there are also no non-primary-key indexes, such a query is a sequential scan. This is a straightforward way to degrade a production machine's IPC, and it requires no credentials.</p>
+<h3 id="fix-21">Fix</h3>
+<p>Set <code>MaxExecutionDepth</code>, enable cost analysis with a budget, add an execution timeout, and make paging mandatory (or give <code>limit</code> a default rather than leaving it optional).</p>
+<hr />
+<h2 id="bug-23-async-cleanup-is-invoked-without-awaiting-including-from-dispose">BUG-23 — Async <code>CleanUp()</code> is invoked without awaiting, including from <code>Dispose()</code></h2>
+<p><strong>Severity: Low–Medium — resource cleanup</strong>
+<strong>File:</strong> <code>src/DataStorage/RabbitMQ/RabbitMQCommunication.cs:56,73,92</code> vs the declaration at <code>:222</code></p>
+<h3 id="root-cause-20">Root cause</h3>
+<p><code>Communication.CleanUp()</code> is declared <code>internal async Task CleanUp()</code> but is invoked in three places without <code>await</code> — one of which is the synchronous <code>Dispose()</code>. The returned <code>Task</code> is discarded, so cleanup proceeds concurrently with (or after) disposal, and any exception inside it is unobserved.</p>
+<h3 id="impact-20">Impact</h3>
+<p>Channel cancellation and closure may not have completed when <code>Dispose()</code> returns. Unobserved exceptions land in <code>TaskScheduler.UnobservedTaskException</code> — which the host does log as <code>Critical</code>, so this would appear as an alarming but non-actionable log entry. During shutdown or broker reconnection, channel state may be left inconsistent.</p>
+<h3 id="fix-22">Fix</h3>
+<p>Make the disposal path <code>IAsyncDisposable</code> and <code>await</code> the cleanup, or block deliberately and document why.</p>
+<hr />
+<h2 id="bug-24-the-cache-flush-blocks-the-calling-ingest-thread">BUG-24 — The cache flush blocks the calling ingest thread</h2>
+<p><strong>Severity: Low–Medium — performance</strong>
+<strong>File:</strong> <code>src/DataStorage/Caching/Cache.cs:216,239-260</code></p>
+<h3 id="root-cause-21">Root cause</h3>
+<p><code>AttemptFlushCache</code> performs a <strong>blocking</strong> <code>SemaphoreSlim.Wait()</code> on the caller's thread, then starts the flush with <code>Task.Run</code> + <code>ContinueWith</code> that nobody awaits during normal operation. The caller is the ingest path — a REST request thread or the RabbitMQ consumer callback.</p>
+<h3 id="impact-21">Impact</h3>
+<p>This partially undermines the purpose of write-behind caching. An ingest call that happens to trigger a flush blocks synchronously until it can acquire the flush semaphore, so a REST <code>POST</code> can be delayed by an in-progress flush — the precise coupling the cache exists to remove. On a thread-pool thread this also risks pool starvation under burst load.</p>
+<h3 id="fix-23">Fix</h3>
+<p>Use <code>await WaitAsync(...)</code> on the flush semaphore and make the trigger path fully asynchronous.</p>
+<hr />
+<h2 id="bug-25-licence-document-and-sbom-generation-depends-on-an-llm-api-key">BUG-25 — Licence document and SBOM generation depends on an LLM API key</h2>
+<p><strong>Severity: Low–Medium — supply chain / legal reproducibility</strong>
+<strong>File:</strong> <code>azure-pipelines-integrationTest-template.yml</code> (variable group <code>Tat.LicenseGenerator_ApiTokens</code>; <code>GitHubApiKey</code>, <code>GeminiApiKey</code>)</p>
+<h3 id="observation">Observation</h3>
+<p>The <code>Tat.LicenseGenerator</code> tool that produces the shipped licence document and the CycloneDX <code>sbom.json</code> requires a <strong>GitHub API key and a Gemini (LLM) API key</strong> at build time.</p>
+<h3 id="why-this-is-worth-a-decision-rather-than-a-fix">Why this is worth a decision rather than a fix</h3>
+<p>Two consequences:</p>
+<ol>
+<li><strong>The build is not reproducible or hermetic.</strong> Producing a shippable package requires two external services to be reachable and two credentials to be valid. An expired key or an API outage blocks a release.</li>
+<li><strong>A legal artifact is generated with LLM assistance.</strong> The licence disclosure installed onto customer machines is, in part, LLM-derived. Whether that is acceptable is a question for legal/compliance, not for engineering — but it should be a conscious decision, and I could not find it recorded anywhere.</li>
+</ol>
+<p>Flagging rather than prescribing: someone with the compliance context should confirm this is intended and signed off.</p>
+<hr />
+<h2 id="bug-26-a-1116-line-test-file-contains-no-tests">BUG-26 — A 1116-line test file contains no tests</h2>
+<p><strong>Severity: Low — dead code</strong>
+<strong>File:</strong> <code>tests/DataStorageTests/LoggingTest.cs</code></p>
+<p>The entire file — 1116 lines — is one commented-out block. It contains <strong>zero</strong> <code>[TestMethod]</code> attributes (verified by count). The commented code is from the pre-PostgreSQL era: it references <code>BsonDocument</code> and uses xUnit-style <code>Theory</code>/<code>InlineData</code>, neither of which applies to the current MSTest + EF Core code base.</p>
+<p>It gives a misleading impression of <code>DataStorage</code> test coverage — <code>DataStorage</code> is the component with the single write path, the caching logic and the error handling, i.e. the one where BUG-2 and BUG-3 live.</p>
+<h3 id="fix-24">Fix</h3>
+<p>Delete it. If any of the commented scenarios are still worth covering, port them as real tests — the cache flush and shutdown-drain behaviour in particular would have caught BUG-2.</p>
+<hr />
+<h2 id="bug-27.editorconfig-rules-have-no-severities-so-nothing-is-enforced">BUG-27 — <code>.editorconfig</code> rules have no severities, so nothing is enforced</h2>
+<p><strong>Severity: Low — convention drift</strong>
+<strong>File:</strong> <code>.editorconfig</code></p>
+<h3 id="observation-1">Observation</h3>
+<p>The <code>.editorconfig</code> codifies conventions the code base does not follow, and because no style rule carries a <code>:warning</code> or <code>:error</code> severity, none of them are enforced by the build — despite <code>TreatWarningsAsErrors</code> being set.</p>
+<p>Measured examples: 179 files use file-scoped namespaces (<code>namespace X;</code>) against 17 using block-scoped, and there are 127 occurrences of <code>var </code> under <code>src/</code>, against rules that specify otherwise.</p>
+<h3 id="impact-22">Impact</h3>
+<p>This matters mainly because it creates a false impression: a reader (or a new contributor) assumes the conventions in <code>.editorconfig</code> are the enforced house style, when in practice the code and the config disagree and nothing arbitrates.</p>
+<h3 id="fix-25">Fix</h3>
+<p>Reconcile the two — update the rules to match what the code base actually does, then attach severities so the build enforces them from that point on. Doing it in that order avoids a large mechanical diff.</p>
+<hr />
+<h2 id="bug-28-coverage-and-static-analysis-are-collected-but-not-gated">BUG-28 — Coverage and static analysis are collected but not gated</h2>
+<p><strong>Severity: Low — process</strong>
+<strong>File:</strong> <code>azure-pipelines-CI.yml:55-78</code></p>
+<p>Coverage is collected in two formats and published, and SonarCloud analysis runs — but there is <strong>no coverage threshold</strong> and <strong>no <code>failOnQualityGate</code></strong> step. A build with falling coverage or new Sonar issues passes.</p>
+<p>Additionally, <strong>61 source files</strong> carry <code>[ExcludeFromCodeCoverage]</code>, including <code>Program.cs</code>. That is a substantial fraction of the code base excluded from the metric that is already not gated.</p>
+<p>CI also builds and tests <strong><code>Debug</code> only</strong>; the <code>Release</code> configuration is exercised solely by the integration pipeline.</p>
+<h3 id="fix-26">Fix</h3>
+<p>Add a coverage floor and enable the Sonar quality gate as a build-breaking step. Review whether all 61 exclusions are still warranted.</p>
+<hr />
+<h2 id="bug-29-operationalreadiness-is-async-with-no-await">BUG-29 — <code>operationalReadiness</code> is <code>async</code> with no <code>await</code></h2>
+<p><strong>Severity: Low — hygiene</strong>
+<strong>File:</strong> <code>src/DataHubService/Controllers/TrumpfAnalyticsController.cs:76-84</code></p>
+<p><code>CheckOperationalReadiness</code> is declared <code>async</code> but contains no <code>await</code>, which produces a compiler warning (<code>CS1998</code>) — notable given <code>TreatWarningsAsErrors</code> is enabled, so it is presumably suppressed somewhere. More importantly, the method is hardcoded to report ready: it does not check the database, the AMQP consumer, or whether machine identity was resolved.</p>
+<p>See also the design-level note on the absence of health checks — this endpoint is the closest thing the DataHub has to one, and it always says yes.</p>
+<hr />
+<h2 id="design-level-concerns-not-defects-decisions-worth-revisiting">Design-level concerns (not defects — decisions worth revisiting)</h2>
+<p>Recorded here for completeness because they surfaced in the same review, but each is a legitimate design choice rather than a bug. They are documented with full rationale in <code>docs/11_technical_risks.md</code> on branch <code>arc42</code>.</p>
+<table>
+<thead>
+<tr>
+<th>Topic</th>
+<th>Concern</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>No authentication or TLS</strong></td>
+<td>Both listeners bind <code>0.0.0.0</code> over plain HTTP with no authn/authz, and the installer opens a firewall rule. Presumably an accepted reliance on machine-network isolation — but it is not written down anywhere, and it is the reason BUG-4 has no second line of defence. Worth an explicit ADR.</td>
+</tr>
+<tr>
+<td><strong>At-most-once AMQP delivery</strong></td>
+<td><code>autoAck: true</code>, non-durable exchange and queue, no prefetch limit, no dead-letter exchange, then an in-memory cache. Any crash drops in-flight records with no redelivery. Plausibly the right trade-off for telemetry (ADR-11 notes the data also exists in the cloud) — but currently an implicit assumption rather than a recorded decision.</td>
+</tr>
+<tr>
+<td><strong>Cleanup gate is conjunctive</strong></td>
+<td>Retention engages only when the database exceeds its cap <strong>and</strong> free disk is below the floor. This is deliberate and commented (otherwise another process filling the disk would make the DataHub delete its own data). The consequence: with the shipped defaults of 2 GB and 100 GB, a machine with a roomy disk never triggers cleanup and the database grows past its stated cap indefinitely. The integration test has to set the free-disk threshold to 999 TB to make cleanup fire at all.</td>
+</tr>
+<tr>
+<td><strong>Global database semaphore</strong></td>
+<td>All database access is serialised through one <code>SemaphoreSlim(1,1)</code>. This eliminates a whole class of concurrency bug, but it is a hard throughput ceiling — and cleanup's <code>VACUUM (FULL, ANALYZE)</code> holds it while rewriting a table under an <code>ACCESS EXCLUSIVE</code> lock, blocking all ingestion for the duration. Combined with the unbounded cache queue, a slow vacuum grows the heap with no back-pressure.</td>
+</tr>
+<tr>
+<td><strong>No non-primary-key indexes</strong></td>
+<td><code>ForeignKeyIndexConvention</code> is removed and the model declares no <code>HasIndex</code>. A defensible write-throughput trade-off, but it means cleanup's correlated <code>NOT EXISTS</code> subqueries are sequential scans executed while holding the global semaphore.</td>
+</tr>
+<tr>
+<td><strong>No schema verification at runtime</strong></td>
+<td>The service never checks <code>GetPendingMigrations()</code>. A deployment where <code>efbundle.exe</code> was skipped or failed starts normally and manifests only as per-query errors and dropped batches.</td>
+</tr>
+<tr>
+<td><strong>No health check</strong></td>
+<td>There is no health endpoint, and <code>GET /api/operationalReadiness</code> reports ready unconditionally — including when PostgreSQL is unreachable or the AMQP consumer never attached.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="where-to-find-the-supporting-material">Where to find the supporting material</h2>
+<ul>
+<li><strong>Branch <code>arc42</code></strong>, <code>docs/</code> — the full arc42 documentation set. Section 11 (<code>docs/11_technical_risks.md</code>) lists all 26 risks and defects with evidence; section 9 adds six previously unrecorded ADRs.</li>
+<li>Pushed to <code>origin/arc42</code>.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#summary">Summary</a>
+  </li>
+  <li level="1">
+   <a href="#bug-1-multi-sensor-time-series-timestamps-are-wrong">BUG-1 — Multi-sensor time-series timestamps are wrong</a>
+  </li>
+  <li level="2">
+   <a href="#symptom">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#why-this-is-a-defect-rather-than-intended-behaviour">Why this is a defect rather than intended behaviour</a>
+  </li>
+  <li level="2">
+   <a href="#impact">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix">Fix</a>
+  </li>
+  <li level="2">
+   <a href="#data-already-collected">Data already collected</a>
+  </li>
+  <li level="1">
+   <a href="#bug-2-cached-records-are-discarded-on-every-service-stop">BUG-2 — Cached records are discarded on every service stop</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-1">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-1">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-1">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-1">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-3-the-binary-copy-path-swallows-every-exception">BUG-3 — The binary COPY path swallows every exception</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-2">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-2">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-2">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-2">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-4-the-port-filter-fails-open-graphql-and-swagger-are-served-on-both-ports">BUG-4 — The port filter fails open: GraphQL and Swagger are served on both ports</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-3">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-3">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#resulting-exposure">Resulting exposure</a>
+  </li>
+  <li level="2">
+   <a href="#impact-3">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#additional-finding-the-code-contradicts-its-own-documentation">Additional finding: the code contradicts its own documentation</a>
+  </li>
+  <li level="2">
+   <a href="#fix-3">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-5-the-aes-key-is-a-compile-time-constant">BUG-5 — The AES key is a compile-time constant</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-4">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-4">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-4">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-4">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-6-latent-a-hypertable-with-a-retain-rule-generates-invalid-sql">BUG-6 — (latent) A hypertable with a  rule generates invalid SQL</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-5">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-5">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-5">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-7-latent-culture-sensitive-interval-formatting-in-drop_chunks">BUG-7 — (latent) Culture-sensitive interval formatting in </a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-6">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-6">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-6">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-8-latent-retryable-exception-matching-ignores-subclasses">BUG-8 — (latent) Retryable-exception matching ignores subclasses</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-7">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-7">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-7">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-9-hypertable-cleanup-always-reports-nothing-deleted">BUG-9 — Hypertable cleanup always reports "nothing deleted"</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-8">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-8">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-8">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-10-stale-machineinfo-is-attached-after-an-equipment-number-change">BUG-10 — Stale  is attached after an equipment-number change</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-9">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-9">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-9">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-11-published-api-documentation-states-behaviour-that-does-not-exist">BUG-11 — Published API documentation states behaviour that does not exist</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-10">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-10">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-10">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-12-cleanup-table-order-is-non-deterministic">BUG-12 — Cleanup table order is non-deterministic</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-11">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-11">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-11">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-13-encryptandwritesecrets.ps1-fragilities">BUG-13 —  fragilities</a>
+  </li>
+  <li level="2">
+   <a href="#fix-12">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-14-encryptor.exe-exits-0-when-given-the-wrong-argument-count">BUG-14 —  exits 0 when given the wrong argument count</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-12">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-12">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-13">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-15-debug.assert-guard-is-compiled-out-in-release">BUG-15 —  guard is compiled out in Release</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-13">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-13">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-14">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-16-dead-configuration-section">BUG-16 — Dead configuration section</a>
+  </li>
+  <li level="2">
+   <a href="#fix-15">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-17-metadataexporter-writes-to-the-database-without-the-global-semaphore">BUG-17 — MetaDataExporter writes to the database without the global semaphore</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-5">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-14">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-14">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-16">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-18-full-record-payloads-including-customer-classified-data-are-written-to-the-plaintext-log">BUG-18 — Full record payloads, including -classified data, are written to the plaintext log</a>
+  </li>
+  <li level="2">
+   <a href="#symptom-6">Symptom</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-15">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-15">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-17">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-19-the-host-fails-to-start-if-postgresql-is-unreachable">BUG-19 — The host fails to start if PostgreSQL is unreachable</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-16">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-16">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-18">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-20-worker-loops-can-spin-without-delay">BUG-20 — Worker loops can spin without delay</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-17">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-17">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-19">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-21-groupbydynamic-reflects-over-unvalidated-client-input">BUG-21 —  reflects over unvalidated client input</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-18">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-18">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-20">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-22-graphql-has-no-depth-complexity-or-timeout-limits">BUG-22 — GraphQL has no depth, complexity or timeout limits</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-19">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-19">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-21">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-23-async-cleanup-is-invoked-without-awaiting-including-from-dispose">BUG-23 — Async  is invoked without awaiting, including from </a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-20">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-20">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-22">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-24-the-cache-flush-blocks-the-calling-ingest-thread">BUG-24 — The cache flush blocks the calling ingest thread</a>
+  </li>
+  <li level="2">
+   <a href="#root-cause-21">Root cause</a>
+  </li>
+  <li level="2">
+   <a href="#impact-21">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-23">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-25-licence-document-and-sbom-generation-depends-on-an-llm-api-key">BUG-25 — Licence document and SBOM generation depends on an LLM API key</a>
+  </li>
+  <li level="2">
+   <a href="#observation">Observation</a>
+  </li>
+  <li level="2">
+   <a href="#why-this-is-worth-a-decision-rather-than-a-fix">Why this is worth a decision rather than a fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-26-a-1116-line-test-file-contains-no-tests">BUG-26 — A 1116-line test file contains no tests</a>
+  </li>
+  <li level="2">
+   <a href="#fix-24">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-27.editorconfig-rules-have-no-severities-so-nothing-is-enforced">BUG-27 —  rules have no severities, so nothing is enforced</a>
+  </li>
+  <li level="2">
+   <a href="#observation-1">Observation</a>
+  </li>
+  <li level="2">
+   <a href="#impact-22">Impact</a>
+  </li>
+  <li level="2">
+   <a href="#fix-25">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-28-coverage-and-static-analysis-are-collected-but-not-gated">BUG-28 — Coverage and static analysis are collected but not gated</a>
+  </li>
+  <li level="2">
+   <a href="#fix-26">Fix</a>
+  </li>
+  <li level="1">
+   <a href="#bug-29-operationalreadiness-is-async-with-no-await">BUG-29 —  is  with no </a>
+  </li>
+  <li level="1">
+   <a href="#design-level-concerns-not-defects-decisions-worth-revisiting">Design-level concerns (not defects — decisions worth revisiting)</a>
+  </li>
+  <li level="1">
+   <a href="#where-to-find-the-supporting-material">Where to find the supporting material</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">DataHub</a></span>
+ <span class="next"><a href="arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

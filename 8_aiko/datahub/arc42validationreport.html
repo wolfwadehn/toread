@@ -1,0 +1,1013 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../res/bento.css">
+  <link rel="stylesheet" href="../../res/site.css">
+  <link rel="stylesheet" href="../../res/tree.css">
+  <link rel="stylesheet" href="../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>DataHub Arc42 — Validation against the code base</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree open"></button>
+     <a href="index.html">DataHub</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a class="active" href="arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../trutops/index.html">TruTops</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../trutops/trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../trutops/requirements/index.html">Requirements</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../trutops/requirements/00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="../trutops/requirements/60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../trutops/requirements/tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="../trutops/requirements/tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../trutops/requirements/tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="../trutops/requirements/tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">DataHub</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="arc42validationreport.html">DataHub Arc42 — Validation against the code base</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>DataHub Arc42 — Validation against the code base</h1>
+<p><strong>Validated:</strong> 2026-08-04
+<strong>Document under review:</strong> <code>CONNECTORS-DataHub Arc42-040826-082816.pdf</code> (Confluence export, 67 pages, &quot;DataHub Arc42 — CAMBridge&quot;)
+<strong>Validated against:</strong> <code>DataHub</code> repo @ <code>aa942e6c</code> (branch <code>main</code>)</p>
+<hr />
+<h2 id="verdict">Verdict</h2>
+<p>The Confluence arc42 is <strong>structurally sound but materially out of date</strong>. Its skeleton follows arc42 correctly and the <em>configuration reference</em> chapter is excellent — genuinely better than what most projects have. But the document was largely written around the MongoDB → PostgreSQL switch (Sep/Oct 2025) and has not tracked the code since.</p>
+<p>Three classes of problem, in descending severity:</p>
+<table>
+<thead>
+<tr>
+<th>Class</th>
+<th>Count</th>
+<th>Impact</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>A — Stale/wrong</strong>: documents behaviour the code no longer has</td>
+<td>7</td>
+<td>A reader acts on false information</td>
+</tr>
+<tr>
+<td><strong>B — Missing</strong>: architecture in the code that is absent from the doc</td>
+<td>8</td>
+<td>The doc no longer explains the system</td>
+</tr>
+<tr>
+<td><strong>C — Placeholders/inconsistencies</strong></td>
+<td>9</td>
+<td>Doc reads as unfinished</td>
+</tr>
+<tr>
+<td><strong>Bugs found while validating</strong></td>
+<td>7</td>
+<td>Real defects, one causing silent data corruption</td>
+</tr>
+</tbody>
+</table>
+<p>The single most consequential gap is <strong>B1 (TimescaleDB)</strong>: the production storage engine is not the one the document describes.</p>
+<hr />
+<h2 id="a.stale-or-factually-wrong">A. Stale or factually wrong</h2>
+<h3 id="a1.the-local-file-system-secondary-storage-concept-no-longer-exists">A1. The &quot;Local File System&quot; secondary-storage concept no longer exists</h3>
+<p><strong>Doc says</strong> (Crosscutting Concepts → Local File System): <em>&quot;The local file system is the secondary storage location where data is stored that is unfit for the database, for example, ZIP files.&quot;</em> Data Management lists <em>&quot;5. Storing data on the local file system&quot;</em>.</p>
+<p><strong>Code says:</strong> <code>IIOManager</code> exposes exactly one member — <code>GetFreeDiskSpace(string path)</code> (<code>src/Core/IIOManager.cs:15</code>). There is no file-writing path anywhere in <code>src/Core</code> or <code>src/DataStorage</code>. The DataHub writes <strong>only</strong> to PostgreSQL.</p>
+<p><strong>Fix:</strong> delete the concept, or restate it as &quot;disk-space probing for the cleanup service&quot;.</p>
+<h3 id="a2.cleanup-does-not-delete-files-from-disk">A2. Cleanup does not delete files from disk</h3>
+<p><strong>Doc says:</strong> <em>&quot;If some disk space limits are reached, old files are deleted on the disk as well (in addition to the database cleanup).&quot;</em></p>
+<p><strong>Code says:</strong> <code>CleanupManager</code> issues only SQL — <code>DELETE FROM</code>, <code>VACUUM</code>, and TimescaleDB <code>drop_chunks()</code> (<code>src/Cleanup/CleanupManager.cs:98,144,278,377</code>). Free disk space is <em>read</em> (<code>:229</code>) purely as a <strong>trigger condition</strong>; nothing on disk is deleted.</p>
+<h3 id="a3.metadataexporter-writes-to-the-database-not-the-file-system">A3. MetaDataExporter writes to the database, not the file system</h3>
+<p><strong>Doc says</strong> (Runtime View, step 3): <em>&quot;It stores the returned database statistics (as condition log records) on the file system.&quot;</em></p>
+<p><strong>Code says:</strong> <code>DatabaseStatisticsExporter</code> calls <code>context.PostgresStatisticsRecords.Add(...)</code>, <code>context.PostgresTableStatisticsRecords.Add(...)</code> and <code>SaveChangesAsync()</code> (<code>src/MetaDataExporter/DatabaseStatisticsExporter.cs:139,173,257</code>). Statistics land in database tables. Confirmed by the XML doc on <code>MetaDataExporterWorker</code>, which says records are written to condition logs <em>&quot;as well as inserted into the DataHub database itself&quot;</em> — and only the latter half is still true.</p>
+<h3 id="a4.the-conditionlogfilewriter-configuration-section-is-gone">A4. The <code>ConditionLogFileWriter</code> configuration section is gone</h3>
+<p><strong>Doc says:</strong> a full subsection <em>&quot;Settings for ConditionLogFileWriter&quot;</em> documenting <code>LogDirectory</code> (<code>C:\ProgramData\TRUMPF\DataHub\CondLogs</code>), <code>LogFileSize</code>, <code>MaxNumberLogFiles</code>.</p>
+<p><strong>Code says:</strong> zero occurrences of <code>ConditionLogFileWriter</code>, <code>CondLogs</code>, <code>LogFileSize</code> or <code>MaxNumberLogFiles</code> in any <code>.cs</code>, <code>.json</code>, <code>.ps1</code> or <code>.tcix</code> outside the generated <code>Documentation/</code> tree. <code>Program.cs</code> reads only these sections: <code>PostgreSQL</code>, <code>ActServer</code>, <code>DataStorage</code>, <code>Cleanup</code>, <code>MetaDataExporter</code>, <code>RabbitMQ</code>, <code>Kestrel</code>, <code>Serilog</code> (<code>src/DataHubService/Program.cs:68-74</code>).</p>
+<p><strong>Fix:</strong> delete the section. It is the clearest single indicator of doc drift.</p>
+<h3 id="a5.maximumdatabasesize-is-described-in-mongodb-terms">A5. <code>MaximumDatabaseSize</code> is described in MongoDB terms</h3>
+<p><strong>Doc says:</strong> <em>&quot;Corresponds to the total uncompressed <strong>BSON</strong> data in the database. This is because otherwise, reserved blocks containing only deleted data are counted towards the database size.&quot;</em></p>
+<p>PostgreSQL has no BSON and no WiredTiger reserved blocks. This is verbatim MongoDB-era text left in place after ADR-9. The rationale needs rewriting against <code>pg_database_size</code> semantics + <code>VACUUM</code>.</p>
+<h3 id="a6.the-package-is-a.tciz-not-a.uif">A6. The package is a <code>.tciz</code>, not a <code>.uif</code></h3>
+<p><strong>Doc says</strong> (Deployment view): the artifact is <code>DataHub.uif</code>, <em>&quot;the UIF package&quot;</em>.</p>
+<p><strong>Code says:</strong> <code>createUif.ps1:78</code> produces <strong><code>DataHub_&lt;SemVer&gt;.tciz</code></strong> — a ZIP built with 7-Zip, whose root holds the component manifest <code>component.tcix</code> and a CycloneDX <code>sbom.json</code>, with payload under <code>content/</code>. UIF is the <em>framework</em>; <code>.tciz</code> is the artifact. The doc also omits the sidecar <code>DataHub_&lt;version&gt;.build</code> file carrying SCAPS component, source and build metadata, and the fact that <strong>nothing in the repo uploads to SCAPS</strong> — that is a downstream step.</p>
+<h3 id="a7.several-dedicated-rabbitmq-exchanges">A7. &quot;Several dedicated RabbitMQ exchanges&quot;</h3>
+<p><strong>Doc says:</strong> <em>&quot;The DataHub manages several dedicated RabbitMQ exchanges, each of which defines the data that the DataHub expects…&quot;</em></p>
+<p><strong>Code says:</strong> exactly one. <code>RabbitMQExchangeConfiguration</code> is <code>(ConditionLogExchange, ConditionLogRoutingKey)</code> — a two-field record with no trace or second exchange. The doc's own follow-up sentence (&quot;Currently, the following main exchange exists&quot;) is the accurate one; the plural opener is aspirational and misleads.</p>
+<blockquote>
+<p>Related code-side drift worth fixing in the same pass: the XML summary on <code>RabbitMQCommunication</code> still claims it communicates <em>&quot;with several channels for condition logs <strong>and traces</strong>&quot;</em>. There is no trace channel.</p>
+</blockquote>
+<hr />
+<h2 id="b.missing-architecture">B. Missing architecture</h2>
+<h3 id="b1.timescaledb-is-the-production-storage-engine-and-is-undocumented">B1. TimescaleDB is the production storage engine — and is undocumented ⚠️</h3>
+<p>This is the big one. The document mentions TimescaleDB <strong>only</strong> in the <em>Legacy Comparison</em> benchmark section, where it appears as a <strong>rejected</strong> option (<em>&quot;MongoDB has been benchmarked against TimescaleDB… As a result of better performance, MongoDB has been selected&quot;</em>).</p>
+<p>In the shipping code TimescaleDB is load-bearing:</p>
+<table>
+<thead>
+<tr>
+<th>Evidence</th>
+<th>Location</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>.UseTimescaleDb()</code> on the EF Core provider</td>
+<td><code>src/DataHubService/Program.cs:145</code></td>
+</tr>
+<tr>
+<td><code>CmdScale.EntityFrameworkCore.TimescaleDB</code> package</td>
+<td><code>src/Core/…/BendstepMeasurement.cs:1</code></td>
+</tr>
+<tr>
+<td><code>[Hypertable(...)]</code> attribute on the entity</td>
+<td><code>src/Core/…/BendstepMeasurement.cs:12</code></td>
+</tr>
+<tr>
+<td><code>&quot;TimescaleDB:IsHypertable&quot; = true</code> in the model snapshot</td>
+<td><code>src/Migrations/Versions/DataHubContextModelSnapshot.cs:558</code></td>
+</tr>
+<tr>
+<td>Migration configures compression + chunk-skipping policies</td>
+<td><code>Migrations.Versions.BendstepMeasurementAndSensorTables</code></td>
+</tr>
+<tr>
+<td>Cleanup detects hypertables and retains via <code>drop_chunks()</code></td>
+<td><code>src/Cleanup/CleanupManager.cs:278,398</code></td>
+</tr>
+<tr>
+<td>Cleanup hard-fails if <code>timescaledb_information.hypertables</code> is absent</td>
+<td><code>src/Cleanup/CleanupManager.cs:407-410</code></td>
+</tr>
+</tbody>
+</table>
+<p>There is <strong>no ADR</strong> for adopting TimescaleDB, and the ER diagram/database-schema section does not distinguish hypertables from regular tables. A reader of the current doc would conclude plain PostgreSQL — and would be wrong about retention, compression and the cleanup service's failure modes.</p>
+<h3 id="b2.time-series-ingestion-and-storage">B2. Time-series ingestion and storage</h3>
+<p>The most recent feature (<code>61c0a93e</code> &quot;Implemented storage of time series data&quot;) introduced <code>EquidistantTimeSeriesData</code>, <code>TimeSeriesPointEntity</code>, <code>BendstepMeasurement</code>, <code>Sensor</code>, <code>ITimeSeriesEntityBuilder</code> / <code>ITimeSeriesEntityFactory</code>, <code>BendstepMeasurementBuilder</code>, <code>SensorValues</code>, and the <code>Core.GraphQL.TimeSeries</code> namespace. Registered in DI at <code>Program.cs:89-90</code>.</p>
+<p>Notable architectural property the doc should capture: <code>EquidistantTimeSeriesData</code> <em>&quot;is never persisted as a whole but rather as an enumerable of concrete <code>TimeSeriesPointEntity</code> instances&quot;</em> — a record→many-rows fan-out that is unlike every other condition log record. <code>BendstepMeasurement</code> also gets a <strong>7-day</strong> retention versus 30 days for everything else (<code>appsettings.json:130</code>).</p>
+<p>None of this appears in the doc; the glossary entry for &quot;Trace&quot; is still <code>TODO</code>.</p>
+<h3 id="b3.graphql-subscriptions">B3. GraphQL subscriptions</h3>
+<p><code>AddSubscriptionType&lt;Subscription&gt;()</code> + <code>AddInMemorySubscriptions()</code> + <code>app.UseWebSockets()</code> (<code>Program.cs:150-151,198</code>). <code>DataStore</code> receives an <code>ITopicEventSender</code> and publishes on record receipt and insertion; topics are defined in <code>SubscriptionTopicNames</code>, with per-record-name specific topics (<code>src/Core/GraphQL/Subscription.cs:76-116</code>).</p>
+<p>The doc describes the GraphQL API as query/filter/sort/aggregate only. Push-based consumers are an interface the doc does not admit exists.</p>
+<h3 id="b4.the-nitro-licence-workaround-a-genuine-adr">B4. The Nitro licence workaround (a genuine ADR)</h3>
+<p><code>src/NitroAppStub</code> is an entire project whose reason to exist is a licence constraint: <code>ChilliCream.Nitro.App</code> ships under ChilliCream License 1.0, <em>&quot;which is not allowed by default by TRUMPF, so the licensed assembly must not ship&quot;</em> — but <code>HotChocolate.AspNetCore</code> hard-requires it at runtime. The fix is to exclude all assets of the real package plus its transitive <code>Yarp.ReverseProxy</code>, and substitute an in-repo stub with the same assembly name and version (<code>src/DataHubService/DataHubService.csproj:19-43</code>).</p>
+<p>This is exactly the kind of &quot;expensive, risky, non-obvious&quot; decision arc42 §9 exists for, and it carries a live maintenance obligation (<em>&quot;When updating HotChocolate.AspNetCore, we must re-check that the excluded versions and the stub still match&quot;</em>). Absent from the doc.</p>
+<h3 id="b5.port-based-endpoint-isolation">B5. Port-based endpoint isolation</h3>
+<p>The two Kestrel ports are documented, but not the mechanism that <strong>enforces</strong> separation: <code>EndpointFilterAttribute</code> on controllers/actions, <code>EndpointSelectionMiddleware</code> rejecting mismatches, and <code>PortDocumentFilter</code> making each port's Swagger page show only its own endpoints (<code>Program.cs:172-175,200</code>). This is a security-relevant concept (the Trumpf Analytics compatibility port must not expose DataHub endpoints), and it belongs in Crosscutting Concepts.</p>
+<h3 id="b6.there-is-no-security-concept-section-at-all">B6. There is no Security concept section at all</h3>
+<p>Nothing in the doc covers:</p>
+<ul>
+<li><code>DataGovernanceType</code>, mapped to a native PostgreSQL enum <code>data_governance</code> (<code>Program.cs:139</code>), and the <code>JsonData</code> vs <strong><code>SensitiveJsonData</code></strong> split in the GraphQL layer</li>
+<li>credential encryption at rest via <code>EncryptionHelper.Decrypt</code> for RabbitMQ user/password (<code>Program.cs:336,341</code>) — the doc mentions <code>Encrypt</code> under RabbitMQ settings but never as a security concept, and never mentions the <code>src/Encryptor</code> tool or <code>encryptAndWriteSecrets.ps1</code></li>
+<li>GraphQL abuse protection: <code>LimitMiddleware</code> / <code>UseLimitAttribute</code></li>
+<li>that both HTTP endpoints are plain <strong><code>http://0.0.0.0</code></strong> — no TLS, no authn/authz — with the firewall rule opened by the installer (<code>component.template.tcix</code>, <code>&lt;ConfigureFirewall&gt;</code>)</li>
+<li>that error responses are deliberately generic to avoid leaking exceptions (<code>Program.cs:243</code>)</li>
+</ul>
+<h3 id="b7.deployment-view-is-missing-the-entire-install-mechanism">B7. Deployment view is missing the entire install mechanism</h3>
+<p>The doc's deployment view stops at &quot;the UIF package is installed on the Main IPC&quot;. The <code>.tcix</code> component descriptor contains substantially more architecture:</p>
+<ul>
+<li><strong>Package dependencies:</strong> <code>DataHubPostgreSQL</code> (≥1.0.0 &lt;2.0.0), <code>SysParaUidRestInterface</code> (≥1.0.0 &lt;2.0.0), <code>DotnetV10</code>; and <code>Replaces</code> <strong><code>TrumpfAnalyticsMachine</code></strong> — i.e. the DataHub supersedes a previous product, which explains why port 12001 replicates the Trumpf Analytics endpoint</li>
+<li><strong>Install-time schema migration</strong> via <code>efbundle.exe</code>, each migration wrapped in a transaction so a power loss leaves the DB consistent and the installer merely needs re-running</li>
+<li><strong>Client-ID provisioning</strong> by <code>generateTrumpfAnalyticsClientId.ps1</code> patching <code>appsettings.json</code> in place</li>
+<li><strong>Service rename handling:</strong> the old <code>TAT.DataHubService</code> is stopped and removed on upgrade</li>
+<li><strong>Ops integrations:</strong> MINEX backup/restore scripts, <code>LogFileCollector</code> log locations, <code>MachineHealthMonitor</code> service descriptor</li>
+<li><strong>Firewall configuration</strong> for the REST API</li>
+</ul>
+<p><code>build/MachineHealthMonitorConfig/DataHub.json</code> also contains the crispest one-line purpose statement anywhere in the repo — <em>&quot;Collects machine data for subsequent analysis, visualization and upload&quot;</em> — which would improve §1.</p>
+<h3 id="b8.graphqlsourcegeneration-and-the-generated-graphql-surface">B8. <code>GraphQLSourceGeneration</code> and the generated GraphQL surface</h3>
+<p>An entire <code>src/</code> project generating the <code>*FilterInputType</code> / <code>*SortInputType</code> / <code>*AggregationResult</code> types from <code>[GenerateGraphQLQuery]</code> / <code>[SkipGraphQLQueryGeneration]</code> attributes. This is why the API surface scales automatically with new record types — an important adaptability mechanism, and directly relevant to quality scenario <strong>SC6</strong> (which currently claims a developer must hand-edit three things). Undocumented.</p>
+<hr />
+<h2 id="c.placeholders-and-internal-inconsistencies">C. Placeholders and internal inconsistencies</h2>
+<ol>
+<li><strong>Requirements Overview</strong> is <code>TODO</code> — §1.1, arguably the most important subsection, has no content beyond a Jira link (<code>BENDCAM-12431</code>).</li>
+<li><strong>Risks and Technical Debt</strong> is <code>TODO</code>, and its only entry (<em>&quot;Technical Debt: DataHub Code Base&quot;</em>) is marked <code>FIXED</code>. So §11 is effectively empty for a system with real known risks (see below).</li>
+<li><strong>Six ADRs have <code>Consequences: TODO</code></strong> — ADR1, ADR2, ADR3, ADR4, ADR5, ADR6. arc42 §9 is explicit that consequences must be listed, <em>&quot;not just the positive ones&quot;</em>.</li>
+<li><strong>Stakeholder table is mostly empty</strong> — roles Mechanics / Electrics / Testing / Service / PM / TechDoku have no names and no expectations; the Software row has names but no expectations. No contact column.</li>
+<li><strong>Quality-scenario numbering is broken.</strong> The Quality Tree references SC1, SC2, SC3, SC4, SC6, SC7 — but the scenario list defines SC1…SC6. <strong>SC7 is referenced and never defined; SC5 is defined and never referenced.</strong></li>
+<li><strong>SC1 contradicts the code.</strong> SC1 says <em>&quot;A RabbitMQ message must be acknowledged within 1 minute.&quot;</em> The consumer uses <code>autoAck: true</code> (<code>src/DataStorage/RabbitMQ/RabbitMQCommunication.cs:186</code>) — messages are acknowledged <strong>on delivery, before processing</strong>. The scenario is unfalsifiable as written and hides a real property (see the risk note below). SC1's response measure is also <code>TODO</code>.</li>
+<li><strong>&quot;Business Context&quot; and &quot;Technical Context&quot; are five <code>WORK IN PROGRESS</code> markers.</strong> Worse, two documented elements are <strong>not implemented</strong>: the <em>Remote Storage Service</em> (&quot;retrieve the actual data … via a REST API&quot;) and <em>Local Storage</em> retrieval-by-reference. The only outbound HTTP call in the entire code base is <code>MachineInfoManager</code> → ACT server (<code>src/Core/MachineInfoManager.cs:226</code>); the sole <code>IHttpClientFactory</code> consumer. Nothing downloads referenced payloads.</li>
+<li><strong><code>Hardware Assembly</code>, <code>Design Parameter</code>, <code>Important Documents and Numbers</code></strong> = &quot;Not applicable&quot;; <strong>glossary &quot;Trace&quot;</strong> = <code>TODO</code>; <strong>Meta Data Condition Log Records</strong> has two <code>TODO: LINK TO CONDITION L…</code>.</li>
+<li><strong>Runtime View has exactly one scenario</strong> (&quot;DataHub Start-up&quot;), and it names the three core services as <em>DataStorage / Cleanup / MetaDataExporter</em> whereas the actual hosted services are <code>RabbitMQStorageWorker</code>, <code>CleanupWorker</code>, <code>MetaDataExporterWorker</code> plus the Kestrel web host (<code>Program.cs:92-93,120</code>). Missing scenarios: record ingestion + cache flush, on-the-fly migration, cleanup execution, install-time migration, PostgreSQL-unavailable behaviour.</li>
+</ol>
+<hr />
+<h2 id="bugs-found-while-validating">Bugs found while validating</h2>
+<p>Not documentation problems — real defects surfaced by reading the code against the doc. Listed here because they are the most actionable output of the exercise.</p>
+<h3 id="multi-sensor-time-series-timestamps-are-wrong-highest-priority">1. Multi-sensor time-series timestamps are wrong ⚠️ (highest priority)</h3>
+<p><code>BendstepMeasurementBuilder.BuildAsync</code> initialises <code>currentTimestamp</code> <strong>outside</strong> the per-sensor loop and never resets it:</p>
+<pre><code class="language-csharp">DateTime currentTimestamp = startTimestamp;      // outside the sensor loop
+foreach (SensorValues sensorValues in sensorData)
+{
+    foreach (double? value in sensorValues.Values)
+    {
+        yield return new BendstepMeasurement { Timestamp = currentTimestamp, … };
+        currentTimestamp = currentTimestamp.Add(samplingDelta);   // never reset per sensor
+    }
+}
+</code></pre>
+<p>Each <code>SensorValues</code> is one sensor's series over the <em>same</em> time base — the record has one <code>StartTimestamp</code> and one <code>SamplingDelta</code>, and the composite PK <code>(Timestamp, BendstepStartId, SensorId)</code> explicitly permits sensors to share a timestamp. Every sensor should start at <code>StartTimestamp</code>.</p>
+<p>As written, sensor <em>n</em> is stamped starting where sensor <em>n−1</em> ended. Two sensors × 1000 samples at 1 ms ⇒ the second sensor is shifted <strong>one full second</strong> into the future; more sensors compound it. Nothing fails, nothing is logged, the data looks plausible — and any cross-sensor correlation is silently wrong. Invisible with a single sensor, which is presumably why it survived.</p>
+<p><em>Evidence:</em> <code>src/Core/TimeSeries/BendstepMeasurementBuilder.cs:46-62</code>.</p>
+<p><em>Fix:</em> move the initialisation inside the sensor loop; add a two-sensor unit test. Retention for <code>BendstepMeasurement</code> is 7 days, so the exposure window is short — argues for fixing fast rather than writing a data migration.</p>
+<h3 id="cached-records-are-lost-on-every-service-stop">2. Cached records are lost on every service stop</h3>
+<p><code>DataStore</code> passes <code>IHostApplicationLifetime.ApplicationStopping</code> as the cancellation token to every <code>SaveChangesAsync</code>. The final cache flush happens during <strong>DI disposal</strong> — after that token is already signalled. So the shutdown flush runs cancelled, throws, and <code>Cache&lt;T&gt;</code> logs <em>&quot;Data is lost. {@LostElements}&quot;</em> with the queue already drained. Up to <code>MaxCacheSize</code> records per cache, on every restart — and restarts are routine (config changes, upgrades, MINEX backup).</p>
+<p><em>Evidence:</em> <code>src/DataHubService/Program.cs:296,311</code>; <code>src/DataStorage/Caching/Cache.cs:315-316</code>.</p>
+<p><em>Fix:</em> use <code>ApplicationStopped</code>, or a separate CTS with a bounded drain timeout, for the shutdown flush. Best value-per-effort item here.</p>
+<h3 id="the-binary-copy-path-swallows-every-exception">3. The binary COPY path swallows every exception</h3>
+<p><code>CopyInsertAsync</code> catches all exceptions, rolls back, and neither logs nor rethrows — so <code>DataStore</code> believes the insert succeeded. An entire time-series payload can vanish with no log line, no <code>Error</code> record, no notification. The only write path in the system with zero failure visibility.</p>
+<p><em>Evidence:</em> <code>src/Core/EntityFrameworkCore/CopyInsertExtension.cs:63-66</code>.</p>
+<h3 id="endpointselectionmiddleware-fails-open-and-its-own-doc-comment-says-otherwise">4. <code>EndpointSelectionMiddleware</code> fails open — and its own doc comment says otherwise</h3>
+<p>The 404 is returned only when the endpoint <strong>carries</strong> an <code>EndpointFilterAttribute</code> whose name mismatches. Endpoints without the attribute pass on every port. <code>MapGraphQL()</code> and <code>MapSwagger()</code> add no such metadata, so <strong><code>/graphql</code> and <code>/swagger</code> are served on port 12001 as well as 31110</strong> — a client restricted to the Trumpf Analytics port by network policy still has unrestricted GraphQL read access to the whole database.</p>
+<p>The method's XML documentation explicitly states that an endpoint without the attribute receives a 404. The code does not do that.</p>
+<p><em>Evidence:</em> <code>src/DataHubService/Middleware/EndpointSelectionMiddleware.cs:52-58</code> vs the doc comment at <code>:35-38</code>.</p>
+<h3 id="a-hypertable-with-a-retain-rule-generates-invalid-sql">5. A hypertable with a <code>Retain</code> rule generates invalid SQL</h3>
+<p>For hypertables the statement is <code>SELECT drop_chunks(...);</code>; a <code>Retain</code> rule is then appended as <code>AND NOT EXISTS (...)</code>. Latent only because <code>BendstepMeasurement</code> currently has no <code>Retain</code>. Adding one breaks that table's cleanup permanently — logged as a warning and skipped every cycle thereafter.</p>
+<p><em>Evidence:</em> <code>src/Cleanup/CleanupManager.cs:275-319</code>.</p>
+<h3 id="drop_chunks-interval-uses-culture-sensitive-formatting">6. <code>drop_chunks</code> interval uses culture-sensitive formatting</h3>
+<p><code>DeleteOlderThanDays</code> is a <code>double</code> interpolated as <code>$&quot;INTERVAL '{...} days'&quot;</code> with no <code>InvariantCulture</code>. On a German-locale machine a fractional value like <code>0.5</code> renders <code>'0,5 days'</code> and the statement fails. Non-hypertable tasks are safe (parameterised).</p>
+<p><em>Evidence:</em> <code>src/Cleanup/CleanupManager.cs:277-282</code>.</p>
+<h3 id="the-aes-encryption-key-is-a-hardcoded-constant">7. The AES &quot;encryption&quot; key is a hardcoded constant</h3>
+<p><code>EncryptionHelper</code> uses one 16-byte AES key declared as a source literal — identical in every build, readable ASCII, shipped in <code>Core.dll</code>. The pipeline's &quot;encrypt secrets&quot; step is obfuscation only: anyone with the repo or the installed binaries can recover the RabbitMQ credentials. Cannot be rotated without a rebuild.</p>
+<p><em>Evidence:</em> <code>src/Core/EncryptionHelper.cs:11</code>.</p>
+<p><em>Fix:</em> at minimum stop calling it encryption. For real protection, Windows DPAPI (machine scope) needs no key distribution.</p>
+<hr />
+<h2 id="risk-the-document-should-be-recording-but-does-not">Risk the document should be recording but does not</h2>
+<p>Worth calling out separately, because it is a real property of the system rather than a documentation defect:</p>
+<p><strong>There is an at-most-once delivery window on the RabbitMQ path.</strong> Three facts compose:</p>
+<ol>
+<li><code>autoAck: true</code> — the broker considers the message delivered and discards it immediately (<code>RabbitMQCommunication.cs:186</code>)</li>
+<li>The exchange and queue are <strong>non-durable</strong> — <code>ExchangeDeclareAsync(exchange, type: Topic)</code> and <code>QueueDeclareAsync(exclusive: true, autoDelete: false)</code> both default <code>durable: false</code> (<code>:203,208</code>)</li>
+<li>Records are then buffered <strong>in memory</strong> by <code>Cache&lt;T&gt;</code>, flushed only when <code>MaxCacheSize</code> (default <strong>100</strong>) is exceeded or <code>CacheFlushDelaySeconds</code> (default <strong>60</strong>) elapses (<code>appsettings.json:55-56</code>)</li>
+</ol>
+<p>So a crash or forced shutdown can lose up to ~100 records or ~60 seconds of data per cache, with no broker-side redelivery. That may well be an accepted trade-off for machine telemetry — the doc's own ADR-11 reasoning (&quot;all the existing data in the DataHub also exists in the cloud&quot;) suggests it is. But it is an <strong>undocumented accepted risk</strong>, and §11 is the place for it.</p>
+<hr />
+<h2 id="what-the-document-gets-right">What the document gets right</h2>
+<p>Worth preserving as-is:</p>
+<ul>
+<li><strong>ADR-7 (migration-based tables)</strong> and <strong>ADR-9 (MongoDB → PostgreSQL)</strong> are exemplary — full context, honest negative consequences, explicit supersession chain (ADR3→ADR9, ADR8→ADR10). This is what the other six ADRs should look like.</li>
+<li><strong>ADR-11</strong> (drop existing machine data) records the human/organisational reasoning, including who was consulted. Hard to reconstruct later; valuable that it was written down.</li>
+<li><strong>The configuration reference</strong> is accurate and complete for every section that still exists, including non-obvious semantics: <code>MaxNumberConnectionRetries: -1</code> = infinite, <code>HostEnvironmentVariableName</code> presence-only check, jittered exponential backoff, the retention-condition DSL with its nested <code>And</code>/<code>Or</code> grammar. I verified this against <code>Program.cs</code> and <code>appsettings.json</code> — it matches.</li>
+<li><strong>RabbitMQ exchange/queue properties</strong> (Topic, non-durable, non-durable queue) — correct.</li>
+<li><strong>Error handling</strong> — errors logged <em>and</em> inserted as <code>Error</code> records is correct (<code>src/DataStorage/DataStore.cs:436</code>).</li>
+<li><strong>The <code>.NET 10</code> dev-environment statement</strong> — correct (<code>net10.0</code>).</li>
+<li><strong>The port rationale</strong> — 12001 replicating the Trumpf Analytics endpoint for drop-in compatibility, 31110 as the dedicated bending-machine DataHub port. Correct, and the <code>.tcix</code> <code>Replaces TrumpfAnalyticsMachine</code> confirms the intent.</li>
+<li><strong>Benchmark chapters</strong> are unusually rigorous (hardware, package versions, BenchmarkDotNet, indexed/non-indexed splits, CPU/memory/disk). Keep, but mark clearly as <em>historical evidence for ADR-9</em> so nobody reads the Legacy Comparison's TimescaleDB rejection as current.</li>
+</ul>
+<hr />
+<h2 id="recommended-fix-order">Recommended fix order</h2>
+<table>
+<thead>
+<tr>
+<th>#</th>
+<th>Action</th>
+<th>Why first</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Document TimescaleDB + add an ADR for it</td>
+<td>Doc describes the wrong storage engine (B1)</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Delete A1–A4 (file-system storage, file cleanup, file-based stats export, <code>ConditionLogFileWriter</code>)</td>
+<td>Actively false; a reader will act on it</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Add the time-series building blocks and their 7-day retention</td>
+<td>Newest feature, entirely absent (B2)</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Add ADRs: TimescaleDB, Nitro stub, GraphQL subscriptions, source generation, binary <code>COPY</code> bulk insert, port split</td>
+<td>§9 stops at ADR12 and predates all of these</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Write a Security crosscutting concept</td>
+<td>Currently no section at all (B6)</td>
+</tr>
+<tr>
+<td>6</td>
+<td>Fix SC5/SC7 numbering; rewrite SC1 against <code>autoAck</code> reality</td>
+<td>Internal contradiction (C5, C6)</td>
+</tr>
+<tr>
+<td>7</td>
+<td>Record the at-most-once/data-loss window in §11</td>
+<td>§11 is empty; this is the real risk</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Fill the six <code>Consequences: TODO</code> and the stakeholder table</td>
+<td>arc42 conformance (C3, C4)</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Rewrite <code>MaximumDatabaseSize</code> rationale without BSON</td>
+<td>Stale MongoDB text (A5)</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Either implement or remove Remote/Local reference retrieval from the context views</td>
+<td>Documents unbuilt behaviour (C7)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="note-on-the-in-repo-arc42">Note on the in-repo arc42</h2>
+<p>I am generating a <code>docs/</code> arc42 set in the repository from the code, following the official arc42 v9.0-EN markdown template (<code>01_introduction_and_goals.md</code> … <code>12_glossary.md</code>). It carries the corrections above. Note that <code>Documentation/Introduction.md</code> currently redirects readers to the Confluence page — once the in-repo version is authoritative, that pointer should be inverted, and the two should not be maintained in parallel.</p>
+<p>Related: [[DataHub]]</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#verdict">Verdict</a>
+  </li>
+  <li level="1">
+   <a href="#a.stale-or-factually-wrong">A. Stale or factually wrong</a>
+  </li>
+  <li level="2">
+   <a href="#a1.the-local-file-system-secondary-storage-concept-no-longer-exists">A1. The "Local File System" secondary-storage concept no longer exists</a>
+  </li>
+  <li level="2">
+   <a href="#a2.cleanup-does-not-delete-files-from-disk">A2. Cleanup does not delete files from disk</a>
+  </li>
+  <li level="2">
+   <a href="#a3.metadataexporter-writes-to-the-database-not-the-file-system">A3. MetaDataExporter writes to the database, not the file system</a>
+  </li>
+  <li level="2">
+   <a href="#a4.the-conditionlogfilewriter-configuration-section-is-gone">A4. The  configuration section is gone</a>
+  </li>
+  <li level="2">
+   <a href="#a5.maximumdatabasesize-is-described-in-mongodb-terms">A5.  is described in MongoDB terms</a>
+  </li>
+  <li level="2">
+   <a href="#a6.the-package-is-a.tciz-not-a.uif">A6. The package is a , not a </a>
+  </li>
+  <li level="2">
+   <a href="#a7.several-dedicated-rabbitmq-exchanges">A7. "Several dedicated RabbitMQ exchanges"</a>
+  </li>
+  <li level="1">
+   <a href="#b.missing-architecture">B. Missing architecture</a>
+  </li>
+  <li level="2">
+   <a href="#b1.timescaledb-is-the-production-storage-engine-and-is-undocumented">B1. TimescaleDB is the production storage engine — and is undocumented ⚠️</a>
+  </li>
+  <li level="2">
+   <a href="#b2.time-series-ingestion-and-storage">B2. Time-series ingestion and storage</a>
+  </li>
+  <li level="2">
+   <a href="#b3.graphql-subscriptions">B3. GraphQL subscriptions</a>
+  </li>
+  <li level="2">
+   <a href="#b4.the-nitro-licence-workaround-a-genuine-adr">B4. The Nitro licence workaround (a genuine ADR)</a>
+  </li>
+  <li level="2">
+   <a href="#b5.port-based-endpoint-isolation">B5. Port-based endpoint isolation</a>
+  </li>
+  <li level="2">
+   <a href="#b6.there-is-no-security-concept-section-at-all">B6. There is no Security concept section at all</a>
+  </li>
+  <li level="2">
+   <a href="#b7.deployment-view-is-missing-the-entire-install-mechanism">B7. Deployment view is missing the entire install mechanism</a>
+  </li>
+  <li level="2">
+   <a href="#b8.graphqlsourcegeneration-and-the-generated-graphql-surface">B8.  and the generated GraphQL surface</a>
+  </li>
+  <li level="1">
+   <a href="#c.placeholders-and-internal-inconsistencies">C. Placeholders and internal inconsistencies</a>
+  </li>
+  <li level="1">
+   <a href="#bugs-found-while-validating">Bugs found while validating</a>
+  </li>
+  <li level="2">
+   <a href="#multi-sensor-time-series-timestamps-are-wrong-highest-priority">1. Multi-sensor time-series timestamps are wrong ⚠️ (highest priority)</a>
+  </li>
+  <li level="2">
+   <a href="#cached-records-are-lost-on-every-service-stop">2. Cached records are lost on every service stop</a>
+  </li>
+  <li level="2">
+   <a href="#the-binary-copy-path-swallows-every-exception">3. The binary COPY path swallows every exception</a>
+  </li>
+  <li level="2">
+   <a href="#endpointselectionmiddleware-fails-open-and-its-own-doc-comment-says-otherwise">4.  fails open — and its own doc comment says otherwise</a>
+  </li>
+  <li level="2">
+   <a href="#a-hypertable-with-a-retain-rule-generates-invalid-sql">5. A hypertable with a  rule generates invalid SQL</a>
+  </li>
+  <li level="2">
+   <a href="#drop_chunks-interval-uses-culture-sensitive-formatting">6.  interval uses culture-sensitive formatting</a>
+  </li>
+  <li level="2">
+   <a href="#the-aes-encryption-key-is-a-hardcoded-constant">7. The AES "encryption" key is a hardcoded constant</a>
+  </li>
+  <li level="1">
+   <a href="#risk-the-document-should-be-recording-but-does-not">Risk the document should be recording but does not</a>
+  </li>
+  <li level="1">
+   <a href="#what-the-document-gets-right">What the document gets right</a>
+  </li>
+  <li level="1">
+   <a href="#recommended-fix-order">Recommended fix order</a>
+  </li>
+  <li level="1">
+   <a href="#note-on-the-in-repo-arc42">Note on the in-repo arc42</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></span>
+ <span class="next"><a href="../flux/index.html">Flux</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../res/index.js"></script>
+    <script src="../../res/files.js"></script>
+    <script src="../../res/site.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.18.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+</body>
+</html>

@@ -1,0 +1,322 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>xlate.md</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">Translation</a>
+   <ul>
+    <li><button class="tree blank"></button><a class="active" href="xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">Translation</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="xlate.html">xlate.md</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>xlate.md</h1>
+<p>Agentic coding manual for Vulcan's localization system: how UI text is stored, looked up at runtime, and pushed through the <code>XLate</code> tool to produce translated builds. Read this before adding, renaming, or moving any user-facing string.</p>
+<h2 id="the-big-picture">The big picture</h2>
+<p>No user-facing string is ever hard-coded as a naked literal in a widget. Instead:</p>
+<ol>
+<li>Every displayed phrase lives as a <code>Key, English text</code> line in a plain-text <strong>string table</strong> (<code>*.txt</code> under a <code>Res\Lang</code> folder).</li>
+<li>Code refers to the phrase only by its <strong>key</strong> — usually derived from an enum member (<code>EMsg.Foo</code>, <code>ECmd.Foo</code>, <code>EMasterMode.Foo</code>, ...) — and calls the <code>.X()</code> extension method to resolve it to display text in the current UI language.</li>
+<li>A separate offline tool, <strong><code>Tools\XLate</code></strong>, turns the English string tables into Excel workbooks for human translators, and turns the translators' completed workbooks back into per-language string tables (<code>Res\Lang\&lt;code&gt;\*.txt</code>).</li>
+</ol>
+<p>This indirection is what lets <code>LangUtils.Language</code> be flipped at runtime (e.g. in Settings) without touching any code — every <code>.X()</code> call just re-resolves against a different dictionary.</p>
+<p>There are <strong>two independent, parallel implementations</strong> of this mechanism, one per assembly, that don't share state:</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th><code>CUILib</code></th>
+<th><code>CAMLib</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Extension methods</td>
+<td><code>CUILib\Utils.cs:85-98</code> (<code>string.X()</code>, <code>int.X()</code>, <code>Enum.X()</code>, <code>Enum.X(args)</code>, <code>Type.X()</code>)</td>
+<td><code>CAMLib\Utils.cs:727-733</code> (<code>Enum.X()</code>, <code>Enum.X(args)</code>, <code>string.X()</code>)</td>
+</tr>
+<tr>
+<td>Lookup/cache class</td>
+<td><code>CUILib\LangUtils.cs</code> (<code>LangUtils</code>)</td>
+<td><code>CAMLib\Utils.cs:781</code> (<code>CAMLibLangUtils</code>)</td>
+</tr>
+<tr>
+<td>Language enum</td>
+<td><code>CUILib\LangUtils.cs:12</code> <code>ELangCode { EN, CN, KO, BR, ES, JP, DE, CS, FR }</code></td>
+<td><code>CAMLib\Utils.cs:775</code> <code>ELangCode { EN, UP, CN, CR, CZ, DE, DK, ES, FR, IT, PL, RU, SR, TR, _Last, KO, BR, JP, CS }</code> (larger, legacy superset)</td>
+</tr>
+<tr>
+<td>Where tables loaded from</td>
+<td>Loose files via <code>ResUtils.OpenRead(&quot;Lang{/code}/{table}.txt&quot;)</code></td>
+<td>Entries inside the packed <code>Vulcan.wad</code> zip, via <code>ZipResource</code></td>
+</tr>
+<tr>
+<td><code>Tables</code> wired up in</td>
+<td><code>Src\HomePage.cs:926</code></td>
+<td><code>Src\HomePage.cs:871</code></td>
+</tr>
+</tbody>
+</table>
+<p>Both are keyed the same way and follow the same text-file grammar, so from a &quot;how do I add a string&quot; standpoint you can treat them as one system — just be careful to add the key to the correct assembly's table list (see &quot;Adding a new string&quot; below).</p>
+<h2 id="key-format">Key format</h2>
+<ul>
+<li><strong>Enum-derived keys</strong>: <code>SomeEnum.Value.X()</code> looks up the key <code>&quot;SomeEnum.Value&quot;</code> (built by <code>Enum.ToS()</code>: <code>$&quot;{e.GetType().Name}.{e}&quot;</code>, e.g. <code>CAMLib\Utils.cs:721</code>, <code>CUILib\Utils.cs:80</code>). This is what almost all UI code uses — <code>EMsg.*</code> for messages/labels, <code>ECmd.*</code> for command/toolbar text, <code>EMasterMode.*</code> for the top-level mode tabs, etc. Example call sites: <code>Src\RunPage.cs:192,353,364,475,564</code>.</li>
+<li><strong>Numeric/string keys</strong>: <code>&quot;123&quot;.X()</code> or <code>id.X()</code> looks up a bare string key. Used for legacy dotted numeric error codes, e.g. <code>HMI_Error.txt</code> / <code>NC_Error.txt</code> use codes like <code>1.0.1</code>, <code>1.0.2</code> (<code>Src\Res\Lang\HMI_Error.txt:2-8</code>) rather than enum names.</li>
+<li><strong>Multi-segment keys (<code>~N</code>)</strong>: if the English value contains a literal <code>|</code>, e.g. <code>ECmd.DisplayDefaults, view defaults := User|Preset</code> (<code>Src\Res\Lang\LaserDB.txt:70</code>), XLate treats each <code>|</code>-delimited segment as independently translatable and synthesizes sub-keys <code>code~0</code>, <code>code~1</code>, ... (<code>Tools\XLate\XLate.cs:150-164, 296-298, 453-460</code>). The runtime lookup (<code>LangUtils</code>/<code>CAMLibLangUtils</code>) does <strong>not</strong> need to know about <code>~N</code> — it always looks up the whole value string for the base key; the splitting is purely an XLate authoring/translation-spreadsheet concern.</li>
+</ul>
+<h2 id="string-table-file-grammar-reslang.txt">String-table file grammar (<code>Res\Lang\*.txt</code>)</h2>
+<p>Parsed at runtime by <code>LangUtils.GetTranslationDict</code> (<code>CUILib\LangUtils.cs:26-47</code>) and <code>CAMLibLangUtils.GetTranslationDict</code> (<code>CAMLib\Utils.cs:789+</code>); parsed for spreadsheet generation by <code>XLate.MakeXlate</code>/<code>UseXlate</code> (<code>Tools\XLate\XLate.cs</code>).</p>
+<pre><code>Vulcan, 88                                        // Home.txt only: first line is &quot;ProductName, BuildNumber&quot;, used by XLate to stamp the spreadsheet title
+                                                   // blank lines are ignored
+// Home page ---------------------------------------------------------
+EMasterMode.Setup, Setup
+EMsg.Calibration, Calibration
+EMsg.RegistrationInfo, Registration will require an internet connection,+
+and will take less than a minute
+</code></pre>
+<p>(<code>Src\Res\Lang\Home.txt:1-19</code>, <code>Src\Res\Lang\Home.txt:221-222</code>)</p>
+<p>Rules:</p>
+<ul>
+<li><strong><code>Key, value</code></strong> — first comma splits key from value (<code>LANGDELIMITER = ','</code>); the rest of the line (after trimming) is the value.</li>
+<li><strong>Blank lines</strong> are ignored.</li>
+<li><strong><code>// comment</code> lines</strong> are ignored by the runtime loader, but are <em>not</em> just decoration to XLate: when generating a translator spreadsheet, a <code>//</code> line starts a new merged, greyed-out section-heading row (<code>Tools\XLate\XLate.cs:242-284</code>). If the comment ends with a <code>[imagecode]</code> (e.g. <code>// Editing a Bend-Op [0045]</code>), XLate embeds <code>Tools\XLate\Data\0\&lt;imagecode&gt;.png</code> into the sheet at that point, to show translators where the phrase appears in the UI.</li>
+<li><strong>Trailing <code>+</code></strong> continues the value onto the next line, joined with <code>\r\n</code> (runtime: <code>CUILib\LangUtils.cs:36-39</code>; authoring: <code>Tools\XLate\XLate.cs:288-291, 480-483</code>). A doubled <code>++</code> inserts a blank line between the joined segments (<code>CUILib\LangUtils.cs:37</code>).</li>
+<li><strong><code>// STOP</code></strong> as the first line of a file tells <code>XLate use</code>/<code>XLate make</code> to stop processing that file entirely — everything after (or the whole file, if it's the first line) is left untouched/untranslated (<code>Tools\XLate\XLate.cs:223, 240, 470</code>). Not currently used by any table shipped in this repo, but respect it if you see it.</li>
+<li><strong>Quoted values with embedded punctuation</strong>: legacy numeric-keyed tables (<code>HMI_Error.txt</code>, <code>NC_Error.txt</code>) wrap the value in <code>&quot;...&quot;</code> and use <code>:=</code> as an internal separator, e.g. <code>1.0.1,&quot;IPCOM.DLL: not enough ipc memory := &quot;</code> (<code>Src\Res\Lang\HMI_Error.txt:2</code>). Treat these as opaque legacy content — don't reformat them to the plain <code>Key, value</code> style used elsewhere.</li>
+</ul>
+<h3 id="conventions-translators-and-you-must-preserve-verbatim">Conventions translators (and you) must preserve verbatim</h3>
+<p>These are enforced/described by the XLate instructions sheet (<code>Tools\XLate\Data\Xlate.txt</code>) and checked in part by <code>XLate.TranslatePhrase</code> (<code>Tools\XLate\XLate.cs:383-420</code>):</p>
+<ul>
+<li><strong><code>{0}</code>, <code>{1}</code>, ...</strong> — <code>string.Format</code> placeholders. <code>Enum.X(args)</code> / <code>string.Format(e.X(), args)</code> (<code>CAMLib\Utils.cs:730</code>, <code>CUILib\Utils.cs:95</code>) fill these in at call time. XLate's <code>CountFmtSpecs</code> (<code>Tools\XLate\XLate.cs:423-429</code>) hard-fails (<code>Environment.Exit(-1)</code>) if the translated text doesn't have the same count as the English source — <strong>never add, remove, or reorder <code>{n}</code> placeholders when editing a value</strong>, only the surrounding words.</li>
+<li><strong><code>|</code> pipe separators</strong> — as above, split into independently-translated segments; the number of <code>|</code>-separated pieces must match between English and any translation.</li>
+<li><strong>Leading <code>_</code> on one letter of a word</strong> — marks a keyboard mnemonic/access-key (e.g. <code>_Export...</code>); the underlined/shortcut letter may move to a different letter in translation, but the underscore convention itself must be kept.</li>
+<li><strong><code>*word*</code></strong> — asterisks mark bold-rendered text in Flux's text renderer; preserve the asterisks around the (possibly re-ordered) translated word.</li>
+<li><strong>Line-count</strong> — multi-line (<code>+</code>-continued) values should keep roughly the same number of lines in translation for UI layout reasons (soft guideline, not enforced — the strict check for this in <code>TranslatePhrase</code> is present but disabled: <code>Tools\XLate\XLate.cs:409</code> <code>if (mismatch &amp;&amp; false)</code>).</li>
+</ul>
+<h2 id="where-the-tables-live-and-the-fallback-chain">Where the tables live, and the fallback chain</h2>
+<ul>
+<li>Base (English) table: <code>Res\Lang\&lt;Table&gt;.txt</code> (e.g. <code>Src\Res\Lang\Error.txt</code>).</li>
+<li>Per-language override: <code>Res\Lang\&lt;LangCode&gt;\&lt;Table&gt;.txt</code> (e.g. <code>Src\Res\Lang\DE\Error.txt</code>), only containing keys that have a translation; anything missing falls through.</li>
+<li><code>CAMLib</code> and <code>CUILib</code> each ship their <em>own</em> <code>Res\Lang</code> tree for their own tables (<code>CAMLib\Res\Lang\CAMLib.txt</code>, <code>CAMLib\Res\Lang\CN\CAMLib.txt</code>, <code>CUILib\Res\Lang\CUILib.txt</code>) — these get merged into <code>Src\Res\Lang\**</code> at package time (see &quot;Packing&quot; below); don't assume <code>Src\Res\Lang\CAMLib.txt</code> is hand-maintained independently from <code>CAMLib\Res\Lang\CAMLib.txt</code>.</li>
+<li>Runtime fallback order (<code>LangUtils.XLate</code>, <code>CUILib\LangUtils.cs:53-61</code>): look up the key in the <strong>current language's</strong> dict → if present, non-blank, and not <code>&quot;?&quot;</code>, use it → otherwise fall back to the <strong>English</strong> dict (<code>EnglishName</code>) → otherwise return the <strong>raw key string itself</strong> (so an untranslated/missing key is visibly wrong in the running UI instead of silently blank — if you see a literal <code>EMsg.Something</code> string on screen, it means the key has no entry in <em>any</em> language table).</li>
+<li>Currently only <strong>CN</strong> is actively round-tripped through the XLate pipeline (<code>Tools\XLate\XLate.cs:334</code> <code>sLangs = { &quot;CN&quot; }</code>), even though <code>Res\Lang</code> has long-since-generated folders for <code>BR, CN, CS, DE, ES, FR, JP, KO</code>. Treat those other language folders as previously-shipped snapshots, not actively maintained by the current <code>XLate make/use all</code> workflow.</li>
+</ul>
+<h2 id="adding-a-new-user-facing-string-agent-checklist">Adding a new user-facing string (agent checklist)</h2>
+<ol>
+<li>Add an enum member for it (or reuse an existing <code>EMsg</code>/<code>ECmd</code>/etc. value) in the appropriate C# file.</li>
+<li>Add <code>EYourEnum.NewValue, Your English text</code> as a new line to the correct <code>Res\Lang\&lt;Table&gt;.txt</code> — pick the table (<code>Create</code>, <code>Edit</code>, <code>Error</code>, <code>Home</code>, <code>LaserDB</code>, <code>Run</code>, <code>Settings</code>, <code>CAMLib</code>, <code>CUILib</code>, ...) that matches where the string is used, not just its topic; the runtime only finds a key if the file containing it is in that assembly's active <code>Tables</code> list (see next step).</li>
+<li>Confirm that table name is present in whichever <code>Tables</code> array actually gets used by the code path resolving this key: <code>CUILib.LangUtils.Tables</code> (set in <code>Src\HomePage.cs:926</code>) for <code>.X()</code> calls from <code>CUILib</code>/<code>Src</code>/general UI code, or <code>CAMLib.CAMLibLangUtils.Tables</code> (set in <code>Src\HomePage.cs:871</code>) for <code>.X()</code> calls made from <code>CAMLib</code> code. If you add a brand-new table file, add its name to both this array <strong>and</strong> <code>Tools\XLate\XLate.cs</code>'s <code>mStringTables</code>/<code>mStringTables2</code> arrays (<code>Tools\XLate\XLate.cs:504-505</code>) so it participates in future <code>XLate make/use</code> runs.</li>
+<li>Call <code>.X()</code> on the enum value (or the string key) at the point you display it — don't concatenate translated fragments; keep format placeholders/pipes as a single <code>.X(args)</code> call so XLate's structure is preserved.</li>
+<li>Make sure the <code>.txt</code> file ships: it must be under a <code>Res\Lang</code> folder that ends up packed into <code>Vulcan.wad</code> (see &quot;Packing&quot; below) — a new table file added only on disk without updating the packing lists (<code>makewad.bat</code>, <code>Tools\ShipVulcan\Program.cs</code> <code>BuildVulcanWad</code>) will build locally but won't ship.</li>
+<li>Leave the actual translation blank — that's what the <code>XLate</code> workflow (next section) is for. Don't hand-invent translated text into the per-language <code>.txt</code> files; those are machine-generated from the Excel roundtrip.</li>
+</ol>
+<h2 id="packing-into-the-shipped-app">Packing into the shipped app</h2>
+<ul>
+<li><code>CAMLibLangUtils</code> reads its tables from inside <strong><code>Vulcan.wad</code></strong> (a zip archive), not loose files (<code>ZipResource</code>, <code>CAMLib\Utils.cs:793-795</code>) — so a change to a <code>CAMLib</code>-table <code>.txt</code> file has no runtime effect until <code>Vulcan.wad</code> is rebuilt.</li>
+<li><code>Vulcan.wad</code> is assembled by merging the <code>Res\</code> folders of <code>Src</code>, <code>CUILib</code>, and <code>CAMLib</code> (later folders overwrite earlier ones on name clashes) — implemented twice, keep both in sync if you change the merge logic: <code>makewad.bat</code> (xcopy-based) and <code>Tools\ShipVulcan\Program.cs</code>'s <code>BuildVulcanWad</code> (<code>Tools\ShipVulcan\Program.cs:23-50</code>).</li>
+<li><code>CUILib.LangUtils</code>, by contrast, reads loose files via <code>ResUtils.OpenRead</code> — no wad rebuild needed for those tables during local dev, only for release packaging.</li>
+</ul>
+<h2 id="the-xlate-tool-itself">The <code>XLate</code> tool itself</h2>
+<p><code>Tools\XLate</code> is a <strong>separate legacy .NET Framework 4.5.2 WinExe</strong> (<code>Tools\XLate\XLate.csproj</code>, not part of <code>Src\Vulcan.sln</code>), driving Excel via COM interop (<code>Microsoft.Office.Interop.Excel</code>). It is a Windows+Excel-only developer tool, not something CI or a build agent without Excel installed can run. Entry point: <code>Tools\XLate\Program.cs</code>.</p>
+<pre><code>XLate make &lt;language&gt;      # build/update a translator-facing .xlsx from the current *.txt tables
+XLate make all             # ...for every language in XLate.cs's sLangs
+XLate use &lt;language&gt;       # apply a completed .xlsx back onto the per-language *.txt tables
+XLate use all
+XLate delpics &lt;language&gt;   # strip embedded help-images from a translated .xlsx before committing it
+</code></pre>
+<p>Full workflow (from the header comment in <code>Tools\XLate\XLate.cs:1-28</code>):</p>
+<ol>
+<li>During development, new strings are simply added to the English <code>Res\Lang\*.txt</code> files (as above) — no XLate step needed yet.</li>
+<li>Before shipping, <code>XLate use all</code> regenerates the foreign-language string tables from whatever translation spreadsheets currently exist. Newly-added English strings that have no translation yet just fall back to English in the shipped UI (per the runtime fallback chain above) — this is expected, not a bug.</li>
+<li><code>XLate make all</code> regenerates the translator spreadsheets: for each table, it reuses any translation already present for existing keys and adds new rows (English filled in, translation cell left blank and colored yellow) for anything new. Help-context screenshots (<code>// ... [code]</code> comments) are re-embedded as images at this point.</li>
+<li>The refreshed spreadsheets go out to translation agencies; when they come back (days/weeks later) they're copied into <code>Tools\XLate\Data\&lt;lang&gt;.xlsx</code>, and <code>XLate use all</code> is run again to regenerate string tables with the new translations — this cycle repeats until coverage is complete.</li>
+<li>Before committing an updated spreadsheet, run <code>XLate delpics &lt;lang&gt;</code> to strip embedded images (keeps the repo/LFS blob small — images are re-derived from <code>Tools\XLate\Data\0\*.png</code> + the <code>[code]</code> comment markers, not stored redundantly per-language).</li>
+</ol>
+<p>Spreadsheet layout produced by <code>make</code> (<code>Tools\XLate\XLate.cs:220-331</code>): one sheet per string table (name = table name uppercased), column <strong>B</strong> = key/code (never hand-edit), column <strong>D</strong> = English, column <strong>E</strong> = the target language, column <strong>A</strong> holds contextual screenshots. An <code>Instructions</code> sheet (from <code>Tools\XLate\Data\Xlate.txt</code>) and the conventions above (placeholders, pipes, mnemonics, bold-asterisks) are included for the translator's benefit.</p>
+<p><code>Tools\XLate\Data\exclusions.txt</code> lists literal English values that should never be translated (currently just axis names <code>X</code>, <code>Y</code>, <code>Z</code> — <code>Tools\XLate\XLate.cs:370-379</code>); both <code>make</code> and <code>use</code> skip these.</p>
+<h2 id="gotchas-for-agents">Gotchas for agents</h2>
+<ul>
+<li><strong>Hard-coded dev paths</strong>: <code>Tools\XLate\XLate.cs</code>/<code>Program.cs</code> hard-code <code>D:\Work\Vulcan\...</code> throughout (not <code>L:\...</code>, unlike the rest of the build tooling — see the repo's <code>CLAUDE.md</code> for the <code>L:</code>/<code>X:</code> mapped-drive convention). This looks like a stale/inconsistent path baked in from a different dev machine; don't &quot;fix&quot; it without checking with a human, and don't assume <code>XLate.exe</code> will run correctly against this checkout without adjusting those paths first.</li>
+<li><strong><code>CAMLib\Text\EN\...</code></strong> is referenced by <code>XLate.cs</code> (<code>mStringTables2</code> processing, comment at <code>Tools\XLate\XLate.cs:5-6</code>) but that directory does not exist anywhere in this repo — the real CAMLib tables live under <code>CAMLib\Res\Lang\</code>. That code path is effectively dead/no-op against the current layout; don't take the comment as an accurate map of where CAMLib strings live.</li>
+<li><strong>Two <code>Regenerate</code> concepts, don't confuse them</strong>: <code>TestRunner.Regenerate</code> (<code>Tools\TestLib\Testing.cs</code>, driven by <code>CTester -regenerate</code>) rebuilds golden <em>test</em> reference files and has nothing to do with translations. <code>XLate make</code>/<code>use</code> is the localization regeneration. Same word, unrelated systems.</li>
+<li><strong>Never hand-edit column B</strong> (the key) in a translator spreadsheet, and never rename/delete an existing enum-derived key casually — <code>XLate use</code> matches purely by that key string against the spreadsheet; a rename silently orphans the existing translation (it'll just fall back to English until someone re-sends the sheet).</li>
+<li>Column E in a freshly-made, not-yet-translated spreadsheet is highlighted yellow (<code>Tools\XLate\XLate.cs:311</code>) — that's the &quot;still needs a human translator&quot; signal; don't fill it in with your own guess translation.</li>
+</ul>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#the-big-picture">The big picture</a>
+  </li>
+  <li level="1">
+   <a href="#key-format">Key format</a>
+  </li>
+  <li level="1">
+   <a href="#string-table-file-grammar-reslang.txt">String-table file grammar ()</a>
+  </li>
+  <li level="2">
+   <a href="#conventions-translators-and-you-must-preserve-verbatim">Conventions translators (and you) must preserve verbatim</a>
+  </li>
+  <li level="1">
+   <a href="#where-the-tables-live-and-the-fallback-chain">Where the tables live, and the fallback chain</a>
+  </li>
+  <li level="1">
+   <a href="#adding-a-new-user-facing-string-agent-checklist">Adding a new user-facing string (agent checklist)</a>
+  </li>
+  <li level="1">
+   <a href="#packing-into-the-shipped-app">Packing into the shipped app</a>
+  </li>
+  <li level="1">
+   <a href="#the-xlate-tool-itself">The  tool itself</a>
+  </li>
+  <li level="1">
+   <a href="#gotchas-for-agents">Gotchas for agents</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="index.html">Translation</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>

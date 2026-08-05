@@ -1,0 +1,1758 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../../../res/bento.css">
+  <link rel="stylesheet" href="../../../res/site.css">
+  <link rel="stylesheet" href="../../../res/tree.css">
+  <link rel="stylesheet" href="../../../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>30ExternalInterfaceRequirements</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../../../img/logo.png" width="150" height="24" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../../../index.html">Agentic Spec</a></li>
+  <li><button class="tree blank"></button><a href="../../../6codereview/index.html">CodeReview Guidelines</a></li>
+  <li><button class="tree blank"></button><a href="../../../1structure/index.html">Folders Src</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../3iu/index.html">IU design</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../3iu/summary.html">Applying the TRUMPF UX Styleguide Skill in Agentic Coding</a></li>
+    <li><button class="tree blank"></button><a href="../../../3iu/skill.html">TRUMPF UX UI Community Design System — Quick Skill</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../../../4cra/index.html">CRA</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../8translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate.html">xlate.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/novodb/index.html">NovoDB</a></li>
+    <li><button class="tree blank"></button><a href="../../../8translation/xlate/index.html">XLATE</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../9x_md/index.html">MD for coding</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../9x_md/nori.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/pix.html">CLAUDE.md</a></li>
+    <li><button class="tree blank"></button><a href="../../../9x_md/flux.html">CLAUDE.md</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../2rules/index.html">Rules</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../../2rules/general/index.html">Prompting</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../../2rules/general/explain.html">CodeExplainer</a></li>
+      <li><button class="tree blank"></button><a href="../../../2rules/general/security.html">Security</a></li>
+     </ul>
+    </li>
+    <li><button class="tree blank"></button><a href="../../../2rules/flux/index.html">FLUX</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="../../index.html">8_Aiko</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="../../home.html">Home</a></li>
+    <li><button class="tree blank"></button><a href="../../readme.html">CAMBridge Team Notes</a></li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../datahub/index.html">DataHub</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../datahub/arc42bugreport.html">DataHub — Defects found during architecture documentation review</a></li>
+      <li><button class="tree blank"></button><a href="../../datahub/arc42validationreport.html">DataHub Arc42 — Validation against the code base</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../flux/index.html">Flux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../flux/flux.html">Flux</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/03systemscopeandcontext.html">03SystemScopeandContext</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/0510moduletools.html">0510ModuleTools</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/051modulefluxbase.html">051ModuleFluxBase</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/052modulefluxcore.html">052ModuleFluxCore</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/053modulefluxui.html">053ModuleFluxUI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/054modulefluxapp.html">054ModuleFluxApp</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/055modulefluxapi.html">055ModuleFluxAPI</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/056modulefluxconsole.html">056ModuleFluxConsole</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/057modulefluxmigrate.html">057ModuleFluxMigrate</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/058modulefluxhula.html">058ModuleFluxHula</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/059moduleoem.html">059ModuleOEM</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/10qualityrequirements.html">10QualityRequirements</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/11risksandtechnicaldebt.html">11RisksandTechnicalDebt</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/design/arc42/fluxarc42home.html">FluxARC42Home</a></li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/design/ideas/index.html">Ideas</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/design/ideas/rustbackendwebfrontend1to1autoport.html">RustBackendWebFrontend1to1AutoPort</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/design/ideas/wpfdecoupling/index.html">WPFDecoupling</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/referenceseamsandserviceinterfaces.html">ReferenceSeamsandServiceInterfaces</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step1removeuilogicandvalidation.html">Step1RemoveUILogicandValidation</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2aextractfluxlux.html">Step2aExtractFluxLux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2bfluxbasetonet10.html">Step2bFluxBasetonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2cfluxcoretonet10.html">Step2cFluxCoretonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2dfluxapitonet10.html">Step2dFluxAPItonet10</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/step2splitintodecoupledassemblies.html">Step2SplitintoDecoupledAssemblies</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/design/ideas/wpfdecoupling/wpfdecoupling.html">WPFDecoupling</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/devops/devops.html">DevOps</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsbompipeline.html">FluxSBOMPipeline</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/devops/fluxsonarcloudcipipeline.html">FluxSonarCloudCIPipeline</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/guide/fluxaiagentguide.html">FluxAIAgentGuide</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/01architecture.html">01Architecture</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/021subsystembcell.html">021SubsystemBCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/02subsystembend.html">02SubsystemBend</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/03apimaps.html">03APIMaps</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/04datamodelcatalog.html">04DataModelCatalog</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/05designpatterns.html">05DesignPatterns</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/06testsandgoldenpaths.html">06TestsandGoldenPaths</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/07guidedcodetours.html">07GuidedCodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/08camglossary.html">08CAMGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/09findandexplainexercises.html">09FindandExplainExercises</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/guide/onboarding/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/meetingnotes/index.html">MeetingNotes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/meetingnotes/20260730starmatikvisit.html">20260730StarmatikVisit</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/notes/refluxcompanionrepochecklist.html">ReFluxCompanionRepoChecklist</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/legacy/index.html">Legacy</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/devindex.html">DevIndex</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/fluxnotes.html">FluxNotes</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/legacy/worklogindex.html">WorkLogIndex</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/base/index.html">Base</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/base.html">Base</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/behaviors.html">Behaviors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/base/controls.html">Controls</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/dev/index.html">Dev</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1001fluxdevstyleguide.html">1001FluxDevStyleGuide</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1002buildingflux.html">1002BuildingFlux</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1003augoldencoding.html">1003AuGoldEncoding</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1004trekcommandline.html">1004TrekCommandLine</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1005bendareamodeling.html">1005BendAreaModeling</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1006curvesurfaceparametrization.html">1006CurveSurfaceParametrization</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1007ftexsystem.html">1007FTexSystem</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1008bendtools.html">1008BendTools</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1009fluxrepobranches.html">1009FluxRepoBranches</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1010extendingnet.html">1010ExtendingNet</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1011fluxdatafolder.html">1011FluxDatafolder</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1012ideasforfuture.html">1012IdeasForFuture</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1013thevdwgfileformat.html">1013TheVdwgFileFormat</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/dev/1014releasenotes.html">1014ReleaseNotes</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/ftex/index.html">FTex</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/ftex/ftex.html">FTex</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/tech/index.html">Tech</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2001machineidscheme.html">2001MachineIDScheme</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2002machineidtrumpf.html">2002MachineIDTrumpf</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2003machineidother.html">2003MachineIDOther</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2004thehexlanguage.html">2004TheHexLanguage</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2005fluxcommandfiles.html">2005FluxCommandFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2006bendinfoindxf.html">2006BendInfoInDXF</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2007curlfiles.html">2007CurlFiles</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2009fluxconfiguration.html">2009FluxConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2010fluxreleases.html">2010FluxReleases</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2011metacaminterface.html">2011MetaCAMInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2012boostinterface.html">2012BoostInterface</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2013fluxflavors.html">2013FluxFlavors</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2014fluxcommands.html">2014FluxCommands</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2015messageids.html">2015MessageIDs</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2016importbmc.html">2016ImportBMC</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2017cupgripperinfoindwg.html">2017CupGripperInfoInDwg</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2018airgaptables.html">2018AirGapTables</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2019foldtooltdata.html">2019FoldToolTDATA</a></li>
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/tech/2020importbcomponent.html">2020ImportBComponent</a></li>
+           </ul>
+          </li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="../../flux/notes/legacy/work/index.html">Work</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="../../flux/notes/legacy/work/3001bendaidcleanup.html">3001BendAidCleanup</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/notes/prreviews/index.html">PRReviews</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3597case47665multipickuppercornererrorhandling.html">PR #3597 — Case 47665: Improve error handling for multi pickup</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3634case44835acblasertraceonflexcell.html">PR #3634 — Case 44835: ACB Laser trace is not shown in simulation on FlexCell</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3645case48000overbendingwhenbaseplaneinsidemachine.html">PR #3645 — Case 48000: FlexCell: Overbending is missing when base plane is inside the machine</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3649case47961roundingregripduringbendwaypoints.html">PR #3649 — Case 47961: Change rounding for specific phases to reduce risk of collisions</a></li>
+          <li><button class="tree blank"></button><a href="../../flux/notes/prreviews/pr3654fanucaxisturnnumberwarning.html">PR #3654 — Case 47671: Display warning if robot axes are near a turn number change</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/reference/buildnumbermigrationgates.html">Buildnumbermigrationgates</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/dxfbendmaterialimportspecification.html">DXFBendMaterialImportSpecification</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/reference/externalresources.html">ExternalResources</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../flux/review/aireviewcommentconvention.html">AIReviewCommentConvention</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/backwardcompatibility.html">BackwardCompatibility</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/correctness.html">Correctness</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/designarchitecture.html">DesignArchitecture</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/donotraiseknowncautions.html">DoNotRaiseKnownCautions</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/errormessagesux.html">ErrorMessagesUX</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxcodereviewguidelines.html">FluxCodeReviewGuidelines</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/fluxidiomcheatsheet.html">FluxIdiomCheatSheet</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/formattingstyle.html">FormattingStyle</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/languageidiomsfluxhelpers.html">LanguageIdiomsFluxHelpers</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/namingdocumentation.html">NamingDocumentation</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/performance.html">Performance</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/processdiffhygiene.html">ProcessDiffHygiene</a></li>
+        <li><button class="tree blank"></button><a href="../../flux/review/testing.html">Testing</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../flux/security/index.html">Security</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../flux/security/analysis/index.html">Analysis</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../flux/security/analysis/craassessmentflux.html">CRAAssessmentFlux</a></li>
+         </ul>
+        </li>
+        <li><button class="tree blank"></button><a href="../../flux/security/specs/index.html">Specs</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../platformservicebend/index.html">PlatformServiceBend</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../platformservicebend/platformservicebend.html">PlatformServiceBend</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/design/index.html">Design</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/design/arc42/index.html">Arc42</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/01introductionandgoals.html">01IntroductionandGoals</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/02architectureconstraints.html">02ArchitectureConstraints</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/03contextandscope.html">03ContextandScope</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/04solutionstrategy.html">04SolutionStrategy</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/05buildingblockview.html">05BuildingBlockView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/06runtimeview.html">06RuntimeView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/07deploymentview.html">07DeploymentView</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/08crosscuttingconcepts.html">08CrosscuttingConcepts</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/09architecturedecisions.html">09ArchitectureDecisions</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/10qualityrequirementsandrisks.html">10QualityRequirementsandRisks</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/12glossary.html">12Glossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/design/arc42/readme.html">README</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/devops/index.html">DevOps</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/devops/devops.html">DevOps</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/guide/index.html">Guide</a>
+       <ul class="hide">
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../platformservicebend/guide/onboarding/index.html">Onboarding</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/00welcome.html">00Welcome</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/01buildandrun.html">01BuildandRun</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/02testinfrastructure.html">02TestInfrastructure</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/03domainglossary.html">03DomainGlossary</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/04codetours.html">04CodeTours</a></li>
+          <li><button class="tree blank"></button><a href="../../platformservicebend/guide/onboarding/05gotchas.html">05Gotchas</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/psbengineeringsummary202606to07.html">PSBEngineeringSummary202606to07</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/notes/versionoverview.html">VersionOverview</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../platformservicebend/review/index.html">Review</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fixbasicinfostaleversionreporting.html">FixbasicinfoStaleVersionReporting</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp177fluxphasecatalogregressiontest.html">FP177FluxPhaseCatalogRegressionTest</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp178fixinvalidopenapijson.html">FP178FixInvalidOpenAPIJSON</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp179filenamebasedoutputnames.html">FP179FileNameBasedOutputNames</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp180anglecorrectiontopressbeamsettings.html">FP180AngleCorrectiontoPressBeamSettings</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp182newlanteklicensing.html">FP182NewLantekLicensing</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp183bendmountsnullreffix.html">FP183BendMountsNullRefFix</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/fp185pickupdepositstackgrouping.html">FP185PickupDepositStackGrouping</a></li>
+        <li><button class="tree blank"></button><a href="../../platformservicebend/review/writebackendpointsgrippersregripstationsbackgauges.html">WriteBackEndpointsGrippersRegripStationsBackGauges</a></li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../reflux/index.html">ReFlux</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../reflux/reflux.html">ReFlux</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../rightangle/index.html">RightAngle</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../rightangle/rightangle.html">RightAngle</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../../trukit/index.html">TruKit</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../../trukit/ideas.html">Ideas</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuild.html">TecZoneBuild</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/teczonebuildgripperselectionignoredshipsringversion.html">TecZoneBuildGripperselectionignoredshipsringversion</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truarv.html">TruARV</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truhomo.html">TruHomo</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trujira.html">TruJira</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukit.html">TruKit</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trukitv5codereview20260716.html">TruKitV5 — Code Review</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trunc.html">TruNC</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutime.html">TruTime</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/trutimeasastandaloneapp.html">TruTime as a standalone app (and still a TruKit tool)</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truunlocker.html">TruUnlocker</a></li>
+      <li><button class="tree blank"></button><a href="../../trukit/truwork.html">TruWork</a></li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/notes/index.html">Notes</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/notes/codereview202607243independentopusreviewers.html">CodeReview202607243independentOpusreviewers</a></li>
+        <li><button class="tree blank"></button><a href="../../trukit/notes/trujirasyncfixplan20260713.html">TruJiraSyncFixPlan20260713</a></li>
+       </ul>
+      </li>
+      <li>
+       <button class="tree closed"></button>
+       <a href="../../trukit/reference/index.html">Reference</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../../trukit/reference/saptimebookingodatareference.html">SAPTimeBookingODataReference</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="../../trukit/reference/arv/index.html">ARV</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvformatvaluemapping.html">ARVFormatValueMapping</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesbendfactorsmaterials.html">ARVTablesBendFactorsMaterials</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesdiesspecialbendtools.html">ARVTablesDiesSpecialBendTools</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesholdersadaptersseatslists.html">ARVTablesHoldersAdaptersSeatsLists</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesmagnetsremovalstations.html">ARVTablesMagnetsRemovalStations</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablessuctiongrippers.html">ARVTablesSuctionGrippers</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvtablesuppertoolspunches.html">ARVTablesUpperToolsPunches</a></li>
+          <li><button class="tree blank"></button><a href="../../trukit/reference/arv/arvvaluelegendsconsolidated.html">ARVValueLegendsconsolidated</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree open"></button>
+     <a href="../index.html">TruTops</a>
+     <ul>
+      <li><button class="tree blank"></button><a href="../trutops.html">TruTops</a></li>
+      <li>
+       <button class="tree open"></button>
+       <a href="index.html">Requirements</a>
+       <ul>
+        <li><button class="tree blank"></button><a href="00indexreadingguide.html">00IndexReadingGuide</a></li>
+        <li><button class="tree blank"></button><a href="01visionscope.html">01VisionScope</a></li>
+        <li><button class="tree blank"></button><a href="02stakeholdersactors.html">02StakeholdersActors</a></li>
+        <li><button class="tree blank"></button><a href="03systemcontextarchitectureoverview.html">03SystemContextArchitectureOverview</a></li>
+        <li><button class="tree blank"></button><a href="04domainmodelglossary.html">04DomainModelGlossary</a></li>
+        <li><button class="tree blank"></button><a href="11frimportexportfileformats.html">11FRImportExportFileFormats</a></li>
+        <li><button class="tree blank"></button><a href="12frpartdatamanagement.html">12FRPartDataManagement</a></li>
+        <li><button class="tree blank"></button><a href="13frpunchingtops300.html">13FRPunchingToPs300</a></li>
+        <li><button class="tree blank"></button><a href="14frlasercuttingtops100.html">14FRLaserCuttingToPs100</a></li>
+        <li><button class="tree blank"></button><a href="15frtubeprofilemachiningtops400.html">15FRTubeProfileMachiningToPs400</a></li>
+        <li><button class="tree blank"></button><a href="16frbendingtops600.html">16FRBendingToPs600</a></li>
+        <li><button class="tree blank"></button><a href="17frnestingpalletizing.html">17FRNestingPalletizing</a></li>
+        <li><button class="tree blank"></button><a href="18frncgenerationmotionoptimization.html">18FRNCGenerationMotionOptimization</a></li>
+        <li><button class="tree blank"></button><a href="19frtoolsmachinesmaterialstechnology.html">19FRToolsMachinesMaterialsTechnology</a></li>
+        <li><button class="tree blank"></button><a href="20frproductionplanningprojects.html">20FRProductionPlanningProjects</a></li>
+        <li><button class="tree blank"></button><a href="21frvisualizationviewingplotting.html">21FRVisualizationViewingPlotting</a></li>
+        <li><button class="tree blank"></button><a href="22fruiframeworkdialogsinteractiongrit.html">22FRUIFrameworkDialogsInteractionGRIT</a></li>
+        <li><button class="tree blank"></button><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></li>
+        <li><button class="tree blank"></button><a class="active" href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a></li>
+        <li><button class="tree blank"></button><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></li>
+        <li><button class="tree blank"></button><a href="50constraintsassumptions.html">50ConstraintsAssumptions</a></li>
+        <li><button class="tree blank"></button><a href="60requirementstraceabilityindex.html">60RequirementsTraceabilityIndex</a></li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600bending/index.html">ToPs600Bending</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600bending/160bendingmoduleoverview.html">160BendingModuleOverview</a></li>
+          <li><button class="tree blank"></button><a href="tops600bending/161bendingnccodegeneration.html">161BendingNCCodeGeneration</a></li>
+          <li>
+           <button class="tree closed"></button>
+           <a href="tops600bending/cell7000/index.html">Cell7000</a>
+           <ul class="hide">
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/162cell7000overview.html">162Cell7000Overview</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/163cell7000machinecellconfiguration.html">163Cell7000MachineCellConfiguration</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/164cell7000robotprocessmotiondata.html">164Cell7000RobotProcessMotionData</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/165cell7000gripperhandlingtooling.html">165Cell7000GripperHandlingTooling</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/166cell7000regrippingstationspartflow.html">166Cell7000RegrippingStationsPartFlow</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/167cell7000bendautomationdatamodelreference.html">167Cell7000BendAutomationDataModelReference</a></li>
+            <li><button class="tree blank"></button><a href="tops600bending/cell7000/168cell7000ncvaluesdefaultsrelationships.html">168Cell7000NCValuesDefaultsRelationships</a></li>
+           </ul>
+          </li>
+         </ul>
+        </li>
+        <li>
+         <button class="tree closed"></button>
+         <a href="tops600cad/index.html">ToPs600CAD</a>
+         <ul class="hide">
+          <li><button class="tree blank"></button><a href="tops600cad/101caddetailgeometrycreationcommands.html">101CADDetailGeometryCreationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/102caddetaileditingtransformationcommands.html">102CADDetailEditingTransformationCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/103caddetaildimensioningcommands.html">103CADDetailDimensioningCommands</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/104caddetailattributessnappingselectionlifecycle.html">104CADDetailAttributesSnappingSelectionLifecycle</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/105caddetailparametricvariantsscripting.html">105CADDetailParametricVariantsScripting</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/106caddetailgeometrykernelalgorithms.html">106CADDetailGeometryKernelAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/107caddetailcontourarithmeticalgorithms.html">107CADDetailContourArithmeticAlgorithms</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/108caddetailcurveapproximationfourieranalysis.html">108CADDetailCurveApproximationFourierAnalysis</a></li>
+          <li><button class="tree blank"></button><a href="tops600cad/10frcadgeometrydrawingediting.html">10FRCADGeometryDrawingEditing</a></li>
+         </ul>
+        </li>
+       </ul>
+      </li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../../../5fluxcode/index.html">FluxCode</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="../../../5fluxcode/readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../../../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="../../index.html">8_Aiko</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="../index.html">TruTops</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="index.html">Requirements</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="30externalinterfacerequirements.html">30ExternalInterfaceRequirements</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>30ExternalInterfaceRequirements</h1>
+<hr />
+<h2 id="product-trutopscad-org-trumpf-title-external-interface-requirements-doc-30-external-interface-requirements-id-prefix-if-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-11-fr-import-export-file-formats-12-fr-part-data-management-18-fr-nc-generation-motion-optimization-23-fr-automation-scripting-integration-04-domain-model-glossary-tags-requirements-trutops-interfaces">product: trutopscad
+org: trumpf
+title: &quot;External Interface Requirements&quot;
+doc: &quot;30 - External Interface Requirements&quot;
+id-prefix: &quot;IF&quot;
+srs-standard: &quot;ISO/IEC/IEEE 29148:2018&quot;
+status: reverse-engineered-draft
+source: &quot;TruTopsCAD legacy source snapshot (files dated May 2024)&quot;
+related: [&quot;[[00 - Index &amp; Reading Guide]]&quot;, &quot;[[11 - FR - Import, Export &amp; File Formats]]&quot;, &quot;[[12 - FR - Part &amp; Data Management]]&quot;, &quot;[[18 - FR - NC Generation &amp; Motion Optimization]]&quot;, &quot;[[23 - FR - Automation, Scripting &amp; Integration]]&quot;, &quot;[[04 - Domain Model &amp; Glossary]]&quot;]
+tags: [requirements, trutops, interfaces]</h2>
+<h1 id="external-interface-requirements">External Interface Requirements</h1>
+<p>This document consolidates every external interface surfaced by the functional-area analyses ([[11 - FR - Import, Export &amp; File Formats]], [[12 - FR - Part &amp; Data Management]], [[14 - FR - Laser Cutting (ToPs 100)]], [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]], [[16 - FR - Bending (ToPs 600)]], [[17 - FR - Nesting &amp; Palletizing]], [[18 - FR - NC Generation &amp; Motion Optimization]], [[19 - FR - Tools, Machines, Materials &amp; Technology]], [[20 - FR - Production Planning &amp; Projects]], [[21 - FR - Visualization, Viewing &amp; Plotting]], [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]], [[23 - FR - Automation, Scripting &amp; Integration]]) and specifies them as <code>IF-NNN</code> requirements per ISO/IEC/IEEE 29148:2018 §9.5. Interfaces are grouped into data/file formats, database/PDM, machine/controller/NC, programmatic, and user/hardware. Domain terms are defined in [[04 - Domain Model &amp; Glossary]]; non-functional envelopes (throughput, compatibility, reliability) are in [[40 - Non-Functional Requirements]] and platform constraints in [[50 - Constraints &amp; Assumptions]].</p>
+<p>Notation: <strong>Direction</strong> is In (system reads/consumes), Out (system writes/produces), or In/Out (bidirectional). <strong>Priority</strong> follows the SRS convention — <em>Essential</em> (present in every shipped edition), <em>Conditional</em> (present only for a specific edition, licensed feature, or deployed peripheral), <em>Optional</em> (auxiliary/convenience or not fully realized in the snapshot).</p>
+<h2 id="overview-interface-inventory">1. Overview — Interface Inventory</h2>
+<table>
+<thead>
+<tr>
+<th>ID</th>
+<th>Interface</th>
+<th>Type</th>
+<th>Direction</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>IF-001</td>
+<td>DXF (AutoCAD exchange) import</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-002</td>
+<td>DXF export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-003</td>
+<td>DWG import via external DwgConverter.exe</td>
+<td>File format / tool</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-004</td>
+<td>IGES import</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-005</td>
+<td>IGES export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-006</td>
+<td>ME10 / MI (Macro Interchange) import incl. CAPT</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-007</td>
+<td>ME10 export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-008</td>
+<td>DSTV steel-construction NC import</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-009</td>
+<td>Native GEO / GEO_102 geometry file</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-010</td>
+<td>Native MI part/drawing/sheet files (versioned)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-011</td>
+<td>GMT geometry format + drawing-number stamping</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-012</td>
+<td>TAF archive/table input</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-013</td>
+<td>Raster image import (BMP/JPG/PNG/TIF/GIF) via ToPsVectorize</td>
+<td>File format / tool</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-014</td>
+<td>SVG export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-015</td>
+<td>XML calculation-info export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-016</td>
+<td>XCAD internal-exchange export</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-017</td>
+<td>STL 3D exchange (not supported — documented gap)</td>
+<td>File format</td>
+<td>—</td>
+</tr>
+<tr>
+<td>IF-018</td>
+<td>Tube 3D geometry (ROT / RMT) import</td>
+<td>File format</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-019</td>
+<td>RPF profile cross-section file</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-020</td>
+<td>TEO tube-exchange file (via PDM)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-021</td>
+<td>Tool definition XML import/export (WZG)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-022</td>
+<td>Nested-sheet layout file (TAF / TMT)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-023</td>
+<td>Nesting result / report files (ERG, XML report)</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-024</td>
+<td>Remnant-sheet geometry file (TRG)</td>
+<td>File format</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-025</td>
+<td>Programming-project (PPJ) XML file</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-026</td>
+<td>Nesting job file (.job)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-027</td>
+<td>SQL Server database access via ODBC</td>
+<td>Database</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-028</td>
+<td>Locally attached MDF / Access MDB database</td>
+<td>Database</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-029</td>
+<td>Parallel metric/inch databases</td>
+<td>Database</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-030</td>
+<td>DATADICT schema provisioning &amp; migration</td>
+<td>Database</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-031</td>
+<td>TRUMPF.NET PDM vault (OmAdapter / TiPdmFacet)</td>
+<td>PDM integration</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-032</td>
+<td>PDM CORBA naming service (pdmConvert)</td>
+<td>PDM / IPC</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-033</td>
+<td>PDM document browser</td>
+<td>PDM integration</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-034</td>
+<td>XML settings/document persistence (Xerces DOM)</td>
+<td>File format</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-035</td>
+<td>Foreign file attribute / catalog readers</td>
+<td>File formats</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-036</td>
+<td>Localization / text tables</td>
+<td>Database</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-037</td>
+<td>Controller-specific NC program output</td>
+<td>Machine / NC</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-038</td>
+<td>Data-driven NC post-processor (cycle/format tables)</td>
+<td>Database / NC</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-039</td>
+<td>Control-version compatibility (STEUERUNGSVERSIONEN)</td>
+<td>Machine / DB</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-040</td>
+<td>NcLink / DNC transfer service</td>
+<td>Machine / service</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-041</td>
+<td>Production-plan files (.LST/.TPP) + transfer path</td>
+<td>Machine / file</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-042</td>
+<td>Tube NC/APD output (ALP; ToPs400Export)</td>
+<td>Machine / file</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-043</td>
+<td>Setup-plan (Einrichteplan) HTML/PDF documents</td>
+<td>Document / Out</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-044</td>
+<td>Machine-simulation data export</td>
+<td>Simulation / file</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-045</td>
+<td>Loading/unloading &amp; sorting automation (LiftMaster/SortMaster/TrumaGrip)</td>
+<td>Machine / automation</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-046</td>
+<td>Central tool management (ITM / SW06)</td>
+<td>Software interface</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-047</td>
+<td>Embedded Python 2.5 interpreter + ToPs module</td>
+<td>Scripting runtime</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-048</td>
+<td>Startup customization script (TruTops_customize.py)</td>
+<td>Scripting hook</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-049</td>
+<td>ASM / MMK interpreter scripting bridge</td>
+<td>Command interpreter</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-050</td>
+<td>TruTopsGeoInterface binary geometry DLL (C-API)</td>
+<td>DLL / .NET</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-051</td>
+<td>Per-edition external component API (Xidl)</td>
+<td>IPC / managed-native API</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-052</td>
+<td>TruTops Fab (PPS/MES) adapter plugin</td>
+<td>MES integration</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-053</td>
+<td>CSV production-order exchange</td>
+<td>File-based integration</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-054</td>
+<td>Reproduction interop DLL (P/Invoke)</td>
+<td>.NET P/Invoke DLL</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-055</td>
+<td>Laser shop-floor programming interop DLL</td>
+<td>.NET P/Invoke DLL</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-056</td>
+<td>Standalone converter CLI (tc_conv.exe / pdmConvert.exe)</td>
+<td>Command-line tool</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-057</td>
+<td>Embeddable GeoViewer ActiveX/OCX + HTTP streaming</td>
+<td>Embedding interface</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-058</td>
+<td>SolidWorks tube add-in integration</td>
+<td>Application integration</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-059</td>
+<td>DB schema versioning source-control hooks (CommandLineHooks.xml)</td>
+<td>Build/DB tooling</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-060</td>
+<td>GRIT interactive UI framework</td>
+<td>User interface</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-061</td>
+<td>GRIT ↔ Qt front-end action bridge (tc_guiAdapter)</td>
+<td>User interface</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-062</td>
+<td>Multi-language &amp; unit-dependent UI</td>
+<td>User interface</td>
+<td>In/Out</td>
+</tr>
+<tr>
+<td>IF-063</td>
+<td>Keyboard / mouse interaction</td>
+<td>User interface / HID</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-064</td>
+<td>On-screen display backend (Windows GDI / X11)</td>
+<td>OS graphics API</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-065</td>
+<td>Windows GDI printing</td>
+<td>Print device</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-066</td>
+<td>HPGL / HPGL2 pen-plotter output</td>
+<td>Plot device</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-067</td>
+<td>Raster hardcopy (BMP / TIFF)</td>
+<td>Raster file</td>
+<td>Out</td>
+</tr>
+<tr>
+<td>IF-068</td>
+<td>Dongle / Wibu licensing &amp; password protection</td>
+<td>Hardware/software licence</td>
+<td>In</td>
+</tr>
+<tr>
+<td>IF-069</td>
+<td>GRIT configuration files (.org/.ini, colour/font/icon)</td>
+<td>Configuration files</td>
+<td>In</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="data-file-format-interfaces">2. Data &amp; File-Format Interfaces</h2>
+<p>Import/export of vector CAD exchange formats, TRUMPF-native geometry, raster images and the planning/machining artefact files. The shared converter framework (<code>convmain</code>: <code>readDrawingFromFile → doDrawingConversion → writeDrawingToFile</code>) underlies most of these; per-format handling lives in <code>tc_dxf</code>, <code>tc_iges</code>, <code>tc_mi</code>, <code>tc_me10</code>, <code>tc_dstv</code>, <code>tc_dbase</code>. See [[11 - FR - Import, Export &amp; File Formats]] for the functional behaviour and [[19 - FR - Tools, Machines, Materials &amp; Technology]] for tool-data files.</p>
+<h3 id="if-001-dxf-autocad-exchange-import">IF-001 — DXF (AutoCAD exchange) import</h3>
+<p><strong>Requirement:</strong> The system shall import AutoCAD DXF files into the Dbase drawing model, reading the full supported entity set (LINE, POLYLINE, LWPOLYLINE, CIRCLE, ARC, ELLIPSE, SPLINE, POINT, TEXT, MTEXT, INSERT, SOLID, HATCH, DIMENSION). Import shall be controllable per the DXF options in [[11 - FR - Import, Export &amp; File Formats]]: layer selection (with frozen/off layers ignored by default), single-block / single-layout selection, spline-conversion mode, text/font handling, Z-coordinate suppression (2D projection), and generation of an optional load-error report (<code>TcDxfLoadReport</code>, <code>.LOG</code>/HTML). DXF layers, having no native equivalent, shall be mapped onto element colour/line-style.
+<strong>Priority:</strong> Conditional (per-format Wibu/dongle + <code>DXF_PASSWORD</code>).
+<strong>Rationale:</strong> DXF is the dominant customer-geometry exchange format for sheet-metal CAD hand-off.
+<strong>Source:</strong> <code>tc_dxf</code>; <code>convmain</code> (<code>readDrawingFromFile</code>); <code>tec_cad.gritx</code> (<code>F_DxfLayerFinder</code>); FR-IMPEX-001..007.
+<strong>Verification:</strong> Test — import reference DXF files covering each entity type and each option combination; compare resulting Dbase geometry against expected drawings and inspect the generated load-error report.</p>
+<h3 id="if-002-dxf-export">IF-002 — DXF export</h3>
+<p><strong>Requirement:</strong> The system shall export the current drawing (or an individual nested sheet) to AutoCAD DXF via <code>tc_dxf</code>, preserving geometry, element colour/line-style mapping and text.
+<strong>Priority:</strong> Conditional (DXF licence).
+<strong>Rationale:</strong> Round-trip hand-off of geometry and nested layouts to external CAD.
+<strong>Source:</strong> <code>tc_dxf</code>; nesting DXF sheet export ([[17 - FR - Nesting &amp; Palletizing]]); FR-IMPEX.
+<strong>Verification:</strong> Test — export a known drawing to DXF, re-import into TruTops and a third-party CAD tool, and confirm geometric equivalence within tolerance.</p>
+<h3 id="if-003-dwg-import-via-external-dwgconverter.exe">IF-003 — DWG import via external DwgConverter.exe</h3>
+<p><strong>Requirement:</strong> The system shall import AutoCAD DWG files by invoking the external <code>DwgConverter.exe</code> (TRUMPF Utils) to produce a temporary DXF, which is then imported through the DXF path (IF-001). The converter shall be locatable either by a database-configured path (<code>DwgConverterDBCall</code>) or a fixed static path (<code>DwgConverterStaticCall</code>).
+<strong>Priority:</strong> Conditional (<code>DWG_PASSWORD</code> / Wibu licence; external tool present).
+<strong>Rationale:</strong> DWG is binary and cannot be parsed natively; conversion is delegated to a licensed external tool.
+<strong>Source:</strong> <code>tc_dwg/TcDwgConverter.h</code>; FR-IMPEX-008.
+<strong>Verification:</strong> Test — with the external converter installed, import a DWG file and confirm the temporary DXF is produced and consumed; verify a clear error when the converter is absent or unlicensed.</p>
+<h3 id="if-004-iges-import">IF-004 — IGES import</h3>
+<p><strong>Requirement:</strong> The system shall import IGES neutral CAD files (entity types 100/106/110/116/124/126/212/308/408) into the Dbase model via <code>ig_lese</code>.
+<strong>Priority:</strong> Conditional (<code>IGES_PASSWORD</code> / Wibu licence).
+<strong>Rationale:</strong> IGES is a common neutral CAD interchange format.
+<strong>Source:</strong> <code>tc_iges</code> (<code>ig_lese</code>); FR-IMPEX-009.
+<strong>Verification:</strong> Test — import IGES files exercising each supported entity type and confirm correct geometry.</p>
+<h3 id="if-005-iges-export">IF-005 — IGES export</h3>
+<p><strong>Requirement:</strong> The system shall provide IGES export via <code>ig_ausgabe</code>.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Bidirectional IGES exchange for downstream CAD.
+<strong>Source:</strong> <code>tc_iges</code> (<code>ig_ausgabe</code>); FR-IMPEX. <em>Note:</em> the <code>convmain</code> converter's <code>schreibe_iges_format()</code> is a stub (returns 0); the interactive Save-As-IGES path was not fully traced, so batch IGES export may be unavailable (open question, [[11 - FR - Import, Export &amp; File Formats]]).
+<strong>Verification:</strong> Test — export a drawing to IGES via the interactive path and re-import; confirm whether batch (converter) IGES output is functional or stubbed.</p>
+<h3 id="if-006-me10-mi-macro-interchange-import-incl.capt">IF-006 — ME10 / MI (Macro Interchange) import incl. CAPT</h3>
+<p><strong>Requirement:</strong> The system shall import HP ME10 MI files (versions 2.21 and 2.4) via <code>tc_mi</code>, including the CAPT mode that additionally converts punch single-stroke (Einzelhub) technology into Dbase attributes according to file-driven stroke-conversion rules (<code>TcMiStrokeConversionRule</code>).
+<strong>Priority:</strong> Conditional (<code>MI_PASSWORD</code> / Wibu licence).
+<strong>Rationale:</strong> ME10/MI is a legacy TRUMPF/HP CAD exchange format still received from customers and carrying punch technology.
+<strong>Source:</strong> <code>tc_mi</code>; FR-IMPEX-010; single-stroke rules ([[13 - FR - Punching (ToPs 300)]]).
+<strong>Verification:</strong> Test — import MI 2.21 and 2.4 files, and a CAPT file, verifying geometry and single-stroke attribute mapping.</p>
+<h3 id="if-007-me10-export">IF-007 — ME10 export</h3>
+<p><strong>Requirement:</strong> The system shall export drawings to HP ME10 format via <code>tc_me10</code>.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Interchange with ME10-based CAD systems.
+<strong>Source:</strong> <code>tc_me10</code>; FR-IMPEX. <em>Note:</em> the <code>convmain</code> converter's <code>schreibe_mi_format()</code> is a stub; MI/ME10 batch export may be limited (open question).
+<strong>Verification:</strong> Test — export to ME10 and re-import; confirm geometric equivalence.</p>
+<h3 id="if-008-dstv-steel-construction-nc-import">IF-008 — DSTV steel-construction NC import</h3>
+<p><strong>Requirement:</strong> The system shall import the 2D geometry of DSTV (Deutscher Stahlbau-Verband) NC files via <code>tc_dstv</code>/<code>db_dstv</code>, ignoring bending/powder information not relevant to sheet geometry.
+<strong>Priority:</strong> Conditional (<code>DSTV_PASSWORD</code> / Wibu licence).
+<strong>Rationale:</strong> DSTV files carry sheet-metal part geometry from steel-construction workflows.
+<strong>Source:</strong> <code>tc_dstv</code>; FR-IMPEX.
+<strong>Verification:</strong> Test — import DSTV files and confirm 2D contours are produced while non-geometry data is safely ignored.</p>
+<h3 id="if-009-native-geo-geo_102-geometry-file">IF-009 — Native GEO / GEO_102 geometry file</h3>
+<p><strong>Requirement:</strong> The system shall read and write TRUMPF-native GEO and GEO_102 geometry files as the internal storage/exchange format, through the on-disk parser in <code>tc_dbase</code> and the converter framework.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> GEO is the primary internal geometry persistence format across all editions.
+<strong>Source:</strong> <code>tc_dbase</code>; <code>convmain</code>; FR-IMPEX; FR-DATA-001/002/005.
+<strong>Verification:</strong> Test — save a drawing to GEO/GEO_102, reload it and confirm loss-free round-trip.</p>
+<h3 id="if-010-native-mi-partdrawingsheet-files-versioned">IF-010 — Native MI part/drawing/sheet files (versioned)</h3>
+<p><strong>Requirement:</strong> The system shall persist and load parts, drawings and nesting sheets as versioned TRUMPF-native MI-format text geometry files through <code>tc_mi</code>/<code>tc_dbase</code>, carrying a format version (<code>MI_Version_Nr</code>, e.g. 2.21/2.4) and, for sheets (Tafel), placement matrices. File access shall be transparent over the local file system or a PDM vault (IF-031).
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> The versioned native geometry file is the canonical persisted unit for parts, drawings and sheets ([[12 - FR - Part &amp; Data Management]]).
+<strong>Source:</strong> <code>tc_mi</code>, <code>tc_dbase</code>; FR-DATA-001..005.
+<strong>Verification:</strong> Test — save/load parts, drawings and sheets; verify version markers and backward-compatible reading of older versions.</p>
+<h3 id="if-011-gmt-geometry-format-and-drawing-number-stamping">IF-011 — GMT geometry format and drawing-number stamping</h3>
+<p><strong>Requirement:</strong> The system shall read and write the GMT (ToPs 1000) geometry format and shall be able to stamp its drawing/part number, so the GMT drawing number can serve as the through-going part identifier in the Blechfabrik workflow.
+<strong>Priority:</strong> Conditional (GMT-based workflows / ToPs 1000 interchange).
+<strong>Rationale:</strong> GMT links geometry to the part identity used across the sheet-metal factory.
+<strong>Source:</strong> <code>tc_dbase</code>; converter (<code>getNextGrafikFormatId</code>); FR-IMPEX; FR-PLAN.
+<strong>Verification:</strong> Test — import a GMT, stamp a drawing number, re-export and confirm the number is persisted and retrievable.</p>
+<h3 id="if-012-taf-archivetable-input">IF-012 — TAF archive/table input</h3>
+<p><strong>Requirement:</strong> The system shall accept the TAF (TRUMPF archive/table) format as a converter input, applying the required TAF→DXF special-export path where needed.
+<strong>Priority:</strong> Conditional.
+<strong>Rationale:</strong> TAF is an accepted converter input in batch conversion.
+<strong>Source:</strong> <code>convmain</code> (<code>TeGrafikFormat</code>); FR-IMPEX. <em>Note:</em> TAF record structure was only observed at dispatch level.
+<strong>Verification:</strong> Test — convert a TAF input to a supported output and confirm geometry.</p>
+<h3 id="if-013-raster-image-import-via-topsvectorize">IF-013 — Raster image import via ToPsVectorize</h3>
+<p><strong>Requirement:</strong> The system shall import raster images (BMP, JPG, PNG, TIF, GIF) by invoking the external <code>ToPsVectorize.exe</code> (path from <code>TOPS_VECTORIZE_PATH</code>), which vectorizes the pixel image and returns GEO geometry for loading into the drawing model.
+<strong>Priority:</strong> Conditional (external tool present + licence).
+<strong>Rationale:</strong> Enables reconstruction of vector geometry from scanned/photographed parts.
+<strong>Source:</strong> <code>tc_cad/cad_vectorize</code>; <code>TOPS_VECTORIZE_PATH</code>; FR-IMPEX. <em>Note:</em> <code>tc_scan</code>/<code>tc_bitm</code> are unrelated (parting-cut skeleton / nesting collision bitmaps).
+<strong>Verification:</strong> Test — with ToPsVectorize installed, import each raster type and confirm vector geometry is produced; verify a clear error when the tool is missing.</p>
+<h3 id="if-014-svg-export">IF-014 — SVG export</h3>
+<p><strong>Requirement:</strong> The system shall export drawings to SVG (Scalable Vector Graphics) with configurable stroke width, via <code>db_svg</code>, and the embeddable viewer shall support SVG export.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Web/document-friendly vector output.
+<strong>Source:</strong> <code>db_svg</code>; <code>tc_viewer</code>; FR-IMPEX; FR-VIS.
+<strong>Verification:</strong> Test — export SVG and render it in a standard browser; confirm geometry and stroke width.</p>
+<h3 id="if-015-xml-calculation-info-export">IF-015 — XML calculation-info export</h3>
+<p><strong>Requirement:</strong> The system shall export contour calculation information as XML for the ToPs 1000 calculation/costing tool.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Feeds downstream costing.
+<strong>Source:</strong> <code>convmain</code>; FR-IMPEX.
+<strong>Verification:</strong> Test — export XML calculation info for a known part and validate structure/content against the consuming tool.</p>
+<h3 id="if-016-xcad-internal-exchange-export">IF-016 — XCAD internal-exchange export</h3>
+<p><strong>Requirement:</strong> The system shall export the Dbase model to the internal TRUMPF XCAD exchange format via <code>db2XCad</code>/<code>exportDbaseToXCad</code>.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Internal TRUMPF component interchange.
+<strong>Source:</strong> <code>db2XCad</code>; FR-IMPEX. <em>Note:</em> XCAD record structure observed only at dispatch level.
+<strong>Verification:</strong> Test — export XCAD and confirm the consuming component accepts it.</p>
+<h3 id="if-017-stl-3d-exchange-not-supported-documented-gap">IF-017 — STL 3D exchange (not supported — documented gap)</h3>
+<p><strong>Requirement:</strong> The system does not provide stereolithography STL 3D mesh import or export. The module named <code>tc_stl</code> is <em>Stanz-Laser</em> (punch-laser combi) technology, not STL geometry; no true 3D STL file interface exists in the snapshot. Any future STL requirement shall be treated as a new interface.
+<strong>Priority:</strong> Optional (documented absence).
+<strong>Rationale:</strong> Recorded to prevent misattribution of <code>tc_stl</code> and to flag the coverage gap for the interface owner.
+<strong>Source:</strong> <code>tc_stl/stl_tech</code> (punch-laser technology); FR-IMPEX open question.
+<strong>Verification:</strong> Inspection — confirm no STL reader/writer symbols exist and <code>tc_stl</code> contents are punch-laser technology.</p>
+<h3 id="if-018-tube-3d-geometry-rot-rmt-import">IF-018 — Tube 3D geometry (ROT / RMT) import</h3>
+<p><strong>Requirement:</strong> The system shall import tube 3D surface files (<code>.rot</code>) and raw-material tube files (<code>.rmt</code>) and triangulate them for display (<code>roh_to3d</code>); RMT files shall carry material, wall thickness and section dimensions used to match or create a tube technology record.
+<strong>Priority:</strong> Conditional (ToPs Tube edition).
+<strong>Rationale:</strong> Tube programming starts from imported 3D tube/stock geometry ([[15 - FR - Tube &amp; Profile Machining (ToPs 400)]]).
+<strong>Source:</strong> <code>tc_rohr/roh_to3d</code>; FR-TUBE-001/006.
+<strong>Verification:</strong> Test — import ROT and RMT files and confirm the 3D model and derived stock data.</p>
+<h3 id="if-019-rpf-profile-cross-section-file">IF-019 — RPF profile cross-section file</h3>
+<p><strong>Requirement:</strong> The system shall read and write RPF profile files describing open or closed cross-section geometry, with open/closed validation, via <code>roh_rpf</code>.
+<strong>Priority:</strong> Conditional (ToPs Tube edition).
+<strong>Rationale:</strong> RPF backs the profile library for tube/profile machining.
+<strong>Source:</strong> <code>tc_rohr/roh_rpf</code> (<code>TeTubeRpfError</code>); FR-TUBE-009/010.
+<strong>Verification:</strong> Test — create, save, reload and modify an RPF profile; confirm open/closed validation rejects invalid geometry.</p>
+<h3 id="if-020-teo-tube-exchange-file-via-pdm">IF-020 — TEO tube-exchange file (via PDM)</h3>
+<p><strong>Requirement:</strong> The system shall exchange grouped tube contours with partner tube-CAD systems through TEO files, opened/saved via the PDM browser (<code>roh_teo</code>, <code>openSaveTeoBrowser</code>).
+<strong>Priority:</strong> Conditional (ToPs Tube + PDM).
+<strong>Rationale:</strong> TEO is the tube-contour interchange with partner CAD.
+<strong>Source:</strong> <code>tc_rohr/roh_teo</code>; FR-TUBE.
+<strong>Verification:</strong> Test — export and re-import a TEO file through the PDM browser and confirm contour groups.</p>
+<h3 id="if-021-tool-definition-xml-importexport-wzg">IF-021 — Tool definition XML import/export (WZG)</h3>
+<p><strong>Requirement:</strong> The system shall import and export tool definitions as XML (<code>TcWzgImport</code>/<code>TcWzgExport</code>, keys <code>TcWzgXmlKeys</code>) into/from the WZG3 tool database.
+<strong>Priority:</strong> Conditional (tool-management workflows).
+<strong>Rationale:</strong> Enables portable exchange of tool catalogues ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Source:</strong> <code>tc_wzg</code>; FR-TECH.
+<strong>Verification:</strong> Test — export a tool set to XML, re-import into a clean database and confirm equivalence.</p>
+<h3 id="if-022-nested-sheet-layout-file-taf-tmt">IF-022 — Nested-sheet layout file (TAF / TMT)</h3>
+<p><strong>Requirement:</strong> The system shall write and read nested-sheet layout files — TAF (sheet geometry) and TMT (sheet geometry with machining) — as the artefacts exchanged between nesting, machining and NC generation, and shall track their currency (a stale TMT/NC reference shall be invalidated when the underlying sheet changes).
+<strong>Priority:</strong> Essential (for machining editions).
+<strong>Rationale:</strong> TAF/TMT are the central sheet artefacts flowing from nesting to NC ([[17 - FR - Nesting &amp; Palletizing]], [[20 - FR - Production Planning &amp; Projects]]).
+<strong>Source:</strong> <code>tc_nest</code>; <code>tc_programmierProjekt</code> (<code>TcPpjRohling</code>); FR-NEST, FR-PLAN.
+<strong>Verification:</strong> Test — nest a sheet, generate a TMT, alter the sheet, and confirm stale references are invalidated.</p>
+<h3 id="if-023-nesting-result-report-files-erg-xml-report">IF-023 — Nesting result / report files (ERG, XML report)</h3>
+<p><strong>Requirement:</strong> The system shall produce nesting result/report files: a configurable <code>.erg</code> result file (order/part/sheet/summary/remnant lines) and a structured, localizable XML report (translations + XSL stylesheets).
+<strong>Priority:</strong> Conditional (nesting editions).
+<strong>Rationale:</strong> Documents utilization and outcomes of a nesting run.
+<strong>Source:</strong> <code>tc_nest/XMLReport</code> (<code>nestresult-translations.xml</code>); FR-NEST.
+<strong>Verification:</strong> Test — run a nest and confirm the <code>.erg</code> and XML report contents against the layout.</p>
+<h3 id="if-024-remnant-sheet-geometry-file-trg">IF-024 — Remnant-sheet geometry file (TRG)</h3>
+<p><strong>Requirement:</strong> The system shall generate remnant/offcut sheet geometry as <code>.trg</code> files from unused sheet area, reusable as nesting stock, and shall deduct consumed sheets/remnants from material stock (Abbuchen).
+<strong>Priority:</strong> Conditional (nesting editions).
+<strong>Rationale:</strong> Remnant management improves material utilization.
+<strong>Source:</strong> <code>tc_nest</code>; FR-NEST; stock deduction ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Verification:</strong> Test — nest with remnant creation enabled and confirm a valid <code>.trg</code> is written and re-nestable.</p>
+<h3 id="if-025-programming-project-ppj-xml-file">IF-025 — Programming-project (PPJ) XML file</h3>
+<p><strong>Requirement:</strong> The system shall persist a programming project as a versioned XML <code>.ppj</code> document (PPJ_FOLDER, versions 1.0–5.0) via <code>TcArbeitsMappe</code> and keys <code>TcPpjXmlKeys.h</code>, binding an order to machine, material, sheets, parts and dynamic tools. On open it shall reject an incompatible document version and verify machine/material consistency.
+<strong>Priority:</strong> Conditional (ToPs 100/400/Nest planning).
+<strong>Rationale:</strong> The PPJ is the workbook that ties one order to its production resources ([[20 - FR - Production Planning &amp; Projects]]).
+<strong>Source:</strong> <code>tc_programmierProjekt</code>; FR-PLAN-003/005/006/007.
+<strong>Verification:</strong> Test — create/open PPJ files of each version; confirm version rejection and consistency checks.</p>
+<h3 id="if-026-nesting-job-file.job">IF-026 — Nesting job file (.job)</h3>
+<p><strong>Requirement:</strong> The system shall create, open and join nesting-order job files (<code>.job</code> / Schachtelauftrag) grouping orders and sheets, via <code>nest_job</code> / <code>asmNestingJob</code>.
+<strong>Priority:</strong> Conditional (nesting editions).
+<strong>Rationale:</strong> The job file is the unit exported to production and the source for PPJ creation.
+<strong>Source:</strong> <code>tc_nest</code>; FR-PLAN; FR-NEST.
+<strong>Verification:</strong> Test — create, join and reopen job files and confirm order/sheet contents.</p>
+<hr />
+<h2 id="database-pdm-interfaces">3. Database &amp; PDM Interfaces</h2>
+<p>The relational database holds technology/config, the system rule-set (Regelwerk), order/stock inventory and multilingual text; the schema is defined by the DATADICT data dictionary. File access to geometry is abstracted over the local file system or the TRUMPF.NET PDM vault by the <code>OmAdapter</code> facade. See [[12 - FR - Part &amp; Data Management]] and [[19 - FR - Tools, Machines, Materials &amp; Technology]].</p>
+<h3 id="if-027-sql-server-database-access-via-odbc">IF-027 — SQL Server database access via ODBC</h3>
+<p><strong>Requirement:</strong> The system shall access its relational databases over ODBC to Microsoft SQL Server, using a DSN provisioned by the deployment scripts (<code>Databases/createSqlServerOdbcEntry.bat</code>). The multi-schema database comprises Common, CAD, Punch, Laser, Tube, TubeCAD, Bend, BendGripperConf, Nest, Calc, Text, DATADICT, Logging and Updates schemas (each with parallel <code>_inch</code> schemas where applicable). Access is via <code>tc_dbif</code>/<code>tc_dbase</code> and the GRIT <code>mini_sql()</code> construct.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> All technology, rule-set, order, stock and localization data live in the relational database.
+<strong>Source:</strong> <code>Databases/SQLServerDatabase/Tables/*</code>; <code>tc_dbif</code>; FR-DATA-011..; FR-TECH.
+<strong>Verification:</strong> Test — connect via the provisioned DSN, read/write representative tables in each schema, and confirm transactions.</p>
+<h3 id="if-028-locally-attached-mdf-access-mdb-database">IF-028 — Locally attached MDF / Access MDB database</h3>
+<p><strong>Requirement:</strong> The system shall support running the databases as locally attached SQL Server MDF files (attach/detach via <code>AttachSqlServerLocalMdb.bat</code> / <code>DetachSqlServerLocalMdb.bat</code>) for single-station installations, in addition to a networked SQL Server. (Historically an Access MDB variant is referenced; the shipped path is SQL Server local MDF.)
+<strong>Priority:</strong> Conditional (single-station deployment).
+<strong>Rationale:</strong> Supports stand-alone/offline installations without a database server.
+<strong>Source:</strong> <code>Databases/*.bat</code>; FR-DATA-011.
+<strong>Verification:</strong> Test — attach a local MDF, run the application against it, and confirm equivalent behaviour to the networked case.</p>
+<h3 id="if-029-parallel-metricinch-databases">IF-029 — Parallel metric/inch databases</h3>
+<p><strong>Requirement:</strong> The system shall maintain parallel metric and inch databases (<code>*_inch</code> schemas / <code>InchPort</code>) and provide unit-aware configuration access, with a porting/conversion path between representations (logged in <code>Logging.PortierungLog</code>).
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> TruTops serves both metric and imperial markets from equivalent data ([[04 - Domain Model &amp; Glossary]]).
+<strong>Source:</strong> <code>Databases/DB_Port_SqlSrv*.ps1</code>; <code>Logging.PortierungLog</code>; FR-DATA.
+<strong>Verification:</strong> Test — switch unit mode and confirm the corresponding schema is read; run a porting job and inspect the log.</p>
+<h3 id="if-030-datadict-schema-provisioning-migration">IF-030 — DATADICT schema provisioning &amp; migration</h3>
+<p><strong>Requirement:</strong> The system shall define its physical schema through the DATADICT data dictionary (<code>DATADICT_SPALTEN</code>: column type, units, min/max, regex, uniqueness), auto-provision the physical tables per technology schema, and perform per-schema DB versioning and in-place migration/upgrade (<code>DB_VERSION</code>, <code>DATADICT_ProductVersion</code>), rejecting or upgrading out-of-range schema versions.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> DATADICT drives schema creation, validation and controlled migration on install/upgrade.
+<strong>Source:</strong> <code>Databases/SQLServerDatabase/Tables/DATADICT.*</code>; FR-DATA.
+<strong>Verification:</strong> Test — provision a fresh schema from DATADICT and run a migration between two versions; confirm version markers.</p>
+<h3 id="if-031-trumpf.net-pdm-vault-omadapter-tipdmfacet">IF-031 — TRUMPF.NET PDM vault (OmAdapter / TiPdmFacet)</h3>
+<p><strong>Requirement:</strong> The system shall access parts, drawings, sheets and related files transparently over either the local file system or a TRUMPF.NET PDM vault, via the <code>OmAdapter</code> object-manager facade and <code>TiPdmFacet</code> (<code>tc_util/pdmUtilities</code>). PDM-hosted files shall be readable/writable through the same geometry I/O paths as file-system files.
+<strong>Priority:</strong> Conditional (PDM deployment).
+<strong>Rationale:</strong> Enterprise deployments manage geometry in a PDM vault rather than bare files.
+<strong>Source:</strong> <code>tc_util/pdmUtilities</code>; FR-DATA-007. <em>Note:</em> the PDM server contract (check-in/out, versioning, locking) lives in framework code (<code>OmAdapter.dll</code>) outside the snapshot; PDM locking vs DB <code>LOCKSTATE</code> may be distinct (open question).
+<strong>Verification:</strong> Test — with PDM configured, open and save geometry through the vault and confirm parity with file-system access.</p>
+<h3 id="if-032-pdm-corba-naming-service-pdmconvert">IF-032 — PDM CORBA naming service (pdmConvert)</h3>
+<p><strong>Requirement:</strong> The PDM-connected converter (<code>pdmConvert.exe</code>) shall connect to the PDM system through a CORBA naming service, addressed by naming-service specification (host:port), service name and cache path, and route all file access through the PDM file-system interface.
+<strong>Priority:</strong> Conditional (PDM-integrated batch conversion).
+<strong>Rationale:</strong> Enables batch conversion of PDM-managed documents.
+<strong>Source:</strong> <code>convmain/pdmImplementation/TcPdmBootStrap.cpp</code> (<code>t_namingServiceSpec</code>); FR-IMPEX.
+<strong>Verification:</strong> Test — run <code>pdmConvert</code> against a PDM naming service and confirm files are read/written through PDM.</p>
+<h3 id="if-033-pdm-document-browser">IF-033 — PDM document browser</h3>
+<p><strong>Requirement:</strong> The system shall provide a PDM document browser for locating and selecting vault-managed documents (<code>pdmBrowser</code>, <code>pdm_util</code>), including resolution of GMTs and file paths.
+<strong>Priority:</strong> Conditional (PDM deployment).
+<strong>Rationale:</strong> Operators need to browse and pick documents from the vault.
+<strong>Source:</strong> <code>tc_util/pdmBrowser</code>; FR-DATA-008; FR-PLAN.
+<strong>Verification:</strong> Test — browse the vault, select a document and confirm it opens.</p>
+<h3 id="if-034-xml-settingsdocument-persistence-xerces-dom">IF-034 — XML settings/document persistence (Xerces DOM)</h3>
+<p><strong>Requirement:</strong> The system shall read and write structured documents and settings as XML using a Xerces DOM layer (<code>TcXmlGenerator</code>/<code>TcXmlParser</code>/<code>TiDateiPersistenz</code>).
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> XML is the general structured-persistence mechanism (PPJ, reports, settings).
+<strong>Source:</strong> <code>tc_xml</code>; FR-DATA.
+<strong>Verification:</strong> Test — generate and re-parse representative XML documents and confirm round-trip fidelity.</p>
+<h3 id="if-035-foreign-file-attribute-catalog-readers">IF-035 — Foreign file attribute / catalog readers</h3>
+<p><strong>Requirement:</strong> The system shall read attribute/catalog information (material, thickness, etc.) from a range of foreign file types without a full load — DXF, IGS, PDF, HTML, and TRUMPF GMT/TMT/ROT/RMT/RPF/WZG/MTL — presenting them as a uniform attribute view (<code>TcGeoInfos</code>, <code>geoinfo.h</code>), including from the PDM server.
+<strong>Priority:</strong> Conditional (catalog/browse workflows).
+<strong>Rationale:</strong> Lightweight metadata queries drive catalog listing and part selection without expensive loads.
+<strong>Source:</strong> <code>tc_verw</code> (<code>geoinfo.h</code>); FR-DATA-009.
+<strong>Verification:</strong> Test — query attributes from each supported file type and confirm the values without triggering a full geometry load.</p>
+<h3 id="if-036-localization-text-tables">IF-036 — Localization / text tables</h3>
+<p><strong>Requirement:</strong> The system shall resolve UI and domain text per language/culture from the text tables (<code>Text.COMMON_TEXT</code>, <code>SPRACHEN</code>, <code>*_TEXTNR</code> references), supporting the multi-language rendering of IF-062.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> All labels and messages are externalized to the localization tables.
+<strong>Source:</strong> <code>Databases/.../Text.*</code>; FR-DATA; FR-TECH.
+<strong>Verification:</strong> Test — switch language and confirm labels resolve from <code>COMMON_TEXT</code>; verify missing-text fallback.</p>
+<hr />
+<h2 id="machine-controller-nc-transfer-interfaces">4. Machine / Controller / NC Transfer Interfaces</h2>
+<p>The output side that turns a finished layout into a controller-specific NC program and drives machine/automation hardware. NC post-processing is data-driven from cycle/format tables keyed by machine+controller+version. See [[18 - FR - NC Generation &amp; Motion Optimization]], [[13 - FR - Punching (ToPs 300)]], [[14 - FR - Laser Cutting (ToPs 100)]], [[15 - FR - Tube &amp; Profile Machining (ToPs 400)]].</p>
+<h3 id="if-037-controller-specific-nc-program-output">IF-037 — Controller-specific NC program output</h3>
+<p><strong>Requirement:</strong> The system shall generate an executable, controller-specific NC program (e.g. Siemens SIN840D dialect) from a finished CAM layout and write it to object management / the file system.
+<strong>Priority:</strong> Essential (machining editions).
+<strong>Rationale:</strong> The NC program is the primary deliverable to the machine.
+<strong>Source:</strong> <code>tc_nc</code>; FR-NC-001.. <em>Note:</em> only SIN840D was directly observed; the full set of <code>NC_STEUERUNG</code> controllers driven by the data-driven tables was not enumerated (open question).
+<strong>Verification:</strong> Test — generate NC for a known layout on a target controller and validate the emitted program on the control/simulator.</p>
+<h3 id="if-038-data-driven-nc-post-processor-cycleformat-tables">IF-038 — Data-driven NC post-processor (cycle/format tables)</h3>
+<p><strong>Requirement:</strong> The system shall render NC blocks from data-driven cycle/format/instruction tables (<code>NCZYKLEN</code>, <code>NCZYKLUS_STV</code>, <code>AUS_FORMAT</code>, <code>NC_KUNDE</code>, <code>ZYKLUS_NAME</code>, <code>NC_MASCHINE</code>, <code>NC_KOPFTAB_MASCHINE</code>, <code>NC_KOPF_TABELLEN</code>) keyed by machine+controller+version, and shall support customer cycles (Kundenzyklen) with a fallback read strategy.
+<strong>Priority:</strong> Essential (machining editions).
+<strong>Rationale:</strong> Controller-specific output is configured through tables rather than hard-coded per control.
+<strong>Source:</strong> <code>Databases/.../*NCZYKLEN*</code>, <code>AUS_FORMAT</code>, <code>NC_KOPF_TABELLEN</code>; FR-NC.
+<strong>Verification:</strong> Test — configure a controller's cycle/format rows and confirm the emitted NC matches; verify customer-cycle insertion and fallback.</p>
+<h3 id="if-039-control-version-compatibility-steuerungsversionen">IF-039 — Control-version compatibility (STEUERUNGSVERSIONEN)</h3>
+<p><strong>Requirement:</strong> The system shall gate technology and NC output by the machine control version via the <code>STEUERUNGSVERSIONEN</code>(<code>_CACHED</code>) tables, and shall validate that a selected control version is compatible with the machine and job.
+<strong>Priority:</strong> Essential (machining editions).
+<strong>Rationale:</strong> Feature availability and NC dialect depend on the control version.
+<strong>Source:</strong> <code>Databases/.../STEUERUNGSVERSIONEN*</code>; FR-TECH-006; FR-PUNCH/FR-LASER.
+<strong>Verification:</strong> Test — select incompatible control versions and confirm validation blocks generation.</p>
+<h3 id="if-040-nclink-dnc-transfer-service">IF-040 — NcLink / DNC transfer service</h3>
+<p><strong>Requirement:</strong> On automatic transfer, the system shall hand generated NC programs to the NcLink / DNC transfer service (configured via <code>TC_NCLINK_LANGUAGE_INI</code>), which sequences programs and formats the production plan for the machine control.
+<strong>Priority:</strong> Conditional (DNC/automatic transfer configured).
+<strong>Rationale:</strong> NcLink is the external tool that delivers programs to the shop floor.
+<strong>Source:</strong> external NcLink (<code>tc_bof/tel_nc.gritx</code>); FR-NC; FR-PLAN.
+<strong>Verification:</strong> Test — trigger automatic transfer and confirm NcLink receives and sequences the program.</p>
+<h3 id="if-041-production-plan-files.lst.tpp-transfer-path">IF-041 — Production-plan files (.LST/.TPP) + transfer path</h3>
+<p><strong>Requirement:</strong> The system shall generate production-plan files via NcLink — <code>.LST</code> (plan type &lt; 30) or <code>.TPP</code> (plan type ≥ 30) — plus a human-readable overview (HTML/TXT/XML rendered via XSL), and write them to the machine-control transfer path (machine rule <code>PRP_PfadModal</code> or <code>TOPS_MACHINE_PATH</code>). NcLink shall be invocable with its CLI options (<code>-s</code>, <code>-vj</code>, <code>-p</code>, <code>-t</code>, <code>-u -y</code>, <code>-x</code>, <code>-4 -n</code>).
+<strong>Priority:</strong> Conditional (production-planning editions).
+<strong>Rationale:</strong> The production plan is the sequenced job set delivered to the control ([[20 - FR - Production Planning &amp; Projects]]).
+<strong>Source:</strong> <code>tc_prodplan</code>; NcLink; FR-PLAN.
+<strong>Verification:</strong> Test — generate a plan of each type, confirm file extension selection and delivery to the configured transfer path.</p>
+<h3 id="if-042-tube-ncapd-output-alp-tops400export">IF-042 — Tube NC/APD output (ALP; ToPs400Export)</h3>
+<p><strong>Requirement:</strong> For tube machining the system shall produce ToPs 400 NC/APD output carrying geometry and technology via <code>t4_write_400</code>/<code>roh_alp</code> and the <code>ToPs400Export.exe</code> tool (ALP format).
+<strong>Priority:</strong> Conditional (ToPs Tube edition).
+<strong>Rationale:</strong> Tube jobs target the ToPs 400 NC/APD toolchain.
+<strong>Source:</strong> <code>tc_rohr/roh_alp</code>; <code>ToPs400Export.exe</code>; FR-TUBE.
+<strong>Verification:</strong> Test — export a tube job and confirm the ALP/APD output loads on the tube-laser toolchain.</p>
+<h3 id="if-043-setup-plan-einrichteplan-htmlpdf-documents">IF-043 — Setup-plan (Einrichteplan) HTML/PDF documents</h3>
+<p><strong>Requirement:</strong> The system shall generate a setup plan (Einrichteplan) with sheet/part graphics and tool/technology lists, exportable as HTML and PDF, to accompany the NC program.
+<strong>Priority:</strong> Conditional (machining editions).
+<strong>Rationale:</strong> Operators need a setup document alongside the NC program.
+<strong>Source:</strong> <code>tc_ein</code> (<code>TcEinrichteplan</code>); FR-NC; FR-PLAN.
+<strong>Verification:</strong> Test — generate a setup plan for a sheet and confirm HTML/PDF content matches the layout and tool list.</p>
+<h3 id="if-044-machine-simulation-data-export">IF-044 — Machine-simulation data export</h3>
+<p><strong>Requirement:</strong> The system shall export a compressed machine-simulation data package (geometry/kinematics, incl. unloading/lift data) for external machine-simulation software (<code>tc_liftMachineSimulationData</code>).
+<strong>Priority:</strong> Conditional (simulation used).
+<strong>Rationale:</strong> Enables off-line simulation of the machine job including part removal.
+<strong>Source:</strong> <code>tc_liftMachineSimulationData</code>; FR-NC; FR-LASER.
+<strong>Verification:</strong> Test — export a simulation package and confirm it loads in the external simulator.</p>
+<h3 id="if-045-loadingunloading-sorting-automation-liftmastersortmastertrumagrip">IF-045 — Loading/unloading &amp; sorting automation (LiftMaster/SortMaster/TrumaGrip)</h3>
+<p><strong>Requirement:</strong> The system shall program TRUMPF loading/unloading and sorting automation — LiftMaster/SortMaster/TrumaGrip — including sheet-load strategies, holding devices (suction cups/grippers on a lift frame), disposal zones, flap/chute/suction ejection and pallet/compartment sorting (<code>SORT_FACH</code>, <code>SORT_PALETTE</code>, <code>PALETTENTYP</code>), with double-wagon (Doppelwagen) configurations.
+<strong>Priority:</strong> Conditional (automation hardware present).
+<strong>Rationale:</strong> Automated part handling is programmed as part of the laser/nesting job ([[14 - FR - Laser Cutting (ToPs 100)]], [[17 - FR - Nesting &amp; Palletizing]]).
+<strong>Source:</strong> <code>tc_lift</code>, <code>tc_palettierung</code>; <code>Databases/.../SORT_*</code>, <code>PALETTENTYP</code>; FR-LASER, FR-NEST.
+<strong>Verification:</strong> Test — program unloading/sorting for a nest and confirm the emitted instructions and pallet assignments against the automation configuration.</p>
+<h3 id="if-046-central-tool-management-itm-sw06">IF-046 — Central tool management (ITM / SW06)</h3>
+<p><strong>Requirement:</strong> The system shall connect to networked/central tool management (ITM) through the SW06 .NET business-model wrapper (<code>Trumpf_SW06_Businessmodel_Common_Interface_Wrapper</code>) for live tool-availability checks and connection-state reporting.
+<strong>Priority:</strong> Conditional (ITM/central tool management deployed).
+<strong>Rationale:</strong> Cross-machine tool availability is resolved from the central tool manager ([[19 - FR - Tools, Machines, Materials &amp; Technology]]).
+<strong>Source:</strong> <code>tc_wzg</code> (SW06 wrapper); FR-TECH.
+<strong>Verification:</strong> Test — with ITM available, query tool availability and confirm connection-state handling when it is unreachable.</p>
+<hr />
+<h2 id="programmatic-interfaces-api-python.net-cli-mes">5. Programmatic Interfaces (API, Python, .NET, CLI, MES)</h2>
+<p>Scripting and integration surfaces: the embedded Python interpreter and command interpreters scripts drive, the per-edition external component API, the Fab/MES adapter, the binary geometry DLL, headless P/Invoke DLLs, the command-line converter, and the embeddable viewer. See [[23 - FR - Automation, Scripting &amp; Integration]].</p>
+<h3 id="if-047-embedded-python-2.5-interpreter-tops-module">IF-047 — Embedded Python 2.5 interpreter + ToPs module</h3>
+<p><strong>Requirement:</strong> The system shall embed a Python 2.5 interpreter (<code>python25.dll</code>, <code>TcPythonInterpreter</code>) in every executable, executing script files and strings against a persistent per-instance stack, and shall expose a <code>ToPs</code>/<code>ToPsGraphics</code> module providing environment access, DB texts, language, stack-variable exchange, console output, file/password checks, window title and a Tk graphics bridge. Parametric CAD variant expressions and user menu-button scripts shall be evaluated through this interpreter.
+<strong>Priority:</strong> Essential (scripting substrate ships in all editions).
+<strong>Rationale:</strong> Python is the primary automation/customization language and the CAD variant expression engine.
+<strong>Source:</strong> <code>tc_python</code>; FR-AUTO-001/003/010; FR-CAD (variants).
+<strong>Verification:</strong> Test — run a script exercising each <code>ToPs</code> service and a CAD variant expression; confirm stack persistence across executions.</p>
+<h3 id="if-048-startup-customization-script-trutops_customize.py">IF-048 — Startup customization script (TruTops_customize.py)</h3>
+<p><strong>Requirement:</strong> The system shall run a startup customization hook <code>TruTops_customize.py</code> from the Python app-utils sub-directory to initialize hooks and variables.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Site-specific customization entry point.
+<strong>Source:</strong> <code>tc_python</code> (<code>runCustomizationScript</code>); FR-AUTO-002. <em>Note:</em> the exact call site and whether it always runs could not be fully located (open question).
+<strong>Verification:</strong> Test — place a customization script and confirm it executes at startup.</p>
+<h3 id="if-049-asm-mmk-interpreter-scripting-bridge">IF-049 — ASM / MMK interpreter scripting bridge</h3>
+<p><strong>Requirement:</strong> The system shall let scripts drive the ASM command state machine (<code>asmCall</code>) and the MMK dialog interpreter (<code>processMmkString</code>), exchange data through named MMK stack variables, and register callbacks/hooks (exception hook, MMK debug hook, ASM wheel/int/float/point input). An interactive MMK step debugger shall be available.
+<strong>Priority:</strong> Essential (interpreter substrate).
+<strong>Rationale:</strong> ASM/MMK are the command and dialog engines scripts and the UI both drive.
+<strong>Source:</strong> <code>tc_asm</code>, GRIT MMK; FR-AUTO-004/005/006/008.
+<strong>Verification:</strong> Test — from a script, invoke <code>asmCall</code>/<code>processMmkString</code>, exchange a stack variable and step through MMK in the debugger.</p>
+<h3 id="if-050-trutopsgeointerface-binary-geometry-dll-c-api">IF-050 — TruTopsGeoInterface binary geometry DLL (C-API)</h3>
+<p><strong>Requirement:</strong> The system shall expose a C-callable/.NET-consumable geometry exchange DLL (<code>TruTopsGeoInterface.dll</code>) with <code>extern &quot;C&quot;</code> import/export functions and a binary object serialization (<code>TcObjectBin</code>) for external components to read and write geometry objects.
+<strong>Priority:</strong> Conditional (external geometry consumers).
+<strong>Rationale:</strong> Lets .NET/native components exchange geometry without the file layer ([[12 - FR - Part &amp; Data Management]]).
+<strong>Source:</strong> <code>tc_dbase/GeoInterface</code>; FR-DATA-006.
+<strong>Verification:</strong> Test — call the DLL from a .NET client to serialize/deserialize a geometry object and confirm fidelity.</p>
+<h3 id="if-051-per-edition-external-component-api-xidl">IF-051 — Per-edition external component API (Xidl)</h3>
+<p><strong>Requirement:</strong> The system shall provide a per-edition external component API (Cad, Laser, Nest, Tube, TubeCad, Combi, CommonLaserCombi) connected via an Xidl-toolkit remote factory addressed by registration URI + plugin name, with managed/native (<code>MImpl</code>/<code>NImpl</code>) marshalling and GUI-thread processing via the GRIT message-queue trigger.
+<strong>Priority:</strong> Conditional (API licence; edition-dependent).
+<strong>Rationale:</strong> Enables cross-process/managed control of an edition by third-party or in-house clients.
+<strong>Source:</strong> <code>API/*APINImpl</code>; <code>tc_interface</code>; FR-AUTO-011.. <em>Note:</em> the concrete callable operation vocabulary per edition lives in the managed <code>.xidl</code>/<code>MImpl</code> layer not fully present in the snapshot.
+<strong>Verification:</strong> Test — connect a client to each edition's factory and exercise connect/disconnect and a representative operation.</p>
+<h3 id="if-052-trutops-fab-ppsmes-adapter-plugin">IF-052 — TruTops Fab (PPS/MES) adapter plugin</h3>
+<p><strong>Requirement:</strong> The system shall integrate with TruTops Fab (PPS/MES) through a registry-discovered, licence-checked .NET plugin implementing <code>TiPlugin</code> (discovered under <code>HKLM\SOFTWARE\TRUMPF\TruTops Fab\PPS-Plugin</code>, <code>PluginPath</code>), importing production orders (part, material, quantity, due date, machine, rotatability, filler-part flag) into nesting and reporting job/file lifecycle state back to Fab (validate, notify, declare-done, CAD file-change notification).
+<strong>Priority:</strong> Conditional (Fab/MES integration licensed).
+<strong>Rationale:</strong> Connects the CAM suite to the plant MES for order intake and job feedback.
+<strong>Source:</strong> <code>tc_fabAdapter</code> (<code>FabAdapterApi.xidl</code>); <code>FabAutomationScript.py</code>; FR-AUTO; FR-PLAN.
+<strong>Verification:</strong> Test — register a PPS plugin, import orders, run nesting and confirm job-state feedback reaches Fab.</p>
+<h3 id="if-053-csv-production-order-exchange">IF-053 — CSV production-order exchange</h3>
+<p><strong>Requirement:</strong> The system shall provide a reference PPS plugin (<code>BasicPpsPlugin</code>) that reads <code>*.csv</code> production orders from a configured exchange base directory.
+<strong>Priority:</strong> Optional (reference implementation).
+<strong>Rationale:</strong> A file-based order source for integrations without a full MES.
+<strong>Source:</strong> <code>tc_fabAdapter</code> (BasicPpsPlugin); FR-AUTO.
+<strong>Verification:</strong> Test — drop CSV orders in the exchange directory and confirm they are imported.</p>
+<h3 id="if-054-reproduction-interop-dll-pinvoke">IF-054 — Reproduction interop DLL (P/Invoke)</h3>
+<p><strong>Requirement:</strong> The system shall provide a headless reproduction nesting DLL (<code>TopsReproduction.dll</code> / <code>Trumpf.Tops.ReproductionNET.dll</code>) with a pure-C P/Invoke interface and a strong-named managed <code>IDisposable</code> wrapper that re-nests parts on a sheet (reusing the shared NestCore engine, with proper unload) for batch/regression/server use.
+<strong>Priority:</strong> Conditional (batch/regression use).
+<strong>Rationale:</strong> Enables server-side and regression re-nesting without the interactive editor.
+<strong>Source:</strong> <code>tc_reproduction</code>; <code>TruTopsDllNET</code>; FR-AUTO.
+<strong>Verification:</strong> Test — call the DLL from .NET to reproduce a nest and confirm the result and clean NestCore unload.</p>
+<h3 id="if-055-laser-shop-floor-programming-interop-dll">IF-055 — Laser shop-floor programming interop DLL</h3>
+<p><strong>Requirement:</strong> The system shall provide a headless laser shop-floor-programming DLL (<code>TruTopsLaser</code> C DLL / <code>TnLaserNET</code> managed wrapper) exposing convert / create-sheet / nest / GMT / create-LST operations over a C API, driven by machine+control identity, for .NET clients.
+<strong>Priority:</strong> Conditional (SFP/automation licensed).
+<strong>Rationale:</strong> Enables headless laser job programming from an integrating application.
+<strong>Source:</strong> <code>tc_las/LaserDlls</code>; <code>TruTopsDllNET</code>; FR-AUTO; FR-LASER.
+<strong>Verification:</strong> Test — drive convert→nest→GMT→createLst headlessly for a machine/control and confirm outputs.</p>
+<h3 id="if-056-standalone-converter-cli-tc_conv.exe-pdmconvert.exe">IF-056 — Standalone converter CLI (tc_conv.exe / pdmConvert.exe)</h3>
+<p><strong>Requirement:</strong> The system shall provide standalone command-line converters — <code>tc_conv.exe</code> (file-based) and <code>pdmConvert.exe</code> (PDM/CORBA-connected) — accepting input formats GEO, GMT, TAF, IGES, DXF, MI, MI_CAPT and producing output formats GEO, GEO_102, DXF, ME10, SVG, XML, with one input to multiple (bit-flagged) outputs, <code>@response</code> files, and a configurable conversion post-processing pipeline (duplicate-point merge, open-contour close, thinning, thin-slot preparation, scaling, unit conversion, auto bend-notch). The tool shall run with only <code>TEXTE.DAT</code> and <code>TOLERANZ.ASC</code> plus a dongle, in any directory, and print usage when invoked with no parameters or <code>?</code>.
+<strong>Priority:</strong> Conditional (batch conversion; dongle).
+<strong>Rationale:</strong> Batch/automation format conversion independent of the interactive application.
+<strong>Source:</strong> <code>convmain/tc_conv.cpp</code>, <code>convmain/convert.h</code>; FR-IMPEX. <em>Note:</em> multiple-output CLI syntax and the summed error-code return value were only partially confirmed (open questions).
+<strong>Verification:</strong> Test — run <code>tc_conv.exe</code> with <code>@response</code> files converting one input to several outputs; run <code>pdmConvert.exe</code> against PDM; confirm post-processing options take effect.</p>
+<h3 id="if-057-embeddable-geoviewer-activexocx-http-streaming">IF-057 — Embeddable GeoViewer ActiveX/OCX + HTTP streaming</h3>
+<p><strong>Requirement:</strong> The system shall provide an embeddable/standalone GeoViewer as an ActiveX/OCX control (<code>geoViewerPlugin.ocx</code>) that loads and renders GEO/MI/IGES/DXF/DSTV/DWG and exports SVG/BMP, and shall support streaming a part over HTTP (<code>TcHTTPFile</code>) for host applications such as a web page.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Lets external hosts embed geometry viewing without the full application.
+<strong>Source:</strong> <code>tc_viewer/geoViewerPlugin</code>; FR-VIS. <em>Note:</em> whether SVG/BMP export is fully implemented for all formats is unclear (a comment states only GEO is realized).
+<strong>Verification:</strong> Test — embed the OCX in a host, load each supported format (incl. over HTTP) and export SVG/BMP.</p>
+<h3 id="if-058-solidworks-tube-add-in-integration">IF-058 — SolidWorks tube add-in integration</h3>
+<p><strong>Requirement:</strong> The system shall integrate with a partner SolidWorks tube-design add-in (<code>TubeSwAddin</code>) linked through <code>TubeConnectionDll</code>, for partner tube-CAD design hand-off.
+<strong>Priority:</strong> Conditional (ToPs Tube + SolidWorks add-in installed).
+<strong>Rationale:</strong> Tube parts may originate in SolidWorks via the partner add-in ([[15 - FR - Tube &amp; Profile Machining (ToPs 400)]]).
+<strong>Source:</strong> <code>tc_rohr/TubeConnectionDll</code>; FR-TUBE.
+<strong>Verification:</strong> Test — with the add-in installed, transfer a tube design from SolidWorks and confirm it loads.</p>
+<h3 id="if-059-db-schema-versioning-source-control-hooks">IF-059 — DB schema versioning source-control hooks</h3>
+<p><strong>Requirement:</strong> Database schema versioning shall be driven through Red Gate SQL Source Control / Perforce command-line hooks (<code>CommandLineHooks.xml</code>) performing P4 sync/add/edit/delete/submit/revert on schema artefacts. This is developer/build-time tooling, not a runtime application interface.
+<strong>Priority:</strong> Optional (developer tooling).
+<strong>Rationale:</strong> Documented for completeness of external surfaces; supports controlled schema evolution.
+<strong>Source:</strong> <code>CommandLineHooks.xml</code>; <code>Databases/RedGate*</code>; FR-AUTO open question.
+<strong>Verification:</strong> Inspection — confirm the hook configuration and its P4 operations; not a runtime test.</p>
+<hr />
+<h2 id="user-hardware-interfaces">6. User &amp; Hardware Interfaces</h2>
+<p>The presentation/interaction layer (GRIT and the Qt bridge), display/print/plot output devices, and licensing hardware. See [[22 - FR - UI Framework, Dialogs &amp; Interaction (GRIT)]] and [[21 - FR - Visualization, Viewing &amp; Plotting]].</p>
+<h3 id="if-060-grit-interactive-ui-framework">IF-060 — GRIT interactive UI framework</h3>
+<p><strong>Requirement:</strong> The system shall present its interactive UI through the GRIT framework: masks/dialogs stored as <code>.gritx</code> (XML v2.63, UTF-8) / <code>.olb</code> (binary runtime) / <code>.a26</code> (legacy ASCII), an embedded MMK interpreter with <code>mini_sql</code> data binding (SELECT INTO finder lists/fields; INSERT/UPDATE/DELETE), typed variables, IF control flow, input fields with plausibility validation, scrollable FINDER lists, popup menus/toolbars, tooltips, per-language help/prompt text, interactive graphical selection (pick/box/all, single/add/invert), and transaction-based undo/redo.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> GRIT is the shared interaction layer of every TruTops edition.
+<strong>Source:</strong> <code>grit</code>, <code>tc_bof</code>; FR-UI.
+<strong>Verification:</strong> Test — exercise representative masks, MMK data binding, input validation, finder lists, selection and undo/redo.</p>
+<h3 id="if-061-grit-qt-front-end-action-bridge">IF-061 — GRIT ↔ Qt front-end action bridge</h3>
+<p><strong>Requirement:</strong> The system shall bridge the legacy GRIT layer to the modern Qt front-end via <code>tc_guiAdapter</code>, exposing named, queryable/settable checkable UI states (AppStates) and GUI/Controller action/trigger controllers so the two UIs stay synchronized.
+<strong>Priority:</strong> Conditional (modern Qt front-end active).
+<strong>Rationale:</strong> The suite runs a legacy GRIT UI alongside a modern Qt shell that must stay in sync.
+<strong>Source:</strong> <code>tc_guiAdapter</code>; FR-UI. <em>Note:</em> runtime authority between <code>.olb</code> masks and the Qt ApplicationModel beyond AppStates/actions was not fully determined (open question).
+<strong>Verification:</strong> Test — toggle an AppState in one UI and confirm the other reflects it; trigger an action from Qt into GRIT.</p>
+<h3 id="if-062-multi-language-unit-dependent-ui">IF-062 — Multi-language &amp; unit-dependent UI</h3>
+<p><strong>Requirement:</strong> The system shall render its UI in up to 30 languages (including CJK), selecting text and per-language+resolution fonts by an active language index (0..29), and shall render values unit-dependently (metric/imperial) via the <code>GrUnit</code> model.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> TruTops is deployed internationally in metric and imperial markets.
+<strong>Source:</strong> GRIT (<code>GRIT_ANZAHL_SPRACHEN=30</code>); <code>tc_text</code>; FR-UI; IF-036. <em>Note:</em> relationship to the legacy 10-language limit (<code>_261</code>) and migration of 10-language <code>.olb</code> files is unclear (open question).
+<strong>Verification:</strong> Test — switch across several languages (incl. CJK) and unit modes; confirm text, fonts and value formatting.</p>
+<h3 id="if-063-keyboard-mouse-interaction">IF-063 — Keyboard / mouse interaction</h3>
+<p><strong>Requirement:</strong> The system shall accept keyboard and mouse input through GRIT, with per-button mouse bindings (5 keys plus enter/exit/move) and keyboard handling, including interactive graphical picking/hit-testing.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> Primary human input devices for the interactive editor.
+<strong>Source:</strong> <code>grit</code>; <code>tc_catch</code> (pick/hit-testing); FR-UI.
+<strong>Verification:</strong> Test — drive dialogs and graphical selection via keyboard and mouse and confirm bindings.</p>
+<h3 id="if-064-on-screen-display-backend-windows-gdi-x11">IF-064 — On-screen display backend (Windows GDI / X11)</h3>
+<p><strong>Requirement:</strong> The system shall render 2D geometry to screen through a backend-independent visualizer with Windows GDI (<code>vis_gdi</code>), legacy X11 (<code>elem_ux.cpp</code>) and headless (<code>vis_none</code>) backends, providing world↔device transformation, redraw lifecycle management, off-screen double-buffering and an interactive XOR/echo mode.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> On-screen rendering is required for all interactive editions; the headless backend supports server/batch use.
+<strong>Source:</strong> <code>tc_visualize</code>, <code>grit/drive</code>; FR-VIS-001..004. <em>Note:</em> how the runtime selects between backends (build-time vs runtime/per-edition) was not fully determined (open question).
+<strong>Verification:</strong> Test — render on GDI and (where available) headless; confirm redraw and coordinate transforms.</p>
+<h3 id="if-065-windows-gdi-printing">IF-065 — Windows GDI printing</h3>
+<p><strong>Requirement:</strong> The system shall print drawings via the Windows GDI printer interface (<code>setPrinterDC</code>, <code>GetDeviceCaps</code>, <code>Escape(SET_BOUNDS)</code>), supporting margins, aspect correction, scaling, orientation, black/white swap and an optional header.
+<strong>Priority:</strong> Conditional (printer available).
+<strong>Rationale:</strong> Operators print parts/nests for shop-floor paperwork.
+<strong>Source:</strong> <code>tc_visualize</code>/<code>grit/drive</code>; FR-VIS.
+<strong>Verification:</strong> Test — print a drawing at defined scale/orientation with header and confirm the output.</p>
+<h3 id="if-066-hpgl-hpgl2-pen-plotter-output">IF-066 — HPGL / HPGL2 pen-plotter output</h3>
+<p><strong>Requirement:</strong> The system shall output drawings to HPGL/HPGL2 pen plotters over the host/PC interface defined by a plotter profile (<code>DB_Plotter</code>: HPGL2 flag, rotation, pen colours, line types, symbols, DIN paper list), via <code>tc_plot</code>, optionally applying a projection matrix (e.g. isometric) and a scale factor.
+<strong>Priority:</strong> Conditional (plotter present).
+<strong>Rationale:</strong> Legacy plotting output for large-format drawings.
+<strong>Source:</strong> <code>tc_plot</code>; FR-VIS. <em>Note:</em> the on-disk location/format of the plotter-config file read by <code>db_lese_plotter_konfig</code> was not located (open question).
+<strong>Verification:</strong> Test — plot a drawing with a configured plotter profile and confirm pen/paper/scale handling.</p>
+<h3 id="if-067-raster-hardcopy-bmp-tiff">IF-067 — Raster hardcopy (BMP / TIFF)</h3>
+<p><strong>Requirement:</strong> The system shall capture a screen region/viewport as a raster hardcopy written to a BMP or TIFF file or stream, in colour or monochrome.
+<strong>Priority:</strong> Optional.
+<strong>Rationale:</strong> Screenshots for documentation and reports.
+<strong>Source:</strong> <code>tc_bitm</code> (<code>write_tiff</code>), <code>tc_visualize</code>; FR-VIS.
+<strong>Verification:</strong> Test — capture a viewport to BMP and TIFF (colour and monochrome) and confirm the images.</p>
+<h3 id="if-068-dongle-wibu-licensing-password-protection">IF-068 — Dongle / Wibu licensing &amp; password protection</h3>
+<p><strong>Requirement:</strong> The system shall protect editions and per-format import/export features with hardware/software dongle (Wibu) licensing plus a per-format password list (<code>DXF_PASSWORD</code>, <code>DWG_PASSWORD</code>, <code>IGES_PASSWORD</code>, <code>MI_PASSWORD</code>, <code>DSTV_PASSWORD</code>, tube password), checked via <code>TcLicenseCheck</code>, with a superuser mode that bypasses the password check and configurable dongle access (local vs network) and module id. Absent or invalid licences shall block the protected feature with a clear message.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> Licensing governs which editions and formats a site may use.
+<strong>Source:</strong> <code>convmain/tc_conv.h</code> (<code>m_passwordCheck</code>, <code>m_dongleAccess</code>, <code>m_dongleId</code>); <code>TcLicenseCheck</code>; <code>TiTubeConnection.isLicenseValid/isPasswordValid</code>; FR-IMPEX, FR-TUBE.
+<strong>Verification:</strong> Test — run with and without valid dongle/password for a protected format; confirm blocking and superuser bypass.</p>
+<h3 id="if-069-grit-configuration-files.org.ini-colourfonticon">IF-069 — GRIT configuration files (.org/.ini, colour/font/icon)</h3>
+<p><strong>Requirement:</strong> The system shall be configured at startup from per-edition <code>.org</code>/<code>.ini</code> files (keys <code>GRITLANG</code>, <code>GRITUNIT</code>, <code>GRITCOLOR</code>, <code>GRITFONT</code>, <code>GRITICON</code>, <code>GRITSIZE</code>, <code>GRITTITLE</code>, <code>MASK_OLB</code>, plus edition feature/menu exposure) and referenced colour (<code>GRITCOL.24</code>, <code>RGB.TXT</code>), font (<code>GRIT_ALL.DEF</code>) and icon tables. Each edition (ToPsCad, ToPs 100/100 Lite/2000, ToPs 300, ToPs 400/400 Cad, ToPsNest) ships its own <code>.ORG</code>/<code>Grit*.ORG</code> set.
+<strong>Priority:</strong> Essential.
+<strong>Rationale:</strong> All per-edition UI language, units, fonts, colours and feature exposure are externalized to configuration.
+<strong>Source:</strong> <code>ini_files/*/*.ORG</code>, <code>ini_files/*/Grit*.ORG</code>; FR-UI.
+<strong>Verification:</strong> Test — start each edition with its <code>.org</code>/<code>.ini</code> set and confirm language/unit/colour/font/menu configuration is applied.</p>
+<hr />
+<h2 id="open-questions-boundary-notes">Open Questions &amp; Boundary Notes</h2>
+<ul>
+<li><strong>IGES/ME10 batch export</strong> (IF-005/IF-007): the <code>convmain</code> converter's <code>schreibe_iges_format()</code>/<code>schreibe_mi_format()</code> are stubs; only interactive export paths may be functional.</li>
+<li><strong>STL</strong> (IF-017): no true STL interface exists; <code>tc_stl</code> is punch-laser technology.</li>
+<li><strong>PDM contract</strong> (IF-031/IF-032): check-in/out, versioning and locking live in <code>OmAdapter.dll</code> outside the snapshot; the relationship between PDM locking and DB <code>LOCKSTATE</code> is unresolved.</li>
+<li><strong>Controllers</strong> (IF-037/IF-038): only Siemens SIN840D was directly observed; the full <code>NC_STEUERUNG</code> set driven by the data-driven tables was not enumerated.</li>
+<li><strong>MFN / tc_lift ownership</strong>: multiple-up generation (<code>tc_mfn</code>) and holding-device modelling (<code>tc_lift</code>) straddle Nesting, NC and Laser; only their interface facets are captured here.</li>
+<li><strong>Converter CLI</strong> (IF-056): the exact multi-output syntax and the summed error-code return value were inferred, not confirmed end-to-end.</li>
+<li><strong>GeoViewer export</strong> (IF-057): SVG/BMP export completeness across all formats is uncertain (source comment implies only GEO is realized).</li>
+<li><strong>Access MDB</strong> (IF-028): referenced historically; the shipped stand-alone path is SQL Server local MDF.</li>
+</ul>
+<p>See the per-area documents for the functional detail behind each interface, and [[60 - Requirements Traceability Index]] for cross-references.</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#product-trutopscad-org-trumpf-title-external-interface-requirements-doc-30-external-interface-requirements-id-prefix-if-srs-standard-isoiecieee-291482018-status-reverse-engineered-draft-source-trutopscad-legacy-source-snapshot-files-dated-may-2024-related-00-index-reading-guide-11-fr-import-export-file-formats-12-fr-part-data-management-18-fr-nc-generation-motion-optimization-23-fr-automation-scripting-integration-04-domain-model-glossary-tags-requirements-trutops-interfaces">product: trutopscad
+org: trumpf
+title: "External Interface Requirements"
+doc: "30 - External Interface Requirements"
+id-prefix: "IF"
+srs-standard: "ISO/IEC/IEEE 29148:2018"
+status: reverse-engineered-draft
+source: "TruTopsCAD legacy source snapshot (files dated May 2024)"
+related: ["[[00 - Index & Reading Guide]]", "[[11 - FR - Import, Export & File Formats]]", "[[12 - FR - Part & Data Management]]", "[[18 - FR - NC Generation & Motion Optimization]]", "[[23 - FR - Automation, Scripting & Integration]]", "[[04 - Domain Model & Glossary]]"]
+tags: [requirements, trutops, interfaces]</a>
+  </li>
+  <li level="1">
+   <a href="#overview-interface-inventory">1. Overview — Interface Inventory</a>
+  </li>
+  <li level="1">
+   <a href="#data-file-format-interfaces">2. Data & File-Format Interfaces</a>
+  </li>
+  <li level="2">
+   <a href="#if-001-dxf-autocad-exchange-import">IF-001 — DXF (AutoCAD exchange) import</a>
+  </li>
+  <li level="2">
+   <a href="#if-002-dxf-export">IF-002 — DXF export</a>
+  </li>
+  <li level="2">
+   <a href="#if-003-dwg-import-via-external-dwgconverter.exe">IF-003 — DWG import via external DwgConverter.exe</a>
+  </li>
+  <li level="2">
+   <a href="#if-004-iges-import">IF-004 — IGES import</a>
+  </li>
+  <li level="2">
+   <a href="#if-005-iges-export">IF-005 — IGES export</a>
+  </li>
+  <li level="2">
+   <a href="#if-006-me10-mi-macro-interchange-import-incl.capt">IF-006 — ME10 / MI (Macro Interchange) import incl. CAPT</a>
+  </li>
+  <li level="2">
+   <a href="#if-007-me10-export">IF-007 — ME10 export</a>
+  </li>
+  <li level="2">
+   <a href="#if-008-dstv-steel-construction-nc-import">IF-008 — DSTV steel-construction NC import</a>
+  </li>
+  <li level="2">
+   <a href="#if-009-native-geo-geo_102-geometry-file">IF-009 — Native GEO / GEO_102 geometry file</a>
+  </li>
+  <li level="2">
+   <a href="#if-010-native-mi-partdrawingsheet-files-versioned">IF-010 — Native MI part/drawing/sheet files (versioned)</a>
+  </li>
+  <li level="2">
+   <a href="#if-011-gmt-geometry-format-and-drawing-number-stamping">IF-011 — GMT geometry format and drawing-number stamping</a>
+  </li>
+  <li level="2">
+   <a href="#if-012-taf-archivetable-input">IF-012 — TAF archive/table input</a>
+  </li>
+  <li level="2">
+   <a href="#if-013-raster-image-import-via-topsvectorize">IF-013 — Raster image import via ToPsVectorize</a>
+  </li>
+  <li level="2">
+   <a href="#if-014-svg-export">IF-014 — SVG export</a>
+  </li>
+  <li level="2">
+   <a href="#if-015-xml-calculation-info-export">IF-015 — XML calculation-info export</a>
+  </li>
+  <li level="2">
+   <a href="#if-016-xcad-internal-exchange-export">IF-016 — XCAD internal-exchange export</a>
+  </li>
+  <li level="2">
+   <a href="#if-017-stl-3d-exchange-not-supported-documented-gap">IF-017 — STL 3D exchange (not supported — documented gap)</a>
+  </li>
+  <li level="2">
+   <a href="#if-018-tube-3d-geometry-rot-rmt-import">IF-018 — Tube 3D geometry (ROT / RMT) import</a>
+  </li>
+  <li level="2">
+   <a href="#if-019-rpf-profile-cross-section-file">IF-019 — RPF profile cross-section file</a>
+  </li>
+  <li level="2">
+   <a href="#if-020-teo-tube-exchange-file-via-pdm">IF-020 — TEO tube-exchange file (via PDM)</a>
+  </li>
+  <li level="2">
+   <a href="#if-021-tool-definition-xml-importexport-wzg">IF-021 — Tool definition XML import/export (WZG)</a>
+  </li>
+  <li level="2">
+   <a href="#if-022-nested-sheet-layout-file-taf-tmt">IF-022 — Nested-sheet layout file (TAF / TMT)</a>
+  </li>
+  <li level="2">
+   <a href="#if-023-nesting-result-report-files-erg-xml-report">IF-023 — Nesting result / report files (ERG, XML report)</a>
+  </li>
+  <li level="2">
+   <a href="#if-024-remnant-sheet-geometry-file-trg">IF-024 — Remnant-sheet geometry file (TRG)</a>
+  </li>
+  <li level="2">
+   <a href="#if-025-programming-project-ppj-xml-file">IF-025 — Programming-project (PPJ) XML file</a>
+  </li>
+  <li level="2">
+   <a href="#if-026-nesting-job-file.job">IF-026 — Nesting job file (.job)</a>
+  </li>
+  <li level="1">
+   <a href="#database-pdm-interfaces">3. Database & PDM Interfaces</a>
+  </li>
+  <li level="2">
+   <a href="#if-027-sql-server-database-access-via-odbc">IF-027 — SQL Server database access via ODBC</a>
+  </li>
+  <li level="2">
+   <a href="#if-028-locally-attached-mdf-access-mdb-database">IF-028 — Locally attached MDF / Access MDB database</a>
+  </li>
+  <li level="2">
+   <a href="#if-029-parallel-metricinch-databases">IF-029 — Parallel metric/inch databases</a>
+  </li>
+  <li level="2">
+   <a href="#if-030-datadict-schema-provisioning-migration">IF-030 — DATADICT schema provisioning & migration</a>
+  </li>
+  <li level="2">
+   <a href="#if-031-trumpf.net-pdm-vault-omadapter-tipdmfacet">IF-031 — TRUMPF.NET PDM vault (OmAdapter / TiPdmFacet)</a>
+  </li>
+  <li level="2">
+   <a href="#if-032-pdm-corba-naming-service-pdmconvert">IF-032 — PDM CORBA naming service (pdmConvert)</a>
+  </li>
+  <li level="2">
+   <a href="#if-033-pdm-document-browser">IF-033 — PDM document browser</a>
+  </li>
+  <li level="2">
+   <a href="#if-034-xml-settingsdocument-persistence-xerces-dom">IF-034 — XML settings/document persistence (Xerces DOM)</a>
+  </li>
+  <li level="2">
+   <a href="#if-035-foreign-file-attribute-catalog-readers">IF-035 — Foreign file attribute / catalog readers</a>
+  </li>
+  <li level="2">
+   <a href="#if-036-localization-text-tables">IF-036 — Localization / text tables</a>
+  </li>
+  <li level="1">
+   <a href="#machine-controller-nc-transfer-interfaces">4. Machine / Controller / NC Transfer Interfaces</a>
+  </li>
+  <li level="2">
+   <a href="#if-037-controller-specific-nc-program-output">IF-037 — Controller-specific NC program output</a>
+  </li>
+  <li level="2">
+   <a href="#if-038-data-driven-nc-post-processor-cycleformat-tables">IF-038 — Data-driven NC post-processor (cycle/format tables)</a>
+  </li>
+  <li level="2">
+   <a href="#if-039-control-version-compatibility-steuerungsversionen">IF-039 — Control-version compatibility (STEUERUNGSVERSIONEN)</a>
+  </li>
+  <li level="2">
+   <a href="#if-040-nclink-dnc-transfer-service">IF-040 — NcLink / DNC transfer service</a>
+  </li>
+  <li level="2">
+   <a href="#if-041-production-plan-files.lst.tpp-transfer-path">IF-041 — Production-plan files (.LST/.TPP) + transfer path</a>
+  </li>
+  <li level="2">
+   <a href="#if-042-tube-ncapd-output-alp-tops400export">IF-042 — Tube NC/APD output (ALP; ToPs400Export)</a>
+  </li>
+  <li level="2">
+   <a href="#if-043-setup-plan-einrichteplan-htmlpdf-documents">IF-043 — Setup-plan (Einrichteplan) HTML/PDF documents</a>
+  </li>
+  <li level="2">
+   <a href="#if-044-machine-simulation-data-export">IF-044 — Machine-simulation data export</a>
+  </li>
+  <li level="2">
+   <a href="#if-045-loadingunloading-sorting-automation-liftmastersortmastertrumagrip">IF-045 — Loading/unloading & sorting automation (LiftMaster/SortMaster/TrumaGrip)</a>
+  </li>
+  <li level="2">
+   <a href="#if-046-central-tool-management-itm-sw06">IF-046 — Central tool management (ITM / SW06)</a>
+  </li>
+  <li level="1">
+   <a href="#programmatic-interfaces-api-python.net-cli-mes">5. Programmatic Interfaces (API, Python, .NET, CLI, MES)</a>
+  </li>
+  <li level="2">
+   <a href="#if-047-embedded-python-2.5-interpreter-tops-module">IF-047 — Embedded Python 2.5 interpreter + ToPs module</a>
+  </li>
+  <li level="2">
+   <a href="#if-048-startup-customization-script-trutops_customize.py">IF-048 — Startup customization script (TruTops_customize.py)</a>
+  </li>
+  <li level="2">
+   <a href="#if-049-asm-mmk-interpreter-scripting-bridge">IF-049 — ASM / MMK interpreter scripting bridge</a>
+  </li>
+  <li level="2">
+   <a href="#if-050-trutopsgeointerface-binary-geometry-dll-c-api">IF-050 — TruTopsGeoInterface binary geometry DLL (C-API)</a>
+  </li>
+  <li level="2">
+   <a href="#if-051-per-edition-external-component-api-xidl">IF-051 — Per-edition external component API (Xidl)</a>
+  </li>
+  <li level="2">
+   <a href="#if-052-trutops-fab-ppsmes-adapter-plugin">IF-052 — TruTops Fab (PPS/MES) adapter plugin</a>
+  </li>
+  <li level="2">
+   <a href="#if-053-csv-production-order-exchange">IF-053 — CSV production-order exchange</a>
+  </li>
+  <li level="2">
+   <a href="#if-054-reproduction-interop-dll-pinvoke">IF-054 — Reproduction interop DLL (P/Invoke)</a>
+  </li>
+  <li level="2">
+   <a href="#if-055-laser-shop-floor-programming-interop-dll">IF-055 — Laser shop-floor programming interop DLL</a>
+  </li>
+  <li level="2">
+   <a href="#if-056-standalone-converter-cli-tc_conv.exe-pdmconvert.exe">IF-056 — Standalone converter CLI (tc_conv.exe / pdmConvert.exe)</a>
+  </li>
+  <li level="2">
+   <a href="#if-057-embeddable-geoviewer-activexocx-http-streaming">IF-057 — Embeddable GeoViewer ActiveX/OCX + HTTP streaming</a>
+  </li>
+  <li level="2">
+   <a href="#if-058-solidworks-tube-add-in-integration">IF-058 — SolidWorks tube add-in integration</a>
+  </li>
+  <li level="2">
+   <a href="#if-059-db-schema-versioning-source-control-hooks">IF-059 — DB schema versioning source-control hooks</a>
+  </li>
+  <li level="1">
+   <a href="#user-hardware-interfaces">6. User & Hardware Interfaces</a>
+  </li>
+  <li level="2">
+   <a href="#if-060-grit-interactive-ui-framework">IF-060 — GRIT interactive UI framework</a>
+  </li>
+  <li level="2">
+   <a href="#if-061-grit-qt-front-end-action-bridge">IF-061 — GRIT ↔ Qt front-end action bridge</a>
+  </li>
+  <li level="2">
+   <a href="#if-062-multi-language-unit-dependent-ui">IF-062 — Multi-language & unit-dependent UI</a>
+  </li>
+  <li level="2">
+   <a href="#if-063-keyboard-mouse-interaction">IF-063 — Keyboard / mouse interaction</a>
+  </li>
+  <li level="2">
+   <a href="#if-064-on-screen-display-backend-windows-gdi-x11">IF-064 — On-screen display backend (Windows GDI / X11)</a>
+  </li>
+  <li level="2">
+   <a href="#if-065-windows-gdi-printing">IF-065 — Windows GDI printing</a>
+  </li>
+  <li level="2">
+   <a href="#if-066-hpgl-hpgl2-pen-plotter-output">IF-066 — HPGL / HPGL2 pen-plotter output</a>
+  </li>
+  <li level="2">
+   <a href="#if-067-raster-hardcopy-bmp-tiff">IF-067 — Raster hardcopy (BMP / TIFF)</a>
+  </li>
+  <li level="2">
+   <a href="#if-068-dongle-wibu-licensing-password-protection">IF-068 — Dongle / Wibu licensing & password protection</a>
+  </li>
+  <li level="2">
+   <a href="#if-069-grit-configuration-files.org.ini-colourfonticon">IF-069 — GRIT configuration files (.org/.ini, colour/font/icon)</a>
+  </li>
+  <li level="1">
+   <a href="#open-questions-boundary-notes">Open Questions & Boundary Notes</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="23frautomationscriptingintegration.html">23FRAutomationScriptingIntegration</a></span>
+ <span class="next"><a href="40nonfunctionalrequirements.html">40NonFunctionalRequirements</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../../../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../../../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../../../res/index.js"></script>
+    <script src="../../../res/files.js"></script>
+    <script src="../../../res/site.js"></script>
+
+    
+</body>
+</html>

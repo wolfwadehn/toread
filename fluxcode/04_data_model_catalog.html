@@ -1,0 +1,655 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Encode+Sans+Semi+Condensed:wght@400;600&family=Nunito+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Roboto+Mono:ital,wght@0,400;0,600;1,400;1,600&display=block" rel="stylesheet">
+  <link rel="stylesheet" href="../res/bento.css">
+  <link rel="stylesheet" href="../res/site.css">
+  <link rel="stylesheet" href="../res/tree.css">
+  <link rel="stylesheet" href="../res/sibling.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <title>Data Model Catalog</title>
+</head>
+<body id="site-body" onload="sLoaded()">
+    <header id="site-header">
+        <div id="header-logo"><img src="../img/logo.png" width="207" height="34" /></div>
+        <div><p>AgenticSpec - Internal only</p></div>
+    </header>
+    <div id="site-main">
+        <nav id="site-nav">
+            <div class="treesite">
+ <ul>
+  <li><button class="tree blank"></button><a href="../index.html">Agentic Spec</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../structure/index.html">Structure of Flux</a>
+   <ul class="hide">
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/folderssrc/index.html">Folders Src</a>
+     <ul class="hide">
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/bendtool.html">Data\Bendtools</a></li>
+      <li><button class="tree blank"></button><a href="../structure/folderssrc/machines.html">Data\Machines</a></li>
+     </ul>
+    </li>
+    <li>
+     <button class="tree closed"></button>
+     <a href="../structure/data/index.html">Data & Process</a>
+     <ul class="hide">
+      <li>
+       <button class="tree closed"></button>
+       <a href="../structure/data/part/index.html">Part</a>
+       <ul class="hide">
+        <li><button class="tree blank"></button><a href="../structure/data/part/partinformation.html">Part.Dwg</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload.html">Part.Load</a></li>
+        <li><button class="tree blank"></button><a href="../structure/data/part/partload2.html">Part.Load to Part.Dwg</a></li>
+       </ul>
+      </li>
+      <li><button class="tree blank"></button><a href="../structure/data/bendtech.html">BendTech.cs</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/bend.html">Bend Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/lasertech.html">Laser Cutting Technology</a></li>
+      <li><button class="tree blank"></button><a href="../structure/data/machineids.html">Machine ID Scheme</a></li>
+     </ul>
+    </li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree open"></button>
+   <a href="index.html">FluxCode</a>
+   <ul>
+    <li><button class="tree blank"></button><a href="00_welcome.html">Welcome & Repo Map</a></li>
+    <li><button class="tree blank"></button><a href="01_architecture.html">Architecture & System Context</a></li>
+    <li><button class="tree blank"></button><a href="02_1_subsystem_bcell.html">Subsystem **BCell** (Bend Cell Automation)</a></li>
+    <li><button class="tree blank"></button><a href="02_subsystem_bend.html">Subsystem **Bend** (Press Brake)</a></li>
+    <li><button class="tree blank"></button><a href="03_api_maps.html">API Maps</a></li>
+    <li><button class="tree blank"></button><a class="active" href="04_data_model_catalog.html">Data Model Catalog</a></li>
+    <li><button class="tree blank"></button><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></li>
+    <li><button class="tree blank"></button><a href="06_tests_and_golden_paths.html">Tests and Golden Paths</a></li>
+    <li><button class="tree blank"></button><a href="07_guided_code_tours.html">Guided Code Tours</a></li>
+    <li><button class="tree blank"></button><a href="08_cam_glossary.html">CAM Glossary with Code Mapping</a></li>
+    <li><button class="tree blank"></button><a href="09_find_and_explain_exercises.html">Assignments</a></li>
+    <li><button class="tree blank"></button><a href="readme.html">Flux Onboarding Handbook</a></li>
+   </ul>
+  </li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../flux/index.html">General Notes</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../flux/curveandsu.html">Curve and Surface Parametrization</a></li>
+    <li><button class="tree blank"></button><a href="../flux/xlate.html">Translation tables</a></li>
+    <li><button class="tree blank"></button><a href="../flux/lts.html">LTS (Long term support mechanism)</a></li>
+   </ul>
+  </li>
+  <li><button class="tree blank"></button><a href="../fluxapi/index.html">FluxAPI</a></li>
+  <li><button class="tree blank"></button><a href="../devdocu/index.html">Dev Docu</a></li>
+  <li><button class="tree blank"></button><a href="../helpdocu/index.html">Documentation Help</a></li>
+  <li>
+   <button class="tree closed"></button>
+   <a href="../translation/index.html">Translation</a>
+   <ul class="hide">
+    <li><button class="tree blank"></button><a href="../translation/xlate.html">xlate.md</a></li>
+   </ul>
+  </li>
+ </ul>
+</div>
+
+        </nav>
+        <div id="site-nav-right">
+            <nav id="site-crumb">
+ <div>
+  <button>
+   <img src="../res/home.png">
+  </button>
+ </div>
+ <div>
+  <a href="index.html">FluxCode</a>
+ </div>
+ <div>/</div>
+ <div>
+  <a href="04_data_model_catalog.html">Data Model Catalog</a>
+ </div>
+</nav>
+
+            <div id="site-crumb-below" class="toc-collapsed">
+                <div id="site-toc-left">
+                    <article id="article">
+                        <h1>Data Model Catalog</h1>
+<p>_<strong>*
+<strong>Goal:</strong> know the shape of the most important persisted data classes in Flux -- what they are, how they relate, how they serialize, and where the migration hooks live. Reading time: 45 minutes.
+*</strong>*</p>
+<p>'''</p>
+<h2 id="the-five-layers-of-data">1. The five layers of data</h2>
+<p>Flux's data model has five conceptual layers. The same <code>Pline</code> may appear in all of them, but the <em>role</em> changes:</p>
+<pre><code>1. Geometric primitives          Pline, Vector2/3, Point2/3, Matrix3, Mesh3
+                                 ────────────────────────────────────────────
+2. Drawing entities              E2**: Line, Arc, Circle, Spline, Bendline, Profile
+                                 ────────────────────────────────────────────
+3. 3D model entities             E3**: Plane, Flex, Patch, Thick, Forming
+                                 ────────────────────────────────────────────
+4. Tech projections (per-domain) BendTech, FoldTech, FlatTech, PunchTech
+                                 │   contains:   **Op   **Setup   **Mount   **Tool
+                                 ────────────────────────────────────────────
+5. Top-level aggregate           Part   (one job)
+                                 Job    (several parts on a sheet, for nesting)
+</code></pre>
+<p>Layers 1--3 are <em>what the part is</em>. Layer 4 is <em>what we will do to the part</em>. Layer 5 binds them.</p>
+<p>'''</p>
+<h2 id="layer-1-geometric-primitives-flux.base">2. Layer 1 -- Geometric primitives (Flux.Base)</h2>
+<h3 id="pline-the-workhorse">2.1 <code>Pline</code> -- the workhorse</h3>
+<p><strong>Where:</strong> <code>Src\Base\Pline\</code> and <code>Src\Base\Geo\Profile.cs</code>.
+<strong>What:</strong> an immutable polyline (vertices + segment-type info). Used for cross-sections, tool outlines, bend spines, cut profiles, you name it.
+<strong>Persistence:</strong> Au-serializable. Preserves arc segments (not just point sequences).
+<strong>Notes:</strong></p>
+<p>** <code>Pline</code> is the <em>single</em> polyline type -- there is no separate &quot;polygon&quot; or &quot;outline&quot; class.
+** Many algorithms in <code>Flux.Base\Geo</code> operate on <code>Pline</code> (offsets, sorts, intersections, fillets).</p>
+<h3 id="mesh3-triangle-mesh">2.2 <code>Mesh3</code> -- triangle mesh</h3>
+<p><strong>Where:</strong> <code>Src\Base\Mesh\</code>.
+<strong>Persistence:</strong> binary inside Au; STL via <code>Src\Core\IO\STLModel.cs</code>.
+<strong>Used by:</strong> machine <code>.mech</code> files, tool meshes, render.</p>
+<h3 id="vector-matrix-family">2.3 Vector / Matrix family</h3>
+<p><strong>Where:</strong> <code>Src\Base\Geo\Point.cs</code>, <code>Vector.cs</code>, <code>Matrix.cs</code>.
+<strong>Concrete types:</strong> <code>Point2</code>, <code>Point3</code>, <code>Vector2</code>, <code>Vector3</code>, <code>Matrix3</code>, <code>Matrix3f</code>, value-typed.
+<strong>Notes:</strong></p>
+<p>** All units are <strong>mm</strong> unless explicitly stated otherwise.
+** Angles are stored in <strong>radians</strong> internally (<code>Geo.PI</code>, <code>Geo.HalfPI</code>, <code>Geo.QuarterPI</code>); conversions via <code>.D2R()</code> / <code>.R2D()</code> extension methods.
+** Float-vs-double choice is not arbitrary -- <code>Point3f</code> for render-bound, <code>Point3</code> for compute-bound.</p>
+<h3 id="constants-and-helpers">2.4 Constants and helpers</h3>
+<p><strong>Where:</strong> <code>Src\Base\Geo\Geo.cs</code> (64 KB).
+<strong>Highlights:</strong></p>
+<p>** <code>Geo.PI</code>, <code>Geo.HalfPI</code>, <code>Geo.QuarterPI</code> -- fundamental angles.
+** Tolerance constants used pervasively (<code>Geo.EPS</code>, dimensionless and dimensioned variants).
+** Static methods for normalization, classification, comparison.</p>
+<p>'''</p>
+<h2 id="layer-2-drawing-entities-e2">3. Layer 2 -- Drawing entities (<code>E2**</code>)</h2>
+<p>The 2D drawing model lives in <code>Src\Core\Drawing\</code> (and a few siblings). Drawings represent the unfolded view of a sheet metal part, the laser/punch toolpath, dimension annotations, etc.</p>
+<p>|===
+| Type | Role</p>
+<p>| <code>E2Line</code>
+| Straight line segment</p>
+<p>| <code>E2Arc</code>
+| Circular arc</p>
+<p>| <code>E2Circle</code>
+| Full circle</p>
+<p>| <code>E2Spline</code>
+| Parametric curve (B-spline)</p>
+<p>| <code>E2Bendline</code>
+| A line annotated as a bend axis (used in unfolded views)</p>
+<p>| <code>E2Profile</code>
+| Compound profile (a closed boundary)</p>
+<p>| <code>Layer2</code>
+| Layer/category container
+|===</p>
+<p><strong>Container:</strong> <code>Dwg</code> (the part's drawing) -- exposed as <code>Part.Dwg</code>. Walks via <code>Dwg.Entities</code>.</p>
+<p><strong>Persistence:</strong> Au; DXF/DWG via <code>Src\Core\IO\DXFReader.cs</code> / <code>DXFWriter.cs</code>.</p>
+<p>'''</p>
+<h2 id="layer-3-3d-model-entities-e3">4. Layer 3 -- 3D model entities (<code>E3**</code>)</h2>
+<p><code>Src\Core\Model\</code> (9 files, ~290 KB). Every 3D part decomposes into these. The model lives at <code>Part.Model</code>.</p>
+<h3 id="entity3-base">4.1 <code>Entity3</code> (base)</h3>
+<p><strong>Where:</strong> <code>Entity3.cs</code> (29 KB).
+**Subclasses:**</p>
+<table>
+<thead>
+<tr>
+<th>Type</th>
+<th style="text-align: right;">Size</th>
+<th>Role</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>E3Plane</code></td>
+<td style="text-align: right;">48 KB</td>
+<td>A flat region of sheet metal.</td>
+</tr>
+<tr>
+<td><code>E3Flex</code></td>
+<td style="text-align: right;">55 KB</td>
+<td>A bend zone. Holds an <code>IFlexSpine</code> and connectivity info.</td>
+</tr>
+<tr>
+<td><code>E3Patch</code></td>
+<td style="text-align: right;">8 KB</td>
+<td>A non-developable patch (rare).</td>
+</tr>
+<tr>
+<td><code>E3Thick</code></td>
+<td style="text-align: right;">(in <code>BendCore</code>)</td>
+<td>Thick-plate entity.</td>
+</tr>
+<tr>
+<td><code>Forming</code></td>
+<td style="text-align: right;">23 KB</td>
+<td>A forming feature (louver, rib, lance).</td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-flat-bend-topology">4.2 The flat-bend topology</h3>
+<p>A sheet-metal model forms a tree (really a DAG) with one <strong>base plane</strong> as the root. Alternate levels are bends; a bend connects to one <em>leeward</em> plane and one or more <em>windward</em> planes. The terminology is:</p>
+<pre><code>Leeward = &quot;up&quot; side of the bend (the side closer to root)
+Windward = &quot;down&quot; side (further from root)
+</code></pre>
+<p>This is documented in <code>Notes\Dev\1005.BendAreaModeling.ftx</code>. The note's ASCII / image diagrams are worth ten paragraphs of prose.</p>
+<h3 id="iflexspine">4.3 <code>IFlexSpine</code></h3>
+<p><strong>Where:</strong> <code>Src\Core\Model\BendSpine.cs</code> and <code>E3Flex.cs</code>.
+<strong>Members:</strong> <code>GetSpine(double bendLie)</code> returns the cross-section polyline at a given bend &quot;lie&quot; (0 = flat, 1 = fully folded); <code>Thickness</code> returns the sheet thickness.
+<strong>Implementations:</strong> <code>BendSpine</code> (standard), <code>FlatBendSpine</code> (special), Z-bend variants, hem variants.
+<strong>Used by:</strong> rendering, bend area modeling, collision, simulation.</p>
+<h3 id="the-model3-container">4.4 The <code>Model3</code> container</h3>
+<p><strong>Where:</strong> <code>Src\Core\Model\Model3.cs</code> (71 KB).
+<strong>What:</strong> the entity collection plus utilities (search, traversal, edits). <code>Part.Model</code> is a <code>Model3</code>.</p>
+<p>'''</p>
+<h2 id="layer-4-tech-projections">5. Layer 4 -- Tech projections</h2>
+<p>A part can have several tech projections at once. Each one is a per-domain &quot;what we plan to do&quot;.</p>
+<h3 id="the-shared-shape">5.1 The shared shape</h3>
+<p>Every <code>**Tech</code> follows the same pattern:</p>
+<p>** Constructed via a static <code>+Make (Part, Machine, ...)+</code> factory returning <code>EResult</code>.
+** Holds a list of operations (<code>Ops</code>) and a list of setups (<code>Setups</code>).
+** Implements <code>ISheafSite</code> (settings cascade through to <code>Part</code>).
+** Has a <code>Dump (TextWriter)</code> method used by golden-file tests.</p>
+<h3 id="bendtech-see-chapter-02">5.2 BendTech -- see chapter 02</h3>
+<p>The most thoroughly documented tech.</p>
+<h3 id="flattech-a.k.a.cuttech">5.3 FlatTech (a.k.a. CutTech)</h3>
+<p><strong>Where:</strong> <code>Src\Core\Laser\</code> and <code>Src\Core\Punch\</code>.
+<strong>Role:</strong> unifies laser, punch, and combo machining into a single flat-cutting projection.
+<strong>Held on <code>Part</code>:</strong> <code>Part.CutTech</code> (note the alias <code>FlatTech ≡ CutTech</code> in code).
+<strong>Specialized cuts:</strong> <code>LaserCut</code>, <code>PlineCut</code>, <code>ScrapCut</code>, <code>SliceCut</code>, <code>StitchCutter</code>, <code>TraceCut</code>, <code>Bevel3DTooler</code>.</p>
+<h3 id="foldtech">5.4 FoldTech</h3>
+<p><strong>Where:</strong> <code>Src\Core\Fold\</code> (42 files).
+<strong>Role:</strong> panel-bender (TecZoneFold) projection. Different machine kinematics than press brake.</p>
+<h3 id="punchtech">5.5 PunchTech</h3>
+<p><strong>Where:</strong> <code>Src\Core\Punch\</code> (13 files). Specialization for punching.</p>
+<h3 id="bcell-the-orchestration-sibling">5.6 BCell -- the orchestration sibling</h3>
+<p>Not a tech in the strict sense, but lives at the same conceptual level. Models the robot cell's gripper, regrips, deposits, pickups. The bend operations themselves still own the robotic awareness; BCell models the <strong>physical cell</strong> that performs them.</p>
+<p>'''</p>
+<h2 id="layer-5-part">6. Layer 5 -- <code>Part</code></h2>
+<h3 id="the-aggregate">6.1 The aggregate</h3>
+<p><strong>Where:</strong> <code>Src\Core\Part\Part.cs</code> (sealed class, 77 KB).
+<strong>Implements:</strong> <code>ISheafSite</code>, <code>INotifyPropChanged</code>.</p>
+<p>[,csharp]</p>
+<pre><code>public sealed class Part : ISheafSite, INotifyPropChanged {
+   public BendTech BendTech { get; set; }     // press brake projection
+   public BendTechMemo BendTechMemo { get; set; }
+   public FoldTech FoldTech { get; set; }     // panel bender
+   public FlatTech CutTech { get; set; }      // laser/punch
+   public Mesh3[] BoostMeshes { get; set; }   // Boost-mode formings
+   public Model3 Model { get; }               // 3D model
+   public Dwg Dwg { get; }                    // 2D drawing
+   public bool IsDirty { get; }
+   public Part.EFlags Flags { get; }
+   public bool Diagnostic { get; }
+   public static Part Current { get; set; }   // active part
+   public static List&lt;Part&gt; Active { get; }   // all open parts
+   // ... and ~50 more
+}
+</code></pre>
+<h3 id="static-state">6.2 Static state</h3>
+<p>Two pieces of static state are notable:</p>
+<p>** <code>Part.Active</code> -- list of all parts currently loaded into the process.
+** <code>Part.Current</code> -- the part the user is currently editing.</p>
+<p>Both are UI-thread-only in practice. Inspect them when debugging anything related to &quot;which part is this affecting?&quot;</p>
+<h3 id="lifecycle">6.3 Lifecycle</h3>
+<p>. Construct empty (<code>new Part ()</code>).
+. Hydrate via Au-deserialize (FX file) or via an IO reader (DXF/GEO/STEP).
+. Optional <code>DoFoldTo3D</code> if input was unfolded.
+. Construct one or more techs (<code>BendTech.Make</code>, <code>FoldTech.Make</code>, ...).
+. User edits / auto-tools.
+. Save to FX, or export NC code.
+. Close -- removed from <code>Active</code>.</p>
+<p>'''</p>
+<h2 id="bend-domain-catalog-deep-dive-companion-to-chapter-02">7. Bend-domain catalog (deep-dive companion to chapter 02)</h2>
+<p>|===
+| Class | File | Role</p>
+<p>| <code>BendTech</code>
+| <code>Src\Core\Bend\BendTech.cs</code>
+| Press-brake projection root.</p>
+<p>| <code>BendOp</code>
+| <code>Src\Core\Bend\BendOp.cs</code>
+| A single bending operation.</p>
+<p>| <code>BendSetup</code>
+| <code>Src\Core\Bend\BendSetup.cs</code>
+| A complete tool layout on the machine.</p>
+<p>| <code>BendMount</code>
+| <code>Src\Core\Bend\BendMount.cs</code>
+| One tool mount at one X position.</p>
+<p>| <code>BendMachine</code>
+| <code>Src\Core\Bend\BendMachine.cs</code>
+| The press-brake machine model.</p>
+<p>| <code>BTool</code> (+ <code>BPunch</code>, <code>BDie</code>, <code>BHolder</code>, <code>BTool.Piece</code>)
+| <code>Src\Core\Bend\BendTool.cs</code>
+| The tool model.</p>
+<p>| <code>BToolList</code> / <code>BToolLibrary</code>
+| <code>Src\Core\Bend\BendToolLib.cs</code>
+| Inventory and catalogs.</p>
+<p>| <code>BendStaples</code> (struct), <code>Workpiece</code> (record)
+| <code>Src\Core\Bend\BendCalc.cs</code>
+| Calculation results / inputs.</p>
+<p>| <code>EBendKind</code>, <code>EBATIssue</code>, <code>EHandlingFlip</code>
+| <code>Src\Core\Bend\BendCore.cs</code>
+| Domain enums.</p>
+<p>| <code>BendAid</code>, <code>BAPlacer</code>, <code>BendAidPos</code>
+| <code>Src\Core\Bend\BendAid.cs</code>, <code>Ops\BAPlacer.cs</code>
+| Bending-aid model + placement.</p>
+<p>| <code>BendBG</code>, <code>BGPath</code>, <code>BGPlacer</code>
+| <code>Src\Core\Bend\BendBG.cs</code>, <code>BGPath.cs</code>, <code>Ops\BGPlacer.cs</code>
+| Back-gauge model + path + placement.</p>
+<p>| <code>BCRegrip</code>, <code>BWaypoint</code>, <code>BGripper</code>
+| <code>Src\Core\BCell\</code>
+| Robotic cell concepts.
+|===</p>
+<p>'''</p>
+<h2 id="cross-cutting-state">8. Cross-cutting state</h2>
+<h3 id="sheaf-settings-dictionary">8.1 <code>Sheaf</code> -- settings dictionary</h3>
+<p><strong>Where:</strong> <code>Src\Core\Settings\Sheaf.cs</code>.
+<strong>Shape:</strong> every site has its own <code>Dictionary&lt;SH, object&gt;</code> and a parent. Resolution walks the chain. The keys are values of <code>enum SH</code> (a closed registry of setting identifiers).
+<strong>Persistence:</strong> sheafs persist with their owning object (e.g. <code>BendOp</code> carries its <code>SHDict</code>).</p>
+<h3 id="bendtechmemo">8.2 <code>BendTechMemo</code></h3>
+<p><strong>Where:</strong> <code>Src\Core\Bend\Ops\BendTechMemo.cs</code>.
+<strong>Why:</strong> when a <code>BendTech</code> is replaced, the prior state is captured into a memo so editing history can be preserved. Pattern repeats elsewhere -- look for <code>**Memo</code> types.</p>
+<h3 id="tags-layers-moods">8.3 Tags, layers, moods</h3>
+<p>Across rendering and editing you'll see:</p>
+<p>** <code>ELayer.&lt;**&gt;</code> -- render layer (<code>BendMount</code>, <code>LaserCut</code>, ...).
+** <code>EMood.&lt;**&gt;</code> -- visual mood (<code>Selected</code>, <code>Normal</code>, <code>Hover</code>, ...).
+** <code>EGTag</code> -- glob-action tags (<code>AddAtClamp</code>, <code>AddAtStation</code>, ...) for command routing.</p>
+<p>These are not &quot;data&quot; in the persistence sense, but they are first-class nouns in the code.</p>
+<p>'''</p>
+<h2 id="persistence-formats-and-migration">9. Persistence formats and migration</h2>
+<h3 id="au-gold-binary">9.1 Au / Gold (binary)</h3>
+<p><strong>Format:</strong> compact tagged binary. See <code>Notes\Dev\1003.AuGoldEncoding.ftx</code>.
+<strong>Encodes:</strong> <code>Part</code>, <code>BendTech</code>, <code>BendOp</code>, <code>BendSetup</code>, machine definitions, etc.
+<strong>Versioning:</strong> every Au type has a <code>ObjVersion</code>. Migrations are applied via <code>[PostLoad]</code>.</p>
+<h3 id="curl-text">9.2 Curl (text)</h3>
+<p><strong>Format:</strong> Lisp-flavored text with named fields. See <code>Notes\Tech\2007.CurlFiles.ftx</code>.
+<strong>Encodes:</strong> human-curated data -- machines, tool catalogs, settings profiles.</p>
+<h3 id="fx-file">9.3 FX file</h3>
+<p><strong>Format:</strong> zip containing Curl + Au + thumbnail.
+<strong>Encodes:</strong> the user's part as a saveable, shareable bundle.</p>
+<h3 id="dxf-geo-3d-import-stl-bmc-dld">9.4 DXF / GEO / 3D import / STL / BMC / DLD</h3>
+<table>
+<thead>
+<tr>
+<th>Format</th>
+<th>Role</th>
+<th>Reader / Writer</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>DXF / DWG</td>
+<td>2D drawing exchange</td>
+<td><code>DXFReader.cs</code>, <code>DXFWriter.cs</code></td>
+</tr>
+<tr>
+<td>GEO</td>
+<td>Trumpf geometry exchange</td>
+<td><code>GeoReader.cs</code>, <code>GeoWriter.cs</code></td>
+</tr>
+<tr>
+<td>HOOPS-driven 3D</td>
+<td>CATIA / Parasolid / ACIS / Pro-E / STEP</td>
+<td><code>HXReader.cs</code> (despite the name, this is <code>HoopsReader</code>, <em>not</em> a Hex reader)</td>
+</tr>
+<tr>
+<td>NC post output</td>
+<td>Press-brake NC code per dialect</td>
+<td>C# writers in <code>Src\API\Bend\Post\</code>; dispatched by <code>Src\API\Basis\Basis.cs:138</code> (no Hex involved)</td>
+</tr>
+<tr>
+<td>STL</td>
+<td>Mesh exchange</td>
+<td><code>STLModel.cs</code>, <code>MeshIO.cs</code></td>
+</tr>
+<tr>
+<td>BMC</td>
+<td>Trumpf machine format (bend)</td>
+<td><code>Bend\Ops\ImportBMC.cs</code>, <code>ExportBMC.cs</code></td>
+</tr>
+<tr>
+<td>DLD</td>
+<td>Trumpf NC format (bend)</td>
+<td><code>Bend\Ops\DLDExporter.cs</code></td>
+</tr>
+</tbody>
+</table>
+<h3 id="the-postload-migration-hook">9.5 The <code>[PostLoad]</code> migration hook</h3>
+<p>The pattern (from <code>BendSetup.cs</code> lines 64--76):</p>
+<p>[,csharp]</p>
+<pre><code>[PostLoad]
+void PostLoad () {
+   mMounts.RemoveIf (a =&gt; a.Tool == null);
+   mMounts.Changed += MountsChanged;
+   if (mClampPos != null &amp;&amp; AuType.ObjVersion &lt; 4 &amp;&amp; BMachine != null) {
+      float dx = BMachine.Clamp0XPos;
+      for (int i = 0; i &lt; mClampPos.Length; i++) mClampPos[i] += dx;
+   }
+   if (AuType.ObjVersion &lt; 5)
+      foreach (var m in mMounts)
+         if (m.Tool.TopValency.IsBlade () &amp;&amp; m.SensorPair != null)
+            AdjustLockedMount (m);
+}
+</code></pre>
+<p>Two things to note:</p>
+<p>** <code>AuType.ObjVersion</code> is the version <em>that came in</em>, not the current one.
+** Migrations are <strong>forward-only</strong> -- you migrate version 3 → 4, you never read a future version.</p>
+<p>'''</p>
+<h2 id="identity-and-uniqueness">10. Identity and uniqueness</h2>
+<p>|===
+| Concept | Where | Used for</p>
+<p>| <code>BendOp.UID</code>
+| per-tech sequence
+| comparing ops across edits</p>
+<p>| <code>BendOp.SeqNo</code>
+| sequence index
+| display order</p>
+<p>| <code>BendSetup.UID</code>
+| per-tech sequence
+| mount routing</p>
+<p>| Part GUID
+| <code>Workpiece.PartGuid</code>
+| cross-system identification</p>
+<p>| Machine ID
+| integer, used as folder name
+| <code>BendMachine.Get(id)</code></p>
+<p>| Tool ID
+| per catalog
+| <code>BTool</code></p>
+<p>| <code>VModel.Id</code>
+| per process
+| scene-graph routing
+|===</p>
+<p><em>__</em>
+<strong>Convention:</strong> UIDs are stable across save/load (they live on the object). <code>VModel.Id</code> is <em>only</em> stable for the lifetime of one Flux process -- never persist it.
+<em>__</em></p>
+<p>'''</p>
+<h2 id="coordinate-systems">11. Coordinate systems</h2>
+<p>** <strong>World CS</strong> -- overall scene. <code>CoordSystem.World</code>.
+** <strong>Plane CS</strong> (per <code>E3Plane</code>) -- Org / XVec / YVec / ZVec are anchored to a side wall (see <code>Notes\Dev\1005.BendAreaModeling.ftx</code>).
+** <strong>Flex CS</strong> -- bends inherit from their leeward plane.
+** <strong>Machine CS</strong> -- anchored to the bend machine table; X along table length.
+** <strong>Mount CS</strong> -- mount X is a local coordinate on the table.</p>
+<p>When a bug looks like &quot;things drawn in the wrong spot&quot;, <strong>always</strong> ask which CS the coordinates are in. The transition between Plane CS and World CS is a frequent source of subtle errors.</p>
+<p>'''</p>
+<h2 id="units-and-tolerances">12. Units and tolerances</h2>
+<p>** All lengths in <strong>mm</strong>. All angles in <strong>radians</strong> at runtime; degrees only for user-facing strings (use <code>.R2D()</code> / <code>.D2R()</code>).
+** Tolerances live in <code>Geo.cs</code> and are domain-specific (geometric tolerance vs. simulation tolerance vs. file-format precision).
+** <strong>Determinism</strong> -- sorting must use <code>GeomSort</code> or <code>Pline</code>-aware comparators that handle floating-point near-ties consistently. Plain <code>OrderBy</code> on doubles is a smell.</p>
+<p>'''</p>
+<h2 id="self-check">13. Self-check</h2>
+<p>. What's the difference between <code>E3Flex</code> and <code>BendOp</code>? <em>(§4.1 / chapter 02 §3)</em>
+. Which class implements <code>IFlexSpine</code> for a hem? <em>(§4.3, search for hem-specific spine subclass)</em>
+. Which method is the test contract for <code>BendTech</code> / <code>BendSetup</code>? <em>(§5.1 + §9.5 -- <code>Dump</code>)</em>
+. What format is a <code>Machine.curl</code>? <em>(§9.2)</em>
+. Where do you put a forward-migration when you change a class's persisted shape? <em>(§9.5)</em>
+. What is the unit of all lengths in Flux? <em>(§12)</em></p>
+<p>'''</p>
+<h2 id="if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</h2>
+<p><em>__</em>
+*<em>A <code>Part</code> aggregates one or more <em>tech</em> projections, each with its own <code>Ops</code> and <code>Setups</code>. Geometry sits in <code>Model</code> (3D) and <code>Dwg</code> (2D). Settings cascade through <code>Sheaf</code>. Persisted shape is migrated forward via <code>[PostLoad]</code>. Once you can place any class on this map, you can read any subsystem.</em>
+<em>__</em></p>
+<p>'''</p>
+<p>*Last updated: 2026-05-04. Verified against <code>Src\Core\Part\Part.cs</code>, <code>Src\Core\Model\</code>, <code>Src\Core\Bend\</code>, <code>Src\Core\Settings\Sheaf.cs</code>, and Notes 1003/1005/2007._</p>
+
+                    </article>
+                </div>
+                <button id="toc-toggle" title="Table of contents">&#9776;</button>
+                <div id="site-toc-holder">
+                    <aside id="site-toc">
+ <h3>Contents</h3>
+ <ul>
+  <li level="1">
+   <a href="#the-five-layers-of-data">1. The five layers of data</a>
+  </li>
+  <li level="1">
+   <a href="#layer-1-geometric-primitives-flux.base">2. Layer 1 -- Geometric primitives (Flux.Base)</a>
+  </li>
+  <li level="2">
+   <a href="#pline-the-workhorse">2.1  -- the workhorse</a>
+  </li>
+  <li level="2">
+   <a href="#mesh3-triangle-mesh">2.2  -- triangle mesh</a>
+  </li>
+  <li level="2">
+   <a href="#vector-matrix-family">2.3 Vector / Matrix family</a>
+  </li>
+  <li level="2">
+   <a href="#constants-and-helpers">2.4 Constants and helpers</a>
+  </li>
+  <li level="1">
+   <a href="#layer-2-drawing-entities-e2">3. Layer 2 -- Drawing entities ()</a>
+  </li>
+  <li level="1">
+   <a href="#layer-3-3d-model-entities-e3">4. Layer 3 -- 3D model entities ()</a>
+  </li>
+  <li level="2">
+   <a href="#entity3-base">4.1  (base)</a>
+  </li>
+  <li level="2">
+   <a href="#the-flat-bend-topology">4.2 The flat-bend topology</a>
+  </li>
+  <li level="2">
+   <a href="#iflexspine">4.3 </a>
+  </li>
+  <li level="2">
+   <a href="#the-model3-container">4.4 The  container</a>
+  </li>
+  <li level="1">
+   <a href="#layer-4-tech-projections">5. Layer 4 -- Tech projections</a>
+  </li>
+  <li level="2">
+   <a href="#the-shared-shape">5.1 The shared shape</a>
+  </li>
+  <li level="2">
+   <a href="#bendtech-see-chapter-02">5.2 BendTech -- see chapter 02</a>
+  </li>
+  <li level="2">
+   <a href="#flattech-a.k.a.cuttech">5.3 FlatTech (a.k.a. CutTech)</a>
+  </li>
+  <li level="2">
+   <a href="#foldtech">5.4 FoldTech</a>
+  </li>
+  <li level="2">
+   <a href="#punchtech">5.5 PunchTech</a>
+  </li>
+  <li level="2">
+   <a href="#bcell-the-orchestration-sibling">5.6 BCell -- the orchestration sibling</a>
+  </li>
+  <li level="1">
+   <a href="#layer-5-part">6. Layer 5 -- </a>
+  </li>
+  <li level="2">
+   <a href="#the-aggregate">6.1 The aggregate</a>
+  </li>
+  <li level="2">
+   <a href="#static-state">6.2 Static state</a>
+  </li>
+  <li level="2">
+   <a href="#lifecycle">6.3 Lifecycle</a>
+  </li>
+  <li level="1">
+   <a href="#bend-domain-catalog-deep-dive-companion-to-chapter-02">7. Bend-domain catalog (deep-dive companion to chapter 02)</a>
+  </li>
+  <li level="1">
+   <a href="#cross-cutting-state">8. Cross-cutting state</a>
+  </li>
+  <li level="2">
+   <a href="#sheaf-settings-dictionary">8.1  -- settings dictionary</a>
+  </li>
+  <li level="2">
+   <a href="#bendtechmemo">8.2 </a>
+  </li>
+  <li level="2">
+   <a href="#tags-layers-moods">8.3 Tags, layers, moods</a>
+  </li>
+  <li level="1">
+   <a href="#persistence-formats-and-migration">9. Persistence formats and migration</a>
+  </li>
+  <li level="2">
+   <a href="#au-gold-binary">9.1 Au / Gold (binary)</a>
+  </li>
+  <li level="2">
+   <a href="#curl-text">9.2 Curl (text)</a>
+  </li>
+  <li level="2">
+   <a href="#fx-file">9.3 FX file</a>
+  </li>
+  <li level="2">
+   <a href="#dxf-geo-3d-import-stl-bmc-dld">9.4 DXF / GEO / 3D import / STL / BMC / DLD</a>
+  </li>
+  <li level="2">
+   <a href="#the-postload-migration-hook">9.5 The  migration hook</a>
+  </li>
+  <li level="1">
+   <a href="#identity-and-uniqueness">10. Identity and uniqueness</a>
+  </li>
+  <li level="1">
+   <a href="#coordinate-systems">11. Coordinate systems</a>
+  </li>
+  <li level="1">
+   <a href="#units-and-tolerances">12. Units and tolerances</a>
+  </li>
+  <li level="1">
+   <a href="#self-check">13. Self-check</a>
+  </li>
+  <li level="1">
+   <a href="#if-you-take-just-one-thing-from-this-chapter">14. If you take just one thing from this chapter</a>
+  </li>
+ </ul>
+</aside>
+
+                </div>
+            </div>
+            <nav class="pagination">
+ <span class="prev"><a href="03_api_maps.html">API Maps</a></span>
+ <span class="next"><a href="05_design_patterns.html">Design Patterns -- A Reader's Guide</a></span>
+</nav>
+
+        </div>
+        <div id="searchbox">
+          <input id="searchinput" type="search" placeholder="Search... (Key: F)" autocomplete="false" size="30" />
+          <ul id="results"></ul>
+        </div>
+    </div>
+    <footer id="site-footer">
+        <div class="left">
+            <p>&nbsp;&nbsp;Copyright &copy; TRUMPF Metamation. All rights reserved.</p>
+        </div>
+        <div class="middle"></div>
+        <div class="right">
+            <p>Compiled by Bento</p>
+            <img src="../res/bento.png" />
+        </div>
+    </footer>
+    <script>
+        // The baseLevel is used to assign the search result pages.
+        var baseLevel = "../res".replace("res", "");
+    </script>
+    <script src="https://unpkg.com/lunr/lunr.js"></script>
+    <script src="../res/index.js"></script>
+    <script src="../res/files.js"></script>
+    <script src="../res/site.js"></script>
+
+    
+</body>
+</html>
